@@ -1,4 +1,6 @@
 ---
+import Navigation from '../components/Navigation.astro';
+
 export interface Props {
   title: string;
   description?: string;
@@ -64,6 +66,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     })} />
   </head>
   <body>
+    <Navigation />
     <slot />
   </body>
 </html>
@@ -172,7 +175,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     max-width: 650px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    min-height: 100vh;
+    min-height: calc(100vh - 70px);
   }
   
   /* Typography */
@@ -244,6 +247,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     outline: 2px solid var(--border-focus);
     outline-offset: 2px;
     border-radius: 3px;
+  }
+  
+  /* Page header */
+  .page-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    margin-bottom: 0;
   }
   
   /* Bio section */
