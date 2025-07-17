@@ -22,7 +22,25 @@ const essays = defineCollection({
   }),
 });
 
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.date(),
+    updatedDate: z.date().optional(),
+    author: z.string().default('Your Name'),
+    tags: z.array(z.string()).default([]),
+    category: z.enum(['finance', 'art', 'coding', 'intersection']).default('intersection'),
+    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+    readingTime: z.number().optional(),
+    excerpt: z.string().optional(),
+  }),
+});
+
 export const collections = {
   projects,
   essays,
+  blog,
 };

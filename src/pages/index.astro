@@ -1,5 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get recent blog posts
+const allBlogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft;
+});
+
+const recentBlogPosts = allBlogPosts
+  .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+  .slice(0, 3);
 
 const products = [
   {
@@ -131,6 +141,38 @@ const talks = [
         ))}
       </ul>
     </section>
+    
+    {recentBlogPosts.length > 0 && (
+      <section class="content-section">
+        <h2>Recent Journal</h2>
+        <div class="blog-preview">
+          {recentBlogPosts.map(post => (
+            <article class="blog-preview-card">
+              <div class="blog-meta">
+                <span class="blog-category">{post.data.category}</span>
+                <time class="blog-date">
+                  {new Date(post.data.publishDate).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric'
+                  })}
+                </time>
+              </div>
+              <h3 class="blog-title">
+                <a href={`/blog/${post.slug}`}>
+                  {post.data.title}
+                </a>
+              </h3>
+              <p class="blog-excerpt">
+                {post.data.excerpt || post.data.description}
+              </p>
+            </article>
+          ))}
+        </div>
+        <div class="blog-cta">
+          <a href="/blog" class="view-all-link">View All Posts →</a>
+        </div>
+      </section>
+    )}
     
     <section class="content-section">
       <h2>Writing</h2>
