@@ -12,7 +12,4 @@ export default defineConfig({
       minify: true,
     },
   },
-  experimental: {
-    optimizeHoistedScript: true,
-  },
 });
