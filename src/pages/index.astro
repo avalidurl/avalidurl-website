@@ -1,6 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const products = [
+  {
+    title: "S&P 500 CapEx Tracker",
+    description: "A data-driven financial research platform aggregating S&P 100 capital expenditure insights, providing transparent, community-supported market intelligence.",
+    url: "https://sp500-capex.vercel.app/",
+    tech: ["Next.js", "Financial APIs", "Data Visualization"],
+    status: "Live"
+  },
+  {
+    title: "Market Cap Tracker",
+    description: "Real-time market capitalization comparison between NVIDIA and the cryptocurrency market, demonstrating advanced data visualization and performance monitoring.",
+    url: "https://market-cap-tracker.vercel.app/",
+    tech: ["Next.js", "Real-time APIs", "Analytics"],
+    status: "Live"
+  }
+];
+
 const projects = [
   {
     title: "Neural Canvas: AI-Assisted Digital Art Platform",
@@ -77,6 +94,30 @@ const talks = [
         Currently working on projects that blend generative systems, interactive media, 
         and knowledge management — creating digital gardens where ideas can grow and connect.
       </p>
+    </section>
+    
+    <section class="content-section">
+      <h2>Products</h2>
+      <div class="product-grid">
+        {products.map(product => (
+          <div class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">
+                <a href={product.url} target="_blank" rel="noopener noreferrer">
+                  {product.title}
+                </a>
+              </h3>
+              <span class="product-status">{product.status}</span>
+            </div>
+            <p class="product-description">{product.description}</p>
+            <div class="product-tech">
+              {product.tech.map(tech => (
+                <span class="tech-tag">{tech}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
     
     <section class="content-section">

@@ -207,6 +207,102 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     margin-bottom: 2.5rem;
   }
   
+  /* Product grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .product-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--flexoki-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .product-card:hover {
+    border-color: var(--deep-slate-olive);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .product-card {
+      border-color: var(--flexoki-800);
+    }
+    
+    .product-card:hover {
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  
+  .product-title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  
+  .product-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  
+  .product-title a:hover {
+    border-bottom-color: var(--deep-slate-olive);
+  }
+  
+  .product-status {
+    background: var(--deep-slate-olive);
+    color: var(--flexoki-paper);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .product-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .product-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    background: var(--flexoki-100);
+    color: var(--text-muted);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .tech-tag {
+      background: var(--flexoki-800);
+      color: var(--flexoki-300);
+    }
+  }
+  
   .content-list {
     list-style: none;
     margin: 0;
@@ -273,6 +369,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     .content-year {
       text-align: left;
       min-width: auto;
+    }
+    
+    .product-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .product-card {
+      padding: 1.25rem;
+    }
+    
+    .product-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .product-status {
+      align-self: flex-start;
     }
   }
   
