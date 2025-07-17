@@ -1,0 +1,372 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection('blog', ({ data }) => {
+    return !data.draft;
+  });
+  
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formattedDate = new Date(post.data.publishDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}) : null;
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+  <main class="container">
+    <article class="blog-post">
+      <header class="post-header">
+        <div class="post-meta">
+          <span class="post-category">{post.data.category}</span>
+          <time class="post-date" datetime={post.data.publishDate.toISOString()}>
+            {formattedDate}
+          </time>
+          {post.data.readingTime && (
+            <span class="reading-time">{post.data.readingTime} min read</span>
+          )}
+        </div>
+        
+        <h1 class="post-title">{post.data.title}</h1>
+        
+        <p class="post-description">{post.data.description}</p>
+        
+        {post.data.tags.length > 0 && (
+          <div class="post-tags">
+            {post.data.tags.map(tag => (
+              <span class="post-tag">{tag}</span>
+            ))}
+          </div>
+        )}
+        
+        {updatedDate && (
+          <div class="updated-notice">
+            <em>Last updated: {updatedDate}</em>
+          </div>
+        )}
+      </header>
+      
+      <div class="post-content">
+        <Content />
+      </div>
+      
+      <footer class="post-footer">
+        <div class="author-info">
+          <strong>{post.data.author}</strong>
+          <p>Exploring the intersection of finance, art, and code.</p>
+        </div>
+        
+        <div class="post-actions">
+          <a href="/blog" class="back-to-blog">← Back to Journal</a>
+          <div class="share-buttons">
+            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.href)}`} 
+               target="_blank" rel="noopener" class="share-button">
+              Share on Twitter
+            </a>
+          </div>
+        </div>
+      </footer>
+    </article>
+    
+    <aside class="post-sidebar">
+      <div class="newsletter-cta">
+        <h3>Enjoyed this post?</h3>
+        <p>Subscribe to get notified of new insights on finance, art, and technology.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </aside>
+  </main>
+</Layout>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--blog-warm-white);
+    padding: 3rem;
+    border: 1px solid var(--border-light);
+    margin-bottom: 3rem;
+  }
+  
+  .post-header {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .post-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background: var(--blog-bronze);
+  }
+  
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .post-category {
+    background: var(--blog-sepia);
+    color: var(--blog-warm-white);
+    padding: 0.25rem 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+  
+  .post-date {
+    color: var(--blog-bronze);
+    font-weight: 500;
+    font-family: 'Georgia', serif;
+  }
+  
+  .reading-time {
+    color: var(--blog-muted-gold);
+    font-style: italic;
+  }
+  
+  .post-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--blog-charcoal);
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+  }
+  
+  .post-description {
+    font-size: 1.125rem;
+    color: var(--blog-sepia);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .post-tag {
+    background: transparent;
+    color: var(--blog-bronze);
+    border: 1px solid var(--blog-bronze);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  
+  .updated-notice {
+    color: var(--blog-muted-gold);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
+  
+  .post-content {
+    line-height: 1.8;
+    color: var(--blog-charcoal);
+  }
+  
+  .post-content h2 {
+    font-family: 'Georgia', serif;
+    color: var(--blog-sepia);
+    font-size: 1.75rem;
+    margin: 2.5rem 0 1rem 0;
+    font-weight: 600;
+  }
+  
+  .post-content h3 {
+    font-family: 'Georgia', serif;
+    color: var(--blog-sepia);
+    font-size: 1.375rem;
+    margin: 2rem 0 0.75rem 0;
+    font-weight: 600;
+  }
+  
+  .post-content p {
+    margin-bottom: 1.5rem;
+    color: var(--blog-charcoal);
+  }
+  
+  .post-content a {
+    color: var(--blog-bronze);
+    border-bottom: 1px solid var(--blog-bronze);
+    transition: all 0.3s ease;
+  }
+  
+  .post-content a:hover {
+    color: var(--blog-sepia);
+    border-bottom-color: var(--blog-sepia);
+  }
+  
+  .post-content blockquote {
+    border-left: 3px solid var(--blog-bronze);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--blog-sepia);
+    background: var(--blog-parchment);
+    padding: 1.5rem;
+  }
+  
+  .post-content code {
+    background: var(--blog-parchment);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Monaco', monospace;
+    font-size: 0.875rem;
+    color: var(--blog-sepia);
+  }
+  
+  .post-content pre {
+    background: var(--blog-parchment);
+    padding: 1.5rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-light);
+  }
+  
+  .post-content ul,
+  .post-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+  
+  .post-content li {
+    margin-bottom: 0.5rem;
+    color: var(--blog-charcoal);
+  }
+  
+  .post-footer {
+    border-top: 1px solid var(--border-light);
+    padding-top: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .author-info {
+    margin-bottom: 2rem;
+  }
+  
+  .author-info strong {
+    color: var(--blog-charcoal);
+    font-size: 1.125rem;
+  }
+  
+  .author-info p {
+    color: var(--blog-sepia);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .back-to-blog {
+    color: var(--blog-bronze);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .back-to-blog:hover {
+    color: var(--blog-sepia);
+  }
+  
+  .share-button {
+    background: var(--blog-sepia);
+    color: var(--blog-warm-white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .share-button:hover {
+    background: var(--blog-bronze);
+  }
+  
+  .post-sidebar {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-cta {
+    background: var(--blog-parchment);
+    padding: 2rem;
+    border: 1px solid var(--border-light);
+    text-align: center;
+  }
+  
+  .newsletter-cta h3 {
+    color: var(--blog-charcoal);
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  .newsletter-cta p {
+    color: var(--blog-sepia);
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-post {
+      padding: 2rem 1.5rem;
+    }
+    
+    .post-title {
+      font-size: 2rem;
+    }
+    
+    .post-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .post-actions {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  }
+</style>
