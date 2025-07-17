@@ -24,6 +24,11 @@ const currentPath = Astro.url.pathname;
           Contact
         </a>
       </li>
+      <li>
+        <a href="/subscribe" class="nav-subscribe">
+          Subscribe
+        </a>
+      </li>
     </ul>
     
     <button class="nav-toggle" aria-label="Toggle navigation">
@@ -129,6 +134,26 @@ const currentPath = Astro.url.pathname;
     height: 2px;
     background: var(--accent-primary);
     border-radius: 1px;
+  }
+  
+  .nav-subscribe {
+    background: var(--accent-primary);
+    color: var(--text-on-dark) !important;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    font-size: 0.9rem;
+    border: 2px solid var(--accent-primary);
+  }
+  
+  .nav-subscribe:hover {
+    background: transparent;
+    color: var(--accent-primary) !important;
+    border-color: var(--accent-primary);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
   }
   
   .nav-toggle {
