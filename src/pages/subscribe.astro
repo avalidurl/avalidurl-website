@@ -20,38 +20,57 @@ import Layout from '../layouts/Layout.astro';
             the convergence of data, design, and market dynamics.
           </p>
           
-          <form class="subscribe-form" action="https://app.convertkit.com/forms/6c28efde16/subscriptions" method="post" data-sv-form="6c28efde16" data-uid="6c28efde16" data-format="inline" data-version="5" onsubmit="setTimeout(() => window.location.href = '/thank-you', 1000)">
-            <div class="form-group">
-              <label for="email_address">Email Address</label>
-              <input 
-                type="email" 
-                id="email_address" 
-                name="email_address" 
-                placeholder="your@email.com" 
-                required
-              >
+          <div class="subscription-options">
+            <div class="option-primary">
+              <h3>📧 Get Email Updates</h3>
+              <form class="subscribe-form" action="https://app.convertkit.com/forms/6c28efde16/subscriptions" method="post" data-sv-form="6c28efde16" data-uid="6c28efde16" data-format="inline" data-version="5" onsubmit="setTimeout(() => window.location.href = '/thank-you', 1000)">
+                <div class="form-group">
+                  <label for="email_address">Email Address</label>
+                  <input 
+                    type="email" 
+                    id="email_address" 
+                    name="email_address" 
+                    placeholder="your@email.com" 
+                    required
+                  >
+                </div>
+                
+                <div class="form-group">
+                  <label for="fields[interests]">What interests you most?</label>
+                  <select id="fields[interests]" name="fields[interests]">
+                    <option value="all">Everything</option>
+                    <option value="finance">Financial Analysis & Tools</option>
+                    <option value="art">Creative Coding & Design</option>
+                    <option value="intersection">Finance + Art Intersection</option>
+                    <option value="technology">Technology & Innovation</option>
+                  </select>
+                </div>
+                
+                <button type="submit" class="subscribe-button">
+                  Subscribe to Newsletter
+                </button>
+              </form>
+              
+              <p class="privacy-note">
+                No spam, ever. Unsubscribe at any time. 
+                <a href="/privacy">Privacy Policy</a>
+              </p>
             </div>
             
-            <div class="form-group">
-              <label for="fields[interests]">What interests you most?</label>
-              <select id="fields[interests]" name="fields[interests]">
-                <option value="all">Everything</option>
-                <option value="finance">Financial Analysis & Tools</option>
-                <option value="art">Creative Coding & Design</option>
-                <option value="intersection">Finance + Art Intersection</option>
-                <option value="technology">Technology & Innovation</option>
-              </select>
+            <div class="option-divider">
+              <span>OR</span>
             </div>
             
-            <button type="submit" class="subscribe-button">
-              Subscribe to Newsletter
-            </button>
-          </form>
-          
-          <p class="privacy-note">
-            No spam, ever. Unsubscribe at any time. 
-            <a href="/privacy">Privacy Policy</a>
-          </p>
+            <div class="option-secondary">
+              <h3>📡 Follow via RSS</h3>
+              <p class="rss-description">
+                Prefer feed readers? Get updates directly in your RSS client without sharing your email.
+              </p>
+              <a href="/feed.xml" class="rss-button">
+                Access RSS Feed
+              </a>
+            </div>
+          </div>
         </div>
         
         <div class="subscribe-benefits">
@@ -75,14 +94,6 @@ import Layout from '../layouts/Layout.astro';
             </li>
           </ul>
           
-          <div class="alternative-feeds">
-            <h4>Prefer RSS?</h4>
-            <p>
-              You can also follow along via 
-              <a href="/feed.xml" class="rss-link">RSS feed</a>
-              if you prefer feed readers.
-            </p>
-          </div>
         </div>
       </div>
       
@@ -262,40 +273,80 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 0.25rem;
   }
   
-  .alternative-feeds {
-    border-top: 1px solid var(--border-light);
-    padding-top: 1.5rem;
-    margin-top: 2rem;
+  .subscription-options {
+    margin-top: 1.5rem;
   }
   
-  .alternative-feeds h4 {
+  .option-primary h3,
+  .option-secondary h3 {
     color: var(--text-primary);
-    margin-bottom: 0.75rem;
-    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: 'Georgia', serif;
   }
   
-  .alternative-feeds p {
+  .option-divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+  }
+  
+  .option-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border-medium);
+    z-index: 1;
+  }
+  
+  .option-divider span {
+    background: var(--bg-card);
+    padding: 0 1rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .option-secondary {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-accent);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+  }
+  
+  .rss-description {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
+    font-size: 0.95rem;
   }
   
-  .rss-link {
+  .rss-button {
+    display: inline-block;
     color: var(--accent-primary);
     font-weight: 600;
-    padding: 0.25rem 0.5rem;
+    padding: 0.75rem 1.5rem;
     background: rgba(212, 175, 55, 0.1);
-    border-radius: 4px;
+    border: 2px solid var(--accent-primary);
+    border-radius: 6px;
     text-decoration: none;
-    border-bottom: 2px solid var(--accent-primary);
     transition: all 0.3s ease;
+    font-size: 0.95rem;
   }
   
-  .rss-link:hover {
+  .rss-button:hover {
     background: var(--accent-primary);
     color: var(--text-on-dark);
-    border-bottom-color: var(--accent-primary);
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
   }
   
   .subscribe-footer {
