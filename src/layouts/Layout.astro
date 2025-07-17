@@ -1,0 +1,304 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "A digital creator exploring the intersection of technology, art, and human connection through code and creativity." 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="developer, digital art, technology, creative coding, portfolio" />
+    <meta name="author" content="Your Name" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/og-image.jpg', Astro.site)} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL('/og-image.jpg', Astro.site)} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title={title} href="/rss.xml" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Your Name",
+      "url": canonicalURL,
+      "sameAs": [
+        "https://twitter.com/yourusername",
+        "https://github.com/yourusername", 
+        "https://linkedin.com/in/yourusername"
+      ],
+      "jobTitle": "Digital Creator & Developer",
+      "description": description
+    })} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Flexoki Color Palette */
+  :root {
+    /* Base colors */
+    --flexoki-black: #100F0F;
+    --flexoki-paper: #FFFCF0;
+    --flexoki-white: #FFFFFF;
+    
+    /* Grays */
+    --flexoki-950: #1C1B1A;
+    --flexoki-900: #282726;
+    --flexoki-850: #343331;
+    --flexoki-800: #403E3C;
+    --flexoki-700: #575653;
+    --flexoki-600: #6F6E69;
+    --flexoki-500: #878580;
+    --flexoki-300: #B7B5AC;
+    --flexoki-200: #CECDC3;
+    --flexoki-150: #DAD8CE;
+    --flexoki-100: #E6E4D9;
+    --flexoki-50: #F2F0E5;
+    
+    /* Theme colors */
+    --naples-yellow: #D0A215;
+    --peach-red: #D14D41;
+    --neutral-gray: #6F6E69;
+    --deep-slate-olive: #4C5B39;
+    
+    /* Text colors for readability */
+    --text-primary: var(--flexoki-black);
+    --text-secondary: var(--flexoki-700);
+    --text-muted: var(--flexoki-500);
+    --text-on-dark: var(--flexoki-paper);
+    
+    /* Background colors */
+    --bg-primary: var(--flexoki-paper);
+    --bg-secondary: var(--flexoki-50);
+    --bg-accent: var(--flexoki-100);
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: var(--flexoki-paper);
+      --text-secondary: var(--flexoki-200);
+      --text-muted: var(--flexoki-300);
+      --text-on-dark: var(--flexoki-black);
+      
+      --bg-primary: var(--flexoki-950);
+      --bg-secondary: var(--flexoki-900);
+      --bg-accent: var(--flexoki-850);
+    }
+  }
+  
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 2rem 0 1rem 0;
+    line-height: 1.3;
+  }
+  
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* Links */
+  a {
+    color: var(--deep-slate-olive);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  
+  a:hover {
+    border-bottom-color: var(--deep-slate-olive);
+  }
+  
+  a:focus {
+    outline: 2px solid var(--naples-yellow);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  
+  /* Bio section */
+  .bio {
+    margin-bottom: 3rem;
+  }
+  
+  .bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  /* Content sections */
+  .content-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .content-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .content-item {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  
+  .content-item a {
+    flex: 1;
+  }
+  
+  .content-year {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 400;
+    min-width: 3rem;
+    text-align: right;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--flexoki-200);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    footer {
+      border-top-color: var(--flexoki-800);
+    }
+  }
+  
+  .subscribe-link {
+    color: var(--peach-red);
+    font-weight: 500;
+  }
+  
+  .subscribe-link:hover {
+    border-bottom-color: var(--peach-red);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 640px) {
+    .container {
+      padding: 1.5rem 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .content-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+    
+    .content-year {
+      text-align: left;
+      min-width: auto;
+    }
+  }
+  
+  /* Performance optimizations */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Accessibility improvements */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* Smooth scrolling */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+</style>
