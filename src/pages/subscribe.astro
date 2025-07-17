@@ -132,8 +132,8 @@ import Layout from '../layouts/Layout.astro';
   
   .subscribe-content {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 5rem;
     margin-bottom: 3rem;
     align-items: start;
   }
@@ -265,23 +265,38 @@ import Layout from '../layouts/Layout.astro';
   
   .alternative-feeds {
     border-top: 1px solid var(--border-light);
-    padding-top: 1.25rem;
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
   }
   
   .alternative-feeds h4 {
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
   }
   
   .alternative-feeds p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
   
   .rss-link {
-    color: var(--accent-secondary);
-    font-weight: 500;
+    color: var(--accent-primary);
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 4px;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .rss-link:hover {
+    background: var(--accent-primary);
+    color: var(--text-on-dark);
+    border-bottom-color: var(--accent-primary);
+    transform: translateY(-1px);
   }
   
   .subscribe-footer {

@@ -777,12 +777,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   }
   
   .rss-link {
-    color: var(--blog-bronze);
-    font-weight: 500;
+    color: var(--accent-primary);
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 4px;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-primary);
+    transition: all 0.3s ease;
   }
   
   .rss-link:hover {
-    color: var(--blog-sepia);
+    background: var(--accent-primary);
+    color: var(--text-on-dark);
+    border-bottom-color: var(--accent-primary);
+    transform: translateY(-1px);
   }
   
   /* Homepage Blog Preview */
