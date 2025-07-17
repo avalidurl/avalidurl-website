@@ -5,15 +5,23 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev", 
-    "build": "astro build",
+    "build": "npm run build:deps && astro build",
+    "build:deps": "npm rebuild rollup || echo 'Rollup rebuild failed, continuing...'",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^4.0.0"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.45.1"
+  },
   "devDependencies": {
     "@astrojs/check": "^0.3.0",
     "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }
