@@ -23,7 +23,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="subscription-options">
             <div class="option-primary">
               <h3>📧 Get Email Updates</h3>
-              <form class="subscribe-form" action="https://app.convertkit.com/forms/6c28efde16/subscriptions" method="post" data-sv-form="6c28efde16" data-uid="6c28efde16" data-format="inline" data-version="5" onsubmit="setTimeout(() => window.location.href = '/thank-you', 1000)">
+              <form class="subscribe-form" action="https://app.convertkit.com/forms/6c28efde16/subscriptions" method="post" data-sv-form="6c28efde16" data-uid="6c28efde16" data-format="inline" data-version="5">
                 <div class="form-group">
                   <label for="email_address">Email Address</label>
                   <input 
@@ -143,10 +143,10 @@ import Layout from '../layouts/Layout.astro';
   
   .subscribe-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
     margin-bottom: 3rem;
-    align-items: stretch;
+    align-items: start;
   }
   
   .subscribe-form-container {
@@ -363,7 +363,6 @@ import Layout from '../layouts/Layout.astro';
   
   @media (max-width: 768px) {
     .subscribe-content {
-      grid-template-columns: 1fr;
       gap: 2rem;
     }
     

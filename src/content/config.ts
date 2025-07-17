@@ -39,8 +39,32 @@ const blog = defineCollection({
   }),
 });
 
+const art = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    createdDate: z.date(),
+    category: z.enum(['digital', 'generative', 'data-viz', 'interactive', 'mixed-media']),
+    medium: z.string(),
+    dimensions: z.string().optional(),
+    tools: z.array(z.string()).default([]),
+    colorTheme: z.enum(['red', 'green', 'blue']),
+    featured: z.boolean().default(false),
+    imageUrl: z.string(),
+    thumbnailUrl: z.string().optional(),
+    galleryImages: z.array(z.string()).optional(),
+    available: z.boolean().default(true),
+    price: z.string().optional(),
+    edition: z.string().optional(),
+    inspiration: z.string().optional(),
+    process: z.string().optional(),
+  }),
+});
+
 export const collections = {
   projects,
   essays,
   blog,
+  art,
 };
