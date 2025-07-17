@@ -6,11 +6,15 @@ import Layout from '../layouts/Layout.astro';
   <main class="container">
     <div class="thank-you-page">
       <header class="thank-you-header">
-        <h1>Welcome to the Community!</h1>
+        <h1>Check Your Email!</h1>
         <p class="thank-you-subtitle">
-          Thank you for joining the exploration of finance, art, and technology. 
-          You're now part of a growing community of creators and analytical minds.
+          We've sent you a confirmation email. Please click the link in that email to complete your subscription and join the community.
         </p>
+        <div class="confirmation-notice">
+          <h2>📧 Important Next Step</h2>
+          <p><strong>Look for an email from us</strong> and click the confirmation link to activate your subscription. This helps us ensure you really want to receive our updates!</p>
+          <p class="email-tip">💡 <em>Check your spam folder if you don't see it within a few minutes.</em></p>
+        </div>
       </header>
       
       <div class="thank-you-content">
@@ -18,9 +22,9 @@ import Layout from '../layouts/Layout.astro';
           <h2>What Happens Next?</h2>
           <div class="expectations-grid">
             <div class="expectation-card">
-              <div class="expectation-icon">📧</div>
-              <h3>Welcome Series</h3>
-              <p>You'll receive a welcome email within minutes, followed by a curated series introducing you to my work and philosophy.</p>
+              <div class="expectation-icon">✅</div>
+              <h3>Confirm Your Email</h3>
+              <p>First, click the confirmation link we just sent you. This activates your subscription and ensures you receive all updates.</p>
             </div>
             
             <div class="expectation-card">
@@ -118,6 +122,32 @@ import Layout from '../layouts/Layout.astro';
     width: 100px;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  }
+  
+  .confirmation-notice {
+    background: var(--accent-primary);
+    color: var(--text-on-dark);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+    border: 3px solid var(--accent-secondary);
+  }
+  
+  .confirmation-notice h2 {
+    margin-bottom: 1rem;
+    color: var(--text-on-dark);
+  }
+  
+  .confirmation-notice p {
+    margin-bottom: 1rem;
+    color: var(--text-on-dark);
+    line-height: 1.6;
+  }
+  
+  .email-tip {
+    font-size: 0.9rem;
+    opacity: 0.9;
   }
   
   .thank-you-subtitle {
