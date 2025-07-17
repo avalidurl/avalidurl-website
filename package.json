@@ -4,13 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev", 
+    "start": "astro dev",
     "build": "npm run build:deps && astro build",
     "build:deps": "npm rebuild rollup || echo 'Rollup rebuild failed, continuing...'",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.12",
     "astro": "^4.0.0"
   },
   "optionalDependencies": {
