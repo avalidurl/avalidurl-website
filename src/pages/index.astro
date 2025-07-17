@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: "Neural Canvas: AI-Assisted Digital Art Platform",
+    url: "/projects/neural-canvas",
+    year: "2025"
+  },
+  {
+    title: "Memory Garden: Personal Knowledge Graph",
+    url: "/projects/memory-garden", 
+    year: "2024"
+  },
+  {
+    title: "Code Poetry: Algorithmic Literature Generator",
+    url: "/projects/code-poetry",
+    year: "2024"
+  },
+  {
+    title: "Data Dreams: Visualization Experiments",
+    url: "/projects/data-dreams",
+    year: "2023"
+  }
+];
+
+const writings = [
+  {
+    title: "On Digital Gardens and Knowledge Synthesis",
+    url: "/essays/digital-gardens",
+    year: "2025"
+  },
+  {
+    title: "The Poetry of Algorithms", 
+    url: "/essays/creative-algorithms",
+    year: "2024"
+  },
+  {
+    title: "Human-AI Collaboration in Creative Work",
+    url: "/essays/human-ai-collaboration", 
+    year: "2024"
+  }
+];
+
+const talks = [
+  {
+    title: "Creative Coding Podcast",
+    url: "https://example.com/podcast",
+    year: "2024"
+  },
+  {
+    title: "AI & Art Conference Keynote",
+    url: "https://example.com/conference",
+    year: "2024"
+  },
+  {
+    title: "Technology & Creativity Interview",
+    url: "https://example.com/interview",
+    year: "2023"
+  }
+];
+---
+
+<Layout title="Your Name - Digital Creator & Developer">
+  <main class="container">
+    <header>
+      <h1>Your Name</h1>
+    </header>
+    
+    <section class="bio">
+      <p>
+        A digital creator exploring the intersection of technology, art, and human connection. 
+        Building tools that amplify creativity and developing experiences that bridge the gap 
+        between code and consciousness.
+      </p>
+      <p>
+        Currently working on projects that blend generative systems, interactive media, 
+        and knowledge management — creating digital gardens where ideas can grow and connect.
+      </p>
+    </section>
+    
+    <section class="content-section">
+      <h2>Projects</h2>
+      <ul class="content-list">
+        {projects.map(project => (
+          <li class="content-item">
+            <a href={project.url}>{project.title}</a>
+            <span class="content-year">{project.year}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+    
+    <section class="content-section">
+      <h2>Writing</h2>
+      <ul class="content-list">
+        {writings.map(writing => (
+          <li class="content-item">
+            <a href={writing.url}>{writing.title}</a>
+            <span class="content-year">{writing.year}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+    
+    <section class="content-section">
+      <h2>Talks & Interviews</h2>
+      <ul class="content-list">
+        {talks.map(talk => (
+          <li class="content-item">
+            <a href={talk.url}>{talk.title}</a>
+            <span class="content-year">{talk.year}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+    
+    <footer>
+      <p>
+        <a href="/subscribe" class="subscribe-link">Subscribe</a> for updates on new projects and thoughts.
+      </p>
+    </footer>
+  </main>
+</Layout>

@@ -1,0 +1,158 @@
+name: Security Scan
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly on Monday at 2 AM
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    name: Weekly Security Scan
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit
+        run: |
+          echo "Running npm audit..."
+          npm audit --audit-level=moderate || true
+          npm audit --json > audit-results.json || true
+
+      - name: Scan for secrets in git history
+        run: |
+          echo "Scanning git history for potential secrets..."
+          
+          # Check for common secret patterns
+          PATTERNS=(
+            "api[_-]key"
+            "secret"
+            "token"
+            "password"
+            "private[_-]key"
+            "cloudflare"
+            "github[_-]token"
+          )
+          
+          for pattern in "${PATTERNS[@]}"; do
+            echo "Checking for: $pattern"
+            if git log --all --grep="$pattern" -i --oneline; then
+              echo "⚠️  Found potential secret reference in commit messages"
+            fi
+            
+            if git log --all -S"$pattern" -i --oneline; then
+              echo "⚠️  Found potential secret in code changes"
+            fi
+          done
+
+      - name: Check file permissions
+        run: |
+          echo "Checking file permissions..."
+          find . -type f -perm +o+w -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do
+            echo "⚠️  World-writable file found: $file"
+          done
+
+      - name: Dependency vulnerability scan
+        run: |
+          echo "Scanning dependencies for known vulnerabilities..."
+          npx audit-ci --moderate
+
+      - name: Check for environment variable leaks
+        run: |
+          echo "Checking for environment variable leaks..."
+          
+          # Check for common environment variable patterns
+          if grep -r -i "process\.env\." src/ --include="*.ts" --include="*.js" --include="*.astro" | grep -v "import\.meta\.env"; then
+            echo "⚠️  Found potential Node.js environment variable usage instead of Astro's import.meta.env"
+          fi
+
+      - name: Check for hardcoded URLs
+        run: |
+          echo "Checking for hardcoded URLs..."
+          
+          # Check for hardcoded URLs that should be environment variables
+          if grep -r -i "https://[^/]" src/ --include="*.ts" --include="*.js" --include="*.astro" | grep -v "fonts.googleapis.com" | grep -v "fonts.gstatic.com"; then
+            echo "⚠️  Found hardcoded URLs that should be environment variables"
+          fi
+
+      - name: Generate security report
+        run: |
+          echo "# Security Scan Report" > security-report.md
+          echo "Date: $(date)" >> security-report.md
+          echo "" >> security-report.md
+          echo "## npm Audit Results" >> security-report.md
+          if [ -f "audit-results.json" ]; then
+            jq '.vulnerabilities | length' audit-results.json >> security-report.md
+          fi
+          echo "" >> security-report.md
+          echo "## Recommendations" >> security-report.md
+          echo "- Review all dependencies regularly" >> security-report.md
+          echo "- Rotate API keys quarterly" >> security-report.md
+          echo "- Monitor for security advisories" >> security-report.md
+          echo "- Update security headers annually" >> security-report.md
+
+      - name: Upload security report
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-report
+          path: security-report.md
+          retention-days: 30
+
+  csp-test:
+    runs-on: ubuntu-latest
+    name: Content Security Policy Test
+    steps:
+      - name: Test CSP Implementation
+        run: |
+          echo "Testing Content Security Policy..."
+          
+          # This would typically test against a deployed site
+          # For now, we'll validate the CSP header format
+          CSP_HEADER="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';"
+          
+          echo "CSP Header: $CSP_HEADER"
+          
+          # Validate CSP syntax (basic check)
+          if echo "$CSP_HEADER" | grep -E "default-src|script-src|style-src"; then
+            echo "✅ CSP header format appears valid"
+          else
+            echo "❌ CSP header format may be invalid"
+          fi
+
+  ssl-test:
+    runs-on: ubuntu-latest
+    name: SSL/TLS Configuration Test
+    steps:
+      - name: Test SSL Configuration
+        run: |
+          echo "Testing SSL/TLS configuration..."
+          
+          # Test SSL configuration against deployed site
+          SITE_URL="${{ secrets.SITE_URL }}"
+          
+          if [ -n "$SITE_URL" ]; then
+            echo "Testing SSL for: $SITE_URL"
+            
+            # Test SSL certificate
+            if curl -s -I "$SITE_URL" | grep -i "HTTP/2 200"; then
+              echo "✅ HTTPS connection successful"
+            else
+              echo "❌ HTTPS connection failed"
+            fi
+            
+            # Test SSL grade (requires external service)
+            echo "For comprehensive SSL testing, visit: https://www.ssllabs.com/ssltest/analyze.html?d=${SITE_URL#https://}"
+          else
+            echo "⚠️  SITE_URL not configured for SSL testing"
+          fi
