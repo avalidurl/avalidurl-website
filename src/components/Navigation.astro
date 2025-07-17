@@ -20,6 +20,11 @@ const currentPath = Astro.url.pathname;
         </a>
       </li>
       <li>
+        <a href="/art" class={currentPath.startsWith('/art') ? 'nav-link active' : 'nav-link'}>
+          Art
+        </a>
+      </li>
+      <li>
         <a href="#contact" class="nav-link">
           Contact
         </a>
