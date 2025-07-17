@@ -20,21 +20,21 @@ import Layout from '../layouts/Layout.astro';
             the convergence of data, design, and market dynamics.
           </p>
           
-          <form class="subscribe-form" action="#" method="post">
+          <form class="subscribe-form" action="https://app.convertkit.com/forms/6c28efde16/subscriptions" method="post" data-sv-form="6c28efde16" data-uid="6c28efde16" data-format="inline" data-version="5">
             <div class="form-group">
-              <label for="email">Email Address</label>
+              <label for="email_address">Email Address</label>
               <input 
                 type="email" 
-                id="email" 
-                name="email" 
+                id="email_address" 
+                name="email_address" 
                 placeholder="your@email.com" 
                 required
               >
             </div>
             
             <div class="form-group">
-              <label for="interests">What interests you most?</label>
-              <select id="interests" name="interests">
+              <label for="fields[interests]">What interests you most?</label>
+              <select id="fields[interests]" name="fields[interests]">
                 <option value="all">Everything</option>
                 <option value="finance">Financial Analysis & Tools</option>
                 <option value="art">Creative Coding & Design</option>
@@ -132,9 +132,10 @@ import Layout from '../layouts/Layout.astro';
   
   .subscribe-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
     margin-bottom: 3rem;
+    align-items: start;
   }
   
   .subscribe-form-container {
@@ -222,9 +223,10 @@ import Layout from '../layouts/Layout.astro';
   
   .subscribe-benefits {
     background: var(--blog-parchment);
-    padding: 2.5rem;
+    padding: 2rem;
     border: 1px solid var(--border-light);
     border-radius: 8px;
+    height: fit-content;
   }
   
   .subscribe-benefits h3 {
@@ -240,11 +242,11 @@ import Layout from '../layouts/Layout.astro';
   }
   
   .benefits-list li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     padding-left: 1.5rem;
     position: relative;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.5;
   }
   
   .benefits-list li::before {
@@ -263,7 +265,8 @@ import Layout from '../layouts/Layout.astro';
   
   .alternative-feeds {
     border-top: 1px solid var(--border-light);
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
+    margin-top: 1.5rem;
   }
   
   .alternative-feeds h4 {

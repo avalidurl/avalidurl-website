@@ -94,8 +94,17 @@ const recentPosts = sortedPosts.slice(0, 6);
       <div class="newsletter-signup">
         <h3>Stay Updated</h3>
         <p>Get notified of new posts exploring finance, art, and technology.</p>
+        <form class="newsletter-form" action="https://app.convertkit.com/forms/6c28efde16/subscriptions" method="post" data-sv-form="6c28efde16" data-uid="6c28efde16" data-format="inline" data-version="5">
+          <input 
+            type="email" 
+            name="email_address" 
+            placeholder="your@email.com" 
+            required
+          >
+          <button type="submit">Subscribe</button>
+        </form>
         <div class="newsletter-actions">
-          <a href="/subscribe" class="subscribe-cta">Subscribe to Newsletter</a>
+          <a href="/subscribe" class="subscribe-cta">Full Subscription Options</a>
           <p class="newsletter-note">
             Or follow via <a href="/feed.xml" class="rss-link">RSS Feed</a>
           </p>
