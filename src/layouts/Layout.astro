@@ -210,9 +210,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   /* Product grid */
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
   }
   
   .product-card {
@@ -372,7 +378,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     }
     
     .product-grid {
-      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
     
