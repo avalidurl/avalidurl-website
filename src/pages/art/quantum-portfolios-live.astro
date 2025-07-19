@@ -4,12 +4,14 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout title="Quantum Portfolios - Interactive Art">
   <main class="quantum-portfolios">
-    <div class="artwork-header">
+    <div class="artwork-header" id="headerPanel">
       <h1>Quantum Portfolios</h1>
       <p class="subtitle">Interactive exploration of Modern Portfolio Theory through quantum mechanics</p>
       <div class="controls">
         <button id="togglePhysics">Toggle Physics</button>
         <button id="resetPortfolio">Reset Portfolio</button>
+        <button id="hideUI">Hide UI</button>
+        <button id="enableMusic">🎵 Enable Music</button>
         <div class="risk-return">
           <span>Risk: <span id="riskDisplay">--</span>%</span>
           <span>Return: <span id="returnDisplay">--</span>%</span>
@@ -19,7 +21,7 @@ import Layout from '../../layouts/Layout.astro';
 
     <canvas id="quantumCanvas"></canvas>
     
-    <div class="portfolio-panel">
+    <div class="portfolio-panel" id="portfolioPanel">
       <h3>Portfolio Weights</h3>
       <div class="asset-weights">
         <div class="asset">
@@ -45,20 +47,21 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <div class="concept-info">
+    <div class="concept-info" id="conceptPanel">
       <h3>About Quantum Portfolios</h3>
       <p>
-        This interactive artwork visualizes Modern Portfolio Theory through the lens of quantum mechanics. 
-        Each asset class is represented by particle clouds that exhibit quantum-like behaviors - entanglement 
-        represents correlation, uncertainty principle manifests as risk, and wave functions collapse into 
-        expected returns.
+        This interactive artwork visualizes Modern Portfolio Theory through quantum mechanics. 
+        Each asset class forms particle clouds with quantum behaviors - larger weights create 
+        denser, more active particle fields.
       </p>
       <p>
-        Adjust the portfolio weights to see how diversification affects the quantum field. Watch as 
-        particles dance in blue probability clouds, their movements governed by both financial mathematics 
-        and quantum physics principles.
+        <strong>💡 Monetization Ideas:</strong> NFT collections, licensed installations for financial institutions, 
+        premium real-time data feeds, VR gallery experiences.
       </p>
     </div>
+
+    <!-- Hidden UI Toggle -->
+    <button id="showUI" class="show-ui-btn" style="display: none;">Show Controls</button>
   </main>
 </Layout>
 
@@ -262,6 +265,29 @@ import Layout from '../../layouts/Layout.astro';
     margin-bottom: 0;
   }
 
+  .show-ui-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #4fc3f7;
+    color: #0a0a0f;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .show-ui-btn:hover {
+    background: #4fc3f7;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
   @media (max-width: 768px) {
     .artwork-header {
       position: relative;
@@ -307,13 +333,15 @@ import Layout from '../../layouts/Layout.astro';
   let mouse = { x: 0, y: 0 };
   let time = 0;
   let physicsEnabled = true;
+  let musicEnabled = false;
+  let audioContext, oscillators = {};
   
-  // Portfolio data
+  // Portfolio data with enhanced visual properties
   const assets = {
-    tech: { weight: 0.25, color: '#4fc3f7', return: 0.12, risk: 0.20, particles: [] },
-    bonds: { weight: 0.25, color: '#81d4fa', return: 0.06, risk: 0.08, particles: [] },
-    realestate: { weight: 0.25, color: '#b3e5fc', return: 0.10, risk: 0.15, particles: [] },
-    commodities: { weight: 0.25, color: '#e1f5fe', return: 0.08, risk: 0.25, particles: [] }
+    tech: { weight: 0.25, color: '#4fc3f7', return: 0.12, risk: 0.20, particles: [], baseCount: 50 },
+    bonds: { weight: 0.25, color: '#81d4fa', return: 0.06, risk: 0.08, particles: [], baseCount: 50 },
+    realestate: { weight: 0.25, color: '#b3e5fc', return: 0.10, risk: 0.15, particles: [], baseCount: 50 },
+    commodities: { weight: 0.25, color: '#e1f5fe', return: 0.08, risk: 0.25, particles: [], baseCount: 50 }
   };
 
   class QuantumParticle {
@@ -421,17 +449,29 @@ import Layout from '../../layouts/Layout.astro';
     
     Object.keys(assets).forEach(assetKey => {
       const asset = assets[assetKey];
-      const particleCount = Math.floor(asset.weight * 200);
+      // More dramatic particle count based on weight (0-400 particles)
+      const particleCount = Math.floor(asset.weight * 400);
       asset.particles = [];
       
+      // Create particles in clusters based on asset type
+      const clusterX = (canvas.width / 4) * (Object.keys(assets).indexOf(assetKey) + 0.5);
+      const clusterY = canvas.height / 2;
+      
       for (let i = 0; i < particleCount; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
+        // Spread particles in clusters but allow movement
+        const angle = Math.random() * Math.PI * 2;
+        const radius = Math.random() * 200;
+        const x = clusterX + Math.cos(angle) * radius;
+        const y = clusterY + Math.sin(angle) * radius;
+        
         const particle = new QuantumParticle(x, y, asset);
         particles.push(particle);
         asset.particles.push(particle);
       }
     });
+    
+    // Update music based on portfolio
+    updateMusic();
   }
 
   function updatePortfolioMetrics() {
@@ -450,6 +490,67 @@ import Layout from '../../layouts/Layout.astro';
     document.getElementById('riskDisplay').textContent = (totalRisk * 100).toFixed(1);
   }
 
+  // Music generation based on portfolio
+  function initAudio() {
+    try {
+      audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      
+      Object.keys(assets).forEach((assetKey, index) => {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        // Different frequencies for each asset
+        const baseFreq = [220, 330, 440, 550][index]; // A3, E4, A4, C#5
+        oscillator.frequency.setValueAtTime(baseFreq, audioContext.currentTime);
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.start();
+        oscillators[assetKey] = { osc: oscillator, gain: gainNode, baseFreq };
+      });
+    } catch (e) {
+      console.log('Audio not supported');
+    }
+  }
+
+  function updateMusic() {
+    if (!musicEnabled || !audioContext) return;
+    
+    Object.keys(assets).forEach(assetKey => {
+      const asset = assets[assetKey];
+      const osc = oscillators[assetKey];
+      
+      if (osc) {
+        // Volume based on weight
+        const volume = asset.weight * 0.1;
+        osc.gain.gain.exponentialRampToValueAtTime(volume + 0.001, audioContext.currentTime + 0.1);
+        
+        // Frequency modulation based on risk
+        const freqMod = asset.risk * 50;
+        osc.osc.frequency.exponentialRampToValueAtTime(osc.baseFreq + freqMod, audioContext.currentTime + 0.1);
+      }
+    });
+  }
+
+  // UI Management
+  function hideUI() {
+    document.getElementById('headerPanel').style.display = 'none';
+    document.getElementById('portfolioPanel').style.display = 'none';
+    document.getElementById('conceptPanel').style.display = 'none';
+    document.getElementById('showUI').style.display = 'block';
+  }
+
+  function showUI() {
+    document.getElementById('headerPanel').style.display = 'block';
+    document.getElementById('portfolioPanel').style.display = 'block';
+    document.getElementById('conceptPanel').style.display = 'block';
+    document.getElementById('showUI').style.display = 'none';
+  }
+
   function setupEventListeners() {
     // Portfolio weight sliders
     Object.keys(assets).forEach(assetKey => {
@@ -458,14 +559,21 @@ import Layout from '../../layouts/Layout.astro';
         const newWeight = e.target.value / 100;
         assets[assetKey].weight = newWeight;
         
-        // Update particle count
-        const newParticleCount = Math.floor(newWeight * 200);
+        // Update particle count dramatically (0-400 particles)
+        const newParticleCount = Math.floor(newWeight * 400);
         const currentCount = assets[assetKey].particles.length;
         
         if (newParticleCount > currentCount) {
+          // Add new particles in clusters
+          const clusterX = (canvas.width / 4) * (Object.keys(assets).indexOf(assetKey) + 0.5);
+          const clusterY = canvas.height / 2;
+          
           for (let i = 0; i < newParticleCount - currentCount; i++) {
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
+            const angle = Math.random() * Math.PI * 2;
+            const radius = Math.random() * 200;
+            const x = clusterX + Math.cos(angle) * radius;
+            const y = clusterY + Math.sin(angle) * radius;
+            
             const particle = new QuantumParticle(x, y, assets[assetKey]);
             particles.push(particle);
             assets[assetKey].particles.push(particle);
@@ -482,12 +590,15 @@ import Layout from '../../layouts/Layout.astro';
         // Update display
         e.target.nextElementSibling.textContent = Math.round(newWeight * 100) + '%';
         updatePortfolioMetrics();
+        updateMusic();
       });
     });
 
     // Controls
     document.getElementById('togglePhysics').addEventListener('click', () => {
       physicsEnabled = !physicsEnabled;
+      const btn = document.getElementById('togglePhysics');
+      btn.textContent = physicsEnabled ? 'Pause Physics' : 'Resume Physics';
     });
 
     document.getElementById('resetPortfolio').addEventListener('click', () => {
@@ -498,6 +609,24 @@ import Layout from '../../layouts/Layout.astro';
       });
       createParticles();
       updatePortfolioMetrics();
+    });
+
+    document.getElementById('hideUI').addEventListener('click', hideUI);
+    document.getElementById('showUI').addEventListener('click', showUI);
+
+    document.getElementById('enableMusic').addEventListener('click', () => {
+      if (!musicEnabled) {
+        initAudio();
+        musicEnabled = true;
+        document.getElementById('enableMusic').textContent = '🔇 Disable Music';
+        updateMusic();
+      } else {
+        musicEnabled = false;
+        Object.values(oscillators).forEach(osc => {
+          if (osc.gain) osc.gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
+        });
+        document.getElementById('enableMusic').textContent = '🎵 Enable Music';
+      }
     });
 
     // Mouse interaction
