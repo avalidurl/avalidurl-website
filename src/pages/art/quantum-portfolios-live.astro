@@ -1,0 +1,538 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Quantum Portfolios - Interactive Art">
+  <main class="quantum-portfolios">
+    <div class="artwork-header">
+      <h1>Quantum Portfolios</h1>
+      <p class="subtitle">Interactive exploration of Modern Portfolio Theory through quantum mechanics</p>
+      <div class="controls">
+        <button id="togglePhysics">Toggle Physics</button>
+        <button id="resetPortfolio">Reset Portfolio</button>
+        <div class="risk-return">
+          <span>Risk: <span id="riskDisplay">--</span>%</span>
+          <span>Return: <span id="returnDisplay">--</span>%</span>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="quantumCanvas"></canvas>
+    
+    <div class="portfolio-panel">
+      <h3>Portfolio Weights</h3>
+      <div class="asset-weights">
+        <div class="asset">
+          <label>Tech Stocks</label>
+          <input type="range" id="tech" min="0" max="100" value="25">
+          <span class="weight-value">25%</span>
+        </div>
+        <div class="asset">
+          <label>Bonds</label>
+          <input type="range" id="bonds" min="0" max="100" value="25">
+          <span class="weight-value">25%</span>
+        </div>
+        <div class="asset">
+          <label>Real Estate</label>
+          <input type="range" id="realestate" min="0" max="100" value="25">
+          <span class="weight-value">25%</span>
+        </div>
+        <div class="asset">
+          <label>Commodities</label>
+          <input type="range" id="commodities" min="0" max="100" value="25">
+          <span class="weight-value">25%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="concept-info">
+      <h3>About Quantum Portfolios</h3>
+      <p>
+        This interactive artwork visualizes Modern Portfolio Theory through the lens of quantum mechanics. 
+        Each asset class is represented by particle clouds that exhibit quantum-like behaviors - entanglement 
+        represents correlation, uncertainty principle manifests as risk, and wave functions collapse into 
+        expected returns.
+      </p>
+      <p>
+        Adjust the portfolio weights to see how diversification affects the quantum field. Watch as 
+        particles dance in blue probability clouds, their movements governed by both financial mathematics 
+        and quantum physics principles.
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .quantum-portfolios {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+    color: #e8f4fd;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .artwork-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    max-width: 400px;
+  }
+
+  .artwork-header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(45deg, #4fc3f7, #81d4fa, #b3e5fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .controls button {
+    background: rgba(79, 195, 247, 0.2);
+    border: 1px solid rgba(79, 195, 247, 0.4);
+    color: #e8f4fd;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .controls button:hover {
+    background: rgba(79, 195, 247, 0.3);
+    border-color: rgba(79, 195, 247, 0.6);
+  }
+
+  .risk-return {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .risk-return span {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(79, 195, 247, 0.2);
+  }
+
+  #quantumCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .portfolio-panel {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 250px;
+    z-index: 100;
+  }
+
+  .portfolio-panel h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    color: #4fc3f7;
+  }
+
+  .asset-weights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .asset {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .asset label {
+    min-width: 80px;
+    font-size: 0.9rem;
+  }
+
+  .asset input[type="range"] {
+    flex: 1;
+    height: 4px;
+    background: rgba(79, 195, 247, 0.2);
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  .asset input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #4fc3f7;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #0a0a0f;
+  }
+
+  .asset input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #4fc3f7;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #0a0a0f;
+  }
+
+  .weight-value {
+    min-width: 35px;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #4fc3f7;
+  }
+
+  .concept-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 350px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 195, 247, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 100;
+  }
+
+  .concept-info h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+    color: #4fc3f7;
+  }
+
+  .concept-info p {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+
+  .concept-info p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .artwork-header {
+      position: relative;
+      max-width: none;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(79, 195, 247, 0.3);
+    }
+
+    .artwork-header h1 {
+      font-size: 2rem;
+    }
+
+    .portfolio-panel,
+    .concept-info {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      margin: 1rem;
+      max-width: none;
+    }
+
+    #quantumCanvas {
+      height: 60vh;
+      position: relative;
+    }
+  }
+</style>
+
+<script>
+  // Quantum Portfolio Visualization
+  let canvas, ctx;
+  let particles = [];
+  let mouse = { x: 0, y: 0 };
+  let time = 0;
+  let physicsEnabled = true;
+  
+  // Portfolio data
+  const assets = {
+    tech: { weight: 0.25, color: '#4fc3f7', return: 0.12, risk: 0.20, particles: [] },
+    bonds: { weight: 0.25, color: '#81d4fa', return: 0.06, risk: 0.08, particles: [] },
+    realestate: { weight: 0.25, color: '#b3e5fc', return: 0.10, risk: 0.15, particles: [] },
+    commodities: { weight: 0.25, color: '#e1f5fe', return: 0.08, risk: 0.25, particles: [] }
+  };
+
+  class QuantumParticle {
+    constructor(x, y, asset) {
+      this.x = x;
+      this.y = y;
+      this.vx = (Math.random() - 0.5) * 2;
+      this.vy = (Math.random() - 0.5) * 2;
+      this.asset = asset;
+      this.size = Math.random() * 3 + 2;
+      this.phase = Math.random() * Math.PI * 2;
+      this.uncertainty = asset.risk * 50;
+      this.entanglement = Math.random();
+    }
+
+    update() {
+      if (!physicsEnabled) return;
+
+      time += 0.016;
+      
+      // Quantum uncertainty principle
+      const uncertainty = Math.sin(time + this.phase) * this.uncertainty;
+      
+      // Entanglement with other particles
+      particles.forEach(other => {
+        if (other !== this && other.asset !== this.asset) {
+          const dx = other.x - this.x;
+          const dy = other.y - this.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 100) {
+            const force = this.entanglement * (100 - distance) / 100;
+            this.vx += (dx / distance) * force * 0.001;
+            this.vy += (dy / distance) * force * 0.001;
+          }
+        }
+      });
+
+      // Portfolio weight influence
+      const centerX = canvas.width * 0.5;
+      const centerY = canvas.height * 0.5;
+      const attractionStrength = this.asset.weight * 0.001;
+      
+      this.vx += (centerX - this.x) * attractionStrength;
+      this.vy += (centerY - this.y) * attractionStrength;
+      
+      // Apply uncertainty
+      this.vx += Math.sin(time * 2 + this.phase) * 0.1;
+      this.vy += Math.cos(time * 2 + this.phase) * 0.1;
+      
+      // Update position
+      this.x += this.vx;
+      this.y += this.vy;
+      
+      // Damping
+      this.vx *= 0.99;
+      this.vy *= 0.99;
+      
+      // Boundary conditions
+      if (this.x < 0 || this.x > canvas.width) this.vx *= -0.5;
+      if (this.y < 0 || this.y > canvas.height) this.vy *= -0.5;
+      
+      this.x = Math.max(0, Math.min(canvas.width, this.x));
+      this.y = Math.max(0, Math.min(canvas.height, this.y));
+    }
+
+    draw() {
+      const alpha = 0.6 + Math.sin(time + this.phase) * 0.3;
+      
+      // Draw quantum field
+      const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 4);
+      gradient.addColorStop(0, this.asset.color + Math.floor(alpha * 255).toString(16).padStart(2, '0'));
+      gradient.addColorStop(1, this.asset.color + '00');
+      
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size * 4, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Draw particle core
+      ctx.fillStyle = this.asset.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function init() {
+    canvas = document.getElementById('quantumCanvas');
+    ctx = canvas.getContext('2d');
+    
+    resizeCanvas();
+    createParticles();
+    setupEventListeners();
+    animate();
+  }
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function createParticles() {
+    particles = [];
+    
+    Object.keys(assets).forEach(assetKey => {
+      const asset = assets[assetKey];
+      const particleCount = Math.floor(asset.weight * 200);
+      asset.particles = [];
+      
+      for (let i = 0; i < particleCount; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const particle = new QuantumParticle(x, y, asset);
+        particles.push(particle);
+        asset.particles.push(particle);
+      }
+    });
+  }
+
+  function updatePortfolioMetrics() {
+    let totalReturn = 0;
+    let totalRisk = 0;
+    
+    Object.values(assets).forEach(asset => {
+      totalReturn += asset.weight * asset.return;
+      totalRisk += asset.weight * asset.weight * asset.risk * asset.risk;
+    });
+    
+    // Add correlation effects (simplified)
+    totalRisk = Math.sqrt(totalRisk) * 1.2;
+    
+    document.getElementById('returnDisplay').textContent = (totalReturn * 100).toFixed(1);
+    document.getElementById('riskDisplay').textContent = (totalRisk * 100).toFixed(1);
+  }
+
+  function setupEventListeners() {
+    // Portfolio weight sliders
+    Object.keys(assets).forEach(assetKey => {
+      const slider = document.getElementById(assetKey);
+      slider.addEventListener('input', (e) => {
+        const newWeight = e.target.value / 100;
+        assets[assetKey].weight = newWeight;
+        
+        // Update particle count
+        const newParticleCount = Math.floor(newWeight * 200);
+        const currentCount = assets[assetKey].particles.length;
+        
+        if (newParticleCount > currentCount) {
+          for (let i = 0; i < newParticleCount - currentCount; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            const particle = new QuantumParticle(x, y, assets[assetKey]);
+            particles.push(particle);
+            assets[assetKey].particles.push(particle);
+          }
+        } else if (newParticleCount < currentCount) {
+          const toRemove = currentCount - newParticleCount;
+          for (let i = 0; i < toRemove; i++) {
+            const particle = assets[assetKey].particles.pop();
+            const index = particles.indexOf(particle);
+            if (index > -1) particles.splice(index, 1);
+          }
+        }
+        
+        // Update display
+        e.target.nextElementSibling.textContent = Math.round(newWeight * 100) + '%';
+        updatePortfolioMetrics();
+      });
+    });
+
+    // Controls
+    document.getElementById('togglePhysics').addEventListener('click', () => {
+      physicsEnabled = !physicsEnabled;
+    });
+
+    document.getElementById('resetPortfolio').addEventListener('click', () => {
+      Object.keys(assets).forEach(assetKey => {
+        assets[assetKey].weight = 0.25;
+        document.getElementById(assetKey).value = 25;
+        document.querySelector(`#${assetKey} + .weight-value`).textContent = '25%';
+      });
+      createParticles();
+      updatePortfolioMetrics();
+    });
+
+    // Mouse interaction
+    canvas.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      
+      // Attract particles to mouse
+      particles.forEach(particle => {
+        const dx = mouse.x - particle.x;
+        const dy = mouse.y - particle.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < 150) {
+          const force = (150 - distance) / 150 * 0.002;
+          particle.vx += (dx / distance) * force;
+          particle.vy += (dy / distance) * force;
+        }
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createParticles();
+    });
+  }
+
+  function animate() {
+    ctx.fillStyle = 'rgba(10, 10, 15, 0.1)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    particles.forEach(particle => {
+      particle.update();
+      particle.draw();
+    });
+    
+    // Draw connections between entangled particles
+    ctx.strokeStyle = 'rgba(79, 195, 247, 0.1)';
+    ctx.lineWidth = 1;
+    
+    for (let i = 0; i < particles.length; i += 5) {
+      for (let j = i + 5; j < particles.length; j += 5) {
+        const p1 = particles[i];
+        const p2 = particles[j];
+        const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+        
+        if (distance < 100 && p1.entanglement * p2.entanglement > 0.7) {
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+    }
+    
+    requestAnimationFrame(animate);
+  }
+
+  // Initialize when page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    init();
+    updatePortfolioMetrics();
+  });
+</script>
+</Layout>
