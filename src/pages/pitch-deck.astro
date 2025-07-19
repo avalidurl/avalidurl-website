@@ -3,524 +3,313 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="aValidURL - Investor Pitch Deck" description="Investment presentation for the future of financial art through real-time data visualization and interactive experiences.">
-  <div class="reveal">
-    <div class="slides">
+  <div class="pitch-deck">
+    <div class="slides-container">
       
       <!-- Title Slide -->
-      <section class="title-slide" data-background-gradient="linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%)">
-        <div class="title-content">
-          <h1 class="main-title">aValidURL</h1>
-          <h2 class="subtitle">The Future of Financial Art</h2>
+      <section class="slide title-slide active">
+        <div class="slide-content">
+          <h1>aValidURL</h1>
+          <h2>The Future of Financial Art</h2>
           <p class="tagline">Where Market Data Becomes Interactive Art</p>
           <div class="demo-button">
             <a href="/art/quantum-portfolios-live/" target="_blank" class="live-demo-btn">
               🚀 View Live Demo
             </a>
           </div>
-          <div class="presenter-info">
-            <p>Investor Presentation • Q4 2025</p>
-          </div>
+          <p class="presenter-info">Investor Presentation • Q4 2025</p>
         </div>
       </section>
 
       <!-- Problem Statement -->
-      <section>
-        <h2>The Problem</h2>
-        <div class="problem-grid">
-          <div class="problem-item">
-            <div class="problem-icon">📊</div>
-            <h3>Financial Data is Boring</h3>
-            <p>Traditional charts and spreadsheets fail to engage users and reveal deeper market insights</p>
+      <section class="slide">
+        <div class="slide-content">
+          <h2>The Problem</h2>
+          <div class="problem-grid">
+            <div class="problem-item">
+              <div class="problem-icon">📊</div>
+              <h3>Financial Data is Boring</h3>
+              <p>Traditional charts and spreadsheets fail to engage users and reveal deeper market insights</p>
+            </div>
+            <div class="problem-item">
+              <div class="problem-icon">🎨</div>
+              <h3>Art Lacks Real-Time Data</h3>
+              <p>Digital art remains static, missing opportunities to visualize live data streams</p>
+            </div>
+            <div class="problem-item">
+              <div class="problem-icon">💰</div>
+              <h3>Limited Monetization</h3>
+              <p>Few platforms successfully bridge finance, technology, and creative expression</p>
+            </div>
           </div>
-          <div class="problem-item">
-            <div class="problem-icon">🎨</div>
-            <h3>Art Lacks Real-Time Data</h3>
-            <p>Digital art remains static, missing opportunities to visualize live data streams</p>
+          <div class="market-pain">
+            <h3>$2.5B+ Market Opportunity</h3>
+            <p>Financial visualization tools + Digital art platforms + Real-time data services</p>
           </div>
-          <div class="problem-item">
-            <div class="problem-icon">💰</div>
-            <h3>Limited Monetization</h3>
-            <p>Few platforms successfully bridge finance, technology, and creative expression</p>
-          </div>
-        </div>
-        <div class="market-pain">
-          <h3>$2.5B+ Market Opportunity</h3>
-          <p>Financial visualization tools + Digital art platforms + Real-time data services</p>
         </div>
       </section>
 
       <!-- Solution -->
-      <section>
-        <h2>Our Solution</h2>
-        <div class="solution-showcase">
-          <div class="solution-demo">
-            <iframe src="/art/quantum-portfolios-live/" frameborder="0" class="embedded-demo"></iframe>
-          </div>
-          <div class="solution-description">
-            <h3>Interactive Financial Art Platform</h3>
-            <ul class="solution-features">
-              <li>✨ Real-time market data → Visual art transformation</li>
-              <li>🎵 Generative music based on portfolio metrics</li>
-              <li>⚛️ Quantum mechanics metaphors for finance</li>
-              <li>🎮 Interactive experiences, not static charts</li>
-              <li>📱 Multi-platform (Web, VR, Mobile)</li>
-            </ul>
-            <div class="tech-stack">
-              <span class="tech-badge">WebGL</span>
-              <span class="tech-badge">Real-time APIs</span>
-              <span class="tech-badge">Machine Learning</span>
+      <section class="slide">
+        <div class="slide-content">
+          <h2>Our Solution</h2>
+          <div class="solution-showcase">
+            <div class="solution-demo">
+              <div class="demo-placeholder">
+                <div class="demo-visual">
+                  <div class="particle-animation">
+                    <div class="particle p1"></div>
+                    <div class="particle p2"></div>
+                    <div class="particle p3"></div>
+                    <div class="particle p4"></div>
+                  </div>
+                  <h4>Quantum Portfolios Live Demo</h4>
+                  <p>Interactive particle physics visualization</p>
+                  <a href="/art/quantum-portfolios-live/" target="_blank" class="demo-link">
+                    🚀 Launch Full Experience
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="solution-description">
+              <h3>Interactive Financial Art Platform</h3>
+              <ul class="solution-features">
+                <li>✨ Real-time market data → Visual art transformation</li>
+                <li>🎵 Generative music based on portfolio metrics</li>
+                <li>⚛️ Quantum mechanics metaphors for finance</li>
+                <li>🎮 Interactive experiences, not static charts</li>
+                <li>📱 Multi-platform (Web, VR, Mobile)</li>
+              </ul>
+              <div class="tech-stack">
+                <span class="tech-badge">WebGL</span>
+                <span class="tech-badge">Real-time APIs</span>
+                <span class="tech-badge">Machine Learning</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Market Opportunity -->
-      <section>
-        <h2>Market Opportunity</h2>
-        <div class="market-analysis">
-          <div class="market-size">
-            <h3>Total Addressable Market (TAM)</h3>
-            <div class="market-circles">
-              <div class="market-circle large">
-                <div class="circle-content">
+      <section class="slide">
+        <div class="slide-content">
+          <h2>Market Opportunity</h2>
+          <div class="market-analysis">
+            <div class="market-size">
+              <h3>Total Addressable Market (TAM)</h3>
+              <div class="market-stats">
+                <div class="market-stat">
                   <span class="market-value">$15.2B</span>
                   <span class="market-label">Financial Software</span>
                 </div>
-              </div>
-              <div class="market-circle medium">
-                <div class="circle-content">
+                <div class="market-stat">
                   <span class="market-value">$4.8B</span>
                   <span class="market-label">Digital Art Platforms</span>
                 </div>
-              </div>
-              <div class="market-circle small">
-                <div class="circle-content">
+                <div class="market-stat">
                   <span class="market-value">$2.1B</span>
                   <span class="market-label">Data Visualization</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="market-segments">
-            <h3>Target Segments</h3>
-            <div class="segment-grid">
-              <div class="segment">
-                <h4>🏦 Financial Institutions</h4>
-                <p>Trading floors, wealth management, client presentations</p>
-                <span class="market-size-small">$5B+</span>
-              </div>
-              <div class="segment">
-                <h4>🎓 Educational Institutions</h4>
-                <p>Business schools, finance programs, training</p>
-                <span class="market-size-small">$1.2B</span>
-              </div>
-              <div class="segment">
-                <h4>👥 Individual Investors</h4>
-                <p>Portfolio visualization, social trading, NFTs</p>
-                <span class="market-size-small">$3.5B</span>
-              </div>
+            <div class="market-trends">
+              <h3>Growth Trends</h3>
+              <ul>
+                <li>📈 FinTech adoption growing 25% annually</li>
+                <li>🎨 Digital art market expanded 878% in 2021</li>
+                <li>📊 Data visualization tools demand up 40%</li>
+                <li>🌐 Real-time data services market: $8.2B by 2026</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Business Model -->
-      <section>
-        <h2>Business Model</h2>
-        <div class="business-model">
-          <div class="revenue-streams">
-            <h3>Multiple Revenue Streams</h3>
-            <div class="revenue-grid">
-              <div class="revenue-stream">
-                <h4>SaaS Subscriptions</h4>
-                <div class="pricing-tiers">
-                  <div class="tier">
-                    <span class="tier-name">Free</span>
-                    <span class="tier-price">$0</span>
-                    <span class="tier-market">100K+ users</span>
-                  </div>
-                  <div class="tier premium">
-                    <span class="tier-name">Premium</span>
-                    <span class="tier-price">$29/mo</span>
-                    <span class="tier-market">10K users</span>
-                  </div>
-                  <div class="tier enterprise">
-                    <span class="tier-name">Enterprise</span>
-                    <span class="tier-price">$10K+/mo</span>
-                    <span class="tier-market">100+ clients</span>
-                  </div>
-                </div>
+      <section class="slide">
+        <div class="slide-content">
+          <h2>Business Model</h2>
+          <div class="business-model">
+            <div class="revenue-streams">
+              <h3>Revenue Streams</h3>
+              <div class="revenue-item">
+                <h4>🆓 Freemium Model</h4>
+                <p>Basic visualizations with 15-min delayed data</p>
+                <span class="revenue-amount">$0 → Lead Generation</span>
               </div>
-              <div class="revenue-additional">
-                <div class="revenue-item">
-                  <h4>🎨 NFT Collections</h4>
-                  <p>Unique market moment artworks</p>
-                  <span class="revenue-projection">$500K/year</span>
-                </div>
-                <div class="revenue-item">
-                  <h4>🏢 Custom Installations</h4>
-                  <p>Trading floor visualizations</p>
-                  <span class="revenue-projection">$2M/year</span>
-                </div>
-                <div class="revenue-item">
-                  <h4>📊 Data Licensing</h4>
-                  <p>API access and integrations</p>
-                  <span class="revenue-projection">$1M/year</span>
-                </div>
+              <div class="revenue-item">
+                <h4>💎 Premium Subscriptions</h4>
+                <p>Real-time data, custom portfolios, advanced features</p>
+                <span class="revenue-amount">$29-99/month</span>
               </div>
-            </div>
-          </div>
-          <div class="revenue-projections">
-            <h3>5-Year Revenue Projection</h3>
-            <div class="projection-chart">
-              <div class="year-projection">
-                <span class="year">Year 1</span>
-                <span class="revenue">$150K</span>
+              <div class="revenue-item">
+                <h4>🏢 Enterprise Licenses</h4>
+                <p>White-label solutions, trading floor installations</p>
+                <span class="revenue-amount">$10K-100K/year</span>
               </div>
-              <div class="year-projection">
-                <span class="year">Year 2</span>
-                <span class="revenue">$850K</span>
-              </div>
-              <div class="year-projection highlighted">
-                <span class="year">Year 3</span>
-                <span class="revenue">$3.2M</span>
-              </div>
-              <div class="year-projection">
-                <span class="year">Year 4</span>
-                <span class="revenue">$8.5M</span>
-              </div>
-              <div class="year-projection">
-                <span class="year">Year 5</span>
-                <span class="revenue">$18M</span>
+              <div class="revenue-item">
+                <h4>🎨 NFT Collections</h4>
+                <p>Generative art based on historical market data</p>
+                <span class="revenue-amount">Limited Editions</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Technology & IP -->
-      <section>
-        <h2>Technology & Competitive Advantage</h2>
-        <div class="tech-advantage">
-          <div class="tech-innovation">
-            <h3>🔬 Core Innovations</h3>
-            <ul class="innovation-list">
-              <li><strong>Real-time Data Sonification:</strong> First platform to convert market volatility into generative music</li>
-              <li><strong>Quantum Finance Visualization:</strong> Novel particle physics approach to portfolio theory</li>
-              <li><strong>Multi-sensory Experience:</strong> Visual + Audio + Interactive engagement</li>
-              <li><strong>Scalable Architecture:</strong> WebGL + WebAssembly for enterprise performance</li>
-            </ul>
-          </div>
-          <div class="competitive-moat">
-            <h3>🏰 Competitive Moat</h3>
-            <div class="moat-factors">
-              <div class="moat-item">
-                <h4>Network Effects</h4>
-                <p>More users → Better art → More engagement</p>
+      <!-- Revenue Projections -->
+      <section class="slide">
+        <div class="slide-content">
+          <h2>Revenue Projections</h2>
+          <div class="projections">
+            <div class="projection-timeline">
+              <div class="projection-year">
+                <h3>Year 1</h3>
+                <span class="projection-revenue">$250K</span>
+                <p>1,000 premium users<br>5 enterprise clients</p>
               </div>
-              <div class="moat-item">
-                <h4>Data Partnerships</h4>
-                <p>Exclusive real-time financial feeds</p>
+              <div class="projection-year">
+                <h3>Year 2</h3>
+                <span class="projection-revenue">$1.2M</span>
+                <p>5,000 premium users<br>25 enterprise clients</p>
               </div>
-              <div class="moat-item">
-                <h4>Technical Complexity</h4>
-                <p>High barrier to replication</p>
+              <div class="projection-year">
+                <h3>Year 3</h3>
+                <span class="projection-revenue">$4.8M</span>
+                <p>15,000 premium users<br>75 enterprise clients</p>
+              </div>
+              <div class="projection-year">
+                <h3>Year 4</h3>
+                <span class="projection-revenue">$12.5M</span>
+                <p>35,000 premium users<br>150 enterprise clients</p>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="ip-portfolio">
-          <h3>📋 Intellectual Property</h3>
-          <div class="ip-grid">
-            <div class="ip-item">
-              <span class="ip-type">Patent Pending</span>
-              <span class="ip-title">Real-time Market Data Visualization Methods</span>
-            </div>
-            <div class="ip-item">
-              <span class="ip-type">Trademark</span>
-              <span class="ip-title">Quantum Portfolios™ Interactive Experience</span>
-            </div>
-            <div class="ip-item">
-              <span class="ip-type">Copyright</span>
-              <span class="ip-title">Proprietary Visualization Algorithms</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Go-to-Market -->
-      <section>
-        <h2>Go-to-Market Strategy</h2>
-        <div class="gtm-strategy">
-          <div class="gtm-phases">
-            <div class="gtm-phase">
-              <h3>Phase 1: Product-Market Fit</h3>
-              <span class="timeline">Q1-Q2 2026</span>
+            <div class="key-metrics">
+              <h3>Key Metrics</h3>
               <ul>
-                <li>Launch premium subscriptions</li>
-                <li>B2C user acquisition via social media</li>
-                <li>Partnership with finance influencers</li>
-                <li>University pilot programs</li>
+                <li>Customer Acquisition Cost: $45</li>
+                <li>Customer Lifetime Value: $850</li>
+                <li>Monthly Churn Rate: <5%</li>
+                <li>Gross Margin: 85%</li>
               </ul>
-              <span class="target">Target: 1K paying users</span>
             </div>
-            <div class="gtm-phase">
-              <h3>Phase 2: Enterprise Sales</h3>
-              <span class="timeline">Q3-Q4 2026</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Stack -->
+      <section class="slide">
+        <div class="slide-content">
+          <h2>Technology Stack</h2>
+          <div class="tech-overview">
+            <div class="tech-category">
+              <h3>Frontend</h3>
               <ul>
-                <li>Direct B2B sales to trading firms</li>
-                <li>White-label licensing deals</li>
-                <li>Financial conference demos</li>
-                <li>Wealth management partnerships</li>
+                <li>WebGL for 3D graphics</li>
+                <li>Real-time particle systems</li>
+                <li>Web Audio API for sonification</li>
+                <li>Progressive Web App (PWA)</li>
               </ul>
-              <span class="target">Target: 50 enterprise clients</span>
             </div>
-            <div class="gtm-phase">
-              <h3>Phase 3: Platform Scale</h3>
-              <span class="timeline">2027+</span>
+            <div class="tech-category">
+              <h3>Data & APIs</h3>
               <ul>
-                <li>Global financial institution rollout</li>
-                <li>API marketplace launch</li>
-                <li>VR/AR expansion</li>
-                <li>International market entry</li>
+                <li>WebSocket connections</li>
+                <li>Alpha Vantage, Yahoo Finance</li>
+                <li>Custom correlation algorithms</li>
+                <li>Real-time market data feeds</li>
               </ul>
-              <span class="target">Target: $18M ARR</span>
             </div>
-          </div>
-          <div class="customer-acquisition">
-            <h3>Customer Acquisition Channels</h3>
-            <div class="channel-breakdown">
-              <div class="channel">
-                <span class="channel-name">Content Marketing</span>
-                <span class="channel-percent">35%</span>
-                <div class="channel-bar" style="width: 35%"></div>
-              </div>
-              <div class="channel">
-                <span class="channel-name">Direct Sales</span>
-                <span class="channel-percent">30%</span>
-                <div class="channel-bar" style="width: 30%"></div>
-              </div>
-              <div class="channel">
-                <span class="channel-name">Partnerships</span>
-                <span class="channel-percent">20%</span>
-                <div class="channel-bar" style="width: 20%"></div>
-              </div>
-              <div class="channel">
-                <span class="channel-name">Referrals</span>
-                <span class="channel-percent">15%</span>
-                <div class="channel-bar" style="width: 15%"></div>
-              </div>
+            <div class="tech-category">
+              <h3>Infrastructure</h3>
+              <ul>
+                <li>Cloudflare Pages (CDN)</li>
+                <li>Edge computing optimization</li>
+                <li>Auto-scaling architecture</li>
+                <li>99.9% uptime SLA</li>
+              </ul>
+            </div>
+            <div class="tech-category">
+              <h3>Future Tech</h3>
+              <ul>
+                <li>WebXR for VR/AR</li>
+                <li>Machine Learning models</li>
+                <li>Blockchain integration</li>
+                <li>IoT sensor data</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Financial Projections -->
-      <section>
-        <h2>Financial Projections</h2>
-        <div class="financial-overview">
-          <div class="key-metrics">
-            <h3>Key Metrics (Year 3)</h3>
-            <div class="metrics-grid">
-              <div class="metric">
-                <span class="metric-value">$3.2M</span>
-                <span class="metric-label">Annual Revenue</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">45%</span>
-                <span class="metric-label">Gross Margin</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">15K</span>
-                <span class="metric-label">Paying Users</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">$18</span>
-                <span class="metric-label">Monthly ARPU</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">8%</span>
-                <span class="metric-label">Monthly Churn</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">1.8x</span>
-                <span class="metric-label">LTV/CAC Ratio</span>
+      <!-- Investment Ask -->
+      <section class="slide">
+        <div class="slide-content">
+          <h2>Investment Opportunity</h2>
+          <div class="investment-ask">
+            <div class="ask-amount">
+              <h3>Seeking $2M Series A</h3>
+              <p>18-month runway to scale and capture market share</p>
+            </div>
+            <div class="use-of-funds">
+              <h3>Use of Funds</h3>
+              <div class="funds-breakdown">
+                <div class="fund-item">
+                  <span class="fund-percentage">40%</span>
+                  <span class="fund-category">Engineering Team</span>
+                </div>
+                <div class="fund-item">
+                  <span class="fund-percentage">25%</span>
+                  <span class="fund-category">Data Partnerships</span>
+                </div>
+                <div class="fund-item">
+                  <span class="fund-percentage">20%</span>
+                  <span class="fund-category">Marketing & Sales</span>
+                </div>
+                <div class="fund-item">
+                  <span class="fund-percentage">15%</span>
+                  <span class="fund-category">Operations</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="funding-use">
-            <h3>Use of Funds ($2M Seed Round)</h3>
-            <div class="funding-breakdown">
-              <div class="funding-item">
-                <span class="funding-category">Engineering & Product</span>
-                <span class="funding-percent">50%</span>
-                <span class="funding-amount">$1.0M</span>
-              </div>
-              <div class="funding-item">
-                <span class="funding-category">Sales & Marketing</span>
-                <span class="funding-percent">30%</span>
-                <span class="funding-amount">$600K</span>
-              </div>
-              <div class="funding-item">
-                <span class="funding-category">Operations & Legal</span>
-                <span class="funding-percent">15%</span>
-                <span class="funding-amount">$300K</span>
-              </div>
-              <div class="funding-item">
-                <span class="funding-category">Working Capital</span>
-                <span class="funding-percent">5%</span>
-                <span class="funding-amount">$100K</span>
-              </div>
+            <div class="investor-benefits">
+              <h3>Investor Benefits</h3>
+              <ul>
+                <li>💰 First-mover advantage in financial art space</li>
+                <li>📈 Multiple revenue streams and exit opportunities</li>
+                <li>🎨 IP portfolio of innovative visualization techniques</li>
+                <li>🌐 Scalable global platform with network effects</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Team & Advisory -->
-      <section>
-        <h2>Team & Advisory Board</h2>
-        <div class="team-section">
-          <div class="founder-profile">
-            <div class="founder-image">
-              <div class="avatar">GT</div>
-            </div>
-            <div class="founder-info">
-              <h3>Gokhan Turhan</h3>
-              <span class="founder-title">Founder & CEO</span>
-              <p class="founder-bio">
-                Serial entrepreneur with expertise in financial technology and digital art. 
-                Previously built and scaled fintech solutions. Strong background in both 
-                traditional finance and emerging technologies.
-              </p>
-              <div class="founder-credentials">
-                <span class="credential">🎓 Finance & Technology</span>
-                <span class="credential">💼 10+ Years Experience</span>
-                <span class="credential">🚀 3x Entrepreneur</span>
+      <!-- Thank You -->
+      <section class="slide">
+        <div class="slide-content">
+          <div class="thank-you-slide">
+            <h2>Let's Build the Future of Financial Art Together</h2>
+            <div class="contact-info">
+              <div class="contact-item">
+                <h3>Get in Touch</h3>
+                <p>📧 investors@avalidurl.com</p>
+                <p>🌐 avalidurl.com</p>
+                <p>📱 Schedule a demo call</p>
+              </div>
+              <div class="contact-item">
+                <h3>Experience the Platform</h3>
+                <a href="/art/quantum-portfolios-live/" target="_blank" class="final-demo-btn">
+                  🚀 Try Quantum Portfolios Live
+                </a>
+                <a href="/roadmap" class="roadmap-btn">
+                  📋 View Full Roadmap
+                </a>
               </div>
             </div>
-          </div>
-          <div class="advisor-grid">
-            <h3>Advisory Board (To Be Assembled)</h3>
-            <div class="advisor-roles">
-              <div class="advisor-role">
-                <h4>🏦 Financial Industry Expert</h4>
-                <p>Former Goldman Sachs/JPMorgan executive</p>
-              </div>
-              <div class="advisor-role">
-                <h4>🎨 Digital Art Pioneer</h4>
-                <p>Leading NFT/crypto art marketplace founder</p>
-              </div>
-              <div class="advisor-role">
-                <h4>⚡ Technology Advisor</h4>
-                <p>Ex-Google/Meta engineering leader</p>
-              </div>
-              <div class="advisor-role">
-                <h4>💰 VC/Growth Expert</h4>
-                <p>Experienced in scaling B2B SaaS platforms</p>
-              </div>
+            <div class="closing-message">
+              <p><em>"Where mathematics meets artistry, and data becomes poetry."</em></p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Investment Terms -->
-      <section>
-        <h2>Investment Opportunity</h2>
-        <div class="investment-terms">
-          <div class="investment-overview">
-            <h3>Seed Round Details</h3>
-            <div class="investment-grid">
-              <div class="investment-detail">
-                <span class="detail-label">Raising</span>
-                <span class="detail-value">$2.0M</span>
-              </div>
-              <div class="investment-detail">
-                <span class="detail-label">Valuation</span>
-                <span class="detail-value">$8M pre-money</span>
-              </div>
-              <div class="investment-detail">
-                <span class="detail-label">Equity</span>
-                <span class="detail-value">20%</span>
-              </div>
-              <div class="investment-detail">
-                <span class="detail-label">Minimum Investment</span>
-                <span class="detail-value">$50K</span>
-              </div>
-              <div class="investment-detail">
-                <span class="detail-label">Use of Funds</span>
-                <span class="detail-value">18-month runway</span>
-              </div>
-              <div class="investment-detail">
-                <span class="detail-label">Target Close</span>
-                <span class="detail-value">Q1 2026</span>
-              </div>
-            </div>
-          </div>
-          <div class="investment-highlights">
-            <h3>Why Invest Now?</h3>
-            <ul class="investment-reasons">
-              <li>✅ <strong>Working Product:</strong> Live interactive demos with user traction</li>
-              <li>🚀 <strong>Early Market:</strong> First-mover advantage in financial art space</li>
-              <li>📈 <strong>Scalable Technology:</strong> Platform approach with multiple revenue streams</li>
-              <li>🎯 <strong>Clear Path to Revenue:</strong> Proven subscription model + enterprise demand</li>
-              <li>🌐 <strong>Global Opportunity:</strong> Financial markets are universal</li>
-              <li>🛡️ <strong>Defensible Moats:</strong> Technology complexity + network effects</li>
-            </ul>
-          </div>
-        </div>
-        <div class="next-steps">
-          <h3>Next Steps</h3>
-          <div class="steps-timeline">
-            <div class="step">
-              <span class="step-number">1</span>
-              <span class="step-title">Demo Call</span>
-              <span class="step-description">15-minute live product demonstration</span>
-            </div>
-            <div class="step">
-              <span class="step-number">2</span>
-              <span class="step-title">Due Diligence</span>
-              <span class="step-description">Financial & technical deep dive</span>
-            </div>
-            <div class="step">
-              <span class="step-number">3</span>
-              <span class="step-title">Term Sheet</span>
-              <span class="step-description">Investment terms negotiation</span>
-            </div>
-            <div class="step">
-              <span class="step-number">4</span>
-              <span class="step-title">Closing</span>
-              <span class="step-description">Legal documentation & funding</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Thank You / Contact -->
-      <section class="closing-slide" data-background-gradient="linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%)">
-        <div class="closing-content">
-          <h1>Thank You</h1>
-          <h2>Questions & Discussion</h2>
-          <div class="contact-info">
-            <div class="contact-item">
-              <span class="contact-label">Email:</span>
-              <span class="contact-value">founders@avalidurl.com</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Website:</span>
-              <span class="contact-value">avalidurl.com</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Live Demo:</span>
-              <span class="contact-value">avalidurl.com/art/quantum-portfolios-live</span>
-            </div>
-          </div>
-          <div class="closing-cta">
-            <a href="/art/quantum-portfolios-live/" target="_blank" class="final-demo-btn">
-              🚀 Experience the Future of Financial Art
-            </a>
-            <button onclick="window.exportToPDF()" class="pdf-export-btn">
-              📄 Export as PDF
-            </button>
           </div>
         </div>
       </section>
@@ -528,133 +317,168 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
 
-  <!-- Include Reveal.js and dependencies -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css">
-  
-  <!-- Include PDF Export Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  
-  <!-- Reveal.js Script -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <!-- Navigation -->
+  <div class="navigation">
+    <button id="prevBtn" class="nav-btn">← Previous</button>
+    <span id="slideCounter" class="slide-counter">1 / 9</span>
+    <button id="nextBtn" class="nav-btn">Next →</button>
+    <button class="pdf-export-btn" onclick="exportToPDF()">📄 Export PDF</button>
+  </div>
+
 </Layout>
 
 <style>
-  /* Custom Pitch Deck Styling */
-  .reveal {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .reveal .slides section {
-    text-align: left;
-    padding: 2rem;
-  }
-
-  .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-    color: #ffffff !important;
-    text-transform: none;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 700;
-  }
-
-  .reveal h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #ffffff !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 700;
-  }
-
-  .reveal p, .reveal li, .reveal span, .reveal div {
-    color: #ffffff !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-size: 1.1rem;
+  /* Reset and base styles */
+  .pitch-deck {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    color: #1a202c;
     line-height: 1.6;
   }
 
-  /* Title Slide */
+  .slides-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .slide {
+    display: none;
+    min-height: 80vh;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  .slide-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Title slide */
   .title-slide {
-    text-align: center !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .main-title {
-    font-size: 4rem !important;
-    font-weight: 700;
+  .title-slide h1 {
+    font-size: 4rem;
+    font-weight: 800;
     margin-bottom: 1rem;
-    color: #ffffff !important;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-  .subtitle {
-    font-size: 2rem !important;
-    color: #ffffff !important;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 600;
+  .title-slide h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
   }
 
   .tagline {
     font-size: 1.5rem;
-    color: #ffffff !important;
-    margin-bottom: 3rem;
-    font-style: italic;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 500;
+    margin-bottom: 2rem;
+    opacity: 0.8;
   }
 
-  .live-demo-btn, .final-demo-btn, .pdf-export-btn {
+  .live-demo-btn {
     display: inline-block;
-    background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+    background: #48bb78;
     color: white;
     padding: 1rem 2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2rem;
-    margin: 1rem;
     transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
   }
 
-  .pdf-export-btn {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    margin-left: 2rem;
-  }
-
-  .live-demo-btn:hover, .final-demo-btn:hover, .pdf-export-btn:hover {
+  .live-demo-btn:hover {
+    background: #38a169;
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(79, 195, 247, 0.3);
-  }
-
-  .pdf-export-btn:hover {
-    box-shadow: 0 8px 16px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 6px 16px rgba(72, 187, 120, 0.4);
   }
 
   .presenter-info {
-    margin-top: 3rem;
-    color: #ffffff !important;
-    font-size: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-weight: 500;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.7;
   }
 
-  /* Problem Grid */
+  /* Typography */
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+  }
+
+  /* Problem grid */
   .problem-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
   }
 
   .problem-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: #f7fafc;
     padding: 2rem;
     border-radius: 12px;
-    border: 2px solid rgba(79, 195, 247, 0.4);
-    backdrop-filter: blur(10px);
+    text-align: center;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+
+  .problem-item:hover {
+    border-color: #667eea;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 
   .problem-icon {
@@ -662,46 +486,26 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 1rem;
   }
 
-  .problem-item h3 {
-    color: #ffffff !important;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 700;
-  }
-
-  .problem-item p {
-    color: #ffffff !important;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-weight: 500;
-  }
-
   .market-pain {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
     padding: 2rem;
     border-radius: 12px;
-    border: 2px solid rgba(79, 195, 247, 0.4);
-    backdrop-filter: blur(10px);
+    text-align: center;
   }
 
   .market-pain h3 {
-    color: #ffffff !important;
+    color: white;
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 700;
   }
 
   .market-pain p {
-    color: #ffffff !important;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-weight: 500;
   }
 
-  /* Solution Showcase */
+  /* Solution showcase */
   .solution-showcase {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -709,827 +513,452 @@ import Layout from '../layouts/Layout.astro';
     align-items: center;
   }
 
-  .embedded-demo {
-    width: 100%;
-    height: 400px;
+  .demo-placeholder {
+    background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 12px;
-    background: #0a0a0f;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
   }
 
-  .solution-features {
-    list-style: none;
-    padding: 0;
+  .particle-animation {
+    position: relative;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .particle.p1 { top: 20%; left: 20%; animation-delay: 0s; }
+  .particle.p2 { top: 60%; left: 70%; animation-delay: 1s; }
+  .particle.p3 { top: 80%; left: 30%; animation-delay: 2s; }
+  .particle.p4 { top: 40%; left: 80%; animation-delay: 1.5s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+    50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+  }
+
+  .demo-link {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .demo-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
   }
 
   .solution-features li {
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
-    color: #ffffff !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-weight: 500;
-  }
-
-  .solution-description h3 {
-    color: #ffffff !important;
-    font-size: 1.8rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-  }
-
-  .tech-stack {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
+    background: #f0fff4;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 6px;
+    border-left: 4px solid #48bb78;
   }
 
   .tech-badge {
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff !important;
+    display: inline-block;
+    background: #667eea;
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    border: 1px solid rgba(79, 195, 247, 0.4);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
-  /* Market Analysis */
-  .market-circles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Market analysis */
+  .market-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
   }
 
-  .market-circle {
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), rgba(129, 212, 250, 0.1));
-    border: 2px solid #4fc3f7;
-  }
-
-  .market-circle.large {
-    width: 200px;
-    height: 200px;
-  }
-
-  .market-circle.medium {
-    width: 150px;
-    height: 150px;
-  }
-
-  .market-circle.small {
-    width: 120px;
-    height: 120px;
-  }
-
-  .circle-content {
+  .market-stat {
     text-align: center;
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
   }
 
   .market-value {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #ffffff !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #667eea;
+    margin-bottom: 0.5rem;
   }
 
   .market-label {
-    font-size: 1rem;
-    color: #ffffff !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 1.1rem;
+    color: #4a5568;
     font-weight: 600;
   }
 
-  .segment-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  .segment {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 2px solid rgba(79, 195, 247, 0.4);
-    backdrop-filter: blur(10px);
-  }
-
-  .segment h4 {
-    color: #ffffff !important;
-    font-size: 1.3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-  }
-
-  .segment p {
-    color: #ffffff !important;
-    font-size: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
-
-  .market-size-small {
-    background: #4fc3f7;
-    color: white;
-    padding: 0.25rem 0.75rem;
+  .market-trends {
+    background: #f0fff4;
+    padding: 2rem;
     border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    border-left: 4px solid #48bb78;
   }
 
-  /* Business Model */
-  .pricing-tiers {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-
-  .tier {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
-    text-align: center;
-    flex: 1;
-  }
-
-  .tier.premium {
-    border-color: #4fc3f7;
-    background: rgba(79, 195, 247, 0.1);
-  }
-
-  .tier.enterprise {
-    border-color: #ff9800;
-    background: rgba(255, 152, 0, 0.1);
-  }
-
-  .tier-name {
-    display: block;
-    font-weight: 600;
-    color: #4fc3f7;
-  }
-
-  .tier-price {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0.5rem 0;
-  }
-
-  .tier-market {
-    font-size: 0.9rem;
-    color: #b3e5fc;
-  }
-
-  .revenue-additional {
-    margin-top: 2rem;
-  }
-
+  /* Business model */
   .revenue-item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(79, 195, 247, 0.2);
-  }
-
-  .revenue-projection {
-    background: #4caf50;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    float: right;
-  }
-
-  .projection-chart {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-
-  .year-projection {
-    text-align: center;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
-    flex: 1;
-    margin: 0 0.5rem;
-  }
-
-  .year-projection.highlighted {
-    border-color: #4fc3f7;
-    background: rgba(79, 195, 247, 0.1);
-  }
-
-  .year {
-    display: block;
-    color: #b3e5fc;
-    font-size: 0.9rem;
-  }
-
-  .revenue {
-    display: block;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #4fc3f7;
-  }
-
-  /* Innovation List */
-  .innovation-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .innovation-list li {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(79, 195, 247, 0.2);
-    font-size: 1.1rem;
-  }
-
-  .innovation-list li strong {
-    color: #4fc3f7;
-  }
-
-  .moat-factors {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  .moat-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: #f7fafc;
     padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
   }
 
-  .moat-item h4 {
-    color: #4fc3f7;
-    margin-bottom: 0.5rem;
+  .revenue-item:hover {
+    border-color: #667eea;
+    transform: translateX(4px);
   }
 
-  .ip-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .ip-item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
-  }
-
-  .ip-type {
+  .revenue-amount {
     display: block;
-    color: #4fc3f7;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
   }
 
-  /* GTM Strategy */
-  .gtm-phases {
+  /* Projections */
+  .projection-timeline {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
   }
 
-  .gtm-phase {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
-  }
-
-  .gtm-phase h3 {
-    color: #4fc3f7;
-    margin-bottom: 0.5rem;
-  }
-
-  .timeline {
-    color: #b3e5fc;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .target {
-    background: #4caf50;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 1rem;
-  }
-
-  .channel-breakdown {
-    margin-top: 2rem;
-  }
-
-  .channel {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    position: relative;
-  }
-
-  .channel-name {
-    min-width: 150px;
-    color: #e8f4fd;
-  }
-
-  .channel-percent {
-    min-width: 40px;
-    color: #4fc3f7;
-    font-weight: 600;
-  }
-
-  .channel-bar {
-    height: 20px;
-    background: linear-gradient(90deg, #4fc3f7, #29b6f6);
-    border-radius: 10px;
-    margin-left: 1rem;
-  }
-
-  /* Financial Metrics */
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .metric {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
+  .projection-year {
     text-align: center;
-  }
-
-  .metric-value {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #4fc3f7;
-    margin-bottom: 0.5rem;
-  }
-
-  .metric-label {
-    color: #b3e5fc;
-    font-size: 0.9rem;
-  }
-
-  .funding-breakdown {
-    margin-top: 2rem;
-  }
-
-  .funding-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(79, 195, 247, 0.2);
-  }
-
-  .funding-category {
-    font-weight: 500;
-  }
-
-  .funding-percent {
-    color: #4fc3f7;
-    font-weight: 600;
-  }
-
-  .funding-amount {
-    color: #4caf50;
-    font-weight: 700;
-  }
-
-  /* Team Section */
-  .founder-profile {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 3rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
   }
 
-  .avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #4fc3f7, #29b6f6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
+  .projection-revenue {
+    display: block;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: white;
-  }
-
-  .founder-title {
-    color: #4fc3f7;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-
-  .founder-bio {
     margin: 1rem 0;
-    line-height: 1.6;
-    color: #e8f4fd;
   }
 
-  .founder-credentials {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .credential {
-    background: rgba(79, 195, 247, 0.2);
-    color: #4fc3f7;
-    padding: 0.25rem 0.75rem;
+  .key-metrics {
+    background: #f0fff4;
+    padding: 2rem;
     border-radius: 12px;
-    font-size: 0.9rem;
+    border-left: 4px solid #48bb78;
   }
 
-  .advisor-roles {
+  /* Tech overview */
+  .tech-overview {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
   }
 
-  .advisor-role {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
+  .tech-category {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
   }
 
-  .advisor-role h4 {
-    color: #4fc3f7;
-    margin-bottom: 0.5rem;
+  .tech-category h3 {
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 
-  /* Investment Terms */
-  .investment-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  /* Investment ask */
+  .ask-amount {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
     margin-bottom: 3rem;
   }
 
-  .investment-detail {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
+  .ask-amount h3 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .ask-amount p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+  }
+
+  .funds-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .fund-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #f7fafc;
+    padding: 1rem;
     border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
-    text-align: center;
+    border: 2px solid #e2e8f0;
   }
 
-  .detail-label {
-    display: block;
-    color: #b3e5fc;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .detail-value {
-    display: block;
+  .fund-percentage {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #4fc3f7;
+    color: #667eea;
+    min-width: 50px;
   }
 
-  .investment-reasons {
-    list-style: none;
-    padding: 0;
+  .investor-benefits {
+    background: #f0fff4;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #48bb78;
   }
 
-  .investment-reasons li {
-    padding: 0.75rem 0;
-    font-size: 1.1rem;
-    border-bottom: 1px solid rgba(79, 195, 247, 0.2);
-  }
-
-  .investment-reasons li strong {
-    color: #4fc3f7;
-  }
-
-  .steps-timeline {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-
-  .step {
+  /* Thank you slide */
+  .thank-you-slide {
     text-align: center;
-    flex: 1;
-    padding: 1rem;
-  }
-
-  .step-number {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #4fc3f7;
-    color: white;
-    font-weight: 700;
-    line-height: 40px;
-    margin: 0 auto 1rem;
-  }
-
-  .step-title {
-    display: block;
-    font-weight: 600;
-    color: #4fc3f7;
-    margin-bottom: 0.5rem;
-  }
-
-  .step-description {
-    font-size: 0.9rem;
-    color: #b3e5fc;
-  }
-
-  /* Closing Slide */
-  .closing-slide {
-    text-align: center !important;
-  }
-
-  .closing-content h1 {
-    font-size: 3rem !important;
-    margin-bottom: 1rem;
-  }
-
-  .closing-content h2 {
-    font-size: 1.5rem !important;
-    color: #81d4fa;
-    margin-bottom: 3rem;
   }
 
   .contact-info {
-    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 3rem 0;
   }
 
   .contact-item {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
   }
 
-  .contact-label {
-    color: #b3e5fc;
-  }
-
-  .contact-value {
-    color: #4fc3f7;
+  .final-demo-btn, .roadmap-btn {
+    display: block;
+    background: #667eea;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: 600;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
   }
 
-  /* Responsive Design */
+  .final-demo-btn:hover, .roadmap-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+  }
+
+  .closing-message {
+    margin-top: 3rem;
+    font-style: italic;
+    color: #667eea;
+    font-size: 1.3rem;
+  }
+
+  /* Navigation */
+  .navigation {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+  }
+
+  .nav-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .nav-btn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+  }
+
+  .nav-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .slide-counter {
+    font-weight: 600;
+    color: #4a5568;
+    min-width: 60px;
+    text-align: center;
+  }
+
+  .pdf-export-btn {
+    background: #48bb78;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .pdf-export-btn:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+  }
+
+  /* Mobile responsiveness */
   @media (max-width: 768px) {
-    .problem-grid,
-    .segment-grid,
-    .moat-factors,
-    .ip-grid,
-    .gtm-phases,
-    .metrics-grid,
-    .advisor-roles,
-    .investment-grid {
-      grid-template-columns: 1fr;
+    .slides-container {
+      padding: 1rem;
+    }
+
+    .slide {
+      padding: 2rem 1rem;
+    }
+
+    .title-slide h1 {
+      font-size: 2.5rem;
+    }
+
+    .title-slide h2 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 2rem;
     }
 
     .solution-showcase {
       grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    .market-circles {
-      flex-direction: column;
-    }
-
-    .pricing-tiers {
-      flex-direction: column;
-    }
-
-    .projection-chart,
-    .steps-timeline {
-      flex-direction: column;
-    }
-
-    .founder-profile {
+    .problem-grid {
       grid-template-columns: 1fr;
-      text-align: center;
+    }
+
+    .navigation {
+      padding: 0.8rem 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .nav-btn, .pdf-export-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
     }
   }
 </style>
 
 <script>
-  // Wait for page load then initialize Reveal.js
-  document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Reveal.js
-    Reveal.initialize({
-      hash: true,
-      controls: true,
-      progress: true,
-      history: true,
-      center: false,
-      transition: 'slide',
-      backgroundTransition: 'fade',
-      controlsLayout: 'bottom-right',
-      controlsBackArrows: 'faded',
-      
-      // Remove fragments for smooth presentation
-      fragments: false,
-      
-      // Navigation settings
-      keyboard: {
-        39: 'next',
-        37: 'prev',
-        32: 'next', // spacebar
-        13: 'next'  // enter
-      }
-    }).then(() => {
-      console.log('Reveal.js initialized successfully');
-      
-      // Add visual indicators for navigation
-      const navHints = document.createElement('div');
-      navHints.innerHTML = `
-        <div style="position: fixed; bottom: 60px; right: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; border-radius: 8px; font-size: 14px; z-index: 1000; border: 1px solid #4fc3f7;">
-          <div>← → Arrow keys to navigate</div>
-          <div>Spacebar for next slide</div>
-        </div>
-      `;
-      document.body.appendChild(navHints);
-      
-      // Auto-hide navigation hints
-      setTimeout(() => {
-        navHints.style.opacity = '0';
-        navHints.style.transition = 'opacity 2s';
-      }, 5000);
-    });
-  });
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
 
-  // Add custom navigation hints
-  document.addEventListener('DOMContentLoaded', function() {
-    // Add subtle instructions for presenters
-    const instructions = document.createElement('div');
-    instructions.style.cssText = `
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 12px;
-      z-index: 1000;
-    `;
-    instructions.innerHTML = 'Arrow keys or spacebar to navigate';
-    document.body.appendChild(instructions);
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
     
-    // Auto-hide instructions after 5 seconds
-    setTimeout(() => {
-      instructions.style.opacity = '0';
-      instructions.style.transition = 'opacity 1s';
-    }, 5000);
-  });
-
-  // PDF Export Function
-  window.exportToPDF = async function() {
-    const button = document.querySelector('.pdf-export-btn');
-    if (!button) {
-      console.error('PDF export button not found');
-      return;
-    }
+    document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${totalSlides}`;
     
-    const originalText = button.textContent;
-    button.textContent = '⏳ Generating PDF...';
-    button.disabled = true;
+    // Update navigation buttons
+    document.getElementById('prevBtn').disabled = currentSlide === 0;
+    document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+  }
 
-    try {
-      // Check if libraries are loaded
-      if (typeof window.jspdf === 'undefined') {
-        throw new Error('jsPDF library not loaded');
-      }
-      if (typeof html2canvas === 'undefined') {
-        throw new Error('html2canvas library not loaded');
-      }
-
-      const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF('landscape', 'mm', 'a4');
-      
-      // Get all slides
-      const slides = document.querySelectorAll('.reveal .slides > section');
-      console.log(`Found ${slides.length} slides to export`);
-      
-      if (slides.length === 0) {
-        throw new Error('No slides found to export');
-      }
-      
-      for (let i = 0; i < slides.length; i++) {
-        const slide = slides[i];
-        button.textContent = `⏳ Processing slide ${i + 1}/${slides.length}...`;
-        
-        // Temporarily show the slide
-        const originalDisplay = slide.style.display;
-        const originalVisibility = slide.style.visibility;
-        const originalOpacity = slide.style.opacity;
-        
-        slide.style.display = 'block';
-        slide.style.visibility = 'visible';
-        slide.style.opacity = '1';
-        slide.style.position = 'relative';
-        slide.style.zIndex = '9999';
-        
-        // Wait a moment for styles to apply
-        await new Promise(resolve => setTimeout(resolve, 200));
-        
-        // Capture slide as canvas
-        const canvas = await html2canvas(slide, {
-          width: 1280,
-          height: 720,
-          scale: 2,
-          backgroundColor: '#0a0a0f',
-          useCORS: true,
-          allowTaint: true,
-          logging: false
-        });
-        
-        // Restore original styles
-        slide.style.display = originalDisplay;
-        slide.style.visibility = originalVisibility;
-        slide.style.opacity = originalOpacity;
-        slide.style.position = '';
-        slide.style.zIndex = '';
-        
-        // Add page if not first slide
-        if (i > 0) pdf.addPage();
-        
-        const imgData = canvas.toDataURL('image/png', 0.95);
-        const imgWidth = 297; // A4 landscape width in mm
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-        
-        // Center the image if it's smaller than page
-        const yOffset = imgHeight < 210 ? (210 - imgHeight) / 2 : 0;
-        
-        pdf.addImage(imgData, 'PNG', 0, yOffset, imgWidth, imgHeight);
-      }
-      
-      // Save the PDF
-      pdf.save('aValidURL-Investor-Pitch-Deck.pdf');
-      
-      button.textContent = '✅ PDF Downloaded!';
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.disabled = false;
-      }, 3000);
-      
-    } catch (error) {
-      console.error('PDF Export Error:', error);
-      button.textContent = `❌ Export Failed: ${error.message}`;
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.disabled = false;
-      }, 5000);
+  function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+      showSlide(currentSlide + 1);
     }
   }
 
-  // Add keyboard shortcut for PDF export
-  document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.key === 'p') {
+  function prevSlide() {
+    if (currentSlide > 0) {
+      showSlide(currentSlide - 1);
+    }
+  }
+
+  // Event listeners
+  document.getElementById('nextBtn').addEventListener('click', nextSlide);
+  document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') {
       e.preventDefault();
-      exportToPDF();
+      nextSlide();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      prevSlide();
     }
   });
+
+  // PDF Export function
+  window.exportToPDF = async function() {
+    const button = document.querySelector('.pdf-export-btn');
+    const originalText = button.textContent;
+    button.textContent = '📄 Generating PDF...';
+    button.disabled = true;
+
+    try {
+      // Simple implementation - open print dialog
+      window.print();
+    } catch (error) {
+      console.error('PDF export failed:', error);
+      alert('PDF export failed. Please try the print function in your browser.');
+    } finally {
+      button.textContent = originalText;
+      button.disabled = false;
+    }
+  };
+
+  // Initialize
+  showSlide(0);
 </script>
-</Layout>
