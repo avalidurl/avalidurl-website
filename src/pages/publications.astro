@@ -1,0 +1,783 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allBlogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft;
+});
+
+// Sort by publish date (newest first)
+const sortedPosts = allBlogPosts.sort((a, b) => 
+  new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+const featuredPosts = sortedPosts.filter(post => post.data.featured);
+const recentPosts = sortedPosts.slice(0, 8);
+---
+
+<Layout title="Publications - Research & Analysis" description="Published research, analysis, and writing on financial markets, generative art, algorithmic trading, and the intersection of technology and finance.">
+  <main class="container">
+    <header class="publications-header">
+      <h1>Publications</h1>
+      <p class="publications-subtitle">
+        Research, analysis, and writing exploring the intersection of financial markets, algorithmic art, and data-driven insights.
+      </p>
+    </header>
+
+    <section class="publication-categories">
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="all">All Publications</button>
+        <button class="filter-btn" data-category="research">Research Papers</button>
+        <button class="filter-btn" data-category="analysis">Market Analysis</button>
+        <button class="filter-btn" data-category="technical">Technical Articles</button>
+        <button class="filter-btn" data-category="art">Art & Visualization</button>
+      </div>
+    </section>
+
+    {featuredPosts.length > 0 && (
+      <section class="featured-publications">
+        <h2>Featured Research</h2>
+        <div class="featured-grid">
+          {featuredPosts.map(post => (
+            <article class="publication-card featured" data-category="research">
+              <div class="publication-header">
+                <div class="publication-meta">
+                  <span class="publication-type">Journal Article</span>
+                  <time class="publication-date">
+                    {new Date(post.data.publishDate).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
+                </div>
+                <div class="publication-status">
+                  <span class="status-badge published">Published</span>
+                </div>
+              </div>
+              
+              <h3 class="publication-title">
+                <a href={`/blog/${post.slug}`}>
+                  {post.data.title}
+                </a>
+              </h3>
+              
+              <p class="publication-abstract">
+                {post.data.description}
+              </p>
+              
+              <div class="publication-details">
+                <div class="detail-row">
+                  <span class="detail-label">Category</span>
+                  <span class="detail-value">{post.data.category}</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Reading Time</span>
+                  <span class="detail-value">{post.data.readingTime || '8'} min</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Tags</span>
+                  <div class="tag-list">
+                    {post.data.tags.map(tag => (
+                      <span class="publication-tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <div class="publication-actions">
+                <a href={`/blog/${post.slug}`} class="read-full">Read Full Article</a>
+                <button class="cite-btn">Cite</button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="research-papers">
+      <h2>Research Papers</h2>
+      <div class="publications-grid">
+        <article class="publication-card" data-category="research">
+          <div class="publication-header">
+            <div class="publication-meta">
+              <span class="publication-type">Working Paper</span>
+              <time class="publication-date">March 2024</time>
+            </div>
+            <div class="publication-status">
+              <span class="status-badge draft">In Review</span>
+            </div>
+          </div>
+          
+          <h3 class="publication-title">
+            Algorithmic Aesthetics: Visualizing Market Psychology Through Generative Art
+          </h3>
+          
+          <p class="publication-abstract">
+            This paper explores the application of generative algorithms to visualize market sentiment and volatility patterns, 
+            demonstrating how financial data can be transformed into aesthetic experiences that reveal hidden market dynamics.
+          </p>
+          
+          <div class="publication-details">
+            <div class="detail-row">
+              <span class="detail-label">Status</span>
+              <span class="detail-value">Under Review - Journal of Digital Finance</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Co-authors</span>
+              <span class="detail-value">Independent Research</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Keywords</span>
+              <div class="tag-list">
+                <span class="publication-tag">Generative Art</span>
+                <span class="publication-tag">Market Psychology</span>
+                <span class="publication-tag">Data Visualization</span>
+                <span class="publication-tag">Algorithmic Trading</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="publication-actions">
+            <a href="#" class="read-full disabled">Pending Publication</a>
+            <button class="cite-btn">Preview Abstract</button>
+          </div>
+        </article>
+
+        <article class="publication-card" data-category="technical">
+          <div class="publication-header">
+            <div class="publication-meta">
+              <span class="publication-type">Technical Report</span>
+              <time class="publication-date">January 2024</time>
+            </div>
+            <div class="publication-status">
+              <span class="status-badge published">Available</span>
+            </div>
+          </div>
+          
+          <h3 class="publication-title">
+            Real-Time Market Data Visualization: Building Interactive Financial Dashboards
+          </h3>
+          
+          <p class="publication-abstract">
+            A comprehensive technical guide to creating real-time financial dashboards using modern web technologies, 
+            covering API integration, data processing, and interactive visualization techniques.
+          </p>
+          
+          <div class="publication-details">
+            <div class="detail-row">
+              <span class="detail-label">Platform</span>
+              <span class="detail-value">GitHub Repository + Documentation</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Technologies</span>
+              <div class="tag-list">
+                <span class="publication-tag">JavaScript</span>
+                <span class="publication-tag">D3.js</span>
+                <span class="publication-tag">WebGL</span>
+                <span class="publication-tag">Financial APIs</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="publication-actions">
+            <a href="/blog" class="read-full">View Documentation</a>
+            <button class="cite-btn">Code Repository</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="market-analysis">
+      <h2>Market Analysis & Commentary</h2>
+      <div class="publications-grid">
+        {recentPosts.slice(0, 4).map(post => (
+          <article class="publication-card analysis" data-category="analysis">
+            <div class="publication-header">
+              <div class="publication-meta">
+                <span class="publication-type">Analysis</span>
+                <time class="publication-date">
+                  {new Date(post.data.publishDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short'
+                  })}
+                </time>
+              </div>
+              <div class="publication-status">
+                <span class="status-badge published">Published</span>
+              </div>
+            </div>
+            
+            <h3 class="publication-title">
+              <a href={`/blog/${post.slug}`}>
+                {post.data.title}
+              </a>
+            </h3>
+            
+            <p class="publication-abstract">
+              {post.data.description}
+            </p>
+            
+            <div class="publication-details">
+              <div class="detail-row">
+                <span class="detail-label">Category</span>
+                <span class="detail-value">{post.data.category}</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Tags</span>
+                <div class="tag-list">
+                  {post.data.tags.slice(0, 3).map(tag => (
+                    <span class="publication-tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <div class="publication-actions">
+              <a href={`/blog/${post.slug}`} class="read-full">Read Analysis</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="publication-metrics">
+      <h2>Publication Metrics</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">{allBlogPosts.length}</div>
+          <div class="metric-label">Total Publications</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">{featuredPosts.length}</div>
+          <div class="metric-label">Featured Research</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">3</div>
+          <div class="metric-label">Research Areas</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">2024</div>
+          <div class="metric-label">Year Started</div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="publications-sidebar">
+      <div class="research-areas">
+        <h3>Research Areas</h3>
+        <div class="area-list">
+          <div class="research-area">
+            <h4>Financial Data Visualization</h4>
+            <p>Exploring new methods for representing complex financial data through interactive and generative visualizations.</p>
+          </div>
+          <div class="research-area">
+            <h4>Market Psychology & Art</h4>
+            <p>Investigating the aesthetic dimensions of market behavior and emotional patterns in trading data.</p>
+          </div>
+          <div class="research-area">
+            <h4>Algorithmic Trading Systems</h4>
+            <p>Developing and analyzing automated trading strategies with emphasis on risk management and performance metrics.</p>
+          </div>
+        </div>
+        
+        <div class="newsletter-cta">
+          <h4>Stay Updated</h4>
+          <p>Get notified when new research and analysis is published.</p>
+          <a href="/subscribe" class="subscribe-btn">Subscribe to Updates</a>
+        </div>
+      </div>
+    </aside>
+  </main>
+</Layout>
+
+<style>
+  .publications-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+  }
+  
+  .publications-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  }
+  
+  .publications-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    line-height: 1.6;
+  }
+  
+  .publication-categories {
+    margin-bottom: 3rem;
+  }
+  
+  .category-filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    background: transparent;
+    border: 2px solid var(--border-medium);
+    color: var(--text-secondary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--text-on-dark);
+  }
+  
+  .featured-publications,
+  .research-papers,
+  .market-analysis {
+    margin-bottom: 4rem;
+  }
+  
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+  
+  .publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .publication-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .publication-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--border-medium);
+    transition: background 0.3s ease;
+  }
+  
+  .publication-card.featured::before {
+    background: var(--accent-primary);
+  }
+  
+  .publication-card.analysis::before {
+    background: var(--accent-secondary);
+  }
+  
+  .publication-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-primary);
+  }
+  
+  .publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .publication-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .publication-type {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  
+  .publication-date {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  .publication-status {
+    flex-shrink: 0;
+  }
+  
+  .status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  
+  .status-badge.published {
+    background: #10bf7a;
+    color: white;
+  }
+  
+  .status-badge.draft {
+    background: #ffa500;
+    color: white;
+  }
+  
+  .publication-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: 'Georgia', serif;
+  }
+  
+  .publication-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .publication-title a:hover {
+    color: var(--accent-primary);
+    border-bottom: none;
+  }
+  
+  .publication-abstract {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .publication-details {
+    margin-bottom: 1.5rem;
+  }
+  
+  .detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .detail-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+  
+  .detail-value {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    flex: 1;
+  }
+  
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .publication-tag {
+    background: var(--bg-accent);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .publication-tag:hover {
+    background: var(--accent-primary);
+    color: var(--text-on-dark);
+    border-color: var(--accent-primary);
+  }
+  
+  .publication-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .read-full {
+    color: var(--accent-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .read-full:hover {
+    color: var(--accent-secondary);
+    border-bottom: none;
+  }
+  
+  .read-full.disabled {
+    color: var(--text-muted);
+    cursor: not-allowed;
+  }
+  
+  .cite-btn {
+    background: transparent;
+    border: 1px solid var(--border-medium);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cite-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+  
+  .publication-metrics {
+    margin-bottom: 4rem;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .metric-card {
+    background: var(--bg-accent);
+    padding: 2rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .metric-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+  }
+  
+  .metric-value {
+    color: var(--accent-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  
+  .publications-sidebar {
+    margin-top: 2rem;
+  }
+  
+  .research-areas {
+    background: var(--bg-accent);
+    padding: 2rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .research-areas h3 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  .area-list {
+    margin-bottom: 2rem;
+  }
+  
+  .research-area {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .research-area:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .research-area h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .research-area p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .newsletter-cta {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+  }
+  
+  .newsletter-cta h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletter-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .subscribe-btn {
+    background: var(--accent-primary);
+    color: var(--text-on-dark);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .subscribe-btn:hover {
+    background: var(--accent-secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .featured-grid,
+    .publications-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .publication-card {
+      padding: 1.5rem;
+    }
+    
+    .publication-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .category-filters {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+    
+    .filter-btn {
+      white-space: nowrap;
+    }
+    
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .detail-row {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    .detail-label {
+      min-width: auto;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const publicationCards = document.querySelectorAll('.publication-card');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        const category = this.dataset.category;
+        
+        // Filter publications
+        publicationCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.3s ease';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Citation functionality
+    const citeBtns = document.querySelectorAll('.cite-btn');
+    citeBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Simple citation copy functionality
+        const card = this.closest('.publication-card');
+        const title = card.querySelector('.publication-title').textContent.trim();
+        const date = card.querySelector('.publication-date').textContent.trim();
+        
+        const citation = `"${title}" (${date}). Retrieved from ${window.location.origin}`;
+        
+        navigator.clipboard.writeText(citation).then(() => {
+          this.textContent = 'Copied!';
+          setTimeout(() => {
+            this.textContent = 'Cite';
+          }, 2000);
+        }).catch(() => {
+          alert('Citation: ' + citation);
+        });
+      });
+    });
+  });
+</script>

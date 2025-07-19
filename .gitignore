@@ -75,3 +75,25 @@ temp/
 # Security scan results
 security-report.md
 audit-results.json
+
+# Internal development files (NEVER COMMIT THESE)
+CLAUDE.md
+*.md
+!README.md
+todos.md
+tasks.md
+reports/
+security-docs/
+incident-response/
+internal-docs/
+
+# Security documentation (local only)
+CLOUDFLARE_SECURITY.md
+INCIDENT_RESPONSE.md
+SECURITY.md
+CLOUDFLARE_API_TOKEN_GUIDE.md
+clean-git-history.sh
+
+# Development scripts
+*.sh
+!build.sh
