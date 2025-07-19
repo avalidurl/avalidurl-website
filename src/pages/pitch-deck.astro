@@ -518,7 +518,7 @@ import Layout from '../layouts/Layout.astro';
             <a href="/art/quantum-portfolios-live/" target="_blank" class="final-demo-btn">
               🚀 Experience the Future of Financial Art
             </a>
-            <button onclick="exportToPDF()" class="pdf-export-btn">
+            <button onclick="window.exportToPDF()" class="pdf-export-btn">
               📄 Export as PDF
             </button>
           </div>
@@ -528,14 +528,16 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
 
-  <!-- Include Reveal.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+  <!-- Include Reveal.js and dependencies -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css">
   
   <!-- Include PDF Export Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+  <!-- Reveal.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
 </Layout>
 
 <style>
@@ -550,18 +552,26 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-    color: #ffffff;
+    color: #ffffff !important;
     text-transform: none;
     line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
   }
 
   .reveal h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, #4fc3f7, #81d4fa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+  }
+
+  .reveal p, .reveal li, .reveal span, .reveal div {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
   }
 
   /* Title Slide */
@@ -573,23 +583,25 @@ import Layout from '../layouts/Layout.astro';
     font-size: 4rem !important;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #ffffff, #4fc3f7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
   }
 
   .subtitle {
     font-size: 2rem !important;
-    color: #81d4fa;
+    color: #ffffff !important;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
   }
 
   .tagline {
     font-size: 1.5rem;
-    color: #b3e5fc;
+    color: #ffffff !important;
     margin-bottom: 3rem;
     font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
   }
 
   .live-demo-btn, .final-demo-btn, .pdf-export-btn {
@@ -623,8 +635,10 @@ import Layout from '../layouts/Layout.astro';
 
   .presenter-info {
     margin-top: 3rem;
-    color: #81d4fa;
+    color: #ffffff !important;
     font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
   }
 
   /* Problem Grid */
@@ -636,10 +650,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .problem-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
+    border: 2px solid rgba(79, 195, 247, 0.4);
+    backdrop-filter: blur(10px);
   }
 
   .problem-icon {
@@ -648,22 +663,42 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .problem-item h3 {
-    color: #4fc3f7;
+    color: #ffffff !important;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+  }
+
+  .problem-item p {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
   }
 
   .market-pain {
     text-align: center;
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(129, 212, 250, 0.05));
+    background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 12px;
+    border: 2px solid rgba(79, 195, 247, 0.4);
+    backdrop-filter: blur(10px);
   }
 
   .market-pain h3 {
-    color: #4fc3f7;
+    color: #ffffff !important;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+  }
+
+  .market-pain p {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
   }
 
   /* Solution Showcase */
@@ -688,8 +723,18 @@ import Layout from '../layouts/Layout.astro';
 
   .solution-features li {
     padding: 0.5rem 0;
-    font-size: 1.1rem;
-    color: #e8f4fd;
+    font-size: 1.2rem;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+  }
+
+  .solution-description h3 {
+    color: #ffffff !important;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
   }
 
   .tech-stack {
@@ -699,12 +744,14 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .tech-badge {
-    background: rgba(79, 195, 247, 0.2);
-    color: #4fc3f7;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff !important;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid rgba(79, 195, 247, 0.4);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   }
 
   /* Market Analysis */
@@ -746,14 +793,17 @@ import Layout from '../layouts/Layout.astro';
 
   .market-value {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: #4fc3f7;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
   .market-label {
-    font-size: 0.9rem;
-    color: #b3e5fc;
+    font-size: 1rem;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
   }
 
   .segment-grid {
@@ -764,10 +814,27 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .segment {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid rgba(79, 195, 247, 0.2);
+    border: 2px solid rgba(79, 195, 247, 0.4);
+    backdrop-filter: blur(10px);
+  }
+
+  .segment h4 {
+    color: #ffffff !important;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .segment p {
+    color: #ffffff !important;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+    margin-bottom: 1rem;
   }
 
   .market-size-small {
@@ -1287,25 +1354,49 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script>
-  // Initialize Reveal.js
-  Reveal.initialize({
-    hash: true,
-    controls: true,
-    progress: true,
-    history: true,
-    center: false,
-    transition: 'slide',
-    backgroundTransition: 'fade',
-    
-    // Remove fragments for smooth presentation
-    fragments: false,
-    
-    // Navigation settings
-    keyboard: {
-      39: 'next',
-      37: 'prev',
-      32: 'next' // spacebar
-    }
+  // Wait for page load then initialize Reveal.js
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Reveal.js
+    Reveal.initialize({
+      hash: true,
+      controls: true,
+      progress: true,
+      history: true,
+      center: false,
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      
+      // Remove fragments for smooth presentation
+      fragments: false,
+      
+      // Navigation settings
+      keyboard: {
+        39: 'next',
+        37: 'prev',
+        32: 'next', // spacebar
+        13: 'next'  // enter
+      }
+    }).then(() => {
+      console.log('Reveal.js initialized successfully');
+      
+      // Add visual indicators for navigation
+      const navHints = document.createElement('div');
+      navHints.innerHTML = `
+        <div style="position: fixed; bottom: 60px; right: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; border-radius: 8px; font-size: 14px; z-index: 1000; border: 1px solid #4fc3f7;">
+          <div>← → Arrow keys to navigate</div>
+          <div>Spacebar for next slide</div>
+        </div>
+      `;
+      document.body.appendChild(navHints);
+      
+      // Auto-hide navigation hints
+      setTimeout(() => {
+        navHints.style.opacity = '0';
+        navHints.style.transition = 'opacity 2s';
+      }, 5000);
+    });
   });
 
   // Add custom navigation hints
@@ -1334,49 +1425,84 @@ import Layout from '../layouts/Layout.astro';
   });
 
   // PDF Export Function
-  async function exportToPDF() {
+  window.exportToPDF = async function() {
     const button = document.querySelector('.pdf-export-btn');
+    if (!button) {
+      console.error('PDF export button not found');
+      return;
+    }
+    
     const originalText = button.textContent;
     button.textContent = '⏳ Generating PDF...';
     button.disabled = true;
 
     try {
+      // Check if libraries are loaded
+      if (typeof window.jspdf === 'undefined') {
+        throw new Error('jsPDF library not loaded');
+      }
+      if (typeof html2canvas === 'undefined') {
+        throw new Error('html2canvas library not loaded');
+      }
+
       const { jsPDF } = window.jspdf;
       const pdf = new jsPDF('landscape', 'mm', 'a4');
       
       // Get all slides
-      const slides = document.querySelectorAll('.reveal .slides section');
+      const slides = document.querySelectorAll('.reveal .slides > section');
+      console.log(`Found ${slides.length} slides to export`);
+      
+      if (slides.length === 0) {
+        throw new Error('No slides found to export');
+      }
       
       for (let i = 0; i < slides.length; i++) {
         const slide = slides[i];
+        button.textContent = `⏳ Processing slide ${i + 1}/${slides.length}...`;
         
-        // Make slide visible and sized properly for capture
+        // Temporarily show the slide
+        const originalDisplay = slide.style.display;
+        const originalVisibility = slide.style.visibility;
+        const originalOpacity = slide.style.opacity;
+        
         slide.style.display = 'block';
-        slide.style.position = 'relative';
         slide.style.visibility = 'visible';
         slide.style.opacity = '1';
+        slide.style.position = 'relative';
+        slide.style.zIndex = '9999';
+        
+        // Wait a moment for styles to apply
+        await new Promise(resolve => setTimeout(resolve, 200));
         
         // Capture slide as canvas
         const canvas = await html2canvas(slide, {
-          width: 1920,
-          height: 1080,
-          scale: 1,
+          width: 1280,
+          height: 720,
+          scale: 2,
           backgroundColor: '#0a0a0f',
           useCORS: true,
-          allowTaint: true
+          allowTaint: true,
+          logging: false
         });
         
-        // Add canvas to PDF
+        // Restore original styles
+        slide.style.display = originalDisplay;
+        slide.style.visibility = originalVisibility;
+        slide.style.opacity = originalOpacity;
+        slide.style.position = '';
+        slide.style.zIndex = '';
+        
+        // Add page if not first slide
         if (i > 0) pdf.addPage();
         
-        const imgData = canvas.toDataURL('image/png');
+        const imgData = canvas.toDataURL('image/png', 0.95);
         const imgWidth = 297; // A4 landscape width in mm
         const imgHeight = (canvas.height * imgWidth) / canvas.width;
         
-        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        // Center the image if it's smaller than page
+        const yOffset = imgHeight < 210 ? (210 - imgHeight) / 2 : 0;
         
-        // Update progress
-        button.textContent = `⏳ Processing slide ${i + 1}/${slides.length}...`;
+        pdf.addImage(imgData, 'PNG', 0, yOffset, imgWidth, imgHeight);
       }
       
       // Save the PDF
@@ -1390,11 +1516,11 @@ import Layout from '../layouts/Layout.astro';
       
     } catch (error) {
       console.error('PDF Export Error:', error);
-      button.textContent = '❌ Export Failed';
+      button.textContent = `❌ Export Failed: ${error.message}`;
       setTimeout(() => {
         button.textContent = originalText;
         button.disabled = false;
-      }, 3000);
+      }, 5000);
     }
   }
 
