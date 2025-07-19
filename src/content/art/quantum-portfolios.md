@@ -41,3 +41,7 @@ The blue color palette evokes both the infinite depth of space and the cool rati
 ## Performance Notes
 
 Best experienced on desktop with GPU acceleration. The piece responds to mouse/touch input for portfolio rebalancing and includes sound design that translates market volatility into ambient tones.
+
+## Experience the Artwork
+
+[🚀 **Launch Interactive Quantum Portfolios**](/art/quantum-portfolios-live/) - Experience the full interactive artwork with real-time particle physics and portfolio controls.
