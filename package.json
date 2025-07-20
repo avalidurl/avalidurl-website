@@ -11,7 +11,8 @@
     "astro": "astro",
     "import-substack": "node scripts/import-substack.cjs",
     "import-all-substack": "node scripts/import-all-substack.cjs",
-    "import-from-export": "node scripts/import-from-export.cjs"
+    "import-from-export": "node scripts/import-from-export.cjs",
+    "fix-frontmatter": "node scripts/fix-frontmatter.cjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

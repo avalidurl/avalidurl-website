@@ -1,7 +1,7 @@
 ---
 title: "Market Psychology Meets Algorithmic Beauty"
 description: "Exploring how financial market patterns mirror artistic compositions and what this reveals about human psychology in data-driven systems."
-publishDate: 2025-01-17
+publishDate: "2025-01-17"
 author: "Your Name"
 tags: ["finance", "art", "algorithms", "psychology"]
 category: "intersection"
