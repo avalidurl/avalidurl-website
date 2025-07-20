@@ -1,7 +1,0 @@
-post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
-16187609,2020-10-31T02:38:19.750Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
-16187609,2020-10-31T02:58:13.910Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
-16187609,2020-10-31T18:42:51.700Z,calgrnoise@outlook.com,newsletter,everyone,true,US,Seattle,WA,desktop,OS X,email client,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
-16187609,2020-10-31T18:44:08.100Z,calgrnoise@outlook.com,newsletter,everyone,true,US,Seattle,WA,desktop,OS X,email client,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
-16187609,2020-11-01T07:49:04.080Z,peter@metacartel.org,newsletter,everyone,true,US,Miami,FL,unknown,unknown,unknown,Superhuman
-16187609,2020-11-01T07:50:11.850Z,peter@metacartel.org,newsletter,everyone,true,US,Miami,FL,unknown,unknown,unknown,Superhuman

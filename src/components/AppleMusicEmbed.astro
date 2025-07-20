@@ -1,0 +1,32 @@
+---
+export interface Props {
+  url: string; // Apple Music URL
+  width?: number;
+  height?: number;
+}
+
+const { url, width = 450, height = 450 } = Astro.props;
+
+// Extract Apple Music embed URL
+let embedUrl = '';
+if (url.includes('music.apple.com')) {
+  // Convert Apple Music URL to embed format
+  embedUrl = url.replace('music.apple.com', 'embed.music.apple.com');
+  if (!embedUrl.includes('app=music')) {
+    embedUrl += (embedUrl.includes('?') ? '&' : '?') + 'app=music';
+  }
+}
+---
+
+{embedUrl && (
+  <iframe 
+    src={embedUrl}
+    width={width}
+    height={height}
+    frameborder="0" 
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    loading="lazy"
+    style="border-radius: 12px; margin: 1rem 0; background: transparent;"
+  ></iframe>
+)}

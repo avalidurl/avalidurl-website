@@ -97,3 +97,16 @@ clean-git-history.sh
 # Development scripts
 *.sh
 !build.sh
+
+# Personal data protection (CRITICAL - never commit)
+email_list*.csv
+*email*.csv
+subscriber*.csv
+analytics*.csv
+tracking*.csv
+*.delivers.csv
+*.opens.csv
+substack-export.zip
+*export*.zip
+posts/
+user-data/

@@ -1,6 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { YouTube, Tweet, Vimeo } from 'astro-embed';
+import SpotifyEmbed from '../../components/SpotifyEmbed.astro';
+import AppleMusicEmbed from '../../components/AppleMusicEmbed.astro';
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection('blog', ({ data }) => {
@@ -67,7 +70,13 @@ const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate).toLo
       </header>
       
       <div class="post-content">
-        <Content />
+        <Content components={{
+          YouTube,
+          Tweet,
+          Vimeo,
+          SpotifyEmbed,
+          AppleMusicEmbed
+        }} />
       </div>
       
       <footer class="post-footer">
@@ -272,6 +281,58 @@ const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate).toLo
   .post-content li {
     margin-bottom: 0.5rem;
     color: var(--blog-charcoal);
+  }
+  
+  /* Embed styling */
+  .post-content iframe {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive embed containers */
+  .post-content .youtube-embed,
+  .post-content .vimeo-embed,
+  .post-content .tweet-embed {
+    margin: 2rem 0;
+  }
+  
+  /* URL overflow prevention */
+  .post-content a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Long code snippets */
+  .post-content code {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Title overflow prevention */
+  .post-title {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Subtitle overflow prevention */
+  .post-content h2,
+  .post-content h3,
+  .post-content h4 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   
   .post-footer {

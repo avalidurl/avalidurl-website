@@ -1,3 +1,0 @@
-post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
-34753419,2021-04-06T05:50:56.937Z,hakon@wiv.io,newsletter,everyone,true,US,Seattle,WA,desktop,OS X,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36"
-34753419,2021-04-06T05:51:33.222Z,hakon@wiv.io,newsletter,everyone,true,US,Seattle,WA,desktop,OS X,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36"

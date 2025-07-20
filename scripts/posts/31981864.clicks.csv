@@ -1,3 +1,0 @@
-post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
-31981864,2021-01-29T00:08:27.210Z,hello@berkozdemir.com,newsletter,everyone,true,US,Seattle,WA,mobile,Android,mobile browser,"Mozilla/5.0 (Linux; Android 10; POCOPHONE F1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36"
-31981864,2021-01-29T21:09:03.910Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,mobile,Android,mobile browser,"Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-G986U1) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.2 Chrome/83.0.4103.106 Mobile Safari/537.36"

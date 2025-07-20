@@ -1,2 +1,0 @@
-post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
-32427698,2021-02-11T05:06:49.265Z,rootdraws@gmail.com,newsletter,everyone,true,US,Unknown,CA,desktop,Windows,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Safari/537.36"

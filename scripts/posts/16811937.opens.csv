@@ -1,6 +1,0 @@
-post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
-16811937,2020-11-02T03:27:08.380Z,calgrnoise@outlook.com,newsletter,everyone,true,US,Seattle,WA,unknown,unknown,unknown,"Microsoft Office/16.0 (Microsoft Outlook 16.0.13228; Pro), Mozilla/4.0 (compatible; ms-office; MSOffice 16)"
-16811937,2020-11-02T03:28:58.050Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
-16811937,2020-11-02T03:33:01.150Z,degenerous@protonmail.com,newsletter,everyone,false,US,Seattle,WA,desktop,Windows,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
-16811937,2020-11-02T03:39:26.810Z,peter@metacartel.org,newsletter,everyone,true,US,Miami,FL,unknown,unknown,unknown,Superhuman
-16811937,2020-11-02T05:44:46.760Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
