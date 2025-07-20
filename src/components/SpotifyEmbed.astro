@@ -20,17 +20,69 @@ if (uri.includes('spotify.com')) {
   // Handle Spotify URIs
   embedUrl = `https://open.spotify.com/embed/${uri.replace('spotify:', '').replace(/:/g, '/')}?utm_source=generator&theme=${theme}`;
 }
+
+// Calculate aspect ratio for responsive design
+const aspectRatio = (height / width) * 100;
 ---
 
 {embedUrl && (
-  <iframe 
-    src={embedUrl}
-    width={width}
-    height={height}
-    frameborder="0" 
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"
-    style="border-radius: 12px; margin: 1rem 0;"
-  ></iframe>
+  <div 
+    class="spotify-embed-container"
+    style={`
+      position: relative;
+      padding-bottom: ${aspectRatio}%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 1rem 0;
+      border-radius: 12px;
+      background: ${theme === 'dark' ? '#121212' : '#ffffff'};
+    `}
+  >
+    <iframe 
+      src={embedUrl}
+      frameborder="0" 
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      title="Spotify player"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+      "
+    ></iframe>
+  </div>
 )}
+
+{!embedUrl && (
+  <div class="spotify-error">
+    <p>Invalid Spotify URI. Please check the URI format and try again.</p>
+  </div>
+)}
+
+<style>
+  .spotify-embed-container {
+    /* Ensure the container maintains aspect ratio on all screen sizes */
+    min-height: 152px;
+  }
+  
+  .spotify-error {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 12px;
+    background: #fee;
+    border: 1px solid #fcc;
+    color: #c33;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .spotify-embed-container {
+      margin: 0.5rem 0;
+    }
+  }
+</style>

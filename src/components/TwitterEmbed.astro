@@ -1,0 +1,187 @@
+---
+export interface Props {
+  url: string; // Twitter/X URL
+  theme?: 'light' | 'dark';
+  cards?: 'hidden' | 'visible';
+  conversation?: 'none' | 'all';
+  align?: 'left' | 'center' | 'right';
+  width?: number;
+  height?: number;
+}
+
+const { 
+  url, 
+  theme = 'light',
+  cards = 'visible',
+  conversation = 'none',
+  align = 'center',
+  width,
+  height 
+} = Astro.props;
+
+// Extract tweet ID from various Twitter/X URL formats
+function extractTweetId(url: string): string | null {
+  const patterns = [
+    // twitter.com/username/status/TWEET_ID
+    /(?:twitter\.com\/[^\/]+\/status\/)(\d+)/,
+    // x.com/username/status/TWEET_ID
+    /(?:x\.com\/[^\/]+\/status\/)(\d+)/,
+    // mobile.twitter.com/username/status/TWEET_ID
+    /(?:mobile\.twitter\.com\/[^\/]+\/status\/)(\d+)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return match[1];
+    }
+  }
+  return null;
+}
+
+// Validate and extract tweet ID
+const tweetId = extractTweetId(url);
+let embedUrl = '';
+
+if (tweetId) {
+  // Construct the embed URL with parameters
+  const params = new URLSearchParams();
+  params.set('theme', theme);
+  params.set('cards', cards);
+  params.set('conversation', conversation);
+  params.set('align', align);
+  
+  if (width) params.set('width', width.toString());
+  if (height) params.set('height', height.toString());
+  
+  embedUrl = `https://platform.twitter.com/embed/Tweet.html?id=${tweetId}&${params.toString()}`;
+}
+
+// Generate unique ID for this embed instance
+const embedId = `twitter-embed-${tweetId || Math.random().toString(36).substr(2, 9)}`;
+---
+
+{tweetId && (
+  <div 
+    class="twitter-embed-container"
+    style="
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      min-height: 200px;
+    "
+  >
+    <blockquote 
+      class="twitter-tweet" 
+      data-theme={theme}
+      data-cards={cards}
+      data-conversation={conversation}
+      data-align={align}
+      id={embedId}
+      style="
+        max-width: 550px;
+        width: 100%;
+        border-radius: 12px;
+        margin: 0;
+      "
+    >
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        Loading tweet...
+      </a>
+    </blockquote>
+  </div>
+)}
+
+{!tweetId && (
+  <div 
+    class="twitter-embed-error"
+    style="
+      padding: 1rem;
+      margin: 1rem 0;
+      border: 2px dashed #ccc;
+      border-radius: 12px;
+      text-align: center;
+      color: #666;
+      background: #f9f9f9;
+    "
+  >
+    <p>Invalid Twitter/X URL. Please provide a valid tweet URL.</p>
+    <small>Supported formats: twitter.com/user/status/ID or x.com/user/status/ID</small>
+  </div>
+)}
+
+<script>
+  // Load Twitter widget script if not already loaded
+  if (!window.twttr) {
+    const script = document.createElement('script');
+    script.src = 'https://platform.twitter.com/widgets.js';
+    script.async = true;
+    script.charset = 'utf-8';
+    document.head.appendChild(script);
+    
+    script.onload = () => {
+      // Ensure widgets are loaded and rendered
+      if (window.twttr && window.twttr.widgets) {
+        window.twttr.widgets.load();
+      }
+    };
+  } else {
+    // Script already loaded, just render widgets
+    if (window.twttr.widgets) {
+      window.twttr.widgets.load();
+    }
+  }
+</script>
+
+<style>
+  .twitter-embed-container {
+    /* Ensure proper spacing and alignment */
+    overflow: hidden;
+  }
+  
+  .twitter-tweet {
+    /* Override default Twitter styles for better integration */
+    font-family: inherit !important;
+  }
+  
+  .twitter-embed-error {
+    font-family: inherit;
+  }
+  
+  @media (max-width: 768px) {
+    .twitter-embed-container {
+      margin: 0.5rem 0;
+    }
+    
+    .twitter-tweet {
+      max-width: 100% !important;
+    }
+  }
+  
+  /* Loading state styling */
+  .twitter-tweet:not(.twitter-tweet-rendered) {
+    background: #f8f9fa;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    color: #657786;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Dark theme support */
+  [data-theme="dark"] .twitter-embed-error {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #ccc;
+  }
+  
+  [data-theme="dark"] .twitter-tweet:not(.twitter-tweet-rendered) {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #ccc;
+  }
+</style>

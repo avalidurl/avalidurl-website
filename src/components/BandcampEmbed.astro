@@ -1,0 +1,238 @@
+---
+export interface Props {
+  url: string; // Bandcamp URL (album or track)
+  width?: number;
+  height?: number;
+  theme?: 'light' | 'dark';
+  size?: 'large' | 'medium' | 'small';
+  tracklist?: boolean;
+  artwork?: boolean;
+  minimal?: boolean;
+}
+
+const { 
+  url, 
+  width = 350, 
+  height = 470, 
+  theme = 'light',
+  size = 'large',
+  tracklist = true,
+  artwork = true,
+  minimal = false
+} = Astro.props;
+
+// Extract Bandcamp embed information from URL
+function extractBandcampInfo(url: string): { albumId?: string; trackId?: string; artistName?: string; albumName?: string; embedUrl?: string } | null {
+  try {
+    // Handle various Bandcamp URL formats:
+    // https://artistname.bandcamp.com/album/album-name
+    // https://artistname.bandcamp.com/track/track-name
+    // https://bandcamp.com/EmbeddedPlayer/album=123456789/size=large/...
+    
+    // If it's already an embed URL, use it directly
+    if (url.includes('bandcamp.com/EmbeddedPlayer/')) {
+      return { embedUrl: url };
+    }
+    
+    // Parse regular Bandcamp URLs
+    const bandcampPattern = /https?:\/\/([^.]+)\.bandcamp\.com\/(album|track)\/([^\/\?]+)/;
+    const match = url.match(bandcampPattern);
+    
+    if (match) {
+      const [, artistName, type, itemName] = match;
+      
+      // For regular Bandcamp URLs, we need to construct an embed URL
+      // This is a simplified approach - in practice, you'd need the actual album/track ID
+      // which requires API calls or scraping. For now, we'll use a generic embed format.
+      const baseEmbedUrl = 'https://bandcamp.com/EmbeddedPlayer/';
+      
+      // Note: Real implementation would need to fetch the actual album/track ID
+      // This is a placeholder that follows Bandcamp's embed URL structure
+      return {
+        artistName,
+        albumName: type === 'album' ? itemName : undefined,
+        embedUrl: null // Will be constructed below with proper parameters
+      };
+    }
+    
+    return null;
+  } catch (error) {
+    console.error('Error parsing Bandcamp URL:', error);
+    return null;
+  }
+}
+
+// Build embed URL with parameters
+let embedUrl = '';
+const bandcampInfo = extractBandcampInfo(url);
+
+if (bandcampInfo?.embedUrl) {
+  // Use existing embed URL
+  embedUrl = bandcampInfo.embedUrl;
+} else if (bandcampInfo) {
+  // For demonstration purposes, we'll show how the embed URL would be constructed
+  // In a real implementation, you'd need to fetch the album/track ID from Bandcamp's API
+  // or use a service to convert the URL
+  
+  // Bandcamp embed URLs follow this pattern:
+  // https://bandcamp.com/EmbeddedPlayer/album=ALBUM_ID/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/
+  
+  console.warn('Bandcamp URL detected but cannot create embed without album/track ID. Please use the embed code from Bandcamp directly.');
+}
+
+// If we have a valid URL that looks like a Bandcamp page but we can't create an embed,
+// we'll provide a fallback link
+const isBandcampUrl = url.includes('bandcamp.com') && !url.includes('EmbeddedPlayer');
+
+// Calculate responsive dimensions
+const aspectRatio = (height / width) * 100;
+
+// Determine height based on size and content
+let embedHeight = height;
+if (size === 'large') {
+  embedHeight = tracklist ? 470 : 120;
+} else if (size === 'medium') {
+  embedHeight = tracklist ? 400 : 100;
+} else if (size === 'small') {
+  embedHeight = 120;
+}
+---
+
+{embedUrl && (
+  <div 
+    class="bandcamp-embed-container"
+    style={`
+      position: relative;
+      width: 100%;
+      max-width: ${width}px;
+      margin: 1rem 0;
+    `}
+  >
+    <iframe 
+      src={embedUrl}
+      width={width}
+      height={embedHeight}
+      frameborder="0"
+      seamless=""
+      loading="lazy"
+      title="Bandcamp music player"
+      style="
+        border: 0;
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+      "
+    ></iframe>
+  </div>
+)}
+
+{isBandcampUrl && !embedUrl && (
+  <div 
+    class="bandcamp-fallback"
+    style="
+      border: 2px dashed #ccc;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      margin: 1rem 0;
+      background: #f9f9f9;
+    "
+  >
+    <p style="margin: 0 0 1rem 0; color: #666;">
+      <strong>Bandcamp Release</strong>
+    </p>
+    <p style="margin: 0 0 1rem 0; font-size: 0.9em; color: #888;">
+      To embed this Bandcamp release, please:
+    </p>
+    <ol style="text-align: left; font-size: 0.9em; color: #666; max-width: 300px; margin: 0 auto 1rem auto;">
+      <li>Visit the Bandcamp page</li>
+      <li>Click "Share/Embed"</li>
+      <li>Copy the embed code</li>
+      <li>Use the embed URL in this component</li>
+    </ol>
+    <a 
+      href={url} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      style="
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #1da0c3;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.9em;
+        transition: background 0.2s;
+      "
+      onmouseover="this.style.background='#158a9f'"
+      onmouseout="this.style.background='#1da0c3'"
+    >
+      Listen on Bandcamp
+    </a>
+  </div>
+)}
+
+{!embedUrl && !isBandcampUrl && (
+  <div 
+    class="bandcamp-error"
+    style="
+      border: 2px solid #ff6b6b;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      margin: 1rem 0;
+      background: #fff5f5;
+      color: #d63031;
+    "
+  >
+    <p style="margin: 0; font-size: 0.9em;">
+      <strong>Invalid Bandcamp URL</strong><br>
+      Please provide a valid Bandcamp URL or embed code.
+    </p>
+  </div>
+)}
+
+<style>
+  .bandcamp-embed-container {
+    /* Ensure responsive behavior */
+    max-width: 100%;
+  }
+  
+  .bandcamp-embed-container iframe {
+    /* Maintain aspect ratio and responsiveness */
+    min-height: 120px;
+  }
+  
+  @media (max-width: 768px) {
+    .bandcamp-embed-container {
+      margin: 0.5rem 0;
+    }
+    
+    .bandcamp-fallback,
+    .bandcamp-error {
+      margin: 0.5rem 0;
+      padding: 1rem;
+    }
+  }
+  
+  /* Dark theme support */
+  @media (prefers-color-scheme: dark) {
+    .bandcamp-fallback {
+      background: #2a2a2a;
+      border-color: #555;
+      color: #ccc;
+    }
+    
+    .bandcamp-fallback p,
+    .bandcamp-fallback ol {
+      color: #ccc;
+    }
+    
+    .bandcamp-error {
+      background: #3a2a2a;
+      border-color: #ff8a8a;
+      color: #ff8a8a;
+    }
+  }
+</style>

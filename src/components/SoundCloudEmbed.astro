@@ -1,0 +1,152 @@
+---
+export interface Props {
+  url: string; // SoundCloud URL (track, playlist, or user)
+  width?: number;
+  height?: number;
+  autoPlay?: boolean;
+  showComments?: boolean;
+  showUser?: boolean;
+  showReposts?: boolean;
+  visual?: boolean; // Show visual waveform
+  color?: string; // Custom color (hex without #)
+}
+
+const { 
+  url, 
+  width = 400, 
+  height = 166, 
+  autoPlay = false,
+  showComments = true,
+  showUser = true,
+  showReposts = false,
+  visual = false,
+  color = 'ff5500'
+} = Astro.props;
+
+// Extract and validate SoundCloud URL
+function isValidSoundCloudUrl(url: string): boolean {
+  return url.includes('soundcloud.com') && 
+         (url.includes('/tracks/') || 
+          url.includes('/sets/') || 
+          url.match(/soundcloud\.com\/[^\/]+\/[^\/]+$/) ||
+          url.match(/soundcloud\.com\/[^\/]+\/sets\/[^\/]+$/));
+}
+
+// Build SoundCloud embed URL
+let embedUrl = '';
+if (isValidSoundCloudUrl(url)) {
+  const params = new URLSearchParams();
+  
+  // Core parameters
+  params.set('url', url);
+  params.set('auto_play', autoPlay.toString());
+  params.set('hide_related', 'false');
+  params.set('show_comments', showComments.toString());
+  params.set('show_user', showUser.toString());
+  params.set('show_reposts', showReposts.toString());
+  params.set('show_teaser', 'true');
+  params.set('visual', visual.toString());
+  
+  // Color customization (remove # if present)
+  const cleanColor = color.replace('#', '');
+  params.set('color', cleanColor);
+  
+  // Visual mode uses different height
+  const embedHeight = visual ? Math.max(height, 400) : height;
+  
+  embedUrl = `https://w.soundcloud.com/player/?${params.toString()}`;
+}
+
+// Calculate aspect ratio for responsive design
+const aspectRatio = (height / width) * 100;
+---
+
+{embedUrl && (
+  <div 
+    class="soundcloud-embed-container"
+    style={`
+      position: relative;
+      padding-bottom: ${visual ? '56.25%' : aspectRatio + '%'};
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 1rem 0;
+      border-radius: 12px;
+      background: #f5f5f5;
+    `}
+  >
+    <iframe 
+      src={embedUrl}
+      frameborder="0" 
+      scrolling="no"
+      allow="autoplay"
+      loading="lazy"
+      title="SoundCloud player"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+      "
+    ></iframe>
+  </div>
+)}
+
+{!embedUrl && url && (
+  <div 
+    class="soundcloud-error"
+    style="
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      background: #fee;
+      border: 1px solid #fcc;
+      color: #c33;
+      text-align: center;
+    "
+  >
+    <p>Invalid SoundCloud URL. Please provide a valid SoundCloud track, playlist, or profile URL.</p>
+    <small>Expected format: https://soundcloud.com/artist/track or https://soundcloud.com/artist/sets/playlist</small>
+  </div>
+)}
+
+<style>
+  .soundcloud-embed-container {
+    /* Ensure the container maintains aspect ratio on all screen sizes */
+    min-height: 166px;
+  }
+  
+  .soundcloud-embed-container iframe {
+    /* Ensure smooth loading transition */
+    transition: opacity 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .soundcloud-embed-container {
+      margin: 0.5rem 0;
+      min-height: 140px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .soundcloud-embed-container {
+      min-height: 120px;
+    }
+  }
+  
+  .soundcloud-error {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .soundcloud-error p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  .soundcloud-error small {
+    opacity: 0.8;
+    font-size: 0.875rem;
+  }
+</style>

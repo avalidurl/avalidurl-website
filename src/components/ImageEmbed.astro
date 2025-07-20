@@ -1,0 +1,488 @@
+---
+export interface Props {
+  src: string | string[]; // Image URL or array of URLs for gallery
+  alt: string;
+  width?: number;
+  height?: number;
+  caption?: string;
+  lazy?: boolean;
+  responsive?: boolean;
+  gallery?: boolean; // Enable gallery/carousel mode
+  objectFit?: 'cover' | 'contain' | 'fill' | 'scale-down' | 'none';
+  sizes?: string; // Responsive image sizes attribute
+  srcset?: string; // Custom srcset for responsive images
+}
+
+const { 
+  src, 
+  alt, 
+  width, 
+  height,
+  caption,
+  lazy = true,
+  responsive = true,
+  gallery = false,
+  objectFit = 'cover',
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  srcset
+} = Astro.props;
+
+// Ensure src is an array for gallery mode
+const images = Array.isArray(src) ? src : [src];
+const isGallery = gallery && images.length > 1;
+
+// Generate unique ID for gallery
+const galleryId = `gallery-${Math.random().toString(36).substr(2, 9)}`;
+
+// Supported image formats
+const supportedFormats = ['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.svg'];
+
+// Check if URL is a valid image format
+function isValidImageUrl(url: string): boolean {
+  try {
+    const urlObj = new URL(url);
+    const pathname = urlObj.pathname.toLowerCase();
+    return supportedFormats.some(format => pathname.endsWith(format));
+  } catch {
+    return false;
+  }
+}
+
+// Generate responsive srcset if not provided
+function generateSrcset(imageUrl: string): string {
+  if (srcset) return srcset;
+  
+  // For external URLs, we can't generate srcset automatically
+  // Return empty string and let the browser handle it
+  if (imageUrl.startsWith('http')) {
+    return '';
+  }
+  
+  // For local images, generate basic srcset
+  const basePath = imageUrl.replace(/\.[^/.]+$/, '');
+  const extension = imageUrl.match(/\.[^/.]+$/)?.[0] || '.jpg';
+  
+  return `
+    ${basePath}-480w${extension} 480w,
+    ${basePath}-768w${extension} 768w,
+    ${basePath}-1200w${extension} 1200w,
+    ${imageUrl} 1920w
+  `.replace(/\s+/g, ' ').trim();
+}
+---
+
+<div class="image-embed-container">
+  {isGallery ? (
+    <!-- Gallery/Carousel Mode -->
+    <div class={`image-gallery ${galleryId}`} data-gallery-id={galleryId}>
+      <div class="gallery-container">
+        <div class="gallery-track">
+          {images.map((imageUrl, index) => (
+            <div class="gallery-slide" data-slide={index}>
+              {isValidImageUrl(imageUrl) ? (
+                <picture>
+                  <img
+                    src={imageUrl}
+                    alt={`${alt} - Image ${index + 1}`}
+                    width={width}
+                    height={height}
+                    loading={lazy ? 'lazy' : 'eager'}
+                    sizes={responsive ? sizes : undefined}
+                    srcset={responsive ? generateSrcset(imageUrl) : undefined}
+                    style={`object-fit: ${objectFit};`}
+                    class="gallery-image"
+                    onerror="this.parentElement.parentElement.classList.add('error')"
+                  />
+                </picture>
+              ) : (
+                <div class="image-error">
+                  <p>Invalid image format or URL</p>
+                  <small>{imageUrl}</small>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        
+        <!-- Gallery Controls -->
+        {images.length > 1 && (
+          <div class="gallery-controls">
+            <button class="gallery-btn prev" data-action="prev" aria-label="Previous image">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            <button class="gallery-btn next" data-action="next" aria-label="Next image">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
+          </div>
+        )}
+        
+        <!-- Gallery Indicators -->
+        {images.length > 1 && (
+          <div class="gallery-indicators">
+            {images.map((_, index) => (
+              <button 
+                class={`indicator ${index === 0 ? 'active' : ''}`} 
+                data-slide-to={index}
+                aria-label={`Go to image ${index + 1}`}
+              ></button>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  ) : (
+    <!-- Single Image Mode -->
+    <div class="single-image-container">
+      {isValidImageUrl(images[0]) ? (
+        <picture>
+          <img
+            src={images[0]}
+            alt={alt}
+            width={width}
+            height={height}
+            loading={lazy ? 'lazy' : 'eager'}
+            sizes={responsive ? sizes : undefined}
+            srcset={responsive ? generateSrcset(images[0]) : undefined}
+            style={`object-fit: ${objectFit};`}
+            class="single-image"
+            onerror="this.parentElement.parentElement.classList.add('error')"
+          />
+        </picture>
+      ) : (
+        <div class="image-error">
+          <p>Invalid image format or URL</p>
+          <small>{images[0]}</small>
+        </div>
+      )}
+    </div>
+  )}
+  
+  {caption && (
+    <figcaption class="image-caption">
+      {caption}
+    </figcaption>
+  )}
+</div>
+
+<style>
+  .image-embed-container {
+    margin: 1rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8f9fa;
+  }
+  
+  /* Single Image Styles */
+  .single-image-container {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  
+  .single-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .single-image:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Gallery Styles */
+  .image-gallery {
+    position: relative;
+    width: 100%;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .gallery-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
+  
+  .gallery-slide {
+    flex: 0 0 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+  
+  .gallery-image {
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Gallery Controls */
+  .gallery-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    pointer-events: none;
+  }
+  
+  .gallery-btn {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .gallery-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .gallery-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Gallery Indicators */
+  .gallery-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .indicator.active {
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  /* Caption */
+  .image-caption {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  /* Error State */
+  .image-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #fee;
+    border: 1px solid #fcc;
+    color: #c33;
+    text-align: center;
+    min-height: 200px;
+  }
+  
+  .image-error p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  .image-error small {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    word-break: break-all;
+  }
+  
+  .image-embed-container.error .single-image,
+  .image-embed-container.error .gallery-image {
+    display: none;
+  }
+  
+  .image-embed-container.error .image-error {
+    display: flex;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .image-embed-container {
+      margin: 0.5rem 0;
+    }
+    
+    .gallery-slide {
+      min-height: 250px;
+    }
+    
+    .gallery-image {
+      max-height: 400px;
+    }
+    
+    .gallery-btn {
+      width: 35px;
+      height: 35px;
+    }
+    
+    .image-caption {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Loading State */
+  .single-image, .gallery-image {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  .single-image[src], .gallery-image[src] {
+    background: none;
+    animation: none;
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+</style>
+
+<script>
+  // Gallery functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const galleries = document.querySelectorAll('.image-gallery');
+    
+    galleries.forEach(gallery => {
+      const galleryId = gallery.dataset.galleryId;
+      const track = gallery.querySelector('.gallery-track');
+      const slides = gallery.querySelectorAll('.gallery-slide');
+      const prevBtn = gallery.querySelector('[data-action="prev"]');
+      const nextBtn = gallery.querySelector('[data-action="next"]');
+      const indicators = gallery.querySelectorAll('.indicator');
+      
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      
+      if (totalSlides <= 1) return;
+      
+      function updateGallery() {
+        // Update track position
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentSlide);
+        });
+        
+        // Update button states
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+      }
+      
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateGallery();
+        }
+      }
+      
+      function prevSlide() {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateGallery();
+        }
+      }
+      
+      function goToSlide(slideIndex) {
+        if (slideIndex >= 0 && slideIndex < totalSlides) {
+          currentSlide = slideIndex;
+          updateGallery();
+        }
+      }
+      
+      // Event listeners
+      if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+      if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+      
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index));
+      });
+      
+      // Keyboard navigation
+      gallery.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+      });
+      
+      // Touch/swipe support
+      let startX = 0;
+      let startY = 0;
+      let endX = 0;
+      let endY = 0;
+      
+      gallery.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      });
+      
+      gallery.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        endY = e.changedTouches[0].clientY;
+        
+        const deltaX = startX - endX;
+        const deltaY = startY - endY;
+        
+        // Only handle horizontal swipes that are more horizontal than vertical
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+          if (deltaX > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+      });
+      
+      // Initialize
+      updateGallery();
+    });
+  });
+</script>

@@ -1,0 +1,143 @@
+---
+export interface Props {
+  url: string; // Vimeo URL (various formats)
+  width?: number;
+  height?: number;
+  autoplay?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+  controls?: boolean;
+  portrait?: boolean; // Show user's portrait
+  title?: boolean; // Show video title
+  byline?: boolean; // Show author byline
+  color?: string; // Player color (hex without #)
+  responsive?: boolean; // Enable responsive design
+}
+
+const { 
+  url, 
+  width = 640, 
+  height = 360, 
+  autoplay = false,
+  loop = false,
+  muted = false,
+  controls = true,
+  portrait = false,
+  title = false,
+  byline = false,
+  color = 'ffffff',
+  responsive = true
+} = Astro.props;
+
+// Extract Vimeo video ID from various URL formats
+function extractVideoId(url: string): string | null {
+  const patterns = [
+    // vimeo.com/VIDEO_ID
+    /(?:vimeo\.com\/)(\d+)/,
+    // vimeo.com/channels/channelname/VIDEO_ID
+    /(?:vimeo\.com\/channels\/[^\/]+\/)(\d+)/,
+    // vimeo.com/groups/groupname/videos/VIDEO_ID
+    /(?:vimeo\.com\/groups\/[^\/]+\/videos\/)(\d+)/,
+    // vimeo.com/album/albumid/video/VIDEO_ID
+    /(?:vimeo\.com\/album\/\d+\/video\/)(\d+)/,
+    // vimeo.com/video/VIDEO_ID
+    /(?:vimeo\.com\/video\/)(\d+)/,
+    // player.vimeo.com/video/VIDEO_ID
+    /(?:player\.vimeo\.com\/video\/)(\d+)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return match[1];
+    }
+  }
+  return null;
+}
+
+// Build embed URL with parameters
+let embedUrl = '';
+const videoId = extractVideoId(url);
+
+if (videoId) {
+  const params = new URLSearchParams();
+  
+  if (autoplay) params.set('autoplay', '1');
+  if (loop) params.set('loop', '1');
+  if (muted) params.set('muted', '1');
+  if (!controls) params.set('controls', '0');
+  if (!portrait) params.set('portrait', '0');
+  if (!title) params.set('title', '0');
+  if (!byline) params.set('byline', '0');
+  if (color && color !== 'ffffff') params.set('color', color);
+  
+  // Add privacy and performance settings
+  params.set('dnt', '1'); // Do not track
+  params.set('app_id', '122963'); // Generic app ID for better performance
+  
+  embedUrl = `https://player.vimeo.com/video/${videoId}?${params.toString()}`;
+}
+
+// Calculate aspect ratio for responsive design
+const aspectRatio = (height / width) * 100;
+---
+
+{embedUrl && responsive && (
+  <div 
+    class="vimeo-embed-container"
+    style={`
+      position: relative;
+      padding-bottom: ${aspectRatio}%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 1rem 0;
+      border-radius: 12px;
+      background: #000;
+    `}
+  >
+    <iframe 
+      src={embedUrl}
+      frameborder="0" 
+      allowfullscreen=""
+      allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+      loading="lazy"
+      title="Vimeo video player"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+      "
+    ></iframe>
+  </div>
+)}
+
+{embedUrl && !responsive && (
+  <iframe 
+    src={embedUrl}
+    width={width}
+    height={height}
+    frameborder="0" 
+    allowfullscreen=""
+    allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+    loading="lazy"
+    title="Vimeo video player"
+    style="border-radius: 12px; margin: 1rem 0; background: #000;"
+  ></iframe>
+)}
+
+<style>
+  .vimeo-embed-container {
+    /* Ensure the container maintains aspect ratio on all screen sizes */
+    min-height: 200px;
+  }
+  
+  @media (max-width: 768px) {
+    .vimeo-embed-container {
+      margin: 0.5rem 0;
+    }
+  }
+</style>

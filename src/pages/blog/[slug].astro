@@ -4,6 +4,11 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import { YouTube, Tweet, Vimeo } from 'astro-embed';
 import SpotifyEmbed from '../../components/SpotifyEmbed.astro';
 import AppleMusicEmbed from '../../components/AppleMusicEmbed.astro';
+import TwitterEmbed from '../../components/TwitterEmbed.astro';
+import VimeoEmbed from '../../components/VimeoEmbed.astro';
+import SoundCloudEmbed from '../../components/SoundCloudEmbed.astro';
+import BandcampEmbed from '../../components/BandcampEmbed.astro';
+import ImageEmbed from '../../components/ImageEmbed.astro';
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection('blog', ({ data }) => {
@@ -75,7 +80,12 @@ const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate).toLo
           Tweet,
           Vimeo,
           SpotifyEmbed,
-          AppleMusicEmbed
+          AppleMusicEmbed,
+          TwitterEmbed,
+          VimeoEmbed,
+          SoundCloudEmbed,
+          BandcampEmbed,
+          ImageEmbed
         }} />
       </div>
       
