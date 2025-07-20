@@ -1,0 +1,2 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+41155862,2021-09-11T14:07:52.782Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"

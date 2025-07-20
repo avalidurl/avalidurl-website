@@ -8,7 +8,10 @@
     "build": "npm run build:deps && astro build",
     "build:deps": "npm rebuild rollup || echo 'Rollup rebuild failed, continuing...'",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "import-substack": "node scripts/import-substack.cjs",
+    "import-all-substack": "node scripts/import-all-substack.cjs",
+    "import-from-export": "node scripts/import-from-export.cjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",

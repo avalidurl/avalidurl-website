@@ -1,0 +1,25 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+66232210,2022-07-29T12:22:13.082Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+66232210,2022-07-29T12:40:53.090Z,blair@whatitis.media,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+66232210,2022-07-29T12:53:42.074Z,me@russellkaye.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-07-29T12:55:25.637Z,me@russellkaye.com,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+66232210,2022-07-29T12:58:31.229Z,philcopper@hotmail.com,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+66232210,2022-07-29T13:20:32.123Z,mp@jpg.space,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-07-29T13:35:48.582Z,jan.b.linhart@gmail.com,newsletter,everyone,true,ES,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+66232210,2022-07-29T13:37:21.291Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-07-29T13:54:28.862Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-07-29T14:52:38.806Z,jan.b.linhart@gmail.com,newsletter,everyone,true,ES,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+66232210,2022-07-29T15:59:46.247Z,elena96b@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-07-29T16:58:28.087Z,movieluc@whidbey.net,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+66232210,2022-07-29T18:20:35.809Z,seyitsatin7@icloud.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-07-29T22:45:03.039Z,movieluc@whidbey.net,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+66232210,2022-07-30T01:07:14.039Z,rootdraws@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+66232210,2022-07-30T01:07:29.280Z,rootdraws@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+66232210,2022-07-30T01:56:45.436Z,Aghazkhan@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-08-02T10:31:51.505Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-08-02T20:31:57.787Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-08-06T00:00:15.692Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-08-10T10:43:22.663Z,jan.b.linhart@gmail.com,newsletter,everyone,true,ES,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+66232210,2022-08-12T02:59:03.158Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-08-22T12:22:43.136Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+66232210,2022-10-29T07:57:18.169Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0

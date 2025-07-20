@@ -1,0 +1,8 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+16837972,2020-11-02T01:45:26.010Z,calgrnoise@outlook.com,newsletter,everyone,true,US,Seattle,WA,desktop,OS X,email client,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+16837972,2020-11-02T01:46:17.050Z,calgrnoise@outlook.com,newsletter,everyone,true,US,Seattle,WA,desktop,OS X,email client,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+16837972,2020-11-02T02:16:53.350Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Willoughby,OH,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+16837972,2020-11-02T03:28:58.370Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+16837972,2020-11-02T03:33:45.550Z,degenerous@protonmail.com,newsletter,everyone,false,US,Seattle,WA,desktop,Windows,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+16837972,2020-11-02T03:39:26.830Z,peter@metacartel.org,newsletter,everyone,true,US,Unknown,FL,unknown,unknown,unknown,Superhuman
+16837972,2020-11-03T00:53:46.590Z,kissmyass009@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)

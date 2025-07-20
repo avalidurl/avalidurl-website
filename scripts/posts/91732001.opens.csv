@@ -1,0 +1,22 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+91732001,2022-12-20T04:43:08.117Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-20T05:06:48.697Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,SE,,,,,,Mozilla/5.0
+91732001,2022-12-20T05:53:58.462Z,dragon4366@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91732001,2022-12-20T05:55:37.459Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-20T10:25:58.567Z,me@russellkaye.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-20T10:55:33.484Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-20T11:04:14.800Z,stuartziegler@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91732001,2022-12-20T13:28:50.238Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-20T15:42:59.184Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-20T18:18:05.834Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91732001,2022-12-20T22:41:34.278Z,Aghazkhan@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-21T03:48:22.606Z,elena96b@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-21T11:23:03.450Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-22T07:37:39.950Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91732001,2022-12-22T08:07:16.812Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91732001,2022-12-22T11:32:54.062Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-23T17:23:22.465Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2022-12-28T21:55:17.730Z,seyitsatin7@icloud.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2023-01-08T18:50:27.911Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2023-01-08T21:34:59.085Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91732001,2023-01-12T07:09:27.139Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0

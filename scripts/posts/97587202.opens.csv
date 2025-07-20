@@ -1,0 +1,22 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+97587202,2023-01-19T00:13:33.486Z,jon.s.victor@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+97587202,2023-01-19T00:28:45.496Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+97587202,2023-01-19T01:05:29.105Z,rathermercurial@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+97587202,2023-01-19T01:12:03.201Z,elena96b@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-01-19T02:52:16.093Z,me@russellkaye.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-01-19T03:35:34.073Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-01-19T03:57:27.714Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-01-19T04:14:19.833Z,blair@whatitis.media,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+97587202,2023-01-19T05:09:10.800Z,Aghazkhan@gmail.com,newsletter,everyone,true,IT,,,,,,Mozilla/5.0
+97587202,2023-01-19T06:44:25.489Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,SE,,,,,,Mozilla/5.0
+97587202,2023-01-19T16:12:34.365Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+97587202,2023-01-19T16:56:43.899Z,stuartziegler@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+97587202,2023-01-19T18:24:51.314Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-01-20T05:16:05.031Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+97587202,2023-01-22T19:55:08.712Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-01-23T02:16:12.814Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-01-29T09:28:40.458Z,rathermercurial@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+97587202,2023-02-02T23:31:42.304Z,seyitsatin7@icloud.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-02-04T00:59:15.888Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-02-08T14:42:36.609Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+97587202,2023-02-16T02:28:24.671Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0

@@ -1,0 +1,23 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+41085700,2021-09-09T01:33:15.879Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+41085700,2021-09-09T02:03:07.900Z,philcopper@hotmail.com,,,true,US,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.73"
+41085700,2021-09-09T02:06:05.672Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+41085700,2021-09-09T02:14:54.851Z,494d643a-bc4d-45c2-8181-fe7dedc2cd56@deletion-request.substack.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+41085700,2021-09-09T03:11:48.756Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+41085700,2021-09-09T03:11:51.884Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+41085700,2021-09-09T04:55:57.152Z,paul.kieran@ucdconnect.ie,,,true,IE,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+41085700,2021-09-09T04:56:01.584Z,paul.kieran@ucdconnect.ie,,,true,IE,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+41085700,2021-09-09T05:08:09.796Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+41085700,2021-09-09T05:20:59.200Z,hakon@wiv.io,,,true,NO,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+41085700,2021-09-09T05:51:23.287Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+41085700,2021-09-09T06:43:45.784Z,hakon@wiv.io,,,true,NO,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+41085700,2021-09-09T07:05:05.118Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+41085700,2021-09-09T07:34:17.543Z,hakon@wiv.io,,,true,NO,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+41085700,2021-09-09T09:57:59.165Z,yurchik@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+41085700,2021-09-09T10:05:53.108Z,yurchik@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+41085700,2021-09-09T10:35:03.563Z,aylinyrd@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+41085700,2021-09-09T11:36:01.180Z,seyitsatin7@icloud.com,,,true,TR,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+41085700,2021-09-09T12:54:39.157Z,stuartziegler@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+41085700,2021-09-09T21:38:12.598Z,dragon4366@gmail.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+41085700,2021-09-13T13:34:03.887Z,cryptobrambles@gmail.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+41085700,2021-10-13T15:10:19.259Z,peter@metacartel.org,,,true,US,,,,,,Superhuman

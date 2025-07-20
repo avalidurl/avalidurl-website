@@ -1,0 +1,28 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+67379425,2022-08-06T01:14:20.196Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-06T02:26:09.226Z,Aghazkhan@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-06T03:10:35.510Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,SE,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+67379425,2022-08-06T03:48:19.112Z,rathermercurial@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-06T05:27:44.341Z,elena96b@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-06T06:15:18.366Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-06T07:08:50.192Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-06T12:45:34.305Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-06T15:55:17.832Z,seyitsatin7@icloud.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-07T11:06:19.494Z,sinantpl29@outlook.com,newsletter,everyone,true,TR,,,,,,"Microsoft Office/16.0 (Microsoft Outlook 16.0.14326; Pro), Mozilla/4.0 (compatible; ms-office; MSOffice rmj)"
+67379425,2022-08-07T20:11:10.447Z,jon.s.victor@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-07T21:12:12.661Z,jon.s.victor@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-08T01:18:32.662Z,philcopper@hotmail.com,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.47"
+67379425,2022-08-08T02:53:00.155Z,blair@whatitis.media,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-08T03:21:05.239Z,me@russellkaye.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-09T00:25:59.259Z,blair@whatitis.media,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-09T21:21:04.695Z,blair@whatitis.media,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-10T10:20:28.229Z,jan.b.linhart@gmail.com,newsletter,everyone,true,ES,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+67379425,2022-08-12T02:46:30.892Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-12T23:14:39.691Z,rootdraws@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+67379425,2022-08-14T10:03:25.451Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-14T16:45:37.657Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-22T10:32:24.937Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-27T00:45:14.427Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-27T00:45:15.443Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-08-29T02:04:10.062Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+67379425,2022-10-29T07:35:52.176Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0

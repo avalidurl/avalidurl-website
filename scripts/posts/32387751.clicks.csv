@@ -1,0 +1,4 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+32387751,2021-02-10T06:11:16.856Z,rootdraws@gmail.com,newsletter,everyone,true,US,Unknown,CA,desktop,OS X,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Safari/537.36"
+32387751,2021-02-10T06:12:25.118Z,rootdraws@gmail.com,newsletter,everyone,true,US,Unknown,CA,desktop,OS X,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Safari/537.36"
+32387751,2021-02-10T14:28:09.039Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,mobile,Android,mobile browser,"Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-G986U1) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.2 Chrome/83.0.4103.106 Mobile Safari/537.36"

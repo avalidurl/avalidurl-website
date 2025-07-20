@@ -1,0 +1,4 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+40915873,2021-09-05T01:13:00.490Z,dragon4366@gmail.com,newsletter,everyone,true,US,Seattle,WA,mobile,Android,mobile browser,"Mozilla/5.0 (Linux; Android 10; moto g power (2021)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.166 Mobile Safari/537.36"
+40915873,2021-09-05T01:13:36.332Z,dragon4366@gmail.com,newsletter,everyone,true,US,Seattle,WA,mobile,Android,mobile browser,"Mozilla/5.0 (Linux; Android 10; moto g power (2021)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.166 Mobile Safari/537.36"
+40915873,2021-09-07T10:29:59.342Z,paul.kieran@ucdconnect.ie,newsletter,everyone,true,US,Seattle,WA,desktop,OS X,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"

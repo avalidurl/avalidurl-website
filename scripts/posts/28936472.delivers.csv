@@ -1,0 +1,10 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription
+28936472,2020-12-26T00:05:42.460Z,blair@whatitis.media,newsletter,everyone,true
+28936472,2020-12-26T00:05:42.610Z,bradsundberg333@gmail.com,newsletter,everyone,true
+28936472,2020-12-26T00:05:42.630Z,ouvrelechien@noshapenodepth.com,newsletter,everyone,true
+28936472,2020-12-26T00:05:42.820Z,sandsofosiris@gmail.com,newsletter,everyone,true
+28936472,2020-12-26T00:05:43.060Z,peter@metacartel.org,newsletter,everyone,true
+28936472,2020-12-26T00:05:44.830Z,danielreprieto@me.com,newsletter,everyone,true
+28936472,2020-12-26T00:05:45.440Z,hello@berkozdemir.com,newsletter,everyone,true
+28936472,2020-12-26T00:05:47.000Z,kjs@ethereal.capital,newsletter,everyone,true
+28936472,2020-12-26T00:05:48.750Z,degenerous@protonmail.com,newsletter,everyone,false

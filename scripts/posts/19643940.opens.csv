@@ -1,0 +1,6 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+19643940,2020-11-24T01:11:59.310Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+19643940,2020-11-24T02:00:59.250Z,peter@metacartel.org,newsletter,everyone,true,US,Miami,FL,unknown,unknown,unknown,Superhuman
+19643940,2020-11-24T06:24:00.300Z,degenerous@protonmail.com,newsletter,everyone,false,US,Seattle,WA,desktop,Windows,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+19643940,2020-11-25T14:01:25.100Z,peter@metacartel.org,newsletter,everyone,true,US,Miami,FL,unknown,unknown,unknown,Superhuman
+19643940,2020-11-25T21:48:27.140Z,blair@whatitis.media,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)

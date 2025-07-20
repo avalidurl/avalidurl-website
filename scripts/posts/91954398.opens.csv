@@ -1,0 +1,18 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+91954398,2022-12-21T13:54:49.920Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91954398,2022-12-21T13:58:04.605Z,me@russellkaye.com,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+91954398,2022-12-21T14:13:03.799Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+91954398,2022-12-21T14:26:52.267Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-21T17:12:15.060Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-21T17:28:36.696Z,Aghazkhan@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-21T19:17:45.992Z,me@russellkaye.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-22T11:32:21.099Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-22T11:32:53.944Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-22T21:14:25.162Z,elena96b@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-23T17:07:49.170Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2022-12-28T21:55:17.730Z,seyitsatin7@icloud.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2023-01-01T15:38:19.560Z,jan.b.linhart@gmail.com,newsletter,everyone,true,NL,,,,,,Mozilla/5.0
+91954398,2023-01-04T12:37:46.654Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2023-01-08T21:20:26.956Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91954398,2023-01-11T03:58:48.140Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,SE,,,,,,Mozilla/5.0
+91954398,2023-01-12T09:34:18.394Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0

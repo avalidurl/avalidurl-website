@@ -1,0 +1,20 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+91618590,2022-12-19T22:59:29.701Z,elena96b@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-19T22:59:36.085Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-19T23:19:32.813Z,Mars@valentiger.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91618590,2022-12-19T23:31:06.144Z,scottkildall@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-19T23:32:39.202Z,me@russellkaye.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-19T23:54:19.326Z,kjs@ethereal.capital,newsletter,everyone,true,AU,,,,,,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) wkhtmltoimage Safari/534.34"
+91618590,2022-12-20T00:04:19.879Z,andrescl4@hotmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-20T01:57:42.834Z,rathermercurial@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91618590,2022-12-20T02:19:47.802Z,Aghazkhan@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-20T03:37:46.577Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-20T06:45:10.351Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,SE,,,,,,Mozilla/5.0
+91618590,2022-12-20T13:30:32.586Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-20T18:17:43.649Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+91618590,2022-12-21T11:23:03.216Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-22T11:32:53.819Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-23T17:07:49.173Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2022-12-28T21:55:18.111Z,seyitsatin7@icloud.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2023-01-08T18:50:27.925Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+91618590,2023-01-08T21:35:05.334Z,jan.b.linhart@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0

@@ -1,0 +1,24 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+64474116,2022-07-17T15:07:58.029Z,paul.kieran@ucdconnect.ie,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-17T15:10:53.888Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+64474116,2022-07-17T15:31:08.440Z,kjs@ethereal.capital,newsletter,everyone,true,AU,,,,,,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) wkhtmltoimage Safari/534.34"
+64474116,2022-07-17T16:09:21.408Z,andrescl4@hotmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-17T16:10:26.282Z,rathermercurial@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+64474116,2022-07-17T16:21:37.661Z,anthony.g.ricco@gmail.com,newsletter,everyone,true,SE,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+64474116,2022-07-17T16:23:05.005Z,Aghazkhan@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-17T19:42:34.061Z,dragon4366@gmail.com,newsletter,everyone,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+64474116,2022-07-17T21:34:14.875Z,seyitsatin7@icloud.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-17T22:15:17.395Z,philcopper@hotmail.com,newsletter,everyone,true,US,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62"
+64474116,2022-07-18T08:10:54.329Z,yurchik@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+64474116,2022-07-18T13:20:21.912Z,jan.b.linhart@gmail.com,newsletter,everyone,true,ES,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+64474116,2022-07-18T18:36:34.163Z,michael@elsdoerfer.com,newsletter,everyone,true,GB,,,,,,Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 Thunderbird/91.11.0
+64474116,2022-07-18T18:36:37.160Z,michael@elsdoerfer.com,newsletter,everyone,true,GB,,,,,,Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 Thunderbird/91.11.0
+64474116,2022-07-21T11:00:07.289Z,lg@sunified.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-23T01:19:36.933Z,me@russellkaye.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-24T23:30:31.093Z,elena96b@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-26T07:57:40.442Z,kjs@ethereal.capital,newsletter,everyone,true,AU,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+64474116,2022-07-26T07:57:42.366Z,kjs@ethereal.capital,newsletter,everyone,true,AU,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+64474116,2022-07-26T11:22:24.058Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-07-26T18:20:25.904Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-08-11T20:46:25.822Z,deimoss42@gmail.com,newsletter,everyone,true,,,,,,,Mozilla/5.0
+64474116,2022-10-29T07:24:42.798Z,kjs@ethereal.capital,newsletter,everyone,true,,,,,,,Mozilla/5.0

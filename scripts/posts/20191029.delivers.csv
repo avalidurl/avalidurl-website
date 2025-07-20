@@ -1,0 +1,8 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription
+20191029,2020-11-26T03:38:49.440Z,blair@whatitis.media,newsletter,everyone,true
+20191029,2020-11-26T03:38:49.480Z,sandsofosiris@gmail.com,newsletter,everyone,true
+20191029,2020-11-26T03:38:49.560Z,ouvrelechien@noshapenodepth.com,newsletter,everyone,true
+20191029,2020-11-26T03:38:50.030Z,peter@metacartel.org,newsletter,everyone,true
+20191029,2020-11-26T03:38:50.860Z,hello@berkozdemir.com,newsletter,everyone,true
+20191029,2020-11-26T03:38:53.120Z,kjs@ethereal.capital,newsletter,everyone,true
+20191029,2020-11-26T03:38:53.340Z,degenerous@protonmail.com,newsletter,everyone,false

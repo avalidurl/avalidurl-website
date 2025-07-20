@@ -1,0 +1,5 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription
+888934,2020-08-24T00:40:37.000Z,sandsofosiris@gmail.com,newsletter,everyone,true
+888934,2020-08-24T00:40:37.300Z,kissmyass009@gmail.com,newsletter,everyone,true
+888934,2020-08-24T00:40:37.350Z,peter@metacartel.org,newsletter,everyone,true
+888934,2020-08-24T00:40:38.200Z,ggokhanturhann@gmail.com,newsletter,everyone,false

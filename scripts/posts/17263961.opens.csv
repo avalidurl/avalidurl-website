@@ -1,0 +1,6 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+17263961,2020-11-03T06:19:05.520Z,degenerous@protonmail.com,newsletter,everyone,false,US,Seattle,WA,desktop,Windows,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+17263961,2020-11-03T06:23:19.470Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Irving,TX,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+17263961,2020-11-03T06:23:24.040Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Irving,TX,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+17263961,2020-11-03T08:29:22.620Z,peter@metacartel.org,newsletter,everyone,true,US,Miami,FL,unknown,unknown,unknown,Superhuman
+17263961,2020-11-03T22:20:59.840Z,sandsofosiris@gmail.com,newsletter,everyone,true,US,Seattle,WA,desktop,Windows,browser,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)

@@ -1,0 +1,29 @@
+post_id,timestamp,email,post_type,post_audience,active_subscription,country,city,region,device_type,client_os,client_type,user_agent
+40915873,2021-09-05T00:41:52.819Z,jan.b.linhart@gmail.com,,,true,GB,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+40915873,2021-09-05T00:42:30.130Z,jan.b.linhart@gmail.com,,,true,GB,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+40915873,2021-09-05T01:11:57.703Z,dragon4366@gmail.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T02:14:47.688Z,yurchik@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T02:14:48.787Z,yurchik@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T03:57:50.351Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+40915873,2021-09-05T04:28:20.360Z,494d643a-bc4d-45c2-8181-fe7dedc2cd56@deletion-request.substack.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T04:28:20.545Z,494d643a-bc4d-45c2-8181-fe7dedc2cd56@deletion-request.substack.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T04:46:32.660Z,sandsofosiris@gmail.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T06:09:21.739Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+40915873,2021-09-05T06:16:28.564Z,kjs@ethereal.capital,,,true,AU,,,,,,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+40915873,2021-09-05T09:08:11.758Z,hakon@wiv.io,,,true,NO,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+40915873,2021-09-05T10:08:51.905Z,paul.kieran@ucdconnect.ie,,,true,IE,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+40915873,2021-09-05T10:09:19.181Z,paul.kieran@ucdconnect.ie,,,true,IE,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+40915873,2021-09-05T11:23:16.376Z,stuartziegler@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T11:23:19.245Z,stuartziegler@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T12:52:13.241Z,hakon@wiv.io,,,true,NO,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+40915873,2021-09-05T16:28:09.925Z,seyitsatin7@icloud.com,,,true,TR,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+40915873,2021-09-05T20:15:27.577Z,blair@whatitis.media,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T20:35:05.772Z,hakon@wiv.io,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T20:35:08.529Z,hakon@wiv.io,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-05T20:35:33.799Z,hakon@wiv.io,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-06T08:49:46.960Z,paul.kieran@ucdconnect.ie,,,true,IE,,,,,,"Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+40915873,2021-09-06T15:07:23.988Z,jon.s.victor@gmail.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-06T15:07:26.867Z,jon.s.victor@gmail.com,,,true,US,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-07T18:09:31.645Z,peter@metacartel.org,,,true,US,,,,,,Superhuman
+40915873,2021-09-08T06:41:10.610Z,aylinyrd@gmail.com,,,true,,,,,,,Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
+40915873,2021-09-08T08:07:30.327Z,jan.b.linhart@gmail.com,,,true,GB,,,,,,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)"
