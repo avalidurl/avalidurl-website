@@ -78,9 +78,19 @@ audit-results.json
 
 # Internal development files (NEVER COMMIT THESE)
 CLAUDE.md
-*.md
+# Allow documentation files
 !README.md
+!CONTRIBUTING.md
+!SUBSTACK_IMPORT_GUIDE.md
+!DEPLOYMENT_GUIDE.md
+!ENVIRONMENT_VARIABLES.md
 !src/content/**/*.md
+# Block internal development files
+todo*.md
+tasks.md
+internal*.md
+security*.md
+private*.md
 todos.md
 tasks.md
 todo-*.md
