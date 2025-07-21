@@ -1,7 +1,7 @@
 ---
 title: "GHOUL CITY 2069: A Novel"
 description: "PRESALE"
-publishDate: 2020-11-02
+publishDate: "2020-11-02"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "defi", "data", "art"]
 category: "finance"

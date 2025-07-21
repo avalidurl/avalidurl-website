@@ -3,7 +3,7 @@ title: "Kingpost.io Newsletter & X Account"
 description: " Primer
 
 At Kingpost, we are reimagining curation markets."
-publishDate: 2024-11-15
+publishDate: "2024-11-15"
 author: "Gokhan Turhan"
 tags: ["crypto"]
 category: "crypto"
@@ -31,6 +31,10 @@ You can read and subscribe to our newsletter at Paragraph:
 
 ## On Lurkers
 
-[Connor Keenan](<TwitterEmbed id="1857212340909044199" /> our founder contemplates the role of lurkers in the crypto-economics product line in the new newsletter post. Tune in either on Twitter, or our newsletter:
+[Connor Keenan](
+
+<TwitterEmbed url="https://x.com/i/web/status/1857212340909044199" />
+
+our founder contemplates the role of lurkers in the crypto-economics product line in the new newsletter post. Tune in either on Twitter, or our newsletter:
 
 *The web is for lurkers. User generated content drives most online activity today. The creators and engagers provide sites with this content, and an audience of lurkers bring in the revenue. Fortunately for the bottom line, lurkers outnumber the creators over 100 to 1. Crypto historically hasn't catered to these passive users, with its communities comprised solely of active token holders. For crypto apps to reach the broadest audiences, they need more than speculative utility, they need lurker appeal.*

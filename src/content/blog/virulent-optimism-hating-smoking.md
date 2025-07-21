@@ -1,7 +1,7 @@
 ---
 title: "Virulent Optimism: Hating Smoking"
 description: "This post was first conceived on [Mirror](https://gokhan."
-publishDate: 2023-10-17
+publishDate: "2023-10-17"
 author: "Gokhan Turhan"
 tags: ["crypto", "web3", "art", "writing"]
 category: "crypto"

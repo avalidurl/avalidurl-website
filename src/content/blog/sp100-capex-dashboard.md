@@ -1,7 +1,7 @@
 ---
 title: "SP100 Capex Dashboard"
 description: "When I was first involved with then-emergent DeFi scene in the summer of 2020 aka DeFi Summer, I was one of those kids in a Japanese grammar class who didn't know it was even better to learn Kana first."
-publishDate: 2025-07-16
+publishDate: "2025-07-16"
 author: "Gokhan Turhan"
 tags: ["finance", "art", "technology", "data"]
 category: "finance"

@@ -1,7 +1,7 @@
 ---
 title: "On Relatives by Jeff Parker"
 description: "Well, i don’t like to start any sentence with well but it imbues an sense of previous acquaintance if not a solo means of imagined experience into any dialogue-like monologue."
-publishDate: 2025-03-25
+publishDate: "2025-03-25"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology", "writing"]
 category: "finance"

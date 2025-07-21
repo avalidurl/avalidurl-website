@@ -1,7 +1,7 @@
 ---
 title: "Daily 1"
 description: "Pure Conceptual Shitepoasting"
-publishDate: 2022-12-19
+publishDate: "2022-12-19"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "art"]
 category: "finance"
@@ -12,7 +12,7 @@ originalUrl: "https://gokhan.substack.com/p/daily-1"
 ---
 
 People are hedging so hardcore that there is the ghost of an assumption through the markets, especially those of crypto-economics, that people do not like to trade nowadays. People do trade, and they will keep trading ad infinitum—like it or leave it.
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa405dd00-cd7d-4fb9-8514-042627cf3952_1804x1036.png)
+
 ###### blueprint for cringuality of alegal markets, tool: textik.com
 
 It’s just that your friends are busy either reflecting on the massive losses of generational wealth in the matrix where glitch is not of merely aesthetic pleasures of ugly art; or, they’re indeed busy on the 666th network on which they’re trading another *play*.

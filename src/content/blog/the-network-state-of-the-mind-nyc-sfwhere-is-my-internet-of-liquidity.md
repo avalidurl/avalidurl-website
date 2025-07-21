@@ -1,7 +1,7 @@
 ---
 title: "The Network State of the Mind, NYC & SF—Where is my Internet of Liquidity?"
 description: "On vendor-locking democracies, Ethereum types, and boring tribes."
-publishDate: 2024-04-15
+publishDate: "2024-04-15"
 author: "Gokhan Turhan"
 tags: ["finance", "art", "technology", "data"]
 category: "finance"
@@ -32,5 +32,5 @@ That's why I do not understand people who try to quit their subscription from th
 Yet, all the people I've so far met across the extended blockchain tribes are usually those who have an upright existential anxiety even to form a couple of sentences. They cover up that timidity on X by nonsensical rants. They are always critical of the first world passport they do not know how to appreciate all the while hopping on and off planes thanks to fat donations they think they totally deserve.
 
 You don't have this problem either with the engineering people on the scene or the finance guys and gals. In fact, except for a few heads, VCs in the ecosystem are also quite capable of appreciating the world we live and one day will leave for another.
-[! [The Network State of the Mind - Digital art about NYC, SF, and blockchain communities](/blog/images/the-network-state-of-the-mind-nyc-sfwhere-is-my-internet-of-liquidity-1752996708602.jpeg)](https://substackcdn.com/image/fetch/$s_! D_pv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa23c9504-8a5e-4bcc-bfa6-59c981bf9704_1024x1536.jpeg)
+![The Network State of the Mind - Digital art about NYC, SF, and blockchain communities](/blog/images/the-network-state-of-the-mind-nyc-sfwhere-is-my-internet-of-liquidity-1752996708602.jpeg)
 As I delve deeper into the early American literature by the puritan defectors and adventure enthusiasts where adventure is being the courage to slalom into the public discourse, I realize that the echo chambers at play are the same. There is one difference though: The United States of American thrived, and is still thriving whereas the average Ethereum person who at the same time think that it's for the benefit of the average Jane and Joe that nation states are using their not so robust ledger is OK and that they should pave the way for the network state of the mind and practice that should replace the practically functional nation states of today. These are the same people who offer you ramshackle AirBnB in the forgotten nichés of the globe and if you spend a day amongst many, they are also a bunch of the most unreasonable ones—except few indeed. Those few are so reasonable that you should just enjoy their camaraderie since you'll pivot back to reality together.

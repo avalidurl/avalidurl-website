@@ -1,7 +1,7 @@
 ---
 title: "Diaries of an AlgoBot"
 description: "This piece was first published on my [Medium page](https://0xgokhan."
-publishDate: 2020-11-25
+publishDate: "2020-11-25"
 author: "Gokhan Turhan"
 tags: ["art"]
 category: "art"

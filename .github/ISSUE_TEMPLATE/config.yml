@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 General Discussion
+    url: https://github.com/yourusername/avalidurl-website/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📚 Documentation
+    url: https://github.com/yourusername/avalidurl-website/wiki
+    about: Check the project wiki for guides and tutorials
+  - name: 🔧 Substack Import Guide
+    url: https://github.com/yourusername/avalidurl-website/blob/main/SUBSTACK_IMPORT_GUIDE.md
+    about: Comprehensive guide for importing Substack content

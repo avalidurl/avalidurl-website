@@ -1,7 +1,7 @@
 ---
 title: "Daily Markets 2: Utilizing Transaction Calldata as a Creative Medium"
 description: "Early Morning UTC+3 Edition"
-publishDate: 2023-06-16
+publishDate: "2023-06-16"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology", "data", "art"]
 category: "finance"
@@ -36,7 +36,11 @@ Developers or idea guys who will be able to constrain the creation of these insc
 According to a tweet by Urbit,
 
 >
-> <TwitterEmbed id="1669797094763143194" / /> is a toolkit that helps and guides developers to deploy their own crypto dApps without delving that much into native blockchain programming languages, and frameworks.
+>
+
+<TwitterEmbed url="https://x.com/i/web/status/1669797094763143194" />
+
+is a toolkit that helps and guides developers to deploy their own crypto dApps without delving that much into native blockchain programming languages, and frameworks.
 
 Urbits users and organizations have already [deployed](https://urbit.org/ecosystem?type=applications) self-hosted versions of several popular crypto/ DeFi/ NFTs dApps and marketplaces such as OpenSea, Osmosis, Safe, Uniswap alongside myriad Urbit native apps.
 

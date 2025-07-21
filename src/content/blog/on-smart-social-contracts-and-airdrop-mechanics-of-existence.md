@@ -1,7 +1,7 @@
 ---
 title: "On Smart Social Contracts, and Airdrop Mechanics of Existence."
 description: "If the sextenary star formation is your unit of time measurement in determining when to airdrop, it means that you use IRL methods of existence to determine a base layer of users who are usually at all times on-chain emergent networks, and constellations thereabouts."
-publishDate: 2021-12-09
+publishDate: "2021-12-09"
 author: "Gokhan Turhan"
 tags: ["writing"]
 category: "writing"

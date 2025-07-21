@@ -2,7 +2,7 @@
 title: "Reading \"Sufficient Decentralization for Social Networks\" by Srinivasan"
 description: ">
 > This post was originally conceived on my [Paragraph](https://paragraph."
-publishDate: 2023-07-03
+publishDate: "2023-07-03"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "data", "web3", "writing"]
 category: "finance"

@@ -1,7 +1,7 @@
 ---
 title: "Arts, Culture and Finance"
 description: "I am trying out another newsletter service that I'll be integrating into my upcoming personal memex and wrote this post there initially."
-publishDate: 2024-04-14
+publishDate: "2024-04-14"
 author: "Gokhan Turhan"
 tags: ["finance", "art", "technology"]
 category: "finance"
@@ -13,7 +13,7 @@ originalUrl: "https://gokhan.substack.com/p/arts-culture-and-finance"
 
 I am trying out another newsletter service that I'll be integrating into my upcoming personal memex and wrote this post there initially. I'll keep the Substack for its vendor-locked distribution network effects—they're just doing what they hate Elon is doing over the X yet here we are. This post is published also as an X article [here](https://x.com/0xgokhan/status/1911901400721694844).
 
-There was a Venkatesh Rao post *[elaborating](https://www.ribbonfarm.com/2024/10/10/ribbonfarm-is-retiring/?utm_source=gokhan.beehiiv.com&utm_medium=newsletter&utm_campaign=arts-culture-and-finance&_bhlid=7fcce2702cc9ca8d86148b64fe2a672a4cec0425)* on the death of blogging—or rather the blogosphere—as we have known it up until this plateux of technological cross-pollination of idea market infrastructure. I believe it's merely a user-experience design issue given majority of newsletter and blogging platforms did want to vendor-lock us all into their own runway. I am happy with the current X's Articles section as a primary blog with variations over LinkedIn and a full backup in my Notion and Obsidian but I also want to sense that not-that-much connected reminiscence of late 2000s blogosphere.
+There was a Venkatesh Rao post *[elaborating](https://www.ribbonfarm.com/2024/10/10/ribbonfarm-is-retiring/?utm_source=gokhan.beehiiv.com&_bhlid=7fcce2702cc9ca8d86148b64fe2a672a4cec0425)* on the death of blogging—or rather the blogosphere—as we have known it up until this plateux of technological cross-pollination of idea market infrastructure. I believe it's merely a user-experience design issue given majority of newsletter and blogging platforms did want to vendor-lock us all into their own runway. I am happy with the current X's Articles section as a primary blog with variations over LinkedIn and a full backup in my Notion and Obsidian but I also want to sense that not-that-much connected reminiscence of late 2000s blogosphere.
 
 Timelines are brimming with news covering stablecoins mania, and it's not merely a bubble in my humble opinion. Stablecoins are here to stay, and help the crypto-economics markets transcend the synthetic and nominal markets into real world backed proof-of-reserve liquidity versions.
 

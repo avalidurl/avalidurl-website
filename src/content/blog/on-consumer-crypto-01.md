@@ -1,17 +1,21 @@
 ---
 title: "On Consumer Crypto #01"
-description: "[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | <TwitterEmbed id=\"1808846330048967019\" / /> | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_in"
-publishDate: 2024-07-04
+description: "Available on Paragraph, X, and Mirror - discussing consumer crypto applications and their potential."
+publishDate: "2024-07-04"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "web3", "art", "writing"]
 category: "finance"
 featured: false
 readingTime: 4
-excerpt: "Paragraph version | X version<TwitterEmbed id=\"1808846330048967019\" /> | CoLinks..."
+excerpt: "Available on Paragraph, X, and Mirror - discussing consumer crypto applications and their potential for mainstream adoption."
 originalUrl: "https://gokhan.substack.com/p/on-consumer-crypto-01"
 ---
 
-[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | <TwitterEmbed id="1808846330048967019" / /> | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_inh8c5JKdylaskAIjTFcjBBU1unlQQ?referrerAddress=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71)
+[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) |
+
+<TwitterEmbed url="https://x.com/i/web/status/1808846330048967019" />
+
+| [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_inh8c5JKdylaskAIjTFcjBBU1unlQQ?referrerAddress=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71)
 
 Consumer crypto needs consumers. Sorry, I have called it crypto instead of weeb3. You cannot isolate the internet to your needs. However, you can help the constituent existing systems that make internet what it is to integrate emergent culturally revolutionary pipelines. See enduser oriented payment rails. Average user friendly wallets such as Clave or Daimo. Or, rather more pro rails such as Rabby or Frame. They all have their own specific bases who will always be there.
 
@@ -19,7 +23,11 @@ There will always be devs producing for devs, devs procuring for the masses as w
 
 People have SOTA banks thereabouts that are better than first world ones. They can on and off ramp in seconds up to 8 figures. That’s why these people also use decentralized finance, and utilize decentralized ownership economies’ perks ranging from cultural events to art markets. You cannot force them to go bankless all the while promoting bank-like monoliths’ rollups even though those monoliths are really pro and works like a charm but only for your own parochiality.
 
-You average enduser needs to be act beyond geoblocking and geolimits and you should come up with anything that are better than cosmetics. The weeb3 is about to go full France if we were to exemplify the situation by Taleb’s recent [thread](<TwitterEmbed id="1807735364204806416" /> on the country of France—I also have different ideas re: 2nd post in the thread but it’s irrelevant to that thread in essence and this haphazard blogpost.
+You average enduser needs to be act beyond geoblocking and geolimits and you should come up with anything that are better than cosmetics. The weeb3 is about to go full France if we were to exemplify the situation by Taleb’s recent [thread](
+
+<TwitterEmbed url="https://x.com/i/web/status/1807735364204806416" />
+
+on the country of France—I also have different ideas re: 2nd post in the thread but it’s irrelevant to that thread in essence and this haphazard blogpost.
 
 We focus on cosmetics a lot. I do detest that I need to employ the first person plural here. It’s because people such as myself have always spoken against discrepancies in practice.
 

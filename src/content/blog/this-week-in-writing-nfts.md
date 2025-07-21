@@ -1,7 +1,7 @@
 ---
 title: "This Week in Writing NFTs"
 description: "Hello, this is your self-assigned host Gökhan Turhan for the latest advancements, innovations and news in and through writing NFTs. I aim to regularly publish this section of my Mirror as a newsletter"
-publishDate: 2022-07-29
+publishDate: "2022-07-29"
 author: "Gokhan Turhan"
 tags: ["crypto", "data", "web3", "writing"]
 category: "crypto"
@@ -18,6 +18,11 @@ originalUrl: "https://gokhan.substack.com/p/this-week-in-writing-nfts"
 Mirror, the content and creativity self-publishing studio for web3, finally announced the long-awaited subscription model that will unroll novel means of community-designing. Although the subscribers receive updates through their given e-mail, they sign a message in their crypto-wallets to be able to subscribe to their favorite writers, publishers, and content creators at large. It also means that people who utilized Mirror for long-read pieces just because it didn’t have a subscription button are ready to forsake their Substack—who knows what the future will bring about. I believe the centralized and efficient content suites that are yet to integrate decentralized payments will be in need of the services by teams as that of Mirror.
 Mirror @viamirror1/ Introducing web3 subscriptions
 
-[dev.mirror.xyzIntroducing Web3 SubscriptionsToday, Mirror is excited to announce the launch of web3 subscriptions. This new feature allows readers to subscribe to any Mirror publication with their wallets and receive email notifications when new content is posted. For creators, web3 subscriptions open the door to building a wallet-based commu…](https://dev.mirror.xyz/Jn62zF5n62BfowdaFgm3uIx3Fgp2vIR7b-HTSxKVXqk)<TwitterEmbed id="1551976045997432836" / />
+[dev.mirror.xyzIntroducing Web3 SubscriptionsToday, Mirror is excited to announce the launch of web3 subscriptions. This new feature allows readers to subscribe to any Mirror publication with their wallets and receive email notifications when new content is posted. For creators, web3 subscriptions open the door to building a wallet-based commu…](https://dev.mirror.xyz/Jn62zF5n62BfowdaFgm3uIx3Fgp2vIR7b-HTSxKVXqk)
 
-and learn more Ꮺ ↓↓↓[tabula.ggTabulaInstant web3 publications for writers, DAOs, and any Ethereum-based account.](https://tabula.gg/#/gnosis_chain/P-0x4151954d052a49f99df207d8a3b8377dfe4c6ee5a755fb98e1a575b636bd0773-1/A-0x1e228a83e7de866309b303ed891588fa57a8c94dc73862a44f255199b6d410a1-1)<TwitterEmbed id="1550182460025147392" / />
+<TwitterEmbed url="https://x.com/i/web/status/1551976045997432836" />
+
+and learn more Ꮺ ↓↓↓[tabula.ggTabulaInstant web3 publications for writers, DAOs, and any Ethereum-based account.](https://tabula.gg/#/gnosis_chain/P-0x4151954d052a49f99df207d8a3b8377dfe4c6ee5a755fb98e1a575b636bd0773-1/A-0x1e228a83e7de866309b303ed891588fa57a8c94dc73862a44f255199b6d410a1-1)
+
+<TwitterEmbed url="https://x.com/i/web/status/1550182460025147392" />
+

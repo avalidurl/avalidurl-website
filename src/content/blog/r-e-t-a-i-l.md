@@ -1,7 +1,7 @@
 ---
 title: "R E T A I L"
 description: "$MARKET"
-publishDate: 2023-06-05
+publishDate: "2023-06-05"
 author: "Gokhan Turhan"
 tags: ["finance", "art"]
 category: "finance"

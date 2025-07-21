@@ -1,7 +1,7 @@
 ---
 title: "Photon Shower Thoughts 01"
 description: "Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead."
-publishDate: 2020-11-02
+publishDate: "2020-11-02"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "art"]
 category: "finance"
@@ -11,12 +11,14 @@ excerpt: "Alright, before commencing the next photon shower, I feel the need to 
 originalUrl: "https://gokhan.substack.com/p/photon-shower-thoughts-01"
 ---
 
-Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter exchange of ideas, I came to state the following:
-@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays. \n\nThere are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.\n\nGlad we buy 'their' tokens.","username":"gigabvgatti","name":"gokhan.eth","date":"Thu Oct 29 23:43:54 +0000 2020","photos":[],"quoted_tweet":{},"retweet_count":0,"like_count":2,"expanded_url":{},"video_url":null,"belowTheFold":false}">gokhan.eth @gigabvgatti@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays.
+gokhan.eth @gigabvgatti@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays.
 
 There are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.
 
-Glad we buy 'their' tokens. [11:43 PM ∙ Oct 29, 2020](<TwitterEmbed id="1321960986610458628" />
+Glad we buy 'their' tokens. [11:43 PM ∙ Oct 29, 2020](
+
+<TwitterEmbed url="https://x.com/i/web/status/1321960986610458628" />
+
 Yup, that is how I see it. More on this later. Simply, I believe defi as an evolutionary dating economy between humans and singularity. Not on a theorygram plane though.
 
 ## Now, let’s focus on my photon shower today:

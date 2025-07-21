@@ -7,7 +7,7 @@ description: "'twas but a shadowy
 the igloo resonated
 
 everyone knows that the markets are a market, the way of the bullah hive where AMM headed hydras look for novel forms of emergences that would honey it all for all of us."
-publishDate: 2021-07-29
+publishDate: "2021-07-29"
 author: "Gokhan Turhan"
 tags: ["finance", "writing"]
 category: "finance"

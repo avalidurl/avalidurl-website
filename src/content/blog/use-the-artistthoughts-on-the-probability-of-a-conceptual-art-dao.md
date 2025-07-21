@@ -1,7 +1,7 @@
 ---
 title: "Use the Artist—Thoughts on the Probability of a Conceptual Art DAO"
 description: "The .txt version of the below post has already been minted on Zora."
-publishDate: 2021-09-09
+publishDate: "2021-09-09"
 author: "Gokhan Turhan"
 tags: ["crypto", "web3", "art", "writing"]
 category: "crypto"
@@ -11,19 +11,22 @@ excerpt: "@viamirror -er, I have kind of minted a probable proposal for the ince
 originalUrl: "https://gokhan.substack.com/p/use-the-artistthoughts-on-the-probability-of-a-conceptual-art-dao"
 ---
 
-@viamirror -er, I have *kind of* minted a probable proposal for the inception of a Conceptual Art DAO as in a blog post on @ourZORA in .txt format.\n\nNever mind the SMO mocks in the text. It's an honest insight on my part.\n\n#NFTs \n\nzora.co/gokhan/4789 ","username":"0xgokhan","name":"gokhan.eth | giga bvgatti 🚀🧬💾🦇🔊","date":"Thu Sep 09 00:39:03 +0000 2021","photos":[{"img_url":"https://pbs.substack.com/media/E-zcTrqXsAQZ5dy.jpg","link_url":"https://t.co/z2EwRbmrBY","alt_text":null}],"quoted_tweet":{},"retweet_count":1,"like_count":2,"expanded_url":{},"video_url":null,"belowTheFold":false}">gokhan.eth | giga bvgatti 🚀🧬💾🦇🔊 @0xgokhanSince I am still a no @viamirror -er, I have *kind of* minted a probable proposal for the inception of a Conceptual Art DAO as in a blog post on @ourZORA in .txt format.
+@viamirror -er, I have *kind of* minted a probable proposal for the inception of a Conceptual Art DAO as in a blog post on @ourZORA in .txt format.\n\nNever mind the SMO mocks in the text. It's an honest insight on my part.\n\n#NFTs \n\nzora.co/gokhan/4789 "],"quoted_tweet":{},"retweet_count":1,"like_count":2">gokhan.eth | giga bvgatti 🚀🧬💾🦇🔊 @0xgokhanSince I am still a no @viamirror -er, I have *kind of* minted a probable proposal for the inception of a Conceptual Art DAO as in a blog post on @ourZORA in .txt format.
 
 Never mind the SMO mocks in the text. It's an honest insight on my part.
 
 #NFTs
 
 [zora.co/gokhan/4789](https://zora.co/gokhan/4789)
-<TwitterEmbed id="1435764655654330368" / /> of *Rhizome* back when identity politics weren’t social credits that determine the “realness” of you in any domain of tribalism.
+
+<TwitterEmbed url="https://x.com/i/web/status/1435764655654330368" />
+
+of *Rhizome* back when identity politics weren’t social credits that determine the “realness” of you in any domain of tribalism.
 
 Why? It was because he commissioned sex workers in a motel room to draw pieces of works of art. It was a nice deal for everyone, especially for a conceptual artist.
 
 …&, for some of you, the best Daft Punk album is *Random Access Memories* where our *futur-of-france* duo worked around a similar concept. They instrumentalized [sic] a horde of musicians, and remixed them into an LP.
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc88db012-a558-4928-90e6-93729c4927ca_2498x1240.png)
+
 ###### Use the Artist—Thoughts on the Probability of a Conceptual Art DAO
 
 How about we commission the expensive and cult-like figures on the non-fungible art scene (only *Ethereum* network participants, sorry, I don’t make the rules)? By “we,” I mean the first-person singular. Anyone.

@@ -1,7 +1,7 @@
 ---
 title: "Daily 3"
 description: "It's an art form to not givin' a fuck. Subscribe now, get never rekt if we ever make friends."
-publishDate: 2022-12-21
+publishDate: "2022-12-21"
 author: "Gokhan Turhan"
 tags: ["general"]
 category: "general"
@@ -13,7 +13,9 @@ originalUrl: "https://gokhan.substack.com/p/daily-3"
 
 > It's an art form to not givin' a fuck.
 >
-> — <YouTubeEmbed id="8ZXPAaPy65o" />
+> —
+
+<YouTubeEmbed url="https://youtube.com/watch?v=8ZXPAaPy65o" />
 
 Subscribe now, get never rekt if we ever make friends. Jokes aside, it is saddening to see the light taken away from the eyes and words of many an anon friend across CT. Hang tight there, fellas. We have a couple of exoplanets to terraform.
 

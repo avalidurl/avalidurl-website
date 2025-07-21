@@ -1,7 +1,7 @@
 ---
 title: "GHOUL CITY 2069: A Novel — PreSale 00"
 description: "Capital Raising Post aka Presale"
-publishDate: 2020-10-31
+publishDate: "2020-10-31"
 author: "Gokhan Turhan"
 tags: ["writing"]
 category: "writing"

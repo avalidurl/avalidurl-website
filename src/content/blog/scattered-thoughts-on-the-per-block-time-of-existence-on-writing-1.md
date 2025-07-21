@@ -5,7 +5,7 @@ description: "Nay, I am not in Mirror DAO. I am just sitting at the top 5 in the
  DAY 1 🥷
 
 One of the hardest part of writing a piece of r"
-publishDate: 2021-12-05
+publishDate: "2021-12-05"
 author: "Gokhan Turhan"
 tags: ["data", "web3", "writing"]
 category: "data"
@@ -23,7 +23,11 @@ One of the hardest part of writing a piece of readable material by homo sapiens 
 
 # DAY 2
 
-I recall how I started writing back in early Noughties. I used to copy trade Rimbaud in the most teenager staking probable thereabouts. It was kind of boring, and we were *still* under the influence of Woodstock ‘99, and [Comet Hale-Bopp](<YouTubeEmbed id="HtZN9QMUNqU" /> even on the otherside of the Atlantic on a barren tobacco field, anon.
+I recall how I started writing back in early Noughties. I used to copy trade Rimbaud in the most teenager staking probable thereabouts. It was kind of boring, and we were *still* under the influence of Woodstock ‘99, and [Comet Hale-Bopp](
+
+<YouTubeEmbed url="https://youtube.com/watch?v=HtZN9QMUNqU" />
+
+even on the otherside of the Atlantic on a barren tobacco field, anon.
 
 Back then, I used to use a pencil, and a piece of paper. Then, my father acquired a brickstone Motorola through some newspaper coupons just as did all the fathers in the neighbourhood. There, we the kids had to get used to the abecederium of a mobile phone which required repetitive strikes of brain signals unto plastic presence of the Latin. Years later, some told us that we were evolving our thumbs into the most degen extension of ours as apes.
 

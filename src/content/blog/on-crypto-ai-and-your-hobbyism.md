@@ -1,7 +1,7 @@
 ---
 title: "On Crypto, AI and Your Hobbyism"
 description: "Creative disruption rules the technological acceleration."
-publishDate: 2025-01-31
+publishDate: "2025-01-31"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology", "web3", "art"]
 category: "finance"

@@ -1,7 +1,7 @@
 ---
 title: "How to Set up Your ord Wallet?"
 description: "This is a simple guide that I used to create my first ord wallet compatible wallet via Sparrow Wallet. If you are a technical person, you'll only need to read the Ordinal Theory Handbook."
-publishDate: 2023-02-05
+publishDate: "2023-02-05"
 author: "Gokhan Turhan"
 tags: ["crypto", "technology", "art", "writing"]
 category: "crypto"
@@ -70,7 +70,7 @@ I myself wanted to experiment with *Ordinals* in that they provide that raw bloc
 # 2. How to play with Ordinals?
 
 You want to collect *Taproot Wizards* that have made the news recently thanks to largest *Bitcoin* block ever mined?
-@TaprootWizards 🧙‍♂️ ","username":"udiWertheimer","name":"Udi Wertheimer","date":"Thu Feb 02 15:58:05 +0000 2023","photos":[{"img_url":"https://pbs.substack.com/media/Fn-TGFSWYAEAeAb.jpg","link_url":"https://t.co/uKGG918af8","alt_text":null}],"quoted_tweet":{},"retweet_count":253,"like_count":1142,"expanded_url":{},"video_url":null,"belowTheFold":true}">Udi Wertheimer @udiWertheimerLast night, we made history
+@TaprootWizards 🧙‍♂️ "],"quoted_tweet":{},"retweet_count":253,"like_count":1142">Udi Wertheimer @udiWertheimerLast night, we made history
 
 The gatekeepers tried to censor us
 
@@ -79,7 +79,10 @@ But we mined the LARGEST BLOCK and LARGEST TRANSACTION IN BITCOIN’S HISTORY
 Special thanks to bitcoin full node operators for supporting our efforts and hosting our 4MB NFT for all eternity!
 
 gm @TaprootWizards 🧙‍♂️
-<TwitterEmbed id="1621176136142045191" / /> added *a section* in the [original Github document](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980) *on [how to validate and/ or view received inscriptions](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980#validating--viewing-received-inscriptions)* that are but transactions—windsok’s document features screenshots of the entire process itself, it’s better to refer to that page per se:
+
+<TwitterEmbed url="https://x.com/i/web/status/1621176136142045191" />
+
+added *a section* in the [original Github document](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980) *on [how to validate and/ or view received inscriptions](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980#validating--viewing-received-inscriptions)* that are but transactions—windsok’s document features screenshots of the entire process itself, it’s better to refer to that page per se:
 
 >
 

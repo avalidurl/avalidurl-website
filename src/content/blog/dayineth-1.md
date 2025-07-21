@@ -1,7 +1,7 @@
 ---
 title: "dayineth #1"
 description: "here we go again"
-publishDate: 2021-08-01
+publishDate: "2021-08-01"
 author: "Gokhan Turhan"
 tags: ["crypto"]
 category: "crypto"

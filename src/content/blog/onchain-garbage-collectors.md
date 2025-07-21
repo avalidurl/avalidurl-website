@@ -1,7 +1,7 @@
 ---
 title: "Onchain Garbage Collectors"
 description: "both solana and base are full of garbage apps whereas the former also is a sandbox for financial and social coordination experiments."
-publishDate: 2024-11-17
+publishDate: "2024-11-17"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology", "web3"]
 category: "finance"

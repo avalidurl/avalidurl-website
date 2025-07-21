@@ -1,0 +1,86 @@
+name: Substack Import Issue
+description: Report an issue with the Substack import process
+title: "[Import] "
+labels: ["import", "substack", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Having trouble with the Substack import? Please provide details below to help us debug the issue.
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Import issue description
+      description: What went wrong during the import process?
+      placeholder: The import failed when...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: import-stage
+    attributes:
+      label: Import stage
+      description: At what stage did the issue occur?
+      options:
+        - Setup/Configuration
+        - Reading CSV file
+        - Processing HTML files
+        - Downloading images
+        - Converting content
+        - Writing output files
+        - Other/Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: substack-info
+    attributes:
+      label: Substack publication info
+      description: |
+        Information about your Substack (no personal details needed)
+      value: |
+        - Approximate number of posts: 
+        - Publication language: 
+        - Typical post content (text/images/embeds): 
+        - Any special characters in titles: 
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: Error output
+      description: Paste the complete error output from the import script
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample-content
+    attributes:
+      label: Sample problematic content
+      description: |
+        If possible, provide a small sample of content that causes the issue.
+        Please anonymize any personal information.
+      placeholder: |
+        Example: A post title with special characters, HTML that doesn't convert properly, etc.
+
+  - type: checkboxes
+    id: troubleshooting
+    attributes:
+      label: Troubleshooting steps tried
+      description: Have you tried any of these troubleshooting steps?
+      options:
+        - label: Checked that CSV and HTML files exist in the correct location
+        - label: Verified file permissions are correct
+        - label: Tried running with a single post to isolate the issue
+        - label: Checked the import guide documentation
+        - label: Looked at the generated log output for clues
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Any other information that might help debug the import issue

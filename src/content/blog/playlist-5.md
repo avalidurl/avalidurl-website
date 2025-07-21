@@ -1,7 +1,7 @@
 ---
 title: "PLAYLIST #5"
 description: "This post was initially [conceived on my Mirror weblog](https://gokhan."
-publishDate: 2024-01-04
+publishDate: "2024-01-04"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology", "data", "web3"]
 category: "finance"

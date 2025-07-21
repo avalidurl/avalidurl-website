@@ -3,7 +3,7 @@ title: "mbeAMM the Story"
 description: "Collect [here](https://opensea.io/assets/0x8ed0086e9ab7d8dea522e58c03bda45c32c77f66/14/), [here](https://opensea.io/assets/0x8ed0086e9ab7d8dea522e58c03bda45c32c77f66/15), or [here](https://opensea.io/assets/0x8ed0086e9ab7d8dea522e58c03bda45c32c77f66/16/). Comes with 3 versions.
 
 mbeAMM the Story: Pa"
-publishDate: 2020-11-02
+publishDate: "2020-11-02"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "writing"]
 category: "finance"

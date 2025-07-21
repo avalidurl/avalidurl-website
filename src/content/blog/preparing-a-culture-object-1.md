@@ -3,7 +3,7 @@ title: "Preparing a Culture Object 1"
 description: "Who funds semi-academic jargon, cultural studies oriented booklets on crypto-economics culture?
 
 I have two ideas that I am pitching now into ROAM Research notebooks and Word docs of mine—which caused me to open up the word after a year."
-publishDate: 2023-10-20
+publishDate: "2023-10-20"
 author: "Gokhan Turhan"
 tags: ["crypto", "web3", "art", "writing"]
 category: "crypto"

@@ -3,7 +3,7 @@ title: "Non-pegged Stablecoins #01: On the Current State of HAI"
 description: " Introduction
 
 HAI is a framework for stablecoin systems that comes with a store of value feature."
-publishDate: 2024-07-20
+publishDate: "2024-07-20"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "defi", "technology", "web3"]
 category: "finance"

@@ -1,7 +1,7 @@
 ---
 title: "Untitled"
 description: ""
-publishDate: 2024-07-20
+publishDate: "2024-07-20"
 author: "Gokhan Turhan"
 tags: ["general"]
 category: "general"

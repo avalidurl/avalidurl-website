@@ -1,7 +1,7 @@
 ---
 title: "Building a Comprehensive Substack Importer Tool"
 description: "How I built a robust tool to import 100+ blog posts from Substack export data, handling HTML-to-Markdown conversion, image processing, and metadata extraction with Node.js."
-publishDate: 2025-07-21
+publishDate: "2025-07-21"
 author: "Gokhan Turhan"
 tags: ["technology", "tools", "automation", "web-development"]
 category: "technology"

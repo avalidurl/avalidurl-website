@@ -1,7 +1,7 @@
 ---
 title: "Memenomics Daily #3"
 description: "Early Morning Edition"
-publishDate: 2021-02-11
+publishDate: "2021-02-11"
 author: "Gokhan Turhan"
 tags: ["finance", "art", "technology", "crypto", "culture"]
 category: "finance"

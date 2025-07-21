@@ -1,7 +1,7 @@
 ---
 title: "Dissonance 1: Xenakis the Whale"
 description: " It has always been easy to contemplate on the inefficiencies of the markets."
-publishDate: 2021-04-03
+publishDate: "2021-04-03"
 author: "Gokhan Turhan"
 tags: ["finance"]
 category: "finance"

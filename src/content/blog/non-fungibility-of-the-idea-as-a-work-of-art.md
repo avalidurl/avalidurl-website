@@ -1,7 +1,7 @@
 ---
 title: "non-fungibility of the idea as a work of art"
 description: "As above, so On-chain."
-publishDate: 2021-09-10
+publishDate: "2021-09-10"
 author: "Gokhan Turhan"
 tags: ["crypto", "art"]
 category: "crypto"

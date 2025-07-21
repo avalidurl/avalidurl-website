@@ -1,7 +1,7 @@
 ---
 title: "The Daily Builder—On Curation by Moderation I"
 description: "This post was originally conceived on my main blog on the Paragraph protocol."
-publishDate: 2024-05-28
+publishDate: "2024-05-28"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "data", "web3", "writing"]
 category: "finance"
@@ -42,7 +42,7 @@ This is the informational retrieve angle 1. However, on my free day, or during l
 This is basically curating a personal feed into a variety of sub-feeds which should be intuitive, too—not pre-programmed. This is a complex issue that can be solved in not so far from future because of the experiments at the application and client layers across Farcaster.
 
 ...and, the reason I am typing these words right after I woke up is that Dan from Icebreaker [asked](https://warpcast.com/web3pm/0xaa9e107c) about an evalution of the following cast if I am willing to do it:
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc01b4621-c7cb-477e-9883-b7856ff065a5_800x800.png)
+[](/blog/images/c01b4621-c7cb-477e-9883-b7856ff065a5_800x800.png)
 ## 2. Insights
 
 **What do I mean by postulating that "we'll see just relevant contextual content of a person we follow (in)directly"?**

@@ -1,7 +1,7 @@
 ---
 title: "On DAOs & Competitive Governance 1"
 description: "Alright, people are right that we are still building this city even though some of us tend to use decentralized finance ecosystem tools."
-publishDate: 2021-04-24
+publishDate: "2021-04-24"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "web3"]
 category: "finance"
@@ -11,7 +11,15 @@ excerpt: "Alright, people are right that we are still building this city even th
 originalUrl: "https://gokhan.substack.com/p/on-daos-competitive-governance-1"
 ---
 
-Alright, people are right that we are still building this city even though some of us tend to use <YouTubeEmbed id="K1b8AhIsSYQ" /> *through [decentralized finance](https://thedefiant.io/defi-101/) ecosystem—especially that of <YouTubeEmbed id="bWqhn1hXvVc" /> are under the radar of the average DeFi denizen, including even the fresh figures on the non-fungibles hills themselves. Many cultivated brains run Twitter rants nowadays regarding DAOs, and the like with takes such as they are an existential threat to Venture Capital as it is now.
+Alright, people are right that we are still building this city even though some of us tend to use
+
+<YouTubeEmbed url="https://youtube.com/watch?v=K1b8AhIsSYQ" />
+
+*through [decentralized finance](https://thedefiant.io/defi-101/) ecosystem—especially that of
+
+<YouTubeEmbed url="https://youtube.com/watch?v=bWqhn1hXvVc" />
+
+are under the radar of the average DeFi denizen, including even the fresh figures on the non-fungibles hills themselves. Many cultivated brains run Twitter rants nowadays regarding DAOs, and the like with takes such as they are an existential threat to Venture Capital as it is now.
 
 Yup, they are right. But, such takes consolidate around a non-uttered notion that DAOs are to be there to replace several organellas of general human organizational schemes.
 

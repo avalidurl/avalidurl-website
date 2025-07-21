@@ -1,7 +1,7 @@
 ---
 title: "On CryptoMedia #1"
 description: "Initial thoughts on Palmer's $ESSAY community funding, Zora and Mirror."
-publishDate: 2021-01-29
+publishDate: "2021-01-29"
 author: "Gokhan Turhan"
 tags: ["crypto", "art", "writing"]
 category: "crypto"
@@ -30,4 +30,7 @@ Mirror @viamirrorLIVE NOW.
 
 The first community-owned essay is being crowdfunded on Ethereum.
 
-[j.mirror.xyzCrowdfund: $ESSAYA new experiment begins today: using crypto to crowdfund the next essay I’m writing, titled Scissor Labels.](https://j.mirror.xyz/uVGCCwwm3k341lPpxaJmHTZROESVse9Pe_rmbiuUAC0)[10:38 PM ∙ Jan 28, 202177Likes16Retweets](<TwitterEmbed id="1354921716078751746" />
+[j.mirror.xyzCrowdfund: $ESSAYA new experiment begins today: using crypto to crowdfund the next essay I’m writing, titled Scissor Labels.](https://j.mirror.xyz/uVGCCwwm3k341lPpxaJmHTZROESVse9Pe_rmbiuUAC0)[(
+
+<TwitterEmbed url="https://x.com/i/web/status/1354921716078751746" />
+

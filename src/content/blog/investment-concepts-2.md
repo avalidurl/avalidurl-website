@@ -1,7 +1,7 @@
 ---
 title: "Investment Concepts #2"
 description: "Like it or not, crypto-economics infrastructure is a long-termist feature embedding itself into the grand scheme of practical macro-economics."
-publishDate: 2025-07-01
+publishDate: "2025-07-01"
 author: "Gokhan Turhan"
 tags: ["finance", "art", "data"]
 category: "finance"

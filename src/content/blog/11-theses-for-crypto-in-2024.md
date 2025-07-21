@@ -3,7 +3,7 @@ title: "11 Theses for Crypto in 2024"
 description: "This piece was originally [published](https://zora.co/collect/base:0xfadeec393fad8c8877c555c598439feb0844e6b1/4) on the [Zora Network](https://zora.co/invite/gigabvgatti.eth) over Base, and is a collectible digital asset which provides access to the EXIT research guild of mine.
 
 [](https://substackc"
-publishDate: 2023-12-24
+publishDate: "2023-12-24"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "defi", "technology", "data"]
 category: "finance"
@@ -15,7 +15,7 @@ originalUrl: "https://gokhan.substack.com/p/11-theses-for-crypto-in-2024"
 
 This piece was originally [published](https://zora.co/collect/base:0xfadeec393fad8c8877c555c598439feb0844e6b1/4) on the [Zora Network](https://zora.co/invite/gigabvgatti.eth) over Base, and is a collectible digital asset which provides access to the EXIT research guild of mine.
 
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9695f9e9-b034-4a63-9f52-608bb1ae621f_1400x1111.png)
+[](/blog/images/9695f9e9-b034-4a63-9f52-608bb1ae621f_1400x1111.png)
 ## Disclaimer
 
 >
@@ -74,7 +74,7 @@ There is a shitshow around RWAs. According to some, everything is a RWA. For oth
 
 RWAs will not mature either in a quarter or a year. It might take about 5 years to fully align the nature of RWAs with crypto-economics and -systems architecture solutions. Some of the biggest oracles are working towards such solutions whilst everyone I know in the space is shitting on them.
 
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F67efaf43-adb9-4d3c-93b4-6e1a9dead126_1400x1109.png)
+[](/blog/images/67efaf43-adb9-4d3c-93b4-6e1a9dead126_1400x1109.png)
 ## 5. Institutions are not here or there — they will pay for your infrastructures is all.
 
 This should be clear. What is here? Now I hear Werner Herzog’s voice in this question. When civilizational level innovations take place, they usually do not claim to other other civilizational level innovations. They co-exist till a point, and then they merge.
@@ -116,4 +116,4 @@ Yes, considering how simple public goods funding mechanism can create hubbub in 
 ## 11. Restaking will be the driving force of all of these and more.
 
 As above, so below. I am sorry but these plays that we need to go through can be self-destructive. Design wisely, and make sure that there is at least a single communications security officer in your team so that when your genius devs are asleep they can be the ones to be awake to make sure that your community advocates do not act like they represent your brand.
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F679b97b7-5f06-43dc-bae0-3aec58129748_1400x1120.png)
+[](/blog/images/679b97b7-5f06-43dc-bae0-3aec58129748_1400x1120.png)

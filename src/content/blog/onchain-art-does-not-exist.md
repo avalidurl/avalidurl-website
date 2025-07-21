@@ -2,7 +2,7 @@
 title: "Onchain Art Does not Exist"
 description: "Text within this block will maintain its original spacing when published
 There are 25 gentlemen's club in London, and 26 in NYC."
-publishDate: 2024-12-03
+publishDate: "2024-12-03"
 author: "Gokhan Turhan"
 tags: ["general"]
 category: "general"

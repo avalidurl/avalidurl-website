@@ -1,7 +1,7 @@
 ---
 title: "Loot 101: Articles, Posts, Tweets"
 description: "Smarty Knoweth what LOOT is."
-publishDate: 2021-09-05
+publishDate: "2021-09-05"
 author: "Gokhan Turhan"
 tags: ["crypto", "technology", "writing"]
 category: "crypto"
@@ -11,7 +11,6 @@ excerpt: ""
 originalUrl: "https://gokhan.substack.com/p/loot-101-articles-posts-tweets"
 ---
 
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60cbdb31-b016-4d4f-a1fe-37fb4fcf1bbf_6900x6900.jpeg)
 ###### 4'33" (for Adventurers)
 
 ***note:** i wasn’t aware of the existence of The Herald (for Loot) Substack till the halvening of my own draft. What I do below is very similar to their Week 1 post.*
@@ -21,9 +20,17 @@ Spencer Noon 🕛 @spencernoonLoot created a new category:
 
 Mass Multiplayer Online Metaverse Making
 
-MMOMM for short<TwitterEmbed id="1434217272546054147" / />, and beyond are calling these times as *post-LOOT* era. Those who do not own an OG Loot Bag, and some with either biases/ lack of knowledge against/ in the base layer of technological accelerator, namely Ethereum keep critiquing the Loot Project by all means possible.
+MMOMM for short
 
-All I can state here as a non-coder-yet-nerd-researcher (with that background in academy, that is, a Comparative Literature MA) is that LOOT has opened the gates towards the [Westworld](https://www.hbo.com/westworld) of smart contracts—nay, Dr. Robert Ford is indeed a humanitarian, and <YouTubeEmbed id="hAXET4YyDUo" / />.
+<TwitterEmbed url="https://x.com/i/web/status/1434217272546054147" />
+
+, and beyond are calling these times as *post-LOOT* era. Those who do not own an OG Loot Bag, and some with either biases/ lack of knowledge against/ in the base layer of technological accelerator, namely Ethereum keep critiquing the Loot Project by all means possible.
+
+All I can state here as a non-coder-yet-nerd-researcher (with that background in academy, that is, a Comparative Literature MA) is that LOOT has opened the gates towards the [Westworld](https://www.hbo.com/westworld) of smart contracts—nay, Dr. Robert Ford is indeed a humanitarian, and
+
+<YouTubeEmbed url="https://youtube.com/watch?v=hAXET4YyDUo" />
+
+.
 
 Anyway, I try to point out to some important *Twitter* threads, and *Substack* posts. I am aware there are many an insight on the situation, and was also writing another piece on LOOT, I lost the track. If there are any worthwhile resources out there in any media, please do comment below so that I can update the post.
 
@@ -46,8 +53,12 @@ A successful ecosystem likely requires way more bags (maybe 100k-1M), but hopefu
 opensea: https://t.co/qSnRJ1FD0n
 etherscan: https://t.co/bF9p0RSHX2
 
-available via contract only. not audited. mint at your own risk https://t.co/uLukzFayUK<TwitterEmbed id="1431457259297640455" / /> and AGLD.
-@dhof and his creations: @blitmap @sugarthegame @supdrive, and most importantly @lootproject ❤️\n\nLoot is something different. It's something that has never been done before ever.\n\nIt's a paradigm shift in NFT space.\n\nThread 👇 ","username":"tandavas","name":"tandavas.eth 👘","date":"Tue Aug 31 20:30:26 +0000 2021","photos":[{"img_url":"https://pbs.substack.com/media/E-I5KmkVkAMLamv.jpg","link_url":"https://t.co/vbaUF4uGNE","alt_text":null}],"quoted_tweet":{},"retweet_count":496,"like_count":1466,"expanded_url":{},"video_url":null,"belowTheFold":true}">tandavas.eth 👘 @tandavasThis is what I have been SUPER EXCITED about...
+available via contract only. not audited. mint at your own risk https://t.co/uLukzFayUK
+
+<TwitterEmbed url="https://x.com/i/web/status/1431457259297640455" />
+
+and AGLD.
+@dhof and his creations: @blitmap @sugarthegame @supdrive, and most importantly @lootproject ❤️\n\nLoot is something different. It's something that has never been done before ever.\n\nIt's a paradigm shift in NFT space.\n\nThread 👇 "],"quoted_tweet":{},"retweet_count":496,"like_count":1466">tandavas.eth 👘 @tandavasThis is what I have been SUPER EXCITED about...
 
 It's @dhof and his creations: @blitmap @sugarthegame @supdrive, and most importantly @lootproject ❤️
 
@@ -55,4 +66,7 @@ Loot is something different. It's something that has never been done before ever
 
 It's a paradigm shift in NFT space.
 
-Thread 👇 [8:30 PM ∙ Aug 31, 20211,466Likes496Retweets](<TwitterEmbed id="1432802983528448000" />
+Thread 👇 [8:30 PM ∙ Aug 31, 20211,466Likes496Retweets](
+
+<TwitterEmbed url="https://x.com/i/web/status/1432802983528448000" />
+

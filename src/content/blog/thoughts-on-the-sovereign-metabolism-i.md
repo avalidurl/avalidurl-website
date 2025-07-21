@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on the Sovereign Metabolism I"
 description: "I am reading a [@praxisnation](https://x.com/@praxisnation) post, [Sovereign Intelligence Western Civilization in the Intelligence Age](https://www.praxisnation.com/news/sovereign-intelligence), and I come to think that decentralized AI is overhyped when it comes to the stack re: the narrative we ke"
-publishDate: 2025-02-22
+publishDate: "2025-02-22"
 author: "Gokhan Turhan"
 tags: ["crypto", "defi", "technology", "web3"]
 category: "crypto"

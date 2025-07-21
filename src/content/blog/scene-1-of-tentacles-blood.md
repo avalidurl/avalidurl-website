@@ -1,7 +1,7 @@
 ---
 title: "SCENE 1: Of Tentacles, & Blood"
 description: "There was a trail of bloody human signature left behind on such pristine scenery of genuine revolution, of an evolution, that is, our city on the garland Moon—that our DAO has been wearing for more than quarter of a century as the knight errand of our species."
-publishDate: 2020-11-03
+publishDate: "2020-11-03"
 author: "Gokhan Turhan"
 tags: ["general"]
 category: "general"

@@ -1,7 +1,7 @@
 ---
 title: "#Ordinals Commissioner Galleries and R&D Team Proposal"
 description: "This is a pure shower-thought that I in actual type as I am kind of having chills because of the harsh Winter wind outside next to a window in my living-room whilst having a good mornt coffee."
-publishDate: 2023-02-09
+publishDate: "2023-02-09"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "defi", "technology", "data"]
 category: "finance"
@@ -66,7 +66,11 @@ At the moment, the successiveness of first-in-first-out order of UTXOs offers us
 A collection, a curator, and a collector walks into a bar, and they have only one torso. Depeche Mode plays in the background:
 
 >
-> <YouTubeEmbed id="CzqqVFb9p4U" / /> and [Taproot Wizard](https://discord.gg/taprootwizards) Discord channels? I heard there are punks also but they look dull. Personal taste, sorry.
+>
+
+<YouTubeEmbed url="https://youtube.com/watch?v=CzqqVFb9p4U" />
+
+and [Taproot Wizard](https://discord.gg/taprootwizards) Discord channels? I heard there are punks also but they look dull. Personal taste, sorry.
 
 It is up to the people themselves to build the tools that they will market that markets need them. Markets may need anything at all since a huge pie of them are just lazy couch potatoes who can get incredibly lucky.
 

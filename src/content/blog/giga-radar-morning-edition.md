@@ -1,7 +1,7 @@
 ---
 title: "$GIGA RADAR, Morning Edition"
 description: "Stay Hydrated. Get that kefir shot."
-publishDate: 2020-11-03
+publishDate: "2020-11-03"
 author: "Gokhan Turhan"
 tags: ["crypto"]
 category: "crypto"

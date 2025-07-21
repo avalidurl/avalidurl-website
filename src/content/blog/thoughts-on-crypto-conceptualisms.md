@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on Crypto-Conceptualisms"
 description: "This post was first published at [Cent](https://beta."
-publishDate: 2020-08-04
+publishDate: "2020-08-04"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology", "data", "art"]
 category: "finance"
@@ -48,7 +48,14 @@ In this regard, recent purchase of Pak's *[Alpha](https://opensea.io/assets/0xb9
 These moves alone are conceptual call-to-action to anyone outside the cryptoart scene. It is, for sure, not specific to art. For example, I mentioned coinartist's self-niftification into shards into a game. It makes one ponder about the kind of far future bodies without organ probabilities of longevity, and life-extension alongside abstracted brain storage, and preservation, which is the theme of my forthcoming essay.
 
 In line with above thoughts, I was recently wondering what kind of an action makes up a conceptual artwork in the cryptoart scene. As I earlier commented, I believe that NFT art collectibles themselves are a manifesto thanks to the underlying and accelerating technologies. In my opinion:
-[numogram.eth @gigabvgattiGoing full conceptualist, fluxus-babe, or meta-n on cryptoart is understandable. But, doing that conceptual move on the infrastructure as embedded within the entire non-fungible token itself would be greater...](<TwitterEmbed id="1290095450624626688" /> AM ∙ Aug 3, 2020](<TwitterEmbed id="1290095450624626688" />
+[numogram.eth @gigabvgattiGoing full conceptualist, fluxus-babe, or meta-n on cryptoart is understandable. But, doing that conceptual move on the infrastructure as embedded within the entire non-fungible token itself would be greater...](
+
+<TwitterEmbed url="https://x.com/i/web/status/1290095450624626688" />
+
+AM ∙ Aug 3, 2020](
+
+<TwitterEmbed url="https://x.com/i/web/status/1290095450624626688" />
+
 So, I both want to greet you all here with my first post, and do a brainstorming on the concept of conceptual art in terms of meta-approches thereof. I will be glad to hear from your own ideas, the ideas and works, or products that make such smart moves, and any related contributions.
 
 Have a good day.

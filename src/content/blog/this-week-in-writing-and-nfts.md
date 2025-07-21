@@ -1,7 +1,7 @@
 ---
 title: "This Week in Writing AND NFTs"
 description: "This Newsletter is natively published on Mirror every Friday."
-publishDate: 2022-08-06
+publishDate: "2022-08-06"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "defi", "technology", "art"]
 category: "finance"
@@ -102,14 +102,17 @@ This is purely textual, and people such as myself would love the pre-erasure wit
 ### Book of Jacob
 
 **[book of jacob 2 | book of jacob](https://zora.co/collections/0x2101D8e8F9b5750Ff81c49455F51d5773c3f0422/2)**Diagram poetry exists, and it is on-chain:
-[](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6126a8c0-9c03-488f-bc34-9dac2d6834c7_1464x1462.png)
+
 ## NEWS
 
 ### Zora Introduces .svg editions creator
-create.zora.co ","username":"ourZORA","name":"🌜🌞🌛","date":"Fri Aug 05 18:17:25 +0000 2022","photos":[{"img_url":"https://substackcdn.com/image/upload/w_728,c_limit/l_twitter_play_button_rvaygk,w_120/htvrvbua9pj4mcr25yr3","link_url":"https://t.co/UiJunkh998","alt_text":null}],"quoted_tweet":{},"retweet_count":26,"like_count":192,"expanded_url":{},"video_url":"https://video.twimg.com/ext_tw_video/1555618522037768195/pu/vid/452x270/g9GJH-lCzxHyZodo.mp4?tag=12","belowTheFold":true}">🌜🌞🌛 @ourZORAIntroducing ✨Onchain SVGs ✨
+create.zora.co "],"quoted_tweet":{},"retweet_count":26,"like_count":192">🌜🌞🌛 @ourZORAIntroducing ✨Onchain SVGs ✨
 
 ↳ You can now create editions for entirely onchain SVGs.
 ↳ Simply upload an SVG file and select the option to mint onchain.
 
 Try it out:
-[create.zora.co](http://create.zora.co) [6:17 PM ∙ Aug 5, 2022192Likes26Retweets](<TwitterEmbed id="1555618996581347328" />
+[create.zora.co](http://create.zora.co) [(
+
+<TwitterEmbed url="https://x.com/i/web/status/1555618996581347328" />
+

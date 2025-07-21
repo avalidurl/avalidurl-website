@@ -1,7 +1,7 @@
 ---
 title: "GENERATE: $GC69"
 description: "ENTER THE NOVELGEON"
-publishDate: 2020-11-04
+publishDate: "2020-11-04"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "art", "writing", "music"]
 category: "finance"
@@ -11,7 +11,7 @@ excerpt: "audio visual NFTs | cryptoart \nprocess'd w/ audio synth, track is gen
 originalUrl: "https://gokhan.substack.com/p/generate-gc69"
 ---
 
-#audio #visual #NFTs | #cryptoart \n[process'd w/ audio #synth, track is #generative]\n\npart of my #tokenomics novel\n\nExclusive to @rariblecom \n\nUnlocks a 4K @Vimeo #Video \n\n#Art #DeFi #Singularity \n\napp.rarible.com/token/0x60f801… ","username":"gigabvgatti","name":"gokhan.eth","date":"Wed Nov 04 12:48:19 +0000 2020","photos":[{"img_url":"https://cdn.substack.com/image/upload/w_728,c_limit/l_twitter_play_button_rvaygk,w_120/jpvdtvq4uwzjism60vsl","link_url":"https://t.co/wBjpWv8YJh"}],"quoted_tweet":{},"retweet_count":3,"like_count":7,"expanded_url":{},"video_url":null,"belowTheFold":false}">gokhan.eth @gigabvgattiTell yer frenz Im $BASED
+#audio #visual #NFTs | #cryptoart \n[process'd w/ audio #synth, track is #generative]\n\npart of my #tokenomics novel\n\nExclusive to @rariblecom \n\nUnlocks a 4K @Vimeo #Video \n\n#Art #DeFi #Singularity \n\napp.rarible.com/token/0x60f801… "],"quoted_tweet":{},"retweet_count":3,"like_count":7">gokhan.eth @gigabvgattiTell yer frenz Im $BASED
 
 GENERATE, #audio #visual #NFTs | #cryptoart
 [process'd w/ audio #synth, track is #generative]
@@ -25,11 +25,16 @@ Unlocks a 4K @Vimeo #Video
 #Art #DeFi #Singularity
 
 [app.rarible.com/token/0x60f801…](https://app.rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:62435:0x36de990133d36d7e3df9a820aa3ede5a2320de71)
-<TwitterEmbed id="1323970331359457280" / /> of which I am in the progress of pitching, market research, and character pursuit. That is, it will be a polyphonic novel with a [tokenomics of its own](https://beta.cent.co/goekhanturhan/+fjd8y7), and I need at least 10 characters.
+
+<TwitterEmbed url="https://x.com/i/web/status/1323970331359457280" />
+
+of which I am in the progress of pitching, market research, and character pursuit. That is, it will be a polyphonic novel with a [tokenomics of its own](https://beta.cent.co/goekhanturhan/+fjd8y7), and I need at least 10 characters.
 
 These 10 character spots are [on sale](https://app.rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:66861:0x36de990133d36d7e3df9a820aa3ede5a2320de71) via a *Rarible* non-fungible. Plus, there are 3 [variations of a lottery](https://opensea.io/assets/0x8ed0086e9ab7d8dea522e58c03bda45c32c77f66/15) for an 11th side-kick via my own verified *DECIMALS* frontstore at OpenSea.
 
-Since every “good” <VimeoEmbed id="128428182" / /> thereof—which I thought to be lacking tangible aesthetics, and hence our intro: [GENERATE: $GC69](https://app.rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:62435:0x36de990133d36d7e3df9a820aa3ede5a2320de71).
+Since every “good” <VimeoEmbed id="128428182" / />
+
+thereof—which I thought to be lacking tangible aesthetics, and hence our intro: [GENERATE: $GC69](https://app.rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:62435:0x36de990133d36d7e3df9a820aa3ede5a2320de71).
 
 *An audio-visual non-fungible collectible.* I have processed the video through a visual synthesizer emulator in an *Apple II* graphical interface, and the audio track thereof is a generative piece. No, I am not sharing the source code yet, sorry ;)
 
@@ -37,4 +42,8 @@ Since every “good” <VimeoEmbed id="128428182" / /> thereof—which I thought
 > Feel free to spread the word for would-be interested **art investors and collectors** with whom I can also negotiate a **cameo** in the novel itself upon their purchase of this work of art.
 >
 
-Have a [beateous](<YouTubeEmbed id="yib6V0WE0EI" /> day, stay hydrated, and don’t be a bear.
+Have a [beateous](
+
+<YouTubeEmbed url="https://youtube.com/watch?v=yib6V0WE0EI" />
+
+day, stay hydrated, and don’t be a bear.

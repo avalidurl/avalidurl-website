@@ -1,7 +1,7 @@
 ---
 title: "Chain Standard #1"
 description: "Pilot bookmarking. More features to come forth. Happy Xmas."
-publishDate: 2020-12-26
+publishDate: "2020-12-26"
 author: "Gokhan Turhan"
 tags: ["crypto", "data"]
 category: "crypto"

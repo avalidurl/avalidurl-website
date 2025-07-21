@@ -3,7 +3,7 @@ title: "Web3 Marketing #5"
 description: " Respect Others
 
 Respecting others do not mean that you need to comply with their impractical, or cringe ideas at one point."
-publishDate: 2024-01-05
+publishDate: "2024-01-05"
 author: "Gokhan Turhan"
 tags: ["crypto"]
 category: "crypto"

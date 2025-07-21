@@ -1,7 +1,7 @@
 ---
 title: "Sound, Image and New Year Gifts and maybe some Nonfungibles—also, SEO plase GM and perchance an NFT 100K EOY LFG"
 description: "read."
-publishDate: 2021-12-27
+publishDate: "2021-12-27"
 author: "Gokhan Turhan"
 tags: ["finance", "web3", "art", "writing", "music"]
 category: "finance"

@@ -1,7 +1,7 @@
 ---
 title: "On crypto-conceptualisms"
 description: "coming soon."
-publishDate: 2020-05-23
+publishDate: "2020-05-23"
 author: "Gokhan Turhan"
 tags: ["general"]
 category: "general"

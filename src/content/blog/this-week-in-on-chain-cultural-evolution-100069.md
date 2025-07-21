@@ -1,7 +1,7 @@
 ---
 title: "This Week in On-Chain Cultural Evolution #100069"
 description: "I have written a thread about creation, distribution, retrieval, storage, maintenance of on- and off-chain cultural and digital objects."
-publishDate: 2022-07-17
+publishDate: "2022-07-17"
 author: "Gokhan Turhan"
 tags: ["art", "crypto", "web3", "technology"]
 category: "art"
@@ -11,7 +11,11 @@ excerpt: "I have written a thread about creation, distribution, retrieval, stora
 originalUrl: "https://gokhan.substack.com/p/this-week-in-on-chain-cultural-evolution-100069"
 ---
 
-I have written a <TwitterEmbed id="1548374416161005574" /> with regard to creation, distribution, retrieval, storage, maintenance of on- and off-chain cultural and digital objects.
+I have written a
+
+<TwitterEmbed url="https://x.com/i/web/status/1548374416161005574" />
+
+with regard to creation, distribution, retrieval, storage, maintenance of on- and off-chain cultural and digital objects.
 
 The thread includes three protocols/ platforms, and project.
 
@@ -25,7 +29,9 @@ JPG is a team of individuals who build a set of much-needed infrastructure for t
 
 *Cultural objects capture moments and paradigms, communities and heritage, and they ought to be preserved in order to be discovered for generations to come.*
 
-<TwitterEmbed id="1547606101813633028" /> where genuine artistic experiments meet conceptual shite-posting with style. They also have a Mirror log where they keep interviewing [nobodies](https://jpg.mirror.xyz/eAZi6PglxjMALBw2Mk4cnJxdxPGv6Bpcr5irWZp91Wc) such as myself.
+<TwitterEmbed url="https://x.com/i/web/status/1547606101813633028" />
+
+where genuine artistic experiments meet conceptual shite-posting with style. They also have a Mirror log where they keep interviewing [nobodies](https://jpg.mirror.xyz/eAZi6PglxjMALBw2Mk4cnJxdxPGv6Bpcr5irWZp91Wc) such as myself.
 
 I am a power-user of the platform where you already can curate exhibits than can be sold right on spot as in the traditional gallery setting where frogs wearing tuxedos buy your art on spot.
 
@@ -45,7 +51,9 @@ They are active on both the Ethereum mainnet and one of its layer 2 solutions Op
 
 *Before Ethereum was code, it was a piece of writing. A year prior to Ethereum's launch in 2015, Vitalik Buterin published a whitepaper that laid out his vision for the project.*
 
-<TwitterEmbed id="1529523279245070337" /> who also happens to have a DAO to herself. Plus, you possibly do not know that Herndon has a track titled DAO from the year 2015 anno domino.
+<TwitterEmbed url="https://x.com/i/web/status/1529523279245070337" />
+
+who also happens to have a DAO to herself. Plus, you possibly do not know that Herndon has a track titled DAO from the year 2015 anno domino.
 
 Herndon and the Gang who includes Mat Dryhurst, Joshua Citarella, New Models, Herndon & Dryhurst' Interdependence in partnership with Duncan Wilson, Cullen Miller, and James from Zora are to be the knight errands that are the harbingers of *general adversarial media networks* by means of [Channel](https://www.channel.xyz/).
 
@@ -57,7 +65,9 @@ I guess you should be in the look-up for the upcoming implementations.
 
 *A decentralized media organization building tools to help creators join forces, token-enable their communities and experience the benefits of Web 3.*
 
-<TwitterEmbed id="1480586208367587335" /> on-chain, that is, the writing NFTs.
+<TwitterEmbed url="https://x.com/i/web/status/1480586208367587335" />
+
+on-chain, that is, the writing NFTs.
 
 I personally am one of the moderators of the project Discord server (self-appointed, just wanted to spare some time around a meaningful culture hub potential).
 
@@ -72,11 +82,11 @@ You should have a look at the links provided in the below quoted tweet, first:
 - [Gem.xyz (secondary)](https://www.gem.xyz/collection/gabagool-eth-writing-token/)
 - [SudoSwap marketplace](https://sudoswap.xyz/#/browse/buy/0x73168661D8e531a8b4Fe7F1E3e349778660A7F28)
 
-<TwitterEmbed id="1548300944902725633" />
+<TwitterEmbed url="https://x.com/i/web/status/1548300944902725633" />
 
 …and then, you should read the update that is in the form of an Ether text that Gabagool.eth sent to WMPeaster.
 
-<TwitterEmbed id="1548301041757696000" /> 
+<TwitterEmbed url="https://x.com/i/web/status/1548301041757696000" />
 
 Have a great day wherever you are. GM.
 

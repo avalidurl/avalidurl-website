@@ -1,7 +1,7 @@
 ---
 title: "Daily 6"
 description: "Midnight edition UTC+3"
-publishDate: 2023-06-22
+publishDate: "2023-06-22"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "web3"]
 category: "finance"

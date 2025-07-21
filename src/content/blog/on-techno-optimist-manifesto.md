@@ -1,7 +1,7 @@
 ---
 title: "On Techno-Optimist Manifesto"
 description: "Individual Shower Thoughts"
-publishDate: 2023-10-19
+publishDate: "2023-10-19"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology"]
 category: "finance"

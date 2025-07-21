@@ -1,7 +1,7 @@
 ---
 title: "Daily Markets 1"
 description: "UTC + 3 Afternoon Edition"
-publishDate: 2023-06-16
+publishDate: "2023-06-16"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "technology", "data", "writing"]
 category: "finance"

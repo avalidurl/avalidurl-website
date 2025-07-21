@@ -1,7 +1,7 @@
 ---
 title: "Web3 Marketing #3"
 description: "Tone Down Your Language."
-publishDate: 2024-01-02
+publishDate: "2024-01-02"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "defi", "web3"]
 category: "finance"

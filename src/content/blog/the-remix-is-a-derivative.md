@@ -3,7 +3,7 @@ title: "The remix is a derivative."
 description: "The remix is a derivative. Today, whiz devs of DeFi reprograms derivatives of derivatives into hedges of hedges. Therefore, it shall go without saying that remixing is an act of value extraction—whilst making it sure that such redundancies exist from without our patchworking isles of thought.
 
 2 fem"
-publishDate: 2021-08-04
+publishDate: "2021-08-04"
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "writing"]
 category: "finance"

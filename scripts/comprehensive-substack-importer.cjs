@@ -6,15 +6,31 @@ const https = require('https');
 const { URL } = require('url');
 
 /**
- * COMPREHENSIVE Substack Importer - Actually fixes everything properly
+ * COMPREHENSIVE Substack Importer - Production-ready content migration tool
  * 
- * What this tool does RIGHT:
- * 1. Actually downloads images to local storage
- * 2. Converts embed URLs to proper Astro components
- * 3. Fixes broken bookmark formatting
- * 4. Cleans HTML content properly
- * 5. Corrects date formatting
- * 6. Handles errors gracefully
+ * This script provides a complete solution for migrating Substack publications
+ * to Astro-based static sites. It's designed to be robust, maintainable, and
+ * suitable for community use.
+ * 
+ * Key Features:
+ * 1. Downloads and stores images locally with proper naming
+ * 2. Converts embed URLs to reusable Astro components
+ * 3. Fixes broken bookmark and link formatting
+ * 4. Cleans HTML content and converts to clean Markdown
+ * 5. Handles date formatting and frontmatter generation
+ * 6. Graceful error handling with retry logic
+ * 7. Rate limiting to respect external services
+ * 8. Comprehensive logging and progress reporting
+ * 
+ * Usage:
+ *   node scripts/comprehensive-substack-importer.cjs
+ * 
+ * Prerequisites:
+ *   - Substack export placed in scripts/ directory
+ *   - posts.csv and posts/ folder from export
+ * 
+ * @author Gokhan Turhan
+ * @license MIT
  */
 
 const CONFIG = {
