@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA vs Total Crypto Market Cap Dashboard"
 description: "Vibecoding should vibe with your daily product ideas."
-publishDate: 2024-07-16
+publishDate: 2025-07-16
 author: "Gokhan Turhan"
 tags: ["finance", "art"]
 category: "finance"

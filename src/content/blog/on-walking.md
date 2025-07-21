@@ -1,13 +1,14 @@
 ---
 title: "On Walking"
-description: "Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell sever..."
+description: "Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell several stories when you are walking. Either in reality or as tethered to a mental modality. Of Walking.
+"
 publishDate: 2024-06-17
 author: "Gokhan Turhan"
-tags: ["technology", "culture", "writing"]
-category: "technology"
+tags: ["general"]
+category: "general"
 featured: false
-readingTime: 1
-excerpt: "Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell sever..."
+readingTime: 2
+excerpt: "Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell..."
 originalUrl: "https://gokhan.substack.com/p/on-walking"
 ---
 

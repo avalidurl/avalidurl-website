@@ -3,17 +3,17 @@ title: "Eugenics Tokens #01"
 description: "In support of Designer Tokens"
 publishDate: 2020-11-26
 author: "Gokhan Turhan"
-tags: ["art", "technology"]
-category: "art"
+tags: ["finance", "crypto", "web3", "art"]
+category: "finance"
 featured: false
 readingTime: 2
-excerpt: "*I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an “artist-in-re..."
+excerpt: "I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an..."
 originalUrl: "https://gokhan.substack.com/p/eugenics-tokens-01"
 ---
 
-*I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an “artist-in-residence” somewhere somewhere. &, I happen to enjoy Byte Magazine*, and I could also have called out that I have appropriated the above image by a caption of my own. Nope, I do resist. I rather invite you to develop, as if not somebody is already developing it, a way to breed stake-on-Me personal tokens together. As above, so below.
+I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an “artist-in-residence” somewhere somewhere. &, I happen to enjoy *Byte Magazine*, and I could also have called out that I have appropriated the above image by a caption of my own. Nope, I do resist. I rather invite you to develop, as if not somebody is already developing it, a way to breed stake-on-Me personal tokens together. As above, so below.
 
-[Subscribe now](https://gokhan.substack.com/subscribe?)
+[Subscribe now](https://gokhan.substack.com/subscribe)
 
 **Alice is a chess champion, an intergalactic one, spanning parsecs among myriad galaxies a beateous ripple of fame, serenity, and intellect.**
 

@@ -3,19 +3,23 @@ title: "non-fungibility of the idea as a work of art"
 description: "As above, so On-chain."
 publishDate: 2021-09-10
 author: "Gokhan Turhan"
-tags: ["art", "technology", "crypto", "culture"]
-category: "art"
+tags: ["crypto", "art"]
+category: "crypto"
 featured: false
-readingTime: 2
-excerpt: "*This post has already been minted via Zora. If you would like to access the .txt version thereabouts, please click [HERE](https://zora.co/gokhan/4804).*"
-originalUrl: "https://gokhan.substack.com/p/non-fungibility-of-the-idea-as-a"
+readingTime: 3
+excerpt: "This post has already been minted via Zora. If you would like to access the .txt version thereabouts, please click HEREhttps://zora.co/gokhan/4804.
+
+non-fungibility of the idea as a work of art
+
+1..."
+originalUrl: "https://gokhan.substack.com/p/non-fungibility-of-the-idea-as-a-work-of-art"
 ---
 
 *This post has already been minted via Zora. If you would like to access the .txt version thereabouts, please click [HERE](https://zora.co/gokhan/4804).*
 
 **non-fungibility of the idea as a work of art**
 
-**1)** People, “also known as,” collectors and creators/ artists seem to be playing with conceptual art on-chain lately. 
+**1)** People, “also known as,” collectors and creators/ artists seem to be playing with conceptual art on-chain lately.
 
 **2)** Those who produce conceptual art works on-chain have been around longer than many a self-acknowledging degen, or moguls with punk pfps.
 
@@ -23,7 +27,7 @@ originalUrl: "https://gokhan.substack.com/p/non-fungibility-of-the-idea-as-a"
 
 **4)** Conceptual art is teaching people from different backgrounds how to play with ideas, concepts and the problems that these concepts try to resolve, or questions that can be derived thereabouts—we like derivates.
 
-**5)** After all, it is not about file formats. File formats are for developers, archivists, and yes for everyone. However, as I have just quipped, it is not about the file format. 
+**5)** After all, it is not about file formats. File formats are for developers, archivists, and yes for everyone. However, as I have just quipped, it is not about the file format.
 
 **6)** People mistake strategies for bad intentions and call any collector who have just started to “see” some life-changing *moneyness*. Leave the guys alone. You will understand one day before long.
 
@@ -31,9 +35,9 @@ originalUrl: "https://gokhan.substack.com/p/non-fungibility-of-the-idea-as-a"
 
 **8)** Isn’t it what some call a draft? I really do not care. I stopped distinguishing drafts from the finales in 2017 when I handed my MA dissertation off that organ called brain.
 
-**9)** Alright, rewind. I’d like to suggest that on-chain creation (minting), and collecting practices teach people how to experiment with concepts. 
+**9)** Alright, rewind. I’d like to suggest that on-chain creation (minting), and collecting practices teach people how to experiment with concepts.
 
-**10)** It is because they find resolutions to some of the questions they had been engaged with for some. 
+**10)** It is because they find resolutions to some of the questions they had been engaged with for some.
 
 **11)** I have been approached by many an anon account on Discord, Twitter and Telegram about alphas on Conceptual Art pieces especially after the proliferation of value accrual through the artworks by Mitchell Chan, Sarah Meyohas, and Rhea Myers—all of whom had already been here before any of us in terms of *non-fungibility of the idea as a work of art*.
 

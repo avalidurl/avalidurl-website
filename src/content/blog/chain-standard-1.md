@@ -3,17 +3,17 @@ title: "Chain Standard #1"
 description: "Pilot bookmarking. More features to come forth. Happy Xmas."
 publishDate: 2020-12-26
 author: "Gokhan Turhan"
-tags: ["technology", "crypto", "data", "culture"]
-category: "technology"
+tags: ["crypto", "data"]
+category: "crypto"
 featured: false
 readingTime: 1
-excerpt: "**Daily Readings** 📑"
+excerpt: "Tiger in the Snow, 1849, Katsushika Hokusaihttps://en.wikipedia.org/wiki/Hokusai
+
+—“2021: The Great Acceleration” aka 95 Theseshttps://redphone.substack.com/p/theses-2021 by..."
 originalUrl: "https://gokhan.substack.com/p/chain-standard-1"
 ---
 
-**Daily Readings** 📑
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/9011f40a-885e-4e8b-a9ec-4d89cffa5636_1280x994.jpeg)Tiger in the Snow, 1849, [Katsushika Hokusai](https://en.wikipedia.org/wiki/Hokusai)
+Tiger in the Snow, 1849, [Katsushika Hokusai](https://en.wikipedia.org/wiki/Hokusai)
 
 —“2021: The Great Acceleration” aka *[95 Theses](https://redphone.substack.com/p/theses-2021)* by [Redphonecrypto](https://twitter.com/redphonecrypto)
 
@@ -29,10 +29,10 @@ originalUrl: "https://gokhan.substack.com/p/chain-standard-1"
 
 — *[1inch Token Dashboard](https://duneanalytics.com/0xBoxer/1inch-token)* on Dune Analytics by [0xBoxer](https://twitter.com/0xBoxer)
 
-—"[1Inch Launch Token and Instant Governance - Decentralise #65](https://decentralise.substack.com/p/1inch-launch-token-and-instant-governance)" by [William Brealey ](https://twitter.com/Decentralise__)
+—"[1Inch Launch Token and Instant Governance - Decentralise #65](https://decentralise.substack.com/p/1inch-launch-token-and-instant-governance)" by [William Brealey](https://twitter.com/Decentralise__)
 
-— "[Announcing YPIE PieVault and Sushiswap Collaboration](https://medium.com/piedao/announcing-ypie-pievault-and-sushiswap-collaboration-a89b102e81e7)" by [William Brealey](https://twitter.com/Decentralise__) 
+— "[Announcing YPIE PieVault and Sushiswap Collaboration](https://medium.com/piedao/announcing-ypie-pievault-and-sushiswap-collaboration-a89b102e81e7)" by [William Brealey](https://twitter.com/Decentralise__)
 
-—"[2020 Has Been Chainlink’s Year. Here’s Why](https://decrypt.co/51015/2020-has-been-chainlinks-year-heres-why?utm_source=twitter&utm_medium=social&utm_campaign=auto)" by [Adriana Hamacher](https://twitter.com/AdrianaHamacher) 
+—"[2020 Has Been Chainlink’s Year. Here’s Why](https://decrypt.co/51015/2020-has-been-chainlinks-year-heres-why)" by [Adriana Hamacher](https://twitter.com/AdrianaHamacher)
 
 —"[TheLinkMarine Receives a Grant to Build a Chainlink News Website](https://blog.chain.link/thelinkmarine-receives-a-grant-to-build-a-chainlink-news-website/)"

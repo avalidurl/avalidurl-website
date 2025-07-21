@@ -1,13 +1,13 @@
 ---
 title: "Playlist #6"
-description: "There is a [Mirror version of this post](https://gokhan.mirror.xyz/SKr2aT7tNmTVTJPCGo5MwaG3jOl1_cB_FMJPJujpA8s) on the Optimism network as a piece of collectible blogpost. If you care for such stuff,..."
+description: "There is a [Mirror version of this post](https://gokhan."
 publishDate: 2023-06-26
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "culture"]
-category: "finance"
+tags: ["crypto", "technology", "art", "writing", "music"]
+category: "crypto"
 featured: false
 readingTime: 4
-excerpt: "There is a [Mirror version of this post](https://gokhan.mirror.xyz/SKr2aT7tNmTVTJPCGo5MwaG3jOl1_cB_FMJPJujpA8s) on the Optimism network as a piece of collectible blogpost. If you care for such stuff,..."
+excerpt: "There is a Mirror version of this posthttps://gokhan.mirror.xyz/SKr2aT7tNmTVTJPCGo5MwaG3jOl1_cB_FMJPJujpA8s on the Optimism network as a piece of collectible blogpost. If you care for such stuff,..."
 originalUrl: "https://gokhan.substack.com/p/playlist-6"
 ---
 
@@ -23,8 +23,6 @@ Yet, today is such another ultra-humid and indifferently indecisive weather in S
 
 ### by Cheryl E. Leonard
 
-[Embedded content: https://bandcamp.com/EmbeddedPlayer/album=4118518429/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/]
-
 Leonard is one of those sound artists [sic] with whom you can take on a genuine journey without leaving the comfortable confines of your own very aura. I met her work through this album. It is a work that weaves Antarctic field records from 2009 when she was part of National Science Foundation’s Antarctic Artists and Writer’s program at Palmer Research Station, the penguin bone idiophones and sculptural instruments made out of properly scavenged natural material thereabouts, and sound textures.
 
 It has the impact of that beauteous splashes of water at 6 a.m. upon my very face by these hands that type from the natural water in our village, and the winter dawns at any time period from one’s life when one needs their isolating audio-texture. It helps me focus especially during extra-busy intra-day analysis.
@@ -33,13 +31,11 @@ I suggest you should visit the artist’s [home page](https://allwaysnorth.com/)
 
 People keep asking each other what would they do if they did not have any financial worry nowadays, except for touching the grass. I’d certainly enjoy a cruise down to Antarctic to take a plunge into freezing waters. However, I assume that I’d also enjoy a long-stay at any of those research stations, and just write a novel.
 
-# **A tuba (with a microphone in it)**
+# A tuba (with a microphone in it)
 
 ## by id m theft able
 
-[Embedded content: https://bandcamp.com/EmbeddedPlayer/album=898519882/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/]
-
-In fact it has been 10 days since I started writing this post. Today, it has been sort of a hectic day in that I had to return a Nike Pro Recovery ADV men’s tight, and an Utility Elite backpack—which I purchased 9 months and 12 months ago respectively. 
+In fact it has been 10 days since I started writing this post. Today, it has been sort of a hectic day in that I had to return a Nike Pro Recovery ADV men’s tight, and an Utility Elite backpack—which I purchased 9 months and 12 months ago respectively.
 
 I use a 32-liter backpack anytime I hit the gym since 1) I train heavily, 2) people do not understand that air-conditioners are for the climate control not freezing our asses to death—I love my muscle ass.
 
@@ -48,5 +44,3 @@ I use a 32-liter backpack anytime I hit the gym since 1) I train heavily, 2) peo
 I too sometimes want to place my Sony PCM-D10 field recorder into my lungs during HIITwaves at the gym, and during one of those gym-thought sessions whilst listening to KRTM I recalled about the chill effects of his Tuba by the water. Here, I present you the tuba near the water.
 
 Thank you for this album. I recall that I thought “here is someone who utilized the pandemic times into beauty” when I encountered the album.
-
-[Embedded content: https://www.youtube-nocookie.com/embed/bgUum6j9Nls?rel=0&autoplay=0&showinfo=0&enablejsapi=0]

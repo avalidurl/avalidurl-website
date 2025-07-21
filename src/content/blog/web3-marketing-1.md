@@ -1,23 +1,33 @@
 ---
 title: "Web3 Marketing #1"
-description: "Do not infantilize the enduser."
+description: " Do not infantilize the enduser.
+
+>
+> Retail does not care about the decentralization.
+>
+
+Wrong. The retail you are familiar with might not want it. However, when you look into [The 2023 Global Crypto Adoption Index Top 20](https://www.chainalysis.com/blog/2023-global-crypto-adoption-index/) by Chai"
 publishDate: 2024-01-01
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto"]
+tags: ["finance", "crypto", "technology", "art"]
 category: "finance"
 featured: false
-readingTime: 2
-excerpt: "Do not infantilize the enduser."
+readingTime: 3
+excerpt: "Do not infantilize the enduser.
+
+>
+> Retail does not care about the decentralization.
+>
+
+Wrong. The retail you are familiar with might not want it. However, when you look into The 2023 Global Crypto..."
 originalUrl: "https://gokhan.substack.com/p/web3-marketing-1"
 ---
 
-Do not infantilize the enduser.
-
-Focus on the function not aesthetics.
-
 # Do not infantilize the enduser.
 
-Retail does not care about the decentralization.
+>
+> Retail does not care about the decentralization.
+>
 
 Wrong. The retail you are familiar with might not want it. However, when you look into *[The 2023 Global Crypto Adoption Index Top 20](https://www.chainalysis.com/blog/2023-global-crypto-adoption-index/)* by Chainanalysis, you’ll only see 3 Western democracies alongside Japan. The remaning 16 are either second, or third world countries. Endusers, or “retail”, in these countries most of the time are well-versed in the trade-offs among security, censorship and centralization.
 

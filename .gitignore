@@ -83,6 +83,7 @@ CLAUDE.md
 !src/content/**/*.md
 todos.md
 tasks.md
+todo-*.md
 reports/
 security-docs/
 incident-response/

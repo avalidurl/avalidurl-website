@@ -1,14 +1,14 @@
 ---
 title: "On Subscription Models in the Network States #001"
-description: "When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just pai..."
+description: "When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just paid for a monthly rent for a dublex condo in a state-of-the-art building partially glimpsing at Bospho"
 publishDate: 2023-10-15
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "data"]
+tags: ["finance", "technology", "data", "web3", "art"]
 category: "finance"
 featured: false
 readingTime: 5
-excerpt: "When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just pai..."
-originalUrl: "https://gokhan.substack.com/p/on-subscription-models-in-the-network"
+excerpt: "When you pay for Parsechttps://parsec.fi/r/gokhan, Nansenhttps://pro.nansen.ai/, Messarihttps://messari.io/, and a couple of others just for analytics on a monthly basis, you have just paid for a..."
+originalUrl: "https://gokhan.substack.com/p/on-subscription-models-in-the-network-states-001"
 ---
 
 When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just paid for a monthly rent for a dublex condo in a state-of-the-art building partially glimpsing at Bosphorus, or Golden Horn at best.
@@ -27,10 +27,10 @@ Anyways, this post is haphazard, and turns out to be about a meta-premium subs a
 
 Recently, I did a simple survey on Surveycaster via [Ponder](https://www.weponder.io/) in [Warpcast](https://warpcast.com/), and asked the simple question:
 
-![](https://substack-post-media.s3.amazonaws.com/public/images/87ffaea0-4287-4b9a-a1b4-394185d79165_1230x1120.png)[LINK to the Survey](https://t.co/PDpDpOsIo6)
+[LINK to the Survey](https://t.co/PDpDpOsIo6)
 
 Although, I think there was not enough participants, I think the results are apparent that people want distributed network(ed) states with charter cities/ patchworks throughout existent systems—with preferably libertarianishly enough libertinely-incentivized hotspots of tribal merkless trees that might also make use of verkles tries—hi Patricia.
 
-![](https://substack-post-media.s3.amazonaws.com/public/images/aa874476-8469-4e44-8742-fbaa66a2d34a_1212x1366.png)13 people outta 21 wants a meta-aggregated network state services. I wonder if anyone would be willing to do a sort of an informal research/ survey with on the issue was my first shower-thought given my ultimate defeat against merciless arb bots on Manifold Markets—which is also why I just make mock and pataphysical surveys w/ prediction side like whether we'll ever have consensual bondage markets onchain by 2025.
+13 people outta 21 wants a meta-aggregated network state services. I wonder if anyone would be willing to do a sort of an informal research/ survey with on the issue was my first shower-thought given my ultimate defeat against merciless arb bots on Manifold Markets—which is also why I just make mock and pataphysical surveys w/ prediction side like whether we'll ever have consensual bondage markets onchain by 2025.
 
 Yet, what people want in the long term in my opinion an abstract network state option that can handle peoples' IRL needs for citizenship/ denizenship, the right of travel, and all the necessary infrastructure and services payment/ subscription management pools of some sort that can alleviate the burden of manual and 1000-plateaux-like premium management that are currently but mediocre. If a quotidian daily life management for an independent researcher individual is thus costly—it'd be only be a single hypershitcoinized art work flip back in 2022, and we would not be here, here is to the death of over-financialized art markets well, just joking, I think overleveraging of art markets by traditionally contemporaneous establishment galleries and art hausen via web3 will help us all to be able to see the artwork that have been buried under their basement collection one day; I think, we will first see Life Subscription Models before DAO Security Systems. Anyways. Have a nice day.

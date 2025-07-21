@@ -1,19 +1,19 @@
 ---
 title: "PLAYLIST #5"
-description: "This post was initially [conceived on my Mirror weblog](https://gokhan.mirror.xyz/jaB2xrwnS4V6jW4J4Iu6q7ZlWQ55b1lR_PeGvVrSdl8) in July 2022. It can be collected as an edition of 1 for 1 ETH on Optimis..."
+description: "This post was initially [conceived on my Mirror weblog](https://gokhan."
 publishDate: 2024-01-04
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "data"]
+tags: ["finance", "crypto", "technology", "data", "web3"]
 category: "finance"
 featured: false
-readingTime: 9
-excerpt: "This post was initially [conceived on my Mirror weblog](https://gokhan.mirror.xyz/jaB2xrwnS4V6jW4J4Iu6q7ZlWQ55b1lR_PeGvVrSdl8) in July 2022. It can be collected as an edition of 1 for 1 ETH on Optimis..."
+readingTime: 10
+excerpt: "This post was initially conceived on my Mirror webloghttps://gokhan.mirror.xyz/jaB2xrwnS4V6jW4J4Iu6q7ZlWQ55b1lR_PeGvVrSdl8 in July 2022. It can be collected as an edition of 1 for 1 ETH on..."
 originalUrl: "https://gokhan.substack.com/p/playlist-5"
 ---
 
 This post was initially [conceived on my Mirror weblog](https://gokhan.mirror.xyz/jaB2xrwnS4V6jW4J4Iu6q7ZlWQ55b1lR_PeGvVrSdl8) in July 2022. It can be collected as an edition of 1 for 1 ETH on Optimism.
 
-## **0x-GM.**
+## 0x-GM.
 
 Dear reader,
 
@@ -29,17 +29,19 @@ As I delve deeper in the nature that which musicians, creatives, developers, and
 
 I say “mainstreet” in that there have been NFTs that focused on the sound aspects of the overall composition somehow, and they are more of the nerd street (later on this in another piece).
 
-## **Delirious EVM**
+## Delirious EVM
 
-**If Manhattan is still in search of a theory, then this theory, once identified, should yield a formula for an architecture that is at once ambitious *****and***** popular.**
-
-**Manhattan has generated a shameless architecture that has been loved in direct proportion to its defiant lack of self-hatred, respected exactly to the degree that it went too far.**
-
-**Manhattan has consistently inspired in its beholders *****ecstasy about architecture*****.**
-
-**In spite — or perhaps because — of this, its performance and implications have been consistently ignored and even suppressed by the architectural profession.**
-
-***[delirious new york](https://www.oma.com/publications/delirious-new-york)***** (1978[1994]), Rem Koolhaas**
+>
+> **If Manhattan is still in search of a theory, then this theory, once identified, should yield a formula for an architecture that is at once ambitious *****and***** popular.**
+>
+> **Manhattan has generated a shameless architecture that has been loved in direct proportion to its defiant lack of self-hatred, respected exactly to the degree that it went too far.**
+>
+> **Manhattan has consistently inspired in its beholders *****ecstasy about architecture*****.**
+>
+> **In spite — or perhaps because — of this, its performance and implications have been consistently ignored and even suppressed by the architectural profession.**
+>
+> ***[delirious new york](https://www.oma.com/publications/delirious-new-york)***** (1978[1994]), Rem Koolhaas**
+>
 
 Above block-quote is off [Koolhaas](https://www.oma.com/partners/rem-koolhaas)’ ‘78 book in which he attempts at *procuring* a theory for Manhattan. A theory of Manhattan is strictly, in his writing, tied to an “*exploitation of congestion*.”
 
@@ -59,15 +61,17 @@ It all feels good.
 
 Here, one needs to pay respect to all those musicians who were minting art coming with locked audio files, or direct audio files—where supported—before all this frenetic influx of musical creatives unto the chain.
 
-## **Any Piece of Contract (2022)**
+## Any Piece of Contract (2022)
 
 As you turn the 38th page in [Pauline Oliveros](https://paulineoliveros.us/about.html)’ *[Deep Listening: A Composer’s Sound Practice](https://books.google.com.tr/books/about/Deep_Listening.html?id=yzL3QjZpFoUC&redir_esc=y)* (2005), a relieving header welcomes you: “Any Piece of Music (1980).” She notes,
 
-**Everyone answers the following questions in as many ways as possible:**
-
-**1) If you could write any piece of music, what would you write? Assume that no kind of restraint exists, i.e. time, money, existence of resources or technology etc.**
-
-**2) How would you achieve it?**
+>
+> **Everyone answers the following questions in as many ways as possible:**
+>
+> **1) If you could write any piece of music, what would you write? Assume that no kind of restraint exists, i.e. time, money, existence of resources or technology etc.**
+>
+> **2) How would you achieve it?**
+>
 
 The “solution” to such questions is of infinite scales even when the media that is home to that music faces scalability problems—at least, in our not so technologically advanced day.
 
@@ -89,7 +93,7 @@ The ownership economy indicates sets of asset classes, and information flow teth
 
 …whereby we come to critique yesterday and today’s tracks on this rugged cassette player of ours. After all, if Ethereum [mempool](https://explorer.blocknative.com/?v=1.32.1&0=ethereum&1=main) is a [dark forest](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest), so is the sense of community through it. One needs to be better at bushcraft of smart contracts so that communities won’t rug either themselves, or individuals.
 
-## **Billy Bultheel — Songs for the Contract #001**
+## Billy Bultheel — Songs for the Contract #001
 
 I encountered Bultheel’s audio-visual, and utterly spatial, music performance nonfungibles whilst I was digging across the marketplaces with the stern dedication of the cast-out astronaut in *Factorio*. *Songs for the Contract* was deployed under Folia, a [Bin Berlin](https://www.bin.am/) project that deploys (personally speaking) very intriguing works that play with the primitives of smart contracts and the media tethered thereabouts—just as the way net dot art primitives, and early conceptual artists played with whatever media available by any media available.
 
@@ -103,7 +107,7 @@ This piece is truly sitting in a smart contract. Verbose music nerd critique of 
 
 [https://www.folia.app/works/10/10000001](https://www.folia.app/works/10/10000001)
 
-## **EulerBeats—Genesis LP #01**
+## EulerBeats—Genesis LP #01
 
 I vividly recall the day EulerBeats released. I also recall that I murmured to myself that maybe I should “print” one of these for less than an ether. A couple of days in and Cuban decides to cause the Genesis LP #01 to pump up to 50 ethers at one point. The logic was logical:
 

@@ -1,22 +1,22 @@
 ---
 title: "Photon Shower Thoughts 01"
-description: "Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter e..."
+description: "Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead."
 publishDate: 2020-11-02
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "culture"]
+tags: ["finance", "crypto", "art"]
 category: "finance"
 featured: false
 readingTime: 4
-excerpt: "Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter e..."
+excerpt: "Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter..."
 originalUrl: "https://gokhan.substack.com/p/photon-shower-thoughts-01"
 ---
 
 Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter exchange of ideas, I came to state the following:
-@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays. \n\nThere are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.\n\nGlad we buy 'their' tokens.","username":"gigabvgatti","name":"gokhan.eth","date":"Thu Oct 29 23:43:54 +0000 2020","photos":[],"quoted_tweet":{},"retweet_count":0,"like_count":2,"expanded_url":{},"video_url":null,"belowTheFold":false}">![Twitter avatar for @gigabvgatti](https://substackcdn.com/image/twitter_name/w_96/gigabvgatti.jpg)gokhan.eth @gigabvgatti@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays. 
+@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays. \n\nThere are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.\n\nGlad we buy 'their' tokens.","username":"gigabvgatti","name":"gokhan.eth","date":"Thu Oct 29 23:43:54 +0000 2020","photos":[],"quoted_tweet":{},"retweet_count":0,"like_count":2,"expanded_url":{},"video_url":null,"belowTheFold":false}">gokhan.eth @gigabvgatti@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays.
 
 There are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.
 
-Glad we buy 'their' tokens.[11:43 PM ∙ Oct 29, 2020](https://twitter.com/gigabvgatti/status/1321960986610458628)
+Glad we buy 'their' tokens.[11:43 PM ∙ Oct 29, 2020](<TwitterEmbed id="1321960986610458628" />
 Yup, that is how I see it. More on this later. Simply, I believe defi as an evolutionary dating economy between humans and singularity. Not on a theorygram plane though.
 
 ## Now, let’s focus on my photon shower today:
@@ -33,7 +33,7 @@ Such motives, individuals and the like are abundant on the scene of that which i
 
 They are toxic, and they are not doing good in the name of the clusters, or communities which they represent in the expanded constellation of Crypto Art—believe me David, I also want to call them nations however I am still trying to understand whether that Nation analogy on the Bankless is Yarvinian or not. Then, I will find a middle way, mate.
 
-Why word salad, you might ask, and I will answer that it is not a salad. If that is a salad for you, then you have a very short attention span, and no gusto. 
+Why word salad, you might ask, and I will answer that it is not a salad. If that is a salad for you, then you have a very short attention span, and no gusto.
 
 ## Types of resenttiment to which we are already accustomed thereabouts
 
@@ -49,7 +49,7 @@ Why word salad, you might ask, and I will answer that it is not a salad. If that
 
 Frendinos, you are all homo sapiens, and have been going through an evolution for all of your “timelines,” the last 3000 years of which has been trying to build upon the Late Bronze Age collapse, and all you can do is to prolong the drama.
 
-Get over with it. That drama will be here as long as we will be fighting against entropy. Decentralized finance is negentropic, and a ladder up to a higher level of evolution for our species. 
+Get over with it. That drama will be here as long as we will be fighting against entropy. Decentralized finance is negentropic, and a ladder up to a higher level of evolution for our species.
 
 Accordingly, everything on the ecosystem is somehow connected even though multi-chain constellations have just started to emerge.
 

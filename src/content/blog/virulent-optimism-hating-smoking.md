@@ -1,13 +1,15 @@
 ---
 title: "Virulent Optimism: Hating Smoking"
-description: "*This post was first conceived on [Mirror](https://gokhan.mirror.xyz/cB8Cv4DORfCjydCsw3uwNPkQhUS-e08GYK_BxrO8e0U). *"
+description: "This post was first conceived on [Mirror](https://gokhan."
 publishDate: 2023-10-17
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "data"]
-category: "finance"
+tags: ["crypto", "web3", "art", "writing"]
+category: "crypto"
 featured: false
-readingTime: 12
-excerpt: "*This post was first conceived on [Mirror](https://gokhan.mirror.xyz/cB8Cv4DORfCjydCsw3uwNPkQhUS-e08GYK_BxrO8e0U). *"
+readingTime: 13
+excerpt: "This post was first conceived on Mirrorhttps://gokhan.mirror.xyz/cB8Cv4DORfCjydCsw3uwNPkQhUS-e08GYK_BxrO8e0U. 
+
+You can also find a Paragraph version herehttps://paragraph.xyz/@gokhan/virulent-optimis..."
 originalUrl: "https://gokhan.substack.com/p/virulent-optimism-hating-smoking"
 ---
 
@@ -15,7 +17,7 @@ originalUrl: "https://gokhan.substack.com/p/virulent-optimism-hating-smoking"
 
 *You can also find a Paragraph version [here](https://paragraph.xyz/@gokhan/virulent-optimism?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71).*
 
-## **You can quit it.**
+## You can quit it.
 
 **Comment**
 
@@ -27,9 +29,11 @@ I stood there amongst about 60 people on a cul-de-sac in front of this space, an
 
 Yet, that evening, I was just kind of agitated, my heart was pounding, and all I wanted was to run amock across a wet field full of bioluminiscent floræ all the way down to the Antarctic waters so that I could cold plunge. I could not. All I could do was to greet a couple of people, and pound two large cans of lager.
 
-'Twas because of smoking. Smoking agitates, and tire thy already weary heart especially you are a sporty type. Hence, none shall smoke even in the most libertarian patchwork since that very charter city will eventually lose subscriptions, that is, citizens.
+>
+> 'Twas because of smoking. Smoking agitates, and tire thy already weary heart especially you are a sporty type. Hence, none shall smoke even in the most libertarian patchwork since that very charter city will eventually lose subscriptions, that is, citizens.
+>
 
-## **I quit, and smoked it for 3 weeks again for aught.**
+## I quit, and smoked it for 3 weeks again for aught.
 
 I quit smoking on the 7th of May in 2022. Up until that moment, I had tried twice for serious durations, respectively, 5 and 6 months. Those times were the best times, and seeking a way to totally quit smoking and alcohol consumption, I just happened to enter a smol gym, and registred that day. As I was thinking that I’d be having my last single malt, soft cigarettes, I was sipping a cup of espresso doppio at 10 a.m. at a nearby coffee shop in the neighbourhood.There a kitten plunged his nails into my right arm, it bleeded, and since in societies like mine, there are zagillion stray animals around, and warning against rabies on foreign embassy websites plus the park next to the coffee shop where there are at least 100 cats in residence—you all watched the cat flute guy—I wanted not to leave it to chance and headed for the nearest public hospital since such vaxx such as that of rabies can only be found in certain health institutions and private ones are not amongst them.
 
@@ -47,7 +51,9 @@ It only took me a decade to realize that smoking is an idiot’s fashion of copi
 
 Yesterday, there was a thread of thoughts by Aella under which an individual commented as thus:
 
-[helpful additional information: the qualia of it for the typical practitioner isn’t like stubbing your toe, it’s like taking a deep drag of your first cigarette of the day. relaxing, centering, relief. this is why it becomes habit and/or escalates](https://https//twitter.com/alicemazzy/status/1714010928214368712)
+>
+> [helpful additional information: the qualia of it for the typical practitioner isn’t like stubbing your toe, it’s like taking a deep drag of your first cigarette of the day. relaxing, centering, relief. this is why it becomes habit and/or escalates](https://https//twitter.com/alicemazzy/status/1714010928214368712)
+>
 
 This is true. Some friends who enjoy the over-oxygenated Alpine downstream luxurious lives thanks to their success in behavioral markets might not agree by postulating that a well-rolled and rare cigar won’t do harm. I can understand them but I have already passed that threshold. It becomes so well especially you train like Spartan death racers 6 days a week for a year. In the meantime, by February 2023, I was down to 195 lbs (88 kg.) with a strong core, and only some leftover visceral fat that is still burning as I am burning and building at the same time because of a kidney stone that is still in me. All crystalline. The last time I tried cross-fit, I dropped an undetected one and for 8 hours straights I was yelling at home that noone should come near me, and that THERE IS NO PAIN. Those stones are also result of almost lifelong smoking and heavy drinking during the lockdown period.
 
@@ -55,7 +61,7 @@ I was superb, I made a mistake, I smoked. It was neither libertine nor hedonisti
 
 Some of you will be visiting Istanbul the next month for both [ZuConnect Istanbul 2023](https://zuzalu.city/) and [Devconnect Istanbul 2023](https://devconnect.org/), and will understand what I mean by open air ashtrays. I see that some of you are already dealing with it during jogs and runs. People keep asking whether Istanbul is safe because of an upsetting conflict 2000 km. away. Yes, it is safer than many European capitals. But it is not safe for your lungs—at least for the time being. Yet, we are lucky there are woods, coastal areas, and skyscraper tops to alienate ourselves at the end of a long day.
 
-## **Smoking is self-harm.**
+## Smoking is self-harm.
 
 Smoking is a sort of a prolonged self-asyphixation. Had you not ever even puffed a drag, stay the fuck away from it. When you are hooked into the habit, you start to live in a parallel universe simulation which is worse than even the most low polygonal betaverse that airdrops scammy tokens to your public addy.
 
@@ -65,7 +71,7 @@ Today was the 6th month, and I went in for a tomography again—my doctor assuri
 
 My last smoking is mainly due to anxiety that I yielded from this sub-acute (hyper)thyroidits which turned my life into a hell for about 45 days where I was always sweating, or having fevers, and it was as if I was being beaten by 333 techno vikings at the same time at all times when it comes to muscle soreness. Tomorrow, I am doing a check-up visit for that end, too. But, I started smoking about 21 days ago because of this and my own feebleness in aspiration. Now, I am trying to get it together again.
 
-## **Smoking alienates you.**
+## Smoking alienates you.
 
 I was there at that Ethereum event where I was agitated to the degree that I just kept torturing myself with cigarettes because I had already been seeking for an excuse to smoke all day, and I found one—I was already smoking! I just got agitated there, I had to drink two beers to relieve the mind but it got even worse so I was alone there in my own mind whilst trying to know people.
 
@@ -73,7 +79,7 @@ Smoking alienates you from your surroundings if you have ever tried to quit it o
 
 GitHub CoPilot is trying to finish the above statement in this HackMD workspace in VSCode that we are not there yet but we might in the third quarter of 21th century. Good boi.
 
-## **Let’s Meet in Istanbul.**
+## Let’s Meet in Istanbul.
 
 I was very irritated at myself when I realized that I did not even know anyone from the Zuzalu City network who could have tipped in about Vitalik’s [attempts](https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/) at new forms of conviviality and governance. I was happy that David from Bankless covered the events as I was delving into on a personal Einsenhover matrix of matrices into biotechnology and longevity DAOs—even though I have been speculating on these stuff as a former Humanities scholar.
 

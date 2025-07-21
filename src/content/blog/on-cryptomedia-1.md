@@ -3,23 +3,21 @@ title: "On CryptoMedia #1"
 description: "Initial thoughts on Palmer's $ESSAY community funding, Zora and Mirror."
 publishDate: 2021-01-29
 author: "Gokhan Turhan"
-tags: ["art", "technology", "crypto", "culture", "writing"]
-category: "art"
+tags: ["crypto", "art", "writing"]
+category: "crypto"
 featured: false
 readingTime: 3
-excerpt: "![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/72e8684b-5df5-4556-8fab-c722c4098701_3840x2880.jpeg)"
+excerpt: "It seems that any non-German media lab scholar needs to scale their analytical skills nowadays when it comes onto the existence of digital objects—precisely, the immutable ones. I once penned a..."
 originalUrl: "https://gokhan.substack.com/p/on-cryptomedia-1"
 ---
 
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/72e8684b-5df5-4556-8fab-c722c4098701_3840x2880.jpeg)
-
-It seems that any non-German media lab scholar needs to scale their analytical skills nowadays when it comes onto the existence of digital objects—precisely, the immutable ones. I once penned a dissertation that is but an unconditionally accelerationist Seinfeld episode where I just wanted those 5D laser disks on the Starman’s Roadster to be tokenized forever. Here, imagine you can easily time-travel by means of minting your desired body unto the $yBODY vaults around Andromeda paragalactic chain. Jokes aside, of which I am utterly serious, lately there have been happening exciting, and practical, developments with regards to myriad media and writing on the Ethereum blockchain. No, it is not a generalization. 
+It seems that any non-German media lab scholar needs to scale their analytical skills nowadays when it comes onto the existence of digital objects—precisely, the immutable ones. I once penned a dissertation that is but an unconditionally accelerationist Seinfeld episode where I just wanted those 5D laser disks on the Starman’s Roadster to be tokenized forever. Here, imagine you can easily time-travel by means of minting your desired body unto the $yBODY vaults around Andromeda paragalactic chain. Jokes aside, of which I am utterly serious, lately there have been happening exciting, and practical, developments with regards to myriad media and writing on the Ethereum blockchain. No, it is not a generalization.
 
 As a self-acknowledging creative, I have been trying to lay out a product roadmap for my very own private Idaho-like composable non-fungible novel with its own tokenomics, and deflationary textuality in tandem with network demand.
 
-…and, as a cursed former academic, I am good at research. Yes, I am that guy who read each and every single piece on anything over the entire Ethereum network. Non-fungible tokenomics has been my habilitation into the real world application of useless academic theories since the late April 2020. 
+…and, as a cursed former academic, I am good at research. Yes, I am that guy who read each and every single piece on anything over the entire Ethereum network. Non-fungible tokenomics has been my habilitation into the real world application of useless academic theories since the late April 2020.
 
-Hence, remember not a generalization, I am always after scalable platforms for digital media objects. No, it is not about the community. The community as a swarm, or a slime mould trying to find their route to the flat monolith of the negative feedback mechanism is always there, and they only want to verify nowadays. Otherwise, Andre is always right about governance. Almost early Exit > Voice. Voice regarding, for instance, DAOs is in fact a way to exit from that which we call ourselves.  
+Hence, remember not a generalization, I am always after scalable platforms for digital media objects. No, it is not about the community. The community as a swarm, or a slime mould trying to find their route to the flat monolith of the negative feedback mechanism is always there, and they only want to verify nowadays. Otherwise, Andre is always right about governance. Almost early Exit > Voice. Voice regarding, for instance, DAOs is in fact a way to exit from that which we call ourselves.
 
 Sorry, being a bit loquacious here. IMHO, a couple of minutes ago, I partook in one of the most meaningful crowdfund campaign in my wee life. I just bought 10 $ESSAY. No, really, I do not see it as a mid-term low-cap scalping opportunity. Everyone has their share in the game of life on the chain, and I am obsessed with the preservation of digital objects for eternity, which in turn will help us simply become immortal, and we can rejoice in the inter-galactick feast under the supervision of Good Ole de Grey.
 
@@ -28,8 +26,8 @@ What Zora (yes my dear DevoLand degens, it is the other Zora) and Mirror are doi
 [Zora](https://zora.engineering/) 🌜🌞🌛   is simply a [cryptomedia](https://cryptomedia.wtf/) [engineering] platform. [Mirror](https://mirror.xyz/), on the other hand, is about to become the best thing to befall writing at large since GPT-3. Sorry guys, it was Rimbaud’s his own choice to become the lord of exotic goods. Tokenized writings. Simply put. Indices of the Passover from Oral to Written to the Starlinked (no, not Blockstream Satellite Signal TG group, but may be a couple of Urbit stars as Libraries of Tlön?)
 
 Well, I am already excited about a probable invitation to Mirror, and John Palmer has been crowdfunding the $ESSAY Scissor Labels. Neat conceptualization thereabouts. I think you all should check it, and fund it.
-![Twitter avatar for @viamirror](https://substackcdn.com/image/twitter_name/w_96/viamirror.jpg)Mirror @viamirrorLIVE NOW.
+Mirror @viamirrorLIVE NOW.
 
 The first community-owned essay is being crowdfunded on Ethereum.
 
-[![Crowdfund: $ESSAY - Mirror.xyz crowdfunding experiment](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/350cd87b-d17a-4b33-b216-8823ec63a7e9_2400x1340.jpeg)j.mirror.xyzCrowdfund: $ESSAYA new experiment begins today: using crypto to crowdfund the next essay I'm writing, titled Scissor Labels.](https://j.mirror.xyz/uVGCCwwm3k341lPpxaJmHTZROESVse9Pe_rmbiuUAC0)[10:38 PM ∙ Jan 28, 202177Likes16Retweets](https://twitter.com/viamirror/status/1354921716078751746)
+[j.mirror.xyzCrowdfund: $ESSAYA new experiment begins today: using crypto to crowdfund the next essay I’m writing, titled Scissor Labels.](https://j.mirror.xyz/uVGCCwwm3k341lPpxaJmHTZROESVse9Pe_rmbiuUAC0)[10:38 PM ∙ Jan 28, 202177Likes16Retweets](<TwitterEmbed id="1354921716078751746" />

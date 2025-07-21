@@ -1,17 +1,21 @@
 ---
-title: "Reading Sufficient Decentralization for Social Networks by Srinivasan"
-description: "This post was originally conceived on my [Paragraph](https://paragraph.xyz/@gokhan/sufficient-decentralization) blog, and then reproduced in [Mirror](https://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd..."
+title: "Reading \"Sufficient Decentralization for Social Networks\" by Srinivasan"
+description: ">
+> This post was originally conceived on my [Paragraph](https://paragraph."
 publishDate: 2023-07-03
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "data"]
+tags: ["finance", "crypto", "data", "web3", "writing"]
 category: "finance"
 featured: false
-readingTime: 4
-excerpt: "This post was originally conceived on my [Paragraph](https://paragraph.xyz/@gokhan/sufficient-decentralization) blog, and then reproduced in [Mirror](https://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd..."
-originalUrl: "https://gokhan.substack.com/p/reading-sufficient-decentralization"
+readingTime: 5
+excerpt: ">
+> This post was originally conceived on my Paragraphhttps://paragraph.xyz/@gokhan/sufficient-decentralization blog, and then reproduced in Mirrorhttps://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd40Q..."
+originalUrl: "https://gokhan.substack.com/p/reading-sufficient-decentralization-for-social-networks-by-srinivasan"
 ---
 
-This post was originally conceived on my [Paragraph](https://paragraph.xyz/@gokhan/sufficient-decentralization) blog, and then reproduced in [Mirror](https://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd40QmnL6gtbN4oknxLgM) web3log, and [Medium](https://0xgokhan.medium.com/reading-sufficient-decentralization-for-social-networks-by-srinivasan-a97f27b87fb6).
+>
+> This post was originally conceived on my [Paragraph](https://paragraph.xyz/@gokhan/sufficient-decentralization) blog, and then reproduced in [Mirror](https://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd40QmnL6gtbN4oknxLgM) web3log, and [Medium](https://0xgokhan.medium.com/reading-sufficient-decentralization-for-social-networks-by-srinivasan-a97f27b87fb6).
+>
 
 Now that people are flocking to Farcaster protocol, that is a sufficiently decentralized protocol upon which users have control over their own data whereas developers can build their own applications without any limitation by an intermediary, it is sort of an obligation to read the *[Sufficient Decentralization for Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks)* by Varun Srinivasan, one of the protocol builders.
 

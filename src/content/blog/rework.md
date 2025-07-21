@@ -3,43 +3,45 @@ title: "Rework"
 description: "I've read a book."
 publishDate: 2024-06-25
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "culture"]
-category: "finance"
+tags: ["crypto", "technology", "web3", "art", "writing"]
+category: "crypto"
 featured: false
 readingTime: 7
-excerpt: "If you studied anything literary at college, you may be suffering from one of the worst so-called *professional* deformations: You just do not like to read books in full anymore."
+excerpt: "If you studied anything literary at college, you may be suffering from one of the worst so-called professional deformations: You just do not like to read books in full anymore.
+
+If you have a double..."
 originalUrl: "https://gokhan.substack.com/p/rework"
 ---
 
-If you studied anything literary at college, you may be suffering from one of the worst so-called *professional* deformations: You just do not like to read books in full anymore. 
+If you studied anything literary at college, you may be suffering from one of the worst so-called *professional* deformations: You just do not like to read books in full anymore.
 
-If you have a double literary degree, this deformation make its way into a lot of cultural domains, too—especially if you are holding a master of arts in comparative literature. 
+If you have a double literary degree, this deformation make its way into a lot of cultural domains, too—especially if you are holding a master of arts in comparative literature.
 
-I do hold a bachelor of arts degree in American Culture and Literature—i'd basically term it Cultural American Studies—alongside an MA in Comparative Literature. For the former, we were not required to hand in a dissertation. Instead, we had to prepare a term work for each senior year class we did take—in my case, it was around 7 classes as far as I recall. I became entangled with experimental American poetics. It was around late Noughties and early 2010s. Hence, I was able to communicate with many of the literary figures I liked, or deemed significant thanks to Blogger, Facebook, Tumblr, and Twitter. The self-publishing even without small presses movements were scorching the scene and the New York Times was discovering the cult of Tao Lin—I like his prose to this day, sorry not sorry. 
+I do hold a bachelor of arts degree in American Culture and Literature—i'd basically term it Cultural American Studies—alongside an MA in Comparative Literature. For the former, we were not required to hand in a dissertation. Instead, we had to prepare a term work for each senior year class we did take—in my case, it was around 7 classes as far as I recall. I became entangled with experimental American poetics. It was around late Noughties and early 2010s. Hence, I was able to communicate with many of the literary figures I liked, or deemed significant thanks to Blogger, Facebook, Tumblr, and Twitter. The self-publishing even without small presses movements were scorching the scene and the New York Times was discovering the cult of Tao Lin—I like his prose to this day, sorry not sorry.
 
 This period was important in that our reading experience was also getting fractionalized across emergent social layer "user interfaces". All that you read was, and still is, a de facto whole, an entirety with or without RSS. Simply, you are always only reading a single book. Your reading-writing experiences are bespoke, and singular. It is similar to the current (block)chain abstraction protocolizations. Wow such words.
 
 Then, I studied the comparative literature one after a couple of years' break. I was into archives, then buzz of media labs, and the speculative methods for archival maintenance—that's how I also landed on the Ethereum Yellow Paper, and all these current storage debates. I penned a dissertation on the preservation of born-digital literary objects, and games—wow, such words again. I got my degree as top of class—it's ridiculously hard to make that much of a degree in literary classes, believe me or not, and I closed the academic page.
 
-Something befell my understanding of reading thereabouts. I just could not finish any fictional work. Many of the non-fiction works were also relevant in fragments. The reading process became of a patch-working action by itself. The notes got scattered across myriad UIs and products ranging from Drive, Dropbox, Evernote, Slack, Discord, Telegram, Roam Research, Obsidian, Notion, Coda, Cryptpad, MS Word. It was merely notes. 
+Something befell my understanding of reading thereabouts. I just could not finish any fictional work. Many of the non-fiction works were also relevant in fragments. The reading process became of a patch-working action by itself. The notes got scattered across myriad UIs and products ranging from Drive, Dropbox, Evernote, Slack, Discord, Telegram, Roam Research, Obsidian, Notion, Coda, Cryptpad, MS Word. It was merely notes.
 
 It's as if the academy conditions one to pursue a never-ending research process of qualitative dead ends. One day, I realized that I just was not reading at all, and "scraping".
 
-The very center and function of fine letters had forced me not to communicate. I assume it was because of this reason that I tried to communicate in the most rambunctious style probable across again Medium, Substack, Paragraph, Mirror, and a couple of others. 
+The very center and function of fine letters had forced me not to communicate. I assume it was because of this reason that I tried to communicate in the most rambunctious style probable across again Medium, Substack, Paragraph, Mirror, and a couple of others.
 
 Let me break it to you: This is not the work of a mid of the curve rails of a brain. This is just the condition any qualitative researcher, especially in Humanities, is forced into. Realizing these, I started a rework of my own a couple of years ago.
 
 The details of this rework is rather long. Here is the brief:
 
-I started to teach myself everything blockchain at the niché and protocol level design quarters, everything user-experience, and everything basic programming languages. Currently, I am a senior researcher and intern of my own at home on a freelance basis trying to conceive the next big thing that is not a ridiculous card game upon a layer 3 distributed ledger technology solution. 
+I started to teach myself everything blockchain at the niché and protocol level design quarters, everything user-experience, and everything basic programming languages. Currently, I am a senior researcher and intern of my own at home on a freelance basis trying to conceive the next big thing that is not a ridiculous card game upon a layer 3 distributed ledger technology solution.
 
 The search for peers has lately led me to an indispensably long hours across the Farcaster and some certain nichés of X all the while I am trying to run, bootstrap, incentivize a platitude of communities which will never hold true to their essence because everyone is now a venture capitalist who knows anything better than anyone ever. Indeed, there are true *groves* but those are rare to encounter and join.
 
-All the while probing my way as a lonesome Mars Rover in some certain edge of the European continent which is never Europe according to many, I am also trying to create a meaningful and practical workflow for myself which many would again call mid-curve. It's just that I have many experiential routes and pruning them currently. Lately, I realized I had to export the project management into a *container* that is separate from Roam Research where I take daily disorderly notes; Obsidian where I type long posts; and I came across the thing that I had come across when I was first trying to make sense of programming: Ruby on Rails. 
+All the while probing my way as a lonesome Mars Rover in some certain edge of the European continent which is never Europe according to many, I am also trying to create a meaningful and practical workflow for myself which many would again call mid-curve. It's just that I have many experiential routes and pruning them currently. Lately, I realized I had to export the project management into a *container* that is separate from Roam Research where I take daily disorderly notes; Obsidian where I type long posts; and I came across the thing that I had come across when I was first trying to make sense of programming: Ruby on Rails.
 
-Then, I started to do some research on 37signals—not because of the fact that 37 is my lucky number [sic] but owing to the fact that DHH does LeMans; Campfire looked nice; and, indeed I wanted to try Basecamp as that standalone separate project manager—I know I can do all of these on a simple file-over-app git flow. What you do not get is that I need to understand the evolutionary forces behind the user-experience (UX). 
+Then, I started to do some research on 37signals—not because of the fact that 37 is my lucky number [sic] but owing to the fact that DHH does LeMans; Campfire looked nice; and, indeed I wanted to try Basecamp as that standalone separate project manager—I know I can do all of these on a simple file-over-app git flow. What you do not get is that I need to understand the evolutionary forces behind the user-experience (UX).
 
-I am already hooked but on the mid-curve whisperer book *[Rework](https://www.amazon.com/Rework-Jason-Fried/dp/0307463745?ccs_id=f0b20e19-96bd-4650-9145-a51814561b00)*, which is a title even older than (2010) some Solidity-only devs. Do not misread me. Jason Fried and David Heinemeier Hansson are the ones who whisper. The whispered are the clueless who might beach anytime while trying to go full sovereign individual. 
+I am already hooked but on the mid-curve whisperer book *[Rework](https://www.amazon.com/Rework-Jason-Fried/dp/0307463745?ccs_id=f0b20e19-96bd-4650-9145-a51814561b00)*, which is a title even older than (2010) some Solidity-only devs. Do not misread me. Jason Fried and David Heinemeier Hansson are the ones who whisper. The whispered are the clueless who might beach anytime while trying to go full sovereign individual.
 
 Crypto-economics and its vaporwave variants have a lot of clueless people who build crucial infrastructure. By vaporwave, I do mean about the ever-emergent sub-sectors that change titles like chameleon. Chameleons are cute. But, boring funnels without any verticals are boring.
 

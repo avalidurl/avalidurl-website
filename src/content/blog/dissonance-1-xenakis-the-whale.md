@@ -1,17 +1,17 @@
 ---
 title: "Dissonance 1: Xenakis the Whale"
-description: "[Embedded content: https://player.vimeo.com/video/532723955?autoplay=0]"
+description: " It has always been easy to contemplate on the inefficiencies of the markets."
 publishDate: 2021-04-03
 author: "Gokhan Turhan"
-tags: ["finance", "art"]
+tags: ["finance"]
 category: "finance"
 featured: false
 readingTime: 1
-excerpt: "[Embedded content: https://player.vimeo.com/video/532723955?autoplay=0]"
+excerpt: "It has always been easy to contemplate on the inefficiencies of the markets. Alloyed minds thought that human behavior had nothing to do with that which was the market.
+
+They thought an efficient..."
 originalUrl: "https://gokhan.substack.com/p/dissonance-1-xenakis-the-whale"
 ---
-
-[Embedded content: https://player.vimeo.com/video/532723955?autoplay=0]
 
 # It has always been easy to contemplate on the inefficiencies of the markets. Alloyed minds thought that human behavior had nothing to do with that which was the market.
 

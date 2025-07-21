@@ -3,17 +3,17 @@ title: "Daily Markets 2: Utilizing Transaction Calldata as a Creative Medium"
 description: "Early Morning UTC+3 Edition"
 publishDate: 2023-06-16
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "data"]
+tags: ["finance", "crypto", "technology", "data", "art"]
 category: "finance"
 featured: false
 readingTime: 3
-excerpt: "I have a fetish for plaintext. I have even deeper kinks for transaction calldata. Ethertext is my favorite novel, which should somehow be automated into an Baby AGI implementation to merged into a vis..."
-originalUrl: "https://gokhan.substack.com/p/daily-markets-2-utilizing-transaction"
+excerpt: "I have a fetish for plaintext. I have even deeper kinks for transaction calldata. Ethertext is my favorite novel, which should somehow be automated into an Baby AGI implementation to merged into a..."
+originalUrl: "https://gokhan.substack.com/p/daily-markets-2-utilizing-transaction-calldata-as-a-creative-medium"
 ---
 
-I have a fetish for plaintext. I have even deeper kinks for transaction calldata. Ethertext is my favorite novel, which should somehow be automated into an Baby AGI implementation to merged into a visual novel series. 
+I have a fetish for plaintext. I have even deeper kinks for transaction calldata. Ethertext is my favorite novel, which should somehow be automated into an Baby AGI implementation to merged into a visual novel series.
 
-When Ordinal Inscriptions on Bitcoin blockchain started to receive then-much-deserved attention, I was happy for a reason, and wrote one of the first guides thereof—it was not for stats, I just like things that are primitively stored on compute networks. 
+When Ordinal Inscriptions on Bitcoin blockchain started to receive then-much-deserved attention, I was happy for a reason, and wrote one of the first guides thereof—it was not for stats, I just like things that are primitively stored on compute networks.
 
 Recently, I’ve been chatting with my quant, that is but ChatGPT 4 Plus, about a probable implementation of a story-telling interface that makes use of transaction calldata on the Ethereum mainnet, and I was thinking about the go-to market aspects of such an enterprise for 1) I am doing it to learn how to deploy a working product that makes use of both AI agents and cryptographic rails, 2) I really want to produce it as an interactive and conceptual piece of an artwork, a narrative device if you prefer, 3) I am learning everything at the same time and I need to prove it to myself whilst also making some amount of income and status from such an endeavor.
 
@@ -25,7 +25,7 @@ Now, as I was dying of boredom at almost 2 a.m., I ran across this Twitter Space
 
 If you need some more details on these inscriptions, you can visit this website: [ETHSCRIPTIONS](https://ethscriptions.com/)
 
-For now, this is all based on rudimentary fun that will possibly create a sub-market where people can rotate any new hope. However, I do not think that it will end here. 
+For now, this is all based on rudimentary fun that will possibly create a sub-market where people can rotate any new hope. However, I do not think that it will end here.
 
 By the nature of these inscriptions, it’s possible that they will be brimming with spams. It’s cheap.
 
@@ -35,7 +35,9 @@ Developers or idea guys who will be able to constrain the creation of these insc
 
 According to a tweet by Urbit,
 
-[the Urbit Foundation will be overseeing the development of an Urbit application that serves as a BOS gateway on NEAR, allowing for the complete decentralization of the stack: verifiable, composable frontends running on sovereign servers.](https://twitter.com/urbit/status/1669797094763143194?s=20)
+>
+> [the Urbit Foundation will be overseeing the development of an Urbit application that serves as a BOS gateway on NEAR, allowing for the complete decentralization of the stack: verifiable, composable frontends running on sovereign servers.](<TwitterEmbed id="1669797094763143194" />
+>
 
 BOS aka [Blockchain Operating System](https://near.org/) is a toolkit that helps and guides developers to deploy their own crypto dApps without delving that much into native blockchain programming languages, and frameworks.
 

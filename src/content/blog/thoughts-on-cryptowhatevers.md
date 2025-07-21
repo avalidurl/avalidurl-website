@@ -1,13 +1,13 @@
 ---
 title: "Thoughts on CryptoWhatevers"
-description: "The year is 2020. Everything is art. Isn’t it the motto behind which we have already been playing hide-and-seek since since a couple of current rock stars detonated the post-modernism crack in the mid..."
+description: "The year is 2020. Everything is art. Isn’t it the motto behind which we have already been playing hide-and-seek since since a couple of current rock stars detonated the post-modernism crack in the middle of the latest functioning Humanities ball room? That must be the reason why everything passes as"
 publishDate: 2021-01-18
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "culture"]
-category: "finance"
+tags: ["crypto", "technology", "art"]
+category: "crypto"
 featured: false
 readingTime: 2
-excerpt: "The year is 2020. Everything is art. Isn’t it the motto behind which we have already been playing hide-and-seek since since a couple of current rock stars detonated the post-modernism crack in the mid..."
+excerpt: "The year is 2020. Everything is art. Isn’t it the motto behind which we have already been playing hide-and-seek since since a couple of current rock stars detonated the post-modernism crack in the..."
 originalUrl: "https://gokhan.substack.com/p/thoughts-on-cryptowhatevers"
 ---
 
@@ -17,7 +17,7 @@ Some people have better networks, and affiliated marketing makes them millionair
 
 It is again alright. People are “early adapters” and they shall make that fiat to which they are against. I am not that much against fiat because of my geographical location. Here, I need fiat. Many of those web 2.0/ 3.0 fin-tech apps, and their cards do not operate, and people think of every bull-run as compromised by mere gold. BTC? Gold. ETH? Gold. XRP? Gold. LINK? Must be gold somewhere.
 
-I really like the idea of new-comers’ becoming mavericks of non-fungible flipping. Some become degens, more honest ones. Yet, what I hate is the discourse. It is usually not at all different from the woke capitalist identity-crisis camps. 
+I really like the idea of new-comers’ becoming mavericks of non-fungible flipping. Some become degens, more honest ones. Yet, what I hate is the discourse. It is usually not at all different from the woke capitalist identity-crisis camps.
 
 Plus, they boo our beloved Ethereum blockchain—that which to come unto Bitcoin infrastructure from the future, that is our beloved present—whenever global demand spikes gas prices, and they demand us to become the bitches of other zombie chains since they now only can mint, and sell there. Aye, they are free. But, calling the real chain they’ve been devouring upon “shit” when they can’t nab some blunt? Not good.
 

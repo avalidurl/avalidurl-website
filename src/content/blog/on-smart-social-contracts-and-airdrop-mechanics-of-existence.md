@@ -1,19 +1,19 @@
 ---
 title: "On Smart Social Contracts, and Airdrop Mechanics of Existence."
-description: "If the sextenary star formation is your unit of time measurement in determining when to airdrop, it means that you use IRL methods of existence to determine a base layer of users who are usually at al..."
+description: "If the sextenary star formation is your unit of time measurement in determining when to airdrop, it means that you use IRL methods of existence to determine a base layer of users who are usually at all times on-chain emergent networks, and constellations thereabouts."
 publishDate: 2021-12-09
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "culture", "writing"]
-category: "finance"
+tags: ["writing"]
+category: "writing"
 featured: false
 readingTime: 1
-excerpt: "If the sextenary star formation is your unit of time measurement in determining when to airdrop, it means that you use IRL methods of existence to determine a base layer of users who are usually at al..."
-originalUrl: "https://gokhan.substack.com/p/on-smart-social-contracts-and-airdrop"
+excerpt: "If the sextenary star formation is your unit of time measurement in determining when to airdrop, it means that you use IRL methods of existence to determine a base layer of users who are usually at..."
+originalUrl: "https://gokhan.substack.com/p/on-smart-social-contracts-and-airdrop-mechanics-of-existence"
 ---
 
 If the sextenary star formation is your unit of time measurement in determining when to airdrop, it means that you use IRL methods of existence to determine a base layer of users who are usually at all times on-chain emergent networks, and constellations thereabouts. Do not let the pseudo-NRx definitions of tribes—or basically, those of the contemporaneous woke, who are just the same with the former—fool you that people are conditioned to be dumber through each interaction they have on-chain.
 
-Wut means? It means that you are not planting a digital and NON-NON-FUNGIBLE tree of life on some paid App on your beauteous device (no, it’s not an extension. It is our species who are the extension). 
+Wut means? It means that you are not planting a digital and NON-NON-FUNGIBLE tree of life on some paid App on your beauteous device (no, it’s not an extension. It is our species who are the extension).
 
 Now, rather than serving the non-upgradable social contract at intervals since you are afraid of behavioral economics; you just should try to compose a contract, or even a novel language thereof, to insert that which might help you balance the local knowledge problem.
 

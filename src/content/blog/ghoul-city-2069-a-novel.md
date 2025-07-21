@@ -3,15 +3,17 @@ title: "GHOUL CITY 2069: A Novel"
 description: "PRESALE"
 publishDate: 2020-11-02
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "data"]
+tags: ["finance", "crypto", "defi", "data", "art"]
 category: "finance"
 featured: false
 readingTime: 4
-excerpt: "![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/2d0488b5-03fd-422c-8018-3bd2a1b46ba7_640x426.gif)TL;DR: I AM BASICALLY OFFERING 10 SEATS AS SHARES AS CHARS IN..."
+excerpt: "TL;DR: I AM BASICALLY OFFERING 10 SEATS AS SHARES AS CHARS IN AN UPCOMING NOVEL OF MINE WITH TOKENOMICS OF ITS OWN IN EXCHANGE OF $ETH 1 EACH.
+
+This post was first was published on..."
 originalUrl: "https://gokhan.substack.com/p/ghoul-city-2069-a-novel"
 ---
 
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/2d0488b5-03fd-422c-8018-3bd2a1b46ba7_640x426.gif)TL;DR: I AM BASICALLY OFFERING 10 SEATS AS SHARES AS CHARS IN AN UPCOMING NOVEL OF MINE WITH TOKENOMICS OF ITS OWN IN EXCHANGE OF $ETH 1 EACH.
+TL;DR: I AM BASICALLY OFFERING 10 SEATS AS SHARES AS CHARS IN AN UPCOMING NOVEL OF MINE WITH TOKENOMICS OF ITS OWN IN EXCHANGE OF $ETH 1 EACH.
 
 This post was first was published on [Medium](https://gigabvgatti.medium.com/ghoul-city-2069-a-novel-f3ecd483b586), then [Cent](https://beta.cent.co/goekhanturhan/+fjd8y7), now here.
 
@@ -25,9 +27,7 @@ I have been creating memenomics aka non-fungibles that comment on the evolutiona
 
 You may find related links to my profiles here, including my OpenSea verified *DECIMALS* store, and verified Rarible account: [https://linktr.ee/degen](https://linktr.ee/degen)
 
-# **Wut iz GHOUL CITY 2069?**
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/95a404e8-b309-4c04-ad49-e95c9b17536e_640x446.gif)
+# Wut iz GHOUL CITY 2069?
 
 No, it is not another sandbox resource management game that aims to moonbeam poor critters into the skies by forlornly Herculean meta-duties. It is a novel that will be published in June, 2021 at the earliest.
 
@@ -37,7 +37,7 @@ As aforementioned, I am creative who is obsessed with story-rich realities, in t
 
 *[The year 2020](https://gokhan.substack.com/p/1992-part-1)* is but a hypno-spatial reality VR Headset game released in the year of 1994. Mainly, our day, the DeFi “summer” will be at play here.
 
-# **So, you are basically selling a novel on the chain?**
+# So, you are basically selling a novel on the chain?
 
 Kinda. However, “by purchasing the NFT” [as above] so below at the end of this text, you will be granted access to a core community of characters who will be shaping the frame story together for the next 3 months upon the sale of the entire edition 10/10.
 
@@ -45,7 +45,9 @@ Each of the first 10 collectors will be characterized in the novel aka immortali
 
 PLUS, there is an innate tokenomics game to be played here. The first 10 collectors, and I myself will be designing a token that will be representing the novel whose liquidity pool will be locked for 169 years.
 
-***TOKENOMICS?***
+>
+> ***TOKENOMICS?***
+>
 
 I have several models in mind. First of all, the tokenomics of the novel will be a low cap one. Supply will be 69 ever to exist. Yes, $BASED vibes.
 
@@ -61,11 +63,11 @@ Liquidity will be locked for 169 years.
 
 I have always wanted to utilized evolutionary financial technologies and their side “affects” such as tokenomics are narrative devices is all. So, rn I am basically selling shares as character per $ETH 1. It does not guarantee a multisig, however, you will be one of the elders within the novel itself, and have a say as to how it is to be shaped. More details to come forth hereabouts soon. Stay tuned. If you wanna buy the NFT now….
 
-# **REWIND**
+# REWIND
 
 Yes, first 10 collectors, and the subsequent presale buyers each will be also be dropped a GumRoad, or Patreon link for a digital edition. Also, there will be an arrangement to make sure that the very same contributors will be sent a physical copy of the novel with even more airdrops physically engraved therein.
 
-# **OK, SO YOU NEED $ETH 10 to jumpstart?!**
+# OK, SO YOU NEED $ETH 10 to jumpstart?!
 
 Yes, I do.
 

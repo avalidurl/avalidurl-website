@@ -1,17 +1,19 @@
 ---
 title: "Web3 Marketing #5"
-description: "Respect others."
+description: " Respect Others
+
+Respecting others do not mean that you need to comply with their impractical, or cringe ideas at one point."
 publishDate: 2024-01-05
 author: "Gokhan Turhan"
-tags: ["finance", "crypto"]
-category: "finance"
+tags: ["crypto"]
+category: "crypto"
 featured: false
 readingTime: 1
-excerpt: "Respect others."
+excerpt: "Respect Others
+
+Respecting others do not mean that you need to comply with their impractical, or cringe ideas at one point. The worst can be that you can share a stage during a crypto conference...."
 originalUrl: "https://gokhan.substack.com/p/web3-marketing-5"
 ---
-
-Respect others.
 
 # Respect Others
 

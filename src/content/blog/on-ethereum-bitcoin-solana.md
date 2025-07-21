@@ -3,15 +3,15 @@ title: "On Ethereum, Bitcoin, Solana"
 description: "This post was originally published on my current newsletter Concepts Network."
 publishDate: 2024-11-08
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology"]
+tags: ["finance", "crypto", "technology", "web3"]
 category: "finance"
 featured: false
-readingTime: 1
-excerpt: "This post was originally published on my current newsletter Concepts Network. As it's getting more chaotic to reach a myriad of newsletter network islands that come in the form of Substack, X Ar..."
+readingTime: 2
+excerpt: "This post was originally published on my current newsletter Concepts Network. As it’s getting more chaotic to reach a myriad of newsletter network islands that come in the form of Substack, X..."
 originalUrl: "https://gokhan.substack.com/p/on-ethereum-bitcoin-solana"
 ---
 
-This post was originally published on my current newsletter Concepts Network. As it's getting more chaotic to reach a myriad of newsletter network islands that come in the form of Substack, X Articles, Paragraph and Mirror especially for the Farcaster protocol, Medium for the so-called crypto out-groups, and LinkedIn for the bizness side; I have decided to migrate to Ghost. I'll keep using others, too, occassionally for the network reach.
+This post was originally published on my current newsletter Concepts Network. As it’s getting more chaotic to reach a myriad of newsletter network islands that come in the form of Substack, X Articles, Paragraph and Mirror especially for the Farcaster protocol, Medium for the so-called crypto out-groups, and LinkedIn for the bizness side; I have decided to migrate to Ghost. I’ll keep using others, too, occassionally for the network reach.
 
 But you can **[subscribe](https://concepts.network/on-ethereum-bitcoin-solana/)** here, and yes it will always be free.
 

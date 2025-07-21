@@ -3,12 +3,20 @@ title: "#Ordinals Commissioner Galleries and R&D Team Proposal"
 description: "This is a pure shower-thought that I in actual type as I am kind of having chills because of the harsh Winter wind outside next to a window in my living-room whilst having a good mornt coffee."
 publishDate: 2023-02-09
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "data"]
+tags: ["finance", "crypto", "defi", "technology", "data"]
 category: "finance"
 featured: false
-readingTime: 6
-excerpt: "Nothing essential happens in the absence of noise."
-originalUrl: "https://gokhan.substack.com/p/ordinals-commissioner-galleries-and"
+readingTime: 7
+excerpt: "Nothing essential happens in the absence of noise.
+
+—Jacques Attalihttps://www.upress.umn.edu/book-division/books/noise
+
+ Briefing
+
+ 0. An Introductory Mumblecore that You are Obliged to Read.
+
+👍..."
+originalUrl: "https://gokhan.substack.com/p/ordinals-commissioner-galleries-and-rd-team-proposal"
 ---
 
 Nothing essential happens in the absence of noise.
@@ -23,13 +31,13 @@ Nothing essential happens in the absence of noise.
 
 Up until recently, [echo chambers and epistemic bubbles](https://www.cambridge.org/core/journals/episteme/article/abs/echo-chambers-and-epistemic-bubbles/5D4AC3A808C538E17C50A7C09EC706F0) across **primary**, and righteously **primeval**, **blockchain-based networks** such as *Ethereum*, and *Bitcoin* repeatedly had fought a **kindergarten fog of war** on *artistic*, *cultural*, and *financial* tranches of our [lil’evolution](https://scholar.google.com.tr/citations?view_op=view_citation&hl=tr&user=ln3SfRcAAAAJ&citation_for_view=ln3SfRcAAAAJ:u5HHmVD_uO8C) on an *idea and prophesy markets* *level*, and in its *volatile soirées*—which was nice to have ridden as a sentiment bazaar of daily longs and shorts 🧸.
 
-According to my calculations, and transparent **blockspace and mempool** data through the **dark ocean** 🕳️ of what’s left of that slimy *dark* mempool *forest *🖤, we have neither efficient nor behavioral markets. 
+According to my calculations, and transparent **blockspace and mempool** data through the **dark ocean** 🕳️ of what’s left of that slimy *dark* mempool *forest *🖤, we have neither efficient nor behavioral markets.
 
 `🫠 All that jazz we are left with is pure retarded marketsᵀᴹ. 🫠`
 
 In **retarded markets**, value-extractors condescendingly assert, and have a dogmatically firm belief in, that they know what is best for the petri dish that *they think* any society **is** whilst calling `a sample size of millions` of participants a *community*.
 
-They are also not alone in their pursuit of artificial truth hence pro-grifters that paved the ramshackle bistros of both on- and off-chain low-rider casinos have already re-written the history of mainnet BTC non-fungibles, and started to run user-friendly block-container pawn-shops that protrude the rarest high school MFA class incantations that think Pynchon was a Luddite in all aesthetics. 
+They are also not alone in their pursuit of artificial truth hence pro-grifters that paved the ramshackle bistros of both on- and off-chain low-rider casinos have already re-written the history of mainnet BTC non-fungibles, and started to run user-friendly block-container pawn-shops that protrude the rarest high school MFA class incantations that think Pynchon was a Luddite in all aesthetics.
 
 `Have you seen what they have done to Curve and Etherscan’s UI? I blame these guys.`
 
@@ -39,11 +47,11 @@ They are also not alone in their pursuit of artificial truth hence pro-grifters 
 
 These guys are busy trying to rent and tax that which Inscriptions promises in ugly aesthetics of the cringest liquidity feast, and I do not blame them. I can only blame those who cannot uphold the potential of *Bitcoin* NFTs to the level of “art and beauty” during the medieval ages reverberations of importance across the chainverse.
 
-No, I ain’t trad. 
+No, I ain’t trad.
 
-No, it does not matter whether you believe in either art in finance, or finance in art, or finance as art, or art as finance. 
+No, it does not matter whether you believe in either art in finance, or finance in art, or finance as art, or art as finance.
 
-*I have already minted this beauty. GTFO my appropriated property. During the last week, we saw how parochial minded individuals, and groups of people (not collectives, collectives have a vision, and a mission) ferociously negated by means of pre-mature criticism this fresh breath of life into the larger mainnet ecosystems thanks to Inscriptions* via *Ordinals* protocol on the mainnet Bitcoin.
+I have already minted this beauty. GTFO my appropriated property. During the last week, we saw how parochial minded individuals, and groups of people (not collectives, collectives have a vision, and a mission) ferociously negated by means of pre-mature criticism this fresh breath of life into the larger mainnet ecosystems thanks to *Inscriptions* via *Ordinals* protocol on the mainnet Bitcoin.
 
 …flash forward to today, or if you are arriving from the future, rewind thereunto, we have retarded myopias from all sides that make fun of spreadsheets, OTCs, that are but primitive agoras, and forums of information exchange just similar to their almost no-code mess spaghetti of platforms that cannot even function at the lightest RPC overload.
 
@@ -57,7 +65,7 @@ Upgrading does not necessarily mean that we need to have the latest *Webflow* UI
 
 I for one am intrigued, and lured into these digital objects, just because of the way they work. They are inscribed unto satoshis, and Inscriptions can hold other assets than an NFT, which can be or maybe should not be called NFTs. However, it does not matter.
 
-At the moment, the successiveness of first-in-first-out order of UTXOs offers us such a conceptual wireframe over which constrain-based artistic processes could be applied. 
+At the moment, the successiveness of first-in-first-out order of UTXOs offers us such a conceptual wireframe over which constrain-based artistic processes could be applied.
 
 **For example, what the fuck is a collection?**
 
@@ -65,12 +73,9 @@ At the moment, the successiveness of first-in-first-out order of UTXOs offers us
 
 A collection, a curator, and a collector walks into a bar, and they have only one torso. Depeche Mode plays in the background:
 
-[The handshake seals the contract
-From the contract, there's no turning back
-The turning point of a career
-In Korea being insincere
-The holiday was fun-packed
-The contract still intact](https://www.youtube.com/watch?v=CzqqVFb9p4U)
+>
+> [The handshake seals the contractFrom the contract, there's no turning backThe turning point of a careerIn Korea being insincereThe holiday was fun-packedThe contract still intact](<YouTubeEmbed id="CzqqVFb9p4U" />
+>
 
 They ask for a regular Talisker 10. A DeFi degen usually gulps down a Talisker 10 on a regular day. Yet this fancy bar only offers stale cheap blend that they sell for a Japanese single malt. It’s raining outside, a Monsoon of **de**hydration in financial terms if you prefer, and you are forced to pound the shot.
 

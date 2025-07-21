@@ -1,7 +1,7 @@
 ---
 title: "Investment Concepts #1"
 description: "I am suspicious af of projects claiming to be \"giving it back to the users.\" They usually are funded by VCs who really have zero clue to the underlying infra, and the phase of innovation in a given field."
-publishDate: 2024-06-20
+publishDate: 2025-06-20
 author: "Gokhan Turhan"
 tags: ["finance", "data"]
 category: "finance"

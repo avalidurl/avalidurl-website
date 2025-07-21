@@ -1,33 +1,33 @@
 ---
 title: "On Consumer Crypto #01"
-description: "Paragraph version | X version | CoLinks version | Mirror version"
+description: "[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | [X version](<TwitterEmbed id=\"1808846330048967019\" /> | [CoLinks version](https://colinks.coordinape.com/post/1422974) | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_in"
 publishDate: 2024-07-04
 author: "Gokhan Turhan"
-tags: ["finance", "art"]
+tags: ["finance", "crypto", "web3", "art", "writing"]
 category: "finance"
 featured: false
-readingTime: 3
-excerpt: "Paragraph version | X version | CoLinks version | Mirror versionConsumer crypto needs consumers. Sorry, I have called it crypto instead of weeb3. You cannot isolate the internet to your needs. However..."
+readingTime: 4
+excerpt: "Paragraph versionhttps://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71 | X version<TwitterEmbed id=\"1808846330048967019\" /> | CoLinks..."
 originalUrl: "https://gokhan.substack.com/p/on-consumer-crypto-01"
 ---
 
-[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | [X version](https://x.com/0xgokhan/status/1808846330048967019) | [CoLinks version](https://colinks.coordinape.com/post/1422974) | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_inh8c5JKdylaskAIjTFcjBBU1unlQQ?referrerAddress=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71)
+[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | [X version](<TwitterEmbed id="1808846330048967019" /> | [CoLinks version](https://colinks.coordinape.com/post/1422974) | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_inh8c5JKdylaskAIjTFcjBBU1unlQQ?referrerAddress=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71)
 
 Consumer crypto needs consumers. Sorry, I have called it crypto instead of weeb3. You cannot isolate the internet to your needs. However, you can help the constituent existing systems that make internet what it is to integrate emergent culturally revolutionary pipelines. See enduser oriented payment rails. Average user friendly wallets such as Clave or Daimo. Or, rather more pro rails such as Rabby or Frame. They all have their own specific bases who will always be there.
 
-There will always be devs producing for devs, devs procuring for the masses as well. We are all consumers. However, infantalizing the notion of consumer/ client is only good at making people hate crypto even more. Study how Chainlink teams help institutions get onboard. You will not be able to convince masses in a developing country to let go off their CEXBank equation which perfectly works as even a bottleneck. 
+There will always be devs producing for devs, devs procuring for the masses as well. We are all consumers. However, infantalizing the notion of consumer/ client is only good at making people hate crypto even more. Study how Chainlink teams help institutions get onboard. You will not be able to convince masses in a developing country to let go off their CEXBank equation which perfectly works as even a bottleneck.
 
-People have SOTA banks thereabouts that are better than first world ones. They can on and off ramp in seconds up to 8 figures. That's why these people also use decentralized finance, and utilize decentralized ownership economies' perks ranging from cultural events to art markets. You cannot force them to go bankless all the while promoting bank-like monoliths' rollups even though those monoliths are really pro and works like a charm but only for your own parochiality.
+People have SOTA banks thereabouts that are better than first world ones. They can on and off ramp in seconds up to 8 figures. That’s why these people also use decentralized finance, and utilize decentralized ownership economies’ perks ranging from cultural events to art markets. You cannot force them to go bankless all the while promoting bank-like monoliths’ rollups even though those monoliths are really pro and works like a charm but only for your own parochiality.
 
-You average enduser needs to be act beyond geoblocking and geolimits and you should come up with anything that are better than cosmetics. The weeb3 is about to go full France if we were to exemplify the situation by Taleb's recent [thread](https://x.com/nntaleb/status/1807735364204806416) on the country of France—I also have different ideas re: 2nd post in the thread but it's irrelevant to that thread in essence and this haphazard blogpost.
+You average enduser needs to be act beyond geoblocking and geolimits and you should come up with anything that are better than cosmetics. The weeb3 is about to go full France if we were to exemplify the situation by Taleb’s recent [thread](<TwitterEmbed id="1807735364204806416" /> on the country of France—I also have different ideas re: 2nd post in the thread but it’s irrelevant to that thread in essence and this haphazard blogpost.
 
-We focus on cosmetics a lot. I do detest that I need to employ the first person plural here. It's because people such as myself have always spoken against discrepancies in practice.
+We focus on cosmetics a lot. I do detest that I need to employ the first person plural here. It’s because people such as myself have always spoken against discrepancies in practice.
 
-We need to focus on what people really need and it's not only being able to push an ephemeral button to save their secrets to the cloud. It is not some glitter ephemera for we are not a hair metal band anymore.
+We need to focus on what people really need and it’s not only being able to push an ephemeral button to save their secrets to the cloud. It is not some glitter ephemera for we are not a hair metal band anymore.
 
 Financial rails, especially re: crypto/ web3, is how the rest of the world outside your echo and epistemological chambers are onboarded. Many lack knowledge of statistics re: SEA, EMEA, MENEA etc. here. Noone needs card games in those areas to get aboard. People hate it when omniscient narrators diss finance. People cannot use American CEXes hereabouts since they do not care about opening an office all the while gaslighting people that they should use this, public good fund that. Miss the point as much as you want. However, stop meddling with how people want to get onboarded, and how they want to use the crypto rails. You sound nothing but a nepotist despot most of the time all the while thinking you are a contributor.
 
-Are founders & VCs who are aware of these dimensions apt at evaluating the consumer grade crypto—whatever that means—better than the clueless ADHD-ridden 20-sth founders? No offence. The former usually end up taxing the entire day in the life of an ordinary 2nd and 3rd worlder on the time preferential dimension of the so-called "ownership economies". They are openly objecting to micro-transactions in games but it is also they themselves who are touting micro-incentives by which the average weeb3 user is turned into a click automaton the entire day. First phase is alright after all the user is exploring a novel economy, & enjoying the game. Then, the burnout usually starts to settle in a couple days. Gigabrains w/ mobile farms take over the network. It's because: 
+Are founders & VCs who are aware of these dimensions apt at evaluating the consumer grade crypto—whatever that means—better than the clueless ADHD-ridden 20-sth founders? No offence. The former usually end up taxing the entire day in the life of an ordinary 2nd and 3rd worlder on the time preferential dimension of the so-called "ownership economies". They are openly objecting to micro-transactions in games but it is also they themselves who are touting micro-incentives by which the average weeb3 user is turned into a click automaton the entire day. First phase is alright after all the user is exploring a novel economy, & enjoying the game. Then, the burnout usually starts to settle in a couple days. Gigabrains w/ mobile farms take over the network. It's because:
 
 — that the local currency tanking against USD does not necessarily mean the purchase power is higher with even such a stable foreign currency.
 

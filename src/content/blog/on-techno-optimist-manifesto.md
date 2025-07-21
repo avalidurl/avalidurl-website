@@ -3,11 +3,13 @@ title: "On Techno-Optimist Manifesto"
 description: "Individual Shower Thoughts"
 publishDate: 2023-10-19
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "crypto", "culture"]
+tags: ["finance", "crypto", "technology"]
 category: "finance"
 featured: false
 readingTime: 2
-excerpt: "*This piece has also be cross-posted to [Mirror](https://gokhan.mirror.xyz/9aaStSjUBWYc1vJXFG31wifIiR35YMJDG6IVTbk6RCo) on Optimism.*"
+excerpt: "This piece has also be cross-posted to Mirrorhttps://gokhan.mirror.xyz/9aaStSjUBWYc1vJXFG31wifIiR35YMJDG6IVTbk6RCo on Optimism.
+
+What do you people make of Marc's Techno-optimist..."
 originalUrl: "https://gokhan.substack.com/p/on-techno-optimist-manifesto"
 ---
 

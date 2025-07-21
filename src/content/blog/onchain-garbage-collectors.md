@@ -3,11 +3,11 @@ title: "Onchain Garbage Collectors"
 description: "both solana and base are full of garbage apps whereas the former also is a sandbox for financial and social coordination experiments."
 publishDate: 2024-11-17
 author: "Gokhan Turhan"
-tags: ["finance", "art", "technology", "data"]
+tags: ["finance", "crypto", "technology", "web3"]
 category: "finance"
 featured: false
-readingTime: 1
-excerpt: "both solana and base are full of garbage apps whereas the former also is a sandbox for financial and social coordination experiments. re: futarchy, off-protocol interventions etc. that is, it's self-s..."
+readingTime: 2
+excerpt: "both solana and base are full of garbage apps whereas the former also is a sandbox for financial and social coordination experiments. re: futarchy, off-protocol interventions etc. that is, it's..."
 originalUrl: "https://gokhan.substack.com/p/onchain-garbage-collectors"
 ---
 
