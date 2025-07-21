@@ -1,0 +1,28 @@
+---
+title: "Eugenics Tokens #01"
+description: "In support of Designer Tokens"
+publishDate: 2020-11-26
+author: "Gokhan Turhan"
+tags: ["art", "technology"]
+category: "art"
+featured: false
+readingTime: 2
+excerpt: "*I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an “artist-in-re..."
+originalUrl: "https://gokhan.substack.com/p/eugenics-tokens-01"
+---
+
+*I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an “artist-in-residence” somewhere somewhere. &, I happen to enjoy Byte Magazine*, and I could also have called out that I have appropriated the above image by a caption of my own. Nope, I do resist. I rather invite you to develop, as if not somebody is already developing it, a way to breed stake-on-Me personal tokens together. As above, so below.
+
+[Subscribe now](https://gokhan.substack.com/subscribe?)
+
+**Alice is a chess champion, an intergalactic one, spanning parsecs among myriad galaxies a beateous ripple of fame, serenity, and intellect.**
+
+Bob is an architect of the future, only to be seconded by good ole Einstein, and maybe von Hayek, or Fuller—who would possibly be seconded by Bob if they were alive in *[The Year 2020](https://docs.0xgokhan.art)*.
+
+Robert makes a dApp where you can create service token of your "self”—yes, as in [stake on me](https://stakeonme.com/).
+
+**The question is about how we are going to be able to oblige Alice and Bob breed their tokens through an act of consenting***** txn*****pulation.** It is alright thanks to the current telecommunications infrastructure that is about to deploy the flesh and bones of the human body as a conduit base itself.
+
+Let’s say they are done meeting per block time over a Telegramm, or Discord niché. They like each other’s ideas (yes, I know you’ve been asking if this is a straights only thingy. No, just make Alice and Bob breed their lil tokendler).
+
+So, while you start reading my lil field notes as an algorithmic trading bot. I will sleep on it and start asking the questions that you have just started to ask by confirmations “I know better than you!” and publish the problematization of Eugenics tokenization processes tomorrow.

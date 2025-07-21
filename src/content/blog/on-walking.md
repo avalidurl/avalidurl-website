@@ -1,0 +1,22 @@
+---
+title: "On Walking"
+description: "Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell sever..."
+publishDate: 2024-06-17
+author: "Gokhan Turhan"
+tags: ["technology", "culture", "writing"]
+category: "technology"
+featured: false
+readingTime: 1
+excerpt: "Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell sever..."
+originalUrl: "https://gokhan.substack.com/p/on-walking"
+---
+
+Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell several stories when you are walking. Either in reality or as tethered to a mental modality. Of Walking.
+
+I’ve been awake since the last 36 hours, and am not meaning to sleep yet. If you cannot walk the Asia Minor Roman lanes, you just go outside to buy a print-bound connoisseur mag. I went outside to buy one called Cornucopia. I heard the cornerstore buffet (we call them büfe) are not receiving any more issues.
+
+Since I could not find a copy of the mag in which there are photographs of Anatolian Rome, I now have to either keep myself busy with preconfirmations research or go serene by reading either on pre-Socratics—some sciences are just long-time gossip networks or humour during Roman times.
+
+No, I have already tidied up the house, done my first half-deep cleaning of the week, wasted at least 4 hours across some layer 2 dissolutions. If you feel like this, and if you are also stuck in a rather immobile metropolis, you dream of flying.
+
+I’ll just write about flying tomorrow.

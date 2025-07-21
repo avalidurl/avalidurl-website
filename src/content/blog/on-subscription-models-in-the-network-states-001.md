@@ -1,0 +1,36 @@
+---
+title: "On Subscription Models in the Network States #001"
+description: "When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just pai..."
+publishDate: 2023-10-15
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "data"]
+category: "finance"
+featured: false
+readingTime: 5
+excerpt: "When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just pai..."
+originalUrl: "https://gokhan.substack.com/p/on-subscription-models-in-the-network"
+---
+
+When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just paid for a monthly rent for a dublex condo in a state-of-the-art building partially glimpsing at Bosphorus, or Golden Horn at best.
+
+Once you add annual subs to [Bismarck](https://brief.bismarckanalysis.com/), [Palladium](https://www.palladiummag.com/), [ACT](https://www.astralcodexten.com/), and a couple of good ones like [Ribbon Farm](https://studio.ribbonfarm.com/), or [Razib Khan](https://www.razibkhan.com/)'s, which are more affordable; you can get a balcony option. If you insist on keeping the annual FT, WSJ, [Crunchbase](https://www.crunchbase.com/), [Tradingview](https://www.tradingview.com/gopro/?share_your_love=ggokhanturhann), and a couple of other algo-trading, and mempool watch API options not only for trading but also for building even simple public goods, bravo!, you are now renting an apartment in a smoller but more amicably elitish building either in Nişantaşı, or Bebek.
+
+Since I am kind of bored of the former, I'll go for Bebek. ...&, am not even talking about getting a chapel with Bloomberg Terminal but in Istanbul, it would only get you an average flat if you do not want to spend 6.9 hours per day in traffic. I have not even come to the point where you need several DAO tokens, and NFTs to access places like [SporkDAO](https://www.sporkdao.org/), [Developer DAO](https://www.developerdao.com/)—I like their models BTW, np—to be together with the builders, you will need a one time maintenance payment, or realtor cut, since Render unto Caesar. This is OK.
+
+But, you also want to be able to build your own products that are not vaporwave, and do in actual do a system wide effective good that can have impact on public goods, protocol research economics, core builders, decentralized IDs, storage, data preservation with scalable ends, accessible algotrading infra since larger [MEV](https://github.com/go-outside-labs/mev-toolkit) ecosystem do indeed create a competitive layers of both abstraction and substraction from whence incentivized individuals and team can resolve simple security and coordination problems for the average endusers for whom the entire system should be simplified on the surface without the smollest sense of friction. You aim to be on the road at all times as a digital nomad but you realize that you need to be applying to Visas with a developing world passport, which can be a hard process that is mentally, physically and financially costly at first, or even haphazardly, regardless of your skin color, or the etymology of your name. That's OK.
+
+I am not a homesick individual. I can live abroad perpetually en route—not a la Kerouac though, health matters—and, keep building, and pitching my ideas anywhere where I can connect to the gridless grid of internets' abstraction plane that is yet a Klein bottle—o yea, Curve, nice logo. It also costs another condo for X Blue, GitHub Pro, Gitbook, HackMD, ROAM Research, Obsidian, Notion, Discord, Telegram, Adobe Creative Studio, Ableton Live, Logic Pro, Endnote—Endnotes dudes and dudettes, I think your model is flawed when it comes to upgrades—, for your annual ENS names network maintenances—that's why I had to flip gokhan.eth months ago, one day I'll get it back.
+
+I do not even begin to tell you about my Gitcoin, Giveth, CLR rounds heartfelt obligation to donate. But once you wear a YSL pair of booths, people call you you names. OK, it does not matter. Congrats if you have made it so far, I like and I think you should come into our [Devcoffee](https://t.me/+sCGdzUEACdVmYjk0) TG group.
+
+Anyways, this post is haphazard, and turns out to be about a meta-premium subs a la network state models. It's a sort of early noon brainstorming about sutra-borders when it comes to systems and protocols compatibility at the compute level, such as simple flow of information and other values, and entities that might help us govern this sort of emergent (33 years as a unit) socio-economico-political layers of tribes, intents, claims, attestation, trust score.
+
+Recently, I did a simple survey on Surveycaster via [Ponder](https://www.weponder.io/) in [Warpcast](https://warpcast.com/), and asked the simple question:
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/87ffaea0-4287-4b9a-a1b4-394185d79165_1230x1120.png)[LINK to the Survey](https://t.co/PDpDpOsIo6)
+
+Although, I think there was not enough participants, I think the results are apparent that people want distributed network(ed) states with charter cities/ patchworks throughout existent systems—with preferably libertarianishly enough libertinely-incentivized hotspots of tribal merkless trees that might also make use of verkles tries—hi Patricia.
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/aa874476-8469-4e44-8742-fbaa66a2d34a_1212x1366.png)13 people outta 21 wants a meta-aggregated network state services. I wonder if anyone would be willing to do a sort of an informal research/ survey with on the issue was my first shower-thought given my ultimate defeat against merciless arb bots on Manifold Markets—which is also why I just make mock and pataphysical surveys w/ prediction side like whether we'll ever have consensual bondage markets onchain by 2025.
+
+Yet, what people want in the long term in my opinion an abstract network state option that can handle peoples' IRL needs for citizenship/ denizenship, the right of travel, and all the necessary infrastructure and services payment/ subscription management pools of some sort that can alleviate the burden of manual and 1000-plateaux-like premium management that are currently but mediocre. If a quotidian daily life management for an independent researcher individual is thus costly—it'd be only be a single hypershitcoinized art work flip back in 2022, and we would not be here, here is to the death of over-financialized art markets well, just joking, I think overleveraging of art markets by traditionally contemporaneous establishment galleries and art hausen via web3 will help us all to be able to see the artwork that have been buried under their basement collection one day; I think, we will first see Life Subscription Models before DAO Security Systems. Anyways. Have a nice day.

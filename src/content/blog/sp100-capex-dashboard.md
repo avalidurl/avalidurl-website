@@ -1,0 +1,28 @@
+---
+title: "SP100 Capex Dashboard"
+description: "When I was first involved with then-emergent DeFi scene in the summer of 2020 aka DeFi Summer, I was one of those kids in a Japanese grammar class who didn't know it was even better to learn Kana first."
+publishDate: 2024-07-16
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "data"]
+category: "finance"
+featured: false
+readingTime: 1
+excerpt: "When I was first involved with then-emergent DeFi scene in the summer of 2020 aka DeFi Summer, I was one of those kids in a Japanese grammar class who didn't know it was even better to learn Kana firs..."
+originalUrl: "https://gokhan.substack.com/p/sp100-capex-dashboard"
+---
+
+When I was first involved with then-emergent DeFi scene in the summer of 2020 aka DeFi Summer, I was one of those kids in a Japanese grammar class who didn't know it was even better to learn Kana first. You had the Anki, cheap Steam games, free nerd material all over the place.
+
+However, the art of dashboard making, data analysis etc. were totally alien to me as a speculative archivist with a qualitative background in American and comparative literature.
+
+In the heat of the now, I kept graduating from one sub-sector to another and over the years, I have started to appreciate what is usually termed as TradFi in the quantitative, technical, algorithmic and machine learning sides since it all is part of a thermo-dynamic cycle that utilize DeFi and its adjacent systems, too.
+
+One of the worst things about being a fully qualitative one is that it's even harder to master the art of coding, programming etc. by mere manual labor of Google search results.
+
+I can easily admit that having access first to base LLM models in consumer-facing UIs, and now via rather affordable coding agent flows thereof, have been revolutionary for myself.
+
+Today, I can build ultra-secure context-gardens that filter out the information sandbox I am exploring with the help of that which is arriving from the future. It is a practice, the side dishes of which could be turned into workable product prototypes either in the most FOSS or balanced proprietary sense possible.
+
+So, as I was reading about CapEx, and checking the documentation of a dozen data analytics platforms, and financial market terminals, I just wanted to build a simple website. Here it is:
+
+[https://sp500-capex.vercel.app/](https://sp500-capex.vercel.app/)

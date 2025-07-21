@@ -1,0 +1,32 @@
+---
+title: "On Techno-Optimist Manifesto"
+description: "Individual Shower Thoughts"
+publishDate: 2023-10-19
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "culture"]
+category: "finance"
+featured: false
+readingTime: 2
+excerpt: "*This piece has also be cross-posted to [Mirror](https://gokhan.mirror.xyz/9aaStSjUBWYc1vJXFG31wifIiR35YMJDG6IVTbk6RCo) on Optimism.*"
+originalUrl: "https://gokhan.substack.com/p/on-techno-optimist-manifesto"
+---
+
+*This piece has also be cross-posted to [Mirror](https://gokhan.mirror.xyz/9aaStSjUBWYc1vJXFG31wifIiR35YMJDG6IVTbk6RCo) on Optimism.*
+
+What do you people make of Marc's *[Techno-optimist Manifesto](https://a16z.com/the-techno-optimist-manifesto/)*?
+
+I think I have almost no problem with it. Finally, someone who has a real reach to many strata of myriad techno-political elites, workers, and the usual arbiters of thoughts like ourselves, name-drop some canonical definitions just to unify some lines of factions across the accelerationist, and even NRXs scene as tethered via network state quarters considering patchworking vistæ are more pluralistic when it comes to collectives' diversity in socio-political, if not economical, approach.
+
+People are making fun of him that he is using the Nick Land reference in an uninformed manner, and there is no way he could have read, for instance, Nick's ouevre, not excluding the Virulent Nihilism, which is a cringey point of view for myself. We can just go to the extent that he does not namedrop GNON.
+
+I think there are several factors at play here:
+
+~ People do not like to read a person who do not write like themselves when it comes to accelerationisms, techno-optimism, and the like.
+
+~ Others postulate that he cannot grasp the misery of millions who are kind of digital farm workers given that he is a wealthy tech individual.
+
+~ Some people just resent the fact that people like Marc are among the needed elite however you define the terms here.
+
+~ Some people just resent.
+
+Indeed, all of us lead lives full of suffering, success, misery, joy and myriad cases of mental, physical/ health-related and financial hardships. When, all of a sudden, among all these theorists, real builders, righteously right Subaltern, grassroots acceleration proponents, Bitcoin magis, and all other gnostics, a guy comes in and tries to address in unison to all of the camps that have rendered the latest leap in all tech fronts recently, which caused that real vibe-shift, and people think that their vision of the future is threatened. That's what I think and I really do not take any sides other than the wish to be able to contribute to open finance, open source, new forms of governance, ragequit/ exit based convivialities.

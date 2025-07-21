@@ -1,0 +1,32 @@
+---
+title: "Ten Reasons to Get Rich"
+description: "2024 CE edition"
+publishDate: 2024-07-02
+author: "Gokhan Turhan"
+tags: ["finance", "art", "data"]
+category: "finance"
+featured: false
+readingTime: 2
+excerpt: "You can eat clean, healthy and buy state-of-the-art kitchen utensils to make the best of your cooking not as a hobby but also almost a pro.You can access state-of-the-art basic health insurance from a..."
+originalUrl: "https://gokhan.substack.com/p/ten-reasons-to-get-rich"
+---
+
+You can eat clean, healthy and buy state-of-the-art kitchen utensils to make the best of your cooking not as a hobby but also almost a pro.
+
+You can access state-of-the-art basic health insurance from all providers ranging from the states to the private insurance markets.
+
+You can access on-demand health services to optimize your wetware, mental faculties, and predict a better future for yourself as tangential as it gets to the longevity escape velocity.
+
+You can own and rent real estate in myriad geographies ranging from Switzerland to Japan to the United States, and live in chartered communities with like minded people away from those who smoke in your face, knows no traffic rules, impose their own creed and culture on others, glorify noise and disrespect as freedom; and, thereby, having access to walkable smart and enough slow cities, and urban life, among the wonders of nature.
+
+You can live under a Moloch DAO variation where you subscribe to these services on purpose only to rage-quit when needed if the meta-passport this charter offers do not meet your demand for given services; and, freely experiment on the cultural evolution, behavioral markets, and forms of value exchange as long as the DAO is merits-based and hedge against any self-torpedo event at the financial scale.
+
+You can easily escape from the banality of masses where some figures might take despotism and nepotism to be the wisdom of crowds—which will enhance your living standards exponentially.
+
+You can enjoy clean common spaces where there are neither rabby-carrying stray animals nor high chances of cist haditic.
+
+You can make sure that anyone who is preparing food when you want to do eat out with your family or alone are as clean as you are and preparing the food because they like to prepare food.
+
+You can optimize fun.
+
+You can be yourself and provide best quality of life for your family.

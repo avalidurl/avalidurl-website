@@ -1,0 +1,44 @@
+---
+title: "Daily Markets 2: Utilizing Transaction Calldata as a Creative Medium"
+description: "Early Morning UTC+3 Edition"
+publishDate: 2023-06-16
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "data"]
+category: "finance"
+featured: false
+readingTime: 3
+excerpt: "I have a fetish for plaintext. I have even deeper kinks for transaction calldata. Ethertext is my favorite novel, which should somehow be automated into an Baby AGI implementation to merged into a vis..."
+originalUrl: "https://gokhan.substack.com/p/daily-markets-2-utilizing-transaction"
+---
+
+I have a fetish for plaintext. I have even deeper kinks for transaction calldata. Ethertext is my favorite novel, which should somehow be automated into an Baby AGI implementation to merged into a visual novel series. 
+
+When Ordinal Inscriptions on Bitcoin blockchain started to receive then-much-deserved attention, I was happy for a reason, and wrote one of the first guides thereof—it was not for stats, I just like things that are primitively stored on compute networks. 
+
+Recently, I’ve been chatting with my quant, that is but ChatGPT 4 Plus, about a probable implementation of a story-telling interface that makes use of transaction calldata on the Ethereum mainnet, and I was thinking about the go-to market aspects of such an enterprise for 1) I am doing it to learn how to deploy a working product that makes use of both AI agents and cryptographic rails, 2) I really want to produce it as an interactive and conceptual piece of an artwork, a narrative device if you prefer, 3) I am learning everything at the same time and I need to prove it to myself whilst also making some amount of income and status from such an endeavor.
+
+Anyways, during the gym-home-hackathon days of the last week, and other deeds such as diagramming + learning Solidity etc. whilst coping about the much dire aloneness of the recession we are in—you know, whatever you do to make people more joyous in the face of hardships, they’ll always prefer some addiction over a small chat with you, I put that idea aside in my GPT chats alongside some clusters of notes in the ROAM Research.
+
+## ETHSCRIPTIONS
+
+Now, as I was dying of boredom at almost 2 a.m., I ran across this Twitter Spaces where they are discussing “ethscriptions.” Somebody finally decided to deploy a front end, and also a guide to register data to individual Ethereum transactions.They are currently inscribing punks under the moniker [Ethereum Punks](https://ethereumpunks.net/). There is a front end for the punks here.
+
+If you need some more details on these inscriptions, you can visit this website: [ETHSCRIPTIONS](https://ethscriptions.com/)
+
+For now, this is all based on rudimentary fun that will possibly create a sub-market where people can rotate any new hope. However, I do not think that it will end here. 
+
+By the nature of these inscriptions, it’s possible that they will be brimming with spams. It’s cheap.
+
+Developers or idea guys who will be able to constrain the creation of these inscriptions with modified smart contracts, we’ll see better artistic acts especially when it comes to story-telling.
+
+## Near on Urbit
+
+According to a tweet by Urbit,
+
+[the Urbit Foundation will be overseeing the development of an Urbit application that serves as a BOS gateway on NEAR, allowing for the complete decentralization of the stack: verifiable, composable frontends running on sovereign servers.](https://twitter.com/urbit/status/1669797094763143194?s=20)
+
+BOS aka [Blockchain Operating System](https://near.org/) is a toolkit that helps and guides developers to deploy their own crypto dApps without delving that much into native blockchain programming languages, and frameworks.
+
+Urbits users and organizations have already [deployed](https://urbit.org/ecosystem?type=applications) self-hosted versions of several popular crypto/ DeFi/ NFTs dApps and marketplaces such as OpenSea, Osmosis, Safe, Uniswap alongside myriad Urbit native apps.
+
+For those who are interested native *blockchain-related* development suites across Urbit vistæ, I suggest you check [Zorp](https://twitter.com/ZorpZK) and [Uqbar Network](https://twitter.com/uqbarnetwork), too.

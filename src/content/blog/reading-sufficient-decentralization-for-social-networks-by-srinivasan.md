@@ -1,0 +1,66 @@
+---
+title: "Reading Sufficient Decentralization for Social Networks by Srinivasan"
+description: "This post was originally conceived on my [Paragraph](https://paragraph.xyz/@gokhan/sufficient-decentralization) blog, and then reproduced in [Mirror](https://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd..."
+publishDate: 2023-07-03
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "data"]
+category: "finance"
+featured: false
+readingTime: 4
+excerpt: "This post was originally conceived on my [Paragraph](https://paragraph.xyz/@gokhan/sufficient-decentralization) blog, and then reproduced in [Mirror](https://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd..."
+originalUrl: "https://gokhan.substack.com/p/reading-sufficient-decentralization"
+---
+
+This post was originally conceived on my [Paragraph](https://paragraph.xyz/@gokhan/sufficient-decentralization) blog, and then reproduced in [Mirror](https://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd40QmnL6gtbN4oknxLgM) web3log, and [Medium](https://0xgokhan.medium.com/reading-sufficient-decentralization-for-social-networks-by-srinivasan-a97f27b87fb6).
+
+Now that people are flocking to Farcaster protocol, that is a sufficiently decentralized protocol upon which users have control over their own data whereas developers can build their own applications without any limitation by an intermediary, it is sort of an obligation to read the *[Sufficient Decentralization for Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks)* by Varun Srinivasan, one of the protocol builders.
+
+What is **sufficient decentralization** though? Don't we have that which is decentralization already? Firstly, according to the Srinivasan, there are three requirements for decentralization to work:
+
+`— the ability to claim a unique username`
+
+`— to post messages under and from that name`
+
+`— to read from any valid name`
+
+These enable two separate peers to find, and communicate with, each other despite any attempt by the network at preventing them by any means available. This is only probable by means of client diversity if we are so to speak of a sufficient decentralization that genuinely provides the space and channels of freedom for these peers.
+
+`That is to say, sufficient decentralization is when these conditions are met so that noone can deny any other parties' will and right to communicate, that is, transact any value or information amongst themselves.`
+
+DogApp banned you? Our friend Zebra Cat has been working on this client upon the same protocol where you can continue your almost-real but most definitely virtual social life.
+
+However, in an age where social networks consume and produce petabytes of data, it is extremely, at least currently, to scale up decentralized social networks. Herein, as Srinivasan notes, one feels the need to state that decentralization is not necessarily that each and every bit of information should be accessible to all on a transparent public blockchain.
+
+**Wut means?**
+
+— Storing, maintaining and retrieving that much data purely onchain is almost impossible in our day, and would probably would eat up the entire blockspace market where we would be paying 6.9K per a message
+
+Hence, while the technical infrastructure of the social network clients can be architectured on a centralized hub, users can still own their own username and data where it only takes a signature to exit from one client into another one.
+
+— We are talking about "socials" in an age where people are intimidated and threatened over a tweet that wrote twenty years ago, or it's just that people change minds, have different ideas or drunk-tweet and just want to be able to delete their own tweets
+
+Thus, systems and products where ownership is decentralized is sufficient. User experience can be designed and architectured in the client's own domain of ownership from which we can just execute the number one criteria of decentralized communities: EXIT.
+
+Srinivasan argues that there are also three factors that cause a slowness, or rather a deceleration, in the growth and adaptability of decentralized social networks:
+
+`— scaling networks`
+
+`— decentralizing the name registry`
+
+`— building novel social primitives`
+
+**The network scalability** is a hard one. Though it's good for well-versed or experimentalist users to self-host their own servers or any necessary components for the networks they are on, 1) it might be expensive for many to run such an operation, 2) it's rather at a snail's pace to onboard the number of users that emergent cultural economies across blockhain vista want to capture, or onboard.
+
+Here, managed hosts are offered as solution due to the fact that any number of developers are ready to deploy new and free clients or applications in case of a censorship because the protocol allows it. A bad actor compromised the HarpieCast client? Here, I've just deployed CastCastCast. You are welcome.
+
+**Decentralizing the name registry **as in the case of smart contractual primitives such as ENS and Unstoppable Domains help users evade any type of censorship when it comes to their identity onchain and online by cryptographic signatures which can be handled in an hybrid way as in a combination of off-chain and onchain actions.
+
+**Building novel social primitives** is already what the entire emergent market stratum is all about. You want your social media app, or network be successful? You need a status-incentivization in one way or another—an incentive that is enduring.
+
+I think you should just read it yourself.
+
+However, the reason why I kind of summarized this frequently shared post is that:
+
+— sufficiently decentralized does not mean "less decentralized"
+
+— there will be people, or groups of people, who will be acting in a predatory way to tax this slow-paced niché of decentralization, that is the social, upon which backlink-graveyard analyses are done everyday. They will come for the best and most benevolent builders who ship. When they come, please remember that decentralization activates and scales itself gradually like gravitational waves in the outer space.

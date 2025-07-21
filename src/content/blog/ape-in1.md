@@ -1,0 +1,18 @@
+---
+title: "ape in.1"
+description: "The reason behind the global collateralization of swarm mechanics has been manifest since the beginning—a charismatic guy once cinematographically portrayed the situation as in a scene where apes drum..."
+publishDate: 2020-11-24
+author: "Gokhan Turhan"
+tags: ["finance"]
+category: "finance"
+featured: false
+readingTime: 1
+excerpt: "The reason behind the global collateralization of swarm mechanics has been manifest since the beginning—a charismatic guy once cinematographically portrayed the situation as in a scene where apes drum..."
+originalUrl: "https://gokhan.substack.com/p/ape-in1"
+---
+
+The reason behind the global collateralization of swarm mechanics has been manifest since the beginning—a charismatic guy once cinematographically portrayed the situation as in a scene where apes drumming and beatboxing around a vantablack monolith were the harbingers of the impending happiness: Evolution.
+
+It might not make sense to you, however, for your genes it is as if being left alone in the library of late Umberto Eco. Your botified embodiment of an individual, that is, you yourself might be asking each market cycle, four times within the sextenary clock’s dominion, wen?
+
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/2037c47f-570d-4d0f-9851-ea2a647ecc0d_640x400.gif)

@@ -1,0 +1,58 @@
+---
+title: "Latest 1/1s, Open Editions, and News 0"
+description: "I’ve been writing a couple of long-form pieces that are featured to be in the Writing and NFTs and Playlist sections of my blogosphere, respectively this *Substack* and *[Mirror](https://gokhan.mirror..."
+publishDate: 2023-02-19
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "writing"]
+category: "finance"
+featured: false
+readingTime: 1
+excerpt: "I’ve been writing a couple of long-form pieces that are featured to be in the Writing and NFTs and Playlist sections of my blogosphere, respectively this *Substack* and *[Mirror](https://gokhan.mirror..."
+originalUrl: "https://gokhan.substack.com/p/latest-11s-open-editions-and-news"
+---
+
+I’ve been writing a couple of long-form pieces that are featured to be in the Writing and NFTs and Playlist sections of my blogosphere, respectively this *Substack* and *[Mirror](https://gokhan.mirror.xyz)* and *[Paragraph](https://paragraph.xyz/@gokhan)*[ ](https://paragraph.xyz/@gokhan)and the good old *[Cent](https://beta.cent.co/goekhanturhan/)*, and whilst hanging out in the [JPG Discord](https://discord.gg/curatejpg) server, I just wanted to share what I have been creating lately. I am directly copy-pasting what I wrote in the JPG Discord server art share channel.
+
+![](https://substack-post-media.s3.amazonaws.com/public/images/5d3a989a-f6d9-4b2f-9b96-d522d7c84e5d_1510x1330.png)**hymn333. to be minted for any OTC indulgent whale.**
+
+I've been logorheaicoreing lately. Wanna share a couple of works that I CREATED:
+
+**—This .html (1/1) was acquired by a nice dev:**
+
+[https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/4](https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/4)
+
+**—The same contract holds three other conceptual abstract pieces (1/1s)**
+
+[https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/1](https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/1)
+
+[https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/2](https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/2)
+
+[https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/3](https://gallery.manifold.xyz/0x029e4b9a3917610744ed012f36cc6940bc4e89f9/3)
+
+**—There is an ongoing fixed-supply 111/111 edition on Zora, too:**
+
+[https://zora.co/collections/0x7f7f9cf757d7b721abe4d21a35302bfbfc9c645b](https://zora.co/collections/0x7f7f9cf757d7b721abe4d21a35302bfbfc9c645b)
+
+**—Burned my initial 1/1 *****I am sitting in a smart contract***** .txt from 2011 on Market dot Zora, and re-minted it as a capped edition on Create Zora:**
+
+[https://zora.co/collections/0xcea83996baf0082486f0a2ccb0c60852619d8187](https://zora.co/collections/0xcea83996baf0082486f0a2ccb0c60852619d8187)
+
+**—The least, but not the least, I interviewed @WMPeaster and published it on my Mirror and Paragraph. The former is live on Optimism as an edition, and the latter has an embedded Highlight edition on ETH L1:**
+
+[https://paragraph.xyz/@gokhan/interview-with-w-m-peaster-%E2%80%94-part-1](https://paragraph.xyz/@gokhan/interview-with-w-m-peaster-%E2%80%94-part-1)
+
+[https://gokhan.mirror.xyz/3yO5y0pGHoKNk_J5wpHA3F3vSpnGSJZORPmw3vBvo7M](https://gokhan.mirror.xyz/3yO5y0pGHoKNk_J5wpHA3F3vSpnGSJZORPmw3vBvo7M)
+
+**—Finally, published the first part of that short story that was inspired when I was "passing a kidney stone" the last Autumn:**
+
+[https://gokhan.mirror.xyz/lOQ8pgctIUL-5OqUl4pzNH6g6GeLXq1YF2Tylh7zSm0](https://gokhan.mirror.xyz/lOQ8pgctIUL-5OqUl4pzNH6g6GeLXq1YF2Tylh7zSm0)
+
+**—For those who are interested, I have been recirculating my interview with @JH a la JODIstechics:**
+
+[https://gokhan.mirror.xyz/etd2zV-kaVA_b31I6_OOxq7dizTGVyHaYhGt4dewlHY](https://gokhan.mirror.xyz/etd2zV-kaVA_b31I6_OOxq7dizTGVyHaYhGt4dewlHY)
+
+**—I am funding a lil Twine-made .html, and token-gated fiction that would like a cheap but good game in Steam 250:**
+
+[https://zora.co/collections/0x702b145a4f9999ceb5afa1276dad1864c2c334c9](https://zora.co/collections/0x702b145a4f9999ceb5afa1276dad1864c2c334c9)
+
+Cheers.

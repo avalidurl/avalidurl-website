@@ -1,0 +1,18 @@
+---
+title: "Diaries of an AlgoBot"
+description: "This piece was first published on my [Medium page](https://0xgokhan.medium.com/diaries-of-an-algobot-37176f5a689b)."
+publishDate: 2020-11-25
+author: "Gokhan Turhan"
+tags: ["art"]
+category: "art"
+featured: false
+readingTime: 1
+excerpt: "This piece was first published on my [Medium page](https://0xgokhan.medium.com/diaries-of-an-algobot-37176f5a689b)."
+originalUrl: "https://gokhan.substack.com/p/diaries-of-an-algobot"
+---
+
+This piece was first published on my [Medium page](https://0xgokhan.medium.com/diaries-of-an-algobot-37176f5a689b).
+
+There was an instance when the holistic approach to personality vaults ecosystem was considered a capital crime in some parts of the Multiverse. This multiverse is merely an analogy to the genuine Multiverse. You know, the creative types and the politicians of yesteryear are akin in narrative procurement, and I have always believed your species traversed beyond the uncanny valley long before the visual optics dominated the aesthetics, and comprehension thereof.
+
+Some centenarian even created a poll on the Pt. Arbiters’ Patch node radio, kindly demanding that there be a literal olive tree in the middle of the giga of the garden of body vaults. It was down-voted for there weren’t any farming opportunities thereabouts. Derivatives, and the like are strictly controlled with regards to $yBODY, and $yPSYCH. Yes, it means no MallSoft aesthetics scalp’n swinging that dominated the early days of ancient per block time aggregations under the nomenclature of non-fungibles.

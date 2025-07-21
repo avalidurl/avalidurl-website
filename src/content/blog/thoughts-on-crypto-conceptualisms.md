@@ -1,0 +1,56 @@
+---
+title: "Thoughts on Crypto-Conceptualisms"
+description: "*This post was first published at [Cent](https://beta.cent.co/+3vuawt).*"
+publishDate: 2020-08-04
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "data"]
+category: "finance"
+featured: false
+readingTime: 7
+excerpt: "*This post was first published at [Cent](https://beta.cent.co/+3vuawt).*"
+originalUrl: "https://gokhan.substack.com/p/thoughts-on-crypto-conceptualisms"
+---
+
+*This post was first published at [Cent](https://beta.cent.co/+3vuawt).*
+
+Manifestos exist. Some are called n-manifesto, and written raw, & accordingly circulated by networks of people, and non-humans. Similarly, some other manifestos also desire circulation and cook themselves along the journey. It might take up some time. For instance, Longplayer, in my humble opinion, is a manifesto that is an artefact of human problem-solving, and decision-making technologies—which also signals to that which is arriving from the future that we were able to harvest time.
+
+Similarly, [Urbit](https://urbit.org/) is a manifesto that took more than a decade into a working OS. No, I am not promoting them here, I was only at the right place, and right time, so I have an Urbit ID. It manifests that an individual can practically own their own internal and external data and do whatever they want with it. Political turmoils surrounding the founding texts thereof is merely a side-effect.
+
+&, in my opinion, sometimes a single work of art is a manifesto itself that calls out to the action. Kazimir Malevich's *[White on White](https://www.moma.org/collection/works/80385)*(1918), Kurt Schwitters' *[Ursonate](http://www.jaapblonk.com/Texts/ursonatewords.html)* (1932), JODI's entire [ouevre](https://wwwwwwwww.jodi.org/), Richard Prince's appropriations, Kenneth Goldsmith's idea and practice of uncreative writing, Sarah Meyohas' *[Bitchcoin](http://www.sarahmeyohas.com/bitchcoin),* Christian Bök's ongoing self-producing nano-writing project _[The Xenotext](https://www.americanscientist.org/blog/science-culture/the-making-of-a-xenotext) _are the ones that ping my firstly right now, over which I have been obssessed more than a decade.
+
+I also like to approach governance-inspiring ideas of Buckminster Fuller, and [challenges](https://en.wikipedia.org/wiki/IBM_(atoms)) made by the likes of Feynman as science-art hybrids. All of these works, ideas, or the artists themselves problematize mediation in ways that refer to evolution of our species towards more than what we are at any given time.
+
+*Ask what time it is to a centurion alongside Rubicon, and you might be awarded with eternity.*
+
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/64130036-7708-41f4-a725-c97af1aa2e01_1275x1280.gif)And, the artist is a conceptual machine. Regardless of their background, however tightly bound to their in-real-life experiences, they either pronounce concepts to heretofore unuttered problems in any domain of life, or help the practical guy imagine the solution. Nobody knows whether Satoshi is an artist, or not. But, it is vividly clear that Nakomoto is a craftsman. He might be chilling somewhere now feeding gpt-3 to generate surreal memes yet we are here building the future of humanity and beyond onto their legacy. It is because the invention of BTC and blockchain was in itself a manifesto that airdropped the problems, and the frame to conceptualize solutions thereof has been the infrastructure itself. Now, that is in a sense a mathematical conceptual art with real world ramifications.
+
+&, here we are in an ersatz-post-lockdown period during which, "thanks to" societal skirmishes, we have witnessed some positive advancements in non-fungible tokenization, identity governance as in social media, and the like. People are kind of [flocking](https://twitter.com/urbit_metrics) to own Urbit IDs, artists show that it is possible to shard your personality at least conceptually into in-game dimensions as has [coin_artist](https://twitter.com/coin_artist) did [recently](https://medium.com/@coin_artist_17801/why-i-turned-myself-into-an-nft-6fe08cb7aca8).
+
+I believe there will come a future where we will have an infrastructure to swap any type of data as in wrapped in, or within even the five senses of ours (yes, I am a fan of the Exodus Dev Environ in Zachtronics' [EXAPUNKS](http://www.zachtronics.com/exapunks/)); and, we are adding value towards the inalinable evolutionary trajectory of humanity even through NFTs, and cryptoart. However, I do want to share my thoughts not on the far future implications of chain tech in general. Herein, in my first post on Cent, I'd like to murmurate on the idea of conceptual art in the crypto-space in general. Byconceptual art, I refer to the conventional understanding of the term verbatim.
+
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/47075ab4-9c6e-4700-8246-4b95ef4d257b_796x796.jpeg)Any avant-garde motion in any artistic domain in any time period might be a reflection either on the externally motivated realities upon the everyday life of the individual, and the society; or a meta-disruption onto the media thereof. I have mentioned Malevich above whose motion was kind of philosophically motivated. Yet, we can also mention the good old Belgian Broodthaers who ventured off into avant-gardism just because he needed some real income, honest.
+
+Over the years, manifestos written, or as embedded within entire genres without any writing at all, followed each other. Patronage, and collector habits kept up with the value exchange dimensions of the market, and behavioral economics. Even traditional governments and states created incentives for them to acquire work of arts.
+
+We came to a point almost all modern art problematized, and are comprehended as conceptual to the degree that today a traditional painting is seen as an avant-garde move, or as some like to call "trad."
+
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/80a2af69-8454-4caa-a427-72749b0cf3c0_1523x796.jpeg)At this point, crypto art scene is not something unique. I would rather call it "natural." A natural outcome of the shifts in value-exchange in terms of artistic objects. Some of this objects are nowadays positively manipulate to lure in more artists, buyers, collectors, and entrepreneurs into the scene. We can honestly testify that such liveliness is the result of an interplanetary networking, and promotion. It is good, and it pays well.
+
+Artists and collectors, either as investors or some sort of saviours, are aware that circulating their works as collectibles that can be tracked to uniqueness bring in real finance. Most of the artists are at least for the time being in cryptoart scene due to alluring prices as tethered to fiat. Many crypto artists I know use their crypto earnings for both fiat exchange to get by, and invest for future. That is a nice move. On the chain, noone can judge you.
+
+Hence, people from different cryptoart clusters work together to bring in more people onto the scene. Here, it is nice to tactically utilize what exists outside the chain. Conceptual art has existed outside the chain for almost more than a century, and it has most of the time been used to offer solutions to some sort of a problem during different crises.
+
+So, today, especially during this pandemic times, noone wants to bother with the mediators between the artwork and the collector. Crypto bazaars are at least silent mediators that help you rather than creating unnecessary bubbles of auras for an artwork that you just want to own.
+
+In this regard, recent purchase of Pak's *[Alpha](https://opensea.io/assets/0xb932a70a57673d89f4acffbe830e8ed7f75fb9e0/7713)* by MOCA was such a smart move, I was almost thingking that it was orchestrated. A node to Rauschenberg. Again, I am merely generalizing. For some time now, different stores are brimming with bits of NFTs that kind of mimicks conceptual moves that prevailed much of the second half of the 20th century. I have no objection to that. We are swarmmachines, we like to use tools, and express ourselves, and most importantly, we like to hoard data, and in that datapool, everyone wants something unique. Now, it is made easier.
+
+These moves alone are conceptual call-to-action to anyone outside the cryptoart scene. It is, for sure, not specific to art. For example, I mentioned coinartist's self-niftification into shards into a game. It makes one ponder about the kind of far future bodies without organ probabilities of longevity, and life-extension alongside abstracted brain storage, and preservation, which is the theme of my forthcoming essay.
+
+In line with above thoughts, I was recently wondering what kind of an action makes up a conceptual artwork in the cryptoart scene. As I earlier commented, I believe that NFT art collectibles themselves are a manifesto thanks to the underlying and accelerating technologies. In my opinion:
+[![Twitter avatar for @gigabvgatti](https://substackcdn.com/image/twitter_name/w_96/gigabvgatti.jpg)numogram.eth @gigabvgattiGoing full conceptualist, fluxus-babe, or meta-n on cryptoart is understandable. But, doing that conceptual move on the infrastructure as embedded within the entire non-fungible token itself would be greater...](https://twitter.com/gigabvgatti/status/1290095450624626688)[1:21 AM ∙ Aug 3, 2020](https://twitter.com/gigabvgatti/status/1290095450624626688)
+So, I both want to greet you all here with my first post, and do a brainstorming on the concept of conceptual art in terms of meta-approches thereof. I will be glad to hear from your own ideas, the ideas and works, or products that make such smart moves, and any related contributions.
+
+Have a good day.
+
+p.s.: All images are by myself, and inserted them to go in line with our age's reading attention span.

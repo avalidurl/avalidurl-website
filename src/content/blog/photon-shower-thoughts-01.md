@@ -1,0 +1,60 @@
+---
+title: "Photon Shower Thoughts 01"
+description: "Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter e..."
+publishDate: 2020-11-02
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "culture"]
+category: "finance"
+featured: false
+readingTime: 4
+excerpt: "Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter e..."
+originalUrl: "https://gokhan.substack.com/p/photon-shower-thoughts-01"
+---
+
+Alright, before commencing the next photon shower, I feel the need to state that DeFi is neither hype, nor dead. Have you ever thought about evolution being dead? Neither have I. On a recent Twitter exchange of ideas, I came to state the following:
+@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays. \n\nThere are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.\n\nGlad we buy 'their' tokens.","username":"gigabvgatti","name":"gokhan.eth","date":"Thu Oct 29 23:43:54 +0000 2020","photos":[],"quoted_tweet":{},"retweet_count":0,"like_count":2,"expanded_url":{},"video_url":null,"belowTheFold":false}">![Twitter avatar for @gigabvgatti](https://substackcdn.com/image/twitter_name/w_96/gigabvgatti.jpg)gokhan.eth @gigabvgatti@DeFi_Ted @C0inAlchemist Imagine telling the watcmakers the time is dead. It's just that #DeFi is in per block time kairos instead of chronos thereof nowadays. 
+
+There are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.
+
+Glad we buy 'their' tokens.[11:43 PM ∙ Oct 29, 2020](https://twitter.com/gigabvgatti/status/1321960986610458628)
+Yup, that is how I see it. More on this later. Simply, I believe defi as an evolutionary dating economy between humans and singularity. Not on a theorygram plane though.
+
+## Now, let’s focus on my photon shower today:
+
+Broadly speaking as in through my individual experience in the last 32 years, or so; resentful individuals towards others from the first world choose to virtue-signal as that which now they call “woke,” or simply and basically egalitarian, and speak on behalf of those who are muted. Muted by none other than themselves.
+
+This first worlders—I have no resenttiment against them, and I am %100 pro-Western in terms of individual rights, and economic freedoms—keep virtue-signalling especially by means of identity politics. Some of us including myself are very acquainted with those types who happened to have acted as catalysts in propagating fundamentalists as moderates in some geographies, and helped to kill secular models.
+
+They also killed social sciences as we had known them. One of the reasons why I quit academy willingly.
+
+They are everywhere, and virtue-signalling is a form of SOCIAL CREDIT OPTIMIZATION in the West, and in economies whose woke copycat the Western academies, or in some cases vice versa.
+
+Such motives, individuals and the like are abundant on the scene of that which is called non-fungibles aka NFTs, and Crypto Art aka Art that is cryptographically registered on allegedly immutable ledgers.
+
+They are toxic, and they are not doing good in the name of the clusters, or communities which they represent in the expanded constellation of Crypto Art—believe me David, I also want to call them nations however I am still trying to understand whether that Nation analogy on the Bankless is Yarvinian or not. Then, I will find a middle way, mate.
+
+Why word salad, you might ask, and I will answer that it is not a salad. If that is a salad for you, then you have a very short attention span, and no gusto. 
+
+## Types of resenttiment to which we are already accustomed thereabouts
+
+— “You are all unnecessary ass-holes and I am better than all of you however I cannot sell at the frequency I wish for a reason I don’t know why,”
+
+— “If you were ‘genuine’ artists, then you would neither be in DeFi, nor be thinking of your own future, and thus would not be doing trades anything other than NFTsphere,”
+
+— “DeFi guys are here,”
+
+— “Memes are not art,”
+
+— Blah blah blah drama…
+
+Frendinos, you are all homo sapiens, and have been going through an evolution for all of your “timelines,” the last 3000 years of which has been trying to build upon the Late Bronze Age collapse, and all you can do is to prolong the drama.
+
+Get over with it. That drama will be here as long as we will be fighting against entropy. Decentralized finance is negentropic, and a ladder up to a higher level of evolution for our species. 
+
+Accordingly, everything on the ecosystem is somehow connected even though multi-chain constellations have just started to emerge.
+
+NFTs and Crypto Art would not be possible without the DeFi guys, and some of those DeFi guys, including memer degens are in the cryptoart scene for more than you assume. All males? Lol. You have no idea whatsoever if you think that way.
+
+If you just cannot sell nowadays, it is probably because the “swarm” is unsure and they do not invest in the hype, yes, crypto art is the real hype, and defi is not hype.
+
+…to be rebased tomorrow.

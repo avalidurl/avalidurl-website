@@ -1,0 +1,166 @@
+---
+title: "11 Theses for Crypto in 2024"
+description: "This piece was originally published on the Zora Network over Base, and is a collectible digital asset which provides access to the EXIT research guild."
+publishDate: 2023-12-24
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "data"]
+category: "finance"
+featured: false
+readingTime: 13
+excerpt: "This piece was originally published on the Zora Network over Base, and is a collectible digital asset which provides access to the EXIT research guild."
+originalUrl: "https://gokhan.substack.com/p/11-theses-for-crypto-in-2024"
+---
+
+This piece was originally [published](https://zora.co/collect/base:0xfadeec393fad8c8877c555c598439feb0844e6b1/4) on the [Zora Network](https://zora.co/invite/gigabvgatti.eth) over Base, and is a collectible digital asset which provides access to the EXIT research guild of mine.
+
+[![11 Theses for Crypto in 2024 - Chart or diagram illustrating crypto market insights](https://substack-post-media.s3.amazonaws.com/public/images/9695f9e9-b034-4a63-9f52-608bb1ae621f_1400x1111.png)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9695f9e9-b034-4a63-9f52-608bb1ae621f_1400x1111.png)
+## **Disclaimer**
+
+*As is the usual case with such pieces of content that aim at discussions, and debates with native players, I need to state that a) none of the following are investment advices, b) I am not affiliated with any team, brand, protocol, or project mentioned herein, c) as of the time of writing, I am not holding anything that could have been mentioned below other than some ether.*
+
+# **tl;dr**
+
+Infrastructural innovations drive in new liquidity.
+
+Fee markets, intents, and mechanism markets will redefine the retail.
+
+Coordinative meme plays will rule.
+
+RWAs will mature.
+
+Institutions are not here or there — they will pay for your infrastructures is all.
+
+GameFi will not be the next big thing and play-to-earn will suck big time.
+
+Network States will start hedgefunds, and buy T-bills, & leverage the next pharma.
+
+Lending markets will become more efficient.
+
+Stablecoin renaissance will take place in 2025.
+
+We will see public goods unicorns.
+
+Restaking will be the driving force of all of these and more.
+
+## **1. Infrastructural innovations drive in new liquidity.**
+
+As we are nearing the end of the year (EOY), and crypto-economics markets seem to have woken up an intergalactic hibernation, many players are wary of the resilience of crypto-markets. During the last Summer, almost all of the crypto-markets employees at this DEX or such CEX uniformly agreed that we had not seen the worst yet. They were literally developing their own KYC hooks. Many were learning how to code, to be honest so that they could be solo auditors.
+
+However, the markets have been resilient despite the fact that big CEX bosses have been grounded by the US, there have been many “exploitations” that look like ’80s sexploitation movies, and a couple of flash crashes during the day in ETH and BTC related markets, and their derivatives.
+
+All that jazz sounds familiar. But, starting from the Q3 & Q4 2023, we started to witness that otherwise technical, infrastructural level debates, and discussions, along with the visibility of experimenters, come into the mainstream & public view of the crypto-markets.
+
+At once, my friends began to discuss about EIPs, account abstraction, zero knowledge (ZK), multi-party computation(MPC), proof-carrying-data (PCD), trusted execution environments (TEE), maximal extractable value (MEV), intents, and mechanism markets. They were not discussing about the price of the ETH, or BTC, or the price of the NFTs, or the price of the tokens of the DeFi protocols. They were discussing about the infrastructural innovations that would drive in new liquidity.
+
+Yet, I need to stress that this new liquidity will not hop in the liquidity circulation wagon because of the so-called crypto-consumer applications. Unlike what many investor and their co-founders argue, crypto does not have an user-interface (UI) problem. The only user experience (UX) problem we are to witness is to be because of the fact that many blockbuilders, and centralized service providers will be collaborating with the traditional legal engineering bodies of the existent and non-functional bureaucracies. Bureaucracies and organizational hierarchies are indeed functional. Hence, we should be focusing on not the React front ends of the crypto-applications but their accessibility issues.
+
+Yet, I argue in the above heading that it will drive in the new liquidity? Yes, we will be seeing new liquidity ripples because of the infrastructural leaps we’ll be witnessing. Institutional players and visionary VCs, and other types of investors, will be investing in those who work on promising technologies. Despite the fact that I am not affiliated with any of the following, I think that projects, protocols and platforms such as SUAVE by Flashbots, Privy, Zora, Quilibrium, Farcaster, Privacy Scaling and ZuPass Project are the ones to watch here to make sense of what I am meaning.
+
+On top of these, since data feeds are as important as price feeds, and bridges need innovation, and that traditional banks and remittance companies are experimenting with the cryptoeconomics by means of their own private chains, we will be seeing new liquidity concentrations around projects that uses Chainlink’s CCIP, Circle’s CCTP, LayerZero.
+
+Since this consumer crypto, and AA narratives have caught up, we will also be witnessing a proliferation of stablecoins-only payment applications that make use of these infrastructural innovations. Multiply that with the layer 2 consumer-friendly narratives, paymasters and relayers will also be in high demand. That is to say, in a way, we will be bringing in new liquidity in that we will let the institutional players make use of the crypto-systems as petri-dishes for their own experiments.
+
+## **2. Fee markets, intents, and mechanism markets will redefine the retail.**
+
+Thanks to the introduction of AA and the upcoming Dencun upgrade which will scale Ethereum a bit more regarding bridging, data storage, gas optimization, and staking, we will already be witnessing that developers will be making use of these relief valves — I am aware that AA is not that optimal regarding gas, however…
+
+Now, we are witnessing the self-replicant loops of restaking which are the harbingers of many black swan events in theory. However, it also indicates that the market wants intent-centric transaction sandboxes where money legos can be replicated in a mycelial fashion.
+
+As the infrastructure matures, and going to mature for ages for the next twenty years maybe just to be able to be started to be used by the masses in scale, we are already realizing that the end-users are also getting more and more sophisticated. Many marketing professionals and social leads for the so-called web3 companies keep repeating that the retail does not want to have seed phrases, we also witnessed the same retail dump ETH at ATH with blasphemously generous gas fees, and profits, left never to return again till the information highway fits into our buttplugs.
+
+What these media planning, marketing, and social media people miss is that they are not that much technologically nerd-snipable themselves. The average user wants to create their own recipe, and recipe creation is not confined to the intricacies of the account abstraction.
+
+We will be witnessing onchain services that are specified in the intent creation in any cryptographically secured service area ranging from simple social or reputational attestations across protocols to the most profitable loss-versus-rebalancing (LVR) strategies now that every knows impermanent loss was just a meme.
+
+Those who provide competitive blockspace markets via maximal extractable value mechanism designs, blockspace markets, and the like have been working studiously to provide technical solutions to the intent creation problem. Flashbot’s SUAVE with their kettles that can have any meta-layer of private intent-centric recipes across parallel chains that broadcast to the mainnet is one of them. They are alone but I am mentioning especially them since Flashbots ecosystem has been resilient in offering services that game-theoretically make sense knowing that no recipe is efficient in the world of behavioral markets. These evolutions will also create new maneouver spaces within the blockspace censorship resistance and the like that will be hedging against the regulatory capture.
+
+Retail here will be turning into prediction market participants with their feasibly remixable economic incentive creations schemes that will be making use of the intent-centric transaction sandboxes. One of the most promising sides of these projects is that we can literally give birth to private and zk-gated prediction markets that feed from off-chain social media layers.
+
+## **3. Coordinative meme plays will rule.**
+
+This statement might sound silly. It is not. Let me tell you what sounds silly: Kindergarten teacher intonation announcing endless rugs, only 69% of which makes you money. I understand that you need financing. I understand that there is only a millenium left in front of us to the point where incentivization will come in other shapes. But in the year of 2024, we still have myriad ways of money lego-ing either onchain or in the traditional ways. You think derivatives in the trad world ain’t money legos, anon? It was just that they were not composable like slime moulds of game of life pixellations.
+
+There are two ways by which people take memetics wrong in the land of worldbuilding across crypto-systems that offer us civilizationally new ways of cultural evolution, let alone paving the way for the biological one thanks to collaborations across neurotech, AI and longevity/ senescence research which crypto-economics help a lot when it comes to new ways of governance, and incentivization that set themselves free from the stagnant models of traiditional fundraising where incompetent actors just ossify the levels of dysfunctionality.
+
+**1.** They think that infantilizing robust networks via lowbrow memes is a way to lure in masses.**2. **They still think that crypto-economics is a meme that will onboard the next billion.
+
+No, and no. Stop infantilizing networks and you will come up up with better memes. Stop telling us that you are onboarding the next billion. You are not. You are just deluding the very industry. It is just that institutions will be paying for your infrastructures. You are not onboarding the next billion. You are just making the next billion pay for your infrastructures. Are these bad? No.
+
+## 4. RWAs will mature.
+
+There is a shitshow around RWAs. According to some, everything is a RWA. For others, RWAs are the DeFi Summer 2020 revival. For some kiddos, RWAs are the future that memes. For the low ink and high time preference conmen RWAs are a way to pocket a couple of thousand ethers whilst the spotlight is not on this market.
+
+RWAs will not mature either in a quarter or a year. It might take about 5 years to fully align the nature of RWAs with crypto-economics and -systems architecture solutions. Some of the biggest oracles are working towards such solutions whilst everyone I know in the space is shitting on them.
+
+The existent RWA assets, and models will be used to understand the nature of onchain RWAs — mind me, some call them tokenized assets
+
+We will come up with heretofore unbeknownst ways of tokenizing assets, and unknown RWAs that will merge the virtual and the physical even more without stupid labels such as phytigal.
+
+ Decentralized science (DeSci), neurotech, and AI based innovations will define novel sub-genre of RWAs.
+
+ RWAs will offer more than land farming based derivatives, credits, and lending markets whereby being more popular in places other than the Global South.
+
+However, noone will dare to shitcoinize RWAs other than a couple of degen parlays we have already started to witness. Here people need to care for themselves and industry to prevent credit-score levels of bullshit and black swan happening.
+[![](https://substack-post-media.s3.amazonaws.com/public/images/67efaf43-adb9-4d3c-93b4-6e1a9dead126_1400x1109.png)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F67efaf43-adb9-4d3c-93b4-6e1a9dead126_1400x1109.png)
+## **5. Institutions are not here or there — they will pay for your infrastructures is all.**
+
+This should be clear. What is here? Now I hear Werner Herzog’s voice in this question. When civilizational level innovations take place, they usually do not claim to other other civilizational level innovations. They co-exist till a point, and then they merge.
+
+Crypto will help the following evolve:
+
+the traditional remittances and payment rails,
+
+ownership economies by way of recombinantly bettering organizational architectures — hence in-game economies, communities, politicial structures, universities,
+
+banking systems — believe or not, in some developing countries banks are better in any aspect than the first world banks, and the average crypto projects, those bank will experiment more with private and permissionless chains,
+
+reserve currencies,
+
+supply chains,
+
+creative production and incentivization — i’m not talking about pinning an image to an off-chain robust storage system where the latter matters more,
+
+research funding,
+
+collaboration, coordination, and communication,
+
+the recombinant innovation of “things” that we have so far thought either to be impossible, or could not even think about them since they are ultra evolutionarily novel.
+
+the way we act about individual privacies and collective transperancies.
+
+## **6. GameFi will not be the next big thing and play-to-earn will suck big time.**
+
+Now, if you are building in the game quarters of crypto-economics, do not get me wrong — especially if you are designing infrastructures such as zero-knowledged enabled ecosystems and integration for game worlds, onchain physical worlds, in-game economy designs. You are here to stay for the rest of the century till the last furry admits that crypto is good for humanity.
+
+What I am talking about the narrative that is so-called Game-Fi, GameFi, and the sweatshop called p2e. These have already existed, and was successful to the degree that we in actual play games in the social layers. Societal games. Exponentiated by cryptographically secured ecosystems.
+
+Now, your game needs to be able to import that social layer into its own systems. The only way to do is not to ship it as a game. I will not spend hours that won’t bring in any interaction with people in a federated world.
+
+Hence, those who design games on the social idea markets, and emergent protocols will win the game. It is because gamification usually sucks and what matters is how you design the play in detail since it is the limitations on which you play that matters.
+
+## **7. Network States will start hedgefunds, and buy T-bills, & leverage the next pharma.**
+
+This is not a big bet. It already is here. The only drawback is that there are also many conmen in this quarters of the cryptosystems who are just here to make a quick buck. We are lucky that the best minds of our generation are working in the network states, crypto cities, special economic zones design, protomotion and practical application. See what Balaji does, or what Vitalik tries with Zuzalu.
+
+People are willing to coordinate and cooperate even when they do not agree since they know that the future is brights as long as we can maintain the network resilience, censorship resistance, and infrastructural diversities since it is in fact the hardware that matters at the end of the day.
+
+We will see network states, or any similar phenomena, whilst supporting DeSci and longevity related studies, will be accessing T-bills, or anything similar, just to a) hedge against the crypto-markets, b) retain closer ties with traditional governances, c) to be able to leverage the next pharma since DeSci and longevity play a big role in the future of the crypto-systems.
+
+Anyone who happened to get together in such as setting will understand what I mean.
+
+## **8. Lending markets will become more efficient.**
+
+Yes, we are now alone with the biggest lending market makers who are now battle-tasted. The only innovations we will see, if the incentives help, more structureds by these makers that might define new ways of lending. Liquidity will be available only under the biggest name’s robust systems across lindy AMMs, pools, vaults and the like.
+
+## **9. Stablecoin renaissance will take place in 2025.**
+
+By renaissance, I mean that we will see a couple of black swans. These black swans will determine the traditional systems’ reflection thereof. With the help of public policy, governmental and non-governmental think tanks, and the original financial engineers among us, we will be seeing novel stable coins that will be making use of all existent crypto-economics innovations. I will write more on this in a separate article.
+
+## **10. We will see public goods unicorns.**
+
+Yes, considering how simple public goods funding mechanism can create hubbub in the ecosystems, we will see public goods mechanisms being developed for robust ends to the degree that they will accelerate public goods enabled self-governing unicorns that will invent novel ways of incentivization, and governance.
+
+## **11. Restaking will be the driving force of all of these and more.**
+
+As above, so below. I am sorry but these plays that we need to go through can be self-destructive. Design wisely, and make sure that there is at least a single communications security officer in your team so that when your genius devs are asleep they can be the ones to be awake to make sure that your community advocates do not act like they represent your brand.
+[![](https://substack-post-media.s3.amazonaws.com/public/images/679b97b7-5f06-43dc-bae0-3aec58129748_1400x1120.png)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F679b97b7-5f06-43dc-bae0-3aec58129748_1400x1120.png)

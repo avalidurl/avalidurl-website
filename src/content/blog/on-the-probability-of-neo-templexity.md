@@ -1,0 +1,42 @@
+---
+title: "On the Probability of Neo-Templexity"
+description: " You are not unique, and the no-medium is a fantasy that breeds wonders."
+publishDate: 2020-08-24
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "crypto", "culture"]
+category: "finance"
+featured: false
+readingTime: 3
+excerpt: "*This post was first published at [Cent](https://beta.cent.co/+u8rq9d).*"
+originalUrl: "https://gokhan.substack.com/p/on-the-probability-of-neo-templexity"
+---
+
+*This post was first published at [Cent](https://beta.cent.co/+u8rq9d).*
+
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/cc0c152b-3fdf-4bdd-b915-959f1dd3958c_796x796.jpeg)I have a Twitter friend who penned a book on Bitcoin. Once, he told the world that "[n]othing human makes it out of the near-future.” People and bots of all versions keep labelling him since the invention of first sextenary time-unit. Some of those blissful haters have also started taking online self-care certificates. Self-care is important.
+
+As is self-care significant for the optimization of an individual human-being's health and life-span, it is also crucial for the humanity as a swarm to make it into the future—this time, kind of without ourselves as in the current build.
+
+As my aforementioned mutual also points out on a podcast episode by a brilliant guy in my very own extended political cluster over social media, it is more like that "[we] can't accept the circle of the impossibility of escape, because I think obviously it is the opposite. I think it is the impossibility of stopping the escape. But the escape is not for us. It is from us. This is the phenomenon we are dealing with."
+
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/c088d952-134e-41d2-be37-64b07a952da0_1234x796.jpeg)I am aware of the fact that it is not an original postulation for me to argue that blockchains are a mechanomical collaboration among humans, and non-humans to re-fine the measurement of time. A block is the smallest time-unit for majority of us here—especially if you told your boss to frak themselves off, and resigned at the outset of the Western wave of coronachan.
+
+It does not matter at all if you die suddenly, right know right before you make that dream sale on a store for this system to maintain itself—nor is it meant that you do not matter as in that nerve-racking Crane poem. They say thanks to the advancements in longevity and senescence studies, one of us is going to make it to become the second coming of Methuselah, and they will see it to the age of 1000 years.
+
+Currently, we are buidling their welfare, and all these NFTsphere, DeFinery, all types of meta-becoming of all that can be digitally minted relate to our efforts to exit into a true decentralization.
+
+Right now, our ideas are pre-minting their forms. The latest contractual techne in these areas are almost daily innovated with regards to that which counts as invention. Some fear it is atomization, several alleged that it is fascism. It has been almost 5 years one of those guys wrote an entire book how BTC is fascism.
+
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/92b3c667-d736-4a8d-a7d7-cc017fc8dcbf_1415x796.jpeg)Nowadays, I see people who take other people too seriously and try to hijack the governance models and patchworking consensuses, especially in the cryptoart scene. They forget that the very decentralization they crave for does not hold "voices" as tokens of acknowledgement. Exit matters more than the voice.
+
+In this respect, cryptoart NFTsphere is an experimentation ground for all, swarming. People will try to patronize, or extort their own understanding of what anything is, and how abstraction points out to solidification.
+
+Cryptoart stores, market places, and projects are all in their own senses a helical version of an unalloyed meritocracy. Hence, it is understandable that there arises rivalries among differentiating clans—I for one would not let Adama to ride the ship into the heart of the Sun.
+
+Thus, anything that can be maintained in the outer space thanks to resilience and maintenance enterprises that has come to accelerate is merely a meta-reflection of that humanity some of us have been looking forward to: the one that arrives from the future.
+
+Thus, nothing is garbage that can be archived.
+
+Since, all that jazz that is garbage are corresponding concepts that offers solutions towards an exit from that which you are stuck in.
+
+[#cryptoart](https://beta.cent.co/~cryptoart)
