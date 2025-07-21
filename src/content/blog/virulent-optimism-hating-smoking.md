@@ -7,9 +7,7 @@ tags: ["crypto", "web3", "art", "writing"]
 category: "crypto"
 featured: false
 readingTime: 13
-excerpt: "This post was first conceived on Mirrorhttps://gokhan.mirror.xyz/cB8Cv4DORfCjydCsw3uwNPkQhUS-e08GYK_BxrO8e0U. 
-
-You can also find a Paragraph version herehttps://paragraph.xyz/@gokhan/virulent-optimis..."
+excerpt: "This post was first conceived on Mirror You can also find a Paragraph version here"
 originalUrl: "https://gokhan.substack.com/p/virulent-optimism-hating-smoking"
 ---
 
@@ -35,7 +33,7 @@ Yet, that evening, I was just kind of agitated, my heart was pounding, and all I
 
 ## I quit, and smoked it for 3 weeks again for aught.
 
-I quit smoking on the 7th of May in 2022. Up until that moment, I had tried twice for serious durations, respectively, 5 and 6 months. Those times were the best times, and seeking a way to totally quit smoking and alcohol consumption, I just happened to enter a smol gym, and registred that day. As I was thinking that I’d be having my last single malt, soft cigarettes, I was sipping a cup of espresso doppio at 10 a.m. at a nearby coffee shop in the neighbourhood.There a kitten plunged his nails into my right arm, it bleeded, and since in societies like mine, there are zagillion stray animals around, and warning against rabies on foreign embassy websites plus the park next to the coffee shop where there are at least 100 cats in residence—you all watched the cat flute guy—I wanted not to leave it to chance and headed for the nearest public hospital since such vaxx such as that of rabies can only be found in certain health institutions and private ones are not amongst them.
+I quit smoking on the 7th of May in 2022. Up until that moment, I had tried twice for serious durations, respectively, 5 and 6 months. Those times were the best times, and seeking a way to totally quit smoking and alcohol consumption, I just happened to enter a smol gym, and registred that day. As I was thinking that I’d be having my last single malt, soft cigarettes, I was sipping a cup of espresso doppio at 10 a.m. at a nearby coffee shop in the neighbourhood. There a kitten plunged his nails into my right arm, it bleeded, and since in societies like mine, there are zagillion stray animals around, and warning against rabies on foreign embassy websites plus the park next to the coffee shop where there are at least 100 cats in residence—you all watched the cat flute guy—I wanted not to leave it to chance and headed for the nearest public hospital since such vaxx such as that of rabies can only be found in certain health institutions and private ones are not amongst them.
 
 I was then referred to their newly built campus right outside the city. The reception was avid and perfect in their response since the alarm line for me was “stray animal contamination.” I am lucky they did not try to go officious and not tell me that it was merely a kitten since a couple of nurses were trying to convince me that I indeed did not need another tetanus vaccine since I had been injected it during my mandatory military service back in 2019. The internet, and interwebz, and even irc hornets across gopher and gemini are full of people who paranoidly asks whether they should have gotten the tetanus, too.
 

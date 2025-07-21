@@ -7,15 +7,7 @@ tags: ["finance", "crypto", "defi", "technology", "data"]
 category: "finance"
 featured: false
 readingTime: 7
-excerpt: "Nothing essential happens in the absence of noise.
-
-—Jacques Attalihttps://www.upress.umn.edu/book-division/books/noise
-
- Briefing
-
- 0. An Introductory Mumblecore that You are Obliged to Read.
-
-👍..."
+excerpt: "Nothing essential happens in the absence of noise. —Jacques Attali Briefing 0. An Introductory Mumblecore that You are Obliged to Read. 👍..."
 originalUrl: "https://gokhan.substack.com/p/ordinals-commissioner-galleries-and-rd-team-proposal"
 ---
 
@@ -74,16 +66,7 @@ At the moment, the successiveness of first-in-first-out order of UTXOs offers us
 A collection, a curator, and a collector walks into a bar, and they have only one torso. Depeche Mode plays in the background:
 
 >
-> [The handshake seals the contractFrom the contract, there's no turning backThe turning point of a careerIn Korea being insincereThe holiday was fun-packedThe contract still intact](<YouTubeEmbed id="CzqqVFb9p4U" />
->
-
-They ask for a regular Talisker 10. A DeFi degen usually gulps down a Talisker 10 on a regular day. Yet this fancy bar only offers stale cheap blend that they sell for a Japanese single malt. It’s raining outside, a Monsoon of **de**hydration in financial terms if you prefer, and you are forced to pound the shot.
-
-You feel as if you are not left with any choice other than to bend over, and wait. That canine with the cane gonna can you in a man. No, sir, I do protest, a DeFi degen can be of material who is also a fine art connoisseur, a financial technology wizard, organizational solution architect, ecosystem designer, and a maverick if not a MEVrick.
-
-We need to talk about collections in detail but firstly we need to understand the true potential of *Inscriptions*.
-
-What do people ask about Inscriptions lately especially in [Ordinals](https://discord.gg/ordinals) and [Taproot Wizard](https://discord.gg/taprootwizards) Discord channels? I heard there are punks also but they look dull. Personal taste, sorry.
+> <YouTubeEmbed id="CzqqVFb9p4U" / /> and [Taproot Wizard](https://discord.gg/taprootwizards) Discord channels? I heard there are punks also but they look dull. Personal taste, sorry.
 
 It is up to the people themselves to build the tools that they will market that markets need them. Markets may need anything at all since a huge pie of them are just lazy couch potatoes who can get incredibly lucky.
 

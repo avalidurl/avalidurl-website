@@ -7,9 +7,7 @@ tags: ["finance", "crypto", "writing"]
 category: "finance"
 featured: false
 readingTime: 4
-excerpt: "This post was first published at Centhttps://beta.cent.co/+u8rq9d.
-
-I have a Twitter friend who penned a book on Bitcoin. Once, he told the world that \"nothing human makes it out of the near-future.”..."
+excerpt: "This post was first published at Cent I have a Twitter friend who penned a book on Bitcoin. Once, he told the world that \"nothing human makes it out of the near-future.”..."
 originalUrl: "https://gokhan.substack.com/p/on-the-probability-of-neo-templexity"
 ---
 

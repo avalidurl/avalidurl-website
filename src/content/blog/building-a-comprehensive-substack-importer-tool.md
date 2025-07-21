@@ -45,26 +45,26 @@ The first challenge was parsing Substack's CSV format, which includes various po
 
 ```javascript
 function parseCSV(csvContent) {
-  const lines = csvContent.trim().split('\n');
-  const headers = lines[0].split(',');
-  const posts = [];
+ const lines = csvContent.trim().split('\n');
+ const headers = lines[0].split(',');
+ const posts = [];
 
-  for (let i = 1; i < lines.length; i++) {
-    const values = parseCSVLine(lines[i]);
-    if (values.length === headers.length) {
-      const post = {};
-      headers.forEach((header, index) => {
-        post[header] = values[index];
-      });
-      posts.push(post);
-    }
-  }
+ for (let i = 1; i < lines.length; i++) {
+ const values = parseCSVLine(lines[i]);
+ if (values.length === headers.length) {
+ const post = {};
+ headers.forEach((header, index) => {
+ post[header] = values[index];
+ });
+ posts.push(post);
+ }
+ }
 
-  return posts.filter(post => 
-    post.is_published === 'true' && 
-    post.title && 
-    post.title.trim() !== ''
-  );
+ return posts.filter(post => 
+ post.is_published === 'true' && 
+ post.title && 
+ post.title.trim() !== ''
+ );
 }
 ```
 
@@ -76,37 +76,37 @@ Converting Substack's HTML to clean Markdown required handling various edge case
 
 ```javascript
 function htmlToMarkdown(html) {
-  let markdown = html;
-  
-  // Convert headers with proper spacing
-  markdown = markdown.replace(/<h([1-6])[^>]*>(.*?)<\/h[1-6]>/gi, (match, level, content) => {
-    const hashes = '#'.repeat(parseInt(level));
-    return `\n${hashes} ${content.trim()}\n`;
-  });
-  
-  // Handle paragraphs and preserve line breaks
-  markdown = markdown.replace(/<p[^>]*>(.*?)<\/p>/gi, '\n$1\n');
-  
-  // Convert links while preserving structure
-  markdown = markdown.replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)');
-  
-  // Process lists with proper formatting
-  markdown = markdown.replace(/<ul[^>]*>(.*?)<\/ul>/gis, (match, content) => {
-    const items = content.match(/<li[^>]*>(.*?)<\/li>/gi);
-    if (!items) return match;
-    return '\n' + items.map(item => 
-      '- ' + item.replace(/<li[^>]*>(.*?)<\/li>/i, '$1').trim()
-    ).join('\n') + '\n';
-  });
-  
-  // Clean up HTML entities
-  markdown = markdown.replace(/&nbsp;/g, ' ');
-  markdown = markdown.replace(/&amp;/g, '&');
-  markdown = markdown.replace(/&#8217;/g, "'");
-  markdown = markdown.replace(/&#8220;/g, '"');
-  markdown = markdown.replace(/&#8221;/g, '"');
-  
-  return markdown.replace(/\n\s*\n\s*\n/g, '\n\n').trim();
+ let markdown = html;
+ 
+ // Convert headers with proper spacing
+ markdown = markdown.replace(/<h([1-6])[^>]*>(.*?)<\/h[1-6]>/gi, (match, level, content) => {
+ const hashes = '#'.repeat(parseInt(level));
+ return `\n${hashes} ${content.trim()}\n`;
+ });
+ 
+ // Handle paragraphs and preserve line breaks
+ markdown = markdown.replace(/<p[^>]*>(.*?)<\/p>/gi, '\n$1\n');
+ 
+ // Convert links while preserving structure
+ markdown = markdown.replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)');
+ 
+ // Process lists with proper formatting
+ markdown = markdown.replace(/<ul[^>]*>(.*?)<\/ul>/gis, (match, content) => {
+ const items = content.match(/<li[^>]*>(.*?)<\/li>/gi);
+ if (!items) return match;
+ return '\n' + items.map(item => 
+ '- ' + item.replace(/<li[^>]*>(.*?)<\/li>/i, '$1').trim()
+ ).join('\n') + '\n';
+ });
+ 
+ // Clean up HTML entities
+ markdown = markdown.replace(/&nbsp;/g, ' ');
+ markdown = markdown.replace(/&amp;/g, '&');
+ markdown = markdown.replace(/&#8217;/g, "'");
+ markdown = markdown.replace(/&#8220;/g, '"');
+ markdown = markdown.replace(/&#8221;/g, '"');
+ 
+ return markdown.replace(/\n\s*\n\s*\n/g, '\n\n').trim();
 }
 ```
 
@@ -118,29 +118,29 @@ One of the most complex aspects was downloading and rehosting images:
 
 ```javascript
 async function downloadImage(imageUrl, filename) {
-  try {
-    const imageData = await fetchContent(imageUrl);
-    const imagePath = path.join(IMAGES_DIR, filename);
-    fs.writeFileSync(imagePath, imageData, 'binary');
-    return `/blog/images/${filename}`;
-  } catch (error) {
-    console.log(`Failed to download image: ${imageUrl}`);
-    return imageUrl; // Fallback to original URL
-  }
+ try {
+ const imageData = await fetchContent(imageUrl);
+ const imagePath = path.join(IMAGES_DIR, filename);
+ fs.writeFileSync(imagePath, imageData, 'binary');
+ return `/blog/images/${filename}`;
+ } catch (error) {
+ console.log(`Failed to download image: ${imageUrl}`);
+ return imageUrl; // Fallback to original URL
+ }
 }
 
 // Process images in markdown content
 const imageMatches = markdownContent.match(/!\[([^\]]*)\]\(([^)]+)\)/g) || [];
 for (const imageMatch of imageMatches) {
-  const urlMatch = imageMatch.match(/!\[([^\]]*)\]\(([^)]+)\)/);
-  if (urlMatch && urlMatch[2].startsWith('http')) {
-    const imageUrl = urlMatch[2];
-    const imageExtension = path.extname(imageUrl).split('?')[0] || '.jpg';
-    const imageName = `${slug}-${Date.now()}${imageExtension}`;
-    
-    const localImagePath = await downloadImage(imageUrl, imageName);
-    markdownContent = markdownContent.replace(imageUrl, localImagePath);
-  }
+ const urlMatch = imageMatch.match(/!\[([^\]]*)\]\(([^)]+)\)/);
+ if (urlMatch && urlMatch[2].startsWith('http')) {
+ const imageUrl = urlMatch[2];
+ const imageExtension = path.extname(imageUrl).split('?')[0] || '.jpg';
+ const imageName = `${slug}-${Date.now()}${imageExtension}`;
+ 
+ const localImagePath = await downloadImage(imageUrl, imageName);
+ markdownContent = markdownContent.replace(imageUrl, localImagePath);
+ }
 }
 ```
 
@@ -152,29 +152,29 @@ Creating proper frontmatter for Astro required intelligent tag generation and me
 
 ```javascript
 function generateFrontmatter(post, content, publishDate) {
-  const excerpt = extractExcerpt(content);
-  const readingTime = estimateReadingTime(content);
-  
-  // Intelligent tag generation based on content
-  let tags = [];
-  const contentLower = content.toLowerCase();
-  
-  if (contentLower.includes('finance') || contentLower.includes('market') || contentLower.includes('defi')) {
-    tags.push('finance');
-  }
-  if (contentLower.includes('crypto') || contentLower.includes('blockchain') || contentLower.includes('bitcoin')) {
-    tags.push('crypto');
-  }
-  if (contentLower.includes('technology') || contentLower.includes('ai') || contentLower.includes('algorithm')) {
-    tags.push('technology');
-  }
-  if (contentLower.includes('art') || contentLower.includes('design') || contentLower.includes('creative')) {
-    tags.push('art');
-  }
-  
-  if (tags.length === 0) tags.push('general');
-  
-  return `---
+ const excerpt = extractExcerpt(content);
+ const readingTime = estimateReadingTime(content);
+ 
+ // Intelligent tag generation based on content
+ let tags = [];
+ const contentLower = content.toLowerCase();
+ 
+ if (contentLower.includes('finance') || contentLower.includes('market') || contentLower.includes('defi')) {
+ tags.push('finance');
+ }
+ if (contentLower.includes('crypto') || contentLower.includes('blockchain') || contentLower.includes('bitcoin')) {
+ tags.push('crypto');
+ }
+ if (contentLower.includes('technology') || contentLower.includes('ai') || contentLower.includes('algorithm')) {
+ tags.push('technology');
+ }
+ if (contentLower.includes('art') || contentLower.includes('design') || contentLower.includes('creative')) {
+ tags.push('art');
+ }
+ 
+ if (tags.length === 0) tags.push('general');
+ 
+ return `---
 title: "${post.title.replace(/"/g, '\\"')}"
 description: "${excerpt.replace(/"/g, '\\"')}"
 publishDate: ${publishDate}
@@ -197,23 +197,23 @@ The tool includes comprehensive error handling to deal with malformed data:
 
 ```javascript
 try {
-  const htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
-  const markdownContent = htmlToMarkdown(htmlContent);
-  
-  if (!markdownContent || markdownContent.trim().length < 50) {
-    console.log(`Skipping: Content too short for ${post.title}`);
-    continue;
-  }
-  
-  const frontmatter = generateFrontmatter(post, markdownContent, formattedDate);
-  const finalContent = `${frontmatter}\n\n${markdownContent}`;
-  
-  fs.writeFileSync(outputPath, finalContent, 'utf8');
-  console.log(`✅ Created: ${filename}`);
-  
+ const htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
+ const markdownContent = htmlToMarkdown(htmlContent);
+ 
+ if (!markdownContent || markdownContent.trim().length < 50) {
+ console.log(`Skipping: Content too short for ${post.title}`);
+ continue;
+ }
+ 
+ const frontmatter = generateFrontmatter(post, markdownContent, formattedDate);
+ const finalContent = `${frontmatter}\n\n${markdownContent}`;
+ 
+ fs.writeFileSync(outputPath, finalContent, 'utf8');
+ console.log(`✅ Created: ${filename}`);
+ 
 } catch (error) {
-  console.log(`❌ Error processing ${post.title}: ${error.message}`);
-  continue; // Skip failed posts and continue processing
+ console.log(`❌ Error processing ${post.title}: ${error.message}`);
+ continue; // Skip failed posts and continue processing
 }
 ```
 
@@ -226,8 +226,8 @@ For large exports, the tool includes several optimizations:
 ```javascript
 // Skip existing files to allow resumable imports
 if (fs.existsSync(outputPath)) {
-  console.log(`Skipping: ${filename} already exists`);
-  continue;
+ console.log(`Skipping: ${filename} already exists`);
+ continue;
 }
 
 // Rate limiting for image downloads
@@ -244,7 +244,7 @@ These features make the tool practical for large datasets while providing clear 
 The final tool successfully imported over 100 blog posts, processing:
 
 - **✅ 107 published posts** with complete metadata
-- **🖼️ 50+ images** downloaded and rehosted locally  
+- **🖼️ 50+ images** downloaded and rehosted locally 
 - **📝 Clean Markdown** with proper frontmatter for each post
 - **🏷️ Intelligent tagging** based on content analysis
 - **📅 Preserved publish dates** maintaining chronological order

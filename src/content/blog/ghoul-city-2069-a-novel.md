@@ -17,7 +17,7 @@ TL;DR: I AM BASICALLY OFFERING 10 SEATS AS SHARES AS CHARS IN AN UPCOMING NOVEL 
 
 This post was first was published on [Medium](https://gigabvgatti.medium.com/ghoul-city-2069-a-novel-f3ecd483b586), then [Cent](https://beta.cent.co/goekhanturhan/+fjd8y7), now here.
 
-I am a [former academic](https://independentresearcher.academia.edu/G%C3%B6khanTurhan) who has a MA in Comparative Literature as well as an internationally published, and exhibited multi-media artist. I wrote a [dissertation](https://elmcip.net/person/gokhan-turhan) on the function and importance of media laboratories for the preservation of born-digital literatures — which urged me to start on a Ph.D. proposal for the outer space data maintenance in terms of human legacy which waltzed with nano-writing, and the like.
+I am a [former academic](https://independentresearcher.academia.edu/G%C3%B6khanTurhan) who has a MA in Comparative Literature as well as an internationally published, and exhibited multi-media artist. I wrote a [dissertation](https://elmcip.net/person/gokhan-turhan) on the function and importance of media laboratories for the preservation of born-digital literatures — which urged me to start on a Ph. D. proposal for the outer space data maintenance in terms of human legacy which waltzed with nano-writing, and the like.
 
 However, I quit academy since I highly think that times are not mature enough within the expanded field of humanities for analytical thinking, and diversity of ideas.
 

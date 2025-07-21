@@ -9,7 +9,7 @@ tags: ["finance", "crypto", "defi", "technology", "data"]
 category: "finance"
 featured: false
 readingTime: 12
-excerpt: "This piece was originally publishedhttps://zora.co/collect/base:0xfadeec393fad8c8877c555c598439feb0844e6b1/4 on the Zora Networkhttps://zora.co/invite/gigabvgatti.eth over Base, and is a collectible..."
+excerpt: "This piece was originally published on the Zora Network over Base, and is a collectible..."
 originalUrl: "https://gokhan.substack.com/p/11-theses-for-crypto-in-2024"
 ---
 

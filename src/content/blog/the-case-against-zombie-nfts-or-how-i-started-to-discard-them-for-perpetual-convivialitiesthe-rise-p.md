@@ -7,7 +7,7 @@ tags: ["finance", "crypto", "technology", "web3", "art"]
 category: "finance"
 featured: false
 readingTime: 3
-excerpt: "This piece was first deployed to Mirrorhttps://gokhan.mirror.xyz/jeb6DGWF6wU7402LUjiQ4P8RYl7wjRMr2HrkkDp6OZ8 on Optimism, & Paragraphhttps://paragraph.xyz/@gokhan/the-case-against-zombie-nfts,-or-how-..."
+excerpt: "This piece was first deployed to Mirror on Optimism, & Paragraph"
 originalUrl: "https://gokhan.substack.com/p/the-case-against-zombie-nfts-or-how-i-started-to-discard-them-for-perpetual-convivialitiesthe-rise-p"
 ---
 

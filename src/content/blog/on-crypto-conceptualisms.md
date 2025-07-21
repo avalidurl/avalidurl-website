@@ -7,8 +7,8 @@ tags: ["general"]
 category: "general"
 featured: false
 readingTime: 1
-excerpt: "Subscribe nowhttps://gokhan.substack.com/subscribe"
+excerpt: "coming soon."
 originalUrl: "https://gokhan.substack.com/p/on-crypto-conceptualisms"
 ---
 
-[Subscribe now](https://gokhan.substack.com/subscribe)
+*coming soon.*

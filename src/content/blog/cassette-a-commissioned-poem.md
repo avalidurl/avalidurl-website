@@ -9,9 +9,7 @@ tags: ["finance", "crypto", "art", "writing", "music"]
 category: "finance"
 featured: false
 readingTime: 5
-excerpt: "CASETTE: https://zora.co/collect/zora:0xc51e1c9166f3ac33e4ee0a68e0339abcd202a773https://zora.co/collect/zora:0xc51e1c9166f3ac33e4ee0a68e0339abcd202a773
-
-This piece of pure noise-oriented audio work..."
+excerpt: "CASETTE: This piece of pure noise-oriented audio work..."
 originalUrl: "https://gokhan.substack.com/p/cassette-a-commissioned-poem"
 ---
 

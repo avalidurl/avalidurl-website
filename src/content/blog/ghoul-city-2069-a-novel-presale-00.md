@@ -7,7 +7,7 @@ tags: ["writing"]
 category: "writing"
 featured: false
 readingTime: 1
-excerpt: "Please kindly read what I have to offer to first 10 investors as characters in a novel with tokenomics of its own.https://gigabvgatti.medium.com/ghoul-city-2069-a-novel-f3ecd483b586"
+excerpt: "Please kindly read what I have to offer to first 10 investors as characters in a novel with tokenomics of its own."
 originalUrl: "https://gokhan.substack.com/p/ghoul-city-2069-a-novel-presale-00"
 ---
 

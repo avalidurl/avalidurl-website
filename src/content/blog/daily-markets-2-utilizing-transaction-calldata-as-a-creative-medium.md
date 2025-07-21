@@ -21,7 +21,7 @@ Anyways, during the gym-home-hackathon days of the last week, and other deeds su
 
 ## ETHSCRIPTIONS
 
-Now, as I was dying of boredom at almost 2 a.m., I ran across this Twitter Spaces where they are discussing “ethscriptions.” Somebody finally decided to deploy a front end, and also a guide to register data to individual Ethereum transactions.They are currently inscribing punks under the moniker [Ethereum Punks](https://ethereumpunks.net/). There is a front end for the punks here.
+Now, as I was dying of boredom at almost 2 a.m., I ran across this Twitter Spaces where they are discussing “ethscriptions.” Somebody finally decided to deploy a front end, and also a guide to register data to individual Ethereum transactions. They are currently inscribing punks under the moniker [Ethereum Punks](https://ethereumpunks.net/). There is a front end for the punks here.
 
 If you need some more details on these inscriptions, you can visit this website: [ETHSCRIPTIONS](https://ethscriptions.com/)
 
@@ -36,10 +36,7 @@ Developers or idea guys who will be able to constrain the creation of these insc
 According to a tweet by Urbit,
 
 >
-> [the Urbit Foundation will be overseeing the development of an Urbit application that serves as a BOS gateway on NEAR, allowing for the complete decentralization of the stack: verifiable, composable frontends running on sovereign servers.](<TwitterEmbed id="1669797094763143194" />
->
-
-BOS aka [Blockchain Operating System](https://near.org/) is a toolkit that helps and guides developers to deploy their own crypto dApps without delving that much into native blockchain programming languages, and frameworks.
+> <TwitterEmbed id="1669797094763143194" / /> is a toolkit that helps and guides developers to deploy their own crypto dApps without delving that much into native blockchain programming languages, and frameworks.
 
 Urbits users and organizations have already [deployed](https://urbit.org/ecosystem?type=applications) self-hosted versions of several popular crypto/ DeFi/ NFTs dApps and marketplaces such as OpenSea, Osmosis, Safe, Uniswap alongside myriad Urbit native apps.
 

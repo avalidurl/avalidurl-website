@@ -13,8 +13,6 @@ originalUrl: "https://gokhan.substack.com/p/eugenics-tokens-01"
 
 I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an “artist-in-residence” somewhere somewhere. &, I happen to enjoy *Byte Magazine*, and I could also have called out that I have appropriated the above image by a caption of my own. Nope, I do resist. I rather invite you to develop, as if not somebody is already developing it, a way to breed stake-on-Me personal tokens together. As above, so below.
 
-[Subscribe now](https://gokhan.substack.com/subscribe)
-
 **Alice is a chess champion, an intergalactic one, spanning parsecs among myriad galaxies a beateous ripple of fame, serenity, and intellect.**
 
 Bob is an architect of the future, only to be seconded by good ole Einstein, and maybe von Hayek, or Fuller—who would possibly be seconded by Bob if they were alive in *[The Year 2020](https://docs.0xgokhan.art)*.

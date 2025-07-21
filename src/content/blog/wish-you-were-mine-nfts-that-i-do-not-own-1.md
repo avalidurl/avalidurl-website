@@ -7,17 +7,10 @@ tags: ["finance", "crypto", "web3", "art", "writing"]
 category: "finance"
 featured: false
 readingTime: 5
-excerpt: "Subscribe nowhttps://gokhan.substack.com/subscribe
-
- 0x Loquacious Acquiring of Diamond Hands Mentality by Constantly Acting as a Paper Hand
-
-YOU CAN SKIP TO BELOW IF YOU HATE LOQUACIOUS BITCHES.
-
-We..."
+excerpt: "Subscribe now 0x Loquacious Acquiring of Diamond Hands Mentality by Constantly Acting as a Paper Hand YOU CAN SKIP TO BELOW IF YOU HATE LOQUACIOUS BITCHES. We..."
 originalUrl: "https://gokhan.substack.com/p/wish-you-were-mine-nfts-that-i-do-not-own-1"
 ---
 
-[Subscribe now](https://gokhan.substack.com/subscribe)
 
 ## 0x) Loquacious Acquiring of Diamond Hands Mentality by Constantly Acting as a Paper Hand
 
@@ -44,8 +37,7 @@ gokhan.eth — Giga Bvgatti 🚀🧬💾🦇🔊 @0xgokhan"It is the code that s
 
 —which is the purest form of art: to craft itself as a practical base layer dApplication for all that try to fight entropy."
 
-Pepe von Hayek, block number 1 zagillion.[3:42 PM ∙ Aug 29, 2021](<TwitterEmbed id="1432005681088012291" />
-## 1) Mitchell Chan's Digital Zone of Immaterial Pictorial Sensibility (IKB) (2017)
+Pepe von Hayek, block number 1 zagillion.<TwitterEmbed id="1432005681088012291" / /> Mitchell Chan's Digital Zone of Immaterial Pictorial Sensibility (IKB) (2017)
 
 [PaperclipDAO have just acquired a piece](https://clip.mirror.xyz/PDjwdDLcfzWN4IPmS8NgNeMNwlyk016UKT_4Q4LvXw4). It is nice to see that artists/ thinkerers who import the early days of conceptual art onto the chain. After all, NFTs are also global coordination tools with which we the swarm bring about solutions to some problematics.
 

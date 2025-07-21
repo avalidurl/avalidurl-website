@@ -7,7 +7,7 @@ tags: ["crypto", "defi", "technology", "web3"]
 category: "crypto"
 featured: false
 readingTime: 2
-excerpt: "I am reading a @praxisnationhttps://x.com/@praxisnation post, Sovereign Intelligence Western Civilization in the Intelligence Agehttps://www.praxisnation.com/news/sovereign-intelligence, and I come..."
+excerpt: "I am reading a @praxisnation post, Sovereign Intelligence Western Civilization in the Intelligence Age and I come..."
 originalUrl: "https://gokhan.substack.com/p/thoughts-on-the-sovereign-metabolism-i"
 ---
 
@@ -23,7 +23,7 @@ The authors at Praxis accentuates that
 
 That which our meta-narratively deluded peers in "crypto"—neither crypto-economics proper nor the game of life that the associatively derivative technologies surrounding and stemming from the composability warfare—come to think of decentralized AI in fact are just unnecessarily mutable vector database access to multi-signature controlled games that lack play.
 
-Monument Valley, Yoshi Toshida (1971).Indeed, there are inspiring attempts at the intents-centric cross-protocol solutions to liquidity and capital markets fragmentation in this emergent sub-sector of global financial infrastructure rails. However, if someone is arguing for a "totally" decentralized AI stack, they need to kindly reminded that "not our weights, not our society.
+Monument Valley, Yoshi Toshida (1971). Indeed, there are inspiring attempts at the intents-centric cross-protocol solutions to liquidity and capital markets fragmentation in this emergent sub-sector of global financial infrastructure rails. However, if someone is arguing for a "totally" decentralized AI stack, they need to kindly reminded that "not our weights, not our society.
 
 Today, thanks to recent revival of true American Dynamism, we have chance to uphold genuinely competitive governance schemes across many a domain. Let's not botch it under the delusions of either Doomer Safetyism or Exit Liquidity Latter Day Blockchain Fundamentalism.
 

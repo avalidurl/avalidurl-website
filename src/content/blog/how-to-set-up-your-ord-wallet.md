@@ -7,13 +7,7 @@ tags: ["crypto", "technology", "art", "writing"]
 category: "crypto"
 featured: false
 readingTime: 7
-excerpt: "Briefing
-
-Inscription content is entirely on-chain,https://docs.ordinals.com/inscriptions.html
-
-stored in taproot script-path spend scripts.https://docs.ordinals.com/inscriptions.html
-
-YES, YOU NEED..."
+excerpt: "Briefing Inscription content is entirely on-chain,https://docs.ordinals.com/inscriptions.html stored in taproot script-path spend scripts. YES, YOU NEED..."
 originalUrl: "https://gokhan.substack.com/p/how-to-set-up-your-ord-wallet"
 ---
 
@@ -49,11 +43,11 @@ I myself wanted to experiment with *Ordinals* in that they provide that raw bloc
 
 🦍 *Ordinals* do **not** function in the way of non-fungible tokens (NFTs) to which you are accustomed across the multi- and cross-chain constellations of rektistan. [They have their own](https://docs.ordinals.com/inscriptions.html)`inscriptions` which helps you inscribe, or write into, `satoshis` any arbitrary content.
 
-🦍  Here, you are dealing with the way `UTXO`s work, that is `first-in-first-out`, ***not ***`the usual way`* individual **NFTs, or a collection acts or is acted upon in the usual EVM settings** thereof*.
+🦍 Here, you are dealing with the way `UTXO`s work, that is `first-in-first-out`, ***not ***`the usual way`* individual **NFTs, or a collection acts or is acted upon in the usual EVM settings** thereof*.
 
-🦍  You might inadvertently, and without any technical or security-related effort, rug yourself of that beauteous digital and cultural object of craftsmanship, that is, an ordinal just by using the UTXO that is more or less the ordinal that you hold.
+🦍 You might inadvertently, and without any technical or security-related effort, rug yourself of that beauteous digital and cultural object of craftsmanship, that is, an ordinal just by using the UTXO that is more or less the ordinal that you hold.
 
-### ☣️  As is clearly stated in the Handbook:
+### ☣️ As is clearly stated in the Handbook:
 
 🐸 “Ordinals is a numbering scheme that allows tracking and transferring of individual satoshis.”
 
@@ -61,7 +55,7 @@ I myself wanted to experiment with *Ordinals* in that they provide that raw bloc
 
 🐸 You can attach assets such as NFTs, securities, accounts, stablecoins to ordinals. That is, **Ordinals themselves are not NFTs.**
 
-### ☣️  After you have created a wallet for your ordinals, you need to memorize the facts that:
+### ☣️ After you have created a wallet for your ordinals, you need to memorize the facts that:
 
 😎 If you have used the vanilla `ord` option to create wallet, you need to re-read the details as to how to hold, protect, or exchange your ordinals in the `ord`[Github documentation page](https://github.com/casey/ord).
 
@@ -85,33 +79,7 @@ But we mined the LARGEST BLOCK and LARGEST TRANSACTION IN BITCOIN’S HISTORY
 Special thanks to bitcoin full node operators for supporting our efforts and hosting our 4MB NFT for all eternity!
 
 gm @TaprootWizards 🧙‍♂️
-[3:58 PM ∙ Feb 2, 20231,142Likes253Retweets](<TwitterEmbed id="1621176136142045191" /> wanna do more things with them, which might also help me learn some *Bitcoin* technicals and fundamentals since I am only class of 2019, and have never traded, or taken interest in *BTC*.
-
-In my humble opinion, we’re currently in an abstracted war of fog where different factions try to be the first mover on this opportunity for a cultural evolution that Bitcoin network certainly needs if they do not want to face the fate of the Neanderthals.
-
-Well, when I woke up this morning, GM’d the CT, shilled some of my not that obscure individual conceptual art pieces, I happen to read a tweet by Udi for a Taproot Wizard giveaway, or sth sth. I realized that I wanted to set up and ord wallet about 3 am, and got pissed at off the technicals even though i like them technicals, the best puzzle game there ever better than any *Zachtronics*.
-
-Then, I realized, as I was re-reading the *Handbook*, trying to differentiate between ordinal theory, and the inscriptions, I came across this *Github* repo readme know-how by windsok in the Handbook. It is simple, and I am doing it as I am writing about it here.
-
-**Get in winner, we’re going retro-futur-of-Frankreich.**
-
-# 3. How to Easily set-up an ord wallet compatible Sparrow Wallet?
-
-`The below directions has been referenced from windsok’s original document that is referenced both above and below. If you are a visual learner, there is more in that original repo. Please do follow the steps there initially.`
-
-🌞 “You now have a wallet which is compatible with `ord`, and can be imported into `ord` using the BIP39 Seed Phrase.”
-
-🌞 “To receive ordinals or inscriptions, click on the `Receive` tab and copy a new address.”
-
-🌞 “**Each time you want to receive you should use a brand new address, and not re-use existing addresses.”**
-
-🌞 “`You can add a label to each address, so you can keep track of what it was used for.”`
-
-### 4. Addenda
-
-I will be updating this addenda section of this given post in line with the most asked questions across any social media, and updates by developers, and individual project teams, or leaders.
-
-Some of you might have noticed that [windsok](https://twitter.com/windsok) added *a section* in the [original Github document](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980) *on [how to validate and/ or view received inscriptions](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980#validating--viewing-received-inscriptions)* that are but transactions—windsok’s document features screenshots of the entire process itself, it’s better to refer to that page per se:
+<TwitterEmbed id="1621176136142045191" / /> added *a section* in the [original Github document](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980) *on [how to validate and/ or view received inscriptions](https://gist.github.com/windsok/5b53a1ced6ef3eddbde260337de28980#validating--viewing-received-inscriptions)* that are but transactions—windsok’s document features screenshots of the entire process itself, it’s better to refer to that page per se:
 
 >
 

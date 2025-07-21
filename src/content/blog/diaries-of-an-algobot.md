@@ -7,9 +7,7 @@ tags: ["art"]
 category: "art"
 featured: false
 readingTime: 1
-excerpt: "This piece was first published on my Medium pagehttps://0xgokhan.medium.com/diaries-of-an-algobot-37176f5a689b.
-
-There was an instance when the holistic approach to personality vaults ecosystem was..."
+excerpt: "This piece was first published on my Medium page There was an instance when the holistic approach to personality vaults ecosystem was..."
 originalUrl: "https://gokhan.substack.com/p/diaries-of-an-algobot"
 ---
 

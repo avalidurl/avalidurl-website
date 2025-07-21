@@ -22,4 +22,4 @@ The human fallacy section of the Twitter says they will reach me in 5-7 days. I 
 In the meantime, please do follow me at gigabvgatti—any other username that starts with 0xgokhan has nothing to do with me (apparently they’re also named Gökhan, a very pop Turkish forename that means the Ruler of the Heavens):
 @0xgokhan. \n\n@elonmusk, are you aware that your system locks accounts who need to hop among VPN hotspots because of you know whys?","username":"gigabvgatti","name":"0XGOKHAN ALT","date":"Fri Feb 10 00:27:53 +0000 2023","photos":[],"quoted_tweet":{},"retweet_count":1,"like_count":1,"expanded_url":{},"video_url":null,"belowTheFold":false}">0XGOKHAN ALT @gigabvgattithis is @0xgokhan.
 
-@elonmusk, are you aware that your system locks accounts who need to hop among VPN hotspots because of you know whys?[12:27 AM ∙ Feb 10, 20231Like1Retweet](<TwitterEmbed id="1623841145007505409" />
+@elonmusk, are you aware that your system locks accounts who need to hop among VPN hotspots because of you know whys? [12:27 AM ∙ Feb 10, 20231Like1Retweet](<TwitterEmbed id="1623841145007505409" />

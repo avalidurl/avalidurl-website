@@ -7,7 +7,7 @@ tags: ["crypto", "data", "web3", "art", "writing"]
 category: "crypto"
 featured: false
 readingTime: 3
-excerpt: "This post was originally publishedhttps://gokhan.mirror.xyz/ge3lq8VWjLeC9Cdt6IQTesHk9-T1vqqv_2ZUxG1LWy4 on my Mirror weblog where there is a 2/2 fixed edition of the piece as a writing NFT on the..."
+excerpt: "This post was originally published on my Mirror weblog where there is a 2/2 fixed edition of the piece as a writing NFT on the..."
 originalUrl: "https://gokhan.substack.com/p/this-week-in-writing-and-nfts-7"
 ---
 

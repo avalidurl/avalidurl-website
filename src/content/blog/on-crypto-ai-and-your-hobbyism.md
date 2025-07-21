@@ -7,7 +7,7 @@ tags: ["finance", "crypto", "technology", "web3", "art"]
 category: "finance"
 featured: false
 readingTime: 2
-excerpt: "Creative disruption rules the technological acceleration. Economically speaking, the global markets are going through any of the four quadrantshttps://web.gavekal.com/books/the-general-theory-of-portf..."
+excerpt: "Creative disruption rules the technological acceleration. Economically speaking, the global markets are going through any of the four quadrants"
 originalUrl: "https://gokhan.substack.com/p/on-crypto-ai-and-your-hobbyism"
 ---
 

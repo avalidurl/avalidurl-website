@@ -23,16 +23,7 @@ I’ll be hitting the gym on a 4-day streak today (*sorry, I paused here so as t
 
 **JPG** is an onchain cultural artefact exhibition ecosystem who have just announced their inventive approach to non-fungible token (NFT) indices by the might of their **Canons**:
 jpg.space ","username":"______jpg______","name":"JPG (pronounced jpeg)","date":"Thu Dec 08 16:01:25 +0000 2022","photos":[{"img_url":"https://substackcdn.com/image/upload/w_1028,c_limit,q_auto:best/l_twitter_play_button_rvaygk,w_88/bpbpizq1nifzie9blaxu","link_url":"https://t.co/0Ao7FSvu6b","alt_text":null}],"quoted_tweet":{},"retweet_count":51,"like_count":196,"expanded_url":{},"video_url":"https://video.twimg.com/ext_tw_video/1600589720060297220/pu/vid/640x360/QVtIcpPQIxpGnjBl.mp4?tag=12","belowTheFold":false}">JPG (pronounced jpeg) @______jpg______Announcing the launch of JPG Canons! A token-curated registry system designed to index a new community-sourced contextual data layer for NFTs. JPG Canons are now in its alpha version, discover below how they will benefit the NFT ecosystem.
-[jpg.space](https://jpg.space) [4:01 PM ∙ Dec 8, 2022196Likes51Retweets](<TwitterEmbed id="1600883253816496128" />
-**Translation:** *Canons* are JPGs advancement upon TCRs ([token-curated registries](<YouTubeEmbed id="xQrDWE_IcWo" /> in which the holders of a given token, in this case the dynamic Canonicon NFT, index proposed NFTs under a certain canon. Think of a canon as a cultural order book where idea market reflexivities solidify into permanent legacy culture of a given society.
-
-The last week on their Discord might have been the best time since DeFi Summer 2020 August that I spent on anything crypto-related thanks to discussions such as *Smart Contract Dynamism vs NFT Dynamism.*
-
-I love memes more than art:
-
-## ‘plunderphonics-sampledelica-variations acousmatiques’
-
-**Music NFTs** still lack top-notch niché content that serves a given peculiar line of collectors who are trapped within the *[Everywhere at the End of the Time ](https://thecaretaker.bandcamp.com/album/everywhere-at-the-end-of-time)*multiverse by the Caretaker. Yes, there are experiment such as Billy Bultheel’s *[Songs for the Contract](https://www.folia.app/works/10), *or any sound-focusing artwork by [Deafbeef](https://www.deafbeef.com/), or Giga Bvgatti’s Weeb3 sounbites (aye, self shill), and many other pure contract based anomalies by shy artists who call themselves devs due to peer pressure whilst nobodies are printing stables even when they are neither artists nor devs yet are skillful enough to abuse both the gullible artworld and devtopia.
+[jpg.space](https://jpg.space) <TwitterEmbed id="1600883253816496128" / />*multiverse by the Caretaker. Yes, there are experiment such as Billy Bultheel’s *[Songs for the Contract](https://www.folia.app/works/10), *or any sound-focusing artwork by [Deafbeef](https://www.deafbeef.com/), or Giga Bvgatti’s Weeb3 sounbites (aye, self shill), and many other pure contract based anomalies by shy artists who call themselves devs due to peer pressure whilst nobodies are printing stables even when they are neither artists nor devs yet are skillful enough to abuse both the gullible artworld and devtopia.
 
 However, these do not cater for the currently catalogue building *Music NFTs canon. *Music NFTs are right now invested in the emergent business-making architecture, and culture-design—which is probably going to be a billion dollar industry soon enough than does any of us realize amongst the doomposting scrolls.
 

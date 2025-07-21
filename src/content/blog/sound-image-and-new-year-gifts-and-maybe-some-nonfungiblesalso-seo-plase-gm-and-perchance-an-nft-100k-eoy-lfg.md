@@ -29,8 +29,8 @@ I was just gonna recommend three new year gifts to you guys. Just gift them to y
 
 ### a) The Caretaker—Everywhere at the End of the World 1-2-3-4-5-6 (vinyl)
 
-![Social2](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/6db421b6-021d-4c7d-a3ec-f7c1b1c1a3bd_600x593.jpeg)Available via boomkat: [here](https://boomkat.com/products/everywhere-at-the-end-of-time-stages-1-3) and [here](https://boomkat.com/products/everywhere-at-the-end-of-time-stages-4-6-22ef1a10-fb61-419b-a4f6-356adbe834a9).
+! [Social2](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/6db421b6-021d-4c7d-a3ec-f7c1b1c1a3bd_600x593.jpeg)Available via boomkat: [here](https://boomkat.com/products/everywhere-at-the-end-of-time-stages-1-3) and [here](https://boomkat.com/products/everywhere-at-the-end-of-time-stages-4-6-22ef1a10-fb61-419b-a4f6-356adbe834a9).
 
 ### b) Daido Moriyama—How I Take Photographs (book)
 
-![Daido Moriyama – How I Take Photographs - Fonts In Use](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/baf6d8e8-a969-405b-90d0-9ac7973dd732_1340x860.jpeg)available at [Laurence King](https://www.laurenceking.com/us/product/daido-moriyama/).
+! [Daido Moriyama – How I Take Photographs - Fonts In Use](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/baf6d8e8-a969-405b-90d0-9ac7973dd732_1340x860.jpeg)available at [Laurence King](https://www.laurenceking.com/us/product/daido-moriyama/).

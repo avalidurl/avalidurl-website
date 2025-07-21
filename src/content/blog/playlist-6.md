@@ -7,7 +7,7 @@ tags: ["crypto", "technology", "art", "writing", "music"]
 category: "crypto"
 featured: false
 readingTime: 4
-excerpt: "There is a Mirror version of this posthttps://gokhan.mirror.xyz/SKr2aT7tNmTVTJPCGo5MwaG3jOl1_cB_FMJPJujpA8s on the Optimism network as a piece of collectible blogpost. If you care for such stuff,..."
+excerpt: "There is a Mirror version of this post on the Optimism network as a piece of collectible blogpost. If you care for such stuff,..."
 originalUrl: "https://gokhan.substack.com/p/playlist-6"
 ---
 

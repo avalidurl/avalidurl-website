@@ -7,7 +7,7 @@ tags: ["finance", "technology", "data", "web3", "art"]
 category: "finance"
 featured: false
 readingTime: 5
-excerpt: "When you pay for Parsechttps://parsec.fi/r/gokhan, Nansenhttps://pro.nansen.ai/, Messarihttps://messari.io/, and a couple of others just for analytics on a monthly basis, you have just paid for a..."
+excerpt: "When you pay for Parsec https://parsec.fi/r/gokhan, Nansen Messari and a couple of others just for analytics on a monthly basis, you have just paid for a..."
 originalUrl: "https://gokhan.substack.com/p/on-subscription-models-in-the-network-states-001"
 ---
 

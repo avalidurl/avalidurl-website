@@ -7,7 +7,7 @@ tags: ["crypto"]
 category: "crypto"
 featured: false
 readingTime: 1
-excerpt: "Wrote a new piece on my Mirror. Please click the link if you wanna start exchanging ideas on the boredom of current NFT tokenomics.https://gokhan.mirror.xyz/CV17Y1GnRdODHKVh7hGSc32ZhCHJvUEi4YmW6IHggIU"
+excerpt: "Wrote a new piece on my Mirror. Please click the link if you wanna start exchanging ideas on the boredom of current NFT tokenomics."
 originalUrl: "https://gokhan.substack.com/p/on-the-boring-and-artificial-tokenomics-of-nfts-vs-the-lack-of-genuine-time-based-token-plays"
 ---
 

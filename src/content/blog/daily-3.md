@@ -1,59 +1,37 @@
 ---
 title: "Daily 3"
-description: ">
-> It's an art form to not givin' a fuck.
->
-> — [Yelawolf](<YouTubeEmbed id=\"8ZXPAaPy65o\" />
->
-
-To give or not to give a fuck. Well, that is not the question. I bet 69% of English instructors cannot recite Shakespeare by heart. I can, which does not even make me a ChatGPT. It does not matter. I har"
+description: "It's an art form to not givin' a fuck. Subscribe now, get never rekt if we ever make friends."
 publishDate: 2022-12-21
 author: "Gokhan Turhan"
-tags: ["crypto", "technology", "art", "writing", "music"]
-category: "crypto"
+tags: ["general"]
+category: "general"
 featured: false
-readingTime: 5
-excerpt: ">
-> It's an art form to not givin' a fuck.
->
-> — Yelawolf<YouTubeEmbed id=\"8ZXPAaPy65o\" />
->
-
-To give or not to give a fuck. Well, that is not the question. I bet 69% of English instructors cannot..."
+readingTime: 3
+excerpt: "It's an art form to not givin' a fuck. Subscribe now, get never rekt if we ever make friends. Jokes aside, it is saddening to see the light taken away from the eyes and words of many an anon friend across CT."
 originalUrl: "https://gokhan.substack.com/p/daily-3"
 ---
 
->
 > It's an art form to not givin' a fuck.
 >
-> — [Yelawolf](<YouTubeEmbed id="8ZXPAaPy65o" />
->
-
-To give or not to give a fuck. Well, that is not the question. I bet 69% of English instructors cannot recite Shakespeare by heart. I can, which does not even make me a ChatGPT. It does not matter. I harvested garlics as a kid, and have been tending to abstract assets that will one day power up either my designer body tethered to a SBT, or help me regain an unknowing of this artificial duality of body and mind by revealing a disembodied ever-emergent betaverse somewhere. People speculate, people beat entropic decay, people know it’s almost impossible to hinder the escape from our own species’ default into becoming that which effective altruists and rationalists have been doomposting about since the first blog ever written. I really do not give an iota of attention thereabouts. *Accelerate*.
-
-[Subscribe now](https://gokhan.substack.com/subscribe)
+> — <YouTubeEmbed id="8ZXPAaPy65o" />
 
 Subscribe now, get never rekt if we ever make friends. Jokes aside, it is saddening to see the light taken away from the eyes and words of many an anon friend across CT. Hang tight there, fellas. We have a couple of exoplanets to terraform.
 
->
 > The attitude is rather: art works have no absolute claim to truth.
 >
 > — [Jan Jelinek](https://www.thewire.co.uk/audio/tracks/unlimited-editions-faitiche)
->
 
 There was a time one of my favorite philosophers ever existed was against the written word, with which, as we have come to have our cultural and biological evolution across a couple of millennia:
 
->
 > If men learn this, it will implant forgetfulness in their souls; they will cease to exercise memory because they rely on that which is written, calling things to remembrance no longer from within themselves, but by means of external marks. What you have discovered is a recipe not for memory, but for reminder. And it is no true wisdom that you offer your disciples, but only its semblance, for by telling them of many things without teaching them you will make them seem to know much, while for the most part they know nothing, and as men filled, not with wisdom but with the conceit of wisdom, they will be a burden to their fellows.'
 >
-> —[Plato (c. 429-347 B.C.E), "Phaedrus" (c. 360 B.C.E.), 274c-275 b, R(eginald) Hackforth, transl., 1952.](http://websites.umich.edu/~lsarth/filecabinet/PlatoOnWriting.html)
->
+> —[Plato (c. 429-347 B. C. E), "Phaedrus" (c. 360 B. C. E.), 274c-275 b, R(eginald) Hackforth, transl., 1952.](http://websites.umich.edu/~lsarth/filecabinet/PlatoOnWriting.html)
 
 I also believe that some of our legal coders who are well-versed with oracles, VMs, and IPs might come to tell us a little bit about what might be assumed as IP, and how people whose objections to emergent technology may have altered the course of a better now.
 
 I am referring to these ambiguous blobs of mumblecorish thoughts in line with AI, and the expanded field of arts.
 
-I think that speculating on the ingenuity of AI in a fashion that does not aim to add to the advancement in the base layer stack of technologies that propagates the technological acceleration thereof is pure officious wishful thinking that tries to capitalize the gossip network inherent thereabouts. It is just what has been befalling that which is designated as the “NFT space,” as if there weren’t any better term than space—or weeb3.
+I think that speculating on the ingenuity of AI in a fashion that does not aim to add to the advancement in the base layer stack of technologies that propagates the technological acceleration thereof is pure officious wishful thinking that tries to capitalize the gossip network inherent thereabouts. It is just what has been befalling that which is designated as the "NFT space," as if there weren't any better term than space—or weeb3.
 
 I.e., those who build and develop both the infrastructure, and the markets thereof to provide solutions to myriad local knowledge problems through respectively the epistemological, phenomenological, metaphysical, ontological and empirical sandboxes upon which the very same technologies thrive as well are later on treated as nobodies who have accomplished nothing.
 

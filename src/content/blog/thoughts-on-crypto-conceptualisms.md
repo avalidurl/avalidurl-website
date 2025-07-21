@@ -7,9 +7,7 @@ tags: ["finance", "crypto", "technology", "data", "art"]
 category: "finance"
 featured: false
 readingTime: 7
-excerpt: "This post was first published at Centhttps://beta.cent.co/+3vuawt.
-
-Manifestos exist. Some are called n-manifesto, and written raw, & accordingly circulated by networks of people, and non-humans...."
+excerpt: "This post was first published at Cent Manifestos exist. Some are called n-manifesto, and written raw, & accordingly circulated by networks of people, and non-humans...."
 originalUrl: "https://gokhan.substack.com/p/thoughts-on-crypto-conceptualisms"
 ---
 

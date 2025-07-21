@@ -7,7 +7,7 @@ tags: ["finance", "art"]
 category: "finance"
 featured: false
 readingTime: 3
-excerpt: "New collection.https://opensea.io/collection/marketz First drop. 1/1, that is a solitary confinement of an inmate that is but a digital art object. As I was contemplating upon the marketual forces,..."
+excerpt: "New collection. First drop. 1/1, that is a solitary confinement of an inmate that is but a digital art object. As I was contemplating upon the marketual forces,..."
 originalUrl: "https://gokhan.substack.com/p/r-e-t-a-i-l"
 ---
 

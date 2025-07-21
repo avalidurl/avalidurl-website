@@ -7,7 +7,7 @@ tags: ["finance", "art", "data"]
 category: "finance"
 featured: false
 readingTime: 2
-excerpt: "You can eat clean, healthy and buy state-of-the-art kitchen utensils to make the best of your cooking not as a hobby but also almost a pro.You can access state-of-the-art basic health insurance from a..."
+excerpt: "You can eat clean, healthy and buy state-of-the-art kitchen utensils to make the best of your cooking not as a hobby but also almost a pro. You can access state-of-the-art basic health insurance from a..."
 originalUrl: "https://gokhan.substack.com/p/ten-reasons-to-get-rich"
 ---
 

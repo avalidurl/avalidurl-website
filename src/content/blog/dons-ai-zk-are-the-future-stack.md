@@ -31,7 +31,7 @@ They are not all different from the yellow-check BAYC pfp ruggers. Most of the t
 
 ## I am not talking about only the average trader—protocol level geniuses turn out to be awkward brawlers day by day
 
-It is understandable that a person might not comprehend the full-stack picture of an emergent-economy, its markets, honest and bad actors at the same time. It is also known that there are a lot of grifters who firstly opposed and slandered honest crypto efforts prior to Q3 2021, and then they become of Ph.Ds in NFTs who wrote, theorized, and acted on this extremely valuable rare chain elements markets as early as 2500 B.C. Some of them are now coping as AI experts, however, that is not the point.
+It is understandable that a person might not comprehend the full-stack picture of an emergent-economy, its markets, honest and bad actors at the same time. It is also known that there are a lot of grifters who firstly opposed and slandered honest crypto efforts prior to Q3 2021, and then they become of Ph. Ds in NFTs who wrote, theorized, and acted on this extremely valuable rare chain elements markets as early as 2500 B. C. Some of them are now coping as AI experts, however, that is not the point.
 
 ## We are in the middle of an evolutionary shift thanks to unprecedented advances in cryptography, economics, computing and Artificial Intelligence, and you should probably understand it.
 

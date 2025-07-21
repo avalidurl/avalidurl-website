@@ -7,11 +7,7 @@ tags: ["crypto", "art"]
 category: "crypto"
 featured: false
 readingTime: 3
-excerpt: "This post has already been minted via Zora. If you would like to access the .txt version thereabouts, please click HEREhttps://zora.co/gokhan/4804.
-
-non-fungibility of the idea as a work of art
-
-1..."
+excerpt: "This post has already been minted via Zora. If you would like to access the .txt version thereabouts, please click HERE non-fungibility of the idea as a work of art 1..."
 originalUrl: "https://gokhan.substack.com/p/non-fungibility-of-the-idea-as-a-work-of-art"
 ---
 

@@ -7,9 +7,7 @@ tags: ["crypto", "data"]
 category: "crypto"
 featured: false
 readingTime: 1
-excerpt: "Tiger in the Snow, 1849, Katsushika Hokusaihttps://en.wikipedia.org/wiki/Hokusai
-
-—“2021: The Great Acceleration” aka 95 Theseshttps://redphone.substack.com/p/theses-2021 by..."
+excerpt: "Tiger in the Snow, 1849, Katsushika Hokusai —“2021: The Great Acceleration” aka 95 Theses by..."
 originalUrl: "https://gokhan.substack.com/p/chain-standard-1"
 ---
 

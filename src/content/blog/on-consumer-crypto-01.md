@@ -1,17 +1,17 @@
 ---
 title: "On Consumer Crypto #01"
-description: "[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | [X version](<TwitterEmbed id=\"1808846330048967019\" /> | [CoLinks version](https://colinks.coordinape.com/post/1422974) | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_in"
+description: "[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | <TwitterEmbed id=\"1808846330048967019\" / /> | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_in"
 publishDate: 2024-07-04
 author: "Gokhan Turhan"
 tags: ["finance", "crypto", "web3", "art", "writing"]
 category: "finance"
 featured: false
 readingTime: 4
-excerpt: "Paragraph versionhttps://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71 | X version<TwitterEmbed id=\"1808846330048967019\" /> | CoLinks..."
+excerpt: "Paragraph version | X version<TwitterEmbed id=\"1808846330048967019\" /> | CoLinks..."
 originalUrl: "https://gokhan.substack.com/p/on-consumer-crypto-01"
 ---
 
-[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | [X version](<TwitterEmbed id="1808846330048967019" /> | [CoLinks version](https://colinks.coordinape.com/post/1422974) | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_inh8c5JKdylaskAIjTFcjBBU1unlQQ?referrerAddress=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71)
+[Paragraph version](https://paragraph.xyz/@gokhan/consumer-crypto?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71) | <TwitterEmbed id="1808846330048967019" / /> | [Mirror version](https://gokhan.mirror.xyz/vvTdas-z_Vxp_inh8c5JKdylaskAIjTFcjBBU1unlQQ?referrerAddress=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71)
 
 Consumer crypto needs consumers. Sorry, I have called it crypto instead of weeb3. You cannot isolate the internet to your needs. However, you can help the constituent existing systems that make internet what it is to integrate emergent culturally revolutionary pipelines. See enduser oriented payment rails. Average user friendly wallets such as Clave or Daimo. Or, rather more pro rails such as Rabby or Frame. They all have their own specific bases who will always be there.
 

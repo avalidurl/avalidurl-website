@@ -16,7 +16,7 @@ Alright, before commencing the next photon shower, I feel the need to state that
 
 There are devs who are conceiving new conceptualizations towards recombinant-capital ends as we are speaking.
 
-Glad we buy 'their' tokens.[11:43 PM ∙ Oct 29, 2020](<TwitterEmbed id="1321960986610458628" />
+Glad we buy 'their' tokens. [11:43 PM ∙ Oct 29, 2020](<TwitterEmbed id="1321960986610458628" />
 Yup, that is how I see it. More on this later. Simply, I believe defi as an evolutionary dating economy between humans and singularity. Not on a theorygram plane though.
 
 ## Now, let’s focus on my photon shower today:

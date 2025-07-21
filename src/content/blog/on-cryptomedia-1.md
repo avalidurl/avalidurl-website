@@ -23,7 +23,7 @@ Sorry, being a bit loquacious here. IMHO, a couple of minutes ago, I partook in 
 
 What Zora (yes my dear DevoLand degens, it is the other Zora) and Mirror are doing in parallel to each other will help evolutionize the distribution of solutions to the local knowledge problem regarding human capital, cultural legacy of homo sapiens sapiens for Oumuamua to spy on.
 
-[Zora](https://zora.engineering/) 🌜🌞🌛   is simply a [cryptomedia](https://cryptomedia.wtf/) [engineering] platform. [Mirror](https://mirror.xyz/), on the other hand, is about to become the best thing to befall writing at large since GPT-3. Sorry guys, it was Rimbaud’s his own choice to become the lord of exotic goods. Tokenized writings. Simply put. Indices of the Passover from Oral to Written to the Starlinked (no, not Blockstream Satellite Signal TG group, but may be a couple of Urbit stars as Libraries of Tlön?)
+[Zora](https://zora.engineering/) 🌜🌞🌛 is simply a [cryptomedia](https://cryptomedia.wtf/) [engineering] platform. [Mirror](https://mirror.xyz/), on the other hand, is about to become the best thing to befall writing at large since GPT-3. Sorry guys, it was Rimbaud’s his own choice to become the lord of exotic goods. Tokenized writings. Simply put. Indices of the Passover from Oral to Written to the Starlinked (no, not Blockstream Satellite Signal TG group, but may be a couple of Urbit stars as Libraries of Tlön?)
 
 Well, I am already excited about a probable invitation to Mirror, and John Palmer has been crowdfunding the $ESSAY Scissor Labels. Neat conceptualization thereabouts. I think you all should check it, and fund it.
 Mirror @viamirrorLIVE NOW.

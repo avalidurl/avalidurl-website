@@ -7,9 +7,7 @@ tags: ["crypto"]
 category: "crypto"
 featured: false
 readingTime: 1
-excerpt: "Good morning UTC+3 friends, below is my daily digest. Feel free to recommend yours below the comments section, please.
-
-Our tunes are emitted from the rebase.radiohttps://rebase.radio/ base off the..."
+excerpt: "Good morning UTC+3 friends, below is my daily digest. Feel free to recommend yours below the comments section, please. Our tunes are emitted from the rebase.radio base off the..."
 originalUrl: "https://gokhan.substack.com/p/giga-radar-morning-edition"
 ---
 

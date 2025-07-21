@@ -8,8 +8,7 @@ tags: ["finance", "crypto", "data", "web3", "writing"]
 category: "finance"
 featured: false
 readingTime: 5
-excerpt: ">
-> This post was originally conceived on my Paragraphhttps://paragraph.xyz/@gokhan/sufficient-decentralization blog, and then reproduced in Mirrorhttps://gokhan.mirror.xyz/tg9dSyt8KNVCYw-dS6cYOAKd40Q..."
+excerpt: "> > This post was originally conceived on my Paragraph blog, and then reproduced in Mirror"
 originalUrl: "https://gokhan.substack.com/p/reading-sufficient-decentralization-for-social-networks-by-srinivasan"
 ---
 

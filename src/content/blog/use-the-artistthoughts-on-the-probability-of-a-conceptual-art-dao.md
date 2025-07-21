@@ -18,9 +18,7 @@ Never mind the SMO mocks in the text. It's an honest insight on my part.
 #NFTs
 
 [zora.co/gokhan/4789](https://zora.co/gokhan/4789)
-[12:39 AM ∙ Sep 9, 20212Likes1Retweet](<TwitterEmbed id="1435764655654330368" />
-
-Some of you might remember that Ryder Ripps was overtly harassed by then-power hungry editor(s) of *Rhizome* back when identity politics weren’t social credits that determine the “realness” of you in any domain of tribalism.
+<TwitterEmbed id="1435764655654330368" / /> of *Rhizome* back when identity politics weren’t social credits that determine the “realness” of you in any domain of tribalism.
 
 Why? It was because he commissioned sex workers in a motel room to draw pieces of works of art. It was a nice deal for everyone, especially for a conceptual artist.
 

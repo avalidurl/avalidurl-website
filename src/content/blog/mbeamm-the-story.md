@@ -9,7 +9,7 @@ tags: ["finance", "crypto", "writing"]
 category: "finance"
 featured: false
 readingTime: 2
-excerpt: "Collect herehttps://opensea.io/assets/0x8ed0086e9ab7d8dea522e58c03bda45c32c77f66/14/, herehttps://opensea.io/assets/0x8ed0086e9ab7d8dea522e58c03bda45c32c77f66/15, or..."
+excerpt: "Collect here here or..."
 originalUrl: "https://gokhan.substack.com/p/mbeamm-the-story"
 ---
 

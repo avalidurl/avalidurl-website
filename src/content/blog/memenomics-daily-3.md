@@ -7,7 +7,7 @@ tags: ["finance", "art", "technology", "crypto", "culture"]
 category: "finance"
 featured: false
 readingTime: 1
-excerpt: "AAVE 👻 [votes](https://app.aave.com/governance/5-QmYFSYTNqafvDsU1fUvCeAqJk1AuePJ2qvpE3XanJo6ZH6) to add xSUSHI 🍣, SushiSwap’s yield-bearing asset, to AAVE V2 market. Main motivations behind the prop..."
+excerpt: "AAVE 👻 [votes]( to add xSUSHI 🍣, SushiSwap’s yield-bearing asset, to AAVE V2 market. Main motivations behind the prop..."
 originalUrl: "https://gokhan.substack.com/p/memenomics-daily-3"
 ---
 

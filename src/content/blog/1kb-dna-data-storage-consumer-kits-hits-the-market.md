@@ -7,7 +7,7 @@ tags: ["data", "art"]
 category: "data"
 featured: false
 readingTime: 1
-excerpt: "Someone need to tell Biomemory Labshttps://twitter.com/BiomemoryLabs that their frontend is so bloated even an M1 chip cannot handle it. Apparently, they have rolled out 1KB DNA data storage for..."
+excerpt: "Someone need to tell Biomemory Labs that their frontend is so bloated even an M1 chip cannot handle it. Apparently, they have rolled out 1KB DNA data storage for..."
 originalUrl: "https://gokhan.substack.com/p/1kb-dna-data-storage-consumer-kits-hits-the-market"
 ---
 

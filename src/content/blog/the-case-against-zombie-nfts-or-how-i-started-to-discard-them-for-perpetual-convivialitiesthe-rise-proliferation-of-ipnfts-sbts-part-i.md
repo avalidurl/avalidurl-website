@@ -7,7 +7,7 @@ tags: ["finance", "art", "technology", "crypto", "data"]
 category: "finance"
 featured: false
 readingTime: 3
-excerpt: "*This piece was first deployed to [Mirror](https://gokhan.mirror.xyz/jeb6DGWF6wU7402LUjiQ4P8RYl7wjRMr2HrkkDp6OZ8) on Optimism, & [Paragraph](https://paragraph.xyz/@gokhan/the-case-against-zombie-nfts,..."
+excerpt: "*This piece was first deployed to [Mirror]( on Optimism, & [Paragraph]("
 originalUrl: "https://gokhan.substack.com/p/the-case-against-zombie-nfts-or-how"
 ---
 

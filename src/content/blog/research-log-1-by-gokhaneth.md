@@ -7,7 +7,7 @@ tags: ["finance", "art"]
 category: "finance"
 featured: false
 readingTime: 1
-excerpt: "The original text was conceived on my main blog on Paragraphhttps://paragraph.xyz/@gokhan/research-log-gokhan-eth?referrer=0x36de990133D36d7E3DF9a820aA3eDE5a2320De71, and reproduced on my main..."
+excerpt: "The original text was conceived on my main blog on Paragraph and reproduced on my main..."
 originalUrl: "https://gokhan.substack.com/p/research-log-1-by-gokhaneth"
 ---
 

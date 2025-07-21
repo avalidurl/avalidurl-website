@@ -7,7 +7,7 @@ tags: ["finance", "crypto", "web3", "art", "writing"]
 category: "finance"
 featured: false
 readingTime: 2
-excerpt: "I’ve been writing a couple of long-form pieces that are featured to be in the Writing and NFTs and Playlist sections of my blogosphere, respectively this Substack and Mirrorhttps://gokhan.mirror.xyz..."
+excerpt: "I’ve been writing a couple of long-form pieces that are featured to be in the Writing and NFTs and Playlist sections of my blogosphere, respectively this Substack and Mirror"
 originalUrl: "https://gokhan.substack.com/p/latest-11s-open-editions-and-news-0"
 ---
 

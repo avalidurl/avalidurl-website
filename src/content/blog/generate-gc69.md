@@ -25,15 +25,11 @@ Unlocks a 4K @Vimeo #Video
 #Art #DeFi #Singularity
 
 [app.rarible.com/token/0x60f801…](https://app.rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:62435:0x36de990133d36d7e3df9a820aa3ede5a2320de71)
-[12:48 PM ∙ Nov 4, 20207Likes3Retweets](<TwitterEmbed id="1323970331359457280" />
-
-**'Twas but the obliged evolutionary will of the Swarm with which they were able to transcend the plane beyond HHH aka 3H aka hate, human, hours.**
-
-As some of you are already aware of the progress, I am doing a[ pre-sale campaign for a novel](https://gigabvgatti.medium.com/ghoul-city-2069-a-novel-f3ecd483b586) of which I am in the progress of pitching, market research, and character pursuit. That is, it will be a polyphonic novel with a [tokenomics of its own](https://beta.cent.co/goekhanturhan/+fjd8y7), and I need at least 10 characters.
+<TwitterEmbed id="1323970331359457280" / /> of which I am in the progress of pitching, market research, and character pursuit. That is, it will be a polyphonic novel with a [tokenomics of its own](https://beta.cent.co/goekhanturhan/+fjd8y7), and I need at least 10 characters.
 
 These 10 character spots are [on sale](https://app.rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:66861:0x36de990133d36d7e3df9a820aa3ede5a2320de71) via a *Rarible* non-fungible. Plus, there are 3 [variations of a lottery](https://opensea.io/assets/0x8ed0086e9ab7d8dea522e58c03bda45c32c77f66/15) for an 11th side-kick via my own verified *DECIMALS* frontstore at OpenSea.
 
-Since every “good” [work of art](<VimeoEmbed id="128428182" /> requires a sort of a snackable peak as to the aesthetics, I have just started penning [little entrances](https://gokhan.substack.com/p/scene-1-of-tentacles-and-blood) thereof—which I thought to be lacking tangible aesthetics, and hence our intro: [GENERATE: $GC69](https://app.rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:62435:0x36de990133d36d7e3df9a820aa3ede5a2320de71).
+Since every “good” <VimeoEmbed id="128428182" / /> thereof—which I thought to be lacking tangible aesthetics, and hence our intro: [GENERATE: $GC69](https://app.rarible.com/token/0x60f80121c31a0d46b5279700f9df786054aa5ee5:62435:0x36de990133d36d7e3df9a820aa3ede5a2320de71).
 
 *An audio-visual non-fungible collectible.* I have processed the video through a visual synthesizer emulator in an *Apple II* graphical interface, and the audio track thereof is a generative piece. No, I am not sharing the source code yet, sorry ;)
 

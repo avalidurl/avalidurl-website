@@ -7,7 +7,7 @@ tags: ["finance", "crypto", "technology", "data", "web3"]
 category: "finance"
 featured: false
 readingTime: 10
-excerpt: "This post was initially conceived on my Mirror webloghttps://gokhan.mirror.xyz/jaB2xrwnS4V6jW4J4Iu6q7ZlWQ55b1lR_PeGvVrSdl8 in July 2022. It can be collected as an edition of 1 for 1 ETH on..."
+excerpt: "This post was initially conceived on my Mirror weblog in July 2022. It can be collected as an edition of 1 for 1 ETH on..."
 originalUrl: "https://gokhan.substack.com/p/playlist-5"
 ---
 
