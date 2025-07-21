@@ -243,7 +243,7 @@ These features make the tool practical for large datasets while providing clear 
 
 The final tool successfully imported over 100 blog posts, processing:
 
-- **✅ 96 published posts** with complete metadata
+- **✅ 107 published posts** with complete metadata
 - **🖼️ 50+ images** downloaded and rehosted locally  
 - **📝 Clean Markdown** with proper frontmatter for each post
 - **🏷️ Intelligent tagging** based on content analysis
