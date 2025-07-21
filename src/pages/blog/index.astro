@@ -3,7 +3,16 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const allBlogPosts = await getCollection('blog', ({ data }) => {
-  return !data.draft;
+  // Don't show draft posts
+  if (data.draft) return false;
+  
+  // Allow posts with dates up to 1 day in the future (for timezone issues)
+  const publishDate = new Date(data.publishDate);
+  const now = new Date();
+  const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+  
+  // Only filter out posts that are more than 1 day in the future
+  return publishDate <= oneDayFromNow;
 });
 
 // Sort by publish date (newest first)
