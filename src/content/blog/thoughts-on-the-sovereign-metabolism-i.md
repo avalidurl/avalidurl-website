@@ -1,0 +1,28 @@
+---
+title: "Thoughts on the Sovereign Metabolism I"
+description: "I am reading a @praxisnation post, Sovereign Intelligence Western Civilization in the Intelligence Age, and I come to think that decentralized AI is overhyped when it comes to the stack re: the narrative we keep reading off the CT aligned SV VC shelves, and some founders who are good at accruing exit liquidity every few weeks for another LLM wrapper—not that wrappers are bad."
+publishDate: 2025-02-22
+author: "Gokhan Turhan"
+tags: ["finance", "technology", "data"]
+category: "finance"
+featured: false
+readingTime: 3
+excerpt: "I am reading a @praxisnation post, Sovereign Intelligence Western Civilization in the Intelligence Age, and I come to think that decentralized AI is overhyped when it comes to the stack re: the narrat..."
+originalUrl: "https://gokhan.substack.com/p/thoughts-on-the-sovereign-metabolism"
+---
+
+I am reading a [@praxisnation](https://x.com/@praxisnation) post, [Sovereign Intelligence Western Civilization in the Intelligence Age](https://www.praxisnation.com/news/sovereign-intelligence), and I come to think that *decentralized* AI is overhyped when it comes to the stack re: the narrative we keep reading off the CT aligned SV VC shelves, and some founders who are good at accruing exit liquidity every few weeks for another LLM wrapper—not that wrappers are bad.
+
+I think whereas training and the like should be[ (F)OSS](https://www.gnu.org/philosophy/free-software-even-more-important.html) aligned—after all even the most OSS ones have pricing tier for energy is not free, the stack should be competitively governed by a mechanomical association of some boards distributed à la [a pattern language](https://www.patternlanguage.com/)—reading Alexander and the gang as politically neutral as possible almost in a Metaborizimu sense here.
+
+The authors at Praxis accentuates that
+
+[...] the beliefs and intentions of the people who control AI – the primary source of all goods, services, beliefs, and governance – will determine the destiny of every society where it is employed. If you don't control your AI stack, you surrender your fate to those who do. *Not our weights, not our society*.
+
+That which our meta-narratively deluded peers in "crypto"—neither crypto-economics proper nor the game of life that the associatively derivative technologies surrounding and stemming from the composability warfare—come to think of decentralized AI in fact are just unnecessarily mutable vector database access to multi-signature controlled games that lack play.
+[![Image](/blog/images/thoughts-on-the-sovereign-metabolism-i-1752996710661.jpeg)](https://substackcdn.com/image/fetch/$s_!Aewa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffcce43cb-372a-420f-8e19-893ab57a2169_1024x698.jpeg)Monument Valley, Yoshi Toshida (1971).
+Indeed, there are inspiring attempts at the intents-centric cross-protocol solutions to liquidity and capital markets fragmentation in this emergent sub-sector of global financial infrastructure rails. However, if someone is arguing for a "totally" decentralized AI stack, they need to kindly reminded that "not our weights, not our society.
+
+Today, thanks to recent revival of true American Dynamism, we have chance to uphold genuinely competitive governance schemes across many a domain. Let's not botch it under the delusions of either Doomer Safetyism or Exit Liquidity Latter Day Blockchain Fundamentalism.
+
+Remember people who were roasted a decade ago because of their original network state ideas have in the process been appropriated intellectually by many a poseur. This time, it's time to take yourselves more seriously and insist on the sufficient decentralization only when necessary in order not to nuke our own recombinant innovation rails in crypto, AI and governance.

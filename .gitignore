@@ -80,6 +80,7 @@ audit-results.json
 CLAUDE.md
 *.md
 !README.md
+!src/content/**/*.md
 todos.md
 tasks.md
 reports/
