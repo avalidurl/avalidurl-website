@@ -4,7 +4,16 @@ import { getCollection } from 'astro:content';
 
 // Get recent blog posts
 const allBlogPosts = await getCollection('blog', ({ data }) => {
-  return !data.draft;
+  // Ensure draft field exists and is not true
+  const isDraft = data.draft === true;
+  
+  // Ensure publishDate is valid and not in the future
+  const publishDate = new Date(data.publishDate);
+  const now = new Date();
+  const isValidDate = !isNaN(publishDate.getTime());
+  const isNotFuture = publishDate <= now;
+  
+  return !isDraft && isValidDate && isNotFuture;
 });
 
 const recentBlogPosts = allBlogPosts
