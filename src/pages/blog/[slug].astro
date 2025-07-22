@@ -5,6 +5,7 @@ import { YouTube, Tweet, Vimeo } from 'astro-embed';
 import SpotifyEmbed from '../../components/SpotifyEmbed.astro';
 import AppleMusicEmbed from '../../components/AppleMusicEmbed.astro';
 import TwitterEmbed from '../../components/TwitterEmbed.astro';
+import YouTubeEmbed from '../../components/YouTubeEmbed.astro';
 import VimeoEmbed from '../../components/VimeoEmbed.astro';
 import SoundCloudEmbed from '../../components/SoundCloudEmbed.astro';
 import BandcampEmbed from '../../components/BandcampEmbed.astro';
@@ -91,6 +92,7 @@ const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate).toLo
           SpotifyEmbed,
           AppleMusicEmbed,
           TwitterEmbed,
+          YouTubeEmbed,
           VimeoEmbed,
           SoundCloudEmbed,
           BandcampEmbed,
