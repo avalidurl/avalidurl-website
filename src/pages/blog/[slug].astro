@@ -12,12 +12,26 @@ import BandcampEmbed from '../../components/BandcampEmbed.astro';
 import ImageEmbed from '../../components/ImageEmbed.astro';
 
 export async function getStaticPaths() {
+  // Helper function to parse dates consistently in Istanbul timezone
+  const parseIstanbulDate = (dateString) => {
+    // Handle non-string values
+    if (typeof dateString !== 'string') {
+      return new Date(dateString);
+    }
+    // If it's just a date (YYYY-MM-DD), append Istanbul timezone
+    if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      return new Date(dateString + 'T00:00:00+03:00');
+    }
+    // For datetime strings, parse as-is but assume they're in Istanbul time
+    return new Date(dateString);
+  };
+  
   const blogPosts = await getCollection('blog', ({ data }) => {
     // Don't show draft posts
     if (data.draft) return false;
     
     // Allow posts with dates up to 1 day in the future (for timezone issues)
-    const publishDate = new Date(data.publishDate);
+    const publishDate = parseIstanbulDate(data.publishDate);
     const now = new Date();
     const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
     
@@ -38,16 +52,32 @@ interface Props {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-const formattedDate = new Date(post.data.publishDate).toLocaleDateString('en-US', {
+// Helper function to parse dates consistently in Istanbul timezone
+const parseIstanbulDate = (dateString) => {
+  // Handle non-string values
+  if (typeof dateString !== 'string') {
+    return new Date(dateString);
+  }
+  // If it's just a date (YYYY-MM-DD), append Istanbul timezone
+  if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return new Date(dateString + 'T00:00:00+03:00');
+  }
+  // For datetime strings, parse as-is but assume they're in Istanbul time
+  return new Date(dateString);
+};
+
+const formattedDate = parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
-  day: 'numeric'
+  day: 'numeric',
+  timeZone: 'Europe/Istanbul'
 });
 
-const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate).toLocaleDateString('en-US', {
+const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedDate).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
-  day: 'numeric'
+  day: 'numeric',
+  timeZone: 'Europe/Istanbul'
 }) : null;
 ---
 

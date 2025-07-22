@@ -28,30 +28,35 @@ function extractBandcampInfo(url: string): { albumId?: string; trackId?: string;
     // https://artistname.bandcamp.com/album/album-name
     // https://artistname.bandcamp.com/track/track-name
     // https://bandcamp.com/EmbeddedPlayer/album=123456789/size=large/...
+    // https://bandcamp.com/EmbedFrame/album=123456789/size=large/... (legacy format)
     
-    // If it's already an embed URL, use it directly
-    if (url.includes('bandcamp.com/EmbeddedPlayer/')) {
-      return { embedUrl: url };
+    // If it's already an embed URL, normalize it to EmbeddedPlayer format
+    if (url.includes('bandcamp.com/EmbeddedPlayer/') || url.includes('bandcamp.com/EmbedFrame/')) {
+      // Convert legacy EmbedFrame to EmbeddedPlayer
+      let normalizedUrl = url.replace('/EmbedFrame/', '/EmbeddedPlayer/');
+      
+      // Ensure it uses https
+      if (normalizedUrl.startsWith('http://')) {
+        normalizedUrl = normalizedUrl.replace('http://', 'https://');
+      }
+      
+      return { embedUrl: normalizedUrl };
     }
     
-    // Parse regular Bandcamp URLs
+    // Parse regular Bandcamp URLs and try to convert them to embed URLs
     const bandcampPattern = /https?:\/\/([^.]+)\.bandcamp\.com\/(album|track)\/([^\/\?]+)/;
     const match = url.match(bandcampPattern);
     
     if (match) {
       const [, artistName, type, itemName] = match;
       
-      // For regular Bandcamp URLs, we need to construct an embed URL
-      // This is a simplified approach - in practice, you'd need the actual album/track ID
-      // which requires API calls or scraping. For now, we'll use a generic embed format.
-      const baseEmbedUrl = 'https://bandcamp.com/EmbeddedPlayer/';
-      
-      // Note: Real implementation would need to fetch the actual album/track ID
-      // This is a placeholder that follows Bandcamp's embed URL structure
+      // For regular Bandcamp URLs, we'll attempt to create an embed URL
+      // In practice, this would require fetching the album/track ID from the page
+      // For now, we'll return the info but not create an embed URL
       return {
         artistName,
         albumName: type === 'album' ? itemName : undefined,
-        embedUrl: null // Will be constructed below with proper parameters
+        embedUrl: null // Cannot create without ID
       };
     }
     
