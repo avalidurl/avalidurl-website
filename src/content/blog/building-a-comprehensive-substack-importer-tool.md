@@ -14,7 +14,7 @@ I recently found myself in a familiar developer predicament: I had a Substack pu
 
 There are already quite a few content migration tools out there – some more sophisticated than what I built – but I wanted to share this one anyway. Sometimes having another approach or perspective can be helpful, even if it's not revolutionary.
 
-> **Note**: I've open-sourced the complete tool at [github.com/yourusername/substack-to-astro-importer](https://github.com/yourusername/substack-to-astro-importer) if you just want to use it without reading about how it works.
+> **Note**: I've open-sourced the complete tool at [github.com/avalidurl/substack-to-astro-importer](https://github.com/avalidurl/substack-to-astro-importer) if you just want to use it without reading about how it works.
 
 ## The Problem (You've Probably Been Here)
 
