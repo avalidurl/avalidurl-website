@@ -6,7 +6,12 @@ const site = process.env.SITE_URL || 'https://yourdomain.com';
 
 export default defineConfig({
   site: site,
-  integrations: [mdx()],
+  integrations: [
+    mdx({
+      remarkPlugins: [],
+      rehypePlugins: [],
+    })
+  ],
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto',
