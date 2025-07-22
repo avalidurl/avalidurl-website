@@ -290,6 +290,17 @@ const updatedDate = post.data.updatedDate ? new Date(post.data.updatedDate).toLo
     margin: 1.5rem 0;
     border: 1px solid var(--border-light);
   }
+
+  /* Override Astro code block styling to match theme */
+  .post-content .astro-code {
+    background: var(--blog-parchment) !important;
+    color: var(--blog-charcoal) !important;
+    border: 1px solid var(--border-light);
+  }
+
+  .post-content .astro-code span {
+    color: var(--blog-charcoal) !important;
+  }
   
   .post-content ul,
   .post-content ol {
