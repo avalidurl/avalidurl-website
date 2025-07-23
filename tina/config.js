@@ -1,25 +1,18 @@
-var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
-  get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
-}) : x)(function(x) {
-  if (typeof require !== "undefined") return require.apply(this, arguments);
-  throw Error('Dynamic require of "' + x + '" is not supported');
-});
+const { defineConfig } = require("tinacms");
 
-// tina/config.js
-var { defineConfig } = __require("tinacms");
 module.exports = defineConfig({
   branch: "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
-    publicFolder: "public"
+    publicFolder: "public",
   },
   media: {
     tina: {
       mediaRoot: "",
-      publicFolder: "public"
-    }
+      publicFolder: "public",
+    },
   },
   schema: {
     collections: [
@@ -34,16 +27,16 @@ module.exports = defineConfig({
             name: "title",
             label: "Title",
             isTitle: true,
-            required: true
+            required: true,
           },
           {
             type: "rich-text",
             name: "body",
             label: "Body",
-            isBody: true
-          }
-        ]
-      }
-    ]
-  }
+            isBody: true,
+          },
+        ],
+      },
+    ],
+  },
 });
