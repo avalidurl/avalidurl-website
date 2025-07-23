@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "dev": "astro dev",
+    "dev:astro": "astro dev",
     "start": "astro dev",
     "build": "npm run build:deps && astro build",
     "build:deps": "npm rebuild rollup || echo 'Rollup rebuild failed, continuing...'",

@@ -12,6 +12,10 @@ node_modules/
 dist/
 .astro/
 
+# Tina CMS
+.tina/__generated__/
+public/admin/
+
 # IDE files
 .vscode/
 .idea/

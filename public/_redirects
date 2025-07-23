@@ -1,5 +1,3 @@
-# Netlify Identity and Git Gateway
-/admin/* /admin/index.html 200
 
 # API routes for Netlify functions
 /.netlify/functions/* /.netlify/functions/:splat 200

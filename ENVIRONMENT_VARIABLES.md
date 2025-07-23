@@ -121,17 +121,6 @@ Environment variables are used to configure the application for different enviro
 - **Description**: Vercel authentication token
 - **Used for**: Vercel CLI deployments
 
-### Content Management
-
-#### `CMS_ENABLED`
-- **Description**: Enable/disable CMS features
-- **Options**: `true`, `false`
-- **Default**: `false`
-
-#### `DECAP_CMS_BACKEND`
-- **Description**: Decap CMS backend configuration
-- **Options**: `git-gateway`, `github`
-- **Used for**: Content management system
 
 ### Social Media Integration
 

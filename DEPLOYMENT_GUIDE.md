@@ -129,10 +129,6 @@ Create `netlify.toml` in your project root:
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
 ```
 
 ## ▲ Vercel
