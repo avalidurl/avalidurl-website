@@ -21,5 +21,11 @@ export default defineConfig({
       cssMinify: true,
       minify: true,
     },
+    optimizeDeps: {
+      include: ['tinacms']
+    },
+    ssr: {
+      external: ['@tinacms/cli']
+    }
   },
 });
