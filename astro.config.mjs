@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
@@ -11,12 +10,15 @@ const site = process.env.SITE_URL || 'https://yourdomain.com';
 
 export default defineConfig({
   site: site,
-  output: 'server',
-  adapter: cloudflare(),
-  integrations: [mdx({
-    remarkPlugins: [],
-    rehypePlugins: [],
-  }), react(), markdoc(), keystatic()],
+  integrations: [
+    mdx({
+      remarkPlugins: [],
+      rehypePlugins: [],
+    }), 
+    react(), 
+    markdoc(), 
+    keystatic()
+  ],
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto',
@@ -26,11 +28,9 @@ export default defineConfig({
       cssMinify: true,
       minify: true,
     },
-    optimizeDeps: {
-      include: ['tinacms']
-    },
-    ssr: {
-      external: ['@tinacms/cli']
-    }
   },
+  adapter: cloudflare({
+    imageService: 'compile'
+  }),
+  output: 'hybrid'
 });
