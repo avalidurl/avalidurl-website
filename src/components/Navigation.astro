@@ -5,7 +5,7 @@ const currentPath = Astro.url.pathname;
 <nav class="main-navigation">
   <div class="nav-container">
     <a href="/" class="nav-brand">
-      <span class="brand-name">Your Name</span>
+      <span class="brand-name">GÖKHAN TURHAN</span>
     </a>
     
     <ul class="nav-links">
@@ -17,21 +17,6 @@ const currentPath = Astro.url.pathname;
       <li>
         <a href="/blog" class={currentPath.startsWith('/blog') ? 'nav-link active' : 'nav-link'}>
           Journal
-        </a>
-      </li>
-      <li>
-        <a href="/art" class={currentPath.startsWith('/art') ? 'nav-link active' : 'nav-link'}>
-          Art
-        </a>
-      </li>
-      <li>
-        <a href="/roadmap" class={currentPath === '/roadmap' ? 'nav-link active' : 'nav-link'}>
-          Roadmap
-        </a>
-      </li>
-      <li>
-        <a href="/pitch-deck" class={currentPath === '/pitch-deck' ? 'nav-link active' : 'nav-link'}>
-          Pitch Deck
         </a>
       </li>
       <li>
@@ -56,12 +41,13 @@ const currentPath = Astro.url.pathname;
 
 <style>
   .main-navigation {
-    background: var(--bg-primary);
-    border-bottom: 2px solid var(--border-light);
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border-light);
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
   
   .nav-container {
@@ -76,16 +62,21 @@ const currentPath = Astro.url.pathname;
   
   .nav-brand {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--nav-text);
     font-weight: 700;
     font-size: 1.25rem;
-    letter-spacing: -0.5px;
-    transition: color 0.3s ease;
+    letter-spacing: -0.02em;
+    transition: color 0.2s ease;
   }
   
   .nav-brand:hover {
-    color: var(--accent-primary);
-    border-bottom: none;
+    color: var(--nav-accent);
+  }
+  
+  .nav-brand:focus {
+    outline: 3px solid var(--border-focus);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
   
   .brand-name {
@@ -99,9 +90,9 @@ const currentPath = Astro.url.pathname;
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    background: var(--nav-accent);
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
   }
   
   .nav-brand:hover .brand-name::after {
@@ -117,25 +108,30 @@ const currentPath = Astro.url.pathname;
   }
   
   .nav-link {
-    color: var(--text-secondary);
+    color: var(--nav-text);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     position: relative;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.01em;
   }
   
   .nav-link:hover {
-    color: var(--accent-primary);
-    background: var(--bg-accent);
-    border-bottom: none;
+    color: var(--nav-accent);
+    background: var(--bg-tertiary);
+  }
+  
+  .nav-link:focus {
+    outline: 3px solid var(--border-focus);
+    outline-offset: 2px;
+    background: rgba(21, 101, 192, 0.1);
   }
   
   .nav-link.active {
-    color: var(--accent-primary);
-    background: var(--bg-accent);
+    color: var(--nav-accent);
+    background: transparent;
     font-weight: 600;
   }
   
@@ -147,28 +143,34 @@ const currentPath = Astro.url.pathname;
     transform: translateX(-50%);
     width: 20px;
     height: 2px;
-    background: var(--accent-primary);
+    background: var(--nav-accent);
     border-radius: 1px;
   }
   
   .nav-subscribe {
-    background: var(--accent-primary);
-    color: var(--text-on-dark) !important;
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text) !important;
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    transition: all 0.3s ease;
-    letter-spacing: 0.3px;
-    font-size: 0.9rem;
-    border: 2px solid var(--accent-primary);
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+    font-size: 0.875rem;
+    border: 2px solid var(--btn-primary-bg);
   }
   
   .nav-subscribe:hover {
-    background: transparent;
-    color: var(--accent-primary) !important;
-    border-color: var(--accent-primary);
-    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+    background: var(--btn-primary-hover);
+    color: var(--btn-primary-text) !important;
+    border-color: var(--btn-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(21, 101, 192, 0.3);
+  }
+  
+  .nav-subscribe:focus {
+    outline: 3px solid var(--border-focus);
+    outline-offset: 2px;
   }
   
   .nav-toggle {
@@ -184,13 +186,19 @@ const currentPath = Astro.url.pathname;
   .nav-toggle-line {
     width: 24px;
     height: 3px;
-    background: var(--text-secondary);
+    background: var(--nav-text);
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
   
   .nav-toggle:hover .nav-toggle-line {
-    background: var(--accent-primary);
+    background: var(--nav-accent);
+  }
+  
+  .nav-toggle:focus {
+    outline: 3px solid var(--border-focus);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
   
   /* Mobile Navigation */
@@ -205,12 +213,12 @@ const currentPath = Astro.url.pathname;
       top: 100%;
       left: 0;
       right: 0;
-      background: var(--bg-primary);
-      border-bottom: 2px solid var(--border-light);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border-light);
       flex-direction: column;
       padding: 1rem 0;
       gap: 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     
     .nav-links.active {
@@ -221,6 +229,16 @@ const currentPath = Astro.url.pathname;
       padding: 1rem 2rem;
       border-radius: 0;
       border-bottom: 1px solid var(--border-light);
+      background: transparent;
+    }
+    
+    .nav-link:hover {
+      background: var(--bg-tertiary);
+    }
+    
+    .nav-subscribe {
+      margin: 0.5rem 2rem;
+      padding: 0.75rem 1rem;
     }
     
     .nav-link:last-child {
@@ -239,12 +257,14 @@ const currentPath = Astro.url.pathname;
   /* Dark mode adjustments */
   @media (prefers-color-scheme: dark) {
     .main-navigation {
-      background: rgba(13, 22, 88, 0.95);
+      background: var(--nav-bg);
       backdrop-filter: blur(10px);
+      border-bottom-color: var(--border-medium);
     }
     
     .nav-links {
-      background: var(--bg-primary);
+      background: var(--nav-bg);
+      border-bottom-color: var(--border-medium);
     }
   }
 </style>
