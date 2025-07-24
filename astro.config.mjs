@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import cloudflare from '@astrojs/cloudflare';
-import keystatic from '@keystatic/astro';
 
 // Use environment variable or fallback to placeholder
 const site = process.env.SITE_URL || 'https://yourdomain.com';
@@ -16,8 +15,7 @@ export default defineConfig({
       rehypePlugins: [],
     }), 
     react(), 
-    markdoc(),
-    keystatic()
+    markdoc()
   ],
   compressHTML: true,
   build: {
@@ -30,11 +28,7 @@ export default defineConfig({
     },
   },
   adapter: cloudflare({
-    imageService: 'compile',
-    runtime: {
-      mode: 'local',
-      type: 'pages'
-    }
+    imageService: 'compile'
   }),
-  output: 'server'
+  output: 'static'
 });

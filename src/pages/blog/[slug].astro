@@ -11,6 +11,8 @@ import SoundCloudEmbed from '../../components/SoundCloudEmbed.astro';
 import BandcampEmbed from '../../components/BandcampEmbed.astro';
 import ImageEmbed from '../../components/ImageEmbed.astro';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   // Helper function to parse dates consistently in Istanbul timezone
   const parseIstanbulDate = (dateString) => {
