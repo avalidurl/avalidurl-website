@@ -8,9 +8,6 @@ node_modules/
 .env.production
 .env.test
 
-# Wrangler configuration with secrets (CRITICAL - never commit)
-wrangler.toml
-
 # Build outputs
 dist/
 .astro/
