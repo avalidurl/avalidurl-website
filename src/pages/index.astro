@@ -1,6 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, getSingleton } from 'astro:content';
+
+// Fetch home singleton
+let heroTitle = 'Your Name';
+let heroSubtitle = 'A digital creator exploring the intersection of technology, art, and human connection.';
+let HomeContent;
+try {
+  const homeEntry = await getSingleton('home');
+  if (homeEntry) {
+    const { Content, ...data } = await homeEntry.render();
+    heroTitle = data.heroTitle ?? heroTitle;
+    heroSubtitle = data.heroSubtitle ?? heroSubtitle;
+    HomeContent = Content;
+  }
+} catch {}
 
 // Get recent blog posts
 const allBlogPosts = await getCollection('blog', ({ data }) => {
@@ -100,19 +114,12 @@ const talks = [
 <Layout title="Your Name - Digital Creator & Developer">
   <main class="container">
     <header class="page-header">
-      <h1>Your Name</h1>
+      <h1>{heroTitle}</h1>
     </header>
     
     <section class="bio">
-      <p>
-        A digital creator exploring the intersection of technology, art, and human connection. 
-        Building tools that amplify creativity and developing experiences that bridge the gap 
-        between code and consciousness.
-      </p>
-      <p>
-        Currently working on projects that blend generative systems, interactive media, 
-        and knowledge management — creating digital gardens where ideas can grow and connect.
-      </p>
+      <p>{heroSubtitle}</p>
+      {HomeContent && <HomeContent />}
     </section>
     
     <section class="content-section">
