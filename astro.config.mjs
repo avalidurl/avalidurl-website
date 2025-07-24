@@ -4,12 +4,15 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
+import cloudflare from '@astrojs/cloudflare';
 
 // Use environment variable or fallback to placeholder
 const site = process.env.SITE_URL || 'https://yourdomain.com';
 
 export default defineConfig({
   site: site,
+  output: 'hybrid',
+  adapter: cloudflare(),
   integrations: [mdx({
     remarkPlugins: [],
     rehypePlugins: [],
