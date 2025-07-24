@@ -1,0 +1,40 @@
+---
+// Simple admin page that tells user to use local development
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body { 
+            font-family: system-ui; 
+            padding: 2rem; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            text-align: center;
+        }
+        .cta { 
+            background: #f0f0f0; 
+            padding: 2rem; 
+            border-radius: 8px; 
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Content Admin</h1>
+    <div class="cta">
+        <h2>🛠️ Admin Panel Available Locally</h2>
+        <p>To edit content:</p>
+        <ol style="text-align: left;">
+            <li>Run: <code>npm run dev</code></li>
+            <li>Visit: <code>http://localhost:4321/keystatic</code></li>
+            <li>Edit your content</li>
+            <li>Commit changes to deploy</li>
+        </ol>
+    </div>
+    <p><a href="/">← Back to Site</a></p>
+</body>
+</html>
