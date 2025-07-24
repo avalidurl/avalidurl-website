@@ -116,7 +116,8 @@ export default config({
             { label: 'Green', value: 'green' },
             { label: 'Blue', value: 'blue' },
           ],
-          defaultValue: 'neutral'
+          defaultValue: 'neutral',
+          required: false
         }),
         medium: fields.text({ 
           label: 'Medium',
