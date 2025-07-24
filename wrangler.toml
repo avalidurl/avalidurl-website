@@ -1,0 +1,7 @@
+name = "avalidurl-website"
+main = "dist/_worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Add KV namespace when needed for Keystatic sessions
+# For now, we'll deploy without it and add later if needed 

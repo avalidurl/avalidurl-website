@@ -30,7 +30,11 @@ export default defineConfig({
     },
   },
   adapter: cloudflare({
-    imageService: 'compile'
+    imageService: 'compile',
+    runtime: {
+      mode: 'local',
+      type: 'pages'
+    }
   }),
   output: 'server'
 });
