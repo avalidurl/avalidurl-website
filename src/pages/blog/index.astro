@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import ArchiveDropdown from '../../components/ArchiveDropdown.astro';
 
 // Helper function to parse dates consistently in Istanbul timezone
 const parseIstanbulDate = (dateString) => {
@@ -39,7 +40,7 @@ const allPosts = sortedPosts;
 ---
 
 <Layout title="Blog - Thoughts on Finance, Art & Code" description="Exploring the intersection of financial markets, creative coding, and artistic expression through data-driven insights and technical analysis.">
-  <main class="container">
+  <main class="blog-container">
     <header class="blog-header">
       <h1>Journal</h1>
       <p class="blog-subtitle">
@@ -47,55 +48,203 @@ const allPosts = sortedPosts;
       </p>
     </header>
 
-    <section class="all-posts-section">
-      <h2>All Posts</h2>
-      <div class="articles-grid">
-        {allPosts.map(post => (
-          <article class="article-card">
-            <div class="article-meta">
-              <span class="article-category">{post.data.category}</span>
-              <time class="article-date">
-                {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric',
-                  year: 'numeric',
-                  timeZone: 'Europe/Istanbul'
-                })}
-              </time>
-            </div>
-            <h3 class="article-title">
-              <a href={`/blog/${post.slug}`}>
-                {post.data.title}
-              </a>
-            </h3>
-            <p class="article-excerpt">
-              {post.data.excerpt || post.data.description}
-            </p>
-            {post.data.readingTime && (
-              <span class="reading-time">{post.data.readingTime} min read</span>
-            )}
-          </article>
-        ))}
-      </div>
-    </section>
+    <div class="blog-layout">
+      <section class="blog-main">
+        <h2>All Posts</h2>
+        <div class="articles-grid">
+          {allPosts.map(post => (
+            <article class="article-card">
+              <div class="article-meta">
+                <span class="article-category">{post.data.category}</span>
+                <time class="article-date">
+                  {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    timeZone: 'Europe/Istanbul'
+                  })}
+                </time>
+              </div>
+              <h3 class="article-title">
+                <a href={`/blog/${post.slug}`}>
+                  {post.data.title}
+                </a>
+              </h3>
+              <p class="article-excerpt">
+                {post.data.excerpt || post.data.description}
+              </p>
+              {post.data.readingTime && (
+                <span class="reading-time">{post.data.readingTime} min read</span>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
 
-    <aside class="blog-sidebar">
-      <div class="newsletter-signup">
-        <h3>Stay Updated</h3>
-        <p>Get notified of new posts exploring finance, art, and technology.</p>
-        <form class="newsletter-form" action="https://app.kit.com/forms/8250157/subscriptions" method="post" data-sv-form="8250157" data-uid="6c28efde16" data-format="inline" data-version="5">
-          <input 
-            type="email" 
-            name="email_address" 
-            placeholder="your@email.com" 
-            required
-          >
-          <button type="submit">Subscribe</button>
-        </form>
-        <p class="newsletter-note">
-          Or follow via <a href="/feed.xml" class="rss-link">RSS Feed</a>
-        </p>
-      </div>
-    </aside>
+      <aside class="blog-sidebar">
+        <ArchiveDropdown />
+        
+        <div class="newsletter-signup">
+          <h3>Stay Updated</h3>
+          <p>Get notified of new posts exploring finance, art, and technology.</p>
+          <form class="newsletter-form" action="https://app.kit.com/forms/8250157/subscriptions" method="post" data-sv-form="8250157" data-uid="6c28efde16" data-format="inline" data-version="5">
+            <input 
+              type="email" 
+              name="email_address" 
+              placeholder="your@email.com" 
+              required
+            >
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-note">
+            Or follow via <a href="/rss.xml" class="rss-link">RSS Feed</a>
+          </p>
+        </div>
+      </aside>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 70px);
+  }
+  
+  .blog-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .blog-main {
+    min-width: 0; /* Prevents overflow issues */
+  }
+  
+  .blog-main h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
+  }
+  
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .blog-sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+  }
+  
+  .newsletter-signup {
+    background: var(--blog-parchment);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+  }
+  
+  .newsletter-signup h3 {
+    color: var(--blog-charcoal);
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  
+  .newsletter-form input {
+    padding: 0.75rem;
+    border: 2px solid var(--border-medium);
+    background: var(--blog-warm-white);
+    font-size: 0.875rem;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .newsletter-form input:focus {
+    outline: none;
+    border-color: var(--blog-bronze);
+  }
+  
+  .newsletter-form button {
+    background: var(--blog-sepia);
+    color: var(--blog-warm-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background: var(--blog-bronze);
+  }
+  
+  .newsletter-note {
+    font-size: 0.875rem;
+    color: var(--blog-sepia);
+    margin-top: 1rem;
+  }
+  
+  .rss-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-primary);
+    transition: all 0.2s ease;
+  }
+  
+  .rss-link:hover {
+    color: var(--color-primary-hover);
+    border-bottom-color: var(--color-primary-hover);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1024px) {
+    .blog-layout {
+      grid-template-columns: 1fr 250px;
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .blog-container {
+      padding: 1.5rem 1rem;
+    }
+    
+    .blog-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .blog-sidebar {
+      position: static;
+      order: -1; /* Move sidebar to top on mobile */
+    }
+    
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .newsletter-signup {
+      padding: 1.5rem;
+    }
+  }
+</style>
