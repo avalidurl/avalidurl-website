@@ -2,6 +2,7 @@
   "name": "avalidurl-website-monorepo",
   "version": "1.0.0",
   "description": "Astro website with Strapi CMS backend",
+  "type": "module",
   "private": true,
   "workspaces": [
     "astro-site",
@@ -16,9 +17,12 @@
     "build:strapi": "cd strapi-cms && npm run build",
     "install:all": "npm install && cd astro-site && npm install && cd ../strapi-cms && npm install",
     "deploy:astro": "cd astro-site && npm run deploy:cloudflare",
-    "deploy:strapi": "cd strapi-cms && npm run deploy"
+    "deploy:strapi": "cd strapi-cms && npm run deploy",
+    "migrate:to-strapi": "node scripts/migrate-to-strapi.js"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "gray-matter": "^4.0.3",
+    "axios": "^1.6.0"
   }
 }
