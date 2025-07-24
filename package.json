@@ -21,8 +21,8 @@
     "migrate:to-strapi": "node scripts/migrate-to-strapi.js"
   },
   "devDependencies": {
+    "axios": "^1.11.0",
     "concurrently": "^7.6.0",
-    "gray-matter": "^4.0.3",
-    "axios": "^1.6.0"
+    "gray-matter": "^4.0.3"
   }
 }

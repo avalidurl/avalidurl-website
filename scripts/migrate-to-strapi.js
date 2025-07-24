@@ -17,7 +17,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Configuration
-const STRAPI_URL = process.env.STRAPI_URL || 'http://localhost:1337';
+let STRAPI_URL = process.env.STRAPI_URL || 'http://localhost:1337';
+// Remove trailing slash if present
+STRAPI_URL = STRAPI_URL.replace(/\/$/, '');
 const STRAPI_TOKEN = process.env.STRAPI_API_TOKEN;
 const BLOG_CONTENT_DIR = path.join(__dirname, '../astro-site/src/content/blog');
 
@@ -140,9 +142,28 @@ async function migrateToStrapi() {
   console.log('');
   
   try {
-    // Test Strapi connection
-    await strapiApi.get('/blog-posts?pagination[limit]=1');
-    console.log('✅ Strapi connection successful');
+    // Test Strapi connection and check available content types
+    console.log('🔍 Testing Strapi connection...');
+    
+    try {
+      // First try to get blog-posts
+      await strapiApi.get('/blog-posts?pagination[limit]=1');
+      console.log('✅ Strapi connection successful - blog-posts endpoint found');
+    } catch (error) {
+      console.log('⚠️  blog-posts endpoint not found, checking available endpoints...');
+      
+      // Try to get content types info
+      try {
+        const response = await strapiApi.get('/content-type-builder/content-types');
+        console.log('📋 Available content types:', Object.keys(response.data.data || {}));
+      } catch (e) {
+        // Try a basic health check
+        const healthCheck = await strapiApi.get('/');
+        console.log('🏥 Basic Strapi health check passed');
+      }
+      
+      throw error;
+    }
     console.log('');
     
     // Get all markdown files
