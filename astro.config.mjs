@@ -16,7 +16,7 @@ export default defineConfig({
       rehypePlugins: [],
     }), 
     react(), 
-    markdoc(), 
+    markdoc(),
     keystatic()
   ],
   compressHTML: true,
