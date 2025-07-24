@@ -48,22 +48,31 @@ const monthNames = [
       
       return (
         <div class="year-group">
-          <button class="year-toggle" data-year={year}>
-            <span class="year-text">{year}</span>
-            <span class="year-count">({Object.values(yearData).flat().length})</span>
-            <span class="toggle-icon">▼</span>
-          </button>
+          <div class="year-header">
+            <a href={`/archive/${year}`} class="year-link">
+              <span class="year-text">{year}</span>
+              <span class="year-count">({Object.values(yearData).flat().length})</span>
+            </a>
+            <button class="year-toggle" data-year={year}>
+              <span class="toggle-icon">▼</span>
+            </button>
+          </div>
           
           <div class="months-container" data-year-content={year}>
             {monthsWithPosts.map(month => {
               const posts = yearData[month];
+              const monthNum = (month + 1).toString().padStart(2, '0');
               return (
                 <div class="month-group">
-                  <button class="month-toggle" data-month={`${year}-${month}`}>
-                    <span class="month-text">{monthNames[month]}</span>
-                    <span class="month-count">({posts.length})</span>
-                    <span class="toggle-icon">▼</span>
-                  </button>
+                  <div class="month-header">
+                    <a href={`/archive/${year}/${monthNum}`} class="month-link">
+                      <span class="month-text">{monthNames[month]}</span>
+                      <span class="month-count">({posts.length})</span>
+                    </a>
+                    <button class="month-toggle" data-month={`${year}-${month}`}>
+                      <span class="toggle-icon">▼</span>
+                    </button>
+                  </div>
                   
                   <div class="posts-container" data-month-content={`${year}-${month}`}>
                     {posts
@@ -121,28 +130,39 @@ const monthNames = [
     margin-bottom: 0.5rem;
   }
   
-  .year-toggle,
-  .month-toggle {
-    width: 100%;
+  .year-header,
+  .month-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: none;
-    border: none;
+    border-bottom: 1px solid var(--border-light);
     padding: 0.75rem 0;
-    cursor: pointer;
+  }
+  
+  .year-link,
+  .month-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
     color: var(--text-primary);
     font-size: 1rem;
     transition: all 0.2s ease;
+    padding-right: 0.5rem;
   }
   
-  .year-toggle {
+  .year-link {
     font-weight: 600;
-    border-bottom: 1px solid var(--border-light);
   }
   
-  .year-toggle:hover,
-  .month-toggle:hover {
+  .month-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .year-link:hover,
+  .month-link:hover {
     color: var(--color-primary);
   }
   
@@ -157,6 +177,22 @@ const monthNames = [
     color: var(--text-muted);
     font-size: 0.875rem;
     margin-right: 0.5rem;
+  }
+  
+  .year-toggle,
+  .month-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    transition: all 0.2s ease;
+  }
+  
+  .year-toggle:hover,
+  .month-toggle:hover {
+    color: var(--color-primary-hover);
   }
   
   .toggle-icon {
@@ -264,6 +300,16 @@ const monthNames = [
   @media (max-width: 768px) {
     .archive-dropdown {
       padding: 1rem;
+    }
+    
+    .year-header,
+    .month-header {
+      padding: 0.5rem 0;
+    }
+    
+    .year-link,
+    .month-link {
+      font-size: 0.9rem;
     }
     
     .month-group {

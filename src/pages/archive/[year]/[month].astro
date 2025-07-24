@@ -1,0 +1,347 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog', ({ data }) => {
+    return !data.draft && new Date(data.publishDate) <= new Date();
+  });
+
+  const monthYearCombos = [];
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+
+  allPosts.forEach(post => {
+    const date = new Date(post.data.publishDate);
+    const year = date.getFullYear();
+    const month = date.getMonth(); // 0-11
+    
+    const combo = `${year}-${month}`;
+    if (!monthYearCombos.some(c => c.combo === combo)) {
+      monthYearCombos.push({
+        combo,
+        year,
+        month,
+        monthName: monthNames[month]
+      });
+    }
+  });
+
+  return monthYearCombos.map(({ year, month, monthName }) => ({
+    params: { 
+      year: year.toString(), 
+      month: (month + 1).toString().padStart(2, '0') // Convert to 1-12 and pad
+    },
+    props: { 
+      year,
+      month: month + 1, // Convert to 1-12 for display
+      monthName,
+      posts: allPosts
+        .filter(post => {
+          const date = new Date(post.data.publishDate);
+          return date.getFullYear() === year && date.getMonth() === month;
+        })
+        .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+    },
+  }));
+}
+
+const { year, month, monthName, posts } = Astro.props;
+---
+
+<Layout title={`${monthName} ${year} Archive`} description={`All blog posts from ${monthName} ${year} - exploring finance, art, and technology.`}>
+  <main class="container">
+    <header class="archive-header">
+      <div class="archive-breadcrumb">
+        <a href="/blog">Journal</a> → 
+        <a href="/archive">Archive</a> → 
+        <a href={`/archive/${year}`}>{year}</a> → 
+        <span>{monthName}</span>
+      </div>
+      
+      <h1>Posts from {monthName} {year}</h1>
+      <p class="archive-description">
+        {posts.length} {posts.length === 1 ? 'post' : 'posts'} published in {monthName} {year}
+      </p>
+    </header>
+    
+    <section class="archive-posts">
+      <div class="posts-grid">
+        {posts.map(post => (
+          <article class="post-card">
+            <div class="post-meta">
+              <span class="post-category">{post.data.category}</span>
+              <time class="post-date" datetime={post.data.publishDate.toISOString()}>
+                {new Date(post.data.publishDate).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+            </div>
+            
+            <h2 class="post-title">
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            </h2>
+            
+            <p class="post-excerpt">
+              {post.data.excerpt || post.data.description}
+            </p>
+            
+            <div class="post-tags">
+              {post.data.tags.slice(0, 3).map(tag => (
+                <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="tag-link">
+                  {tag}
+                </a>
+              ))}
+              {post.data.tags.length > 3 && (
+                <span class="more-tags">+{post.data.tags.length - 3} more</span>
+              )}
+            </div>
+            
+            {post.data.readingTime && (
+              <div class="reading-time">
+                {post.data.readingTime} min read
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+      
+      {posts.length === 0 && (
+        <div class="no-posts">
+          <p>No posts found for {monthName} {year}.</p>
+          <a href="/blog" class="back-to-blog">← Back to Journal</a>
+        </div>
+      )}
+    </section>
+    
+    <footer class="archive-footer">
+      <a href="/blog" class="back-to-blog">← Back to Journal</a>
+      <a href={`/archive/${year}`} class="year-archive">View All {year} Posts →</a>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .archive-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+  }
+  
+  .archive-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 1px;
+    background: var(--color-primary);
+  }
+  
+  .archive-breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+  
+  .archive-breadcrumb a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .archive-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .archive-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .archive-description {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+    margin: 0;
+  }
+  
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .post-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--card-shadow);
+    border-color: var(--color-primary);
+  }
+  
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .post-category {
+    background: var(--color-secondary);
+    color: var(--text-inverse);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+  
+  .post-date {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  
+  .post-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  
+  .post-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .post-title a:hover {
+    color: var(--color-primary);
+  }
+  
+  .post-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tag-link {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-medium);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .tag-link:hover {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    border-color: var(--color-primary);
+  }
+  
+  .more-tags {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+  
+  .reading-time {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+  
+  .no-posts {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+  }
+  
+  .archive-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+  }
+  
+  .back-to-blog,
+  .year-archive {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .back-to-blog:hover,
+  .year-archive:hover {
+    color: var(--color-primary-hover);
+  }
+  
+  @media (max-width: 768px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .archive-header h1 {
+      font-size: 2rem;
+    }
+    
+    .post-card {
+      padding: 1.5rem;
+    }
+    
+    .post-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .archive-footer {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+</style>
