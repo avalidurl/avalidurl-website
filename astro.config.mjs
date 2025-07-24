@@ -11,7 +11,7 @@ const site = process.env.SITE_URL || 'https://yourdomain.com';
 
 export default defineConfig({
   site: site,
-  output: 'hybrid',
+  output: 'server',
   adapter: cloudflare(),
   integrations: [mdx({
     remarkPlugins: [],
