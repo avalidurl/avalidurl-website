@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
-import cloudflare from '@astrojs/cloudflare';
 
 // Use environment variable or fallback to placeholder
 const site = process.env.SITE_URL || 'https://yourdomain.com';
@@ -27,8 +26,5 @@ export default defineConfig({
       minify: true,
     },
   },
-  adapter: cloudflare({
-    imageService: 'compile'
-  }),
   output: 'static'
 });
