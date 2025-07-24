@@ -50,7 +50,7 @@ const art = defineCollection({
     medium: z.string(),
     dimensions: z.string().optional(),
     tools: z.array(z.string()).default([]),
-    colorTheme: z.enum(['red', 'green', 'blue']),
+    colorTheme: z.enum(['neutral', 'red', 'green', 'blue']).optional().default('neutral'),
     featured: z.boolean().default(false),
     imageUrl: z.string(),
     thumbnailUrl: z.string().optional(),

@@ -1,21 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getSingleton } from 'astro:content';
 
-let title = 'About';
-let AboutContent;
-try {
-  const aboutEntry = await getSingleton('about');
-  if (aboutEntry) {
-    const { Content, title: t } = await aboutEntry.render();
-    title = t ?? title;
-    AboutContent = Content;
-  }
-} catch {}
+const title = 'About';
 ---
 
 <Layout title={title}>
   <main class="container about-page">
-    {AboutContent ? <AboutContent /> : <p>Add content via Keystatic.</p>}
+    <p>Add content via Keystatic.</p>
   </main>
 </Layout> 
