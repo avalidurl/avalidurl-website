@@ -1,7 +1,5 @@
 # Dependencies
 node_modules/
-astro-site/node_modules/
-strapi-cms/node_modules/
 
 # Environment variables (CRITICAL - never commit these)
 .env
@@ -9,15 +7,10 @@ strapi-cms/node_modules/
 .env.development
 .env.production
 .env.test
-astro-site/.env
-strapi-cms/.env
 
 # Build outputs
 dist/
 .astro/
-astro-site/dist/
-strapi-cms/dist/
-strapi-cms/.tmp/
 
 # Tina CMS
 .tina/__generated__/
