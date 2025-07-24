@@ -14,9 +14,14 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/content/*": ["./src/content/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ],
+      "@/content/*": [
+        "./src/content/*"
+      ]
+    },
+    "jsxImportSource": "react"
   },
   "include": [
     "src/**/*",
