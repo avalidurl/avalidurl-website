@@ -108,6 +108,16 @@ export default config({
           ],
           defaultValue: 'digital'
         }),
+        colorTheme: fields.select({
+          label: 'Colour theme',
+          options: [
+            { label: 'Neutral', value: 'neutral' },
+            { label: 'Red', value: 'red' },
+            { label: 'Green', value: 'green' },
+            { label: 'Blue', value: 'blue' },
+          ],
+          defaultValue: 'neutral'
+        }),
         medium: fields.text({ 
           label: 'Medium',
           description: 'e.g., Oil on canvas, Digital print, etc.'

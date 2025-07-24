@@ -27,7 +27,7 @@ const formattedDate = new Date(artwork.data.createdDate).toLocaleDateString('en-
 });
 
 // Helper function to get color theme classes
-function getColorThemeClass(theme: string) {
+function getColorThemeClass(theme: string | undefined) {
   switch(theme) {
     case 'red': return 'theme-red';
     case 'green': return 'theme-green';
