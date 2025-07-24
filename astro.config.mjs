@@ -15,8 +15,10 @@ export default defineConfig({
       remarkPlugins: [],
       rehypePlugins: [],
     }), 
-    react(), 
-    markdoc(),
+    react({
+      experimentalReactChildren: true
+    }), 
+    markdoc(), 
     keystatic()
   ],
   compressHTML: true,
@@ -28,9 +30,15 @@ export default defineConfig({
       cssMinify: true,
       minify: true,
     },
+    ssr: {
+      external: ['react', 'react-dom']
+    }
   },
   adapter: cloudflare({
-    imageService: 'compile'
+    imageService: 'compile',
+    platformProxy: {
+      enabled: true
+    }
   }),
   output: 'static'
 });
