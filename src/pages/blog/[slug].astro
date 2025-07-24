@@ -104,7 +104,7 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
         {post.data.tags.length > 0 && (
           <div class="post-tags">
             {post.data.tags.map(tag => (
-              <span class="post-tag">{tag}</span>
+              <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="post-tag">{tag}</a>
             ))}
           </div>
         )}
@@ -252,6 +252,16 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.3px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+  
+  .post-tag:hover {
+    background: var(--blog-bronze);
+    color: var(--blog-warm-white);
+    border-color: var(--blog-bronze);
+    transform: translateY(-1px);
   }
   
   .updated-notice {

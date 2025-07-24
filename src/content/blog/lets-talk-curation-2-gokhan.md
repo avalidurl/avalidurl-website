@@ -1,0 +1,77 @@
+---
+title: "Let's Talk Curation #2 | GÖKHAN"
+description: "A comprehensive interview exploring my curatorial journey, approaches to curation in the web3 space, and insights into on-chain art curation practices."
+publishDate: "2022-06-28"
+author: "GÖKHAN TURHAN"
+tags: ["curation", "web3", "art", "blockchain", "interview"]
+category: "art"
+featured: true
+readingTime: 12
+excerpt: "An in-depth interview with JPG exploring my curatorial philosophy, journey from experimental music to blockchain art, and approach to on-chain curation in the web3 ecosystem."
+originalUrl: "https://jpg.mirror.xyz/eAZi6PglxjMALBw2Mk4cnJxdxPGv6Bpcr5irWZp91Wc"
+arweaveId: "GPY56Wu7A2A-IhLkWMFwk1KUYibWfZNB9omGEnxd43U"
+---
+
+> **Editor's Note:** This interview with Gökhan Turhan, as it was done by [William M. Peaster](https://x.com/wmpeaster), was first published at [Juried Protocol Galleries' Mirror weblog](https://jpg.mirror.xyz/eAZi6PglxjMALBw2Mk4cnJxdxPGv6Bpcr5irWZp91Wc).
+
+Welcome back to **Let's Talk Curation**, a new series in which [JPG](https://jpg.space) interviews some of our community's leading curators in order to learn more about their work and how they approach curation.
+
+For our second interview, we had the pleasure of picking the brain of **GÖKHAN**, who you may recognize from Twitter as [gokhan.eth](https://twitter.com/0xgokhan). GÖKHAN is a [conceptual artist](https://zora.co/gokhan.eth?status=MINTED&collection=), a [writer](https://mirror.xyz/gokhan.eth), and a curator who you'll often find experimenting around the bleeding edge of smart contracts. He's been a super user of the JPG beta and has curated nearly a dozen galleries on the platform to date, including [Süperconceptual I](https://jpg.space/gokhan/exhibition/S%C3%BCperconceptual-I), [Per Block Time of Existence](https://jpg.space/gokhan/exhibition/Per-Block-Time-of-Existence), and [Body](https://jpg.space/gokhan/exhibition/Body).
+
+[https://jpg.space/gokhan](https://jpg.space/gokhan)
+
+## 1) Why did you become a curator? What's your journey to curation been like?
+
+I really do not know how not to answer this question—a succinct and clear articulation of one's own career path might be a tongue-in-cheek sound of a constellation of a personal historiography that is its own caricature. However, all that jazz does not matter as long as the play element in curation (not necessarily that of a gamification) satisfies the individual. Hence, I like interviews in that they let you curate all these words in a given syntax, or not — things might turn asemic of course. Thus, I'll try to answer as clearly as probable: I just wanted to be a curator. I am a curator before I am even an artist as in a conceptual craftsman.
+
+[ethereum://0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/6477](ethereum://0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/6477)
+
+I assume it all started with the art of sound. I have neither played an instrument nor had that ear even though I imitate coloratura sopranos at home. During high school, I took on experimental music as an audiophile without much technological means. Thereby, I had to create my own remixocene in mixtapes on casettes. Through the undergraduate years, it was all late 2000s experimental sounds with their niché and pop variants and that were accompanied by these experimental poets whose works helped me discover the olden and better works — I studied American Culture and Literature, and that which some call post-modern had then unknown names that were only discoverable via bloghouses of poetry and writing.
+
+At that point, I had the chance to enter the echo chamberful ivory towers of the Istanbulite contemporary art scene as an immaterial observer, which helped me dislike that vista in a matter of few days. Then I started to find about people who share and shapen the artworlds online. Online is sort of a non-continuous state for me. There have been intervals during which I was offline for a very long time. At some point around 2014-15, I realized the importance of platform-based artistic hubs and started providing submissions, both to online publishings and to physical gallery spaces, mainly through collaborations — especially with my partner Hale. We produced works in any media available to us over the last decade, which initially included producing SoundCloud noise tracks and creating asemic & glitch artworks on a pair of iPhone 4s and almost broken laptops. It was then it struck me that the majority of the curation praxes focused on a networked affliation among peers, and even the presence of 24/7 online virtual geographies could not go beyond that feeling of connection in terms of curational practices — hence, all those art exhibits looked like a conceptual recycling blooming with tedium and ennui to me. None should pardon my French here.
+
+Later, I realized that blockchain technologies could function as a bootstrapping moment for curatorial practices, where people like myself could bootstrap the artworld unto a plane where established networks will need to be rewound or rewired. This was owing to the fact that p2p decentralized cultural and artistic scenes meant that people who had been outside the epistemologically inflated anechoic bubble chambers of the artworld could now have the chance to partake and challenge the very notions of art, exhibits, and the practices of curation, just as the radical figures and their notions of revolution in the artspeak world wanted.
+
+[ethereum://0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405/22429](ethereum://0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405/22429)
+
+In 2017, I finished an MA in Comparative Literature where I penned a dissertation on the preservation of digital-born literatures, digital games, and the impact of media laboratories, with a particular focus on longterm archival practices. This work sparkled the curiosity in me about the potential of blockchain-based infrastructures for the betterment of longterm archives. Flash forward to 2020, and I really had to learn what a non-fungible token because I was tired of applying to PhD programs where it seemed other peers were chosen even before interviews based on identity rather than merits, and I was genuinely tired of complaining all the time without building.
+
+From 2020 through 2022, I mastered the personal craft of being a DeFi degen, and had the chance to network with a lot of people whom I really do not know; and I can attest that many moonbois are in fact well informed on that which is called art and curation in frames that are unbeknownst to the "art world" that is according to *some* the only art world that matters. It was then I realized that some people who have a better understanding than 99% of both the crypto and art worlds were building a thing called Juried Protocol Galleries, and I just wanted to be a part of it as a smol contributooor. That is why and how I became a curator. Anyone offended can mention me on Twitter or Lenster.
+
+## 2) How do you approach the curatorial process in your creative or professional work?
+
+Now, the reply to this question should be a Norman Jaffe house orbiting this "Pale Blue Dot" of ours. I work through and approach curatorial processes both in my creative and professional work **a)** by means of associations that can be cast via different stuff such as a matter pertaining to my everyday life, or an abstraction that I would like to see in a music track, let's say by Steve Reich or Rihanna, yet which is not there, and **b)** without discriminating the creative against the professional, or vice versa. They are just the same in that creativity is kind of a professional crafsmanship of one's own daily path.
+
+[ethereum://0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405/68248](ethereum://0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405/68248)
+
+As per an on-chain curational process, I usually carry out a chance operation either stemming from a single term, or a word at night regardless of how I feel. I can safely state that at times I use curation as a decluttering tool for the mind, almost Zen-like, bound by intedeterminacy, a Cagean relief at the top or the bottom — remember, the bottom can be as deep as the Mariana Trench, where the probabilities that define the emergent culture through blockchain-enabled technologies such as DAOs and the like are still, and will almost always be, bound to a sort of a liquidity that helps you hatch value for the accruers. What is value? That which your tribe thinks of as that which is the value at a given time — and, art is not an outsider to anthropic, and now to semi-non-anthropic, markets.
+
+![Some of GÖKHAN's latest exhibitions on JPG](https://images.mirror-media.xyz/publication-images/ufVzZ8ErwuGhASufLOZAB.PNG?height=531&width=1649)
+
+… and, at times, I catch a recurring pattern in several people's work, and at times those of some collectives. These patterns are usually abstractions that I cannot fathom the words for a sort of description thereof — a person such as Vitalik could easily articulate and narrate these, in my humble opinion; or David Foster Wallace could lay out ideas for how to narrate such patterns or abstractions. Some will think that these are mere ambiguities that people like myself cannot put into words. Yet, they are not. They are a flow. A flow of flows that concretizes abstract thought into a material reality that can be useful for some people. A DAO will be much more useful when it will be helping those who have a gazillion bureaucratic barriers before them even for a simple touristic travel abroad.
+
+All of the pile of words above means that an approach that renders what a creative or professional work is in my life needs to reflect a conceptualization within a context for me to count as a process.
+
+## 3) Who are your top 3 favorite artists right now, and why?
+
+It's really easy to answer this question since I have at least 3 favorite on-chain artists every 3'33". No, I am not joking. I'd rather answer the question, "who are your top 3 favorite artists who are not on-chain right now." Yet, that's a tricky question since one of those anons can be Richard Prince, or the photographer he appropriated Norm Clasen, or Kenny G of Ubuweb. I'd love to see these names next to Daniel Arsham. Arsham is one of my favorite artists, and he has works on-chain. Here, I need to clarify that by on-chain art, I only refer to those works that are on the Ethereum mainnet, and some niché ones that are on a rollup whether they be of "zero knowledge" or "optimistic" varieties. I'd also love to see what John Cage, and Iannis Xenakis would do with on-chain possibilities.
+
+After thinking about it some more, and a couple of millenia of bloodbath for DeFi thanks to certain clusters who might have misunderstood the sovereign individual notion, I have decided to provide 3 names. Lately, I have been delving into what Godmin was all about from the beginning thanks to that Sinofuturistic alternate '90s vibes to that art — almost like playing the Hypnospace Outlaw from the Pynchon novel itself. Besides, I might just have re-discovered the beauty of the complexity in the works of Harm van den Dorpel. Complexity as rendered in its utterly organic simplicity. Other than those two, I have this one singular artist as an abstract idea machine in my mind that solves the local knowledge problem of creativity and expression as compressed from the works and interactions and ideas of many artists, makers and critics such as [Holly](https://twitter.com/hollyherndon) and [Mat](https://twitter.com/matdryhurst) of [Interdependence](https://twitter.com/1nterdependence) and [channel](https://twitter.com/channel), [0xDEAFBEAF](https://twitter.com/_deafbeef), [Sarah Meyohas](https://twitter.com/SarahMeyohas), [Rhea Myers](https://twitter.com/rheaplex), [Jack Butcher](https://twitter.com/jackbutcher), Ryder Ripps, [Joan of JODI](https://twitter.com/JoanHeemskerk), Pak, Anadol, Arsham, and [Hale](https://twitter.com/xenostices). Also Vitalik. The guy is smart.
+
+## 4) What advice would you give to web3 creatives who are wanting to dive deeper into curation but aren't sure where to start?
+
+They just need to understand that curation is no bookmarking — however, in an emergent system and its thinking, as in probing your way as a rover through the unknown parts of blockchain tech upon which a metadata overload of alleged artworks are seeded, you need to bookmark. 
+
+I aproach curating via 2 channels, and cycle to either at various times: **1)** I get bored, and to create a book of tethered files that we call art in a browser, I open a billion tabs (one can remix Dennis Cooper's GIF Novel this way ad infinitum), or **2)** I curate to define an abstracted idea-concept just for myself on a systemic plane that might take weeks. Wut means? It only means that I can curate by just delving into all marketplaces and aggregators in any way, and just reframe the narratives thereafter — as many do so for scientific works on delayed flights.
+
+[ethereum://0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/8365](ethereum://0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/8365)
+
+Also, as I am giving the same advice to myself: learn to code in web3 lingua. Learn Solidity. Learn Vyper. Learn Cairo. That way, you can build the non-existent curation tools that you really need in this mess of archival primordial soup of nonfungibles and the like today.
+
+## 5) Do you have any upcoming curatorial projects we can be on the lookout for?
+
+I aim to design a series of on-chain curations around the idea of a numogram. I really do not know how I am going to do that right now, though. It will always be on JPG. Plus, I would really like to do a sound installation as a curation of monetary approaches to fine arts, where visitors can press, or record, spatial audio to vinyls, casettes, floppy discs with the help of an on-site Chainlink oracle on a dAppresso machine. If JPG wants to CabinDAO me for such a curation somewhere, I am free all year.
+
+\*\*\*
+
+> **Thanks for reading!** 👋 **Feel free to take the conversation deeper or ask questions in the [JPG Discord](https://discord.com/invite/dna65t9rNP) any time. Also, make sure you're subscribed to the [Substack newsletter](https://jpg100.substack.com/) to stay up to date with all things JPG** 📸

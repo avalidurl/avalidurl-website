@@ -114,6 +114,10 @@ const talks = [
       <p>I enjoy heavy training, running, cooking, sound art, cars, history. I believe in the deep tech causes that will unconditionally accelerate our species towards a Kardashev scale immediate-future.</p>
       <p>You can reach me via contact page, read me through the journal, and join the community. I mainly blog here and reproduce the text across a dozen newsletter and blogging platforms, mainly poast at X, rather active on LinkedIn, Telegram and Discord, too. Links have more.</p>
       <p>I keep a reading list here.</p>
+      
+      <div class="social-links">
+        <p>You can follow me on <a href="https://x.com/0xgokhan" target="_blank" rel="noopener noreferrer">X</a>, <a href="https://github.com/avalidurl" target="_blank" rel="noopener noreferrer">GitHub</a>, <a href="https://linkedin.com/in/goekhantuerhan" target="_blank" rel="noopener noreferrer">LinkedIn</a>, and check other socials under the contact.</p>
+      </div>
     </section>
     
     <section class="content-section">
@@ -152,64 +156,8 @@ const talks = [
       </ul>
     </section>
     
-    {recentBlogPosts.length > 0 && (
-      <section class="content-section">
-        <h2>Recent Journal</h2>
-        <div class="blog-preview">
-          {recentBlogPosts.map(post => (
-            <a href={`/blog/${post.slug}`} class="blog-preview-card">
-              <div class="blog-meta">
-                <span class="blog-category">{post.data.category}</span>
-                <time class="blog-date">
-                  {new Date(post.data.publishDate).toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric'
-                  })}
-                </time>
-              </div>
-              <h3 class="blog-title">
-                {post.data.title}
-              </h3>
-              <p class="blog-excerpt">
-                {post.data.excerpt || post.data.description}
-              </p>
-              {post.data.readingTime && (
-                <div class="blog-reading-time">
-                  {post.data.readingTime} min read
-                </div>
-              )}
-            </a>
-          ))}
-        </div>
-        <div class="blog-cta">
-          <a href="/blog" class="view-all-link">View All Posts →</a>
-        </div>
-      </section>
-    )}
     
-    <section class="content-section">
-      <h2>Writing</h2>
-      <ul class="content-list">
-        {writings.map(writing => (
-          <li class="content-item">
-            <a href={writing.url}>{writing.title}</a>
-            <span class="content-year">{writing.year}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
     
-    <section class="content-section">
-      <h2>Talks & Interviews</h2>
-      <ul class="content-list">
-        {talks.map(talk => (
-          <li class="content-item">
-            <a href={talk.url}>{talk.title}</a>
-            <span class="content-year">{talk.year}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
     
     <footer>
       <p>
