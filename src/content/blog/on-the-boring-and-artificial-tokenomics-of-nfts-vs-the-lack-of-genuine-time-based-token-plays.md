@@ -1,5 +1,6 @@
 ---
 title: "On the Boring and Artificial Tokenomics of NFTs vs the Lack of Genuine Time-Based Token Plays"
+slug: "nft-tokenomics-boring-artificial"
 description: "[Wrote a new piece on my Mirror. Please click the link if you wanna start exchanging ideas on the boredom of current NFT tokenomics.](https://gokhan.mirror.xyz/CV17Y1GnRdODHKVh7hGSc32ZhCHJvUEi4YmW6IHggIU)"
 publishDate: "2023-03-01"
 author: "Gokhan Turhan"

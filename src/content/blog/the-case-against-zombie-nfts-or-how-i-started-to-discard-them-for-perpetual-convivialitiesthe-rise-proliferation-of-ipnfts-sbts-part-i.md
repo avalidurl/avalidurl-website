@@ -1,5 +1,6 @@
 ---
 title: "The Case against Zombie NFTs, or how I started to Discard them for Perpetual Convivialities—The Rise & Proliferation of IPNFTs & SBTs: Part I "
+slug: "zombie-nfts-case-against-part-i"
 description: "*This piece was first deployed to [Mirror](https://gokhan.mirror.xyz/jeb6DGWF6wU7402LUjiQ4P8RYl7wjRMr2HrkkDp6OZ8) on Optimism, & [Paragraph](https://paragraph.xyz/@gokhan/the-case-against-zombie-nfts,..."
 publishDate: "2023-10-26"
 author: "Gokhan Turhan"
