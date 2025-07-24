@@ -143,6 +143,9 @@ const allPosts = sortedPosts;
     position: sticky;
     top: 2rem;
     height: fit-content;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-bottom: 2rem;
   }
   
   .newsletter-signup {
@@ -151,6 +154,8 @@ const allPosts = sortedPosts;
     text-align: center;
     border: 1px solid var(--border-light);
     border-radius: 8px;
+    margin-top: 2rem;
+    flex-shrink: 0;
   }
   
   .newsletter-signup h3 {
@@ -222,6 +227,13 @@ const allPosts = sortedPosts;
       grid-template-columns: 1fr 250px;
       gap: 2rem;
     }
+    
+    .blog-sidebar {
+      position: static;
+      max-height: none;
+      overflow-y: visible;
+      padding-bottom: 0;
+    }
   }
   
   @media (max-width: 768px) {
@@ -237,6 +249,9 @@ const allPosts = sortedPosts;
     .blog-sidebar {
       position: static;
       order: -1; /* Move sidebar to top on mobile */
+      max-height: none;
+      overflow-y: visible;
+      padding-bottom: 0;
     }
     
     .articles-grid {
@@ -245,6 +260,7 @@ const allPosts = sortedPosts;
     
     .newsletter-signup {
       padding: 1.5rem;
+      margin-top: 1.5rem;
     }
   }
 </style>
