@@ -1,4 +1,4 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
   storage: {
@@ -13,6 +13,28 @@ export default config({
     brand: {
       name: 'avalidurl'
     }
+  },
+  
+  singletons: {
+    home: singleton({
+      label: 'Home Page',
+      path: 'src/content/home.md',
+      schema: {
+        heroTitle: fields.text({ label: 'Hero title' }),
+        heroSubtitle: fields.text({ label: 'Hero subtitle', multiline: true }),
+        body: fields.markdoc({ label: 'Body content', description: 'Optional rich-text body under hero.' })
+      },
+      format: { contentField: 'body' }
+    }),
+    about: singleton({
+      label: 'About Page',
+      path: 'src/content/about.md',
+      schema: {
+        title: fields.text({ label: 'Title', defaultValue: 'About' }),
+        body: fields.markdoc({ label: 'Body', description: 'Main content of about page' })
+      },
+      format: { contentField: 'body' }
+    })
   },
   
   collections: {
