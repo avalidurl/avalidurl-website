@@ -303,16 +303,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   /* Accessible Links with High Contrast */
   a {
     color: var(--link-color);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    text-decoration: none;
     transition: all 0.2s ease;
     font-weight: 500;
   }
   
   a:hover {
     color: var(--link-hover);
-    text-decoration-thickness: 2px;
   }
   
   a:visited {
