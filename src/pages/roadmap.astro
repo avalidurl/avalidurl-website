@@ -386,7 +386,7 @@ import Layout from '../layouts/Layout.astro';
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #4fc3f7;
+    color: var(--text-primary);
     line-height: 1;
   }
 
@@ -426,7 +426,7 @@ import Layout from '../layouts/Layout.astro';
   .work-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    border-color: #4fc3f7;
+    border-color: var(--text-primary);
   }
 
   .work-card.featured {
@@ -447,12 +447,12 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .work-status.live {
-    background: #4caf50;
+    background: var(--card-bg);
     color: white;
   }
 
   .work-status.concept {
-    background: #ff9800;
+    background: var(--card-bg);
     color: white;
   }
 
@@ -477,7 +477,7 @@ import Layout from '../layouts/Layout.astro';
 
   .feature {
     background: rgba(79, 195, 247, 0.1);
-    color: #4fc3f7;
+    color: var(--text-primary);
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.8rem;
@@ -500,23 +500,23 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .launch-btn {
-    background: #4fc3f7;
+    background: var(--card-bg);
     color: white;
   }
 
   .launch-btn:hover {
-    background: #29b6f6;
+    background: var(--card-bg);
     transform: translateY(-2px);
   }
 
   .info-btn {
     background: transparent;
-    color: #4fc3f7;
+    color: var(--text-primary);
     border: 2px solid #4fc3f7;
   }
 
   .info-btn:hover {
-    background: #4fc3f7;
+    background: var(--card-bg);
     color: white;
   }
 
@@ -559,17 +559,17 @@ import Layout from '../layouts/Layout.astro';
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: #81d4fa;
+    background: var(--card-bg);
     border: 3px solid var(--bg-primary);
   }
 
   .timeline-marker.current {
-    background: #4fc3f7;
+    background: var(--card-bg);
     box-shadow: 0 0 0 4px rgba(79, 195, 247, 0.2);
   }
 
   .timeline-marker.future {
-    background: #b3e5fc;
+    background: var(--card-bg);
   }
 
   .timeline-content {
@@ -580,12 +580,12 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .timeline-item.current .timeline-content {
-    border-color: #4fc3f7;
+    border-color: var(--text-primary);
     background: linear-gradient(135deg, rgba(79, 195, 247, 0.05), rgba(129, 212, 250, 0.02));
   }
 
   .timeline-date {
-    color: #4fc3f7;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -608,27 +608,27 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .timeline-status:contains("COMPLETED") {
-    background: #4caf50;
+    background: var(--card-bg);
     color: white;
   }
 
   .timeline-status:contains("DEVELOPMENT") {
-    background: #ff9800;
+    background: var(--card-bg);
     color: white;
   }
 
   .timeline-status:contains("PLANNED") {
-    background: #2196f3;
+    background: var(--card-bg);
     color: white;
   }
 
   .timeline-status:contains("CONCEPT") {
-    background: #9c27b0;
+    background: var(--card-bg);
     color: white;
   }
 
   .timeline-status:contains("VISION") {
-    background: #607d8b;
+    background: var(--card-bg);
     color: white;
   }
 
@@ -652,7 +652,7 @@ import Layout from '../layouts/Layout.astro';
 
   .tech-tag {
     background: rgba(79, 195, 247, 0.1);
-    color: #4fc3f7;
+    color: var(--text-primary);
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.8rem;
@@ -697,7 +697,7 @@ import Layout from '../layouts/Layout.astro';
 
   .tech-item {
     background: rgba(79, 195, 247, 0.1);
-    color: #4fc3f7;
+    color: var(--text-primary);
     padding: 0.5rem 1rem;
     border-radius: 8px;
     font-size: 0.9rem;
@@ -706,14 +706,14 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .tech-item:hover {
-    background: #4fc3f7;
+    background: var(--card-bg);
     color: white;
     transform: translateY(-2px);
   }
 
   .tech-item.future {
     background: rgba(179, 229, 252, 0.1);
-    color: #81d4fa;
+    color: var(--text-primary);
   }
 
   /* Monetization */
@@ -749,12 +749,12 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .tier.premium {
-    border-color: #4fc3f7;
+    border-color: var(--text-primary);
     background: linear-gradient(135deg, rgba(79, 195, 247, 0.05), rgba(129, 212, 250, 0.02));
   }
 
   .tier.enterprise {
-    border-color: #ff9800;
+    border-color: var(--text-primary);
     background: linear-gradient(135deg, rgba(255, 152, 0, 0.05), rgba(255, 183, 77, 0.02));
   }
 
@@ -767,7 +767,7 @@ import Layout from '../layouts/Layout.astro';
   .tier-price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #4fc3f7;
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
   }
 
@@ -792,7 +792,7 @@ import Layout from '../layouts/Layout.astro';
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #4fc3f7;
+    background: var(--card-bg);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
@@ -851,7 +851,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .feedback-form-content button {
-    background: #4fc3f7;
+    background: var(--card-bg);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -862,7 +862,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .feedback-form-content button:hover {
-    background: #29b6f6;
+    background: var(--card-bg);
     transform: translateY(-2px);
   }
 
@@ -886,7 +886,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .social-link {
-    color: #4fc3f7;
+    color: var(--text-primary);
     text-decoration: none;
     padding: 0.75rem;
     border: 1px solid rgba(79, 195, 247, 0.2);
@@ -896,7 +896,7 @@ import Layout from '../layouts/Layout.astro';
 
   .social-link:hover {
     background: rgba(79, 195, 247, 0.1);
-    border-color: #4fc3f7;
+    border-color: var(--text-primary);
   }
 
   .stats-display h4 {

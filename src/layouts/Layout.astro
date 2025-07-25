@@ -171,59 +171,59 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     --btn-secondary-hover: #BF360C;
   }
   
-  /* Bloomberg Terminal Dark Mode */
+  /* Bloomberg Terminal Dark Mode - Exact Color Match */
   [data-theme="dark"] {
-    /* Bloomberg terminal text colors - orange/yellow on black */
-    --text-primary: #FF8C00;          /* Bloomberg orange */
-    --text-secondary: #FFA500;        /* Light orange */
-    --text-muted: #DAA520;            /* Goldenrod */
+    /* Bloomberg terminal text colors matching screenshot */
+    --text-primary: #FFFFFF;          /* White headers like Bloomberg */
+    --text-secondary: #FF8C00;        /* Orange text */
+    --text-muted: #FFA500;            /* Light orange for muted text */
     --text-inverse: #000000;          /* Black text for light elements */
     
-    /* Terminal backgrounds - pure black like Bloomberg */
+    /* Terminal backgrounds - exact Bloomberg black */
     --bg-primary: #000000;            /* Pure black background */
-    --bg-secondary: #0A0A0A;          /* Slightly lighter black */
-    --bg-tertiary: #1A1A1A;           /* Dark gray for cards */
-    --bg-accent: #0F0F0F;             /* Subtle accent background */
+    --bg-secondary: #1A1A1A;          /* Dark charcoal for sections */
+    --bg-tertiary: #2A2A2A;           /* Lighter charcoal for cards */
+    --bg-accent: #333333;             /* Medium gray for accents */
     
-    /* Bloomberg accent colors */
-    --color-primary: #FFA500;         /* Orange for primary actions */
-    --color-primary-hover: #FF8C00;   /* Darker orange for hover */
-    --color-secondary: #FFD700;       /* Gold for secondary actions */
-    --color-secondary-hover: #FFC107; /* Amber for hover */
+    /* Bloomberg exact accent colors */
+    --color-primary: #FF8C00;         /* Bloomberg orange */
+    --color-primary-hover: #FF7F00;   /* Slightly brighter orange */
+    --color-secondary: #32CD32;       /* Green for positive values */
+    --color-secondary-hover: #00FF00; /* Bright green for hover */
     
-    /* Terminal semantic colors */
-    --color-success: #32CD32;         /* Lime green for success */
-    --color-warning: #FFD700;         /* Gold for warnings */
-    --color-error: #FF4444;           /* Red for errors */
-    --color-info: #FFA500;            /* Orange for info */
+    /* Terminal semantic colors matching Bloomberg */
+    --color-success: #32CD32;         /* Green for positive/success */
+    --color-warning: #FFFF00;         /* Yellow for warnings */
+    --color-error: #FF0000;           /* Red for negative/errors */
+    --color-info: #FF8C00;            /* Orange for info */
     
-    /* Terminal borders - subtle orange/amber */
-    --border-light: #2D1810;          /* Dark orange border */
-    --border-medium: #4A2C17;         /* Medium orange border */
-    --border-dark: #8B4513;           /* Saddle brown border */
-    --border-focus: #FFA500;          /* Orange focus outline */
+    /* Terminal borders - subtle gray/orange */
+    --border-light: #333333;          /* Dark gray border */
+    --border-medium: #555555;         /* Medium gray border */
+    --border-dark: #777777;           /* Light gray border */
+    --border-focus: #FF8C00;          /* Orange focus outline */
     
     /* Terminal navigation */
     --nav-bg: #000000;
-    --nav-text: #FF8C00;
-    --nav-accent: #FFA500;
+    --nav-text: #FFFFFF;
+    --nav-accent: #FF8C00;
     
     /* Terminal links */
-    --link-color: #FFA500;
-    --link-hover: #FFD700;
+    --link-color: #FF8C00;
+    --link-hover: #FFA500;
     --link-visited: #DAA520;
     
     /* Terminal cards and components */
-    --card-bg: #0A0A0A;
-    --card-border: #2D1810;
-    --card-shadow: rgba(255, 140, 0, 0.1);
+    --card-bg: #1A1A1A;
+    --card-border: #333333;
+    --card-shadow: rgba(255, 140, 0, 0.2);
     
     /* Blog colors in dark mode */
-    --blog-warm-white: #0A0A0A;
-    --blog-parchment: #0F0F0F;
-    --blog-charcoal: #FF8C00;
-    --blog-sepia: #FFA500;
-    --blog-bronze: #FFD700;
+    --blog-warm-white: #1A1A1A;
+    --blog-parchment: #2A2A2A;
+    --blog-charcoal: #FFFFFF;
+    --blog-sepia: #FF8C00;
+    --blog-bronze: #FFA500;
     --blog-muted-gold: #DAA520;
   }
   

@@ -69,7 +69,7 @@ import Layout from '../../layouts/Layout.astro';
   .quantum-portfolios {
     min-height: 100vh;
     background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
-    color: #e8f4fd;
+    color: var(--text-primary);
     position: relative;
     overflow: hidden;
   }
@@ -86,13 +86,13 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 2.5rem;
     font-weight: 600;
     margin: 0 0 0.5rem 0;
-    color: #ffffff;
+    color: var(--text-primary);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
   .subtitle {
     font-size: 1.1rem;
-    color: #ffffff;
+    color: var(--text-primary);
     margin: 0 0 1rem 0;
     line-height: 1.4;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
@@ -108,7 +108,7 @@ import Layout from '../../layouts/Layout.astro';
   .controls button {
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid #4fc3f7;
-    color: #0a0a0f;
+    color: var(--text-primary);
     padding: 0.75rem 1.25rem;
     border-radius: 6px;
     cursor: pointer;
@@ -119,8 +119,8 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .controls button:hover {
-    background: #4fc3f7;
-    color: #ffffff;
+    background: var(--card-bg);
+    color: var(--text-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
@@ -135,7 +135,7 @@ import Layout from '../../layouts/Layout.astro';
 
   .risk-return span {
     background: rgba(255, 255, 255, 0.95);
-    color: #0a0a0f;
+    color: var(--text-primary);
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
     border: 2px solid #4fc3f7;
@@ -169,7 +169,7 @@ import Layout from '../../layouts/Layout.astro';
   .portfolio-panel h3 {
     margin: 0 0 1rem 0;
     font-size: 1.3rem;
-    color: #0a0a0f;
+    color: var(--text-primary);
     font-weight: 700;
     text-shadow: none;
   }
@@ -189,7 +189,7 @@ import Layout from '../../layouts/Layout.astro';
   .asset label {
     min-width: 90px;
     font-size: 1rem;
-    color: #0a0a0f;
+    color: var(--text-primary);
     font-weight: 600;
     text-shadow: none;
   }
@@ -207,7 +207,7 @@ import Layout from '../../layouts/Layout.astro';
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    background: #4fc3f7;
+    background: var(--card-bg);
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid #0a0a0f;
@@ -216,7 +216,7 @@ import Layout from '../../layouts/Layout.astro';
   .asset input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #4fc3f7;
+    background: var(--card-bg);
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid #0a0a0f;
@@ -226,7 +226,7 @@ import Layout from '../../layouts/Layout.astro';
     min-width: 40px;
     text-align: right;
     font-size: 1rem;
-    color: #0a0a0f;
+    color: var(--text-primary);
     font-weight: 700;
   }
 
@@ -247,7 +247,7 @@ import Layout from '../../layouts/Layout.astro';
   .concept-info h3 {
     margin: 0 0 1rem 0;
     font-size: 1.3rem;
-    color: #0a0a0f;
+    color: var(--text-primary);
     font-weight: 700;
     text-shadow: none;
   }
@@ -256,7 +256,7 @@ import Layout from '../../layouts/Layout.astro';
     margin: 0 0 1rem 0;
     font-size: 0.95rem;
     line-height: 1.5;
-    color: #0a0a0f;
+    color: var(--text-primary);
     font-weight: 400;
     text-shadow: none;
   }
@@ -271,7 +271,7 @@ import Layout from '../../layouts/Layout.astro';
     right: 20px;
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid #4fc3f7;
-    color: #0a0a0f;
+    color: var(--text-primary);
     padding: 0.75rem 1.25rem;
     border-radius: 6px;
     cursor: pointer;
@@ -282,8 +282,8 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .show-ui-btn:hover {
-    background: #4fc3f7;
-    color: #ffffff;
+    background: var(--card-bg);
+    color: var(--text-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
@@ -300,12 +300,12 @@ import Layout from '../../layouts/Layout.astro';
 
     .artwork-header h1 {
       font-size: 2rem;
-      color: #0a0a0f;
+      color: var(--text-primary);
       text-shadow: none;
     }
 
     .subtitle {
-      color: #0a0a0f;
+      color: var(--text-primary);
       text-shadow: none;
     }
 
