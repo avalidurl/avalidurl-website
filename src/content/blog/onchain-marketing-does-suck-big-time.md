@@ -11,9 +11,13 @@ excerpt: "People who devote their lives to studying something often come to beli
 originalUrl: "https://gokhan.substack.com/p/onchain-marketing-do-suck-big-time"
 ---
 
-People who devote their lives to studying something often come to believe that the object of their fascination is the key to understanding everything.
+---
 
- Haidt, Jonathan. ***The Righteous Mind: Why Good People Are Divided by Politics and Religion*****.**
+> People who devote their lives to studying something often come to believe that the object of their fascination is the key to understanding everything.
+
+Haidt, Jonathan. *The Righteous Mind: Why Good People Are Divided by Politics and Religion*.
+
+---
 
 **Marketing gurus are a rare breed.** They are found to be where all at once. I remember the days right before the Covid-19 outbreak when I was pushing in the local desk of an international the blockchain technology and its possible homeruns for our not so niche sector. After 5 years, the last year to be precise, they had to adapt and adopt some infrastructure rails but I cannot blame them to be sceptics all along. After all, noone really wanted to slide their credit cards into card slots in home computer kit keyboards back in late '90s and early Noughties—yet the technology was there. There was that keyboard with which we are playing Unreal Tournament listening to Megadeth at the age of 12 at a friend's house. I recall having thought "too bad we didn't have this at home." Yet, my parents didn't even have credit cards back then.
 
