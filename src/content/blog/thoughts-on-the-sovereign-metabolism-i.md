@@ -1,6 +1,6 @@
 ---
 title: "Thoughts on the Sovereign Metabolism I"
-description: "I am reading a [@praxisnation](https://x.com/@praxisnation) post, [Sovereign Intelligence Western Civilization in the Intelligence Age](https://www.praxisnation.com/news/sovereign-intelligence), and I come to think that decentralized AI is overhyped when it comes to the stack re: the narrative we ke"
+description: "I am reading a @praxisnation post about Sovereign Intelligence and think decentralized AI is overhyped when it comes to the narrative we keep reading from crypto-aligned Silicon Valley VCs."
 publishDate: "2025-02-22"
 author: "Gokhan Turhan"
 tags: ["crypto", "defi", "technology", "web3"]
@@ -21,7 +21,10 @@ The authors at Praxis accentuates that
 
 That which our meta-narratively deluded peers in "crypto"—neither crypto-economics proper nor the game of life that the associatively derivative technologies surrounding and stemming from the composability warfare—come to think of decentralized AI in fact are just unnecessarily mutable vector database access to multi-signature controlled games that lack play.
 
-Monument Valley, Yoshi Toshida (1971). Indeed, there are inspiring attempts at the intents-centric cross-protocol solutions to liquidity and capital markets fragmentation in this emergent sub-sector of global financial infrastructure rails. However, if someone is arguing for a "totally" decentralized AI stack, they need to kindly reminded that "not our weights, not our society.
+![Monument Valley by Yoshi Toshida (1971)](/images/monument-valley-toshida.jpg)
+*Monument Valley, Yoshi Toshida (1971)*
+
+Indeed, there are inspiring attempts at the intents-centric cross-protocol solutions to liquidity and capital markets fragmentation in this emergent sub-sector of global financial infrastructure rails. However, if someone is arguing for a "totally" decentralized AI stack, they need to be kindly reminded that "not our weights, not our society."
 
 Today, thanks to recent revival of true American Dynamism, we have chance to uphold genuinely competitive governance schemes across many a domain. Let's not botch it under the delusions of either Doomer Safetyism or Exit Liquidity Latter Day Blockchain Fundamentalism.
 
