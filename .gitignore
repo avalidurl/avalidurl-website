@@ -85,6 +85,8 @@ audit-results.json
 
 # Internal development files (NEVER COMMIT THESE)
 CLAUDE.md
+XMTP_IMPLEMENTATION_SPECS.md
+TASK_STATUS.md
 # Allow documentation files
 !README.md
 !CONTRIBUTING.md
