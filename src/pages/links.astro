@@ -8,13 +8,34 @@ import Layout from '../layouts/Layout.astro';
       <header class="links-header">
         <h1 class="page-title">Links</h1>
         <p class="page-description">
-          Connect with me across the internet. Jump to: 
-          <a href="#social-media" class="nav-anchor">Social Media</a> • 
-          <a href="#professional" class="nav-anchor">Professional Networks</a> • 
-          <a href="#newsletters" class="nav-anchor">Newsletters & Blogs</a> • 
-          <a href="#audio-visual" class="nav-anchor">Audio & Visual</a> • 
-          <a href="#link-aggregators" class="nav-anchor">Link Aggregators</a>
+          Connect with me across the internet.
         </p>
+        
+        <!-- Navigation Pills -->
+        <nav class="section-nav" role="navigation" aria-label="Section navigation">
+          <div class="nav-pills">
+            <a href="#social-media" class="nav-pill" data-section="social-media">
+              <span class="nav-arrow">↓</span>
+              Social Media
+            </a>
+            <a href="#professional" class="nav-pill" data-section="professional">
+              <span class="nav-arrow">↓</span>
+              Professional
+            </a>
+            <a href="#newsletters" class="nav-pill" data-section="newsletters">
+              <span class="nav-arrow">↓</span>
+              Newsletters
+            </a>
+            <a href="#audio-visual" class="nav-pill" data-section="audio-visual">
+              <span class="nav-arrow">↓</span>
+              Audio & Visual
+            </a>
+            <a href="#link-aggregators" class="nav-pill" data-section="link-aggregators">
+              <span class="nav-arrow">↓</span>
+              Link Aggregators
+            </a>
+          </div>
+        </nav>
       </header>
 
       <!-- Social Media Section -->
@@ -172,15 +193,15 @@ import Layout from '../layouts/Layout.astro';
           </div>
           
           <div class="link-card collaborative">
-            <h3 class="card-title">ada & arx</h3>
+            <h3 class="card-title">SoundCloud - ada & arx</h3>
             <p class="card-description">Collaborative project with <a href="https://x.com/xenostices" target="_blank" rel="noopener" class="inline-link">Hâle</a></p>
-            <a href="https://soundcloud.com/adaarx" target="_blank" rel="noopener" class="card-link">SoundCloud</a>
+            <a href="https://soundcloud.com/adaarx" target="_blank" rel="noopener" class="card-link">adaarx</a>
           </div>
           
           <div class="link-card collaborative">
-            <h3 class="card-title">ada & arx main</h3>
+            <h3 class="card-title">SoundCloud - ada & arx main</h3>
             <p class="card-description">Primary collaborative audio project</p>
-            <a href="https://soundcloud.com/adaarx2" target="_blank" rel="noopener" class="card-link">SoundCloud</a>
+            <a href="https://soundcloud.com/adaarx2" target="_blank" rel="noopener" class="card-link">adaarx2</a>
           </div>
         </div>
       </section>
@@ -221,7 +242,7 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .links-page {
     min-height: 100vh;
-    background: var(--blog-warm-white);
+    background: #ffffff;
     padding: 2rem 0 4rem;
   }
 
@@ -239,56 +260,78 @@ import Layout from '../layouts/Layout.astro';
   .page-title {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--blog-charcoal);
+    color: #1a1a1a;
     margin-bottom: 1rem;
-    font-family: 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     letter-spacing: -0.02em;
   }
 
   .page-description {
     font-size: 1.125rem;
-    color: var(--blog-sepia);
+    color: #666;
     line-height: 1.6;
     max-width: 600px;
+    margin: 0 auto 2rem auto;
+  }
+
+  /* Navigation Pills */
+  .section-nav {
+    margin-top: 2rem;
+  }
+
+  .nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 800px;
     margin: 0 auto;
   }
 
-  .nav-anchor {
-    color: var(--blog-bronze);
+  .nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
     text-decoration: none;
+    color: #495057;
     font-weight: 500;
-    transition: color 0.2s ease;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
   }
 
-  .nav-anchor:hover {
-    color: var(--blog-sepia);
-    text-decoration: underline;
+  .nav-pill:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+    color: #212529;
+    transform: translateY(-1px);
+  }
+
+  .nav-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-pill:hover .nav-arrow {
+    transform: translateY(2px);
   }
 
   .links-section {
     margin-bottom: 4rem;
+    scroll-margin-top: 100px;
   }
 
   .section-title {
     font-size: 2rem;
     font-weight: 600;
-    color: var(--blog-charcoal);
+    color: #1a1a1a;
     text-align: center;
     margin-bottom: 2rem;
-    font-family: 'Georgia', serif;
-    position: relative;
-  }
-
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: var(--blog-bronze);
-    border-radius: 1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   }
 
   .cards-grid {
@@ -300,100 +343,78 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .link-card {
-    background: var(--blog-parchment);
-    border: 1px solid var(--border-light);
+    background: #ffffff;
+    border: 1px solid #e9ecef;
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-  }
-
-  .link-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--blog-bronze), var(--blog-sepia));
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
   }
 
   .link-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border-color: var(--blog-bronze);
-  }
-
-  .link-card:hover::before {
-    transform: scaleX(1);
+    border-color: #ced4da;
   }
 
   .link-card.featured {
-    background: linear-gradient(135deg, var(--blog-bronze), var(--blog-sepia));
-    color: var(--blog-warm-white);
-    border: none;
-  }
-
-  .link-card.featured .card-title,
-  .link-card.featured .card-description {
-    color: var(--blog-warm-white);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border: 2px solid #dee2e6;
   }
 
   .link-card.collaborative {
-    background: linear-gradient(135deg, var(--blog-parchment), #f8f4f0);
-    border-left: 4px solid var(--blog-bronze);
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    border-left: 4px solid #6c757d;
   }
 
   .card-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--blog-charcoal);
+    color: #1a1a1a;
     margin-bottom: 0.5rem;
-    font-family: 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   }
 
   .card-description {
     font-size: 0.9rem;
-    color: var(--blog-sepia);
+    color: #666;
     line-height: 1.5;
     margin-bottom: 1rem;
   }
 
   .card-link {
     display: inline-block;
-    color: var(--blog-bronze);
+    color: #495057;
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--blog-bronze);
+    border: 2px solid #495057;
     border-radius: 6px;
     transition: all 0.2s ease;
     font-size: 0.9rem;
   }
 
   .card-link:hover {
-    background: var(--blog-bronze);
-    color: var(--blog-warm-white);
+    background: #495057;
+    color: #ffffff;
     transform: translateY(-1px);
   }
 
   .featured-link {
-    background: var(--blog-warm-white);
-    color: var(--blog-bronze);
-    border-color: var(--blog-warm-white);
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
   }
 
   .featured-link:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--blog-sepia);
+    background: #333;
+    color: #ffffff;
+    border-color: #333;
   }
 
   .inline-link {
-    color: var(--blog-bronze);
+    color: #495057;
     text-decoration: none;
     font-weight: 500;
   }
@@ -421,6 +442,18 @@ import Layout from '../layouts/Layout.astro';
       font-size: 1rem;
     }
 
+    .nav-pills {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-pill {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+
     .cards-grid {
       grid-template-columns: 1fr;
       gap: 1rem;
@@ -446,11 +479,6 @@ import Layout from '../layouts/Layout.astro';
 
     .page-description {
       font-size: 0.9rem;
-    }
-
-    .nav-anchor {
-      display: block;
-      margin: 0.25rem 0;
     }
 
     .link-card {
