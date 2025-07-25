@@ -85,23 +85,6 @@ const allPosts = sortedPosts;
 
       <aside class="blog-sidebar">
         <ArchiveDropdown />
-        
-        <div class="newsletter-signup">
-          <h3>Stay Updated</h3>
-          <p>Get notified of new posts exploring finance, art, and technology.</p>
-          <form class="newsletter-form" action="https://app.kit.com/forms/8250157/subscriptions" method="post" data-sv-form="8250157" data-uid="6c28efde16" data-format="inline" data-version="5">
-            <input 
-              type="email" 
-              name="email_address" 
-              placeholder="your@email.com" 
-              required
-            >
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="newsletter-note">
-            Or follow via <a href="/rss.xml" class="rss-link">RSS Feed</a>
-          </p>
-        </div>
       </aside>
     </div>
   </main>
@@ -232,79 +215,6 @@ const allPosts = sortedPosts;
     padding-bottom: 2rem;
   }
   
-  .newsletter-signup {
-    background: var(--card-bg);
-    padding: 2rem;
-    text-align: center;
-    border: 1px solid var(--card-border);
-    border-radius: 8px;
-    margin-top: 2rem;
-    flex-shrink: 0;
-  }
-  
-  .newsletter-signup h3 {
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
-  }
-  
-  .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin: 1.5rem 0;
-  }
-  
-  .newsletter-form input {
-    padding: 0.75rem;
-    border: 2px solid var(--border-medium);
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    font-size: 0.875rem;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .newsletter-form input:focus {
-    outline: none;
-    border-color: var(--text-secondary);
-  }
-  
-  .newsletter-form button {
-    background: var(--text-secondary);
-    color: var(--text-inverse);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-  
-  .newsletter-form button:hover {
-    background: var(--text-primary);
-  }
-  
-  .newsletter-note {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-top: 1rem;
-  }
-  
-  .rss-link {
-    color: var(--color-primary);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid var(--color-primary);
-    transition: all 0.2s ease;
-  }
-  
-  .rss-link:hover {
-    color: var(--color-primary-hover);
-    border-bottom-color: var(--color-primary-hover);
-  }
   
   /* Responsive design */
   @media (max-width: 1024px) {
@@ -343,9 +253,5 @@ const allPosts = sortedPosts;
       grid-template-columns: 1fr;
     }
     
-    .newsletter-signup {
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-    }
   }
 </style>
