@@ -171,60 +171,60 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     --btn-secondary-hover: #BF360C;
   }
   
-  /* Terminal Dark Mode - Financial Terminal Inspired */
+  /* Bloomberg Terminal Dark Mode */
   [data-theme="dark"] {
-    /* Terminal text colors - high contrast green on black */
-    --text-primary: #00FF00;          /* Bright terminal green */
-    --text-secondary: #00CC00;        /* Medium terminal green */
-    --text-muted: #009900;            /* Darker terminal green */
+    /* Bloomberg terminal text colors - orange/yellow on black */
+    --text-primary: #FF8C00;          /* Bloomberg orange */
+    --text-secondary: #FFA500;        /* Light orange */
+    --text-muted: #DAA520;            /* Goldenrod */
     --text-inverse: #000000;          /* Black text for light elements */
     
-    /* Terminal backgrounds - dark with subtle variations */
+    /* Terminal backgrounds - pure black like Bloomberg */
     --bg-primary: #000000;            /* Pure black background */
     --bg-secondary: #0A0A0A;          /* Slightly lighter black */
     --bg-tertiary: #1A1A1A;           /* Dark gray for cards */
     --bg-accent: #0F0F0F;             /* Subtle accent background */
     
-    /* Terminal accent colors */
-    --color-primary: #00FFFF;         /* Cyan for primary actions */
-    --color-primary-hover: #00CCCC;   /* Darker cyan for hover */
-    --color-secondary: #FFFF00;       /* Yellow for secondary actions */
-    --color-secondary-hover: #CCCC00; /* Darker yellow for hover */
+    /* Bloomberg accent colors */
+    --color-primary: #FFA500;         /* Orange for primary actions */
+    --color-primary-hover: #FF8C00;   /* Darker orange for hover */
+    --color-secondary: #FFD700;       /* Gold for secondary actions */
+    --color-secondary-hover: #FFC107; /* Amber for hover */
     
     /* Terminal semantic colors */
-    --color-success: #00FF00;         /* Green for success */
-    --color-warning: #FFFF00;         /* Yellow for warnings */
-    --color-error: #FF0000;           /* Red for errors */
-    --color-info: #00FFFF;            /* Cyan for info */
+    --color-success: #32CD32;         /* Lime green for success */
+    --color-warning: #FFD700;         /* Gold for warnings */
+    --color-error: #FF4444;           /* Red for errors */
+    --color-info: #FFA500;            /* Orange for info */
     
-    /* Terminal borders - subtle green/cyan */
-    --border-light: #003300;          /* Dark green border */
-    --border-medium: #006600;         /* Medium green border */
-    --border-dark: #009900;           /* Bright green border */
-    --border-focus: #00FFFF;          /* Cyan focus outline */
+    /* Terminal borders - subtle orange/amber */
+    --border-light: #2D1810;          /* Dark orange border */
+    --border-medium: #4A2C17;         /* Medium orange border */
+    --border-dark: #8B4513;           /* Saddle brown border */
+    --border-focus: #FFA500;          /* Orange focus outline */
     
     /* Terminal navigation */
     --nav-bg: #000000;
-    --nav-text: #00FF00;
-    --nav-accent: #00FFFF;
+    --nav-text: #FF8C00;
+    --nav-accent: #FFA500;
     
     /* Terminal links */
-    --link-color: #00FFFF;
-    --link-hover: #00CCCC;
-    --link-visited: #0099CC;
+    --link-color: #FFA500;
+    --link-hover: #FFD700;
+    --link-visited: #DAA520;
     
     /* Terminal cards and components */
     --card-bg: #0A0A0A;
-    --card-border: #003300;
-    --card-shadow: rgba(0, 255, 0, 0.1);
+    --card-border: #2D1810;
+    --card-shadow: rgba(255, 140, 0, 0.1);
     
     /* Blog colors in dark mode */
     --blog-warm-white: #0A0A0A;
     --blog-parchment: #0F0F0F;
-    --blog-charcoal: #00FF00;
-    --blog-sepia: #00CC00;
-    --blog-bronze: #FFFF00;
-    --blog-muted-gold: #CCCC00;
+    --blog-charcoal: #FF8C00;
+    --blog-sepia: #FFA500;
+    --blog-bronze: #FFD700;
+    --blog-muted-gold: #DAA520;
   }
   
   /* Reset and base styles */
@@ -241,7 +241,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   
   body {
     /* Optimized font stack for maximum readability */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-weight: 400;
@@ -747,7 +747,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   .article-date {
     color: var(--blog-bronze);
     font-weight: 500;
-    font-family: 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   }
   
   .article-title {
@@ -760,7 +760,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     color: var(--blog-charcoal);
     text-decoration: none;
     font-weight: 600;
-    font-family: 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
     transition: color 0.3s ease;
   }
   
@@ -823,7 +823,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   .newsletter-signup h3 {
     color: var(--blog-charcoal);
     margin-bottom: 1rem;
-    font-family: 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   }
   
   .newsletter-form {
@@ -980,7 +980,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   .blog-date {
     color: var(--blog-bronze);
     font-weight: 500;
-    font-family: 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
     font-size: 0.8rem;
   }
   
@@ -990,7 +990,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     line-height: 1.3;
     color: var(--blog-charcoal);
     font-weight: 600;
-    font-family: 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
     transition: color 0.3s ease;
   }
   
