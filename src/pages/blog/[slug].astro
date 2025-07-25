@@ -135,7 +135,7 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
       
       <footer class="post-footer">
         <div class="author-info">
-          <strong>{post.data.author}</strong>
+          <strong><a href="https://x.com/0xgokhan" target="_blank" rel="noopener" class="author-link">{post.data.author}</a></strong>
           <p>Exploring the intersection of finance, art, and code.</p>
         </div>
         
@@ -423,6 +423,18 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
   .author-info strong {
     color: var(--blog-charcoal);
     font-size: 1.125rem;
+  }
+  
+  .author-link {
+    color: var(--blog-charcoal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .author-link:hover {
+    color: var(--blog-bronze);
+    border-bottom-color: var(--blog-bronze);
   }
   
   .author-info p {

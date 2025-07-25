@@ -21,7 +21,6 @@ const shareUrls = {
   hackernews: `https://news.ycombinator.com/submitlink?u=${encodedUrl}&t=${encodedTitle}`,
   bluesky: `https://bsky.app/intent/compose?text=${encodedTitleAndUrl}`,
   threads: `https://threads.net/intent/post?text=${encodedTitleAndUrl}`,
-  nostr: `https://nostrudel.ninja/share?text=${encodedTitleAndUrl}`,
   farcaster: `https://warpcast.com/~/compose?text=${encodedTitleAndUrl}`,
   lens: `https://hey.xyz/?text=${encodedTitleAndUrl}`,
   truthsocial: `https://truthsocial.com/share?url=${encodedUrl}`,
@@ -75,12 +74,6 @@ const shareUrls = {
       </svg>
     </a>
 
-    <!-- Nostr -->
-    <a href={shareUrls.nostr} target="_blank" rel="noopener" class="share-btn nostr-btn" title="Share on Nostr">
-      <svg viewBox="0 0 24 24" class="share-icon">
-        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1.5-13v6l5.196-3L10.5 7z"/>
-      </svg>
-    </a>
 
     <!-- Farcaster -->
     <a href={shareUrls.farcaster} target="_blank" rel="noopener" class="share-btn farcaster-btn" title="Share on Farcaster">
@@ -156,6 +149,28 @@ const shareUrls = {
     position: relative;
   }
   
+  .share-btn::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+  }
+  
+  .share-btn:hover::after {
+    opacity: 1;
+  }
+  
   .share-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -216,13 +231,6 @@ const shareUrls = {
     background: #1a1a1a;
   }
   
-  .nostr-btn {
-    background: #9c27b0;
-    color: #ffffff;
-  }
-  .nostr-btn:hover {
-    background: #7b1fa2;
-  }
   
   .farcaster-btn {
     background: #8a63d2;
