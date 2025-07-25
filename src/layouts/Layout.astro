@@ -252,16 +252,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     position: relative;
   }
   
-  h1::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--color-primary);
-    border-radius: 2px;
-  }
   
   h2 {
     font-size: 1.5rem;
@@ -273,17 +263,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     position: relative;
   }
   
-  h2::before {
-    content: '';
-    position: absolute;
-    left: -1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 100%;
-    background: var(--color-primary);
-    border-radius: 2px;
-  }
   
   h3 {
     font-size: 1.25rem;
