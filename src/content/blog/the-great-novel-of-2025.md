@@ -1,7 +1,7 @@
 ---
 title: "The Great Novel of 2025"
 description: "Some of you need to write a great novel or two."
-publishDate: "2024-04-18"
+publishDate: "2025-04-18"
 author: "Gokhan Turhan"
 tags: ["art", "technology", "data"]
 category: "art"

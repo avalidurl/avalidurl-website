@@ -1,7 +1,7 @@
 ---
 title: "Cultural Evolution, Moneyness, Systems"
 description: "Noone wants to drive a Dymaxion"
-publishDate: "2024-04-16"
+publishDate: "2025-04-16"
 author: "Gokhan Turhan"
 tags: ["finance", "art", "technology", "data"]
 category: "finance"
