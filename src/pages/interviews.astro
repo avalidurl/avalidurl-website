@@ -85,12 +85,6 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
         <a href="/blog" class="back-to-blog">← Back to Journal</a>
         <a href="/topics" class="all-topics">Browse All Topics →</a>
       </div>
-      
-      <div class="interview-info">
-        <h3>Interested in Being Interviewed?</h3>
-        <p>I'm always looking to connect with interesting people working at the intersection of art, technology, and finance.</p>
-        <a href="#contact" class="contact-link">Get in Touch</a>
-      </div>
     </footer>
   </main>
 </Layout>
@@ -214,7 +208,7 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
   }
   
   .interview-title a:hover {
-    color: var(--color-primary);
+    color: var(--text-secondary);
   }
   
   .interview-description {
@@ -253,9 +247,9 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
   }
   
   .interview-tag:hover {
-    background: var(--color-primary);
+    background: var(--text-secondary);
     color: var(--text-inverse);
-    border-color: var(--color-primary);
+    border-color: var(--text-secondary);
   }
   
   .reading-time {
@@ -277,7 +271,7 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
   }
   
   .read-interview {
-    background: var(--color-primary);
+    background: var(--text-secondary);
     color: var(--text-inverse);
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
@@ -289,9 +283,9 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
   }
   
   .read-interview:hover {
-    background: var(--color-primary-hover);
+    background: var(--text-primary);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
+    box-shadow: 0 4px 12px var(--card-shadow);
   }
   
   .no-interviews {
@@ -330,7 +324,7 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
   
   .back-to-blog,
   .all-topics {
-    color: var(--color-primary);
+    color: var(--text-secondary);
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -338,45 +332,10 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
   
   .back-to-blog:hover,
   .all-topics:hover {
-    color: var(--color-primary-hover);
-  }
-  
-  .interview-info {
-    background: var(--bg-accent);
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    border: 1px solid var(--border-light);
-  }
-  
-  .interview-info h3 {
     color: var(--text-primary);
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
   }
   
-  .interview-info p {
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .contact-link {
-    background: var(--color-secondary);
-    color: var(--text-inverse);
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
-  
-  .contact-link:hover {
-    background: var(--color-secondary-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
-  }
+  /* Interview info section removed */
   
   @media (max-width: 768px) {
     .page-header h1 {
