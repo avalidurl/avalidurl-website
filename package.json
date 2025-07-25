@@ -65,6 +65,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.0",
+    "csv-parser": "^3.2.0",
+    "jsdom": "^26.1.0",
     "typescript": "^5.0.0"
   },
   "engines": {

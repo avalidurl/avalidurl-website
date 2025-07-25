@@ -10,6 +10,7 @@ import VimeoEmbed from '../../components/VimeoEmbed.astro';
 import SoundCloudEmbed from '../../components/SoundCloudEmbed.astro';
 import BandcampEmbed from '../../components/BandcampEmbed.astro';
 import ImageEmbed from '../../components/ImageEmbed.astro';
+import SocialShare from '../../components/SocialShare.astro';
 
 export const prerender = true;
 
@@ -138,14 +139,14 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
           <p>Exploring the intersection of finance, art, and code.</p>
         </div>
         
+        <SocialShare 
+          title={post.data.title} 
+          url={Astro.url.href} 
+          description={post.data.description} 
+        />
+        
         <div class="post-actions">
           <a href="/blog" class="back-to-blog">← Back to Journal</a>
-          <div class="share-buttons">
-            <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.href)}`} 
-               target="_blank" rel="noopener" class="share-button">
-              Share on Twitter
-            </a>
-          </div>
         </div>
       </footer>
     </article>
@@ -432,8 +433,9 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
   
   .post-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-top: 1rem;
   }
   
   .back-to-blog {
@@ -445,19 +447,6 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
   
   .back-to-blog:hover {
     color: var(--blog-sepia);
-  }
-  
-  .share-button {
-    background: var(--blog-sepia);
-    color: var(--blog-warm-white);
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s ease;
-  }
-  
-  .share-button:hover {
-    background: var(--blog-bronze);
   }
   
   .post-sidebar {
@@ -499,9 +488,7 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
     }
     
     .post-actions {
-      flex-direction: column;
-      gap: 1rem;
-      align-items: flex-start;
+      justify-content: center;
     }
   }
 </style>
