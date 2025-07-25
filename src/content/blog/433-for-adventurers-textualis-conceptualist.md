@@ -2,7 +2,7 @@
 title: "4'33\" (for Adventurers): Textualis Conceptualist"
 description: "We are all synths."
 publishDate: "2021-09-04"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["general"]
 category: "general"
 featured: false

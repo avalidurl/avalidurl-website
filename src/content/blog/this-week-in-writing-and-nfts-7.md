@@ -2,7 +2,7 @@
 title: "This Week in Writing and NFTs #7"
 description: "This post was originally [published](https://gokhan."
 publishDate: "2023-12-26"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "data", "web3", "art", "writing"]
 category: "crypto"
 featured: false

@@ -3,7 +3,7 @@ title: "Sound, Image and New Year Gifts and maybe some Nonfungibles—also, SEO 
 slug: "new-year-gifts-nfts-100k"
 description: "read."
 publishDate: "2021-12-27"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "art", "technology", "culture", "writing"]
 category: "finance"
 featured: false

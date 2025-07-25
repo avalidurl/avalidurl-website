@@ -2,7 +2,7 @@
 title: "Daily Markets 3"
 description: "UTC + 3 Afternoon Edition"
 publishDate: "2023-06-17"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["general"]
 category: "general"
 featured: false

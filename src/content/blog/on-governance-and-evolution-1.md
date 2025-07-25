@@ -2,7 +2,7 @@
 title: "On Governance, and Evolution 1"
 description: "Mediated chargedness towards a politically correct egalitarianism a la so-called altruisms is a waste of resources."
 publishDate: "2021-05-15"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["general"]
 category: "general"
 featured: false

@@ -2,7 +2,7 @@
 title: "Latest 1/1s, Open Editions, and News 0"
 description: "I’ve been writing a couple of long-form pieces that are featured to be in the Writing and NFTs and Playlist sections of my blogosphere, respectively this Substack and [Mirror](https://gokhan."
 publishDate: "2023-02-19"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "web3", "art", "writing"]
 category: "finance"
 featured: false

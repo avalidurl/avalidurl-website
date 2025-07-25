@@ -2,7 +2,7 @@
 title: "On Subscription Models in the Network States #001"
 description: "When you pay for [Parsec](https://parsec.fi/r/gokhan), [Nansen](https://pro.nansen.ai/), [Messari](https://messari.io/), and a couple of others just for analytics on a monthly basis, you have just paid for a monthly rent for a dublex condo in a state-of-the-art building partially glimpsing at Bospho"
 publishDate: "2023-10-15"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "technology", "data", "web3", "art"]
 category: "finance"
 featured: false

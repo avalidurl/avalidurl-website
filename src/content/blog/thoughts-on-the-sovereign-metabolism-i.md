@@ -2,7 +2,7 @@
 title: "Thoughts on the Sovereign Metabolism I"
 description: "I am reading a @praxisnation post about Sovereign Intelligence and think decentralized AI is overhyped when it comes to the narrative we keep reading from crypto-aligned Silicon Valley VCs."
 publishDate: "2025-02-22"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "defi", "technology", "web3"]
 category: "crypto"
 featured: false

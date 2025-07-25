@@ -2,7 +2,7 @@
 title: "HAPPY"
 description: "You are unhappy because you leverage markets over your sense of being."
 publishDate: "2023-06-13"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["general"]
 category: "general"
 featured: false

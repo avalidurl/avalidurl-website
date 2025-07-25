@@ -4,7 +4,7 @@ description: " Introduction
 
 HAI is a framework for stablecoin systems that comes with a store of value feature."
 publishDate: "2024-07-20"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "defi", "technology", "web3"]
 category: "finance"
 featured: false

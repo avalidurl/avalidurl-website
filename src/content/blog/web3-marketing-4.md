@@ -2,7 +2,7 @@
 title: "Web3 Marketing #4"
 description: "Be clear."
 publishDate: "2024-01-03"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "web3", "writing"]
 category: "crypto"
 featured: false

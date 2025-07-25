@@ -2,7 +2,7 @@
 title: "Daily 1"
 description: "Pure Conceptual Shitepoasting"
 publishDate: "2022-12-19"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "art"]
 category: "finance"
 featured: false

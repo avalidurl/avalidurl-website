@@ -4,7 +4,7 @@ description: "This piece was originally [published](https://zora.co/collect/base
 
 [](https://substackc"
 publishDate: "2023-12-24"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "defi", "technology", "data"]
 category: "finance"
 featured: false

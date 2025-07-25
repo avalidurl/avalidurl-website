@@ -4,7 +4,7 @@ description: "CASETTE: [https://zora.co/collect/zora:0xc51e1c9166f3ac33e4ee0a68e
 
 This piece of pure noise-oriented audio work is indeed the strata of different layers of spoken word and sound bites that I did create in the S"
 publishDate: "2023-07-11"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "art", "writing", "music"]
 category: "finance"
 featured: false

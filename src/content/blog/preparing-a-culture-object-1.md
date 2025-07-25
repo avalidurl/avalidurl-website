@@ -4,7 +4,7 @@ description: "Who funds semi-academic jargon, cultural studies oriented booklets
 
 I have two ideas that I am pitching now into ROAM Research notebooks and Word docs of mine—which caused me to open up the word after a year."
 publishDate: "2023-10-20"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "web3", "art", "writing"]
 category: "crypto"
 featured: false

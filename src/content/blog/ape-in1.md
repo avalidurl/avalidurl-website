@@ -2,7 +2,7 @@
 title: "ape in.1"
 description: "The reason behind the global collateralization of swarm mechanics has been manifest since the beginning—a charismatic guy once cinematographically portrayed the situation as in a scene where apes drumming and beatboxing around a vantablack monolith were the harbingers of the impending happiness: Evo."
 publishDate: "2020-11-24"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance"]
 category: "finance"
 featured: false

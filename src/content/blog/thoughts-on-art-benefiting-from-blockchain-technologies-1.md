@@ -2,7 +2,7 @@
 title: "Thoughts on Art benefiting from Blockchain Technologies #1"
 description: "There is something innate about the nature of that lazy anon, a person if I might say so, who is right now driving from a Walmart to his rat hole of a flat, that stinkiest of palaces, and the most adorably moribund oblivion of incorrigibly loquacious monologues and mumblecore that now pass as critiq."
 publishDate: "2023-01-19"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["defi", "art", "writing", "music"]
 category: "defi"
 featured: false

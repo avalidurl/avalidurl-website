@@ -4,7 +4,7 @@ description: "The remix is a derivative. Today, whiz devs of DeFi reprograms der
 
 2 fem"
 publishDate: "2021-08-04"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "writing"]
 category: "finance"
 featured: false

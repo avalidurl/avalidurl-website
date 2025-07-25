@@ -2,7 +2,7 @@
 title: "Onchain Marketing does suck big time."
 description: "People who devote their lives to studying something often come to believe that the object of their fascination is the key to understanding everything."
 publishDate: "2025-04-20"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "art", "technology", "data"]
 category: "finance"
 featured: false

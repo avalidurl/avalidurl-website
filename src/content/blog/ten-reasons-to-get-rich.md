@@ -2,7 +2,7 @@
 title: "Ten Reasons to Get Rich"
 description: "2024 CE edition"
 publishDate: "2024-07-02"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "art", "data"]
 category: "finance"
 featured: false

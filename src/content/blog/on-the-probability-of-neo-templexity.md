@@ -2,7 +2,7 @@
 title: "On the Probability of Neo-Templexity"
 description: "You are not unique, and the no-medium is a fantasy that breeds wonders."
 publishDate: "2020-08-24"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "writing"]
 category: "finance"
 featured: false

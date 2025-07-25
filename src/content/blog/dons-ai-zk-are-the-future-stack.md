@@ -3,7 +3,7 @@ title: "DONs, AI, ZK are the future stack."
 description: ">
 > That is, the liquidity of traditional markets, either via retail or institutions will not hop into our industries."
 publishDate: "2023-05-26"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "defi", "technology", "web3"]
 category: "crypto"
 featured: false

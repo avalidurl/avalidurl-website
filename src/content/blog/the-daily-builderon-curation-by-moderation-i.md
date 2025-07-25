@@ -2,7 +2,7 @@
 title: "The Daily Builder—On Curation by Moderation I"
 description: "This post was originally conceived on my main blog on the Paragraph protocol."
 publishDate: "2024-05-28"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "data", "web3", "writing"]
 category: "finance"
 featured: false

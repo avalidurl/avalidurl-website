@@ -2,7 +2,7 @@
 title: "A .txt, a .png, and a .jpg appear"
 description: "Mint a Quest today to duel with entropy"
 publishDate: "2021-09-05"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["data", "writing"]
 category: "data"
 featured: false

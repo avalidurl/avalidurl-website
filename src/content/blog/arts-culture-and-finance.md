@@ -2,7 +2,7 @@
 title: "Arts, Culture and Finance"
 description: "I am trying out another newsletter service that I'll be integrating into my upcoming personal memex and wrote this post there initially."
 publishDate: "2025-04-14"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "art", "technology"]
 category: "finance"
 featured: false

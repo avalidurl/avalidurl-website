@@ -2,7 +2,7 @@
 title: "On Ethereum, Bitcoin, Solana"
 description: "This post was originally published on my current newsletter Concepts Network."
 publishDate: "2024-11-08"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "technology", "web3"]
 category: "finance"
 featured: false

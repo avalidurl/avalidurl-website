@@ -2,7 +2,7 @@
 title: "Thoughts on CryptoWhatevers"
 description: "The year is 2020. Everything is art. Isn’t it the motto behind which we have already been playing hide-and-seek since since a couple of current rock stars detonated the post-modernism crack in the middle of the latest functioning Humanities ball room? That must be the reason why everything passes as"
 publishDate: "2021-01-18"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "technology", "art"]
 category: "crypto"
 featured: false

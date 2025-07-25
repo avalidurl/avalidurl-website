@@ -4,7 +4,7 @@ description: " Respect Others
 
 Respecting others do not mean that you need to comply with their impractical, or cringe ideas at one point."
 publishDate: "2024-01-05"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto"]
 category: "crypto"
 featured: false

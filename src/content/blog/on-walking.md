@@ -3,7 +3,7 @@ title: "On Walking"
 description: "Walking is life-logging. Flâneurs who write books do not aim for the algorithmic beauty of status games. They merely find beauteous solace in story-telling. Tell a story if you cannot walk. Tell several stories when you are walking. Either in reality or as tethered to a mental modality. Of Walking.
 "
 publishDate: "2024-06-17"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["general"]
 category: "general"
 featured: false

@@ -2,7 +2,7 @@
 title: "The Network State of the Mind, NYC & SF—Where is my Internet of Liquidity?"
 description: "On vendor-locking democracies, Ethereum types, and boring tribes."
 publishDate: "2025-04-15"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "art", "technology", "data"]
 category: "finance"
 featured: false

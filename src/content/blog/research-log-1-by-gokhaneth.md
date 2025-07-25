@@ -2,7 +2,7 @@
 title: "Research Log #1 by gokhan.eth"
 description: "The original text was conceived on my main blog on [Paragraph](https://paragraph."
 publishDate: "2024-06-02"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "art"]
 category: "finance"
 featured: false

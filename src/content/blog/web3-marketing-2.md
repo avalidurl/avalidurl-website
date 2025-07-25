@@ -2,7 +2,7 @@
 title: "Web3 Marketing #2"
 description: "Be the DARPA of web3. Open frontiers for the retail"
 publishDate: "2024-01-01"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "web3"]
 category: "crypto"
 featured: false

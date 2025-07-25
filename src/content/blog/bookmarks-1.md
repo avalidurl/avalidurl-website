@@ -2,7 +2,7 @@
 title: "Bookmarks #1"
 description: "Stablecoins make great salamis and we won't need any breads around closed-loop payment operations, cross-border money transfers, card network payments in a couple of years."
 publishDate: "2024-06-15"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "art", "technology", "data"]
 category: "finance"
 featured: false

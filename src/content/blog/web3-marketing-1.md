@@ -8,7 +8,7 @@ description: " Do not infantilize the enduser.
 
 Wrong. The retail you are familiar with might not want it. However, when you look into [The 2023 Global Crypto Adoption Index Top 20](https://www.chainalysis.com/blog/2023-global-crypto-adoption-index/) by Chai"
 publishDate: "2024-01-01"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "technology", "art"]
 category: "finance"
 featured: false

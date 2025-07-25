@@ -2,7 +2,7 @@
 title: "Playlist #6"
 description: "There is a [Mirror version of this post](https://gokhan."
 publishDate: "2023-06-26"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "technology", "art", "writing", "music"]
 category: "crypto"
 featured: false

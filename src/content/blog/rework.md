@@ -2,7 +2,7 @@
 title: "Rework"
 description: "I've read a book."
 publishDate: "2024-06-25"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto", "technology", "web3", "art", "writing"]
 category: "crypto"
 featured: false

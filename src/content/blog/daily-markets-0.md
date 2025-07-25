@@ -2,7 +2,7 @@
 title: "Daily Markets 0"
 description: "Intraday UTC + 3"
 publishDate: "2023-06-15"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["crypto"]
 category: "crypto"
 featured: false

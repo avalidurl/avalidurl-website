@@ -2,7 +2,7 @@
 title: "Eugenics Tokens #01"
 description: "In support of Designer Tokens"
 publishDate: "2020-11-26"
-author: "Gokhan Turhan"
+author: "Gökhan Turhan"
 tags: ["finance", "crypto", "web3", "art"]
 category: "finance"
 featured: false
