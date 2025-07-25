@@ -349,18 +349,28 @@ import Layout from '../layouts/Layout.astro';
     text-align: center;
     margin-bottom: 4rem;
     padding: 3rem 0;
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(129, 212, 250, 0.05));
+    background: var(--bg-accent);
     border-radius: 16px;
+    border: 1px solid var(--border-light);
+  }
+  
+  [data-theme="light"] .roadmap-header {
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(129, 212, 250, 0.05));
     border: 1px solid rgba(79, 195, 247, 0.2);
   }
 
   .roadmap-header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  
+  [data-theme="light"] .roadmap-header h1 {
     background: linear-gradient(135deg, #4fc3f7, #81d4fa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
   }
 
   .roadmap-subtitle {
@@ -430,7 +440,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .work-card.featured {
-    border: 2px solid #4fc3f7;
+    border: 2px solid var(--border-medium);
+    background: var(--bg-accent);
+  }
+  
+  [data-theme="light"] .work-card.featured {
     background: linear-gradient(135deg, rgba(79, 195, 247, 0.05), rgba(129, 212, 250, 0.02));
   }
 
@@ -476,12 +490,18 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .feature {
-    background: rgba(79, 195, 247, 0.1);
+    background: var(--bg-accent);
     color: var(--text-primary);
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 500;
+    border: 1px solid var(--border-light);
+  }
+  
+  [data-theme="light"] .feature {
+    background: rgba(79, 195, 247, 0.1);
+    border: none;
   }
 
   .work-actions {
@@ -512,7 +532,7 @@ import Layout from '../layouts/Layout.astro';
   .info-btn {
     background: transparent;
     color: var(--text-primary);
-    border: 2px solid #4fc3f7;
+    border: 2px solid var(--border-medium);
   }
 
   .info-btn:hover {
@@ -543,6 +563,10 @@ import Layout from '../layouts/Layout.astro';
     top: 0;
     height: 100%;
     width: 2px;
+    background: var(--color-primary);
+  }
+  
+  [data-theme="light"] .timeline-container::before {
     background: linear-gradient(to bottom, #4fc3f7, #81d4fa);
   }
 
@@ -559,7 +583,7 @@ import Layout from '../layouts/Layout.astro';
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: var(--card-bg);
+    background: var(--color-primary);
     border: 3px solid var(--bg-primary);
   }
 
@@ -580,7 +604,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .timeline-item.current .timeline-content {
-    border-color: var(--text-primary);
+    border-color: var(--color-primary);
+    background: var(--bg-accent);
+  }
+  
+  [data-theme="light"] .timeline-item.current .timeline-content {
     background: linear-gradient(135deg, rgba(79, 195, 247, 0.05), rgba(129, 212, 250, 0.02));
   }
 
@@ -651,12 +679,18 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .tech-tag {
-    background: rgba(79, 195, 247, 0.1);
+    background: var(--bg-accent);
     color: var(--text-primary);
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 500;
+    border: 1px solid var(--border-light);
+  }
+  
+  [data-theme="light"] .tech-tag {
+    background: rgba(79, 195, 247, 0.1);
+    border: none;
   }
 
   /* Tech Stack */
@@ -695,25 +729,42 @@ import Layout from '../layouts/Layout.astro';
     gap: 0.75rem;
   }
 
-  .tech-item {
-    background: rgba(79, 195, 247, 0.1);
+    .tech-item {
+    background: var(--bg-accent);
     color: var(--text-primary);
     padding: 0.5rem 1rem;
     border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.3s ease;
+    border: 1px solid var(--border-light);
   }
-
+  
   .tech-item:hover {
-    background: var(--card-bg);
-    color: white;
+    background: var(--color-primary);
+    color: var(--text-inverse);
     transform: translateY(-2px);
   }
-
+  
   .tech-item.future {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-medium);
+  }
+  
+  [data-theme="light"] .tech-item {
+    background: rgba(79, 195, 247, 0.1);
+    border: none;
+  }
+  
+  [data-theme="light"] .tech-item:hover {
+    background: var(--card-bg);
+    color: white;
+  }
+  
+  [data-theme="light"] .tech-item.future {
     background: rgba(179, 229, 252, 0.1);
-    color: var(--text-primary);
+    border: none;
   }
 
   /* Monetization */
@@ -980,7 +1031,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     // Handle feedback form
-    const feedbackForm = document.querySelector('.feedback-form-content');
+    const feedbackForm = document.querySelector('.feedback-form-content') as HTMLFormElement;
     if (feedbackForm) {
       feedbackForm.addEventListener('submit', (e) => {
         e.preventDefault();

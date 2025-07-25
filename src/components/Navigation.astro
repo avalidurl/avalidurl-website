@@ -260,17 +260,15 @@ const currentPath = Astro.url.pathname;
   }
   
   /* Dark mode adjustments */
-  @media (prefers-color-scheme: dark) {
-    .main-navigation {
-      background: var(--nav-bg);
-      backdrop-filter: blur(10px);
-      border-bottom-color: var(--border-medium);
-    }
-    
-    .nav-links {
-      background: var(--nav-bg);
-      border-bottom-color: var(--border-medium);
-    }
+  [data-theme="dark"] .main-navigation {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border-bottom-color: var(--border-medium);
+  }
+  
+  [data-theme="dark"] .nav-links {
+    background: var(--nav-bg);
+    border-bottom-color: var(--border-medium);
   }
 </style>
 
@@ -296,7 +294,8 @@ const currentPath = Astro.url.pathname;
       
       // Close menu when clicking outside
       document.addEventListener('click', function(event) {
-        if (!navToggle.contains(event.target) && !navLinks.contains(event.target)) {
+        const target = event.target as Node;
+        if (!navToggle.contains(target) && !navLinks.contains(target)) {
           navLinks.classList.remove('active');
           navToggle.classList.remove('active');
         }

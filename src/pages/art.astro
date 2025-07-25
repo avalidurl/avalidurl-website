@@ -173,7 +173,7 @@ function getColorThemeClass(theme: string) {
   }
   
   .artwork-card {
-    background: var(--bg-card);
+    background: var(--card-bg);
     border: 1px solid var(--border-light);
     border-radius: 8px;
     padding: 0;
@@ -194,14 +194,26 @@ function getColorThemeClass(theme: string) {
   }
   
   .theme-red::before {
-    background: linear-gradient(180deg, #ffebee, #ffcdd2);
+    background: var(--color-error);
   }
   
   .theme-green::before {
-    background: linear-gradient(180deg, #e8f5e8, #c8e6c9);
+    background: var(--color-success);
   }
   
   .theme-blue::before {
+    background: var(--color-primary);
+  }
+  
+  [data-theme="light"] .theme-red::before {
+    background: linear-gradient(180deg, #ffebee, #ffcdd2);
+  }
+  
+  [data-theme="light"] .theme-green::before {
+    background: linear-gradient(180deg, #e8f5e8, #c8e6c9);
+  }
+  
+  [data-theme="light"] .theme-blue::before {
     background: linear-gradient(180deg, #e3f2fd, #bbdefb);
   }
   

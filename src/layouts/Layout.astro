@@ -79,27 +79,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <script>
       // Dark mode toggle functionality
       const themeToggle = document.getElementById('theme-toggle');
-      const themeIcon = themeToggle.querySelector('.theme-icon');
+      const themeIcon = themeToggle?.querySelector('.theme-icon');
       
-      // Check for saved theme preference or default to light mode
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', currentTheme);
-      
-      // Update icon based on current theme
-      function updateThemeIcon(theme) {
-        themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-      }
-      
-      updateThemeIcon(currentTheme);
-      
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      if (themeToggle && themeIcon) {
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
         
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-      });
+        // Update icon based on current theme
+        function updateThemeIcon(theme: string) {
+          if (themeIcon) {
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+          }
+        }
+        
+        updateThemeIcon(currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+          updateThemeIcon(newTheme);
+        });
+      }
     </script>
   </body>
 </html>
@@ -218,13 +222,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     --card-border: #333333;
     --card-shadow: rgba(255, 140, 0, 0.2);
     
-    /* Blog colors in dark mode */
-    --blog-warm-white: #1A1A1A;
-    --blog-parchment: #2A2A2A;
-    --blog-charcoal: #FFFFFF;
-    --blog-sepia: #FF8C00;
-    --blog-bronze: #FFA500;
-    --blog-muted-gold: #DAA520;
+    /* Blog colors in dark mode - improved contrast and readability */
+    --blog-warm-white: #1A1A1A;      /* Dark background for blog cards */
+    --blog-parchment: #2A2A2A;       /* Slightly lighter for sections */
+    --blog-charcoal: #FFFFFF;        /* White text on dark backgrounds */
+    --blog-sepia: #FF8C00;           /* Orange for accents and categories */
+    --blog-bronze: #FFA500;          /* Lighter orange for hover states */
+    --blog-muted-gold: #DAA520;      /* Gold for secondary elements */
+    
+    /* Accent colors for consistency */
+    --accent-primary: #FF8C00;
+    --accent-secondary: #FFA500;
+    --text-on-dark: #FFFFFF;
+    --border-accent: #FF8C00;
   }
   
   /* Reset and base styles */
@@ -543,23 +553,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   }
   
   .subscribe-link {
-    background: var(--btn-secondary-bg);
-    color: var(--btn-secondary-text);
+    background: var(--color-primary);
+    color: var(--text-inverse);
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    border: 2px solid var(--btn-secondary-bg);
+    border: 2px solid var(--color-primary);
   }
   
   .subscribe-link:hover {
-    background: var(--btn-secondary-hover);
-    border-color: var(--btn-secondary-hover);
-    color: var(--btn-secondary-text);
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    color: var(--text-inverse);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
   }
   
   .subscribe-link:focus {
