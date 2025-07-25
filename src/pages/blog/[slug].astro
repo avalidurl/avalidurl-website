@@ -85,11 +85,25 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
 ---
 
 <Layout title={post.data.title} description={post.data.description}>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress">
+    <div class="reading-progress-bar"></div>
+  </div>
+  
   <main class="container">
+    <!-- Table of Contents -->
+    <aside class="table-of-contents">
+      <div class="toc-content">
+        <h3>Contents</h3>
+        <nav class="toc-nav" id="toc-nav">
+          <!-- TOC will be populated by JavaScript -->
+        </nav>
+      </div>
+    </aside>
+    
     <article class="blog-post">
       <header class="post-header">
         <div class="post-meta">
-          <span class="post-category">{post.data.category}</span>
           <time class="post-date" datetime={post.data.publishDate.toISOString()}>
             {formattedDate}
           </time>
@@ -503,4 +517,216 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
       justify-content: center;
     }
   }
+
+  /* Reading Progress Bar */
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .reading-progress-bar {
+    height: 100%;
+    background: var(--color-primary);
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+
+  /* Table of Contents */
+  .table-of-contents {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .table-of-contents.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .table-of-contents h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .toc-nav {
+    list-style: none;
+  }
+
+  .toc-nav a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    padding: 0.25rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .toc-nav a:hover {
+    color: var(--color-primary);
+    border-left-color: var(--color-primary);
+  }
+
+  .toc-nav a.active {
+    color: var(--color-primary);
+    border-left-color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .toc-nav .toc-h3 {
+    margin-left: 1rem;
+  }
+
+  .toc-nav .toc-h4 {
+    margin-left: 1.5rem;
+  }
+
+  @media (max-width: 1200px) {
+    .table-of-contents {
+      display: none;
+    }
+  }
+
+  /* Container layout adjustment for TOC */
+  .container {
+    position: relative;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      margin-left: 220px;
+    }
+  }
 </style>
+
+<script>
+  // Reading Progress Bar
+  function updateReadingProgress() {
+    const article = document.querySelector('.blog-post');
+    const progressBar = document.querySelector('.reading-progress-bar');
+    
+    if (!article || !progressBar) return;
+    
+    const articleTop = article.offsetTop;
+    const articleHeight = article.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.pageYOffset;
+    
+    const articleBottom = articleTop + articleHeight - windowHeight;
+    const progress = Math.max(0, Math.min(100, ((scrollTop - articleTop) / (articleBottom - articleTop)) * 100));
+    
+    progressBar.style.width = progress + '%';
+  }
+
+  // Table of Contents Generation
+  function generateTableOfContents() {
+    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
+    const tocNav = document.getElementById('toc-nav');
+    const toc = document.querySelector('.table-of-contents');
+    
+    if (!headings.length || !tocNav || !toc) return;
+    
+    // Generate IDs for headings if they don't have them
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = `heading-${index}`;
+      }
+    });
+    
+    // Create TOC links
+    let tocHTML = '';
+    headings.forEach((heading) => {
+      const level = heading.tagName.toLowerCase();
+      const text = heading.textContent;
+      const id = heading.id;
+      
+      tocHTML += `<a href="#${id}" class="toc-${level}" data-heading="${id}">${text}</a>`;
+    });
+    
+    tocNav.innerHTML = tocHTML;
+    
+    // Show TOC if there are headings
+    if (headings.length > 1) {
+      toc.classList.add('visible');
+    }
+    
+    // Handle TOC link clicks
+    tocNav.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  }
+
+  // Highlight active TOC section
+  function updateActiveTOCSection() {
+    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
+    const tocLinks = document.querySelectorAll('.toc-nav a');
+    
+    let activeHeading = null;
+    
+    headings.forEach((heading) => {
+      const rect = heading.getBoundingClientRect();
+      if (rect.top <= 100) {
+        activeHeading = heading;
+      }
+    });
+    
+    // Remove active class from all links
+    tocLinks.forEach(link => link.classList.remove('active'));
+    
+    // Add active class to current section
+    if (activeHeading) {
+      const activeLink = document.querySelector(`[data-heading="${activeHeading.id}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    generateTableOfContents();
+    updateReadingProgress();
+    updateActiveTOCSection();
+  });
+
+  // Update on scroll
+  window.addEventListener('scroll', () => {
+    updateReadingProgress();
+    updateActiveTOCSection();
+  });
+</script>
