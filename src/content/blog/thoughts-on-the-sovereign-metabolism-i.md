@@ -13,13 +13,11 @@ originalUrl: "https://gokhan.substack.com/p/thoughts-on-the-sovereign-metabolism
 
 I am reading a [@praxisnation](https://x.com/@praxisnation) post, [Sovereign Intelligence Western Civilization in the Intelligence Age](https://www.praxisnation.com/news/sovereign-intelligence), and I come to think that *decentralized* AI is overhyped when it comes to the stack re: the narrative we keep reading off the CT aligned SV VC shelves, and some founders who are good at accruing exit liquidity every few weeks for another LLM wrapper—not that wrappers are bad.
 
-I think whereas training and the like should be[(F)OSS](https://www.gnu.org/philosophy/free-software-even-more-important.html) aligned—after all even the most OSS ones have pricing tier for energy is not free, the stack should be competitively governed by a mechanomical association of some boards distributed à la [a pattern language](https://www.patternlanguage.com/)—reading Alexander and the gang as politically neutral as possible almost in a Metaborizimu sense here.
+I think whereas training and the like should be [(F)OSS](https://www.gnu.org/philosophy/free-software-even-more-important.html) aligned—after all even the most OSS ones have pricing tier for energy is not free, the stack should be competitively governed by a mechanomical association of some boards distributed à la [a pattern language](https://www.patternlanguage.com/)—reading Alexander and the gang as politically neutral as possible almost in a Metaborizimu sense here.
 
 The authors at Praxis accentuates that
 
->
-> [...] the beliefs and intentions of the people who control AI – the primary source of all goods, services, beliefs, and governance – will determine the destiny of every society where it is employed. If you don’t control your AI stack, you surrender your fate to those who do. *Not our weights, not our society*.
->
+> [...] the beliefs and intentions of the people who control AI – the primary source of all goods, services, beliefs, and governance – will determine the destiny of every society where it is employed. If you don't control your AI stack, you surrender your fate to those who do. *Not our weights, not our society*.
 
 That which our meta-narratively deluded peers in "crypto"—neither crypto-economics proper nor the game of life that the associatively derivative technologies surrounding and stemming from the composability warfare—come to think of decentralized AI in fact are just unnecessarily mutable vector database access to multi-signature controlled games that lack play.
 
