@@ -118,11 +118,11 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
     transform: translateX(-50%);
     width: 100px;
     height: 1px;
-    background: var(--color-primary);
+    background: var(--text-secondary);
   }
   
   .interview-badge {
-    background: var(--color-primary);
+    background: var(--text-secondary);
     color: var(--text-inverse);
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
@@ -162,38 +162,17 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
     padding: 2.5rem;
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-  }
-  
-  .interview-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
   }
   
   .interview-card:hover {
-    border-color: var(--color-primary);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px var(--card-shadow);
-  }
-  
-  .interview-card:hover::before {
-    transform: scaleX(1);
+    border-color: var(--border-medium);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--card-shadow);
   }
   
   .interview-card.featured {
-    border-color: var(--color-primary);
-    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-accent) 100%);
-  }
-  
-  .interview-card.featured::before {
-    transform: scaleX(1);
+    border: 2px solid var(--card-border);
+    background: var(--card-bg);
   }
   
   .interview-meta {

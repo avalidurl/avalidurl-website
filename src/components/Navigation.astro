@@ -30,6 +30,11 @@ const currentPath = Astro.url.pathname;
         </a>
       </li>
       <li>
+        <button id="nav-theme-toggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </li>
+      <li>
         <a href="/subscribe" class="nav-subscribe">
           Subscribe
         </a>
@@ -178,6 +183,31 @@ const currentPath = Astro.url.pathname;
     outline-offset: 2px;
   }
   
+  .nav-theme-toggle {
+    background: none;
+    border: none;
+    color: var(--nav-text);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-theme-toggle:hover {
+    background: var(--bg-tertiary);
+    color: var(--nav-accent);
+  }
+  
+  .nav-theme-toggle:focus {
+    outline: 3px solid var(--border-focus);
+    outline-offset: 2px;
+    background: rgba(21, 101, 192, 0.1);
+  }
+  
   .nav-toggle {
     display: none;
     flex-direction: column;
@@ -206,58 +236,61 @@ const currentPath = Astro.url.pathname;
     border-radius: 4px;
   }
   
-  /* Mobile Navigation */
-  @media (max-width: 768px) {
-    .nav-container {
-      padding: 0 1rem;
+      /* Mobile Navigation */
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 0 1rem;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        border-bottom: 1px solid var(--border-light);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-link {
+        padding: 1rem 2rem;
+        border-radius: 0;
+        border-bottom: 1px solid var(--border-light);
+        background: transparent;
+      }
+      
+      .nav-link:hover {
+        background: var(--bg-tertiary);
+      }
+      
+      .nav-theme-toggle {
+        margin: 0.5rem 2rem;
+        padding: 0.75rem;
+        justify-content: flex-start;
+        border-bottom: 1px solid var(--border-light);
+      }
+      
+      .nav-subscribe {
+        margin: 0.5rem 2rem;
+        padding: 0.75rem 1rem;
+      }
+      
+      .nav-link.active::before {
+        display: none;
+      }
+      
+      .nav-toggle {
+        display: flex;
+      }
     }
-    
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--nav-bg);
-      border-bottom: 1px solid var(--border-light);
-      flex-direction: column;
-      padding: 1rem 0;
-      gap: 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    
-    .nav-links.active {
-      display: flex;
-    }
-    
-    .nav-link {
-      padding: 1rem 2rem;
-      border-radius: 0;
-      border-bottom: 1px solid var(--border-light);
-      background: transparent;
-    }
-    
-    .nav-link:hover {
-      background: var(--bg-tertiary);
-    }
-    
-    .nav-subscribe {
-      margin: 0.5rem 2rem;
-      padding: 0.75rem 1rem;
-    }
-    
-    .nav-link:last-child {
-      border-bottom: none;
-    }
-    
-    .nav-link.active::before {
-      display: none;
-    }
-    
-    .nav-toggle {
-      display: flex;
-    }
-  }
   
   /* Dark mode adjustments */
   [data-theme="dark"] .main-navigation {
@@ -299,6 +332,34 @@ const currentPath = Astro.url.pathname;
           navLinks.classList.remove('active');
           navToggle.classList.remove('active');
         }
+      });
+    }
+    
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('nav-theme-toggle');
+    const themeIcon = themeToggle?.querySelector('.theme-icon');
+    
+    if (themeToggle && themeIcon) {
+      // Check for saved theme preference or default to light mode
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      
+      // Update icon based on current theme
+      function updateThemeIcon(theme: string) {
+        if (themeIcon) {
+          themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+      }
+      
+      updateThemeIcon(currentTheme);
+      
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
       });
     }
   });

@@ -71,40 +71,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <Navigation />
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-      <span class="theme-icon">🌙</span>
-    </button>
     <slot />
     
-    <script>
-      // Dark mode toggle functionality
-      const themeToggle = document.getElementById('theme-toggle');
-      const themeIcon = themeToggle?.querySelector('.theme-icon');
-      
-      if (themeToggle && themeIcon) {
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        
-        // Update icon based on current theme
-        function updateThemeIcon(theme: string) {
-          if (themeIcon) {
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-          }
-        }
-        
-        updateThemeIcon(currentTheme);
-        
-        themeToggle.addEventListener('click', () => {
-          const currentTheme = document.documentElement.getAttribute('data-theme');
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          
-          document.documentElement.setAttribute('data-theme', newTheme);
-          localStorage.setItem('theme', newTheme);
-          updateThemeIcon(newTheme);
-        });
-      }
-    </script>
+    <!-- Theme toggle now handled in Navigation component -->
   </body>
 </html>
 
@@ -1074,53 +1043,5 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     }
   }
 
-  /* Theme Toggle Button */
-  .theme-toggle {
-    position: fixed;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    background: var(--card-bg);
-    border: 2px solid var(--border-medium);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 8px var(--card-shadow);
-  }
-
-  .theme-toggle:hover {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    transform: translateY(-50%) scale(1.1);
-  }
-
-  .theme-toggle:hover .theme-icon {
-    filter: brightness(0) invert(1);
-  }
-
-  [data-theme="dark"] .theme-toggle {
-    background: var(--bg-secondary);
-    border-color: var(--border-light);
-  }
-
-  [data-theme="dark"] .theme-toggle:hover {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-  }
-
-  @media (max-width: 768px) {
-    .theme-toggle {
-      right: 1rem;
-      width: 45px;
-      height: 45px;
-      font-size: 1rem;
-    }
-  }
+  /* Theme toggle moved to Navigation component */
 </style>

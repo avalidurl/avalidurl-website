@@ -178,17 +178,17 @@ const allPosts = sortedPosts;
   }
   
   .newsletter-signup {
-    background: var(--blog-parchment);
+    background: var(--card-bg);
     padding: 2rem;
     text-align: center;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--card-border);
     border-radius: 8px;
     margin-top: 2rem;
     flex-shrink: 0;
   }
   
   .newsletter-signup h3 {
-    color: var(--blog-charcoal);
+    color: var(--text-primary);
     margin-bottom: 1rem;
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   }
@@ -203,7 +203,8 @@ const allPosts = sortedPosts;
   .newsletter-form input {
     padding: 0.75rem;
     border: 2px solid var(--border-medium);
-    background: var(--blog-warm-white);
+    background: var(--bg-primary);
+    color: var(--text-primary);
     font-size: 0.875rem;
     border-radius: 4px;
     transition: border-color 0.3s ease;
@@ -211,12 +212,12 @@ const allPosts = sortedPosts;
   
   .newsletter-form input:focus {
     outline: none;
-    border-color: var(--blog-bronze);
+    border-color: var(--text-secondary);
   }
   
   .newsletter-form button {
-    background: var(--blog-sepia);
-    color: var(--blog-warm-white);
+    background: var(--text-secondary);
+    color: var(--text-inverse);
     border: none;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
@@ -228,12 +229,12 @@ const allPosts = sortedPosts;
   }
   
   .newsletter-form button:hover {
-    background: var(--blog-bronze);
+    background: var(--text-primary);
   }
   
   .newsletter-note {
     font-size: 0.875rem;
-    color: var(--blog-sepia);
+    color: var(--text-secondary);
     margin-top: 1rem;
   }
   
