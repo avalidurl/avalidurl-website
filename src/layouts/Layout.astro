@@ -95,31 +95,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     --bg-accent: #F8F9FA;           /* Subtle accent background */
     
     /* Colorblind-Safe Interactive Colors */
-    --color-primary: #1565C0;       /* Blue - universally accessible */
-    --color-primary-hover: #0D47A1;  /* Darker blue for hover */
-    --color-secondary: #E65100;     /* Orange - contrasts with blue */
+    --color-primary: #666666;       /* Gray - universally accessible */
+    --color-primary-hover: #333333;  /* Darker gray for hover */
+    --color-secondary: #E65100;     /* Orange - contrasts with gray */
     --color-secondary-hover: #BF360C; /* Darker orange for hover */
     
     /* Semantic Colors - High Contrast */
     --color-success: #2E7D32;       /* Green - WCAG AAA compliant */
     --color-warning: #F57F17;       /* Amber - visible to colorblind */
     --color-error: #C62828;         /* Red - high contrast */
-    --color-info: #1976D2;          /* Blue - information color */
+    --color-info: #666666;          /* Gray - information color */
     
     /* Border Colors - Subtle but visible */
     --border-light: #E0E0E0;        /* Light borders */
     --border-medium: #BDBDBD;       /* Medium borders */
     --border-dark: #757575;         /* Dark borders */
-    --border-focus: #1565C0;        /* Focus outline color */
+    --border-focus: #666666;        /* Focus outline color */
     
     /* Navigation & UI Colors */
     --nav-bg: #FFFFFF;              /* Navigation background */
     --nav-text: #1A1A1A;           /* Navigation text */
-    --nav-accent: #1565C0;          /* Navigation accent */
+    --nav-accent: #666666;          /* Navigation accent */
     
     /* Link Colors - High contrast and accessible */
-    --link-color: #1565C0;          /* Primary link color */
-    --link-hover: #0D47A1;          /* Link hover color */
+    --link-color: #666666;          /* Primary link color */
+    --link-hover: #333333;          /* Link hover color */
     --link-visited: #7B1FA2;        /* Visited link color */
     
     /* Card and Component Colors */
@@ -136,9 +136,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     --blog-muted-gold: #B8860B;     /* Muted gold for accents */
     
     /* Button Colors - Maximum contrast */
-    --btn-primary-bg: #1565C0;
+    --btn-primary-bg: #666666;
     --btn-primary-text: #FFFFFF;
-    --btn-primary-hover: #0D47A1;
+    --btn-primary-hover: #333333;
     --btn-secondary-bg: #E65100;
     --btn-secondary-text: #FFFFFF;
     --btn-secondary-hover: #BF360C;
@@ -323,7 +323,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     outline: 3px solid var(--border-focus);
     outline-offset: 2px;
     border-radius: 3px;
-    background-color: rgba(21, 101, 192, 0.1);
+    background-color: rgba(102, 102, 102, 0.1);
   }
   
   /* Remove underline for navigation links */
@@ -538,7 +538,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     border-color: var(--color-primary-hover);
     color: var(--text-inverse);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
+    box-shadow: 0 4px 12px rgba(102, 102, 102, 0.3);
   }
   
   .subscribe-link:focus {
