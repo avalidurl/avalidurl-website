@@ -22,7 +22,9 @@ The authors at Praxis accentuates that
 That which our meta-narratively deluded peers in "crypto"—neither crypto-economics proper nor the game of life that the associatively derivative technologies surrounding and stemming from the composability warfare—come to think of decentralized AI in fact are just unnecessarily mutable vector database access to multi-signature controlled games that lack play.
 
 ![Monument Valley by Yoshi Toshida (1971)](/images/monument-valley-toshida.jpg)
-*Monument Valley, Yoshi Toshida (1971)*
+<div style="text-align: center; margin-top: 0.5em;">
+  <em style="font-size: 0.85em; color: #6c757d;">Monument Valley, Yoshi Toshida (1971)</em>
+</div>
 
 Indeed, there are inspiring attempts at the intents-centric cross-protocol solutions to liquidity and capital markets fragmentation in this emergent sub-sector of global financial infrastructure rails. However, if someone is arguing for a "totally" decentralized AI stack, they need to be kindly reminded that "not our weights, not our society."
 

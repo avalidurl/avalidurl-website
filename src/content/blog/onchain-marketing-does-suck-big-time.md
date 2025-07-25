@@ -13,9 +13,10 @@ originalUrl: "https://gokhan.substack.com/p/onchain-marketing-do-suck-big-time"
 
 ---
 
-> People who devote their lives to studying something often come to believe that the object of their fascination is the key to understanding everything.
-> 
-> — Haidt, Jonathan. *The Righteous Mind: Why Good People Are Divided by Politics and Religion*.
+<div style="text-align: center; margin: 2em 0; padding: 1.5em; background-color: #f8f9fa; border-left: 4px solid #007acc; font-style: italic;">
+  <p style="font-size: 1.1em; margin-bottom: 1em; color: #2c3e50;">"People who devote their lives to studying something often come to believe that the object of their fascination is the key to understanding everything."</p>
+  <p style="font-size: 0.9em; color: #6c757d; margin: 0;">— Jonathan Haidt, <em>The Righteous Mind: Why Good People Are Divided by Politics and Religion</em></p>
+</div>
 
 ---
 
