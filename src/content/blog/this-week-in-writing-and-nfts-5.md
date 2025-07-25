@@ -1,0 +1,78 @@
+---
+title: "This Week in Writing & NFTs #5"
+publishedAt: "2022-08-25"
+description: "Weekly MumblecoreArtist’s Smart ContractAs I am listening to Mary Lattimore’s “Polly of the Circus” on the D-side of a double color LP titled Collect......"
+tags: ["paragraph","imported","crypto","ai","art"]
+draft: false
+arweave: "8wo_f4bmFMr-fbEeKBqwfdXSQOzP4MXAuNGhhpxnj_s"
+source: "paragraph"
+originalSlug: "this-week-in-writing-and-nfts-5"
+---
+
+## Weekly Mumblecore### Artist’s Smart ContractAs I am listening to Mary Lattimore’s “Polly of the Circus” on the D-side of a double color LP titled [Collected Pieces 2015-2020 ](https://boomkat.com/products/collected-pieces-2015-2020)on my recently acquired Music Hall USB-1 turntable, the bell rings for the 3rd and 4th time during the day. I am delivered another package from Boomkat dot com including LPs by [Kali Malone](https://kalimalone.com/), [Toshiya Tsunoda](https://blacktruffle.bandcamp.com/album/landscape-and-voice), and a cassette by Demdike Stare, [Physics](https://boomkat.com/products/physics-85064cba-8372-4a57-a1fc-9c09c3f8892f), and a book by the host of Lost and Sound, [Paul Hanford](https://twitter.com/PaulHanford), titled [Coming to Berlin](https://velocitypress.uk/product/coming-to-berlin-book/#:~:text=Told%20through%20Paul%20Hanford&apos;s,Danelle%20DePicciotto%20and%20Monika%20Kruse.). The other package is from Soundhom carrying a single book by Peter Ablinger, [Now! Writings 1981-2021](https://www.soundohm.com/product/now-writings-1982-2021-bo).
+
+Am I doing this alright? Is this how we picture in words so that our plaintext does not need any .jpeg to be considered as a standalone art? Text-based art? Poetry as art? Artist’s book? Artist’s Smart Contract?
+
+The concept of artist’s smart contract (as an analogy to the artist’s book) is not a novel idea. It has been in the works for year, even predating Ethereum (check Rhea and Sarah). There are other names, too, I presume.
+
+There are artists who can code, architect protocols. Even if they cannot code, they help design the contract by their insights. They are not few in numbers. As is the case with the written word, that is writing NFTs/ text-based NFTs/ on-chain (literary) textualities. In this regard, I believe that we do not need to act as if traveling salesman convincing others that text/ poetry/ writing can be, and have been, an art form that can go as experimental as it gets. It is as if there is now a race for genres, categories, and taxonomies of art, and some friends are afraid that the degen liquidity will not be channelled to their domain of expertise. A tip: Just be yourself.
+
+“I guess I am doing this right, Dedalus, what do you think? I might go pronounless (as in the grammatical sense) as our friend Samuel tried in his NFTward Ho!”
+
+In Hanford’s Coming to Berlin, through the “Preface”, there is a compounding statement about Berlin articulated in a positive fashion: “[…] a place where we hope to express our identitites. It’s an island of individuality in a sea of commercialisation.”
+
+### …an island of individuality in a sea of commercialisation.[collect://](collect://)
+
+People on and throughout the blockchain constellations regardless of their virtual machine haven are very familiar with such a statement. An emergent marketual architecture where a metabolism is re-architecturing itself. A media of media that self-assembles. There are agentic forces with anthropic capabilities. There are homo sapiens. &, everyone accuses one another of being not of genuine and meaningful roots. Tribalism in a positive feedback loop (which is by nature, and in systems thinking, a negative thing) at its peak. Yes, DAOs also help us to congregate with those with whom we would like to exit from the existent structure, however, an island of collectivity in a node ocean of commercialisation decree that we are not ourselves enough. Hence, imports try to fake it till make it.
+
+There is a solution to that: just be yourself. You do not need to convince anyone unless you are building a unicorn.
+
+We are here to stay, in the EVM machine, for centuries to come. Choose your allies wisely in that they can turn out to be bad actors, too. My advice: Form reading groups.
+
+## Weekly Spotlight### Folklore: “[E]mergence is the new of the game”I have come to know [Rafa the Builder](https://twitter.com/rafathebuilder) only when did they comment on the [interview](https://jpg.mirror.xyz/eAZi6PglxjMALBw2Mk4cnJxdxPGv6Bpcr5irWZp91Wc) that [W. M. Peaster](https://linktr.ee/wmpeaster) of [JPG](https://jpg.space) & [Metaversal](https://metaversal.banklesshq.com/) at Bankless did with me some time ago. Rafa is the community lorecrafter at Mirror itself. Being a community lorecrafter requires a certain badge in Lovecraftian Calisthenics (I am already writing the novella, do not touch the title) which is not available as a POAP.
+
+However, you may now contribute to the functionality of that lore as in Folklore. Folklore might be one of the most intriguing, friendly, and intellectual experiments at the intersection of writing, reading, community-building, publishing, and pure joy of sharing through a governance riddle of cosmotechnics. No, it’s not about Cosmos. Folklore has started as a token gated Telegram group, and a public channel.
+
+In the [words](https://twitter.com/rafathebuilder) of Rafa, Folklore is:
+
+[…] LIKE A READING CLUB BUT THE COMMUNITY DECIDES WHO THE WRITERS ARE BY VOTING FOR THEM IN A JOKEDAO CONTEST WHICH DESPITE THE NAME IS ACTUALLY NOT A JOKE AT ALL AND THEN THE DAO SELLS EACH ESSAY AS AN NFT WHICH U CAN BUY SO U CAN NOMINATE AND VOTE IN FUTURE.
+
+There are still 55 seats available as you care to read my words:
+
+[https://folklore.mirror.xyz/XqJRfNna3l8AGSxYnE-mylPw-0MIFV-4b92n4tKuSQk](https://folklore.mirror.xyz/XqJRfNna3l8AGSxYnE-mylPw-0MIFV-4b92n4tKuSQk)
+
+I think Folklore, and movements that will imitate its simple yet affective structure will be channeling a much needed intellectual diversity unto the chain in the upcoming Autumn and Winter for the Northern Hemisphere.
+
+Those of you who might be familiar with the notion and practice of [Deep Listening](https://www.deeplistening.org/), beware, this is your Deep Reading experiment.
+
+### Crypto Art BeginsRizzoli, the publisher renowned for titles such as Codex Seraphinianus amongst many, enters the Metaverse (I in actual think that this is just a betaverse) with a cooperation with The NFT Magazine. According to the mag, it includes the best 50 artists across the metaverse (superlatives reign, innit?), and the drop for its special collectible edition is about to happen on Nifty Gateway on September 19 whilst the book (i guess the “ordinary” version) will be available in stores across Italy from November 8, 2022, and in the USA, from Spring 2023. What about the rest of the world copy-righter?
+
+However, we might go on easy about the SEO-brimming press release of the book. After all, people put in work, and I wish the creators, and creators of the book itself, a happy launch.
+
+[https://www.thenftmag.io/cryptoartbegins/](https://www.thenftmag.io/cryptoartbegins/)
+
+### Curia: On-Chain Arbitration Lite PaperI admire legal texts. They are of an infinite resource ocean for conceptual art works. Anyone who is fond of [Vanessa Place](https://twitter.com/vanessaplace2?lang=en) and her works would get what I mean. Curia, a LexDAO subDAO releases their Litepaper that focuses on arbitration on-chain with curated panels and escrow services.
+
+[https://twitter.com/CATTlN/status/1562486842993553410](https://twitter.com/CATTlN/status/1562486842993553410)
+
+I have already collected it. Collecting lite and whitepapers feel superb by the way.
+
+[https://mirror.xyz/cattin.eth/WvxhuxLuZIObP2lXopL81_c9YD4j6-fQWVjgY3aKPHY](https://mirror.xyz/cattin.eth/WvxhuxLuZIObP2lXopL81_c9YD4j6-fQWVjgY3aKPHY)
+
+### Mainnet Merge Announcement[The ](https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement/)Terminal Total Difficulty[ value triggering The Merge is ]()58750000000000000000000[, expected between Sept 10-20, 2022.]()
+
+### Tweets of The Week[https://twitter.com/Scott_eth/status/1562789790072082432?s=20&t=eoaQJm1hmxVv9Afy57eJXw](https://twitter.com/Scott_eth/status/1562789790072082432?s=20&t=eoaQJm1hmxVv9Afy57eJXw)
+
+“the brand that appears everywhere, appears nowhere.”
+
+[https://twitter.com/jchervinsky/status/1562084696766513154](https://twitter.com/jchervinsky/status/1562084696766513154)
+
+“If we criminalize privacy, only criminals will have privacy.”
+
+### Rant of the Week[https://foundation.app/@Gabrielhaines/rant/3](https://foundation.app/@Gabrielhaines/rant/3)
+
+Haines-es strike again.
+
+[https://twitter.com/gabrielhaines/status/1562805625205039106?s=20&t=d0OC6GlWLUmj8Rtp9voJ0g](https://twitter.com/gabrielhaines/status/1562805625205039106?s=20&t=d0OC6GlWLUmj8Rtp9voJ0g)
+
+### Work of the WeekF![Image](https://storage.googleapis.com/papyrus_images/2cd62f01beedfdbc1512e0e91dba2a6a.png)[Farmers recall.](https://superrare.com/0xfe9d2a29b06f3577fc1165d75d73cac8505325e0/heaven-1)

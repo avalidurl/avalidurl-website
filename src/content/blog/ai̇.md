@@ -1,0 +1,20 @@
+---
+title: "On Work"
+publishedAt: "2024-06-05"
+description: "Work does not always work. Those who work on the work of work indavertently make utterly subjective or incorrigibly statistical inferences. You can b......"
+tags: ["paragraph","imported"]
+draft: false
+arweave: "<p>Work does not always work. Those who work on the work of work indavertently make utterly subjective or incorrigibly statistical inferences. You can be Kant yet we are also in need of those who can understand Kant. </p><p>It's because we have understood Kant that the current LLMs can comprehend what we mean by outside. They'll soon be able to apreciate being able to leak from without into the inside.</p><p>I assume we are ready for this transformation for not every society depends on the knowledge work. In fact, there are emergent societal hubs where the cultivated minds are scorched for merely existing. For me, the image of an antimeme is more scary than any of the Cthulhu metonym when it comes to yōkai hunting our legacy dreams. </p><p>Today, the notion of work is trying to be conceptualized by means of a merely practical sense of existence by former or present knowledge workers. We will have a convivial bildungsroman type maturity phase alongside the baby AGI and redefine what counts as work. </p><p>That you can automate anything does not mean that you shall not be able to dictate a sandbox of civilizational granularity.</p>"
+source: "paragraph"
+originalSlug: "ai̇"
+---
+
+Work does not always work. Those who work on the work of work indavertently make utterly subjective or incorrigibly statistical inferences. You can be Kant yet we are also in need of those who can understand Kant. 
+
+It's because we have understood Kant that the current LLMs can comprehend what we mean by outside. They'll soon be able to apreciate being able to leak from without into the inside.
+
+I assume we are ready for this transformation for not every society depends on the knowledge work. In fact, there are emergent societal hubs where the cultivated minds are scorched for merely existing. For me, the image of an antimeme is more scary than any of the Cthulhu metonym when it comes to yōkai hunting our legacy dreams. 
+
+Today, the notion of work is trying to be conceptualized by means of a merely practical sense of existence by former or present knowledge workers. We will have a convivial bildungsroman type maturity phase alongside the baby AGI and redefine what counts as work. 
+
+That you can automate anything does not mean that you shall not be able to dictate a sandbox of civilizational granularity.

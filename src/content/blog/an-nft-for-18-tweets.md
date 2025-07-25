@@ -1,0 +1,46 @@
+---
+title: "An NFT for 18 Tweets"
+publishedAt: "2022-05-25"
+description: "A tropico-brutalist 🌴 dark forest 🌞 provides a prime example of a complex system 🦍.The interactions among species thereof range from extreme gener......"
+tags: ["paragraph","imported","ai","web3","art"]
+draft: false
+arweave: "CozarDoF5MT-sDk0nSLzu9sMBpOPA0LPfCw0IXOBwvI"
+source: "paragraph"
+originalSlug: "an-nft-for-18-tweets"
+---
+
+A tropico-brutalist 🌴 dark forest 🌞 provides a prime example of a complex system 🦍.
+
+The interactions among species thereof range from extreme generalists (so-called NFT degens will consume most anything breathing in their path) to extreme specialists (Vitalik’s ‘rollup orchid’ with a foot-long development repo, can only be developed by an Ape with a soulbound dedication—neither would beat entropy without the other.)
+
+Do you know what Messiaen think of Xenakis when the former caught a glimpse of the latter as a pupil?
+
+A timpani, or a tabla?
+
+Imagine a tension on the pluck of a finger with a string abstraction on a Lute.
+
+pragma solidity >=0.G.M. <0.WAG.MI;
+
+333>4’33” <—> Exit>Voice
+
+Only a DeFi user can be designated as a degen.
+
+DeFi>Web3.
+
+Add another 5 timpanis.
+
+Comet Orchid. Rival Dealer by Burial?
+
+Ryder Ripps is more NRx than is Nick Land a u/acc-ist.
+
+Oblique Strategies would be alive on-chain. I hope Eno is about to realize all that jazz.
+
+Nothing compares to YSL in fashion and metaversal fashion suck big time.
+
+‘Here was a man, Messiaen thought, “not like the others.”’
+
+You are about to get sandwiched.
+
+MEV bots are the real gentlemen.
+
+You are the sandwich.

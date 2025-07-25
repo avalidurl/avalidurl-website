@@ -114,6 +114,15 @@ clean-git-history.sh
 *.sh
 !build.sh
 
+# Import and migration scripts (development only)
+scripts/*paragraph*.cjs
+scripts/*csv*.cjs
+scripts/fix-*.cjs
+scripts/check-*.cjs
+scripts/comprehensive-*.cjs
+scripts/debug-*.cjs
+scripts/extract-*.cjs
+
 # Personal data protection (CRITICAL - never commit)
 email_list*.csv
 *email*.csv

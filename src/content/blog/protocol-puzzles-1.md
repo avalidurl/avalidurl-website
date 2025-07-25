@@ -1,0 +1,20 @@
+---
+title: "Protocol Puzzles I"
+publishedAt: "2023-10-01"
+description: "The first version of the following post can be accessed via gemini://gemlog.blue/users/gokhan/1696188436.gmi on the gemini protocolProtocol Puzzles 1P......"
+tags: ["paragraph","imported","ai"]
+draft: false
+arweave: "Z0UY94mGY645PdAt5RXZe2s8EoxsoYp4xcy_YwcNWks"
+source: "paragraph"
+originalSlug: "protocol-puzzles-1"
+---
+
+The first version of the following post can be accessed via gemini://[gemlog.blue/users/gokhan/1696188436.gmi](http://gemlog.blue/users/gokhan/1696188436.gmi) on the gemini protocol
+
+Protocol Puzzles 1
+
+People tend to talk of protocols a lot. When I was doing a mandatory military service, the first shock was the the variables a simple salute write into. I got used to it in a couple of days. The real problem with military salute protocols is not their existence but that people tend to be afraid of in-protocol meanness of reality.
+
+The same intuition goes for decentralized protocols as well. Yes, I am not talking about mere distributed systems. I do however talk about decentralized protocols that constitute at-least-yet-sufficiently autonomous systems of complex world-making into the present future: People are afraid of protocols that are simply so complex that there is an inherent drive thereof whereby the utmost minimalism is a vast object of desire—righteously.
+
+Herein, that which makes people afraid is the process per se and the work it requires. People tend to overlook how much dedication and diligent self-sacrifice go into robust incentive mechanism oriented protocols that are destined to replace the almost obsolete complex information systems upon which our hive works.

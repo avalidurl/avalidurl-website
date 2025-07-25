@@ -1,0 +1,19 @@
+---
+title: "Weekly Mints by gokhan.eth #1"
+publishedAt: "2024-02-12"
+description: "When I am working in ideas, I tend to want to share my drafts directly with the public, that is, friends. Since rollups make it cheaper to mint each ......"
+tags: ["paragraph","imported"]
+draft: false
+arweave: "paragraph"
+source: "paragraph"
+originalSlug: "zora"
+---
+
+When I am working in ideas, I tend to want to share my drafts directly with the public, that is, friends. Since rollups make it cheaper to mint each and every idea you have either in audio-visual imagineering, or boring conceptual art pieces, or even diagrams; I tend to mint anything that I myself like—just for the provenance.
+
+## 1. Ravery Club NFTs
+
+if you are already familiar with this project, please start reading from the second section below.
+
+This week, I have come up with an ecosystem idea across the Artist Cohort in my Hypersub community, and the open /openfinance channel, I launched the first iteration of the Ravery Club.
+<div class=

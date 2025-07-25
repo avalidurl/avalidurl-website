@@ -1,0 +1,18 @@
+---
+title: "The Question Concerning the Deep Liquidity of Media 1"
+publishedAt: "2022-05-02"
+description: "Many people find non-fungible tokens (NFTs) an unnecessary extension of gambling. NFTs are a bi-directional bridge where various sentiments that disc......"
+tags: ["paragraph","imported","ai","art"]
+draft: false
+arweave: "itEuFvt6Wmt21ZpvLdrq-OLRBHYiNG4Xsutb-89J4N4"
+source: "paragraph"
+originalSlug: "the-question-concerning-the-deep-liquidity-of-media-1"
+---
+
+Many people find non-fungible tokens (NFTs) an unnecessary extension of gambling. NFTs are a bi-directional bridge where various sentiments that discard them in the first place marry resentment.
+
+Let’s get rid of the underlying technologies and structured products that help this novel type of emergent media for a couple of paragraphs, and remind ourselves with the fact that NFTs are both a) a type of media, and b) media upon which the very same media exist. That’s the beauty of on-chain storage where the storage device and the piece of media it retains can just be the same, or slightly different, but utterly composable.
+
+It is true that there are analogies among floppy discs, Doomsday vaults, CD-ROMs and NFTs; however, none of the former ones can compose themselves into an asset of utility that is significant in both culturally evolutionary, and financial fashion. We are probably at a historical phase where we are learning to embed capital liquidity into a type of media that can bind any other type of media in whatever fashion that the currently evolving smart contract languages will suffice.
+
+That is why we are early.

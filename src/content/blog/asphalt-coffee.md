@@ -1,0 +1,12 @@
+---
+title: "asphalt coffee"
+publishedAt: "2023-09-28"
+description: "Sprites of an apple flickers across the horizon. horizon is a meme template. somebody is pouring a well-brewed specimen of relatively palatable coffe......"
+tags: ["paragraph","imported","ai"]
+draft: false
+arweave: "j2e5HjTZ0P_291dGSFcgNYnLV9iqs7vlAo5ma_ElXvw"
+source: "paragraph"
+originalSlug: "asphalt-coffee"
+---
+
+Sprites of an apple flickers across the horizon. horizon is a meme template. somebody is pouring a well-brewed specimen of relatively palatable coffee. nay, the skies are not made of caffeine. nor is cthulsavvah approaching from 6 o’clock. it is a brain mining mares to narrate a carrot-fueled conspiracy. fursonas everywhere, tentacles becoming selfie-sticks—which is fine by me. philantropist datahoarders knocking on your front door, if you have any: good afternoon sir! would you like to talk about our saviour the Helix? let us upload you to the noosphere. I mumble, I core, my gaze acts upon the hoarder as if I were a flock of sterlings. Sorry, starlings. You know, second language. I wonder at times when we are to be able to overcome this language acquisition puzzle. The door closes itself, locking out the hoarder out of my very own bubble. I wonder, you ponder. I invite the hoarder into this rental condo whose interior is an emulation of the actual TARDIS. No, I am not a Whovian.

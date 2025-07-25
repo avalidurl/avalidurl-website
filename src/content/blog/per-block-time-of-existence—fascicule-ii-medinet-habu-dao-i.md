@@ -1,0 +1,42 @@
+---
+title: "per block time of existence—fascicule II: Medinet Habu DAO I"
+publishedAt: "2021-12-18"
+description: "I was about to ask for a Geist when I realized that I was the Geist.I was the Geist.I was the Geist.I was the Geist.I was the Geist.I was the Geist.F......"
+tags: ["paragraph","imported","ai","art"]
+draft: false
+arweave: "s1ypmPVUoj3Cx1tmfkFkYP19xCEr_--vqamCbfpwOyk"
+source: "paragraph"
+originalSlug: "per-block-time-of-existence—fascicule-ii-medinet-habu-dao-i"
+---
+
+I was about to ask for a Geist when I realized that I was the Geist.
+
+I was the Geist.
+
+I was the Geist.
+
+I was the Geist.
+
+I was the Geist.
+
+I was the Geist.
+
+[Fascicule I](https://mirror.xyz/gokhan.eth/ZFCOTBbSYz95VfzZ0kixpyiHfWZ5FBXSERZ-yJrY-eA)
+
+🛸🐋🛸
+
+It is this singularized deliverance of the human to the state of dissolution—concomitant with its pulverizing impact on the correlation between thought and the self-love of man (viz. organic survivalism)—that assigns capitalism an inhuman emancipative role.
+
+[Reza Negarestani](https://uberty.org/wp-content/uploads/2015/02/reza-negarestani-drafting-the-inhuman.pdf)
+
+🦍🐸🤝🦇🔊
+
+This is the Head Messenger of All Tomorrow Parties at the end of Per Block Time of Existence. It all started with a relentless developer’s attempt at creating a series of ideogram, rather a proof-of-profile (PfP) based abecederium on the first level of on-chain existence.
+
+It was a rainy December night where the [vantablack suns of existence](https://foundation.app/collection/vse) never set, and people and other non-human critters kept GM’ing one another on an endless ball of incentive alignment that propagated an optimism so down-to-earth, it bootstrapped networks that conveyed constellation-like ripples which helped the composable aura of ours form mood bridges that can be faucets from which those in need of dire happiness can mint themselves.
+
+No, it is not a literary abstraction. We were literally able to mint ourselves from the vested pools of a sub-DAO called DECADES given that we can verify our collective membership to the Medinet Habu DAO.
+
+mhDAO did not accept individual applications, and was running on a permissioned sandbox on an EVM compatible zkRollup as beaconed on a terraformed exoplanet with a backup on the first layer vessel ‘Oumuamua.
+
+DECADES DAO was conceived once an accidental signal escaped unto the earworm data center of Distributed and United DAOs of Sound as run by an independent Agent that is but an Artificial Super Intelligence from the vantage point of your existence in your hypercube analogue of a 3D box within a slice of an enneract.

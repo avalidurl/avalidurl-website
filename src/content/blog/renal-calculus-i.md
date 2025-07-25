@@ -1,0 +1,38 @@
+---
+title: "Renal Calculus I"
+publishedAt: "2023-01-29"
+description: "It’s almost a rainy September morning, and I am once again seeing a doctor in half an hour if they do not oblige me to wait for another half an hour,......"
+tags: ["paragraph","imported","ai","art"]
+draft: false
+arweave: "9uQv8WdFGB09UCY1OEwjlrWqGbljueFPW0Mr_06O3Do"
+source: "paragraph"
+originalSlug: "renal-calculus-i"
+---
+
+It’s almost a rainy September morning, and I am once again seeing a doctor in half an hour if they do not oblige me to wait for another half an hour, which is usually the case in urology wards. No, I am such a healthy athletic node in the network, of wetware, and I want to play the wetware doughology for the next century at least, and I do not know how many blocks it fills.
+
+Trying to survive in the Near Eastern traffic as a pedestrian, I am standing still at the red light on that Cowboy Bebopite Mars-like junction in the hood whilst Weeb 0))) is broadcasting mediative drones through my Airpod pros.
+
+[https://create.zora.co/collections/0x902fc6184a74ba2f96da2dd58027a49e1e264cea](https://create.zora.co/collections/0x902fc6184a74ba2f96da2dd58027a49e1e264cea)
+
+A year ago, or so, my laptop was broken to the degree that I could write these two paragraphs in only half an hour. Now, I can order the entire gluten-free organically grown camaraderie of species anywhere on Earth to support any non-governmentals, and for-profits that would make it easier for us to transcend both longevity escape velocity and the confines of this Pale Blue Dot. No, this ain’t World End Economica series, we are still on the planet Earth, and artists are still begging.
+
+This weeb 0))) sounds more and more like Dalley Mahoney, which is better. I am in front of the hospital, maybe the best in town. A private one, which I can finally afford after 35 years of existence. Land of the free should not be free so that such private conveniences should be accessible to all. However, I really do not care about the health system—which I did for about a couple of decades doing free work for NGOs, majority of which were literal ponzi schemes, IMHO on the shoulders of the taxpayers.
+
+![Image](https://storage.googleapis.com/papyrus_images/b5f082a6c72bca875304ce3c891a50b2.png)It’s hard to read these Twitter threads. Infinite scroll is nothing alike a codex which you simply read. In infinite scroll, you bake your soul into a cauldron of carbs that dehydrate your will to existence. It makes you write like this in order for the reader to be immersed in the short story since it takes a century to read words such as these.
+
+In reality, if you are an avid observer who knows to utilize both the kairotic and chronological time-spaces, at any block height, you’d sense the world in a clearer perception, astutely if I might say—a deep reading.
+
+Deep reading requires patience, a sense of becoming-of oneself. Being is easier. Yes, I have a ‘stache. It’s almost a tool-being. Just kidding. But I have the moustache.
+
+## 🌞I’ve just drunken a big glass of water with lime and organic vinegar, listening to the noise of the city that is but a grandiose village of a failed coordination.
+
+## 🪙Evening coffee. A sedan passes by the street below blasting off “We mint this city” by MEVbits. A classic. The doc told me condition is that we need to watch out for that renal calculus about 45 days, during which it’ll possibly meet the bladder. It’s currently stuck at the entrance to the bladder, or whatever it is called thereabouts. I just need to hit the gym, and apply to a couple of publications. I have this dilemma: Shall I just mint it myself, or submit to that Discord publication which pays a lil’contribution. Network, or the ETH? Or both?
+
+It’s strange that a superficial writing of one’s own can be a deep reading for another person.
+
+## 🐲Sometimes, I feel like I am simulcasted in(to) a tomb, and each and every molecule of mine own is indexed thereabouts. The body as an assemblage of media in a tomb index—if you please.
+
+It might even mean that this kidney stone is a derivative staking itself into the arbitrage possibilities of this body vault of my own from whence I might even be minting my experiences into existence. sGOD. veWILL.
+
+Listening to this new EP cassette by Weeb 0))), a silver one, it has one track on both sides. B-side announces that it’s a remixable container that happens to be a cassette. I paid about 5 Blue Spices for this on the secondary market. MEVricks OAO usually front run bidders on such cultural objects. At least, the purchase has granted me an access to their designer body parts vault.

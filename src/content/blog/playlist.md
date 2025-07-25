@@ -1,0 +1,34 @@
+---
+title: "PLAYLIST #8"
+publishedAt: "2024-05-10"
+description: "If you have ever cared to read Koolhaas' Delirious New York: A Retroactive Manifesto for Manhattan, you'll easily discern that......"
+tags: ["paragraph","imported"]
+draft: false
+arweave: "romance"
+source: "paragraph"
+originalSlug: "playlist"
+---
+
+## 
+
+If you have ever cared to read Koolhaas' [Delirious New York: A Retroactive Manifesto for Manhattan](), you'll easily discern that writing about music is as futile as making [sense]() about it. The book is not about music whatsoever—rather, it's about lorecraft, to which the entire supercluster of cryptographically secured ecosystems a la emergent idea markets can relate.
+
+Hence, it's always of a well-versed mental gymnastics to write about music. I have decided to continue writing my smol pieces on music. Here is your daily allocation of sound with my over-reaching commentary.
+![Image]()
+### Shinichi Atobe — Ongaku 1
+
+Demdike Stare's DDS released the latest Atobe the last month it seems. They themselves released another 500 ed EP w/ Dolo Percussion today. This might be the first nocturnal air I'm getting off Shinichi compared to Heat and the like—reminiscent of early Japanese house.
+
+[https://boomkat.com/products/ongaku-1-dub6]()
+
+### Demdike Stare & Dolo Percussion — Dolo DS
+
+Re: DDS. The most mechanical drum'n bass Butlerian junglist take ever by Demdike IMHO. Compared to their earlier casette attempts at the swampy melodicisms when it comes to mixes, this one sounds as if being governed by a Mark Fell clone.
+
+[https://boomkat.com/products/dds070]()
+
+### Not Waving & Romance — Infinite Light
+
+From the mechanomical into the ethereal divine, we drift into the bioluminescence of air through Not Waving & Romance's last act as emboldened by a multi-sensuous resort to Boticelli's Venus. In furs? I don't think so.
+
+[https://notwavingromance.bandcamp.com/album/infinite-light]()

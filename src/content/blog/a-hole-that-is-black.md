@@ -1,0 +1,16 @@
+---
+title: "A Hole that is Black"
+publishedAt: "2022-03-03"
+description: "A black hole is a media. Any media by definition, and nature, is able to transmit value in both abstract and tangible sense of the being that you con......"
+tags: ["paragraph","imported","ai","web3","art"]
+draft: false
+arweave: "h9tu6YVFshZldn3ichAOWvCR-9EnOLxolei8ZX9edLI"
+source: "paragraph"
+originalSlug: "a-hole-that-is-black"
+---
+
+A black hole is a media. Any media by definition, and nature, is able to transmit value in both abstract and tangible sense of the being that you convince your becoming of being in this ever-emergent deep time of liquidity.
+
+A telescope, a recorder, your favorite sound artists’ noise scratching under the stress of that needle. You are sitting alone in a room, mumblecoring a Worstward Ho! of your own, and complain.
+
+Whereas the sur of the tabla to which you are lending an ear, and an imaginary nostril is as refreshing as that black coffee you are about to have.

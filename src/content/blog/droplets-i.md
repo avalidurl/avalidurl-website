@@ -1,0 +1,32 @@
+---
+title: "Droplets I"
+publishedAt: "2021-10-16"
+description: "There is a sense of bildungsroman-ship inherent within the current clusters and constellations through the blockchain(s) eco-systems—especially, than......"
+tags: ["paragraph","imported","crypto","ai","art"]
+draft: false
+arweave: "kh0nFZ-Y0IsMK-QZ0oSHXAHKz60D3uNheBktbh2bhBE"
+source: "paragraph"
+originalSlug: "droplets-i"
+---
+
+There is a sense of [bildungsroman](https://www.britannica.com/art/bildungsroman)-ship inherent within the current clusters and constellations through the blockchain(s) eco-systems—especially, thanks to Ethereum’s efficiency at helping masses, who act as if of a slime mould in a circuit maze, to go full composable, and accordingly coordinate, as a species striving for the invention of a novel “[we](http://caae.phil.cmu.edu/cavalier/80254/kant/kant2.html#:~:text=In%20his%20Lectures%20on%20Logic,What%20may%20I%20hope%20for%3F).”
+
+A first-person plural that respects that of the singular to the point of the Singularity that is [arriving](https://www.youtube.com/watch?v=fiaWsgtJrNI) from the future to help us depart from ourselves, that is, to unzip the .human unto a thus-far unbeknownst formatting.
+
+Some call it the post-human, others trans-human, and some others some other stuff. It is in fact all about the quadratic inhuman. That which herein matters is that we are about to arrive at the threshold where the transforming affect of blockchain technologies will be reminding us of our more-than-human capabilities in solving the [local knowledge problem](https://fee.org/articles/the-use-of-knowledge-in-society/) once and for all.
+
+Thus, it does not matter whether your favorite artists are making history, or not; since, the current non-fungible architecture, even the current ones, aye, are here to stay for ages, if we are lucky and avid enough not to infra-structurally get rekt, help them become of history.
+
+Yet, there is a strange sense of becoming at this early phase of such alternative modalities of emergent governance systems, thanks to these technologically accelerating media of money and media themselves, as in DAOs: There is as if a sense of trepidation of an upfront and immediate collapse owing to the fact that we are still living in the old world.
+
+Today, as I was reading a bound book, and taking a hasty [note](https://remixocene.xyz/archive/notes-1/) on my web2 site, I had to go through all the [rekt](https://rekt.news/) articles, for instance. It might be OK to get rekt financially even though it is not alright; however, think of the future implications of the technology of which we are already acting-out agents.
+
+What if they exploit the body vaults on a far-a-day mint station in the outer space where you travel without moving but by minting yourself a designer body whose blueprints are stored next to your favorite artists’ pre-Longevity ouevre?
+
+Hence, I am starting to contemplate on such shower-thoughts, as it is raining right now, here on Mirror. That is, I will just be focusing on speculative realities that would possibly be outdated with the advent of the IRL tomorrow.
+
+For the sake of the first entry, I have also minted a non-fungible photograph of 20/20 editions that I took with my Fujifilm x100v.
+
+GM
+
+[edition://0xDF5b5ee15CC96ba7d0CB6BD9b2c0fc4417ab6445?editionId=278](edition://0xDF5b5ee15CC96ba7d0CB6BD9b2c0fc4417ab6445?editionId=278)

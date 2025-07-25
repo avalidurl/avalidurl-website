@@ -1,0 +1,34 @@
+---
+title: "Spoken Word Instructions, & libretto thereof, to \"Colorful Murmuration's of Webb's Lost Sightings\""
+publishedAt: "2022-08-10"
+description: "Colorful Murmuration&apos;s of Webb&apos;s Lost Sightingsis a non-fungible video-art piece that was minted through the Zora protocol, a hyperstructur......"
+tags: ["paragraph","imported","crypto","ai","art"]
+draft: false
+arweave: "DyhWSIa_wOaCn_551k1DDVjHe_KqTsZFiaoEaEX0o_g"
+source: "paragraph"
+originalSlug: "spoken-word-instructions,-and-libretto-thereof,-to-colorful-murmurations-of-webbs-lost-sightings"
+---
+
+## Colorful Murmuration&apos;s of Webb&apos;s Lost Sightingsis a non-fungible video-art piece that was minted through the Zora protocol, a hyperstructure.
+
+A hyperstructure is a crypto-protocol [that can run for free and forever, without maintenance, interruption or intermediaries](https://jacob.energy/hyperstructures.html).
+
+Below is the libretto to this piece that is but an overture to a larger abstract installation, a multi-media album if you please. Anyone who feel the need to read, and record these lyrics above the audio layer of this work should strictly follow the guidelines.
+
+If they remix it as a derivative by doing so, they should cite me myself as the original creator, and split their revenue at least at 5 per cent to my public addy.
+
+0x36de990133D36d7E3DF9a820aA3eDE5a2320De71
+
+[ethereum://0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/26862](ethereum://0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/26862)
+
+### InstructionsThis piece is supposed be (where applicable) read live as the above pre-viewed NFT is projected on each wall of a gallery, and through screens that can handle 4K resolution where there are no walls.
+
+The tone of the reader should start with a distortion effect that is accentuated with a tremolo pedal till the second paragraph which should be live looped, and re-played whilst the rest of the piece is read in a calm and comfy tone.
+
+### LibrettoPeople love the picture. It could be of anything. Two stars copulating on a plane of dark matter, or freshly minted organic wetware that relieves you of the nostalgia for the meatspace.
+
+The same people do have a resentment against the code that gave, and have been giving, them a breath where draconian experience galleries tap into the public liquidity and niftify the æther we need to take in to survive this footwork of a jungle.
+
+Networks collide, thousand DAOs die, a million are born. Statues of pro-patria sacrifices from wallets under the cloak of public funding decree crowds how to affectively swarm so as to concentrate the power among the few who thought it would be wise to mould the future on a shared collective ego contract front.
+
+Distortion intervenes.

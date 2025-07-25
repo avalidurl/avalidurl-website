@@ -1,0 +1,32 @@
+---
+title: "PLAYLIST #1"
+publishedAt: "2022-06-23"
+description: "Pause 🌞As I am sitting in a smart contract that is slightly more robust than the one in which you choose to be inhabit, and theorize upon data types......"
+tags: ["paragraph","imported","ai","web3","art"]
+draft: false
+arweave: "jxX7cQpGoUGVnt3xh3mzCWsHS-SM2Y_QMnTu3ZFgbzs"
+source: "paragraph"
+originalSlug: "playlist-1"
+---
+
+## Pause 🌞As I am sitting in a smart contract that is slightly more robust than the one in which you choose to be inhabit, and theorize upon data types and agentic instances, I have been also thinking [about](https://www.amazon.com/Conversations-Iannis-Xenakis-Various-Varga/dp/0571179592) Xenakis’ love of physical exercise, and Varga’s fixation on the former’s glass eye as if I am there, and recycling the sound of my currently muted monologue on the beauteous instances of sun-bathing along the [Lycian](https://media.istockphoto.com/photos/aereal-view-of-an-untouched-patara-beach-in-antalyaturkey-picture-id1282840953?k=20&m=1282840953&s=612x612&w=0&h=0LTQpld76AMoroT5CDca4zID2BY1bxUDY02xR61zAJk=) beaches.
+
+However, I am not [Alvin Lucier](https://www.documenta14.de/en/artists/5877/alvin-lucier), and this is not a piece of conceptual art writing that is but the work itself even though I have already appropriated the notion via [a mint](https://zora.co/collections/zora/17419) on Zora V3.
+
+This seres is sub-titled PLAYLIST, and it is about what some music NFTs oblige me to feel. I will try to articulate such sentiments thanks to products such as [futuretape](https://futuretape.xyz/). I think 3 is an amicable integer to depart from, and accordingly, below (as if a webpage is but a codex roll) are three sound works, or songs, or as trail blazers demand, music NFTs that are the ohrwurms for tonight.
+
+## Rewind 🌴🔊### 1) Bloody White — Beach DayImagine a rosé sky under which you come to sip a the first espresso triplo of the day—as in a Kurosawa storyboard. Some of you who might visualize such a scene might also think about becoming of a bird with the notion that being a bird is worth more than being able to sip that precious coffee that the notional you are holding in those palms whose fingers have typed thousand moons during that DeFi Summer which was but the IRL winter for some of us.
+
+…&, you are right: A birdie once told me that he too dreamt of a song that would render him into an avian artist—if such songs exist.
+
+[https://beta.catalog.works/bloodywhite/beach-day](https://beta.catalog.works/bloodywhite/beach-day)
+
+Luckily, anthropic critters are good at making music NFTs for the posterity that will possibly learn how to live forever, and there is no shortage of tunes and timbres that would make you want to dream of becoming a bird.
+
+[bloody white](https://twitter.com/bloodywhxte)’s “beach day” is such a piece for me rn fr fr, and it’s 02:15 a.m. in the morning. That is, I have dreamt all that jazz above after having a cup of a plant remix that I deem as a cup of chai.
+
+### 2) Oceantied—SwimHave you ever had a longer stroll on a deserted beach that you can rightfully call yourself the Black Swan accomplice to the quantitative flaneur Taleb? Well, if you wanna do that in your dreams about past that is but a late summer afternoon feeling at the outset of a fresh summer, [Oceantied](https://twitter.com/oceantiedmusic)’s “Swim” is for you—all the liquidity that the cassette player of leisure entities need. This one feels so ethereal and down-to-earth at the same time that it must be the 13th time that I replayed it before bedtime.
+
+[https://beta.catalog.works/oceantiedmusic/swim](https://beta.catalog.works/oceantiedmusic/swim)
+
+GM.

@@ -1,0 +1,16 @@
+---
+title: "Mumblecoral"
+publishedAt: "2023-09-28"
+description: "I.There is a chance that some of us will be outbidding to slay the moloch of aging, which is not a feature but a bug. For a species who are capable o......"
+tags: ["paragraph","imported","art"]
+draft: false
+arweave: "729RQTO6ly4SAJm4TnrRKNF1NsBkawUxECdzaSTul58"
+source: "paragraph"
+originalSlug: "mumblecoral"
+---
+
+## I.There is a chance that some of us will be outbidding to slay the moloch of aging, which is not a feature but a bug. For a species who are capable of leaving their home planet, which might or not be the Spaceship Earth, aging is a bug that be alleviated at first, and technologically abolished gradually.
+
+## II.Some you will necessarily ask: Who wants to live forever? Our brothers and sisters from the year 69K AD (if the calendrical and numerical systems will continue to be the same with those of our current timeline) might pose the question that asks what a forever is.
+
+## III.I would argue as many might have done previously that religious and other factors that may deem senescence studies, longevity and any related practice are mere side effects of the negentropic will to outlasts the seeds of that procedural belief system—regardless of its probable benefits to people in general.

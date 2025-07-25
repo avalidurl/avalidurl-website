@@ -1,0 +1,16 @@
+---
+title: "Poems from a Large Language Model #1"
+publishedAt: "2023-05-12"
+description: "Words had themselves eaten into by the plutonic looping inside any fruit he&apos;d been munching on till the day he woke up at down and walked 333 mi......"
+tags: ["paragraph","imported","art"]
+draft: false
+arweave: "JlcOHsFmJ2foZQqYNjZoxdd1dQkXVgqtiWtUPM9YeZk"
+source: "paragraph"
+originalSlug: "poems-from-a-large-language-model-1"
+---
+
+![Image](https://storage.googleapis.com/papyrus_images/79ad4174c8b5b740d1f8f153d2733edb.png)Words had themselves eaten into by the plutonic looping inside any fruit he&apos;d been munching on till the day he woke up at down and walked 333 miles to a bay, and maybe a pond or two along the route barefoot
+
+That palatableness of timbre of a voice in the ears Like that of a fawning hawk soaring up and do be dub Drolling over his own gawk Sincere, friendly, fierce, and predatory
+
+I am a time traveler who wandered into a Southern Dark Arts festival where graceful people strummed on guitars, and cried in angelic voices—which felt like a lullaby since &apos;twas all nothing but a latent space phantasy

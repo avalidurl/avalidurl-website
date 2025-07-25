@@ -1,0 +1,30 @@
+---
+title: "I have been tinkering with the Writing NFTs since before it was hijacked."
+publishedAt: "2024-01-20"
+description: "I spend most of my time reading, and as Žižek once attested for himself, I read everything. I have not understood it? I read it again.This week, I’ve......"
+tags: ["paragraph","imported","crypto","ai","art"]
+draft: false
+arweave: "hQ7DVP-AlWjNaOw8Ti_O4KS10b-aSSLO7dolJn638k0"
+source: "paragraph"
+originalSlug: "i-have-been-tinkering-with-the-writing-nfts-since-before-it-was-hijacked"
+---
+
+I spend most of my time reading, and as Žižek once attested for himself, I read everything. I have not understood it? I read it again.
+
+This week, I’ve been reading heavily on Ethereum equivalence via Taiko’s documentation, some MEV mathematics, and governance specifics.
+
+I usually share my readings in real time in one of the Warpcast channels I am hosting, that is /openfinance to be precise.
+
+I thought that sharing some insights here and there would be nice—again. The only tiring thing is that I feel the need to publish these on the following platforms at all times: X, Mirror (I like Mirror—say whatever), Paragraph (for Farcaster integration, and I like their writing oriented aesthetics reminiscent of early blog tools), Medium (to reach a wider audience who are not reading/ writing interface fetishists), LinkedIn (yes, I like to act civilized at times) on its all pretentiousness, sometimes even on Cent for my early crypto-art friends who are still losts somewhere, sometimes, I share my pieces to Gemini protocol (not the exchange) speficic CLI webrings. I also need to make sure that these are shared to my dozen Telegram groups and channels, alongside my Discord audience.
+
+This is all tiring. I’d pay for a RSS-feed creator that automatically creates a frontend and publish it to all of these channels via some sort of a mechanism like this HackMD interface that I am currently typing on have with Arweave.
+
+I know that I can readily set up a system of my own and create that funnel. But, I’d rather build a personal memex in that time that is required to be wasted there.
+
+That is to say, I do not want to turn into a human-readable human-RSS feed myself.
+
+Yes, I also have some writing collections across Zora and Base let alone the Optimism. I have been tinkering with the Writing NFTs since before it was hijacked.
+
+Anyways, let me finish these readings, and I will prepare a short post on them.
+
+Stay hydrated, and liquid.

@@ -1,0 +1,30 @@
+---
+title: "per block time of Existence—fascicule I"
+publishedAt: "2021-11-28"
+description: "‘Twas but a fortnight saber in the skies of Medinet Habu DAO. Treelover was roving across the oases scattered throughout the network in order to plan......"
+tags: ["paragraph","imported","ai","art"]
+draft: false
+arweave: "YRtVLN5Kr9lM9KneC0ebZ3-Y_Ug0hpi6fP9E54Nap7A"
+source: "paragraph"
+originalSlug: "per-block-time-of-existence—fascicule-i"
+---
+
+‘Twas but a fortnight saber in the skies of Medinet Habu DAO. Treelover was roving across the oases scattered throughout the network in order to plant an archival beacon betwixt a dual system of two separate constellations of networks so that individuals within each bubble of ætherous fabric could sync unto a unified per block time of existence.
+
+Blocks, slots, saints, and sluts of sand and spice would sound much more alluring to the reader, and their narrative-bidding camaraderie as in that bygone fictions of the Ancient Connection of the years 2000s.
+
+At around 2400, or in the last century of Semi Dark Ages of Existence, I had this idea of running a seed round for a DAO titled DECADES. The idea was thus simple: We were to print out yield aggregator space-time continua unto where one needs to stake a designer body for full access for a given per block time of existence. The contractual architecture was a fork of an ancient proto-artificial-superb-intelligence called Yearn. We just followed the Rabbit.
+
+It wasn’t that hard to fork the code—yet the Geist?! Now that was the job of a well-off dev who would turn out to be the poorest guy on-board, I mean on-chain considering the galactic congestion on this side of the Networks regardless of the Buterin bridge.
+
+I was about to ask for a Geist when I realized that I was the Geist.
+
+I was the Geist.
+
+I was the Geist.
+
+I was the Geist.
+
+I was the Geist.
+
+I was the Geist.

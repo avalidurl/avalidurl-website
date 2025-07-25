@@ -1,0 +1,22 @@
+---
+title: "Thinking through Building"
+publishedAt: "2024-02-18"
+description: "I have always avoided this type of language: thinking through building. These are mere kanban board placeholders for me. Though I believe hyperstitio......"
+tags: ["paragraph","imported"]
+draft: false
+arweave: "Y2SPSU2eCoYr9TTxaUNc"
+source: "paragraph"
+originalSlug: "recession"
+---
+
+I have always avoided this type of language: thinking through building. These are mere kanban board placeholders for me. Though I believe hyperstition through language, I also think that modicum of hype writing does not add any decorum to any thought-line whether they be a short /showerthought casts; or, grift-sounding hustle porn punches by the grandeur web3 influencers of yesteryear who were once called partners, and even founders.
+
+Building through thinking? Now, a few can pull that. But I prefer the former. Think through building. Yet, here is an anecdote: whereas there is a paper-clip maximization level compounding of composable elements when it comes to emergent markets of any sorts—idea markets, for instance—we are almost always bounded by the stagnant spirals of tedium and ennui that pose as innovation.
+
+There is currently a recession on the recombination of ideas to retain users at the consumer crypto level, except a few protocols and platforms' efforts that are leveraged by clusters of open source core developers across the entire ecosytem. Some of them are subsidized by institutional actors whereas others are after a flux capacitation to weave emergent domains that mutually benefit themselves and crypto-economics design both at the sophisticated protocol level, and financial/ non-financial rails.
+
+Here, if you are focusing on copy-paste efforts by wrongly taking them as composable money and media assets that merely gamifies upon already existing gamification through exotic token markets on crypto; you are possibly not doing enough research, and just trying to chase after some liquidity maybe for good, or for aught—given the profileration of only talk status actors who cannot even act as co-founders but are well hype-materials during late 2021 and early 2022, our economies within the expanded cryptographically secured systems engineering have already wasted enough resources.
+
+If you even look more closely today, many play-less gamification models that turn the crypto into a click-farm slavery plantation in the Global South, MENA, Eastern Europe and Africa alongside LATAM are models and visionless products perpetrated by these value-extractors.
+
+I suggest you both build-think, and think build.

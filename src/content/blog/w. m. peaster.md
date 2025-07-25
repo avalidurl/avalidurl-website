@@ -1,0 +1,12 @@
+---
+title: "Interview with W. M. Peaster — Part 1"
+publishedAt: "2023-02-01"
+description: "This interview was natively published on my personal  Mirror blog . It comes with an edition of 69/69 writing NFTs on the Optimisim network. The collectors ther..."
+tags: ["paragraph","imported","art"]
+draft: false
+arweave: "bankless"
+source: "paragraph"
+originalSlug: "w. m. peaster"
+---
+
+This interview was natively published on my personal [Mirror blog](). It comes with an edition of 69/69 writing NFTs on the Optimisim network. The collectors thereof will be given access to my enterprise <a target=

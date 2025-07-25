@@ -1,0 +1,24 @@
+---
+title: "statement"
+publishedAt: "2022-01-04"
+description: ".mov | .txt | .svg | .jpeg | postThis hereby statement is thus conceived on-chain to leverage my own private exposure to a probable incentive alignin......"
+tags: ["paragraph","imported","ai","art"]
+draft: false
+arweave: "QgIjHRS-rPpqapAF1fULMJuhYEJn4pB1-nPl4OQi0Xw"
+source: "paragraph"
+originalSlug: "statement"
+---
+
+[.mov](https://foundation.app/@gokhan/statement/1) | [.txt](https://zora.co/collections/zora/7279) | [.svg](https://opensea.io/assets/0x2d501470bc4646efacdb3f0f62c4ae6beff74f9a/1/) | [.jpeg](https://foundation.app/@gokhan/ctxt/1) | [post](https://beta.cent.co/goekhanturhan/+a9kyfp)
+
+This hereby statement is thus conceived on-chain to leverage my own private exposure to a probable incentive aligning airdrop that blitzscales my stable portfolio. Any prospective collector is thereby an art critique by means of simply acquiring the entirety of such statement per se.
+
+[https://foundation.app/@gokhan/statement/1](https://foundation.app/@gokhan/statement/1)
+
+[https://zora.co/collections/zora/7279](https://zora.co/collections/zora/7279)
+
+[https://foundation.app/@gokhan/ctxt/1](https://foundation.app/@gokhan/ctxt/1)
+
+[https://opensea.io/assets/0x2d501470bc4646efacdb3f0f62c4ae6beff74f9a/1/](https://opensea.io/assets/0x2d501470bc4646efacdb3f0f62c4ae6beff74f9a/1/)
+
+[https://beta.cent.co/goekhanturhan/+a9kyfp](https://beta.cent.co/goekhanturhan/+a9kyfp)

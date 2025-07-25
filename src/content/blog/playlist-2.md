@@ -1,0 +1,28 @@
+---
+title: "PLAYLIST #2"
+publishedAt: "2022-06-25"
+description: "When we utter the noun azure, it might become white night clear that there are no clouds in the sky. However, your brain is conditioned to delude its......"
+tags: ["paragraph","imported","ai","art"]
+draft: false
+arweave: "G5Mg22ceV7Dkkebrlx9micnvNWd_iFlV47FShmfTUPs"
+source: "paragraph"
+originalSlug: "playlist-2"
+---
+
+When we utter the noun azure, it might become white night clear that there are no clouds in the sky. However, your brain is conditioned to delude itself with facts that herald the coming of that which to come from the future—have you ever thought about the speculative realist notion that the blockchain technology is but a seedling hack into our time by that which to come from the future so as to re-align the measurement of time to their own end in the sense of per block time of existence?
+
+Your brain might want to play such programming puzzles at times. There might be no clouds in an azure sky but that azure sky may also be retained within a cloud where you just stare into purity thereof so as to meet your maker.
+
+## Théo — Azure[https://beta.catalog.works/theotheomusic/azure](https://beta.catalog.works/theotheomusic/azure)
+
+The above intro to today’s PLAYLIST is the fruit of the above-linked Théo piece, “Azure.” The introductory rhythmicity of the track, and the embedded syntheticity of an away inner voice blend unto a torrent of a cross-genre beauteousness of beats thereabouts so well that you just want to take this track as a non-fungible ticket to the possibility of a peach blossom spring.
+
+🌊 🌊 🌊
+
+## alara — mineSpeaking of peach blossom springs on a Paranesian Island that exists only within the scope of the main method with which you might call out to that that which come to from the future that your brain thinks as the maker of this azure cloud storage of existence if IRL is a mere simulation—no, it’s not, hit the gym, and stay hydrated frenz—, that springs look out on a beach with a tea garden where the cassette player rolling out the fresh presses of the latest Boomkat online catalogue inadvertently catches a radio signal that is itself but a smart contract. It is because the abovementioned programming puzzle upon which you have just surfed under an azure sky knows that the aspiring dev that is you need some chill’n comfy time.
+
+[https://www.sound.xyz/alara/mine](https://www.sound.xyz/alara/mine)
+
+Alongside a dune of refreshing sounds with timbers that match the breeze that is but the vocal of this track, “mine.” Some music merely catch you. This song is blessed by a decade known as ENO AD. Such sandcore freshgaze by [alara](https://twitter.com/hernameisalara).
+
+GM.

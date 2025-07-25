@@ -1,0 +1,62 @@
+---
+title: "What Makes a Great Ugly Art?"
+publishedAt: "2024-02-12"
+description: "People tend to circulate the notion that \"beauty is subjective,\" which in turn implies that art is subjective—thus, its beauty standards, too. If you......"
+tags: ["paragraph","imported","art"]
+draft: false
+arweave: "base"
+source: "paragraph"
+originalSlug: "art markets"
+---
+
+People tend to circulate the notion that ""beauty is subjective,"" which in turn implies that art is subjective—thus, its beauty standards, too. 
+
+If you were to tweet this a couple of years ago, a random stranger would directly message you, and accuse you of being a proponent of late Sir Roger Scruton. No, sir, I'll never pen a book on the virtues of getting drunk. 
+
+However, I myself think that ugly art has always existed. Some of them are ugly but classy. Others slipped in the annals of galleries and museums, let alone the ledgers thereof, just because of social consensus—that very same consensus which obliges you to shut up when 99% of that which passes as art across the so-called crypto-art scenes are indeed nothing near any piece of art. Reiterating even the worst Fluxus piece without a bit of personal touch is neither ugly art nor art.
+
+No, Richard Prince was alright. The guys has been appropriating for decades, and he is good at it. It's because he's been experimenting with both the intellectual property rights choking the arts and culture, and the actual media that have ever emergently and immediately shaped the society.
+
+That I use a third service, and a ready-made contracts to pin some documents onto off-chain but distributed servers do not readily make it art if it is not already a work of art.
+
+What is already a work of art?
+
+You know that type of art which is art. A mute consensus many meet upon yet are afraid to voice. Concept, context, craftsmanship, skills all might make a piece an art. Art as the noun. 
+
+I am not meaning to say that a certain 19th century painter's, or Mahler's pieces, or Bergman's scenes, or Cartier-Bresson's photographs are the standards—nor do I suggest that you can only be an experimental musician only if you meet Xenakis' standards, or a conceptual one if you can catch up with Sol Lewitt. Art requires substance and the best smart contractual art usually comes from those with the substance—sometimes, they do not even need an user-interface with which the art piece itself can interact with the society directly.
+
+As blockspace always pivots to itself, the art frequently only deals with itself. Some ""socially aware"" people might argue on the contrary but my dear Mr. Dalliard we can utilize any piece of art work for social causes if necessary. Yet the real art has better usecases, such as, being an art work.
+
+Ugly Art?
+
+Yes, ugly aesthetics. That aesthetics which has been rocking in the free world in form of streetwear and the so-called ""queer"" aesthetics most of the time. No, the real queer has already comprehended what I stress here, I do not owe anyone a clearence.
+
+There is something wrong in this Photomosh and Glitché run corners of the so-called art world as is there bigger mistakes in the traditionally contemporary art world's utilization of the blockchain-enabled ownership economies—even banks add to the infrastructure in this world, why not the art world who have been riding it for free, and renting every new economy that they first roast and then claim to be their own original trademark and imprison artists bridge-free networks whose only deal is mere predatory marketing?
+
+Institutions pamper bad artists, and I am not talking about either Pak's [Alpha ]()or Rauschenberg's white paintings—I like those works. I am talking about bad art that is promoted all the whilst we need to be patient to witness the cryptomedia's escape velocity where it'll eat that bad art, and will leverage the great artists' art that is not ugly.
+
+Side Effects
+
+One of the side effects of the ugly art narrative that positions emergent artists as isolated liquidity pools to suck it all up is that majority of technologically-curious artists think that people do like infantile bad art. Remember those dark times where we were witnessing at least 3333 tilting card collections, and 69696 cheap glitch works a day during late 2020? Worse than Facebook art groups.
+
+Now, you can just put up a simple piece of a .png and it can be a good art even without either a concept or a context given the conditions that determine your existence at a given block. Yet, we see otherwise talented people waste time on disposable media files that look nothing like even an ugly art piece. In times, the gravitational allure of accessing easy money turns many in the art world into self-acknowleding artists, even when they are not, and Solidity code copy-pasta experts who gamify the play in the most unsustainable means.
+
+We have been through the over-financialization of the blockchain-enabled art markets by which the art was able to both implode and explode in the same time into an unfeasible economy conceived into oblivion. Now, masses think we are witnessing an nth 2nd chance since there is a bit of liquidity, and means to build a novel social graph.
+
+Let me tell you something: Everyone is aware of anything in this industry, and all we are left now, luckily, is the transforming power of hyperstructure-based memetic escape velocity by cryptomedia, and the sheer reality that majoirty of art is just garbage choking the blockspace.
+
+For the next five years or so, we'll still be witnessing the big names of 2021-22 run will again be suckling at the udders of projects that cannot tell marketing from bad shitposting. They will make sorties.
+
+Yet, you must have felt the vibe shift especially on the Farcaster even when it's full of new years who are just meeting the concepts of hyperstructure, cryptomedia, and the like especially thanks to Zora, and Base. 
+
+The tricksters of the past cannot hold a center there anymore.
+
+But what makes ugly art great?
+
+Amongst the endless pins, it's not easy to notice people who have a tendency to ""real"" art. However, if you are like myself, you will just keep ""hunting"" like a literary agent, and read all the details.
+
+I keep seeing really cheap in quality type of artistic outputs by otherwise genuinely talented individuals and collectives whom I do not even know. I just want to write to them: Look, you are burning ether in vain with these pieces. The artist who can imply this type of a detail in this otherwise ugly piece of art can really come up with something better. I know you feel like time-preference will not suit your needs to create a better piece. I know life is hard, and I know what it means to be strolling the strees not knowing what to do because you do not have even $10 USD to your name.
+
+Yet, let's meet. Let me show you other means of independence on the crypto-systems enabled economies which will eventually help you focus on your art better. You are a good artist, and this piece of yours suck.
+
+That's why I created the [/uglyart]() channel today. I have plans.

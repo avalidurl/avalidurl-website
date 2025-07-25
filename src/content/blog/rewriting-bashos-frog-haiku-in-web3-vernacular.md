@@ -1,0 +1,12 @@
+---
+title: "Rewriting Bashō's Frog Haiku in Web3 Vernacular"
+publishedAt: "2023-03-03"
+description: "nft://1/0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/7854..."
+tags: ["paragraph","imported","ai","web3","art"]
+draft: false
+arweave: "pBd6WNsf5_ENYHWmlQSqNKd6tqhuZ3bNR94hNKJPTok"
+source: "paragraph"
+originalSlug: "rewriting-bashos-frog-haiku-in-web3-vernacular"
+---
+
+[nft://1/0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/7854](nft://1/0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7/7854)

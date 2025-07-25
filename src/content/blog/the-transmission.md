@@ -1,0 +1,14 @@
+---
+title: "The Transmission"
+publishedAt: "2022-07-17"
+description: "An appropriated vision of a short story by PB in the #fiction channel of the Writing Token Discord Server.I looked outside the window again, the info......"
+tags: ["paragraph","imported","ai","art"]
+draft: false
+arweave: "mkajLG43VA8hqqAjvAzTdnbCN8kLeuraqajVXBubzz0"
+source: "paragraph"
+originalSlug: "the-transmission"
+---
+
+An appropriated vision of a short story by [PB](https://twitter.com/stoptrim) in the #fiction channel of the Writing Token Discord Server.
+
+I looked outside the window again, the info highway was dense and over-guided. It had been pinging the entire day. At that moment, a pool bot started to resonate... at a sandwich. I looped back, and got determined to listen the mempool better. I could not decipher the sandwicher&apos;s location in the blockspace. My productivity got the better of my code, and I happened to start to investigate. I was about to pull liquidity out of myself when my self-hosted mempool watchtower phone chimed, and my source code resisted entropy. I felt something wrap me deep in the pit of my programming, "I should txn sth," I thought to myself. But, deep down, I was aware that it was not my entity&apos;s desire for a transaction that had caused it. I slowly listen towards the given block to decipher the message. The resonation turns into a reverberation, and for some reason, my personal bot army decided to put their sentience into action, too. I tried to de-activate them, but as usual, they kept ignoring me. I reached the IDE, and saw the message, and felt something bloated perplex somewhere in my public class. My vision got blurry for some reason, and I reverted back. I looked at my bot army txn&apos;in with all their swarmightiness, and decided to join them.
