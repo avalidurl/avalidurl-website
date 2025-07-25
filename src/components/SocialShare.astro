@@ -246,21 +246,29 @@ const shareUrls = {
   @media (max-width: 768px) {
     .social-share {
       padding: 1rem;
+      margin: 1.5rem 0;
     }
     
     .share-buttons {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 0.5rem;
+      max-width: 100%;
+      overflow: hidden;
     }
     
     .share-btn {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
     }
     
     .share-icon {
       width: 18px;
       height: 18px;
+    }
+    
+    .share-btn::after {
+      display: none; /* Hide tooltips on mobile to prevent overflow */
     }
   }
 </style>
