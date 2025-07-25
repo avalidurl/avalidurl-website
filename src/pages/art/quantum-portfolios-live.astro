@@ -197,7 +197,7 @@ import Layout from '../../layouts/Layout.astro';
   .asset input[type="range"] {
     flex: 1;
     height: 4px;
-            background: rgba(102, 102, 102, 0.2);
+    background: var(--bg-tertiary);
     border-radius: 2px;
     outline: none;
     -webkit-appearance: none;
@@ -295,7 +295,7 @@ import Layout from '../../layouts/Layout.astro';
       padding: 1.5rem;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
-              border-bottom: 3px solid #666666;
+      border-bottom: 3px solid var(--border-medium);
     }
 
     .artwork-header h1 {
@@ -338,10 +338,10 @@ import Layout from '../../layouts/Layout.astro';
   
   // Portfolio data with enhanced visual properties
   const assets = {
-            tech: { weight: 0.25, color: '#666666', return: 0.12, risk: 0.20, particles: [], baseCount: 50 },
-        bonds: { weight: 0.25, color: '#999999', return: 0.06, risk: 0.08, particles: [], baseCount: 50 },
-    realestate: { weight: 0.25, color: '#b3e5fc', return: 0.10, risk: 0.15, particles: [], baseCount: 50 },
-    commodities: { weight: 0.25, color: '#e1f5fe', return: 0.08, risk: 0.25, particles: [], baseCount: 50 }
+    tech: { weight: 0.25, color: 'var(--color-primary)', return: 0.12, risk: 0.20, particles: [], baseCount: 50 },
+    bonds: { weight: 0.25, color: 'var(--color-secondary)', return: 0.06, risk: 0.08, particles: [], baseCount: 50 },
+    realestate: { weight: 0.25, color: 'var(--color-success)', return: 0.10, risk: 0.15, particles: [], baseCount: 50 },
+    commodities: { weight: 0.25, color: 'var(--text-muted)', return: 0.08, risk: 0.25, particles: [], baseCount: 50 }
   };
 
   class QuantumParticle {
@@ -664,7 +664,7 @@ import Layout from '../../layouts/Layout.astro';
     });
     
     // Draw connections between entangled particles
-              ctx.strokeStyle = 'rgba(102, 102, 102, 0.1)';
+    ctx.strokeStyle = 'var(--border-light)';
     ctx.lineWidth = 1;
     
     for (let i = 0; i < particles.length; i += 5) {
