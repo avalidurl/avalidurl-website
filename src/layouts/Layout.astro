@@ -1,16 +1,25 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import CookieNotice from '../components/CookieNotice.astro';
+import FarcasterFrame from '../components/FarcasterFrame.astro';
 import { env } from '../utils/env.ts';
 
 export interface Props {
   title: string;
   description?: string;
+  frameTitle?: string;
+  frameType?: 'blog' | 'home' | 'subscribe' | 'custom';
+  frameImage?: string;
+  frameButtonText?: string;
 }
 
 const { 
   title, 
-  description = "A digital creator exploring the intersection of technology, art, and human connection through code and creativity." 
+  description = "A digital creator exploring the intersection of technology, art, and human connection through code and creativity.",
+  frameTitle,
+  frameType = "custom",
+  frameImage,
+  frameButtonText
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
@@ -55,6 +64,14 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title={title} href="/feed.xml" />
     
+    <!-- Farcaster Frame Support -->
+    <FarcasterFrame 
+      title={frameTitle || title}
+      description={description}
+      type={frameType}
+      image={frameImage}
+      buttonText={frameButtonText}
+    />
     
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
