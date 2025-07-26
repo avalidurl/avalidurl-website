@@ -22,6 +22,10 @@ const {
 } = Astro.props;
 
 const siteKey = env.TURNSTILE_SITE_KEY;
+
+// Debug logging
+console.log('TurnstileWidget - siteKey:', siteKey ? 'SET' : 'NOT_SET');
+console.log('TurnstileWidget - env keys:', Object.keys(env).filter(key => key.includes('TURNSTILE')));
 ---
 
 <div 
@@ -43,6 +47,7 @@ const siteKey = env.TURNSTILE_SITE_KEY;
     const turnstileElements = document.querySelectorAll('.cf-turnstile');
     turnstileElements.forEach(function(element) {
       const siteKey = element.getAttribute('data-sitekey');
+      console.log('Turnstile element siteKey:', siteKey ? 'SET' : 'NOT_SET');
       if (!siteKey || siteKey === '') {
         console.warn('Turnstile site key is missing. CAPTCHA will not function.');
         (element as HTMLElement).style.display = 'none';
