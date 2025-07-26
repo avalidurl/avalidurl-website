@@ -519,6 +519,8 @@ const remainingPosts = allPosts.slice(20);
       const timeElement = document.createElement('time');
       timeElement.className = 'article-date';
       timeElement.textContent = formattedDate;
+      // Force the correct color styling for date
+      timeElement.style.color = 'var(--text-muted)';
       articleMeta.appendChild(timeElement);
       
       // Create article title with proper styling
