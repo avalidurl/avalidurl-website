@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import TurnstileWidget from '../components/TurnstileWidget.astro';
-import SimpleTurnstile from '../components/SimpleTurnstile.astro';
 ---
 
 <Layout 
@@ -51,11 +50,14 @@ import SimpleTurnstile from '../components/SimpleTurnstile.astro';
                   </select>
                 </div>
                 
-                <TurnstileWidget 
-                  id="subscribe-turnstile"
-                  theme="auto"
-                  size="normal"
-                />
+                              <TurnstileWidget 
+                id="subscribe-turnstile"
+                theme="auto"
+                size="normal"
+                callback="onTurnstileSuccess"
+                expired-callback="onTurnstileExpired"
+                error-callback="onTurnstileError"
+              />
                 
                 <button type="submit" class="subscribe-button">
                   Subscribe to Newsletter
@@ -96,20 +98,48 @@ import SimpleTurnstile from '../components/SimpleTurnstile.astro';
   </main>
 
   <script>
+    let turnstileToken = '';
+    
+    // Global callback for Turnstile
+    (window as any).onTurnstileSuccess = function(token: string) {
+      console.log('✅ Turnstile challenge completed');
+      console.log('Token received:', token ? token.substring(0, 20) + '...' : 'NO TOKEN');
+      turnstileToken = token;
+    };
+
+    (window as any).onTurnstileExpired = function() {
+      console.log('❌ Turnstile challenge expired');
+      turnstileToken = '';
+    };
+
+    (window as any).onTurnstileError = function() {
+      console.log('❌ Turnstile challenge error');
+      turnstileToken = '';
+    };
+
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('newsletter-form') as HTMLFormElement;
+      const submitButton = form?.querySelector('.subscribe-button') as HTMLButtonElement;
+      
       if (!form) return;
       
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Get the Turnstile token
-        const turnstileResponse = document.querySelector('input[name="cf-turnstile-response"]') as HTMLInputElement;
-        if (!turnstileResponse || !turnstileResponse.value) {
+        // Check if Turnstile token is available
+        console.log('🔍 Checking Turnstile token:', turnstileToken ? 'EXISTS' : 'MISSING');
+        if (!turnstileToken) {
           alert('Please complete the Turnstile challenge before submitting.');
           return;
         }
         
+        // Disable submit button
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Subscribing...';
+        }
+        
+        console.log('🔍 Sending token to server for verification...');
         // Verify the token with our server
         try {
           const response = await fetch('/api/verify-turnstile', {
@@ -118,25 +148,47 @@ import SimpleTurnstile from '../components/SimpleTurnstile.astro';
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              token: turnstileResponse.value
+              token: turnstileToken
             })
           });
           
           const result = await response.json();
+          console.log('🔍 Server response:', result);
           
           if (result.success) {
+            console.log('✅ Verification successful, submitting form...');
             // Token is valid, submit the form to Kit.com
             form.submit();
           } else {
+            console.log('❌ Verification failed:', result.error, result.error_codes);
             alert('Verification failed. Please try again.');
             // Reset the Turnstile widget
             if ((window as any).turnstile) {
               (window as any).turnstile.reset('#subscribe-turnstile');
             }
+            turnstileToken = '';
+            
+            // Reset button
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = 'Subscribe to Newsletter';
+            }
           }
         } catch (error) {
-          console.error('Verification error:', error);
+          console.error('❌ Verification error:', error);
           alert('An error occurred. Please try again.');
+          
+          // Reset button
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Subscribe to Newsletter';
+          }
+          
+          // Reset Turnstile
+          if ((window as any).turnstile) {
+            (window as any).turnstile.reset('#subscribe-turnstile');
+          }
+          turnstileToken = '';
         }
       });
     });
@@ -407,59 +459,3 @@ import SimpleTurnstile from '../components/SimpleTurnstile.astro';
     }
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.subscribe-form') as HTMLFormElement;
-    const submitButton = form?.querySelector('.subscribe-button') as HTMLButtonElement;
-    
-    if (form && submitButton) {
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Get Turnstile token
-        const turnstileResponse = (window as any).turnstile?.getResponse('subscribe-turnstile');
-        
-        if (!turnstileResponse) {
-          alert('Please complete the security check before submitting.');
-          return;
-        }
-        
-        // Disable submit button
-        submitButton.disabled = true;
-        submitButton.textContent = 'Subscribing...';
-        
-        try {
-          // Verify Turnstile token
-          const verificationResponse = await fetch('/api/verify-turnstile', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ token: turnstileResponse })
-          });
-          
-          const verificationResult = await verificationResponse.json();
-          
-          if (!verificationResult.success) {
-            throw new Error('Security verification failed');
-          }
-          
-          // Submit the form normally
-          form.submit();
-          
-        } catch (error) {
-          console.error('Form submission error:', error);
-          alert('There was an error submitting the form. Please try again.');
-          
-          // Reset button
-          submitButton.disabled = false;
-          submitButton.textContent = 'Subscribe to Newsletter';
-          
-          // Reset Turnstile
-          (window as any).turnstile?.reset('subscribe-turnstile');
-        }
-      });
-    }
-  });
-</script>

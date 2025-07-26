@@ -21,8 +21,8 @@ const {
   'error-callback': errorCallback
 } = Astro.props;
 
-// Try to get the site key from environment variables
-const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb'; // Your actual Turnstile site key
+// Get the site key from environment variables
+const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb';
 ---
 
 <div 
@@ -36,18 +36,19 @@ const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb'; // Your ac
   data-error-callback={errorCallback}
 ></div>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
 <script>
-  // Handle missing site key
+  // Handle missing site key and widget validation
   document.addEventListener('DOMContentLoaded', function() {
     const turnstileElements = document.querySelectorAll('.cf-turnstile');
     turnstileElements.forEach(function(element) {
       const siteKey = element.getAttribute('data-sitekey');
-      console.log('Turnstile element siteKey:', siteKey ? 'SET' : 'NOT_SET');
+      const elementId = element.getAttribute('id');
+      console.log('Turnstile element ID:', elementId, 'siteKey:', siteKey ? 'SET' : 'NOT_SET');
+      
       if (!siteKey || siteKey === '') {
         console.warn('Turnstile site key is missing. CAPTCHA will not function.');
         (element as HTMLElement).style.display = 'none';
+        return;
       }
     });
   });
@@ -55,9 +56,9 @@ const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb'; // Your ac
 
 <style>
   .cf-turnstile {
-    margin: 1rem 0;
     display: flex;
     justify-content: center;
+    margin: 1rem 0;
   }
   
   /* Dark theme adjustments */

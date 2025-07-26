@@ -8,13 +8,15 @@ export interface Props {
   description?: string;
   ogImage?: string;
   ogType?: string;
+  slug?: string;
 }
 
 const { 
   title, 
-  description = "A digital creator exploring the intersection of technology, art, and human connection through code and creativity.",
+  description = "T-shaped generalist solopreneur, researcher, and conceptual artist operating across fintech, deep tech, competitive governance, art markets, and investment strategies. Specialized in stablecoins, RWAs, tokenization, cryptography, DeFi protocols, and emerging financial infrastructure.",
   ogImage,
-  ogType = "website"
+  ogType = "website",
+  slug
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
@@ -27,8 +29,9 @@ const generateOGImageUrl = () => {
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
   const type = ogType === 'article' ? 'blog' : 'default';
+  const slugParam = slug ? `&slug=${encodeURIComponent(slug)}` : '';
   
-  return `${baseUrl}/api/og-image?title=${encodedTitle}&description=${encodedDescription}&type=${type}`;
+  return `${baseUrl}/api/og-image?title=${encodedTitle}&description=${encodedDescription}&type=${type}${slugParam}`;
 };
 
 const dynamicOGImage = generateOGImageUrl();
@@ -43,7 +46,7 @@ const dynamicOGImage = generateOGImageUrl();
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="developer, digital art, technology, creative coding, portfolio" />
+    <meta name="keywords" content="fintech, deep tech, stablecoins, RWAs, tokenization, cryptography, DeFi, art markets, competitive governance, investment strategies, AGI, solopreneur, researcher, conceptual artist" />
     <meta name="author" content="Gökhan Turhan" />
     
     <!-- Open Graph / Facebook -->
@@ -86,14 +89,6 @@ const dynamicOGImage = generateOGImageUrl();
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title={title} href="/feed.xml" />
     
-    <!-- Farcaster Frame Support -->
-    <!-- <FarcasterFrame 
-      title={frameTitle || title}
-      description={description}
-      type={frameType}
-      image={frameImage}
-      buttonText={frameButtonText}
-    /> -->
     
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -106,7 +101,7 @@ const dynamicOGImage = generateOGImageUrl();
         "https://github.com/avalidurl", 
         "https://linkedin.com/in/goekhantuerhan"
       ],
-      "jobTitle": "T-shaped Generalist Solopreneur",
+      "jobTitle": "T-shaped Generalist Solopreneur, Researcher & Conceptual Artist",
       "description": description
     })} />
   </head>
@@ -128,6 +123,26 @@ const dynamicOGImage = generateOGImageUrl();
     
     <CookieNotice />
     
+    <!-- Global Turnstile Script Loader -->
+    <script>
+      // Global Turnstile script loader
+      (function() {
+        if (!(window as any).turnstile && !document.querySelector('script[src*="turnstile"]')) {
+          const script = document.createElement('script');
+          script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+          script.async = true;
+          script.defer = true;
+          script.onload = function() {
+            console.log('Global Turnstile script loaded successfully');
+          };
+          script.onerror = function() {
+            console.error('Failed to load global Turnstile script');
+          };
+          document.head.appendChild(script);
+        }
+      })();
+    </script>
+    
 
     
     <!-- Theme toggle now handled in Navigation component -->
@@ -137,19 +152,6 @@ const dynamicOGImage = generateOGImageUrl();
 <style is:global>
   /* Evidence-Based Accessible Color System (2025) */
   
-  /* Hide content until Turnstile verification */
-  body:not(.turnstile-verified) .protected-content {
-    opacity: 0.3;
-    pointer-events: none;
-    filter: blur(2px);
-    transition: all 0.3s ease;
-  }
-
-  body.turnstile-verified .protected-content {
-    opacity: 1;
-    pointer-events: auto;
-    filter: blur(0);
-  }
   
   :root {
     /* Core Scientific Color Palette - WCAG AAA Compliant */

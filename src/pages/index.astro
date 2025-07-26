@@ -1,11 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import TurnstileProtection from '../components/TurnstileProtection.astro';
 import { getCollection } from 'astro:content';
 
 // Fetch home singleton
 const heroTitle = 'GÖKHAN TURHAN';
-const heroSubtitle = 'I\'m a T-shaped generalist solopreneur specializing in fintech, arts & culture with a twist of AI. My background spans comparative literature, long-term speculative archives, conceptual art, and artistic curation.';
+const heroSubtitle = 'T-shaped generalist solopreneur, researcher, and conceptual artist operating across fintech, deep tech, competitive governance, art markets, and investment strategies. Research focus on stablecoins, RWAs, tokenization, cryptography, AGI timelines, and global systemic challenges.';
 // Removed dynamic hero content loading due to deprecated getSingleton API.
 
 // Get recent blog posts
@@ -104,9 +103,9 @@ const talks = [
 ---
 
 <Layout 
-  title="Gökhan Turhan - T-shaped Generalist Solopreneur"
+  title="Gökhan Turhan - T-shaped Generalist Solopreneur, Researcher & Conceptual Artist"
+  description="T-shaped generalist solopreneur, researcher, and conceptual artist operating across fintech, deep tech, competitive governance, art markets, and investment strategies. Research focus on stablecoins, RWAs, tokenization, cryptography, AGI timelines, and global systemic challenges."
 >
-  <TurnstileProtection />
   <main class="container">
     <header class="page-header">
       <h1>{heroTitle}</h1>
