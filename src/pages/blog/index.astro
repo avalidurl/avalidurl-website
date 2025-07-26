@@ -96,6 +96,9 @@ const allPosts = sortedPosts;
     margin: 0 auto;
     padding: 2rem 1rem;
     min-height: calc(100vh - 70px);
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .blog-header {
@@ -147,8 +150,15 @@ const allPosts = sortedPosts;
   
   .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+  }
+  
+  /* Force single column on smaller screens to prevent overflow */
+  @media (max-width: 640px) {
+    .articles-grid {
+      grid-template-columns: 1fr !important;
+    }
   }
   
   .article-card {
@@ -235,6 +245,7 @@ const allPosts = sortedPosts;
     .blog-container {
       padding: 1.5rem 1rem;
       max-width: 100%;
+      overflow-x: hidden;
     }
     
     .blog-layout {
@@ -252,13 +263,14 @@ const allPosts = sortedPosts;
     .articles-grid {
       grid-template-columns: 1fr !important;
       gap: 1.5rem;
+      width: 100%;
     }
     
     .article-card {
       padding: 1.5rem;
       margin: 0;
       width: 100%;
-      max-width: none;
+      max-width: 100%;
       border-radius: 8px;
       box-sizing: border-box;
     }
@@ -278,11 +290,14 @@ const allPosts = sortedPosts;
   @media (max-width: 480px) {
     .blog-container {
       padding: 1rem 0.75rem;
+      overflow-x: hidden;
     }
     
     .articles-grid {
       grid-template-columns: 1fr !important;
       gap: 1rem;
+      width: 100%;
+      margin: 0;
     }
     
     .article-card {
@@ -290,11 +305,19 @@ const allPosts = sortedPosts;
       border-radius: 8px;
       width: 100%;
       margin: 0;
-      max-width: none;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     
     .article-title {
       font-size: 1.25rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    
+    .article-excerpt {
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     
     .blog-header h1 {

@@ -217,6 +217,7 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
   html {
     font-size: 16px;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   
   body {
@@ -233,6 +234,9 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
     /* Improve text readability */
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   /* Layout */
