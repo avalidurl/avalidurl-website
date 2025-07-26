@@ -399,7 +399,6 @@ const monthNames = [
       }
     }
     setInitialArchiveState();
-    window.addEventListener('resize', setInitialArchiveState);
     if (mainToggle && mainContent) {
       mainToggle.addEventListener('click', function() {
         const isExpanded = this.classList.contains('expanded');
