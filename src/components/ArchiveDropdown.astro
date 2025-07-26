@@ -246,7 +246,7 @@ const monthNames = [
   
   .months-container,
   .posts-container {
-    max-height: 1000px;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
   }
@@ -388,13 +388,13 @@ const monthNames = [
     function setInitialArchiveState() {
       if (mainToggle && mainContent) {
         if (isMobile()) {
-          mainToggle.classList.add('expanded');
-          mainContent.classList.add('expanded');
-          mainContent.classList.remove('collapsed');
+          mainToggle.classList.remove('expanded');
+          mainContent.classList.remove('expanded');
+          mainContent.classList.add('collapsed');
         } else {
-          mainToggle.classList.add('expanded');
-          mainContent.classList.add('expanded');
-          mainContent.classList.remove('collapsed');
+          mainToggle.classList.remove('expanded');
+          mainContent.classList.remove('expanded');
+          mainContent.classList.add('collapsed');
         }
       }
     }
@@ -418,14 +418,6 @@ const monthNames = [
     // Handle year toggles
     const yearToggles = document.querySelectorAll('.year-toggle');
     yearToggles.forEach(toggle => {
-      // Set year toggles to expanded by default
-      toggle.classList.add('expanded');
-      const year = toggle.dataset.year;
-      const container = document.querySelector(`[data-year-content="${year}"]`);
-      if (container) {
-        container.classList.add('expanded');
-      }
-      
       toggle.addEventListener('click', function() {
         const year = this.dataset.year;
         const container = document.querySelector(`[data-year-content="${year}"]`);
@@ -444,14 +436,6 @@ const monthNames = [
     // Handle month toggles
     const monthToggles = document.querySelectorAll('.month-toggle');
     monthToggles.forEach(toggle => {
-      // Set month toggles to expanded by default
-      toggle.classList.add('expanded');
-      const month = toggle.dataset.month;
-      const container = document.querySelector(`[data-month-content="${month}"]`);
-      if (container) {
-        container.classList.add('expanded');
-      }
-      
       toggle.addEventListener('click', function() {
         const month = this.dataset.month;
         const container = document.querySelector(`[data-month-content="${month}"]`);
