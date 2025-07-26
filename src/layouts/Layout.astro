@@ -11,6 +11,8 @@ export interface Props {
   frameType?: 'blog' | 'home' | 'subscribe' | 'custom';
   frameImage?: string;
   frameButtonText?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
 const { 
@@ -19,10 +21,26 @@ const {
   frameTitle,
   frameType = "custom",
   frameImage,
-  frameButtonText
+  frameButtonText,
+  ogImage,
+  ogType = "website"
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
+
+// Generate dynamic OG image URL
+const generateOGImageUrl = () => {
+  if (ogImage) return ogImage;
+  
+  const baseUrl = env.SITE_URL;
+  const encodedTitle = encodeURIComponent(title);
+  const encodedDescription = encodeURIComponent(description);
+  const type = frameType === 'blog' ? 'blog' : 'default';
+  
+  return `${baseUrl}/api/og-image?title=${encodedTitle}&description=${encodedDescription}&type=${type}`;
+};
+
+const dynamicOGImage = generateOGImageUrl();
 ---
 
 <!DOCTYPE html>
@@ -38,18 +56,29 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
     <meta name="author" content="Gökhan Turhan" />
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/og-image.jpg', env.SITE_URL)} />
+    <meta property="og:image" content={dynamicOGImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:site_name" content="Gökhan Turhan" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/og-image.jpg', env.SITE_URL)} />
+    <meta property="twitter:image" content={dynamicOGImage} />
+    <meta property="twitter:image:alt" content={title} />
+    <meta property="twitter:creator" content="@0xgokhan" />
+    <meta property="twitter:site" content="@0xgokhan" />
+    
+    <!-- Additional meta tags for better social sharing -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Gökhan Turhan" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />

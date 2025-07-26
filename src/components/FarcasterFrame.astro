@@ -23,18 +23,8 @@ const {
 function generateFrameImageUrl(type: string, title: string): string {
   const baseUrl = Astro.site?.toString() || 'https://gokhanturhan.com';
   
-  switch (type) {
-    case 'blog':
-      // For blog posts, we'll create a dynamic image with the title
-      const encodedTitle = encodeURIComponent(title);
-      return `${baseUrl}/api/frame-image?type=blog&title=${encodedTitle}`;
-    case 'home':
-      return `${baseUrl}/images/frame-home.png`;
-    case 'subscribe':
-      return `${baseUrl}/images/frame-subscribe.png`;
-    default:
-      return image || `${baseUrl}/og-image.jpg`;
-  }
+  // Use static frame image for now
+  return image || `${baseUrl}/frame-default.svg`;
 }
 
 // Generate post URL for frame interactions
@@ -57,8 +47,7 @@ const framePostUrl = generatePostUrl(type);
 {/* Additional frame properties based on type */}
 {type === 'blog' && (
   <>
-    <meta property="fc:frame:button:1:action" content="link" />
-    <meta property="fc:frame:button:1:target" content={Astro.url.href} />
+    <meta property="fc:frame:button:1:action" content="post" />
   </>
 )}
 
