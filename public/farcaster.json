@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "Gökhan Turhan",
+  "description": "T-shaped Generalist Solopreneur - Finance, Art & Technology",
+  "icon": "https://gokhanturhan.com/favicon.svg",
+  "homeUrl": "https://gokhanturhan.com/miniapp",
+  "imageUrl": "https://gokhanturhan.com/api/og-image?title=Gökhan%20Turhan&description=T-shaped%20Generalist%20Solopreneur",
+  "backgroundColor": "#000000",
+  "textColor": "#FFFFFF",
+  "splashImageUrl": "https://gokhanturhan.com/api/og-image?title=Welcome&description=Finance%20•%20Art%20•%20Technology",
+  "splashBackgroundColor": "#000000"
+}
