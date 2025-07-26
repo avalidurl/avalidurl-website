@@ -53,6 +53,9 @@ const allPosts = sortedPosts;
 
     <div class="blog-layout">
       <section class="blog-main">
+        <div class="archive-section">
+          <ArchiveDropdown />
+        </div>
         <h2>All Posts</h2>
         <div class="articles-grid">
           {allPosts.map(post => (
@@ -82,10 +85,6 @@ const allPosts = sortedPosts;
           ))}
         </div>
       </section>
-
-      <aside class="blog-sidebar">
-        <ArchiveDropdown />
-      </aside>
     </div>
   </main>
 </Layout>
@@ -131,14 +130,17 @@ const allPosts = sortedPosts;
   }
   
   .blog-layout {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 3rem;
     margin-top: 2rem;
   }
   
   .blog-main {
     min-width: 0; /* Prevents overflow issues */
+  }
+  
+  .archive-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
   }
   
   .blog-main h2 {
@@ -216,28 +218,14 @@ const allPosts = sortedPosts;
     font-style: italic;
   }
   
-  .blog-sidebar {
-    position: sticky;
-    top: 2rem;
-    height: fit-content;
-    max-height: calc(100vh - 4rem);
-    overflow-y: auto;
-    padding-bottom: 2rem;
-  }
+
   
   
   /* Responsive design */
   @media (max-width: 1024px) {
-    .blog-layout {
-      grid-template-columns: 1fr 250px;
-      gap: 2rem;
-    }
-    
-    .blog-sidebar {
-      position: static;
-      max-height: none;
-      overflow-y: visible;
-      padding-bottom: 0;
+    .archive-section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
     }
   }
   
@@ -248,16 +236,9 @@ const allPosts = sortedPosts;
       overflow-x: hidden;
     }
     
-    .blog-layout {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    
-    .blog-sidebar {
-      position: static;
-      max-height: none;
-      overflow-y: visible;
-      padding-bottom: 0;
+    .archive-section {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
     }
     
     .articles-grid {
@@ -291,6 +272,11 @@ const allPosts = sortedPosts;
     .blog-container {
       padding: 1rem 0.75rem;
       overflow-x: hidden;
+    }
+    
+    .archive-section {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
     }
     
     .articles-grid {
