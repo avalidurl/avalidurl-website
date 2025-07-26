@@ -513,16 +513,45 @@ const remainingPosts = allPosts.slice(20);
         timeZone: 'Europe/Istanbul'
       });
       
-      article.innerHTML = `
-        <div class="article-meta">
-          <time class="article-date">${formattedDate}</time>
-        </div>
-        <h3 class="article-title">
-          <a href="/blog/${post.slug}">${post.title}</a>
-        </h3>
-        <p class="article-excerpt">${post.excerpt}</p>
-        ${post.readingTime ? `<span class="reading-time">${post.readingTime} min read</span>` : ''}
-      `;
+      // Create article meta
+      const articleMeta = document.createElement('div');
+      articleMeta.className = 'article-meta';
+      const timeElement = document.createElement('time');
+      timeElement.className = 'article-date';
+      timeElement.textContent = formattedDate;
+      articleMeta.appendChild(timeElement);
+      
+      // Create article title with proper styling
+      const titleElement = document.createElement('h3');
+      titleElement.className = 'article-title';
+      const linkElement = document.createElement('a');
+      linkElement.href = `/blog/${post.slug}`;
+      linkElement.textContent = post.title;
+      // Force the correct color styling
+      linkElement.style.color = 'var(--text-primary)';
+      linkElement.style.textDecoration = 'none';
+      titleElement.appendChild(linkElement);
+      
+      // Create article excerpt
+      const excerptElement = document.createElement('p');
+      excerptElement.className = 'article-excerpt';
+      excerptElement.textContent = post.excerpt;
+      // Force the correct color styling
+      excerptElement.style.color = 'var(--text-secondary)';
+      
+      // Assemble the article
+      article.appendChild(articleMeta);
+      article.appendChild(titleElement);
+      article.appendChild(excerptElement);
+      
+      // Add reading time if present
+      if (post.readingTime) {
+        const readingTimeElement = document.createElement('span');
+        readingTimeElement.className = 'reading-time';
+        readingTimeElement.textContent = `${post.readingTime} min read`;
+        readingTimeElement.style.color = 'var(--text-muted)';
+        article.appendChild(readingTimeElement);
+      }
       
       return article;
     }
