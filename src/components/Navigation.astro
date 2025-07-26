@@ -53,18 +53,15 @@ const currentPath = Astro.url.pathname;
   .main-navigation {
     background: var(--nav-bg);
     border-bottom: 1px solid var(--border-light);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: 100%;
-    overflow-x: hidden;
     box-sizing: border-box;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
   }
   
   .nav-container {
@@ -289,10 +286,17 @@ const currentPath = Astro.url.pathname;
         gap: 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         z-index: 1001;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
       }
       
       .nav-links.active {
         display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
       }
       
       .nav-link {
@@ -325,7 +329,9 @@ const currentPath = Astro.url.pathname;
       }
       
       .nav-toggle {
-        display: flex;
+        display: flex !important;
+        z-index: 1002;
+        position: relative;
       }
     }
     
@@ -375,14 +381,15 @@ const currentPath = Astro.url.pathname;
     const navLinks = document.querySelector('.nav-links');
     
     if (navToggle && navLinks) {
+      // Simple click handler for mobile menu
       navToggle.addEventListener('click', function() {
         navLinks.classList.toggle('active');
         navToggle.classList.toggle('active');
       });
       
-      // Close menu when clicking on a link
-      const links = navLinks.querySelectorAll('.nav-link');
-      links.forEach(link => {
+      // Close menu when clicking on any navigation link
+      const allNavLinks = navLinks.querySelectorAll('a, button');
+      allNavLinks.forEach(link => {
         link.addEventListener('click', function() {
           navLinks.classList.remove('active');
           navToggle.classList.remove('active');
