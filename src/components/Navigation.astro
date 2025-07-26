@@ -30,6 +30,11 @@ const currentPath = Astro.url.pathname;
         </a>
       </li>
       <li>
+        <a href="/reading-list" class={currentPath === '/reading-list' ? 'nav-link active' : 'nav-link'}>
+          Reading List
+        </a>
+      </li>
+      <li>
         <button id="nav-theme-toggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
           <span class="theme-icon">🌙</span>
         </button>
