@@ -21,11 +21,13 @@ const {
   'error-callback': errorCallback
 } = Astro.props;
 
-const siteKey = env.TURNSTILE_SITE_KEY;
+// Try multiple approaches to get the site key
+const siteKey = env.TURNSTILE_SITE_KEY || 
+                (typeof import.meta.env !== 'undefined' ? import.meta.env.TURNSTILE_SITE_KEY : null);
 
 // Debug logging
 console.log('TurnstileWidget - siteKey:', siteKey ? 'SET' : 'NOT_SET');
-console.log('TurnstileWidget - env keys:', Object.keys(env).filter(key => key.includes('TURNSTILE')));
+console.log('TurnstileWidget - import.meta.env keys:', typeof import.meta.env !== 'undefined' ? Object.keys(import.meta.env).filter(key => key.includes('TURNSTILE')) : 'N/A');
 ---
 
 <div 
