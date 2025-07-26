@@ -55,12 +55,16 @@ const currentPath = Astro.url.pathname;
     border-bottom: 1px solid var(--border-light);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     backdrop-filter: blur(10px);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   
   .nav-container {
@@ -222,6 +226,8 @@ const currentPath = Astro.url.pathname;
     cursor: pointer;
     padding: 0.5rem;
     gap: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
   }
   
   .nav-toggle-line {
@@ -232,6 +238,10 @@ const currentPath = Astro.url.pathname;
     transition: all 0.2s ease;
   }
   
+  .nav-toggle:hover {
+    background: var(--bg-tertiary);
+  }
+  
   .nav-toggle:hover .nav-toggle-line {
     background: var(--nav-accent);
   }
@@ -240,6 +250,18 @@ const currentPath = Astro.url.pathname;
     outline: 3px solid var(--border-focus);
     outline-offset: 2px;
     border-radius: 4px;
+  }
+  
+  .nav-toggle.active .nav-toggle-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.active .nav-toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active .nav-toggle-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
   
       /* Mobile Navigation */
@@ -266,6 +288,7 @@ const currentPath = Astro.url.pathname;
         padding: 1rem 0;
         gap: 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1001;
       }
       
       .nav-links.active {
@@ -320,6 +343,16 @@ const currentPath = Astro.url.pathname;
       
       .nav-brand {
         font-size: 1.1rem;
+      }
+      
+      .nav-toggle {
+        padding: 0.75rem;
+        gap: 3px;
+      }
+      
+      .nav-toggle-line {
+        width: 20px;
+        height: 2px;
       }
     }
   
