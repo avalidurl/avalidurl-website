@@ -16,16 +16,17 @@ interface EnvConfig {
 
 /**
  * Environment configuration with build-time validation
+ * For Cloudflare Pages, use process.env as fallback since import.meta.env may not be available at runtime
  */
 export const env: EnvConfig = {
-  CONTACT_EMAIL: import.meta.env.CONTACT_EMAIL || 'contact@example.com',
-  SITE_URL: import.meta.env.SITE_URL || 'https://yoursite.dev',
-  ANALYTICS_ID: import.meta.env.ANALYTICS_ID,
-  GITHUB_USERNAME: import.meta.env.GITHUB_USERNAME,
-  LINKEDIN_URL: import.meta.env.LINKEDIN_URL,
-  TWITTER_URL: import.meta.env.TWITTER_URL,
-  CSP_REPORT_URI: import.meta.env.CSP_REPORT_URI,
-  HSTS_MAX_AGE: import.meta.env.HSTS_MAX_AGE || '31536000',
+  CONTACT_EMAIL: import.meta.env.CONTACT_EMAIL || (typeof process !== 'undefined' ? process.env.CONTACT_EMAIL : null) || 'avalidurl@pm.me',
+  SITE_URL: import.meta.env.SITE_URL || (typeof process !== 'undefined' ? process.env.SITE_URL : null) || 'https://gokhanturhan.com',
+  ANALYTICS_ID: import.meta.env.ANALYTICS_ID || (typeof process !== 'undefined' ? process.env.ANALYTICS_ID : null),
+  GITHUB_USERNAME: import.meta.env.GITHUB_USERNAME || (typeof process !== 'undefined' ? process.env.GITHUB_USERNAME : null),
+  LINKEDIN_URL: import.meta.env.LINKEDIN_URL || (typeof process !== 'undefined' ? process.env.LINKEDIN_URL : null),
+  TWITTER_URL: import.meta.env.TWITTER_URL || (typeof process !== 'undefined' ? process.env.TWITTER_URL : null),
+  CSP_REPORT_URI: import.meta.env.CSP_REPORT_URI || (typeof process !== 'undefined' ? process.env.CSP_REPORT_URI : null),
+  HSTS_MAX_AGE: import.meta.env.HSTS_MAX_AGE || (typeof process !== 'undefined' ? process.env.HSTS_MAX_AGE : null) || '31536000',
 } as const;
 
 /**
