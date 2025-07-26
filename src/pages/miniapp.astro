@@ -23,7 +23,8 @@ const recentPosts = allBlogPosts
   description="Finance, Art & Technology - Optimized for Farcaster"
   frameType="custom"
 >
-  <!-- This page is optimized for Farcaster miniapp -->
+  <!-- Farcaster SDK -->
+  <script src="https://sdk.farcaster.xyz/v0.13.1/farcaster.js" async></script>
   
   <main class="miniapp-container">
     <header class="miniapp-header">
@@ -50,7 +51,7 @@ const recentPosts = allBlogPosts
               })}</time>
             </div>
             <h3>
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              <a href="#" data-post-slug={post.slug} class="post-link">{post.data.title}</a>
             </h3>
             <p class="excerpt">{post.data.description}</p>
           </article>
@@ -180,10 +181,24 @@ const recentPosts = allBlogPosts
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
   }
   
   .post-card h3 a:hover {
     color: var(--color-primary);
+  }
+  
+  .post-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .post-link::after {
+    content: '↗';
+    font-size: 0.8rem;
+    opacity: 0.6;
   }
   
   .excerpt {
@@ -254,8 +269,26 @@ const recentPosts = allBlogPosts
 </style>
 
 <script>
-  // Simple tab navigation for miniapp
+  // Function to initialize SDK when ready
+  function initializeFarcasterSDK() {
+    if (window.sdk && window.sdk.actions) {
+      console.log('Farcaster SDK ready, calling ready()');
+      window.sdk.actions.ready();
+    } else if (window.fc && window.fc.actions) {
+      console.log('Legacy FC SDK ready, calling ready()');
+      window.fc.actions.ready();
+    } else {
+      console.log('SDK not ready yet, retrying...');
+      setTimeout(initializeFarcasterSDK, 100);
+    }
+  }
+
+  // Initialize Farcaster SDK and miniapp functionality
   document.addEventListener('DOMContentLoaded', () => {
+    // Initialize SDK
+    initializeFarcasterSDK();
+    
+    // Simple tab navigation for miniapp
     const navButtons = document.querySelectorAll('.nav-button');
     const sections = document.querySelectorAll('.content-section');
     
@@ -280,5 +313,47 @@ const recentPosts = allBlogPosts
         }
       });
     });
+    
+    // Handle blog post clicks
+    const postLinks = document.querySelectorAll('.post-link');
+    postLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const slug = link.getAttribute('data-post-slug');
+        
+        // Use Farcaster SDK to open blog post in external browser
+        if (window.sdk && window.sdk.actions) {
+          window.sdk.actions.openUrl(`https://gokhanturhan.com/blog/${slug}`);
+        } else if (window.fc && window.fc.actions) {
+          window.fc.actions.openUrl(`https://gokhanturhan.com/blog/${slug}`);
+        } else {
+          // Fallback for development
+          window.open(`https://gokhanturhan.com/blog/${slug}`, '_blank');
+        }
+      });
+    });
+    
+    // Handle external links
+    const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="/subscribe"]');
+    externalLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = link.getAttribute('href');
+        const fullUrl = url.startsWith('http') ? url : `https://gokhanturhan.com${url}`;
+        
+        if (window.sdk && window.sdk.actions) {
+          window.sdk.actions.openUrl(fullUrl);
+        } else if (window.fc && window.fc.actions) {
+          window.fc.actions.openUrl(fullUrl);
+        } else {
+          window.open(fullUrl, '_blank');
+        }
+      });
+    });
   });
+  
+  // Also try to initialize immediately in case DOM is already loaded
+  setTimeout(() => {
+    initializeFarcasterSDK();
+  }, 500);
 </script>
