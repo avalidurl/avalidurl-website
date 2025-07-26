@@ -1,16 +1,11 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import CookieNotice from '../components/CookieNotice.astro';
-import FarcasterFrame from '../components/FarcasterFrame.astro';
 import { env } from '../utils/env.ts';
 
 export interface Props {
   title: string;
   description?: string;
-  frameTitle?: string;
-  frameType?: 'blog' | 'home' | 'subscribe' | 'custom';
-  frameImage?: string;
-  frameButtonText?: string;
   ogImage?: string;
   ogType?: string;
 }
@@ -18,10 +13,6 @@ export interface Props {
 const { 
   title, 
   description = "A digital creator exploring the intersection of technology, art, and human connection through code and creativity.",
-  frameTitle,
-  frameType = "custom",
-  frameImage,
-  frameButtonText,
   ogImage,
   ogType = "website"
 } = Astro.props;
@@ -35,7 +26,7 @@ const generateOGImageUrl = () => {
   const baseUrl = env.SITE_URL;
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
-  const type = frameType === 'blog' ? 'blog' : 'default';
+  const type = ogType === 'article' ? 'blog' : 'default';
   
   return `${baseUrl}/api/og-image?title=${encodedTitle}&description=${encodedDescription}&type=${type}`;
 };
@@ -80,12 +71,7 @@ const dynamicOGImage = generateOGImageUrl();
     <meta property="og:locale" content="en_US" />
     <meta property="article:author" content="Gökhan Turhan" />
     
-    <!-- Farcaster Miniapp Support -->
-    <meta name="farcaster:miniapp" content="true" />
-    <meta name="farcaster:miniapp:manifest" content="/farcaster.json" />
-    
-    <!-- Farcaster SDK for miniapp functionality -->
-    <script src="https://sdk.farcaster.xyz/v0.13.1/farcaster.js" async></script>
+
     
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
@@ -101,13 +87,13 @@ const dynamicOGImage = generateOGImageUrl();
     <link rel="alternate" type="application/rss+xml" title={title} href="/feed.xml" />
     
     <!-- Farcaster Frame Support -->
-    <FarcasterFrame 
+    <!-- <FarcasterFrame 
       title={frameTitle || title}
       description={description}
       type={frameType}
       image={frameImage}
       buttonText={frameButtonText}
-    />
+    /> -->
     
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -142,42 +128,7 @@ const dynamicOGImage = generateOGImageUrl();
     
     <CookieNotice />
     
-    <!-- Farcaster SDK Initialization -->
-    <script>
-      // Function to initialize Farcaster SDK
-      function initializeFarcasterSDK() {
-        if (window.sdk && window.sdk.actions) {
-          console.log('Farcaster SDK ready, calling ready()');
-          window.sdk.actions.ready();
-        } else if (window.fc && window.fc.actions) {
-          console.log('Legacy FC SDK ready, calling ready()');
-          window.fc.actions.ready();
-        } else {
-          // Retry if SDK not ready
-          setTimeout(initializeFarcasterSDK, 100);
-        }
-      }
 
-      // Initialize when DOM is loaded
-      document.addEventListener('DOMContentLoaded', () => {
-        // Check if we're in a Farcaster miniapp context
-        if (window.location.search.includes('farcaster') || 
-            window.parent !== window || 
-            navigator.userAgent.includes('Farcaster')) {
-          console.log('Detected Farcaster context, initializing SDK...');
-          initializeFarcasterSDK();
-        }
-      });
-
-      // Also try immediate initialization
-      setTimeout(() => {
-        if (window.location.search.includes('farcaster') || 
-            window.parent !== window || 
-            navigator.userAgent.includes('Farcaster')) {
-          initializeFarcasterSDK();
-        }
-      }, 500);
-    </script>
     
     <!-- Theme toggle now handled in Navigation component -->
   </body>

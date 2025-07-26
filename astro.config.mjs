@@ -27,6 +27,16 @@ export default defineConfig({
     build: {
       cssMinify: true,
       minify: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom'],
+            'astro-vendor': ['astro'],
+            'keystatic-vendor': ['@keystatic/astro', '@keystatic/core'],
+            'content-vendor': ['@astrojs/mdx', '@astrojs/markdoc'],
+          },
+        },
+      },
     },
     resolve: {
       // Use react-dom/server.edge instead of react-dom/server.browser for React 19.
