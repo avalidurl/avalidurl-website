@@ -78,7 +78,6 @@ const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb';
 <script>
   // Global callbacks for Turnstile
   (window as any).onTurnstileSuccess = function(token: string) {
-    console.log('✅ Turnstile protection challenge completed');
     const protection = document.getElementById('turnstile-protection');
     if (protection) {
       protection.classList.add('hidden');
@@ -86,7 +85,6 @@ const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb';
   };
 
   (window as any).onTurnstileExpired = function() {
-    console.log('❌ Turnstile protection challenge expired');
     // Optionally reload the challenge
     if ((window as any).turnstile) {
       (window as any).turnstile.reset('#protection-turnstile');

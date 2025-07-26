@@ -43,10 +43,8 @@ const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb';
     turnstileElements.forEach(function(element) {
       const siteKey = element.getAttribute('data-sitekey');
       const elementId = element.getAttribute('id');
-      console.log('Turnstile element ID:', elementId, 'siteKey:', siteKey ? 'SET' : 'NOT_SET');
       
       if (!siteKey || siteKey === '') {
-        console.warn('Turnstile site key is missing. CAPTCHA will not function.');
         (element as HTMLElement).style.display = 'none';
         return;
       }

@@ -706,17 +706,23 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
       }
     });
     
-    // Create TOC links
-    let tocHTML = '';
+    // Create TOC links safely (XSS protection)
+    const fragment = document.createDocumentFragment();
     headings.forEach((heading) => {
       const level = heading.tagName.toLowerCase();
-      const text = heading.textContent;
+      const text = heading.textContent || '';
       const id = heading.id;
       
-      tocHTML += `<a href="#${id}" class="toc-${level}" data-heading="${id}">${text}</a>`;
+      const link = document.createElement('a');
+      link.href = `#${id}`;
+      link.className = `toc-${level}`;
+      link.setAttribute('data-heading', id);
+      link.textContent = text; // Safe text insertion, prevents XSS
+      
+      fragment.appendChild(link);
     });
     
-    tocNav.innerHTML = tocHTML;
+    tocNav.appendChild(fragment);
     
     // Show TOC if there are headings
     if (headings.length > 1) {

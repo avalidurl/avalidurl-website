@@ -102,18 +102,14 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
     
     // Global callback for Turnstile
     (window as any).onTurnstileSuccess = function(token: string) {
-      console.log('✅ Turnstile challenge completed');
-      console.log('Token received:', token ? token.substring(0, 20) + '...' : 'NO TOKEN');
       turnstileToken = token;
     };
 
     (window as any).onTurnstileExpired = function() {
-      console.log('❌ Turnstile challenge expired');
       turnstileToken = '';
     };
 
     (window as any).onTurnstileError = function() {
-      console.log('❌ Turnstile challenge error');
       turnstileToken = '';
     };
 
@@ -127,7 +123,6 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
         e.preventDefault();
         
         // Check if Turnstile token is available
-        console.log('🔍 Checking Turnstile token:', turnstileToken ? 'EXISTS' : 'MISSING');
         if (!turnstileToken) {
           alert('Please complete the Turnstile challenge before submitting.');
           return;
@@ -139,7 +134,6 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
           submitButton.textContent = 'Subscribing...';
         }
         
-        console.log('🔍 Sending token to server for verification...');
         // Verify the token with our server
         try {
           const response = await fetch('/api/verify-turnstile', {
@@ -153,14 +147,11 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
           });
           
           const result = await response.json();
-          console.log('🔍 Server response:', result);
           
           if (result.success) {
-            console.log('✅ Verification successful, submitting form...');
             // Token is valid, submit the form to Kit.com
             form.submit();
           } else {
-            console.log('❌ Verification failed:', result.error, result.error_codes);
             alert('Verification failed. Please try again.');
             // Reset the Turnstile widget
             if ((window as any).turnstile) {
@@ -175,7 +166,6 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
             }
           }
         } catch (error) {
-          console.error('❌ Verification error:', error);
           alert('An error occurred. Please try again.');
           
           // Reset button
