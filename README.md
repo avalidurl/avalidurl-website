@@ -1,17 +1,28 @@
-# avalidurl-website
+# gokhanturhan.com
 
-A modern, minimalist blog website built with Astro, featuring a comprehensive Substack content import system. This project demonstrates how to build a fast, SEO-optimized blog with automated content migration tools.
+Personal website and digital journal of Gökhan Turhan, exploring the intersection of finance, art, and technology. Built with modern web technologies for optimal performance and user experience.
+
+🌐 **Live Site**: [gokhanturhan.com](https://gokhanturhan.com)
 
 ## ✨ Features
 
 - **Modern Blog Platform**: Built with Astro for optimal performance and SEO
-- **Substack Import System**: Comprehensive tools to migrate content from Substack
 - **Content Management**: Support for blog posts, art projects, and essays
-- **Rich Media Support**: Embedded YouTube, Twitter, Spotify, and other media
-- **Responsive Design**: Mobile-first, minimalist aesthetic
+- **Rich Media Support**: Embedded YouTube, Twitter, Spotify, and other media platforms
+- **Responsive Design**: Mobile-first, minimalist aesthetic optimized for all devices
 - **RSS Feed**: Auto-generated RSS feed for subscribers
-- **Image Optimization**: Automatic image downloading and optimization
+- **Theme Support**: Dark/light theme toggle
+- **Archive System**: Organized content browsing by date and topics
 - **SEO Optimized**: Meta tags, structured data, and sitemap generation
+
+## 🛠 Tech Stack
+
+- **Framework**: [Astro](https://astro.build/) - Static site generator with server-side rendering
+- **Styling**: CSS with CSS Custom Properties for theming
+- **Content**: Markdown with MDX support for rich content
+- **Icons**: Custom SVG icons and web fonts
+- **Deployment**: Cloudflare Pages with automatic builds
+- **Environment**: Node.js runtime with TypeScript support
 
 ## 🚀 Quick Start
 
@@ -24,7 +35,7 @@ A modern, minimalist blog website built with Astro, featuring a comprehensive Su
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/avalidurl-website.git
+git clone https://github.com/avalidurl/avalidurl-website.git
 cd avalidurl-website
 ```
 
@@ -46,69 +57,44 @@ npm run dev
 avalidurl-website/
 ├── src/
 │   ├── components/       # Reusable Astro components
-│   ├── content/         # Content collections (blog posts, art, essays)
+│   │   ├── Navigation.astro
+│   │   ├── ArchiveDropdown.astro
+│   │   ├── SocialShare.astro
+│   │   └── ...
+│   ├── content/         # Content collections
+│   │   ├── blog/        # Blog posts in Markdown/MDX
+│   │   ├── art/         # Art project pages
+│   │   └── essays/      # Long-form essays
 │   ├── layouts/         # Page layouts
-│   ├── pages/           # Page routes
+│   │   └── Layout.astro # Main layout with theme support
+│   ├── pages/           # File-based routing
+│   │   ├── blog/        # Blog listing and individual posts
+│   │   ├── topics/      # Topic-based content filtering
+│   │   ├── archive/     # Date-based content browsing
+│   │   └── ...
 │   └── utils/           # Utility functions
-├── scripts/             # Import and utility scripts
-│   ├── comprehensive-substack-importer.cjs  # Main Substack importer
-│   └── ...              # Other utility scripts
+│       └── env.ts       # Environment variable handling
 ├── public/              # Static assets
-└── dist/                # Built site (generated)
+│   ├── images/         # Optimized images
+│   ├── favicon.ico     # Site icons
+│   └── ...
+└── dist/               # Built site (generated)
 ```
-
-## 🛠 Substack Import System
-
-This project includes a powerful Substack content migration system that can import your entire Substack publication with full formatting preservation.
-
-### Features
-
-- **Complete Content Import**: Exports posts, images, and metadata
-- **Image Processing**: Downloads and optimizes all images locally
-- **Embed Conversion**: Converts Substack embeds to proper Astro components
-- **SEO Preservation**: Maintains original URLs and meta information
-- **Smart Formatting**: Converts HTML to clean Markdown with proper frontmatter
-
-### How to Use
-
-1. **Export from Substack**:
-   - Go to your Substack settings
-   - Navigate to "Export" and download your content
-   - Extract the zip file to `scripts/` directory
-
-2. **Run the Importer**:
-```bash
-npm run import-all-substack
-```
-
-3. **Review Imported Content**:
-   - Check `src/content/blog/` for imported posts
-   - Verify images in `public/blog/images/`
-
-### Import Script Features
-
-- **Rate Limiting**: Prevents overwhelming external services
-- **Error Handling**: Graceful failure recovery and retry logic
-- **Content Processing**: 
-  - HTML to Markdown conversion
-  - Embed URL conversion to Astro components
-  - Image downloading and local storage
-  - Metadata extraction and frontmatter generation
 
 ## 📝 Content Management
 
 ### Adding New Posts
 
-Create a new Markdown file in `src/content/blog/` with the following frontmatter:
+Create a new Markdown or MDX file in `src/content/blog/` with frontmatter:
 
 ```markdown
 ---
 title: "Your Post Title"
 description: "A brief description"
 publishDate: 2024-01-01
-author: "Your Name"
-tags: ["tag1", "tag2"]
-category: "category"
+author: "Gökhan Turhan"
+tags: ["finance", "art", "technology"]
+category: "general"
 featured: false
 readingTime: 5
 excerpt: "Post excerpt..."
@@ -119,13 +105,13 @@ Your content here...
 
 ### Content Types
 
-- **Blog Posts**: Regular blog content in `src/content/blog/`
-- **Art Projects**: Visual projects in `src/content/art/`
-- **Essays**: Long-form content in `src/content/essays/`
+- **Blog Posts**: Regular journal entries in `src/content/blog/`
+- **Art Projects**: Visual projects and installations in `src/content/art/`
+- **Essays**: Long-form analytical content in `src/content/essays/`
 
 ### Media Embeds
 
-Use these Astro components for rich media:
+Rich media components for enhanced content:
 
 ```astro
 <YouTubeEmbed id="VIDEO_ID" />
@@ -134,6 +120,7 @@ Use these Astro components for rich media:
 <AppleMusicEmbed type="album" id="ALBUM_ID" />
 <VimeoEmbed id="VIDEO_ID" />
 <SoundCloudEmbed user="USER" track="TRACK" />
+<BandcampEmbed album="ALBUM_ID" />
 ```
 
 ## 🔧 Configuration
@@ -144,22 +131,23 @@ Create a `.env` file in the root directory:
 
 ```env
 # Site Configuration
-SITE_URL=https://yourdomain.com
-SITE_TITLE=Your Site Title
-SITE_DESCRIPTION=Your site description
+SITE_URL=https://gokhanturhan.com
+CONTACT_EMAIL=avalidurl@pm.me
 
-# Optional: Analytics
+# Optional: Analytics and Services
 GOOGLE_ANALYTICS_ID=GA_MEASUREMENT_ID
 ```
 
 ### Astro Configuration
 
-Edit `astro.config.mjs` to customize:
+The site is configured in `astro.config.mjs`:
 
 ```javascript
 export default defineConfig({
-  site: 'https://yourdomain.com',
-  // ... other configuration options
+  site: 'https://gokhanturhan.com',
+  integrations: [mdx(), react(), markdoc()],
+  adapter: cloudflare(),
+  output: 'server'
 });
 ```
 
@@ -173,57 +161,62 @@ npm run build
 
 ### Deploy to Cloudflare Pages
 
-1. Connect your GitHub repository to Cloudflare Pages
-2. Set build command: `npm run build`
-3. Set output directory: `dist`
-4. Deploy automatically on git push
+The site automatically deploys to Cloudflare Pages on every push to the main branch:
 
-### Deploy to Netlify
-
-1. Connect your repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Deploy automatically on git push
-
-### Deploy to Vercel
-
-```bash
-npx vercel
-```
+1. Connected via GitHub integration
+2. Build command: `npm run build`
+3. Output directory: `dist`
+4. Environment variables configured in Cloudflare dashboard
 
 ## 📚 Available Scripts
 
 ```bash
-npm run dev           # Start development server
+npm run dev           # Start development server (localhost:4321)
 npm run build         # Build for production
-npm run preview       # Preview production build
+npm run preview       # Preview production build locally
 npm run astro         # Run Astro CLI commands
-
-# Substack Import Scripts
-npm run import-substack      # Import single Substack post
-npm run import-all-substack  # Import all Substack content
-npm run import-from-export   # Import from Substack export
-npm run fix-frontmatter     # Fix frontmatter issues
 ```
+
+## 🎨 Design Philosophy
+
+- **Minimalist**: Clean, distraction-free reading experience
+- **Typography-focused**: Optimized for long-form content consumption
+- **Performance-first**: Fast loading times and smooth interactions
+- **Accessible**: WCAG AA compliant with proper semantic markup
+- **Mobile-optimized**: Responsive design that works across all devices
+
+## 📊 Content Strategy
+
+The site focuses on three main topics:
+
+1. **Finance**: Analysis of markets, crypto, and financial technology
+2. **Art**: Digital art projects, conceptual works, and creative coding
+3. **Technology**: Technical insights, development practices, and innovation
+
+Content is organized through:
+- **Tags**: Granular topic classification
+- **Categories**: Broad content groupings
+- **Archive**: Chronological content browsing
+- **Topics**: Tag-based content discovery
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+This is a personal website, but suggestions and bug reports are welcome!
 
 ### Development Workflow
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/your-feature`
 3. Make your changes
-4. Test thoroughly
+4. Test thoroughly with `npm run build`
 5. Submit a pull request
 
 ### Code Style
 
-- Use TypeScript for type safety
-- Follow Astro best practices
-- Write meaningful commit messages
-- Add tests for new features
+- Use TypeScript for type safety where applicable
+- Follow Astro component best practices
+- Maintain accessibility standards
+- Write semantic, clean markup
 
 ## 📄 License
 
@@ -231,27 +224,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [Astro](https://astro.build/) - The web framework for content-driven websites
-- [Substack](https://substack.com/) - Platform for independent writing
-- Contributors and the open source community
+- **[Astro](https://astro.build/)** - The web framework powering this site
+- **[Cloudflare Pages](https://pages.cloudflare.com/)** - Fast, reliable hosting
+- **[MDX](https://mdxjs.com/)** - Enhanced Markdown with component support
+- **Open source community** - For the tools and inspiration
 
-## 📞 Support
+## 📞 Connect
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/avalidurl-website/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/avalidurl-website/discussions)
-- **Documentation**: [Wiki](https://github.com/yourusername/avalidurl-website/wiki)
-
-## 🗺 Roadmap
-
-- [ ] Enhanced theme customization
-- [ ] Newsletter integration
-- [ ] Comment system integration
-- [ ] Advanced analytics dashboard
-- [ ] Multi-language support
-- [ ] Plugin system for extensions
+- **Website**: [gokhanturhan.com](https://gokhanturhan.com)
+- **Twitter**: [@0xgokhan](https://x.com/0xgokhan)
+- **GitHub**: [@avalidurl](https://github.com/avalidurl)
+- **Email**: [avalidurl@pm.me](mailto:avalidurl@pm.me)
 
 ---
 
-**Made with ❤️ and Astro**
+**Built with ❤️ using Astro** • **[MIT License](https://opensource.org/licenses/MIT)**
 
-If this project helped you, please consider giving it a ⭐ on GitHub!
+*Exploring the intersection of finance, art, and code — where data meets creativity and markets become canvases.*

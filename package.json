@@ -1,6 +1,6 @@
 {
   "name": "avalidurl-website",
-  "description": "A modern, minimalist blog website built with Astro, featuring a comprehensive Substack content import system",
+  "description": "Personal website and digital journal exploring the intersection of finance, art, and technology. Built with Astro for optimal performance.",
   "version": "1.0.0",
   "type": "module",
   "author": "Gokhan Turhan",
@@ -9,15 +9,17 @@
     "type": "git",
     "url": "https://github.com/avalidurl/avalidurl-website.git"
   },
-  "homepage": "https://github.com/avalidurl/avalidurl-website#readme",
+  "homepage": "https://gokhanturhan.com",
   "bugs": {
     "url": "https://github.com/avalidurl/avalidurl-website/issues"
   },
   "keywords": [
     "astro",
     "blog",
-    "substack",
-    "content-migration",
+    "personal-website",
+    "finance",
+    "art",
+    "technology",
     "static-site",
     "markdown",
     "seo",
