@@ -19,6 +19,9 @@ const {
   height 
 } = Astro.props;
 
+// Auto-detect theme based on current mode preference
+const autoTheme = theme;
+
 // Extract tweet ID from various Twitter/X URL formats
 function extractTweetId(url: string): string | null {
   const patterns = [
@@ -111,6 +114,26 @@ const embedId = `twitter-embed-${tweetId || Math.random().toString(36).substr(2,
 )}
 
 <script>
+  // Function to detect current theme
+  function getCurrentTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  }
+
+  // Function to update tweet theme
+  function updateTweetTheme() {
+    const currentTheme = getCurrentTheme();
+    const tweetBlocks = document.querySelectorAll('.twitter-tweet');
+    
+    tweetBlocks.forEach(tweet => {
+      tweet.setAttribute('data-theme', currentTheme);
+    });
+    
+    // Reload widgets if Twitter script is available
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load();
+    }
+  }
+
   // Load Twitter widget script if not already loaded
   if (!window.twttr) {
     const script = document.createElement('script');
@@ -120,28 +143,52 @@ const embedId = `twitter-embed-${tweetId || Math.random().toString(36).substr(2,
     document.head.appendChild(script);
     
     script.onload = () => {
-      // Ensure widgets are loaded and rendered
+      // Ensure widgets are loaded and rendered with correct theme
       if (window.twttr && window.twttr.widgets) {
-        window.twttr.widgets.load();
+        updateTweetTheme();
       }
     };
   } else {
     // Script already loaded, just render widgets
-    if (window.twttr.widgets) {
-      window.twttr.widgets.load();
-    }
+    updateTweetTheme();
   }
+
+  // Listen for theme changes
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+        updateTweetTheme();
+      }
+    });
+  });
+
+  // Start observing
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
 </script>
 
 <style>
   .twitter-embed-container {
     /* Ensure proper spacing and alignment */
     overflow: hidden;
+    position: relative;
+    isolation: isolate;
   }
   
   .twitter-tweet {
     /* Override default Twitter styles for better integration */
     font-family: inherit !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    border-radius: 12px !important;
+  }
+
+  /* Prevent Twitter embed from breaking layout */
+  .twitter-tweet iframe {
+    max-width: 100% !important;
+    width: 100% !important;
   }
   
   .twitter-embed-error {

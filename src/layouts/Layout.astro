@@ -1,5 +1,6 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import CookieNotice from '../components/CookieNotice.astro';
 import { env } from '../utils/env.ts';
 
 export interface Props {
@@ -73,6 +74,20 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
   <body>
     <Navigation />
     <slot />
+    
+    <!-- Global Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-main">
+          <span>Gökhan Turhan | <a href="https://gokhanturhan.com" class="footer-link">gokhanturhan.com</a> © 2025</span>
+          <a href="https://github.com/avalidurl/avalidurl-website" target="_blank" rel="noopener noreferrer" aria-label="MIT License" class="license-link">
+            <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License" class="license-badge" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    <CookieNotice />
     
     <!-- Theme toggle now handled in Navigation component -->
   </body>
@@ -595,8 +610,14 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
     color: var(--color-primary);
   }
 
+  .license-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
   .license-badge {
     height: 20px;
+    vertical-align: middle;
   }
   
   .subscribe-link {

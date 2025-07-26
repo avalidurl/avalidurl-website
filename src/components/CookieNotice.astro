@@ -1,0 +1,207 @@
+---
+// Cookie Notice Component
+// Shows only once per IP address using localStorage
+---
+
+<div id="cookie-notice" class="cookie-notice hidden">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <p>We use minimal analytics to improve your experience. No tracking or advertising cookies.</p>
+    </div>
+    <div class="cookie-actions">
+      <a href="/privacy" class="privacy-link">Privacy Policy</a>
+      <button id="accept-cookies" class="accept-button">Got it</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Check if user has already seen the notice
+  function hasSeenNotice() {
+    try {
+      return localStorage.getItem('cookieNoticeShown') === 'true';
+    } catch (e) {
+      // Fallback if localStorage is not available
+      return false;
+    }
+  }
+
+  // Mark notice as shown
+  function markNoticeShown() {
+    try {
+      localStorage.setItem('cookieNoticeShown', 'true');
+    } catch (e) {
+      // Silent fail if localStorage is not available
+    }
+  }
+
+  // Hide the notice
+  function hideNotice() {
+    const notice = document.getElementById('cookie-notice');
+    if (notice) {
+      notice.classList.add('hiding');
+      setTimeout(() => {
+        notice.style.display = 'none';
+      }, 300);
+    }
+  }
+
+  // Show the notice
+  function showNotice() {
+    const notice = document.getElementById('cookie-notice');
+    if (notice) {
+      notice.classList.remove('hidden');
+      // Small delay to trigger CSS transition
+      setTimeout(() => {
+        notice.classList.add('visible');
+      }, 100);
+    }
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Only show if user hasn't seen it before
+    if (!hasSeenNotice()) {
+      // Small delay to not interfere with page load
+      setTimeout(showNotice, 1500);
+    }
+
+    // Handle accept button click
+    const acceptButton = document.getElementById('accept-cookies');
+    if (acceptButton) {
+      acceptButton.addEventListener('click', function() {
+        markNoticeShown();
+        hideNotice();
+      });
+    }
+  });
+</script>
+
+<style>
+  .cookie-notice {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 350px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    z-index: 1000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .cookie-notice.hidden {
+    display: none;
+  }
+
+  .cookie-notice.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .cookie-notice.hiding {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  .cookie-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cookie-text p {
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  .cookie-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .privacy-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    border-bottom: 1px dotted var(--color-primary);
+  }
+
+  .privacy-link:hover {
+    color: var(--color-primary-hover);
+    border-bottom-color: var(--color-primary-hover);
+  }
+
+  .accept-button {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .accept-button:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .accept-button:active {
+    transform: translateY(0);
+  }
+
+  /* Dark mode specific adjustments */
+  [data-theme="dark"] .cookie-notice {
+    box-shadow: 0 8px 24px rgba(255, 140, 0, 0.2);
+    border-color: var(--border-medium);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .cookie-notice {
+      bottom: 15px;
+      right: 15px;
+      left: 15px;
+      max-width: none;
+      padding: 1.25rem;
+    }
+
+    .cookie-actions {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: stretch;
+    }
+
+    .accept-button {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cookie-notice {
+      bottom: 10px;
+      right: 10px;
+      left: 10px;
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .cookie-content {
+      gap: 0.75rem;
+    }
+  }
+</style>
