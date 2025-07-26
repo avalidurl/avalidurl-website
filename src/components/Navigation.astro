@@ -10,11 +10,6 @@ const currentPath = Astro.url.pathname;
     
     <ul class="nav-links">
       <li>
-        <a href="/" class={currentPath === '/' ? 'nav-link active' : 'nav-link'}>
-          Home
-        </a>
-      </li>
-      <li>
         <a href="/blog" class={currentPath.startsWith('/blog') ? 'nav-link active' : 'nav-link'}>
           Journal
         </a>
@@ -27,6 +22,11 @@ const currentPath = Astro.url.pathname;
       <li>
         <a href="/links" class={currentPath === '/links' ? 'nav-link active' : 'nav-link'}>
           Links
+        </a>
+      </li>
+      <li>
+        <a href="/topics" class={currentPath.startsWith('/topics') ? 'nav-link active' : 'nav-link'}>
+          Topics
         </a>
       </li>
       <li>
