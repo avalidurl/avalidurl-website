@@ -246,7 +246,7 @@ const monthNames = [
   
   .months-container,
   .posts-container {
-    max-height: 0;
+    max-height: 1000px;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
   }
@@ -418,6 +418,14 @@ const monthNames = [
     // Handle year toggles
     const yearToggles = document.querySelectorAll('.year-toggle');
     yearToggles.forEach(toggle => {
+      // Set year toggles to expanded by default
+      toggle.classList.add('expanded');
+      const year = toggle.dataset.year;
+      const container = document.querySelector(`[data-year-content="${year}"]`);
+      if (container) {
+        container.classList.add('expanded');
+      }
+      
       toggle.addEventListener('click', function() {
         const year = this.dataset.year;
         const container = document.querySelector(`[data-year-content="${year}"]`);
@@ -425,10 +433,10 @@ const monthNames = [
         
         if (isExpanded) {
           this.classList.remove('expanded');
-          container.classList.remove('expanded');
+          if (container) container.classList.remove('expanded');
         } else {
           this.classList.add('expanded');
-          container.classList.add('expanded');
+          if (container) container.classList.add('expanded');
         }
       });
     });
@@ -436,6 +444,14 @@ const monthNames = [
     // Handle month toggles
     const monthToggles = document.querySelectorAll('.month-toggle');
     monthToggles.forEach(toggle => {
+      // Set month toggles to expanded by default
+      toggle.classList.add('expanded');
+      const month = toggle.dataset.month;
+      const container = document.querySelector(`[data-month-content="${month}"]`);
+      if (container) {
+        container.classList.add('expanded');
+      }
+      
       toggle.addEventListener('click', function() {
         const month = this.dataset.month;
         const container = document.querySelector(`[data-month-content="${month}"]`);
@@ -443,10 +459,10 @@ const monthNames = [
         
         if (isExpanded) {
           this.classList.remove('expanded');
-          container.classList.remove('expanded');
+          if (container) container.classList.remove('expanded');
         } else {
           this.classList.add('expanded');
-          container.classList.add('expanded');
+          if (container) container.classList.add('expanded');
         }
       });
     });
