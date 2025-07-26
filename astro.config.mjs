@@ -27,13 +27,18 @@ export default defineConfig({
     build: {
       cssMinify: true,
       minify: true,
+      chunkSizeWarningLimit: 3000, // Increase limit to suppress warning for large chunks
       rollupOptions: {
         output: {
           manualChunks: {
             'react-vendor': ['react', 'react-dom'],
             'astro-vendor': ['astro'],
-            'keystatic-vendor': ['@keystatic/astro', '@keystatic/core'],
+            'keystatic-core': ['@keystatic/core'],
+            'keystatic-astro': ['@keystatic/astro'],
+            'keystatic-ui': ['@keystatic/ui'],
             'content-vendor': ['@astrojs/mdx', '@astrojs/markdoc'],
+            'cloudflare-vendor': ['@astrojs/cloudflare'],
+            'utils-vendor': ['date-fns', 'zod', 'nanoid'],
           },
         },
       },

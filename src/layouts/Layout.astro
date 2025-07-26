@@ -136,6 +136,21 @@ const dynamicOGImage = generateOGImageUrl();
 
 <style is:global>
   /* Evidence-Based Accessible Color System (2025) */
+  
+  /* Hide content until Turnstile verification */
+  body:not(.turnstile-verified) .protected-content {
+    opacity: 0.3;
+    pointer-events: none;
+    filter: blur(2px);
+    transition: all 0.3s ease;
+  }
+
+  body.turnstile-verified .protected-content {
+    opacity: 1;
+    pointer-events: auto;
+    filter: blur(0);
+  }
+  
   :root {
     /* Core Scientific Color Palette - WCAG AAA Compliant */
     

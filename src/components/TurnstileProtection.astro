@@ -1,0 +1,117 @@
+---
+// Turnstile Protection Component
+// This component adds Turnstile protection to any page
+// It shows a challenge that users must complete before accessing content
+
+import { env } from '../utils/env';
+
+// Try to get the site key from environment variables
+const siteKey = env.TURNSTILE_SITE_KEY || '0x4AAAAAABmn1WuzbwvsAGxb'; // Your actual Turnstile site key
+---
+
+<div class="turnstile-protection" id="turnstile-protection">
+  <div class="protection-overlay">
+    <div class="protection-content">
+      <h2>🔒 Security Check</h2>
+      <p>Please complete the security challenge to access this page.</p>
+      
+      <div class="turnstile-container">
+        <div class="cf-turnstile" data-sitekey={siteKey} data-callback="onTurnstileSuccess" data-expired-callback="onTurnstileExpired"></div>
+      </div>
+      
+      <p class="protection-note">This helps protect against automated traffic and ensures a better experience for real users.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<style>
+  .turnstile-protection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .protection-overlay {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .protection-content h2 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.5rem;
+  }
+
+  .protection-content p {
+    margin: 0 0 1.5rem 0;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .turnstile-container {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .protection-note {
+    font-size: 0.875rem;
+    color: #888;
+    margin-top: 1rem;
+  }
+
+  /* Hide the protection when challenge is completed */
+  .turnstile-protection.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  // Global callbacks for Turnstile
+  (window as any).onTurnstileSuccess = function(token: string) {
+    console.log('✅ Turnstile challenge completed');
+    
+    // Store the token in sessionStorage for this session
+    sessionStorage.setItem('turnstile-verified', 'true');
+    sessionStorage.setItem('turnstile-token', token);
+    
+    // Hide the protection overlay
+    const protection = document.getElementById('turnstile-protection');
+    if (protection) {
+      protection.classList.add('hidden');
+    }
+    
+    // Enable any disabled content
+    document.body.classList.add('turnstile-verified');
+  };
+
+  (window as any).onTurnstileExpired = function() {
+    console.log('❌ Turnstile challenge expired');
+    // Optionally show a message or refresh the challenge
+  };
+
+  // Check if user is already verified
+  document.addEventListener('DOMContentLoaded', function() {
+    const isVerified = sessionStorage.getItem('turnstile-verified');
+    if (isVerified === 'true') {
+      const protection = document.getElementById('turnstile-protection');
+      if (protection) {
+        protection.classList.add('hidden');
+      }
+      document.body.classList.add('turnstile-verified');
+    }
+  });
+</script> 
