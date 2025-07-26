@@ -58,6 +58,9 @@ const currentPath = Astro.url.pathname;
     z-index: 100;
     backdrop-filter: blur(10px);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
   
   .nav-container {
@@ -68,6 +71,9 @@ const currentPath = Astro.url.pathname;
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   
   .nav-brand {
@@ -240,6 +246,9 @@ const currentPath = Astro.url.pathname;
     @media (max-width: 768px) {
       .nav-container {
         padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
       }
       
       .nav-links {
@@ -248,7 +257,8 @@ const currentPath = Astro.url.pathname;
         top: 100%;
         right: 0;
         left: auto;
-        width: 250px;
+        width: calc(100vw - 2rem);
+        max-width: 250px;
         background: var(--nav-bg);
         border: 1px solid var(--border-light);
         border-radius: 8px;
@@ -293,6 +303,23 @@ const currentPath = Astro.url.pathname;
       
       .nav-toggle {
         display: flex;
+      }
+    }
+    
+    /* Extra small screens */
+    @media (max-width: 480px) {
+      .nav-container {
+        padding: 0 0.75rem;
+      }
+      
+      .nav-links {
+        width: calc(100vw - 1.5rem);
+        max-width: 280px;
+        right: 0.75rem;
+      }
+      
+      .nav-brand {
+        font-size: 1.1rem;
       }
     }
   
