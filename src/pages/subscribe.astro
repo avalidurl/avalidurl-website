@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import TurnstileWidget from '../components/TurnstileWidget.astro';
+import SimpleTurnstile from '../components/SimpleTurnstile.astro';
 ---
 
 <Layout 
@@ -53,11 +54,7 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
                   </select>
                 </div>
                 
-                <TurnstileWidget 
-                  id="subscribe-turnstile"
-                  theme="auto"
-                  size="normal"
-                />
+                <SimpleTurnstile />
                 
                 <button type="submit" class="subscribe-button">
                   Subscribe to Newsletter
