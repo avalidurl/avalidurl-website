@@ -84,6 +84,9 @@ const dynamicOGImage = generateOGImageUrl();
     <meta name="farcaster:miniapp" content="true" />
     <meta name="farcaster:miniapp:manifest" content="/farcaster.json" />
     
+    <!-- Farcaster SDK for miniapp functionality -->
+    <script src="https://sdk.farcaster.xyz/v0.13.1/farcaster.js" async></script>
+    
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
     
@@ -138,6 +141,43 @@ const dynamicOGImage = generateOGImageUrl();
     </footer>
     
     <CookieNotice />
+    
+    <!-- Farcaster SDK Initialization -->
+    <script>
+      // Function to initialize Farcaster SDK
+      function initializeFarcasterSDK() {
+        if (window.sdk && window.sdk.actions) {
+          console.log('Farcaster SDK ready, calling ready()');
+          window.sdk.actions.ready();
+        } else if (window.fc && window.fc.actions) {
+          console.log('Legacy FC SDK ready, calling ready()');
+          window.fc.actions.ready();
+        } else {
+          // Retry if SDK not ready
+          setTimeout(initializeFarcasterSDK, 100);
+        }
+      }
+
+      // Initialize when DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        // Check if we're in a Farcaster miniapp context
+        if (window.location.search.includes('farcaster') || 
+            window.parent !== window || 
+            navigator.userAgent.includes('Farcaster')) {
+          console.log('Detected Farcaster context, initializing SDK...');
+          initializeFarcasterSDK();
+        }
+      });
+
+      // Also try immediate initialization
+      setTimeout(() => {
+        if (window.location.search.includes('farcaster') || 
+            window.parent !== window || 
+            navigator.userAgent.includes('Farcaster')) {
+          initializeFarcasterSDK();
+        }
+      }, 500);
+    </script>
     
     <!-- Theme toggle now handled in Navigation component -->
   </body>
