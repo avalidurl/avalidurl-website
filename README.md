@@ -240,4 +240,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ using Astro** • **[MIT License](https://opensource.org/licenses/MIT)**
 
-*Exploring the intersection of finance, art, and code — where data meets creativity and markets become canvases.*
+*Exploring the intersection of finance, art, and code — where data meets creativity and markets become canvases.*# Trigger redeploy with environment variables
