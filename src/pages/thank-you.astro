@@ -74,32 +74,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         
-        <div class="community-section">
-          <h2>Join the Conversation</h2>
-          <p>Connect with me on other platforms for real-time updates and discussions:</p>
-          
-          <div class="social-links">
-            <a href="#" class="social-link twitter">
-              <span class="social-icon">🐦</span>
-              <span class="social-label">Twitter</span>
-            </a>
-            <a href="#" class="social-link github">
-              <span class="social-icon">💻</span>
-              <span class="social-label">GitHub</span>
-            </a>
-            <a href="#" class="social-link linkedin">
-              <span class="social-icon">💼</span>
-              <span class="social-label">LinkedIn</span>
-            </a>
-          </div>
         </div>
-      </div>
-      
-      <div class="thank-you-footer">
-        <p>
-          Questions or feedback? Simply reply to any email I send—I read and respond to every message.
-        </p>
-        <a href="/blog" class="continue-reading">Continue Reading the Journal</a>
       </div>
     </div>
   </main>
@@ -314,98 +289,11 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.95rem;
   }
   
-  .community-section {
-    margin-bottom: 4rem;
-  }
-  
-  .community-section p {
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-  
-  .social-links {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-  }
-  
-  .social-link {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 1.5rem;
-    background: var(--bg-card);
-    border: 2px solid var(--border-light);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-  
-  .social-link:hover {
-    border-color: var(--accent-primary);
-    background: var(--accent-primary);
-    color: var(--text-on-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-  }
-  
-  .social-icon {
-    font-size: 1.25rem;
-  }
-  
-  .thank-you-footer {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-light);
-    color: var(--text-secondary);
-  }
-  
-  .thank-you-footer p {
-    margin-bottom: 2rem;
-    font-size: 1.05rem;
-    line-height: 1.6;
-  }
-  
-  .continue-reading {
-    display: inline-block;
-    background: var(--blog-sepia);
-    color: var(--blog-warm-white);
-    padding: 1rem 2rem;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    border: 2px solid var(--blog-sepia);
-  }
-  
-  .continue-reading:hover {
-    background: var(--blog-bronze);
-    border-color: var(--blog-bronze);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(205, 127, 50, 0.3);
-  }
   
   @media (max-width: 768px) {
     .expectations-grid,
     .explore-grid {
       grid-template-columns: 1fr;
-    }
-    
-    .social-links {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .social-link {
-      width: 200px;
-      justify-content: center;
     }
     
     .expectation-card,
