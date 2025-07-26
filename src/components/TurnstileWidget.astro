@@ -1,0 +1,59 @@
+---
+import { env } from '../utils/env.js';
+
+interface Props {
+  id?: string;
+  class?: string;
+  theme?: 'light' | 'dark' | 'auto';
+  size?: 'normal' | 'compact' | 'invisible';
+  callback?: string;
+  'expired-callback'?: string;
+  'error-callback'?: string;
+}
+
+const { 
+  id = 'cf-turnstile', 
+  class: className = '', 
+  theme = 'auto',
+  size = 'normal',
+  callback,
+  'expired-callback': expiredCallback,
+  'error-callback': errorCallback
+} = Astro.props;
+
+const siteKey = env.TURNSTILE_SITE_KEY;
+---
+
+{siteKey && (
+  <div 
+    id={id}
+    class={`cf-turnstile ${className}`}
+    data-sitekey={siteKey}
+    data-theme={theme}
+    data-size={size}
+    data-callback={callback}
+    data-expired-callback={expiredCallback}
+    data-error-callback={errorCallback}
+  ></div>
+)}
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<style>
+  .cf-turnstile {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Dark theme adjustments */
+  [data-theme="dark"] .cf-turnstile {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  
+  /* Compact size */
+  .cf-turnstile[data-size="compact"] {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+</style> 

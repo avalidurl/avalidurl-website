@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import TurnstileWidget from '../components/TurnstileWidget.astro';
 ---
 
 <Layout 
@@ -51,6 +52,12 @@ import Layout from '../layouts/Layout.astro';
                     <option value="technology">Technology & Innovation</option>
                   </select>
                 </div>
+                
+                <TurnstileWidget 
+                  id="subscribe-turnstile"
+                  theme="auto"
+                  size="normal"
+                />
                 
                 <button type="submit" class="subscribe-button">
                   Subscribe to Newsletter
@@ -355,3 +362,59 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.subscribe-form') as HTMLFormElement;
+    const submitButton = form?.querySelector('.subscribe-button') as HTMLButtonElement;
+    
+    if (form && submitButton) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Get Turnstile token
+        const turnstileResponse = (window as any).turnstile?.getResponse('subscribe-turnstile');
+        
+        if (!turnstileResponse) {
+          alert('Please complete the security check before submitting.');
+          return;
+        }
+        
+        // Disable submit button
+        submitButton.disabled = true;
+        submitButton.textContent = 'Subscribing...';
+        
+        try {
+          // Verify Turnstile token
+          const verificationResponse = await fetch('/api/verify-turnstile', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ token: turnstileResponse })
+          });
+          
+          const verificationResult = await verificationResponse.json();
+          
+          if (!verificationResult.success) {
+            throw new Error('Security verification failed');
+          }
+          
+          // Submit the form normally
+          form.submit();
+          
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('There was an error submitting the form. Please try again.');
+          
+          // Reset button
+          submitButton.disabled = false;
+          submitButton.textContent = 'Subscribe to Newsletter';
+          
+          // Reset Turnstile
+          (window as any).turnstile?.reset('subscribe-turnstile');
+        }
+      });
+    }
+  });
+</script>
