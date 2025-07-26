@@ -5,8 +5,8 @@ import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 import cloudflare from '@astrojs/cloudflare';
 
-// Use environment variable or fallback to placeholder
-const site = process.env.SITE_URL || 'https://yourdomain.com';
+// Use environment variable or fallback to production domain
+const site = process.env.SITE_URL || 'https://gokhanturhan.com';
 
 export default defineConfig({
   site: site,
