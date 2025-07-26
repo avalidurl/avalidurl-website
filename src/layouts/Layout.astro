@@ -308,6 +308,18 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
     text-decoration: none;
   }
   
+  /* Dotted underline links */
+  .dotted-link {
+    text-decoration: none;
+    border-bottom: 2px dotted var(--link-color);
+    transition: all 0.2s ease;
+  }
+  
+  .dotted-link:hover {
+    border-bottom-color: var(--link-hover);
+    border-bottom-style: solid;
+  }
+  
   /* Page header */
   .page-header {
     margin-bottom: 2rem;
