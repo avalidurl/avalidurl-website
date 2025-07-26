@@ -7,7 +7,7 @@ const allPosts = await getCollection('blog', ({ data }) => {
 });
 
 // Organize posts by year and month
-const archiveData = {};
+const archiveData: Record<number, Record<number, any[]>> = {};
 allPosts.forEach(post => {
   const date = new Date(post.data.publishDate);
   const year = date.getFullYear();
@@ -81,8 +81,8 @@ const monthNames = [
                   
                   <div class="posts-container" data-month-content={`${year}-${month}`}>
                     {posts
-                      .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
-                      .map(post => (
+                      .sort((a: any, b: any) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+                      .map((post: any) => (
                         <a href={`/blog/${post.slug}`} class="archive-post-link">
                           <span class="post-date">
                             {new Date(post.data.publishDate).getDate()}
@@ -113,25 +113,39 @@ const monthNames = [
   .archive-dropdown {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 8px;
-    padding: 1.5rem;
+    border-radius: 12px;
+    padding: 1.75rem;
     margin-bottom: 2rem;
+    box-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.04),
+      0 1px 2px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .archive-dropdown:hover {
+    box-shadow: 
+      0 4px 6px rgba(0, 0, 0, 0.05),
+      0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
   }
   
   .archive-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--border-light);
   }
   
   .archive-title {
     color: var(--text-primary);
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.375rem;
+    font-weight: 700;
     margin: 0;
+    letter-spacing: -0.025em;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   }
   
   .archive-toggle {
@@ -140,13 +154,34 @@ const monthNames = [
     cursor: pointer;
     color: var(--color-primary);
     font-size: 0.75rem;
-    padding: 0.25rem;
-    transition: all 0.2s ease;
-    display: block; /* Show on all screen sizes now */
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .archive-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 6px;
+  }
+  
+  .archive-toggle:hover::before {
+    opacity: 0.1;
   }
   
   .archive-toggle:hover {
     color: var(--color-primary-hover);
+    transform: scale(1.05);
   }
   
   .archive-toggle.expanded .toggle-icon {
@@ -156,16 +191,17 @@ const monthNames = [
   .archive-container {
     margin-bottom: 0;
     max-height: 0;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
   }
+  
   .archive-container.expanded {
-    max-height: 1000px;
-    margin-bottom: 1.5rem;
+    max-height: 1200px;
+    margin-bottom: 1.75rem;
   }
   
   .year-group {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
   
   .year-header,
@@ -174,7 +210,18 @@ const monthNames = [
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--border-light);
-    padding: 0.75rem 0;
+    padding: 0.875rem 0;
+    transition: all 0.2s ease;
+  }
+  
+  .year-header:hover,
+  .month-header:hover {
+    background: rgba(102, 102, 102, 0.02);
+    border-radius: 8px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
   
   .year-link,
@@ -186,22 +233,30 @@ const monthNames = [
     text-decoration: none;
     color: var(--text-primary);
     font-size: 1rem;
-    transition: all 0.2s ease;
-    padding-right: 0.5rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-right: 0.75rem;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin: -0.5rem 0;
   }
   
   .year-link {
-    font-weight: 600;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    letter-spacing: -0.01em;
   }
   
   .month-link {
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   }
   
   .year-link:hover,
   .month-link:hover {
     color: var(--color-primary);
+    background: rgba(102, 102, 102, 0.05);
+    transform: translateX(2px);
   }
   
   .year-text,
@@ -214,7 +269,9 @@ const monthNames = [
   .month-count {
     color: var(--text-muted);
     font-size: 0.875rem;
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
+    font-weight: 500;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   }
   
   .year-toggle,
@@ -224,19 +281,44 @@ const monthNames = [
     cursor: pointer;
     color: var(--color-primary);
     font-size: 0.75rem;
-    padding: 0.25rem;
-    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .year-toggle::before,
+  .month-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 6px;
+  }
+  
+  .year-toggle:hover::before,
+  .month-toggle:hover::before {
+    opacity: 0.1;
   }
   
   .year-toggle:hover,
   .month-toggle:hover {
     color: var(--color-primary-hover);
+    transform: scale(1.05);
   }
   
   .toggle-icon {
     color: var(--color-primary);
     font-size: 0.75rem;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
   }
   
   .year-toggle.expanded .toggle-icon,
@@ -248,125 +330,222 @@ const monthNames = [
   .posts-container {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .months-container.expanded,
   .posts-container.expanded {
-    max-height: 1000px;
+    max-height: 800px;
   }
   
   .month-group {
-    margin-left: 1rem;
+    margin-left: 1.25rem;
     border-left: 2px solid var(--border-light);
-    padding-left: 1rem;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  
+  .month-group::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-primary), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .month-group:hover::before {
+    opacity: 1;
   }
   
   .month-toggle {
-    font-weight: 500;
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.625rem 0;
   }
   
   .posts-container {
-    margin-left: 1rem;
-    padding-left: 1rem;
+    margin-left: 1.25rem;
+    padding-left: 1.25rem;
     border-left: 1px solid var(--border-light);
+    position: relative;
+  }
+  
+  .posts-container::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--color-secondary), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .posts-container:hover::before {
+    opacity: 1;
   }
   
   .archive-post-link {
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.5rem 0;
+    gap: 0.875rem;
+    padding: 0.625rem 0.75rem;
     text-decoration: none;
     color: var(--text-secondary);
-    font-size: 0.875rem;
-    transition: color 0.2s ease;
+    font-size: 0.9rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 6px;
+    margin: 0.125rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .archive-post-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 6px;
+  }
+  
+  .archive-post-link:hover::before {
+    opacity: 0.05;
   }
   
   .archive-post-link:hover {
     color: var(--color-primary);
+    transform: translateX(4px);
   }
   
   .post-date {
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-    font-size: 0.75rem;
-    min-width: 1.5rem;
+    font-size: 0.8rem;
+    min-width: 1.75rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
   
   .post-title {
     flex: 1;
-    line-height: 1.4;
+    line-height: 1.5;
     font-weight: 500;
+    position: relative;
+    z-index: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   }
   
   .rss-section {
-    padding-top: 1rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--border-light);
   }
   
   .rss-button {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem;
-    background: var(--color-secondary);
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-hover));
     color: var(--text-inverse);
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      0 2px 4px rgba(230, 81, 0, 0.2),
+      0 4px 8px rgba(230, 81, 0, 0.1);
+  }
+  
+  .rss-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .rss-button:hover::before {
+    left: 100%;
   }
   
   .rss-button:hover {
-    background: var(--color-secondary-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
+    background: linear-gradient(135deg, var(--color-secondary-hover), var(--color-secondary));
+    transform: translateY(-2px);
+    box-shadow: 
+      0 4px 8px rgba(230, 81, 0, 0.3),
+      0 8px 16px rgba(230, 81, 0, 0.2);
   }
   
   .rss-icon {
-    font-size: 1rem;
+    font-size: 1.125rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .rss-text {
+    position: relative;
+    z-index: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   }
   
   @media (max-width: 768px) {
     .archive-dropdown {
-      padding: 1rem;
+      padding: 1.25rem;
+      border-radius: 10px;
     }
     
     .archive-toggle {
-      display: block; /* Show archive toggle on mobile */
+      display: block;
     }
     
     .archive-container.expanded {
-      max-height: 2000px;
-      margin-bottom: 1.5rem;
+      max-height: 2500px;
+      margin-bottom: 1.75rem;
     }
     
     .year-header,
     .month-header {
-      padding: 0.5rem 0;
+      padding: 0.625rem 0;
     }
     
     .year-link,
     .month-link {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
     
     .month-group {
-      margin-left: 0.5rem;
-      padding-left: 0.5rem;
+      margin-left: 0.75rem;
+      padding-left: 0.75rem;
     }
     
     .posts-container {
-      margin-left: 0.5rem;
-      padding-left: 0.5rem;
+      margin-left: 0.75rem;
+      padding-left: 0.75rem;
+    }
+    
+    .archive-post-link {
+      padding: 0.5rem 0.625rem;
+      font-size: 0.875rem;
     }
   }
 </style>
@@ -378,7 +557,7 @@ const monthNames = [
     const mainContent = document.getElementById('archive-main-content');
     
     if (mainToggle && mainContent) {
-      mainToggle.addEventListener('click', function() {
+      mainToggle.addEventListener('click', function(this: HTMLElement) {
         const isExpanded = this.classList.contains('expanded');
         if (isExpanded) {
           this.classList.remove('expanded');
@@ -393,7 +572,7 @@ const monthNames = [
     // Handle year toggles
     const yearToggles = document.querySelectorAll('.year-toggle');
     yearToggles.forEach(toggle => {
-      toggle.addEventListener('click', function() {
+      toggle.addEventListener('click', function(this: HTMLElement) {
         const year = this.dataset.year;
         const container = document.querySelector(`[data-year-content="${year}"]`);
         const isExpanded = this.classList.contains('expanded');
@@ -411,7 +590,7 @@ const monthNames = [
     // Handle month toggles
     const monthToggles = document.querySelectorAll('.month-toggle');
     monthToggles.forEach(toggle => {
-      toggle.addEventListener('click', function() {
+      toggle.addEventListener('click', function(this: HTMLElement) {
         const month = this.dataset.month;
         const container = document.querySelector(`[data-month-content="${month}"]`);
         const isExpanded = this.classList.contains('expanded');
