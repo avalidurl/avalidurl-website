@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import TurnstileWidget from '../components/TurnstileWidget.astro';
 ---
 
 <Layout 
@@ -50,14 +49,6 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
                   </select>
                 </div>
                 
-                              <TurnstileWidget 
-                id="subscribe-turnstile"
-                theme="auto"
-                size="normal"
-                callback="onTurnstileSuccess"
-                expired-callback="onTurnstileExpired"
-                error-callback="onTurnstileError"
-              />
                 
                 <button type="submit" class="subscribe-button">
                   Subscribe to Newsletter
@@ -97,92 +88,6 @@ import TurnstileWidget from '../components/TurnstileWidget.astro';
     </div>
   </main>
 
-  <script>
-    let turnstileToken = '';
-    
-    // Global callback for Turnstile
-    (window as any).onTurnstileSuccess = function(token: string) {
-      turnstileToken = token;
-    };
-
-    (window as any).onTurnstileExpired = function() {
-      turnstileToken = '';
-    };
-
-    (window as any).onTurnstileError = function() {
-      turnstileToken = '';
-    };
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('newsletter-form') as HTMLFormElement;
-      const submitButton = form?.querySelector('.subscribe-button') as HTMLButtonElement;
-      
-      if (!form) return;
-      
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Check if Turnstile token is available
-        if (!turnstileToken) {
-          alert('Please complete the Turnstile challenge before submitting.');
-          return;
-        }
-        
-        // Disable submit button
-        if (submitButton) {
-          submitButton.disabled = true;
-          submitButton.textContent = 'Subscribing...';
-        }
-        
-        // Verify the token with our server
-        try {
-          const response = await fetch('/api/verify-turnstile', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              token: turnstileToken
-            })
-          });
-          
-          const result = await response.json();
-          
-          if (result.success) {
-            // Token is valid, submit the form to Kit.com
-            form.submit();
-          } else {
-            alert('Verification failed. Please try again.');
-            // Reset the Turnstile widget
-            if ((window as any).turnstile) {
-              (window as any).turnstile.reset('#subscribe-turnstile');
-            }
-            turnstileToken = '';
-            
-            // Reset button
-            if (submitButton) {
-              submitButton.disabled = false;
-              submitButton.textContent = 'Subscribe to Newsletter';
-            }
-          }
-        } catch (error) {
-          alert('An error occurred. Please try again.');
-          
-          // Reset button
-          if (submitButton) {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Subscribe to Newsletter';
-          }
-          
-          // Reset Turnstile
-          if ((window as any).turnstile) {
-            (window as any).turnstile.reset('#subscribe-turnstile');
-          }
-          turnstileToken = '';
-        }
-      });
-    });
-  </script>
 </Layout>
 
 <style>
