@@ -28,12 +28,15 @@ const siteKey = env.TURNSTILE_SITE_KEY ||
 // Debug logging
 console.log('TurnstileWidget - siteKey:', siteKey ? 'SET' : 'NOT_SET');
 console.log('TurnstileWidget - import.meta.env keys:', typeof import.meta.env !== 'undefined' ? Object.keys(import.meta.env).filter(key => key.includes('TURNSTILE')) : 'N/A');
+
+// TEMPORARY: Use a test site key to see if the widget renders
+const testSiteKey = '1x00000000000000000000AA';
 ---
 
 <div 
   id={id}
   class={`cf-turnstile ${className}`}
-  data-sitekey={siteKey || ''}
+  data-sitekey={siteKey || testSiteKey}
   data-theme={theme}
   data-size={size}
   data-callback={callback}
