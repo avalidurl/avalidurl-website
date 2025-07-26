@@ -48,29 +48,29 @@ import Layout from '../layouts/Layout.astro';
           </p>
           
           <div class="explore-grid">
-            <div class="explore-card">
+            <a href="/blog" class="explore-card">
               <div class="explore-icon">📝</div>
-              <h3><a href="/blog">Journal</a></h3>
+              <h3>Journal</h3>
               <p>Deep insights on finance, technology, and the intersection of art and data science.</p>
-            </div>
+            </a>
             
-            <div class="explore-card">
+            <a href="/topics" class="explore-card">
               <div class="explore-icon">🏷️</div>
-              <h3><a href="/topics">Topics</a></h3>
+              <h3>Topics</h3>
               <p>Browse content by specific areas: DeFi, AI, cryptography, market analysis, and more.</p>
-            </div>
+            </a>
             
-            <div class="explore-card">
+            <a href="/reading-list" class="explore-card">
               <div class="explore-icon">📚</div>
-              <h3><a href="/reading-list">Reading List</a></h3>
+              <h3>Reading List</h3>
               <p>Curated books, papers, and articles that shape my thinking on tech and finance.</p>
-            </div>
+            </a>
             
-            <div class="explore-card">
+            <a href="/links" class="explore-card">
               <div class="explore-icon">🔗</div>
-              <h3><a href="/links">Links</a></h3>
+              <h3>Links</h3>
               <p>My personal links and social media profiles across different platforms.</p>
-            </div>
+            </a>
           </div>
         </div>
         
@@ -236,6 +236,10 @@ import Layout from '../layouts/Layout.astro';
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
   }
   
   .explore-card::before {
@@ -273,15 +277,6 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 600;
   }
   
-  .explore-card h3 a {
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .explore-card h3 a:hover {
-    color: var(--accent-primary);
-  }
   
   .explore-card p {
     color: var(--text-secondary);
