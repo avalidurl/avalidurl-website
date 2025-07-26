@@ -1,5 +1,6 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import { env } from '../utils/env.ts';
 
 export interface Props {
   title: string;
@@ -11,7 +12,7 @@ const {
   description = "A digital creator exploring the intersection of technology, art, and human connection through code and creativity." 
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
 ---
 
 <!DOCTYPE html>
@@ -24,21 +25,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content="developer, digital art, technology, creative coding, portfolio" />
-    <meta name="author" content="Your Name" />
+    <meta name="author" content="Gökhan Turhan" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/og-image.jpg', Astro.site)} />
+    <meta property="og:image" content={new URL('/og-image.jpg', env.SITE_URL)} />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/og-image.jpg', Astro.site)} />
+    <meta property="twitter:image" content={new URL('/og-image.jpg', env.SITE_URL)} />
     
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
@@ -58,14 +59,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Your Name",
+      "name": "Gökhan Turhan",
       "url": canonicalURL,
       "sameAs": [
-        "https://twitter.com/yourusername",
-        "https://github.com/yourusername", 
-        "https://linkedin.com/in/yourusername"
+        "https://x.com/0xgokhan",
+        "https://github.com/avalidurl", 
+        "https://linkedin.com/in/goekhantuerhan"
       ],
-      "jobTitle": "Digital Creator & Developer",
+      "jobTitle": "T-shaped Generalist Solopreneur",
       "description": description
     })} />
   </head>
