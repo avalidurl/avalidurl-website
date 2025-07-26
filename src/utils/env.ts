@@ -4,14 +4,16 @@
  */
 
 interface EnvConfig {
-  readonly CONTACT_EMAIL: string;
-  readonly SITE_URL: string;
-  readonly ANALYTICS_ID?: string;
-  readonly GITHUB_USERNAME?: string;
-  readonly LINKEDIN_URL?: string;
-  readonly TWITTER_URL?: string;
-  readonly CSP_REPORT_URI?: string;
-  readonly HSTS_MAX_AGE?: string;
+  CONTACT_EMAIL: string;
+  SITE_URL: string;
+  ANALYTICS_ID?: string;
+  GITHUB_USERNAME?: string;
+  LINKEDIN_URL?: string;
+  TWITTER_URL?: string;
+  CSP_REPORT_URI?: string;
+  HSTS_MAX_AGE: string;
+  TURNSTILE_SITE_KEY?: string;
+  TURNSTILE_SECRET_KEY?: string;
 }
 
 /**
@@ -27,6 +29,8 @@ export const env: EnvConfig = {
   TWITTER_URL: import.meta.env.TWITTER_URL || (typeof process !== 'undefined' ? process.env.TWITTER_URL : null),
   CSP_REPORT_URI: import.meta.env.CSP_REPORT_URI || (typeof process !== 'undefined' ? process.env.CSP_REPORT_URI : null),
   HSTS_MAX_AGE: import.meta.env.HSTS_MAX_AGE || (typeof process !== 'undefined' ? process.env.HSTS_MAX_AGE : null) || '31536000',
+  TURNSTILE_SITE_KEY: import.meta.env.TURNSTILE_SITE_KEY || import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || (typeof process !== 'undefined' ? process.env.TURNSTILE_SITE_KEY || process.env.PUBLIC_TURNSTILE_SITE_KEY : null),
+  TURNSTILE_SECRET_KEY: import.meta.env.TURNSTILE_SECRET_KEY || (typeof process !== 'undefined' ? process.env.TURNSTILE_SECRET_KEY : null),
 } as const;
 
 /**
