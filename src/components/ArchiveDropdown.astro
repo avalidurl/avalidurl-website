@@ -142,7 +142,7 @@ const monthNames = [
     font-size: 0.75rem;
     padding: 0.25rem;
     transition: all 0.2s ease;
-    display: none; /* Hidden by default, shown on mobile */
+    display: block; /* Show on all screen sizes now */
   }
   
   .archive-toggle:hover {
@@ -155,6 +155,13 @@ const monthNames = [
   
   .archive-container {
     margin-bottom: 1.5rem;
+    max-height: 1000px;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+  }
+  .archive-container.collapsed {
+    max-height: 0;
+    margin-bottom: 0;
   }
   
   .year-group {
@@ -338,15 +345,13 @@ const monthNames = [
     }
     
     .archive-container {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      margin-bottom: 0;
-    }
-    
-    .archive-container.expanded {
       max-height: 2000px;
       margin-bottom: 1.5rem;
+    }
+    
+    .archive-container.collapsed {
+      max-height: 0;
+      margin-bottom: 0;
     }
     
     .year-header,
@@ -373,20 +378,39 @@ const monthNames = [
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Handle main archive toggle (mobile only)
+    // Handle main archive toggle (now on all screen sizes)
     const mainToggle = document.getElementById('archive-main-toggle');
     const mainContent = document.getElementById('archive-main-content');
-    
+    // By default, expanded on desktop, collapsed on mobile
+    function isMobile() {
+      return window.matchMedia('(max-width: 768px)').matches;
+    }
+    function setInitialArchiveState() {
+      if (mainToggle && mainContent) {
+        if (isMobile()) {
+          mainToggle.classList.add('expanded');
+          mainContent.classList.add('expanded');
+          mainContent.classList.remove('collapsed');
+        } else {
+          mainToggle.classList.add('expanded');
+          mainContent.classList.add('expanded');
+          mainContent.classList.remove('collapsed');
+        }
+      }
+    }
+    setInitialArchiveState();
+    window.addEventListener('resize', setInitialArchiveState);
     if (mainToggle && mainContent) {
       mainToggle.addEventListener('click', function() {
         const isExpanded = this.classList.contains('expanded');
-        
         if (isExpanded) {
           this.classList.remove('expanded');
           mainContent.classList.remove('expanded');
+          mainContent.classList.add('collapsed');
         } else {
           this.classList.add('expanded');
           mainContent.classList.add('expanded');
+          mainContent.classList.remove('collapsed');
         }
       });
     }
