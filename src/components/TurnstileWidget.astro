@@ -24,20 +24,32 @@ const {
 const siteKey = env.TURNSTILE_SITE_KEY;
 ---
 
-{siteKey && (
-  <div 
-    id={id}
-    class={`cf-turnstile ${className}`}
-    data-sitekey={siteKey}
-    data-theme={theme}
-    data-size={size}
-    data-callback={callback}
-    data-expired-callback={expiredCallback}
-    data-error-callback={errorCallback}
-  ></div>
-)}
+<div 
+  id={id}
+  class={`cf-turnstile ${className}`}
+  data-sitekey={siteKey || ''}
+  data-theme={theme}
+  data-size={size}
+  data-callback={callback}
+  data-expired-callback={expiredCallback}
+  data-error-callback={errorCallback}
+></div>
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+  // Handle missing site key
+  document.addEventListener('DOMContentLoaded', function() {
+    const turnstileElements = document.querySelectorAll('.cf-turnstile');
+    turnstileElements.forEach(function(element) {
+      const siteKey = element.getAttribute('data-sitekey');
+      if (!siteKey || siteKey === '') {
+        console.warn('Turnstile site key is missing. CAPTCHA will not function.');
+        (element as HTMLElement).style.display = 'none';
+      }
+    });
+  });
+</script>
 
 <style>
   .cf-turnstile {
