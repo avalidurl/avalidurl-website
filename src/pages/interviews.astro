@@ -13,11 +13,13 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
 ---
 
 <Layout title="Interviews - In-Depth Conversations" description="Deep conversations exploring art, technology, finance, and culture with leading thinkers and creators.">
-  <main class="container">
-    <header class="page-header">
-      <div class="interview-badge">Interviews</div>
-      <h1>In-Depth Conversations</h1>
-      <p class="page-description">
+  <main class="blog-container">
+    <header class="blog-header">
+      <h1>Interviews</h1>
+      <div class="blog-nav">
+        <a href="/blog" class="topics-link">← Back to Journal</a>
+      </div>
+      <p class="blog-subtitle">
         Deep conversations exploring art, technology, finance, and culture with leading thinkers and creators.
       </p>
     </header>

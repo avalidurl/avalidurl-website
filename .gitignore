@@ -87,6 +87,7 @@ audit-results.json
 CLAUDE.md
 XMTP_IMPLEMENTATION_SPECS.md
 TASK_STATUS.md
+XMTP_GITIGNORE_DOCUMENTATION.md
 # Allow documentation files
 !README.md
 !CONTRIBUTING.md
