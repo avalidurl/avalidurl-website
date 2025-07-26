@@ -1,0 +1,318 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Reading List - Gökhan Turhan">
+  <div class="reading-list-page">
+    <div class="page-header">
+      <h1>Reading List</h1>
+      <p class="page-description">
+        A curated collection of books, articles, and people that have shaped my thinking on fintech, arts, culture, and technology.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="section-nav">
+      <div class="nav-pills">
+        <a href="#books" class="nav-pill">
+          <span>Books</span>
+          <span class="nav-count">(0)</span>
+        </a>
+        <a href="#articles" class="nav-pill">
+          <span>Articles</span>
+          <span class="nav-count">(0)</span>
+        </a>
+        <a href="#people" class="nav-pill">
+          <span>People</span>
+          <span class="nav-count">(0)</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Books Section -->
+    <section id="books" class="reading-section">
+      <div class="section-header">
+        <h2>Books</h2>
+        <button class="section-toggle" data-section="books">
+          <span class="toggle-icon">▼</span>
+        </button>
+      </div>
+      <div class="section-content" data-section-content="books">
+        <div class="items-grid">
+          <!-- Books will be added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- People Section -->
+    <section id="people" class="reading-section">
+      <div class="section-header">
+        <h2>People</h2>
+        <button class="section-toggle" data-section="people">
+          <span class="toggle-icon">▼</span>
+        </button>
+      </div>
+      <div class="section-content" data-section-content="people">
+        <div class="items-grid">
+          <!-- People will be added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="reading-section">
+      <div class="section-header">
+        <h2>Articles</h2>
+        <button class="section-toggle" data-section="articles">
+          <span class="toggle-icon">▼</span>
+        </button>
+      </div>
+      <div class="section-content" data-section-content="articles">
+        <div class="items-grid">
+          <!-- Articles will be added here -->
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .reading-list-page {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+  }
+  
+  .page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  }
+  
+  .page-header h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+  
+  .page-description {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Navigation */
+  .section-nav {
+    margin-bottom: 3rem;
+  }
+  
+  .nav-pills {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+  }
+  
+  .nav-pill:hover {
+    background: var(--bg-accent);
+    border-color: var(--border-medium);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-count {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  
+  /* Sections */
+  .reading-section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 100px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-light);
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  .section-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 6px;
+  }
+  
+  .section-toggle:hover::before {
+    opacity: 0.1;
+  }
+  
+  .section-toggle:hover {
+    color: var(--color-primary-hover);
+    transform: scale(1.05);
+  }
+  
+  .toggle-icon {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section-toggle.expanded .toggle-icon {
+    transform: rotate(180deg);
+  }
+  
+  .section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .section-content.expanded {
+    max-height: 2000px;
+  }
+  
+  /* Items Grid */
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-header h1 {
+      font-size: 2.5rem;
+    }
+    
+    .nav-pills {
+      gap: 0.75rem;
+    }
+    
+    .nav-pill {
+      padding: 0.625rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.75rem;
+    }
+    
+    .items-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation
+    const navPills = document.querySelectorAll('.nav-pill');
+    navPills.forEach(pill => {
+      pill.addEventListener('click', function(e: Event) {
+        e.preventDefault();
+        const targetId = (this as HTMLAnchorElement).getAttribute('href')?.substring(1);
+        if (targetId) {
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+    
+    // Section toggles
+    const sectionToggles = document.querySelectorAll('.section-toggle');
+    sectionToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(this: HTMLElement) {
+        const section = this.dataset.section;
+        const content = document.querySelector(`[data-section-content="${section}"]`);
+        const isExpanded = this.classList.contains('expanded');
+        
+        if (isExpanded) {
+          this.classList.remove('expanded');
+          if (content) content.classList.remove('expanded');
+        } else {
+          this.classList.add('expanded');
+          if (content) content.classList.add('expanded');
+        }
+      });
+    });
+  });
+</script> 
