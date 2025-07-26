@@ -21,9 +21,8 @@ const {
   'error-callback': errorCallback
 } = Astro.props;
 
-// TEMPORARY: Hardcode the site key to test if widget works
-// TODO: Fix environment variable access
-const siteKey = '1x00000000000000000000AA'; // Test site key
+// Try to get the site key from environment variables
+const siteKey = env.TURNSTILE_SITE_KEY || '1x00000000000000000000AA'; // Fallback to test key
 ---
 
 <div 
