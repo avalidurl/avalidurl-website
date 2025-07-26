@@ -257,10 +257,30 @@ const canonicalURL = new URL(Astro.url.pathname, env.SITE_URL);
   }
   
   .blog-container {
-    max-width: 580px;
+    max-width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem 1.5rem;
     min-height: calc(100vh - 70px);
+  }
+  
+  /* Responsive blog container for optimal reading */
+  @media (min-width: 768px) {
+    .blog-container {
+      max-width: 750px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .blog-container {
+      max-width: 900px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .blog-container {
+      max-width: 1000px;
+    }
   }
   
   /* Modern Typography for Contemporary Readability */

@@ -112,13 +112,35 @@ const remainingPosts = allPosts.slice(20);
 
 <style>
   .blog-container {
-    max-width: 1200px;
+    max-width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem 1rem;
     min-height: calc(100vh - 70px);
-    width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+  }
+  
+  /* Responsive blog container for optimal reading */
+  @media (min-width: 768px) {
+    .blog-container {
+      max-width: 750px;
+      padding: 2rem 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .blog-container {
+      max-width: 900px;
+      padding: 2.5rem 2rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .blog-container {
+      max-width: 1000px;
+      padding: 3rem 2rem;
+    }
   }
 
   .blog-header {
