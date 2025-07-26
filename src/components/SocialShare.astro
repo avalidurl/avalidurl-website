@@ -19,10 +19,10 @@ const shareUrls = {
   linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
   reddit: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
   hackernews: `https://news.ycombinator.com/submitlink?u=${encodedUrl}&t=${encodedTitle}`,
-  bluesky: `https://bsky.app/intent/compose?text=${encodedTitleAndUrl}`,
-  threads: `https://threads.net/intent/post?text=${encodedTitleAndUrl}`,
-  
-  lens: `https://hey.xyz/?text=${encodedTitleAndUrl}`,
+      bluesky: `https://bsky.app/intent/compose?text=${encodedTitleAndUrl}`,
+    threads: `https://threads.net/intent/post?text=${encodedTitleAndUrl}`,
+    farcaster: `https://warpcast.com/~/compose?text=${encodedTitleAndUrl}`,
+    lens: `https://hey.xyz/?text=${encodedTitleAndUrl}`,
 };
 ---
 
@@ -73,6 +73,12 @@ const shareUrls = {
 
 
 
+    <!-- Farcaster -->
+    <a href={shareUrls.farcaster} target="_blank" rel="noopener" class="share-btn farcaster-btn" title="Share on Farcaster">
+      <svg viewBox="0 0 24 24" class="share-icon">
+        <path d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zM6.75 7.5h1.5v9h-1.5v-9zm9 0h1.5v9h-1.5v-9zm-4.5 2.25h1.5v4.5h-1.5v-4.5z"/>
+      </svg>
+    </a>
 
     <!-- Lens -->
     <a href={shareUrls.lens} target="_blank" rel="noopener" class="share-btn lens-btn" title="Share on Lens">
@@ -222,8 +228,15 @@ const shareUrls = {
   
   
 
-  
-  .lens-btn {
+    .farcaster-btn {
+      background: #8a63d2;
+      color: #ffffff;
+    }
+    .farcaster-btn:hover {
+      background: #6f4fb5;
+    }
+    
+    .lens-btn {
     background: #00501e;
     color: #abfe2c;
   }
