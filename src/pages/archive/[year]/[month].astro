@@ -4,21 +4,20 @@ import { getCollection } from 'astro:content';
 
 export const prerender = true;
 
-// Helper function to parse dates consistently in Istanbul timezone
-const parseIstanbulDate = (dateString) => {
-  // Handle non-string values
-  if (typeof dateString !== 'string') {
-    return new Date(dateString);
-  }
-  // If it's just a date (YYYY-MM-DD), append Istanbul timezone
-  if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
-    return new Date(dateString + 'T00:00:00+03:00');
-  }
-  // For datetime strings, parse as-is but assume they're in Istanbul time
-  return new Date(dateString);
-};
-
 export async function getStaticPaths() {
+  // Helper function to parse dates consistently in Istanbul timezone
+  const parseIstanbulDate = (dateString) => {
+    // Handle non-string values
+    if (typeof dateString !== 'string') {
+      return new Date(dateString);
+    }
+    // If it's just a date (YYYY-MM-DD), append Istanbul timezone
+    if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      return new Date(dateString + 'T00:00:00+03:00');
+    }
+    // For datetime strings, parse as-is but assume they're in Istanbul time
+    return new Date(dateString);
+  };
   const allPosts = await getCollection('blog', ({ data }) => {
     // Don't show draft posts
     if (data.draft) return false;
@@ -70,6 +69,20 @@ export async function getStaticPaths() {
 }
 
 const { year, monthName, posts } = Astro.props;
+
+// Helper function to parse dates consistently in Istanbul timezone  
+const parseIstanbulDate = (dateString) => {
+  // Handle non-string values
+  if (typeof dateString !== 'string') {
+    return new Date(dateString);
+  }
+  // If it's just a date (YYYY-MM-DD), append Istanbul timezone
+  if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return new Date(dateString + 'T00:00:00+03:00');
+  }
+  // For datetime strings, parse as-is but assume they're in Istanbul time
+  return new Date(dateString);
+};
 ---
 
 <Layout title={`${monthName} ${year} Archive`} description={`All blog posts from ${monthName} ${year} - exploring finance, art, and technology.`}>
