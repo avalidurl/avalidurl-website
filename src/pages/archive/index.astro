@@ -199,11 +199,8 @@ const groupedPosts = Object.values(postsByYearMonth).sort((a, b) => {
   }
 
   .archive-date {
-    background: var(--color-primary);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-weight: 600;
+    color: var(--text-muted);
+    font-weight: 500;
     font-size: 0.75rem;
   }
 
@@ -243,26 +240,25 @@ const groupedPosts = Object.values(postsByYearMonth).sort((a, b) => {
   .archive-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0;
     align-items: center;
   }
 
   .archive-tag {
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-light);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    color: var(--text-muted);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   .archive-tag:hover {
-    background: var(--color-primary);
-    color: var(--text-inverse);
-    border-color: var(--color-primary);
+    color: var(--text-primary);
+  }
+
+  .archive-tag:not(:last-child)::after {
+    content: ", ";
+    color: var(--text-muted);
   }
 
   .more-tags {
