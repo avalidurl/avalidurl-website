@@ -4,53 +4,72 @@ import { getCollection } from 'astro:content';
 
 export const prerender = true;
 
+// Helper function to parse dates consistently in Istanbul timezone
+const parseIstanbulDate = (dateString) => {
+  // Handle non-string values
+  if (typeof dateString !== 'string') {
+    return new Date(dateString);
+  }
+  // If it's just a date (YYYY-MM-DD), append Istanbul timezone
+  if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return new Date(dateString + 'T00:00:00+03:00');
+  }
+  // For datetime strings, parse as-is but assume they're in Istanbul time
+  return new Date(dateString);
+};
+
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog', ({ data }) => {
-    return !data.draft && new Date(data.publishDate) <= new Date();
+    // Don't show draft posts
+    if (data.draft) return false;
+    
+    // Allow posts with dates up to 1 day in the future (for timezone issues)
+    const publishDate = parseIstanbulDate(data.publishDate);
+    const now = new Date();
+    const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+    
+    // Only filter out posts that are more than 1 day in the future
+    return publishDate <= oneDayFromNow;
   });
 
   const monthYearCombos = [];
-  const monthNames = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-  ];
 
   allPosts.forEach(post => {
-    const date = new Date(post.data.publishDate);
+    const date = parseIstanbulDate(post.data.publishDate);
     const year = date.getFullYear();
-    const month = date.getMonth(); // 0-11
+    const monthName = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
     
-    const combo = `${year}-${month}`;
+    const combo = `${year}-${monthName.toLowerCase()}`;
     if (!monthYearCombos.some(c => c.combo === combo)) {
       monthYearCombos.push({
         combo,
         year,
-        month,
-        monthName: monthNames[month]
+        monthName,
+        monthLower: monthName.toLowerCase()
       });
     }
   });
 
-  return monthYearCombos.map(({ year, month, monthName }) => ({
+  return monthYearCombos.map(({ year, monthName, monthLower }) => ({
     params: { 
       year: year.toString(), 
-      month: (month + 1).toString().padStart(2, '0') // Convert to 1-12 and pad
+      month: monthLower
     },
     props: { 
       year,
-      month: month + 1, // Convert to 1-12 for display
       monthName,
       posts: allPosts
         .filter(post => {
-          const date = new Date(post.data.publishDate);
-          return date.getFullYear() === year && date.getMonth() === month;
+          const date = parseIstanbulDate(post.data.publishDate);
+          const postMonth = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+          return date.getFullYear() === year && postMonth.toLowerCase() === monthLower;
         })
-        .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+        .sort((a, b) => parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime())
     },
   }));
 }
 
-const { year, month, monthName, posts } = Astro.props;
+const { year, monthName, posts } = Astro.props;
 ---
 
 <Layout title={`${monthName} ${year} Archive`} description={`All blog posts from ${monthName} ${year} - exploring finance, art, and technology.`}>
@@ -70,44 +89,29 @@ const { year, month, monthName, posts } = Astro.props;
     </header>
     
     <section class="archive-posts">
-      <div class="posts-grid">
+      <div class="posts-list">
         {posts.map(post => (
-          <article class="post-card">
-            <div class="post-meta">
-              <span class="post-category">{post.data.category}</span>
-              <time class="post-date" datetime={post.data.publishDate.toISOString()}>
-                {new Date(post.data.publishDate).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
+          <article class="post-item">
+            <div class="post-line">
+              <time class="post-date">
+                {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
+                  day: 'numeric',
+                  timeZone: 'Europe/Istanbul'
                 })}
               </time>
-            </div>
-            
-            <h2 class="post-title">
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            </h2>
-            
-            <p class="post-excerpt">
-              {post.data.excerpt || post.data.description}
-            </p>
-            
-            <div class="post-tags">
-              {post.data.tags.slice(0, 3).map(tag => (
-                <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="tag-link">
-                  {tag}
-                </a>
-              ))}
-              {post.data.tags.length > 3 && (
-                <span class="more-tags">+{post.data.tags.length - 3} more</span>
+              <a href={`/blog/${post.slug}`} class="post-title">
+                {post.data.title}
+              </a>
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="post-tags">
+                  {post.data.tags.slice(0, 4).map(tag => (
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="post-tag">
+                      {tag}
+                    </a>
+                  ))}
+                </div>
               )}
             </div>
-            
-            {post.data.readingTime && (
-              <div class="reading-time">
-                {post.data.readingTime} min read
-              </div>
-            )}
           </article>
         ))}
       </div>
@@ -129,9 +133,11 @@ const { year, month, monthName, posts } = Astro.props;
 
 <style>
   .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    min-height: calc(100vh - 70px);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   }
   
   .archive-header {
@@ -182,114 +188,78 @@ const { year, month, monthName, posts } = Astro.props;
     margin: 0;
   }
   
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+  .posts-list {
+    padding: 0;
     margin-bottom: 3rem;
   }
-  
-  .post-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 8px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    position: relative;
+
+  .post-item {
+    margin: 0;
+    padding: 0;
   }
-  
-  .post-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px var(--card-shadow);
-    border-color: var(--color-primary);
-  }
-  
-  .post-meta {
+
+  .post-line {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    transition: background-color 0.2s ease;
   }
-  
-  .post-category {
-    background: var(--color-secondary);
-    color: var(--text-inverse);
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    font-size: 0.75rem;
+
+  .post-line:hover {
+    background: rgba(0, 0, 0, 0.02);
   }
-  
+
   .post-date {
     color: var(--text-muted);
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 30px;
+    text-align: right;
   }
-  
+
   .post-title {
-    margin: 0 0 1rem 0;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-  
-  .post-title a {
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+    border-bottom: 1px dotted var(--text-muted);
+    flex: 1;
+    min-width: 0;
   }
-  
-  .post-title a:hover {
+
+  .post-title:hover {
     color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
   }
-  
-  .post-excerpt {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
+
   .post-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 0;
+    align-items: center;
+    flex-shrink: 0;
   }
-  
-  .tag-link {
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-medium);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+
+  .post-tag {
+    color: #FF8C00;
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
   }
-  
-  .tag-link:hover {
-    background: var(--color-primary);
-    color: var(--text-inverse);
-    border-color: var(--color-primary);
+
+  .post-tag:hover {
+    color: #FF4500;
   }
-  
-  .more-tags {
+
+  .post-tag:not(:last-child)::after {
+    content: ", ";
     color: var(--text-muted);
-    font-size: 0.75rem;
-    font-style: italic;
-  }
-  
-  .reading-time {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    font-style: italic;
   }
   
   .no-posts {
@@ -300,8 +270,9 @@ const { year, month, monthName, posts } = Astro.props;
   
   .archive-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border-light);
   }
@@ -319,70 +290,58 @@ const { year, month, monthName, posts } = Astro.props;
     color: var(--color-primary-hover);
   }
   
-  /* Force single column on smaller screens to prevent overflow */
-  @media (max-width: 640px) {
-    .posts-grid {
-      grid-template-columns: 1fr !important;
-    }
-  }
-
   @media (max-width: 768px) {
     .container {
       padding: 1.5rem 1rem;
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-    
-    .posts-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1.5rem;
-      width: 100%;
     }
     
     .archive-header h1 {
       font-size: 2rem;
     }
-    
-    .post-card {
-      padding: 1.5rem;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      margin: 0;
-    }
-    
-    .post-meta {
+
+    .post-line {
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.5rem;
+      gap: 0.25rem;
+      padding: 0.5rem 0;
+    }
+
+    .post-date {
+      font-size: 0.75rem;
+      min-width: auto;
+      text-align: left;
+    }
+
+    .post-title {
+      border-bottom: none;
+      width: 100%;
+    }
+
+    .post-tags {
+      width: 100%;
     }
     
     .archive-footer {
       flex-direction: column;
       gap: 1rem;
-      align-items: center;
     }
   }
   
   @media (max-width: 480px) {
     .container {
       padding: 1rem 0.75rem;
-      overflow-x: hidden;
     }
     
-    .posts-grid {
-      grid-template-columns: 1fr !important;
-      gap: 1rem;
-      width: 100%;
-      margin: 0;
+    .archive-header h1 {
+      font-size: 1.5rem;
     }
-    
-    .post-card {
-      padding: 1.25rem;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      margin: 0;
+
+    .post-line {
+      padding: 0.4rem 0;
+    }
+
+    .archive-breadcrumb {
+      flex-wrap: wrap;
     }
   }
 </style>

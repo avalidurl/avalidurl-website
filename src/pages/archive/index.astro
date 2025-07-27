@@ -97,37 +97,37 @@ const groupedPosts = Object.keys(postsByYear)
             <div class="year-content-inner">
               {months.map(({ monthName, posts }) => (
               <section class="archive-month-section">
-                <div class="month-header-collapsible">
-                  <h3 class="archive-month">
+                <h3 class="archive-month">
+                  <a href={`/archive/${year}/${monthName.toLowerCase()}`} class="month-link">
                     {monthName} <span class="post-count">({posts.length})</span>
-                  </h3>
-                  <button class="month-toggle-btn" data-month={`${year}-${monthName}`}>
-                    <span class="toggle-icon">▼</span>
-                  </button>
-                </div>
-                <div class="month-content collapsed" data-month-content={`${year}-${monthName}`}>
-                  <div class="month-content-inner">
-                    <div class="archive-list">
-                      {posts.map(post => (
-                        <article class="archive-item">
-                          <div class="archive-line">
-                            <a href={`/blog/${post.slug}`} class="archive-title">
-                              {post.data.title}
-                            </a>
-                            {post.data.tags.length > 0 && (
-                              <div class="archive-tags">
-                                {post.data.tags.slice(0, 4).map(tag => (
-                                  <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">
-                                    {tag}
-                                  </a>
-                                ))}
-                              </div>
-                            )}
+                  </a>
+                </h3>
+                <div class="archive-list">
+                  {posts.map(post => (
+                    <article class="archive-item">
+                      <div class="archive-line">
+                        <time class="archive-date">
+                          {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            timeZone: 'Europe/Istanbul'
+                          })}
+                        </time>
+                        <a href={`/blog/${post.slug}`} class="archive-title">
+                          {post.data.title}
+                        </a>
+                        {post.data.tags.length > 0 && (
+                          <div class="archive-tags">
+                            {post.data.tags.slice(0, 4).map(tag => (
+                              <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">
+                                {tag}
+                              </a>
+                            ))}
                           </div>
-                        </article>
-                      ))}
-                    </div>
-                  </div>
+                        )}
+                      </div>
+                    </article>
+                  ))}
                 </div>
               </section>
             ))}
@@ -180,8 +180,7 @@ const groupedPosts = Object.keys(postsByYear)
     margin-bottom: 2rem;
   }
 
-  .year-header-collapsible,
-  .month-header-collapsible {
+  .year-header-collapsible {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -191,8 +190,7 @@ const groupedPosts = Object.keys(postsByYear)
     transition: background-color 0.2s ease;
   }
 
-  .year-header-collapsible:hover,
-  .month-header-collapsible:hover {
+  .year-header-collapsible:hover {
     background: rgba(0, 0, 0, 0.02);
   }
 
@@ -208,9 +206,17 @@ const groupedPosts = Object.keys(postsByYear)
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-secondary);
-    margin: 0;
-    flex: 1;
-    margin-left: 1rem;
+    margin: 1.5rem 0 1rem 1rem;
+  }
+
+  .month-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .month-link:hover {
+    color: var(--color-primary);
   }
 
   .post-count {
@@ -219,8 +225,7 @@ const groupedPosts = Object.keys(postsByYear)
     font-size: 0.9em;
   }
 
-  .year-toggle-btn,
-  .month-toggle-btn {
+  .year-toggle-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -230,8 +235,7 @@ const groupedPosts = Object.keys(postsByYear)
     transition: all 0.2s ease;
   }
 
-  .year-toggle-btn:hover,
-  .month-toggle-btn:hover {
+  .year-toggle-btn:hover {
     color: var(--text-primary);
   }
 
@@ -239,26 +243,22 @@ const groupedPosts = Object.keys(postsByYear)
     transition: transform 0.3s ease;
   }
 
-  .year-toggle-btn.expanded .toggle-icon,
-  .month-toggle-btn.expanded .toggle-icon {
+  .year-toggle-btn.expanded .toggle-icon {
     transform: rotate(180deg);
   }
 
-  .year-content,
-  .month-content {
+  .year-content {
     display: grid;
     grid-template-rows: 1fr;
     overflow: hidden;
     transition: grid-template-rows 0.3s ease;
   }
 
-  .year-content.collapsed,
-  .month-content.collapsed {
+  .year-content.collapsed {
     grid-template-rows: 0fr;
   }
 
-  .year-content-inner,
-  .month-content-inner {
+  .year-content-inner {
     overflow: hidden;
   }
 
@@ -278,16 +278,24 @@ const groupedPosts = Object.keys(postsByYear)
   .archive-line {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
+    gap: 1rem;
+    padding: 0.4rem 1rem;
     margin: 0.25rem 0;
     border-radius: 4px;
     transition: background-color 0.2s ease;
-    gap: 1rem;
   }
 
   .archive-line:hover {
     background: rgba(0, 0, 0, 0.02);
+  }
+
+  .archive-date {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 50px;
   }
 
   .archive-title {
@@ -422,26 +430,5 @@ const groupedPosts = Object.keys(postsByYear)
         }
       });
     });
-    
-    // Handle month toggles
-    const monthToggleBtns = document.querySelectorAll('.month-toggle-btn');
-    monthToggleBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const month = this.dataset.month;
-        const content = document.querySelector(`[data-month-content="${month}"]`);
-        const isCollapsed = content.classList.contains('collapsed');
-        
-        if (isCollapsed) {
-          this.classList.add('expanded');
-          content.classList.remove('collapsed');
-        } else {
-          this.classList.remove('expanded');
-          content.classList.add('collapsed');
-        }
-      });
-    });
-    
-    // Content is already collapsed by default in HTML
-    // No need to initialize here since classes are set in the template
   });
 </script>
