@@ -80,6 +80,8 @@ const groupedPosts = Object.values(postsByYearMonth).sort((a, b) => {
                 <div class="archive-card-header">
                   <time class="archive-date">
                     {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
                       day: 'numeric',
                       timeZone: 'Europe/Istanbul'
                     })}
