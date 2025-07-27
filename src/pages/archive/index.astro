@@ -84,12 +84,24 @@ const groupedPosts = Object.keys(postsByYear)
     <div class="archive-content">
       {groupedPosts.map(({ year, months }) => (
         <section class="archive-year-section">
-          <h2 class="archive-year">{year}</h2>
-          {months.map(({ monthName, posts }) => (
-            <section class="archive-month-section">
-              <h3 class="archive-month">{monthName}</h3>
-              <div class="archive-grid">
-                {posts.map(post => (
+          <div class="year-header-collapsible">
+            <h2 class="archive-year">{year}</h2>
+            <button class="year-toggle-btn" data-year={year}>
+              <span class="toggle-icon">▼</span>
+            </button>
+          </div>
+          <div class="year-content" data-year-content={year}>
+            {months.map(({ monthName, posts }) => (
+              <section class="archive-month-section">
+                <div class="month-header-collapsible">
+                  <h3 class="archive-month">{monthName}</h3>
+                  <button class="month-toggle-btn" data-month={`${year}-${monthName}`}>
+                    <span class="toggle-icon">▼</span>
+                  </button>
+                </div>
+                <div class="month-content" data-month-content={`${year}-${monthName}`}>
+                  <div class="archive-grid">
+                    {posts.map(post => (
                   <article class="archive-card">
                     <div class="archive-card-header">
                       <time class="archive-date">
@@ -127,11 +139,13 @@ const groupedPosts = Object.keys(postsByYear)
                         )}
                       </div>
                     )}
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
+                    </article>
+                  ))}
+                  </div>
+                </div>
+              </section>
+            ))}
+          </div>
         </section>
       ))}
     </div>
@@ -179,14 +193,60 @@ const groupedPosts = Object.keys(postsByYear)
     margin-bottom: 4rem;
   }
 
+  .year-header-collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+
   .archive-year {
     font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 2rem;
     border-bottom: 2px solid var(--color-primary);
     padding-bottom: 0.5rem;
-    display: inline-block;
+    margin: 0;
+    flex: 1;
+  }
+
+  .year-toggle-btn,
+  .month-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    margin-left: 1rem;
+  }
+
+  .year-toggle-btn:hover,
+  .month-toggle-btn:hover {
+    background: rgba(102, 102, 102, 0.1);
+    transform: scale(1.05);
+  }
+
+  .toggle-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .year-toggle-btn.expanded .toggle-icon,
+  .month-toggle-btn.expanded .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .year-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .year-content.collapsed {
+    max-height: 0;
   }
 
   .archive-month-section {
@@ -194,12 +254,30 @@ const groupedPosts = Object.keys(postsByYear)
     margin-left: 1rem;
   }
 
+  .month-header-collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+
   .archive-month {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    display: inline-block;
+    margin: 0;
+    flex: 1;
+  }
+
+  .month-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .month-content.collapsed {
+    max-height: 0;
   }
 
   .archive-grid {
@@ -278,7 +356,7 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .archive-tag {
-    color: var(--text-muted);
+    color: #00FFFF;
     font-size: 0.75rem;
     font-weight: 400;
     text-decoration: none;
@@ -286,7 +364,7 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .archive-tag:hover {
-    color: var(--text-primary);
+    color: #FF0000;
   }
 
   .archive-tag:not(:last-child)::after {
@@ -348,3 +426,47 @@ const groupedPosts = Object.keys(postsByYear)
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Handle year toggles
+    const yearToggleBtns = document.querySelectorAll('.year-toggle-btn');
+    yearToggleBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const year = this.dataset.year;
+        const content = document.querySelector(`[data-year-content="${year}"]`);
+        const isExpanded = this.classList.contains('expanded');
+        
+        if (isExpanded) {
+          this.classList.remove('expanded');
+          content.classList.add('collapsed');
+        } else {
+          this.classList.add('expanded');
+          content.classList.remove('collapsed');
+        }
+      });
+    });
+    
+    // Handle month toggles
+    const monthToggleBtns = document.querySelectorAll('.month-toggle-btn');
+    monthToggleBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const month = this.dataset.month;
+        const content = document.querySelector(`[data-month-content="${month}"]`);
+        const isExpanded = this.classList.contains('expanded');
+        
+        if (isExpanded) {
+          this.classList.remove('expanded');
+          content.classList.add('collapsed');
+        } else {
+          this.classList.add('expanded');
+          content.classList.remove('collapsed');
+        }
+      });
+    });
+    
+    // Initialize all as expanded by default
+    yearToggleBtns.forEach(btn => btn.classList.add('expanded'));
+    monthToggleBtns.forEach(btn => btn.classList.add('expanded'));
+  });
+</script>
