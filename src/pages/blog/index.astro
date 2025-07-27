@@ -378,13 +378,13 @@ const remainingPosts = allPosts.slice(20);
     loadMoreBtn.addEventListener('click', function() {
       // Show loading state
       loadMoreBtn.classList.add('loading');
-      (loadMoreBtn as HTMLButtonElement).disabled = true;
+      loadMoreBtn.disabled = true;
       
       // Simulate loading delay for better UX
       setTimeout(() => {
         const postsToLoad = remainingPostsData.slice(currentIndex, currentIndex + postsPerLoad);
         
-        postsToLoad.forEach((post: any) => {
+        postsToLoad.forEach((post) => {
           const articleElement = createArticleElement(post);
           articlesList.appendChild(articleElement);
         });
@@ -401,11 +401,11 @@ const remainingPosts = allPosts.slice(20);
         
         // Remove loading state
         loadMoreBtn.classList.remove('loading');
-        (loadMoreBtn as HTMLButtonElement).disabled = false;
+        loadMoreBtn.disabled = false;
       }, 300);
     });
     
-    function createArticleElement(post: any) {
+    function createArticleElement(post) {
       const article = document.createElement('article');
       article.className = 'article-item';
       
