@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import ArchiveDropdown from '../../components/ArchiveDropdown.astro';
 
 // Helper function to parse dates consistently in Istanbul timezone
 const parseIstanbulDate = (dateString) => {
@@ -48,7 +47,12 @@ const remainingPosts = allPosts.slice(20);
     <header class="blog-header">
       <h1>Journal</h1>
       <div class="blog-nav">
-        <a href="/topics" class="topics-link">Browse by Topics →</a>
+        <a href="/topics" class="nav-button">Browse by Topics →</a>
+        <a href="/archive" class="nav-button">Browse Archive →</a>
+        <a href="/rss.xml" class="rss-button" target="_blank" rel="noopener noreferrer">
+          <span class="rss-icon">📡</span>
+          RSS Feed
+        </a>
       </div>
       <p class="blog-subtitle">
         Thoughts on the intersection of finance, art, and code — where data meets creativity and markets become canvases.
@@ -57,9 +61,6 @@ const remainingPosts = allPosts.slice(20);
 
     <div class="blog-layout">
       <section class="blog-main">
-        <div class="archive-section">
-          <ArchiveDropdown />
-        </div>
         <h2>All Posts</h2>
         <div class="articles-grid" id="articles-grid">
           {initialPosts.map(post => (
@@ -165,13 +166,17 @@ const remainingPosts = allPosts.slice(20);
 
   .blog-nav {
     margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
-  .topics-link {
+  .nav-button {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
@@ -181,10 +186,36 @@ const remainingPosts = allPosts.slice(20);
     border-radius: 6px;
   }
 
-  .topics-link:hover {
+  .nav-button:hover {
     background: var(--color-primary);
     color: white;
     transform: translateY(-1px);
+  }
+
+  .rss-button {
+    color: var(--text-inverse);
+    background: linear-gradient(135deg, #e65100, #ff6f00);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #e65100;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(230, 81, 0, 0.2);
+  }
+
+  .rss-button:hover {
+    background: linear-gradient(135deg, #ff6f00, #e65100);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(230, 81, 0, 0.3);
+  }
+
+  .rss-icon {
+    font-size: 1rem;
   }
   
   .blog-layout {
@@ -195,11 +226,6 @@ const remainingPosts = allPosts.slice(20);
     min-width: 0; /* Prevents overflow issues */
   }
   
-  .archive-section {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-light);
-  }
   
   .blog-main h2 {
     font-size: 1.5rem;
@@ -391,12 +417,6 @@ const remainingPosts = allPosts.slice(20);
   
   
   /* Responsive design */
-  @media (max-width: 1024px) {
-    .archive-section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-    }
-  }
   
   @media (max-width: 768px) {
     .blog-container {
@@ -405,10 +425,6 @@ const remainingPosts = allPosts.slice(20);
       overflow-x: hidden;
     }
     
-    .archive-section {
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-    }
     
     .load-more-container {
       margin-top: 2rem;
@@ -453,10 +469,6 @@ const remainingPosts = allPosts.slice(20);
       overflow-x: hidden;
     }
     
-    .archive-section {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-    }
     
     .load-more-container {
       margin-top: 1.5rem;
@@ -499,6 +511,17 @@ const remainingPosts = allPosts.slice(20);
     
     .blog-header h1 {
       font-size: 2rem;
+    }
+
+    .blog-nav {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .nav-button,
+    .rss-button {
+      font-size: 0.95rem;
+      padding: 0.75rem 1rem;
     }
   }
 </style>
