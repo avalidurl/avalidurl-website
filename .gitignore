@@ -88,6 +88,9 @@ CLAUDE.md
 XMTP_IMPLEMENTATION_SPECS.md
 TASK_STATUS.md
 XMTP_GITIGNORE_DOCUMENTATION.md
+
+# Claude Code configuration (local only)
+.claude.json
 # Allow documentation files
 !README.md
 !CONTRIBUTING.md
