@@ -41,6 +41,7 @@ const dynamicOGImage = generateOGImageUrl();
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Meta Tags -->
@@ -104,6 +105,9 @@ const dynamicOGImage = generateOGImageUrl();
       "jobTitle": "T-shaped Generalist Solopreneur, Researcher & Conceptual Artist",
       "description": description
     })} />
+    
+    <!-- Safari compatibility fix -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     
     <!-- Prevent FOUC by applying theme immediately -->
     <script is:inline>
