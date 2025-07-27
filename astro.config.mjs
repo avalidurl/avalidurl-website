@@ -11,7 +11,9 @@ const site = process.env.SITE_URL || 'https://gokhanturhan.com';
 export default defineConfig({
   site: site,
   image: {
-    service: "cloudflare"
+    service: {
+      entrypoint: "@astrojs/cloudflare/image-service"
+    }
   },
   integrations: [
     mdx({

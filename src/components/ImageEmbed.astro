@@ -40,6 +40,13 @@ const supportedFormats = ['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif', '.s
 // Check if URL is a valid image format
 function isValidImageUrl(url: string): boolean {
   try {
+    // Handle relative URLs by checking the path directly
+    if (url.startsWith('/') || url.startsWith('./') || url.startsWith('../')) {
+      const pathname = url.toLowerCase();
+      return supportedFormats.some(format => pathname.endsWith(format));
+    }
+    
+    // Handle absolute URLs
     const urlObj = new URL(url);
     const pathname = urlObj.pathname.toLowerCase();
     return supportedFormats.some(format => pathname.endsWith(format));
