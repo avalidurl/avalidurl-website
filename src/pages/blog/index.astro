@@ -432,6 +432,19 @@ const remainingPosts = allPosts.slice(20);
     transform: none;
   }
 
+  /* Animation classes for dynamically loaded posts */
+  .loading-post {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .loaded-post {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
   @media (max-width: 768px) {
     .blog-container {
       padding: 1.5rem 1rem;
@@ -538,16 +551,14 @@ const remainingPosts = allPosts.slice(20);
         postsToLoad.forEach((post, index) => {
           setTimeout(() => {
             const articleElement = createArticleElement(post);
-            articleElement.style.opacity = '0';
-            articleElement.style.transform = 'translateY(10px)';
+            articleElement.classList.add('loading-post');
             articlesList.appendChild(articleElement);
             
-            // Animate in
-            requestAnimationFrame(() => {
-              articleElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-              articleElement.style.opacity = '1';
-              articleElement.style.transform = 'translateY(0)';
-            });
+            // Animate in after a brief delay to ensure styles are applied
+            setTimeout(() => {
+              articleElement.classList.remove('loading-post');
+              articleElement.classList.add('loaded-post');
+            }, 50);
           }, index * 50);
         });
         
@@ -627,9 +638,6 @@ const remainingPosts = allPosts.slice(20);
       
       // Add the line to the article
       article.appendChild(articleLine);
-      
-      // Force a reflow to ensure styles are applied
-      article.offsetHeight;
       
       return article;
     }
