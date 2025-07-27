@@ -10,6 +10,9 @@ const site = process.env.SITE_URL || 'https://gokhanturhan.com';
 
 export default defineConfig({
   site: site,
+  image: {
+    service: "cloudflare"
+  },
   integrations: [
     mdx({
       remarkPlugins: [],
