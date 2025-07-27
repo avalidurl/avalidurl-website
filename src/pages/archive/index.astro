@@ -91,7 +91,8 @@ const groupedPosts = Object.keys(postsByYear)
             </button>
           </div>
           <div class="year-content" data-year-content={year}>
-            {months.map(({ monthName, posts }) => (
+            <div class="year-content-inner">
+              {months.map(({ monthName, posts }) => (
               <section class="archive-month-section">
                 <div class="month-header-collapsible">
                   <h3 class="archive-month">{monthName}</h3>
@@ -100,8 +101,9 @@ const groupedPosts = Object.keys(postsByYear)
                   </button>
                 </div>
                 <div class="month-content" data-month-content={`${year}-${monthName}`}>
-                  <div class="archive-grid">
-                    {posts.map(post => (
+                  <div class="month-content-inner">
+                    <div class="archive-grid">
+                      {posts.map(post => (
                   <article class="archive-card">
                     <div class="archive-card-header">
                       <time class="archive-date">
@@ -139,12 +141,14 @@ const groupedPosts = Object.keys(postsByYear)
                         )}
                       </div>
                     )}
-                    </article>
-                  ))}
+                      </article>
+                    ))}
+                    </div>
                   </div>
                 </div>
               </section>
             ))}
+            </div>
           </div>
         </section>
       ))}
@@ -240,11 +244,14 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .year-content {
-    display: block;
+    display: grid;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
   }
 
   .year-content.collapsed {
-    display: none;
+    grid-template-rows: 0fr;
   }
 
   .archive-month-section {
@@ -269,11 +276,19 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .month-content {
-    display: block;
+    display: grid;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
   }
 
   .month-content.collapsed {
-    display: none;
+    grid-template-rows: 0fr;
+  }
+
+  .year-content-inner,
+  .month-content-inner {
+    overflow: hidden;
   }
 
   .archive-grid {
