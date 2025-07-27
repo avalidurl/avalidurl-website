@@ -67,9 +67,18 @@ const remainingPosts = allPosts.slice(20);
             <article class="article-item">
               <div class="article-line">
                 <time class="article-date">
-                  {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
-                    timeZone: 'Europe/Istanbul'
-                  })}
+                  {(() => {
+                    const date = parseIstanbulDate(post.data.publishDate);
+                    const year = date.getFullYear();
+                    const month = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+                    const monthLower = month.toLowerCase();
+                    const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
+                    return (
+                      <a href={`/archive/${year}/${monthLower}`} class="date-link" title={`See ${month} ${year}'s archive`}>
+                        {formattedDate}
+                      </a>
+                    );
+                  })()}
                 </time>
                 <a href={`/blog/${post.slug}`} class="article-title">
                   {post.data.title}
@@ -242,6 +251,18 @@ const remainingPosts = allPosts.slice(20);
     white-space: nowrap;
     flex-shrink: 0;
     min-width: 80px;
+  }
+
+  .date-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .date-link:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
   }
 
   .article-title {
@@ -448,10 +469,20 @@ const remainingPosts = allPosts.slice(20);
       const articleLine = document.createElement('div');
       articleLine.className = 'article-line';
       
-      // Create date element
+      // Create date element with clickable link
       const timeElement = document.createElement('time');
       timeElement.className = 'article-date';
-      timeElement.textContent = formattedDate;
+      
+      const dateLink = document.createElement('a');
+      const year = publishDate.getFullYear();
+      const month = publishDate.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+      const monthLower = month.toLowerCase();
+      dateLink.href = `/archive/${year}/${monthLower}`;
+      dateLink.className = 'date-link';
+      dateLink.textContent = formattedDate;
+      dateLink.title = `See ${month} ${year}'s archive`;
+      
+      timeElement.appendChild(dateLink);
       
       // Create title link
       const linkElement = document.createElement('a');
@@ -460,27 +491,27 @@ const remainingPosts = allPosts.slice(20);
       linkElement.className = 'article-title';
       
       // Create tags section if tags exist
-      let tagsElement = null;
       if (post.tags && post.tags.length > 0) {
-        tagsElement = document.createElement('div');
+        const tagsElement = document.createElement('div');
         tagsElement.className = 'article-tags';
         
         const tagsToShow = post.tags.slice(0, 3);
-        tagsToShow.forEach((tag, index) => {
+        tagsToShow.forEach((tag) => {
           const tagLink = document.createElement('a');
           tagLink.href = `/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`;
           tagLink.className = 'article-tag';
           tagLink.textContent = tag;
           tagsElement.appendChild(tagLink);
         });
-      }
-      
-      // Assemble the article line
-      articleLine.appendChild(timeElement);
-      articleLine.appendChild(linkElement);
-      
-      if (tagsElement) {
+        
+        // Add tags to the article line
+        articleLine.appendChild(timeElement);
+        articleLine.appendChild(linkElement);
         articleLine.appendChild(tagsElement);
+      } else {
+        // No tags, just add date and title
+        articleLine.appendChild(timeElement);
+        articleLine.appendChild(linkElement);
       }
       
       // Add the line to the article
