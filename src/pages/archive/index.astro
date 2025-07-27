@@ -240,13 +240,11 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .year-content {
-    max-height: 1000px;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    display: block;
   }
 
   .year-content.collapsed {
-    max-height: 0;
+    display: none;
   }
 
   .archive-month-section {
@@ -271,13 +269,11 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .month-content {
-    max-height: 1000px;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    display: block;
   }
 
   .month-content.collapsed {
-    max-height: 0;
+    display: none;
   }
 
   .archive-grid {
@@ -438,14 +434,14 @@ const groupedPosts = Object.keys(postsByYear)
       btn.addEventListener('click', function() {
         const year = this.dataset.year;
         const content = document.querySelector(`[data-year-content="${year}"]`);
-        const isExpanded = this.classList.contains('expanded');
+        const isCollapsed = content.classList.contains('collapsed');
         
-        if (isExpanded) {
-          this.classList.remove('expanded');
-          content.classList.add('collapsed');
-        } else {
+        if (isCollapsed) {
           this.classList.add('expanded');
           content.classList.remove('collapsed');
+        } else {
+          this.classList.remove('expanded');
+          content.classList.add('collapsed');
         }
       });
     });
@@ -456,14 +452,14 @@ const groupedPosts = Object.keys(postsByYear)
       btn.addEventListener('click', function() {
         const month = this.dataset.month;
         const content = document.querySelector(`[data-month-content="${month}"]`);
-        const isExpanded = this.classList.contains('expanded');
+        const isCollapsed = content.classList.contains('collapsed');
         
-        if (isExpanded) {
-          this.classList.remove('expanded');
-          content.classList.add('collapsed');
-        } else {
+        if (isCollapsed) {
           this.classList.add('expanded');
           content.classList.remove('collapsed');
+        } else {
+          this.classList.remove('expanded');
+          content.classList.add('collapsed');
         }
       });
     });
