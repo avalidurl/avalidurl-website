@@ -139,6 +139,7 @@ const remainingPosts = allPosts.slice(20);
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
   }
 
   .nav-button {
@@ -154,8 +155,7 @@ const remainingPosts = allPosts.slice(20);
     padding: 0.5rem 1rem;
     border: 1px solid var(--color-primary);
     border-radius: 6px;
-    min-width: 160px;
-    flex: 1;
+    width: 180px;
   }
 
   .nav-button:hover {
@@ -178,8 +178,7 @@ const remainingPosts = allPosts.slice(20);
     padding: 0.5rem 1rem;
     border: 1px solid #FF8C00;
     border-radius: 6px;
-    min-width: 160px;
-    flex: 1;
+    width: 180px;
   }
 
   .rss-button:hover {
@@ -227,6 +226,7 @@ const remainingPosts = allPosts.slice(20);
     align-items: center;
     gap: 1rem;
     padding: 0.5rem 0;
+    margin-bottom: 0.25rem;
     transition: background-color 0.2s ease;
     border-bottom: 1px solid transparent;
   }
@@ -375,6 +375,7 @@ const remainingPosts = allPosts.slice(20);
     .rss-button {
       text-align: center;
       justify-content: center;
+      width: 100%;
     }
   }
 </style>
@@ -402,9 +403,20 @@ const remainingPosts = allPosts.slice(20);
       setTimeout(() => {
         const postsToLoad = remainingPostsData.slice(currentIndex, currentIndex + postsPerLoad);
         
-        postsToLoad.forEach((post) => {
-          const articleElement = createArticleElement(post);
-          articlesList.appendChild(articleElement);
+        postsToLoad.forEach((post, index) => {
+          setTimeout(() => {
+            const articleElement = createArticleElement(post);
+            articleElement.style.opacity = '0';
+            articleElement.style.transform = 'translateY(10px)';
+            articlesList.appendChild(articleElement);
+            
+            // Animate in
+            requestAnimationFrame(() => {
+              articleElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+              articleElement.style.opacity = '1';
+              articleElement.style.transform = 'translateY(0)';
+            });
+          }, index * 50);
         });
         
         currentIndex += postsPerLoad;
