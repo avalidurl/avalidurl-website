@@ -479,8 +479,11 @@ const groupedPosts = Object.keys(postsByYear)
       });
     });
     
-    // Initialize all as expanded by default
-    yearToggleBtns.forEach(btn => btn.classList.add('expanded'));
-    monthToggleBtns.forEach(btn => btn.classList.add('expanded'));
+    // Initialize all as collapsed by default
+    const allYearContent = document.querySelectorAll('.year-content');
+    const allMonthContent = document.querySelectorAll('.month-content');
+    
+    allYearContent.forEach(content => content.classList.add('collapsed'));
+    allMonthContent.forEach(content => content.classList.add('collapsed'));
   });
 </script>
