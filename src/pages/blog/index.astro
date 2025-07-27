@@ -277,7 +277,7 @@ const remainingPosts = allPosts.slice(20);
 
   /* Ensure dynamically created content has the same styles */
   #articles-list .article-date {
-    color: var(--text-muted);
+    color: #666666;
     font-size: 0.8rem;
     font-weight: 400;
     white-space: nowrap;
@@ -320,13 +320,13 @@ const remainingPosts = allPosts.slice(20);
 
   /* Ensure dynamically created content has the same styles */
   #articles-list .article-title {
-    color: var(--text-primary);
+    color: #1A1A1A;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 400;
     line-height: 1.4;
     transition: color 0.2s ease;
-    border-bottom: 1px dotted var(--text-muted);
+    border-bottom: 1px dotted #666666;
     flex: 1;
     min-width: 0;
   }
@@ -338,8 +338,8 @@ const remainingPosts = allPosts.slice(20);
 
   /* Ensure dynamically created content has the same hover effects */
   #articles-list .article-title:hover {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
+    color: #666666;
+    border-bottom-color: #666666;
   }
 
   .article-tags {
@@ -393,7 +393,26 @@ const remainingPosts = allPosts.slice(20);
   /* Ensure dynamically created content has the same comma separators */
   #articles-list .article-tag:not(:last-child)::after {
     content: ", ";
-    color: var(--text-muted);
+    color: #666666;
+  }
+
+  /* Dark mode support for dynamically created content */
+  [data-theme="dark"] #articles-list .article-date {
+    color: #FFA500;
+  }
+
+  [data-theme="dark"] #articles-list .article-title {
+    color: #FFFFFF;
+    border-bottom-color: #FFA500;
+  }
+
+  [data-theme="dark"] #articles-list .article-title:hover {
+    color: #FF8C00;
+    border-bottom-color: #FF8C00;
+  }
+
+  [data-theme="dark"] #articles-list .article-tag:not(:last-child)::after {
+    color: #FFA500;
   }
 
   .load-more-container {
