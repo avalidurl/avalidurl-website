@@ -284,6 +284,9 @@ const groupedPosts = Object.keys(postsByYear)
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 1rem;
   }
 
   .archive-card {
@@ -356,7 +359,7 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .archive-tag {
-    color: #00FFFF;
+    color: #FF8C00;
     font-size: 0.75rem;
     font-weight: 400;
     text-decoration: none;
@@ -364,7 +367,7 @@ const groupedPosts = Object.keys(postsByYear)
   }
 
   .archive-tag:hover {
-    color: #FF0000;
+    color: #FF4500;
   }
 
   .archive-tag:not(:last-child)::after {
