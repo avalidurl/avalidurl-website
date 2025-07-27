@@ -82,6 +82,20 @@ const remainingPosts = allPosts.slice(20);
               <p class="article-excerpt">
                 {post.data.excerpt || post.data.description}
               </p>
+              
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="article-tags">
+                  {post.data.tags.slice(0, 3).map(tag => (
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
+                      {tag}
+                    </a>
+                  ))}
+                  {post.data.tags.length > 3 && (
+                    <span class="more-tags">+{post.data.tags.length - 3}</span>
+                  )}
+                </div>
+              )}
+              
               {post.data.readingTime && (
                 <span class="reading-time">{post.data.readingTime} min read</span>
               )}
@@ -103,7 +117,8 @@ const remainingPosts = allPosts.slice(20);
           title: post.data.title,
           excerpt: post.data.excerpt || post.data.description,
           publishDate: post.data.publishDate,
-          readingTime: post.data.readingTime
+          readingTime: post.data.readingTime,
+          tags: post.data.tags || []
         })))} />
       </section>
     </div>
@@ -270,6 +285,37 @@ const remainingPosts = allPosts.slice(20);
     color: var(--text-secondary) !important;
   }
   
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-tag {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .article-tag:hover {
+    color: var(--text-primary);
+  }
+
+  .article-tag:not(:last-child)::after {
+    content: ", ";
+    color: var(--text-muted);
+  }
+
+  .more-tags {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+
   .reading-time {
     color: var(--text-muted) !important;
     font-size: 0.875rem;
@@ -541,10 +587,40 @@ const remainingPosts = allPosts.slice(20);
       // Force the correct color styling
       excerptElement.style.color = 'var(--text-secondary)';
       
+      // Create tags section if tags exist
+      let tagsElement = null;
+      if (post.tags && post.tags.length > 0) {
+        tagsElement = document.createElement('div');
+        tagsElement.className = 'article-tags';
+        
+        const tagsToShow = post.tags.slice(0, 3);
+        tagsToShow.forEach((tag, index) => {
+          const tagLink = document.createElement('a');
+          tagLink.href = `/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`;
+          tagLink.className = 'article-tag';
+          tagLink.textContent = tag;
+          tagLink.style.color = 'var(--text-muted)';
+          tagsElement.appendChild(tagLink);
+        });
+        
+        if (post.tags.length > 3) {
+          const moreTagsSpan = document.createElement('span');
+          moreTagsSpan.className = 'more-tags';
+          moreTagsSpan.textContent = `+${post.tags.length - 3}`;
+          moreTagsSpan.style.color = 'var(--text-muted)';
+          tagsElement.appendChild(moreTagsSpan);
+        }
+      }
+      
       // Assemble the article
       article.appendChild(articleMeta);
       article.appendChild(titleElement);
       article.appendChild(excerptElement);
+      
+      // Add tags if they exist
+      if (tagsElement) {
+        article.appendChild(tagsElement);
+      }
       
       // Add reading time if present
       if (post.readingTime) {

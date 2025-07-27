@@ -34,31 +34,42 @@ const sortedPosts = allBlogPosts.sort((a, b) =>
   parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime()
 );
 
-// Group posts by year and month
-const postsByYearMonth = {};
+// Group posts by year first, then by month
+const postsByYear = {};
 sortedPosts.forEach(post => {
   const date = parseIstanbulDate(post.data.publishDate);
   const year = date.getFullYear();
   const month = date.getMonth(); // 0-indexed
-  const key = `${year}-${month}`;
   
-  if (!postsByYearMonth[key]) {
-    postsByYearMonth[key] = {
-      year,
-      month,
+  if (!postsByYear[year]) {
+    postsByYear[year] = {};
+  }
+  
+  if (!postsByYear[year][month]) {
+    postsByYear[year][month] = {
       monthName: date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' }),
       posts: []
     };
   }
   
-  postsByYearMonth[key].posts.push(post);
+  postsByYear[year][month].posts.push(post);
 });
 
-// Convert to array and sort by year/month (newest first)
-const groupedPosts = Object.values(postsByYearMonth).sort((a, b) => {
-  if (b.year !== a.year) return b.year - a.year;
-  return b.month - a.month;
-});
+// Convert to sorted structure (newest year first, newest month first within each year)
+const groupedPosts = Object.keys(postsByYear)
+  .map(year => parseInt(year))
+  .sort((a, b) => b - a)
+  .map(year => ({
+    year,
+    months: Object.keys(postsByYear[year])
+      .map(month => parseInt(month))
+      .sort((a, b) => b - a)
+      .map(month => ({
+        month,
+        monthName: postsByYear[year][month].monthName,
+        posts: postsByYear[year][month].posts
+      }))
+  }));
 ---
 
 <Layout title="Archive - Journal" description="Complete archive of all journal posts organized by year and month.">
@@ -71,51 +82,56 @@ const groupedPosts = Object.values(postsByYearMonth).sort((a, b) => {
     </header>
 
     <div class="archive-content">
-      {groupedPosts.map(({ year, month, monthName, posts }) => (
-        <section class="archive-section">
-          <h2 class="archive-period">{monthName} {year}</h2>
-          <div class="archive-grid">
-            {posts.map(post => (
-              <article class="archive-card">
-                <div class="archive-card-header">
-                  <time class="archive-date">
-                    {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'short',
-                      day: 'numeric',
-                      timeZone: 'Europe/Istanbul'
-                    })}
-                  </time>
-                  {post.data.readingTime && (
-                    <span class="archive-reading-time">{post.data.readingTime} min</span>
-                  )}
-                </div>
-                
-                <h3 class="archive-title">
-                  <a href={`/blog/${post.slug}`}>
-                    {post.data.title}
-                  </a>
-                </h3>
-                
-                <p class="archive-excerpt">
-                  {post.data.excerpt || post.data.description}
-                </p>
-                
-                {post.data.tags.length > 0 && (
-                  <div class="archive-tags">
-                    {post.data.tags.slice(0, 3).map(tag => (
-                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">
-                        {tag}
+      {groupedPosts.map(({ year, months }) => (
+        <section class="archive-year-section">
+          <h2 class="archive-year">{year}</h2>
+          {months.map(({ monthName, posts }) => (
+            <section class="archive-month-section">
+              <h3 class="archive-month">{monthName}</h3>
+              <div class="archive-grid">
+                {posts.map(post => (
+                  <article class="archive-card">
+                    <div class="archive-card-header">
+                      <time class="archive-date">
+                        {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric',
+                          timeZone: 'Europe/Istanbul'
+                        })}
+                      </time>
+                      {post.data.readingTime && (
+                        <span class="archive-reading-time">{post.data.readingTime} min</span>
+                      )}
+                    </div>
+                    
+                    <h4 class="archive-title">
+                      <a href={`/blog/${post.slug}`}>
+                        {post.data.title}
                       </a>
-                    ))}
-                    {post.data.tags.length > 3 && (
-                      <span class="more-tags">+{post.data.tags.length - 3}</span>
+                    </h4>
+                    
+                    <p class="archive-excerpt">
+                      {post.data.excerpt || post.data.description}
+                    </p>
+                    
+                    {post.data.tags.length > 0 && (
+                      <div class="archive-tags">
+                        {post.data.tags.slice(0, 3).map(tag => (
+                          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">
+                            {tag}
+                          </a>
+                        ))}
+                        {post.data.tags.length > 3 && (
+                          <span class="more-tags">+{post.data.tags.length - 3}</span>
+                        )}
+                      </div>
                     )}
-                  </div>
-                )}
-              </article>
-            ))}
-          </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
         </section>
       ))}
     </div>
@@ -159,14 +175,29 @@ const groupedPosts = Object.values(postsByYearMonth).sort((a, b) => {
     margin-bottom: 3rem;
   }
 
-  .archive-section {
-    margin-bottom: 3rem;
+  .archive-year-section {
+    margin-bottom: 4rem;
   }
 
-  .archive-period {
-    font-size: 1.5rem;
-    font-weight: 600;
+  .archive-year {
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--text-primary);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .archive-month-section {
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+  }
+
+  .archive-month {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
     display: inline-block;
   }
