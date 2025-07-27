@@ -1,13 +1,13 @@
 ---
 title: "Thoughts on CryptoWhatevers"
-description: "The year is 2020. Everything is art. Isn’t it the motto behind which we have already been playing hide-and-seek since since a couple of current rock stars detonated the post-modernism crack in the middle of the latest functioning Humanities ball room? That must be the reason why everything passes as"
+description: "A critical examination of cryptocurrency culture, blockchain communities, and the blurring lines between art and technology in the crypto ecosystem. Exploring networking, marketing dynamics, and survival strategies in decentralized finance."
 publishDate: "2021-01-18"
 author: "Gökhan Turhan"
-tags: ["crypto", "technology", "art"]
+tags: ["crypto", "finance", "markets", "DeFi"]
 category: "crypto"
 featured: false
 readingTime: 2
-excerpt: "The year is 2020. Everything is art. Isn’t it the motto behind which we have already been playing hide-and-seek since since a couple of current rock stars detonated the post-modernism crack in the..."
+excerpt: "A critical examination of cryptocurrency culture, blockchain communities, and the dynamics of networking and marketing in the crypto ecosystem. Exploring how traditional finance and crypto 'fartists' are fundamentally similar in their survival strategies."
 originalUrl: "https://gokhan.substack.com/p/thoughts-on-cryptowhatevers"
 ---
 
