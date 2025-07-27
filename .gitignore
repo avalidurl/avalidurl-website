@@ -132,6 +132,9 @@ scripts/comprehensive-*.cjs
 scripts/debug-*.cjs
 scripts/extract-*.cjs
 
+# Blog build process documentation (development only)
+BLOGBUILD.md
+
 # Personal data protection (CRITICAL - never commit)
 email_list*.csv
 *email*.csv
