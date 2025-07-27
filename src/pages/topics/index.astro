@@ -7,11 +7,6 @@ const allBlogPosts = await getCollection('blog', ({ data }) => {
   return !data.draft && new Date(data.publishDate) <= new Date();
 });
 
-// Define main topics
-const mainTopics = [
-  'Finance', 'Technology', 'Art', 'Music', 'Books', 'Culture', 'Screen', 'AI'
-];
-
 // Get all unique tags with post counts
 const tagCounts = {};
 allBlogPosts.forEach(post => {
@@ -20,21 +15,10 @@ allBlogPosts.forEach(post => {
   });
 });
 
-// Convert to array and sort by count (descending) then alphabetically
-const sortedTags = Object.entries(tagCounts)
+// Convert to array and sort alphabetically
+const allTags = Object.entries(tagCounts)
   .map(([tag, count]) => ({ tag, count }))
-  .sort((a, b) => {
-    if (b.count !== a.count) return b.count - a.count;
-    return a.tag.localeCompare(b.tag);
-  });
-
-// Filter main topics that have posts and add them to the beginning
-const mainTopicsWithPosts = mainTopics
-  .map(topic => ({ tag: topic, count: tagCounts[topic] || 0 }))
-  .filter(topic => topic.count > 0);
-
-// Get other tags not in main topics
-const otherTags = sortedTags.filter(({ tag }) => !mainTopics.includes(tag));
+  .sort((a, b) => a.tag.localeCompare(b.tag));
 
 // Get recent posts for featured content
 const recentPosts = allBlogPosts
@@ -47,43 +31,20 @@ const recentPosts = allBlogPosts
     <header class="page-header">
       <h1>Browse by Topic</h1>
       <p class="page-description">
-        Explore {allBlogPosts.length} articles across {sortedTags.length} topics covering finance, art, technology, and culture.
+        Explore {allBlogPosts.length} articles across {allTags.length} topics covering finance, art, technology, and culture.
       </p>
     </header>
     
-    {mainTopicsWithPosts.length > 0 && (
-      <section class="topics-section">
-        <h2>Main Topics</h2>
-        <div class="topics-grid main-topics">
-          {mainTopicsWithPosts.map(({ tag, count }) => (
-            <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="topic-card main-topic">
-              <div class="topic-info">
-                <h3 class="topic-name">{tag}</h3>
-                <span class="topic-count">{count} {count === 1 ? 'post' : 'posts'}</span>
-              </div>
-              <div class="topic-arrow">→</div>
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
-
-    {otherTags.length > 0 && (
-      <section class="topics-section">
-        <h2>All Tags</h2>
-        <div class="topics-grid">
-          {otherTags.map(({ tag, count }) => (
-            <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="topic-card">
-              <div class="topic-info">
-                <h3 class="topic-name">{tag}</h3>
-                <span class="topic-count">{count} {count === 1 ? 'post' : 'posts'}</span>
-              </div>
-              <div class="topic-arrow">→</div>
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
+    <section class="topics-section">
+      <h2>All Topics</h2>
+      <div class="topics-list">
+        {allTags.map(({ tag, count }) => (
+          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="topic-link">
+            {tag} ({count})
+          </a>
+        ))}
+      </div>
+    </section>
     
     <section class="featured-section">
       <h2>Recent Articles</h2>
@@ -172,93 +133,37 @@ const recentPosts = allBlogPosts
   }
   
   .topics-section h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--text-primary);
     margin-bottom: 2rem;
     font-weight: 600;
+    text-align: center;
   }
   
-  .topics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .main-topics {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .topic-card {
-    background: var(--card-bg);
-    border: 2px solid var(--card-border);
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  .topics-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
-  .topic-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--color-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  
-  .topic-card:hover {
-    border-color: var(--color-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px var(--card-shadow);
-  }
-  
-  .topic-card:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .topic-card:hover .topic-arrow {
-    transform: translateX(4px);
-  }
-
-  .main-topic {
-    background: linear-gradient(135deg, var(--card-bg), var(--bg-tertiary));
-    border-color: var(--color-primary);
-  }
-
-  .main-topic .topic-name {
-    color: var(--color-primary);
-    font-weight: 700;
-  }
-  
-  .topic-info {
-    flex: 1;
-  }
-  
-  .topic-name {
+  .topic-link {
     color: var(--text-primary);
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin: 0 0 0.25rem 0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+    border-bottom: 1px dotted var(--text-muted);
+    white-space: nowrap;
   }
-  
-  .topic-count {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-  }
-  
-  .topic-arrow {
+
+  .topic-link:hover {
     color: var(--color-primary);
-    font-size: 1.25rem;
-    font-weight: bold;
-    transition: transform 0.3s ease;
+    border-bottom-color: var(--color-primary);
   }
   
   .featured-section {
@@ -396,15 +301,15 @@ const recentPosts = allBlogPosts
       font-size: 2.5rem;
     }
     
-    .topics-grid {
-      grid-template-columns: 1fr;
+    .topics-list {
+      gap: 0.75rem 1.5rem;
+      max-width: 100%;
     }
     
     .featured-grid {
       grid-template-columns: 1fr;
     }
     
-    .topic-card,
     .featured-card {
       padding: 1.25rem;
     }
