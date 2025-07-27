@@ -21,7 +21,7 @@ Bob is an architect of the future, only to be seconded by good ole Einstein, and
 
 Robert makes a dApp where you can create service token of your "self”—yes, as in [stake on me](https://stakeonme.com/).
 
-**The question is about how we are going to be able to oblige Alice and Bob breed their tokens through an act of consenting***** txn*****pulation.** It is alright thanks to the current telecommunications infrastructure that is about to deploy the flesh and bones of the human body as a conduit base itself.
+**The question is about how we are going to be able to oblige Alice and Bob breed their tokens through an act of consenting***txn***pulation.** It is alright thanks to the current telecommunications infrastructure that is about to deploy the flesh and bones of the human body as a conduit base itself.
 
 Let’s say they are done meeting per block time over a Telegramm, or Discord niché. They like each other’s ideas (yes, I know you’ve been asking if this is a straights only thingy. No, just make Alice and Bob breed their lil tokendler).
 
