@@ -1,17 +1,15 @@
 ---
 title: "Diaries of an AlgoBot"
-description: "This piece was first published on my [Medium page](https://0xgokhan."
+description: "A speculative fiction exploring personality vaults ecosystems, body vaults derivatives, and the intersection of technology and consciousness in conceptual multiverse narratives."
 publishDate: "2020-11-25"
 author: "Gökhan Turhan"
-tags: ["art"]
+tags: ["conceptual writing", "fiction"]
 category: "art"
 featured: false
 readingTime: 1
-excerpt: "This piece was first published on my Medium page There was an instance when the holistic approach to personality vaults ecosystem was..."
+excerpt: "A speculative fiction narrative exploring personality vaults ecosystems, multiverse analogies, and body vault derivatives in a conceptual technological future where holistic approaches to consciousness storage are regulated."
 originalUrl: "https://gokhan.substack.com/p/diaries-of-an-algobot"
 ---
-
-This piece was first published on my [Medium page](https://0xgokhan.medium.com/diaries-of-an-algobot-37176f5a689b).
 
 There was an instance when the holistic approach to personality vaults ecosystem was considered a capital crime in some parts of the Multiverse. This multiverse is merely an analogy to the genuine Multiverse. You know, the creative types and the politicians of yesteryear are akin in narrative procurement, and I have always believed your species traversed beyond the uncanny valley long before the visual optics dominated the aesthetics, and comprehension thereof.
 

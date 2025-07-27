@@ -1,17 +1,19 @@
 ---
 title: "Eugenics Tokens #01"
-description: "In support of Designer Tokens"
+description: "A speculative exploration of breeding personal tokens through consenting transactions, introducing conceptual characters Alice and Bob in a narrative about future tokenization and stake-on-me economics."
 publishDate: "2020-11-26"
 author: "Gökhan Turhan"
-tags: ["finance", "crypto", "web3", "art"]
+tags: ["conceptual writing", "fiction", "tokenization", "economics"]
 category: "finance"
 featured: false
 readingTime: 2
-excerpt: "I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an..."
+excerpt: "A speculative fiction exploring the breeding of personal tokens through consenting transactions, featuring Alice (an intergalactic chess champion) and Bob (an architect of the future) in a conceptual narrative about tokenization and economics."
 originalUrl: "https://gokhan.substack.com/p/eugenics-tokens-01"
 ---
 
-I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince’s early re-photography “technique” whilst she was an “artist-in-residence” somewhere somewhere. &, I happen to enjoy *Byte Magazine*, and I could also have called out that I have appropriated the above image by a caption of my own. Nope, I do resist. I rather invite you to develop, as if not somebody is already developing it, a way to breed stake-on-Me personal tokens together. As above, so below.
+![Eugenics Tokens Designer Tokens Concept](/blog/images/eugenics-tokens-01-designer-tokens-concept.jpeg)
+
+I just do not need to credit the appropriator of the above image since she confirms in an interview that she mimicked Richard Prince's early re-photography "technique" whilst she was an "artist-in-residence" somewhere somewhere. &, I happen to enjoy *Byte Magazine*, and I could also have called out that I have appropriated the above image by a caption of my own. Nope, I do resist. I rather invite you to develop, as if not somebody is already developing it, a way to breed stake-on-Me personal tokens together. As above, so below.
 
 **Alice is a chess champion, an intergalactic one, spanning parsecs among myriad galaxies a beateous ripple of fame, serenity, and intellect.**
 
