@@ -107,9 +107,7 @@ const groupedPosts = Object.keys(postsByYear)
                     <article class="archive-item">
                       <div class="archive-line">
                         <time class="archive-date">
-                          {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
-                            month: 'short',
-                            day: 'numeric',
+                          {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
                             timeZone: 'Europe/Istanbul'
                           })}
                         </time>

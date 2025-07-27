@@ -67,10 +67,7 @@ const remainingPosts = allPosts.slice(20);
             <article class="article-item">
               <div class="article-line">
                 <time class="article-date">
-                  {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric',
-                    year: 'numeric',
+                  {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
                     timeZone: 'Europe/Istanbul'
                   })}
                 </time>
@@ -410,10 +407,7 @@ const remainingPosts = allPosts.slice(20);
       article.className = 'article-item';
       
       const publishDate = new Date(post.publishDate);
-      const formattedDate = publishDate.toLocaleDateString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric',
+      const formattedDate = publishDate.toLocaleDateString('en-CA', {
         timeZone: 'Europe/Istanbul'
       });
       

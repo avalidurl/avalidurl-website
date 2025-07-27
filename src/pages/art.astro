@@ -42,10 +42,7 @@ function getColorThemeClass(theme: string) {
                 <div class="artwork-meta">
                   <span class="artwork-category">{artwork.data.category}</span>
                   <time class="artwork-date">
-                    {new Date(artwork.data.createdDate).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'short'
-                    })}
+                    {new Date(artwork.data.createdDate).toLocaleDateString('en-CA')}
                   </time>
                 </div>
                 <h3 class="artwork-title">{artwork.data.title}</h3>
@@ -77,10 +74,7 @@ function getColorThemeClass(theme: string) {
               <div class="artwork-meta">
                 <span class="artwork-category">{artwork.data.category}</span>
                 <time class="artwork-date">
-                  {new Date(artwork.data.createdDate).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short'
-                  })}
+                  {new Date(artwork.data.createdDate).toLocaleDateString('en-CA')}
                 </time>
               </div>
               <h3 class="artwork-title">{artwork.data.title}</h3>

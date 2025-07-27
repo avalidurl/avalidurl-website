@@ -966,11 +966,7 @@ import Layout from '../layouts/Layout.astro';
   document.addEventListener('DOMContentLoaded', () => {
     const lastUpdateElement = document.getElementById('lastUpdate');
     if (lastUpdateElement) {
-      lastUpdateElement.textContent = new Date().toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      });
+      lastUpdateElement.textContent = new Date().toLocaleDateString('en-CA');
     }
 
     // Simulate commit count (in a real implementation, this would come from GitHub API)

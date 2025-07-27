@@ -94,10 +94,9 @@ const { year, monthName, posts } = Astro.props;
           <article class="post-item">
             <div class="post-line">
               <time class="post-date">
-                {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
-                  day: 'numeric',
+                {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
                   timeZone: 'Europe/Istanbul'
-                })}
+                }).split('-')[2]}
               </time>
               <a href={`/blog/${post.slug}`} class="post-title">
                 {post.data.title}

@@ -69,17 +69,11 @@ const parseIstanbulDate = (dateString) => {
   return new Date(dateString);
 };
 
-const formattedDate = parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
+const formattedDate = parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
   timeZone: 'Europe/Istanbul'
 });
 
-const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedDate).toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
+const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedDate).toLocaleDateString('en-CA', {
   timeZone: 'Europe/Istanbul'
 }) : null;
 ---
