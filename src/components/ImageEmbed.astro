@@ -59,22 +59,9 @@ function isValidImageUrl(url: string): boolean {
 function generateSrcset(imageUrl: string): string {
   if (srcset) return srcset;
   
-  // For external URLs, we can't generate srcset automatically
-  // Return empty string and let the browser handle it
-  if (imageUrl.startsWith('http')) {
-    return '';
-  }
-  
-  // For local images, generate basic srcset
-  const basePath = imageUrl.replace(/\.[^/.]+$/, '');
-  const extension = imageUrl.match(/\.[^/.]+$/)?.[0] || '.jpg';
-  
-  return `
-    ${basePath}-480w${extension} 480w,
-    ${basePath}-768w${extension} 768w,
-    ${basePath}-1200w${extension} 1200w,
-    ${imageUrl} 1920w
-  `.replace(/\s+/g, ' ').trim();
+  // For now, don't generate srcset automatically
+  // as we don't have responsive image variants
+  return '';
 }
 ---
 
