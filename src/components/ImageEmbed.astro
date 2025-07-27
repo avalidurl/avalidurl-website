@@ -59,9 +59,20 @@ function isValidImageUrl(url: string): boolean {
 function generateSrcset(imageUrl: string): string {
   if (srcset) return srcset;
   
-  // For now, don't generate srcset automatically
-  // as we don't have responsive image variants
-  return '';
+  // For external URLs, we can't generate srcset automatically
+  if (imageUrl.startsWith('http')) {
+    return '';
+  }
+  
+  // Use Cloudflare Image Transformations for responsive variants
+  const baseUrl = imageUrl;
+  
+  return `
+    /cdn-cgi/image/width=480,quality=85${baseUrl} 480w,
+    /cdn-cgi/image/width=768,quality=85${baseUrl} 768w,
+    /cdn-cgi/image/width=1200,quality=85${baseUrl} 1200w,
+    /cdn-cgi/image/width=1920,quality=85${baseUrl} 1920w
+  `.replace(/\s+/g, ' ').trim();
 }
 ---
 
