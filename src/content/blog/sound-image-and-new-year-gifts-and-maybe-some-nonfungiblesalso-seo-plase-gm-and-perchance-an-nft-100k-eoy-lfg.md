@@ -1,0 +1,36 @@
+---
+title: "Sound, Image and New Year Gifts and maybe some Nonfungibles—also, SEO plase GM and perchance an NFT 100K EOY LFG"
+description: "read."
+publishDate: "2021-12-27"
+author: "Gokhan Turhan"
+tags: ["finance", "art", "technology", "culture", "writing"]
+category: "finance"
+featured: false
+readingTime: 2
+excerpt: "I bet that there are ever-emergent meta-narratives about the simplest of things, and people who enable those objects to emerge out of nothingness on the non-fungibles scene—since the market is constit..."
+originalUrl: "https://gokhan.substack.com/p/sound-image-and-new-year-gifts-and"
+---
+
+I bet that there are ever-emergent meta-narratives about the simplest of things, and people who enable those objects to emerge out of nothingness on the non-fungibles scene—since the market is constituted, partly, of homo sapiens.
+
+It can utterly be boring to navigate the streets of Twitter, and hop on and off the taverns of Discord. At times, some of us might be lamenting for the bygones days when only a couple of thousand of ours were present on the non-fungibles scene—which is an utter waste of time as a mode of thought. We wanted to wake up the masses unto this then-almost-newly-emergent dépêche mode; and, now that they are awake, there will be myriad forms of artisanal and abstract-artistic experimentation.
+
+Herein lies the subtle fact of per block time of existence though: Many a new-comer artists from different domains who have been experimenting with various forms of arts that witness the legacy cultural evolution of humanity are not aware that the art of smart contract is where it all begins. Hence, they usually opt for mass marketplaces’ 3rd party and almost useless contracts and get lost in the act of an almost missed bildungsroman.
+
+They say now it is time for photography non-fungibles, or music thereof. It has always been that way. It is just that people need to re-balance into a more pervasive form of cultural and strictly digital objects to leverage their net gains unto fresh and novel horizons through the uncanny valley of this primordial smart contract soup.
+
+I do not think we have so far witnessed an original artistic take that would be deemed as web3 native in domains of sound art/ music, photography, and conceptual art—other than the works of Euler Beats, several Catalog figures, deafbeef, holly+, Justin Versano, Rhea Myers, Mitchell F. Chan and the like. Aye, strictly my very own understanding of art hereabouts.
+
+Nay, I do not hodl any piece from any of these figures and entities—guess I was hibernating. I am doing my due diligence by actively lurking into the Water and Music Discord server as a lifetime member on the musical chord, at least.
+
+I do not know why a combo of reading John Cage’s mesostics and contemplating upon Moriyama’s inu and comfily relaxing unto a timbre of existence via Leyland Kirby’s The Caretaker’s *Everywhere at the End of Time* has just rendered my thoughts into this lil’text. 
+
+I was just gonna recommend three new year gifts to you guys. Just gift them to yourselves:
+
+### a) The Caretaker—Everywhere at the End of the World 1-2-3-4-5-6 (vinyl)
+
+! [Social2](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/6db421b6-021d-4c7d-a3ec-f7c1b1c1a3bd_600x593.jpeg)Available via boomkat: [here](https://boomkat.com/products/everywhere-at-the-end-of-time-stages-1-3) and [here](https://boomkat.com/products/everywhere-at-the-end-of-time-stages-4-6-22ef1a10-fb61-419b-a4f6-356adbe834a9).
+
+### b) Daido Moriyama—How I Take Photographs (book)
+
+! [Daido Moriyama – How I Take Photographs - Fonts In Use](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/baf6d8e8-a969-405b-90d0-9ac7973dd732_1340x860.jpeg)available at [Laurence King](https://www.laurenceking.com/us/product/daido-moriyama/).

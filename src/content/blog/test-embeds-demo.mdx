@@ -1,0 +1,41 @@
+---
+title: "Test Post: Embed Components Demo"
+description: "Testing YouTube and Bandcamp embed components to verify they work correctly"
+publishDate: "2025-07-22"
+author: "Gokhan Turhan"
+tags: ["test", "embeds", "demo"]
+category: "general"
+featured: false
+readingTime: 2
+excerpt: "A test post to demonstrate and verify that YouTube and Bandcamp embed components are working correctly after the MDX integration."
+---
+
+This is a test post to verify that our embed components are working correctly after implementing MDX support.
+
+## YouTube Embed Test
+
+Here's a random YouTube video - let's embed a classic:
+
+<YouTubeEmbed url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+
+This should render as a proper YouTube iframe embed with our custom styling.
+
+## astro-embed Components Test
+
+Let's try using the built-in astro-embed components:
+
+<YouTube id="dQw4w9WgXcQ" />
+
+## Bandcamp Embed Test
+
+Now let's test a Bandcamp embed using our custom component:
+
+<BandcampEmbed url="https://bandcamp.com/EmbeddedPlayer/album=4253200802/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" />
+
+This should render as a Bandcamp player showing the album with tracks.
+
+## Testing Complete
+
+If you can see both embeds rendering properly as interactive players (not just text or broken components), then our MDX integration is working correctly!
+
+The YouTube video should be playable directly in the page, and the Bandcamp player should show album art and allow track preview.

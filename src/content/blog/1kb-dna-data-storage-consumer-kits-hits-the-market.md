@@ -1,0 +1,20 @@
+---
+title: "1KB DNA Data Storage Consumer Kits Hits the Market"
+description: "Someone need to tell [Biomemory Labs](https://twitter."
+publishDate: "2023-12-26"
+author: "Gokhan Turhan"
+tags: ["data", "art"]
+category: "data"
+featured: false
+readingTime: 1
+excerpt: "Someone need to tell Biomemory Labs that their frontend is so bloated even an M1 chip cannot handle it. Apparently, they have rolled out 1KB DNA data storage for..."
+originalUrl: "https://gokhan.substack.com/p/1kb-dna-data-storage-consumer-kits-hits-the-market"
+---
+
+Someone need to tell [Biomemory Labs](https://twitter.com/BiomemoryLabs) that their frontend is so bloated even an M1 chip cannot handle it. Apparently, they have rolled out 1KB DNA data storage for €1K—which I think is just a PMF experiment in the beginning w/ slick cards, & almost proto-digital poetics sensuality of utmost hygienic design of the day that screams "Figma!"
+
+Do not get me wrong.
+
+I'm excited on this fact that finally a DNA data storage gadget is accesible by the general public. I cannot help but think about its implications for a digital-native real-life of our species biocentric futures.
+
+According to a [techradar](https://twitter.com/techradar) feature, this French company aims at releasing a 100PB self-enclosed DNA card with a $150,000 price tag with 1,000PB (one Exabyte). I think, exponentiated by the intent-centric and sufficiently decentralized mechanism markets as in combined with zero knowledge proofs, and the incoming AGI, the promises the recombinatorial nature of these technologies give is astoundingly beauteous if woven properly. Imagine preparing a privacy recipe that makes use of MEV infastructure, offchain knowledge hubs, onchain security transactions, and through DNA data storage via SUAVE kettles. The long-term archival implications are even more beautiful.
