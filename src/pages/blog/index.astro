@@ -230,7 +230,24 @@ const remainingPosts = allPosts.slice(20);
     padding: 0;
   }
 
+  /* Ensure dynamically created content has the same styles */
+  #articles-list .article-item {
+    margin: 0;
+    padding: 0;
+  }
+
   .article-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    margin-bottom: 0.25rem;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  /* Ensure dynamically created content has the same styles */
+  #articles-list .article-line {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -244,7 +261,22 @@ const remainingPosts = allPosts.slice(20);
     background: rgba(0, 0, 0, 0.02);
   }
 
+  /* Ensure dynamically created content has the same hover effects */
+  #articles-list .article-line:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
   .article-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 80px;
+  }
+
+  /* Ensure dynamically created content has the same styles */
+  #articles-list .article-date {
     color: var(--text-muted);
     font-size: 0.8rem;
     font-weight: 400;
@@ -286,12 +318,40 @@ const remainingPosts = allPosts.slice(20);
     min-width: 0;
   }
 
+  /* Ensure dynamically created content has the same styles */
+  #articles-list .article-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+    border-bottom: 1px dotted var(--text-muted);
+    flex: 1;
+    min-width: 0;
+  }
+
   .article-title:hover {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
   }
 
+  /* Ensure dynamically created content has the same hover effects */
+  #articles-list .article-title:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
   .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  /* Ensure dynamically created content has the same styles */
+  #articles-list .article-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
@@ -307,11 +367,31 @@ const remainingPosts = allPosts.slice(20);
     transition: color 0.2s ease;
   }
 
+  /* Ensure dynamically created content has the same styles */
+  #articles-list .article-tag {
+    color: #FF8C00;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
   .article-tag:hover {
     color: #FF4500;
   }
 
+  /* Ensure dynamically created content has the same hover effects */
+  #articles-list .article-tag:hover {
+    color: #FF4500;
+  }
+
   .article-tag:not(:last-child)::after {
+    content: ", ";
+    color: var(--text-muted);
+  }
+
+  /* Ensure dynamically created content has the same comma separators */
+  #articles-list .article-tag:not(:last-child)::after {
     content: ", ";
     color: var(--text-muted);
   }
@@ -379,6 +459,28 @@ const remainingPosts = allPosts.slice(20);
     }
 
     .article-tags {
+      width: 100%;
+    }
+
+    /* Ensure dynamically created content has the same responsive styles */
+    #articles-list .article-line {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      padding: 0.4rem 0;
+    }
+
+    #articles-list .article-date {
+      font-size: 0.75rem;
+      min-width: auto;
+    }
+
+    #articles-list .article-title {
+      border-bottom: none;
+      width: 100%;
+    }
+
+    #articles-list .article-tags {
       width: 100%;
     }
   }
@@ -525,6 +627,9 @@ const remainingPosts = allPosts.slice(20);
       
       // Add the line to the article
       article.appendChild(articleLine);
+      
+      // Force a reflow to ensure styles are applied
+      article.offsetHeight;
       
       return article;
     }
