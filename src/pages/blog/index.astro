@@ -66,22 +66,20 @@ const remainingPosts = allPosts.slice(20);
           {initialPosts.map(post => (
             <article class="article-item">
               <div class="article-line">
-                <div class="article-main">
-                  <a href={`/blog/${post.slug}`} class="article-title">
-                    {post.data.title}
-                  </a>
-                  <time class="article-date">
-                    {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric',
-                      timeZone: 'Europe/Istanbul'
-                    })}
-                  </time>
-                </div>
+                <time class="article-date">
+                  {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    timeZone: 'Europe/Istanbul'
+                  })}
+                </time>
+                <a href={`/blog/${post.slug}`} class="article-title">
+                  {post.data.title}
+                </a>
                 {post.data.tags && post.data.tags.length > 0 && (
                   <div class="article-tags">
-                    {post.data.tags.slice(0, 4).map(tag => (
+                    {post.data.tags.slice(0, 3).map(tag => (
                       <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
                         {tag}
                       </a>
@@ -125,7 +123,7 @@ const remainingPosts = allPosts.slice(20);
   }
 
   .blog-header {
-    text-align: left;
+    text-align: center;
     margin-bottom: 3rem;
     border-bottom: 1px solid var(--border-light);
     padding-bottom: 2rem;
@@ -222,25 +220,22 @@ const remainingPosts = allPosts.slice(20);
   .article-line {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 1rem;
-    margin: 0.25rem 0;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
     gap: 1rem;
-    border-bottom: 1px solid var(--border-light);
+    padding: 0.5rem 0;
+    transition: background-color 0.2s ease;
   }
 
   .article-line:hover {
     background: rgba(0, 0, 0, 0.02);
   }
 
-  .article-main {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex: 1;
-    min-width: 0;
+  .article-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 80px;
   }
 
   .article-title {
@@ -258,14 +253,6 @@ const remainingPosts = allPosts.slice(20);
   .article-title:hover {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
-  }
-
-  .article-date {
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    font-weight: 400;
-    white-space: nowrap;
-    flex-shrink: 0;
   }
 
   .article-tags {
@@ -329,28 +316,22 @@ const remainingPosts = allPosts.slice(20);
     .article-line {
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.5rem;
-      padding: 1rem;
-    }
-
-    .article-main {
-      flex-direction: column;
-      align-items: flex-start;
       gap: 0.25rem;
-      width: 100%;
-    }
-
-    .article-title {
-      border-bottom: none;
-      margin-bottom: 0.25rem;
+      padding: 0.4rem 0;
     }
 
     .article-date {
       font-size: 0.75rem;
+      min-width: auto;
+    }
+
+    .article-title {
+      border-bottom: none;
+      width: 100%;
     }
 
     .article-tags {
-      align-self: stretch;
+      width: 100%;
     }
   }
 
@@ -384,9 +365,9 @@ const remainingPosts = allPosts.slice(20);
   // Load More functionality
   document.addEventListener('DOMContentLoaded', function() {
     const loadMoreBtn = document.getElementById('load-more-btn');
-    const articlesGrid = document.getElementById('articles-grid');
+    const articlesList = document.getElementById('articles-list');
     
-    if (!loadMoreBtn || !articlesGrid) return;
+    if (!loadMoreBtn || !articlesList) return;
     
     // Store remaining posts data from server-side
     const remainingPostsData = JSON.parse(document.getElementById('remaining-posts-data')?.textContent || '[]');
@@ -405,7 +386,7 @@ const remainingPosts = allPosts.slice(20);
         
         postsToLoad.forEach((post: any) => {
           const articleElement = createArticleElement(post);
-          articlesGrid.appendChild(articleElement);
+          articlesList.appendChild(articleElement);
         });
         
         currentIndex += postsPerLoad;
@@ -426,7 +407,7 @@ const remainingPosts = allPosts.slice(20);
     
     function createArticleElement(post: any) {
       const article = document.createElement('article');
-      article.className = 'article-card';
+      article.className = 'article-item';
       
       const publishDate = new Date(post.publishDate);
       const formattedDate = publishDate.toLocaleDateString('en-US', {
@@ -436,33 +417,20 @@ const remainingPosts = allPosts.slice(20);
         timeZone: 'Europe/Istanbul'
       });
       
-      // Create article meta
-      const articleMeta = document.createElement('div');
-      articleMeta.className = 'article-meta';
+      // Create the article line container
+      const articleLine = document.createElement('div');
+      articleLine.className = 'article-line';
+      
+      // Create date element
       const timeElement = document.createElement('time');
       timeElement.className = 'article-date';
       timeElement.textContent = formattedDate;
-      // Force the correct color styling for date
-      timeElement.style.color = 'var(--text-muted)';
-      articleMeta.appendChild(timeElement);
       
-      // Create article title with proper styling
-      const titleElement = document.createElement('h3');
-      titleElement.className = 'article-title';
+      // Create title link
       const linkElement = document.createElement('a');
       linkElement.href = `/blog/${post.slug}`;
       linkElement.textContent = post.title;
-      // Force the correct color styling
-      linkElement.style.color = 'var(--text-primary)';
-      linkElement.style.textDecoration = 'none';
-      titleElement.appendChild(linkElement);
-      
-      // Create article excerpt
-      const excerptElement = document.createElement('p');
-      excerptElement.className = 'article-excerpt';
-      excerptElement.textContent = post.excerpt;
-      // Force the correct color styling
-      excerptElement.style.color = 'var(--text-secondary)';
+      linkElement.className = 'article-title';
       
       // Create tags section if tags exist
       let tagsElement = null;
@@ -476,37 +444,20 @@ const remainingPosts = allPosts.slice(20);
           tagLink.href = `/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`;
           tagLink.className = 'article-tag';
           tagLink.textContent = tag;
-          tagLink.style.color = 'var(--text-muted)';
           tagsElement.appendChild(tagLink);
         });
-        
-        if (post.tags.length > 3) {
-          const moreTagsSpan = document.createElement('span');
-          moreTagsSpan.className = 'more-tags';
-          moreTagsSpan.textContent = `+${post.tags.length - 3}`;
-          moreTagsSpan.style.color = 'var(--text-muted)';
-          tagsElement.appendChild(moreTagsSpan);
-        }
       }
       
-      // Assemble the article
-      article.appendChild(articleMeta);
-      article.appendChild(titleElement);
-      article.appendChild(excerptElement);
+      // Assemble the article line
+      articleLine.appendChild(timeElement);
+      articleLine.appendChild(linkElement);
       
-      // Add tags if they exist
       if (tagsElement) {
-        article.appendChild(tagsElement);
+        articleLine.appendChild(tagsElement);
       }
       
-      // Add reading time if present
-      if (post.readingTime) {
-        const readingTimeElement = document.createElement('span');
-        readingTimeElement.className = 'reading-time';
-        readingTimeElement.textContent = `${post.readingTime} min read`;
-        readingTimeElement.style.color = 'var(--text-muted)';
-        article.appendChild(readingTimeElement);
-      }
+      // Add the line to the article
+      article.appendChild(articleLine);
       
       return article;
     }
