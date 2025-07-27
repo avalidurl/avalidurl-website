@@ -3,7 +3,7 @@ title: "On the Probability of Neo-Templexity: Blockchain's Role in Human Evoluti
 description: "Exploring how blockchain technology, cryptoart, and decentralized systems serve as collaborative mechanisms between humans and non-humans to redefine time measurement and accelerate technological escape velocity."
 publishDate: "2020-08-24"
 author: "Gökhan Turhan"
-tags: ["cryptoart", "NFTs", "DeFi", "acceleration"]
+tags: ["cryptoart", "NFTs", "DeFi", "acceleration", "artwork"]
 category: "blockchain"
 featured: false
 readingTime: 4
