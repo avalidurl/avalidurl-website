@@ -1,5 +1,5 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from '../../../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 export const prerender = true;
@@ -18,23 +18,23 @@ export async function getStaticPaths() {
     // For datetime strings, parse as-is but assume they're in Istanbul time
     return new Date(dateString);
   };
-  const allPosts = await getCollection('blog', ({ data }) => {
-    // Don't show draft posts
+  const allProducts = await getCollection('products', ({ data }) => {
+    // Don't show draft products
     if (data.draft) return false;
     
-    // Allow posts with dates up to 1 day in the future (for timezone issues)
+    // Allow products with dates up to 1 day in the future (for timezone issues)
     const publishDate = parseIstanbulDate(data.publishDate);
     const now = new Date();
     const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
     
-    // Only filter out posts that are more than 1 day in the future
+    // Only filter out products that are more than 1 day in the future
     return publishDate <= oneDayFromNow;
   });
 
   const monthYearCombos = [];
 
-  allPosts.forEach(post => {
-    const date = parseIstanbulDate(post.data.publishDate);
+  allProducts.forEach(product => {
+    const date = parseIstanbulDate(product.data.publishDate);
     const year = date.getFullYear();
     const monthName = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
     
@@ -57,18 +57,18 @@ export async function getStaticPaths() {
     props: { 
       year,
       monthName,
-      posts: allPosts
-        .filter(post => {
-          const date = parseIstanbulDate(post.data.publishDate);
-          const postMonth = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
-          return date.getFullYear() === year && postMonth.toLowerCase() === monthLower;
+      products: allProducts
+        .filter(product => {
+          const date = parseIstanbulDate(product.data.publishDate);
+          const productMonth = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+          return date.getFullYear() === year && productMonth.toLowerCase() === monthLower;
         })
         .sort((a, b) => parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime())
     },
   }));
 }
 
-const { year, monthName, posts } = Astro.props;
+const { year, monthName, products } = Astro.props;
 
 // Helper function to parse dates consistently in Istanbul timezone  
 const parseIstanbulDate = (dateString) => {
@@ -85,60 +85,81 @@ const parseIstanbulDate = (dateString) => {
 };
 ---
 
-<Layout title={`${monthName} ${year} Archive`} description={`All blog posts from ${monthName} ${year} - exploring finance, art, and technology.`}>
+<Layout title={`${monthName} ${year} Products Archive`} description={`All products from ${monthName} ${year} - exploring finance, art, and technology.`}>
   <main class="container">
     <header class="archive-header">
       <div class="archive-breadcrumb">
-        <a href="/blog">Journal</a> → 
-        <a href="/archive">Archive</a> → 
-        <a href={`/archive/${year}`}>{year}</a> → 
+        <a href="/products">Products</a> → 
+        <a href="/products/archive">Archive</a> → 
+        <a href={`/products/archive/${year}`}>{year}</a> → 
         <span>{monthName}</span>
       </div>
       
-      <h1>Posts from {monthName} {year}</h1>
+      <h1>Products from {monthName} {year}</h1>
       <p class="archive-description">
-        {posts.length} {posts.length === 1 ? 'post' : 'posts'} published in {monthName} {year}
+        {products.length} {products.length === 1 ? 'product' : 'products'} released in {monthName} {year}
       </p>
     </header>
     
-    <section class="archive-posts">
-      <div class="posts-list">
-        {posts.map(post => (
-          <article class="post-item">
-            <div class="post-line">
-              <time class="post-date">
-                {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
+    <section class="archive-products">
+      <div class="products-list">
+        {products.map(product => (
+          <article class="product-item">
+            <div class="product-line">
+              <time class="product-date">
+                {parseIstanbulDate(product.data.publishDate).toLocaleDateString('en-CA', {
                   timeZone: 'Europe/Istanbul'
                 }).split('-')[2]}
               </time>
-              <a href={`/blog/${post.slug}`} class="post-title">
-                {post.data.title}
-              </a>
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="post-tags">
-                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="post-tag">
-                      {tag}
-                    </a>
-                  ))}
+              <div class="product-content">
+                <div class="product-header">
+                  <a href={product.data.url} target="_blank" rel="noopener noreferrer" class="product-title">
+                    {product.data.title}
+                  </a>
+                  <span class="product-status" data-status={product.data.status.toLowerCase()}>
+                    {product.data.status}
+                  </span>
                 </div>
-              )}
+                <p class="product-description">
+                  {product.data.description}
+                </p>
+                {(product.data.tech || product.data.tags) && (
+                  <div class="product-meta">
+                    {product.data.tech && product.data.tech.length > 0 && (
+                      <div class="product-tech">
+                        {product.data.tech.slice(0, 4).map(tech => (
+                          <span class="tech-tag">{tech}</span>
+                        ))}
+                      </div>
+                    )}
+                    {product.data.tags && product.data.tags.length > 0 && (
+                      <div class="product-tags">
+                        {product.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map(tag => (
+                          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="product-tag">
+                            {tag}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </article>
         ))}
       </div>
       
-      {posts.length === 0 && (
-        <div class="no-posts">
-          <p>No posts found for {monthName} {year}.</p>
-          <a href="/blog" class="back-to-blog">← Back to Journal</a>
+      {products.length === 0 && (
+        <div class="no-products">
+          <p>No products found for {monthName} {year}.</p>
+          <a href="/products" class="back-to-products">← Back to Products</a>
         </div>
       )}
     </section>
     
     <footer class="archive-footer">
-      <a href="/blog" class="back-to-blog">← Back to Journal</a>
-      <a href={`/archive/${year}`} class="year-archive">View All {year} Posts →</a>
+      <a href="/products" class="back-to-products">← Back to Products</a>
+      <a href={`/products/archive/${year}`} class="year-archive">View All {year} Products →</a>
     </footer>
   </main>
 </Layout>
@@ -200,29 +221,32 @@ const parseIstanbulDate = (dateString) => {
     margin: 0;
   }
   
-  .posts-list {
+  .products-list {
     padding: 0;
     margin-bottom: 3rem;
   }
 
-  .post-item {
-    margin: 0;
-    padding: 0;
+  .product-item {
+    margin: 0 0 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    transition: all 0.2s ease;
   }
 
-  .post-line {
+  .product-item:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-line {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 0;
-    transition: background-color 0.2s ease;
+    gap: 1.5rem;
+    align-items: flex-start;
   }
 
-  .post-line:hover {
-    background: rgba(0, 0, 0, 0.02);
-  }
-
-  .post-date {
+  .product-date {
     color: var(--text-muted);
     font-size: 0.8rem;
     font-weight: 400;
@@ -236,35 +260,94 @@ const parseIstanbulDate = (dateString) => {
     justify-content: flex-end;
   }
 
-  .post-title {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.4;
-    transition: color 0.2s ease;
-    border-bottom: 1px dotted var(--text-muted);
+  .product-content {
     flex: 1;
     min-width: 0;
+  }
+
+  .product-header {
     display: flex;
     align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
   }
 
-  .post-title:hover {
+  .product-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.2s ease;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .product-title:hover {
     color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
   }
 
-  .post-tags {
+  .product-status {
+    background: #22c55e;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .product-status[data-status="beta"] {
+    background: #f59e0b;
+  }
+
+  .product-status[data-status="development"] {
+    background: #6366f1;
+  }
+
+  .product-status[data-status="archived"] {
+    background: #6b7280;
+  }
+
+  .product-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .product-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .product-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-tag {
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .product-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     align-items: center;
-    flex-shrink: 0;
-    min-height: 1.4em;
   }
 
-  .post-tag {
+  .product-tag {
     color: #FF8C00;
     font-size: 0.75rem;
     font-weight: 400;
@@ -275,16 +358,16 @@ const parseIstanbulDate = (dateString) => {
     align-items: center;
   }
 
-  .post-tag:hover {
+  .product-tag:hover {
     color: #FF4500;
   }
 
-  .post-tag:not(:last-child)::after {
+  .product-tag:not(:last-child)::after {
     content: ", ";
     color: var(--text-muted);
   }
   
-  .no-posts {
+  .no-products {
     text-align: center;
     padding: 3rem;
     color: var(--text-muted);
@@ -299,7 +382,7 @@ const parseIstanbulDate = (dateString) => {
     border-top: 1px solid var(--border-light);
   }
   
-  .back-to-blog,
+  .back-to-products,
   .year-archive {
     color: var(--color-primary);
     font-weight: 500;
@@ -307,7 +390,7 @@ const parseIstanbulDate = (dateString) => {
     transition: color 0.3s ease;
   }
   
-  .back-to-blog:hover,
+  .back-to-products:hover,
   .year-archive:hover {
     color: var(--color-primary-hover);
   }
@@ -321,26 +404,34 @@ const parseIstanbulDate = (dateString) => {
       font-size: 2rem;
     }
 
-    .post-line {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.25rem;
-      padding: 0.5rem 0;
+    .product-item {
+      padding: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    .post-date {
+    .product-line {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .product-date {
       font-size: 0.75rem;
       min-width: auto;
       text-align: left;
     }
 
-    .post-title {
-      border-bottom: none;
-      width: 100%;
+    .product-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
 
-    .post-tags {
-      width: 100%;
+    .product-title {
+      font-size: 1rem;
+    }
+
+    .product-meta {
+      gap: 0.5rem;
     }
     
     .archive-footer {
@@ -358,8 +449,8 @@ const parseIstanbulDate = (dateString) => {
       font-size: 1.5rem;
     }
 
-    .post-line {
-      padding: 0.4rem 0;
+    .product-item {
+      padding: 0.75rem;
     }
 
     .archive-breadcrumb {

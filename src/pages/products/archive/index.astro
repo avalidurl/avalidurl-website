@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 // Helper function to parse dates consistently in Istanbul timezone
@@ -16,78 +16,78 @@ const parseIstanbulDate = (dateString) => {
   return new Date(dateString);
 };
 
-const allBlogPosts = await getCollection('blog', ({ data }) => {
-  // Don't show draft posts
+const allProducts = await getCollection('products', ({ data }) => {
+  // Don't show draft products
   if (data.draft) return false;
   
-  // Allow posts with dates up to 1 day in the future (for timezone issues)
+  // Allow products with dates up to 1 day in the future (for timezone issues)
   const publishDate = parseIstanbulDate(data.publishDate);
   const now = new Date();
   const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
   
-  // Only filter out posts that are more than 1 day in the future
+  // Only filter out products that are more than 1 day in the future
   return publishDate <= oneDayFromNow;
 });
 
 // Sort by publish date (newest first) using Istanbul timezone parsing
-const sortedPosts = allBlogPosts.sort((a, b) => 
+const sortedProducts = allProducts.sort((a, b) => 
   parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime()
 );
 
-// Group posts by year first, then by month
-const postsByYear = {};
-sortedPosts.forEach(post => {
-  const date = parseIstanbulDate(post.data.publishDate);
+// Group products by year first, then by month
+const productsByYear = {};
+sortedProducts.forEach(product => {
+  const date = parseIstanbulDate(product.data.publishDate);
   const year = date.getFullYear();
   const month = date.getMonth(); // 0-indexed
   
-  if (!postsByYear[year]) {
-    postsByYear[year] = {};
+  if (!productsByYear[year]) {
+    productsByYear[year] = {};
   }
   
-  if (!postsByYear[year][month]) {
-    postsByYear[year][month] = {
+  if (!productsByYear[year][month]) {
+    productsByYear[year][month] = {
       monthName: date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' }),
-      posts: []
+      products: []
     };
   }
   
-  postsByYear[year][month].posts.push(post);
+  productsByYear[year][month].products.push(product);
 });
 
 // Convert to sorted structure (newest year first, newest month first within each year)
-const groupedPosts = Object.keys(postsByYear)
+const groupedProducts = Object.keys(productsByYear)
   .map(year => parseInt(year))
   .sort((a, b) => b - a)
   .map(year => ({
     year,
-    totalPosts: Object.keys(postsByYear[year]).reduce((total, month) => total + postsByYear[year][month].posts.length, 0),
-    months: Object.keys(postsByYear[year])
+    totalProducts: Object.keys(productsByYear[year]).reduce((total, month) => total + productsByYear[year][month].products.length, 0),
+    months: Object.keys(productsByYear[year])
       .map(month => parseInt(month))
       .sort((a, b) => b - a)
       .map(month => ({
         month,
-        monthName: postsByYear[year][month].monthName,
-        posts: postsByYear[year][month].posts
+        monthName: productsByYear[year][month].monthName,
+        products: productsByYear[year][month].products
       }))
   }));
 ---
 
-<Layout title="Archive - Journal" description="Complete archive of all journal posts organized by year and month.">
+<Layout title="Products Archive" description="Complete archive of all products organized by year and month.">
   <main class="archive-container">
     <header class="archive-header">
-      <h1>Journal Archive</h1>
+      <h1>Products Archive</h1>
       <p class="archive-subtitle">
-        Complete collection of {allBlogPosts.length} posts exploring finance, art, technology, and culture.
+        Complete collection of {allProducts.length} products exploring finance, art, technology, and data visualization.
       </p>
     </header>
 
     <div class="archive-content">
-      {groupedPosts.map(({ year, totalPosts, months }) => (
+      {groupedProducts.map(({ year, totalProducts, months }) => (
         <section class="archive-year-section">
           <div class="year-header-collapsible" data-year-toggle={year}>
             <h2 class="archive-year">
-              <a href={`/archive/${year}`} class="year-link">{year}</a> <span class="post-count">({totalPosts} posts)</span>
+              <a href={`/products/archive/${year}`} class="year-link">{year}</a> <span class="product-count">({totalProducts} products)</span>
             </h2>
             <button class="year-toggle-btn" data-year={year}>
               <span class="toggle-icon">▼</span>
@@ -95,12 +95,12 @@ const groupedPosts = Object.keys(postsByYear)
           </div>
           <div class="year-content collapsed" data-year-content={year}>
             <div class="year-content-inner">
-              {months.map(({ monthName, posts }) => (
+              {months.map(({ monthName, products }) => (
               <section class="archive-month-section">
                 <div class="month-header-collapsible" data-month-toggle={`${year}-${monthName.toLowerCase()}`}>
                   <h3 class="archive-month">
-                    <a href={`/archive/${year}/${monthName.toLowerCase()}`} class="month-link">
-                      {monthName} <span class="post-count">({posts.length})</span>
+                    <a href={`/products/archive/${year}/${monthName.toLowerCase()}`} class="month-link">
+                      {monthName} <span class="product-count">({products.length})</span>
                     </a>
                   </h3>
                   <button class="month-toggle-btn" data-month={`${year}-${monthName.toLowerCase()}`}>
@@ -110,20 +110,23 @@ const groupedPosts = Object.keys(postsByYear)
                 <div class="month-content collapsed" data-month-content={`${year}-${monthName.toLowerCase()}`}>
                   <div class="month-content-inner">
                     <div class="archive-list">
-                      {posts.map(post => (
+                      {products.map(product => (
                         <article class="archive-item">
                           <div class="archive-line">
                             <time class="archive-date">
-                              {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
+                              {parseIstanbulDate(product.data.publishDate).toLocaleDateString('en-CA', {
                                 timeZone: 'Europe/Istanbul'
                               }).split('-')[2]}
                             </time>
-                            <a href={`/blog/${post.slug}`} class="archive-title">
-                              {post.data.title}
+                            <a href={product.data.url} target="_blank" rel="noopener noreferrer" class="archive-title">
+                              {product.data.title}
                             </a>
-                            {post.data.tags.length > 0 && (
+                            <span class="archive-status" data-status={product.data.status.toLowerCase()}>
+                              {product.data.status}
+                            </span>
+                            {product.data.tags.length > 0 && (
                               <div class="archive-tags">
-                                {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map(tag => (
+                                {product.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
                                   <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">
                                     {tag}
                                   </a>
@@ -145,7 +148,7 @@ const groupedPosts = Object.keys(postsByYear)
     </div>
     
     <footer class="archive-footer">
-      <a href="/blog" class="back-to-journal">← Back to Journal</a>
+      <a href="/products" class="back-to-products">← Back to Products</a>
     </footer>
   </main>
 </Layout>
@@ -252,7 +255,7 @@ const groupedPosts = Object.keys(postsByYear)
     color: var(--color-primary);
   }
 
-  .post-count {
+  .product-count {
     font-weight: 400;
     color: var(--text-muted);
     font-size: 0.9em;
@@ -354,6 +357,30 @@ const groupedPosts = Object.keys(postsByYear)
     border-bottom-color: var(--color-primary);
   }
 
+  .archive-status {
+    background: #22c55e;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 500;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .archive-status[data-status="beta"] {
+    background: #f59e0b;
+  }
+
+  .archive-status[data-status="development"] {
+    background: #6366f1;
+  }
+
+  .archive-status[data-status="archived"] {
+    background: #6b7280;
+  }
+
   .archive-tags {
     display: flex;
     flex-wrap: wrap;
@@ -385,7 +412,7 @@ const groupedPosts = Object.keys(postsByYear)
     border-top: 1px solid var(--border-light);
   }
 
-  .back-to-journal {
+  .back-to-products {
     color: var(--color-primary);
     font-weight: 500;
     text-decoration: none;
@@ -393,7 +420,7 @@ const groupedPosts = Object.keys(postsByYear)
     transition: color 0.3s ease;
   }
 
-  .back-to-journal:hover {
+  .back-to-products:hover {
     color: var(--color-primary-hover);
   }
 

@@ -85,7 +85,7 @@ const remainingPosts = allPosts.slice(20);
                 </a>
                 {post.data.tags && post.data.tags.length > 0 && (
                   <div class="article-tags">
-                    {post.data.tags.slice(0, 3).map(tag => (
+                    {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
                       <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
                         {tag}
                       </a>
@@ -246,9 +246,12 @@ const remainingPosts = allPosts.slice(20);
     color: var(--text-muted);
     font-size: 0.8rem;
     font-weight: 400;
+    line-height: 1.4;
     white-space: nowrap;
     flex-shrink: 0;
     min-width: 80px;
+    display: flex;
+    align-items: center;
   }
 
   .date-link {
@@ -282,6 +285,8 @@ const remainingPosts = allPosts.slice(20);
     border-bottom: 1px dotted var(--text-muted);
     flex: 1;
     min-width: 0;
+    display: flex;
+    align-items: center;
   }
 
   .article-title:hover {
@@ -295,6 +300,7 @@ const remainingPosts = allPosts.slice(20);
     gap: 0;
     align-items: center;
     flex-shrink: 0;
+    min-height: 1.4em;
   }
 
   .article-tag {
@@ -303,6 +309,9 @@ const remainingPosts = allPosts.slice(20);
     font-weight: 400;
     text-decoration: none;
     transition: color 0.2s ease;
+    line-height: 1.4;
+    display: inline-flex;
+    align-items: center;
   }
 
   .article-tag:hover {
@@ -464,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let tagsHTML = '';
     if (post.tags && post.tags.length > 0) {
-      const tagsToShow = post.tags.slice(0, 3);
+      const tagsToShow = post.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3);
       const tagLinks = tagsToShow.map(tag => 
         `<a href="/topics/${tag.toLowerCase().replace(/\s+/g, '-')}" class="article-tag">${tag}</a>`
       ).join('');

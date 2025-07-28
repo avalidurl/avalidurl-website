@@ -15,6 +15,7 @@ price: "0.15 ETH"
 edition: "1 of 1"
 inspiration: "The emotional volatility of financial markets translated into visual turbulence"
 process: "Real-time market data feeds into color algorithms that generate organic, breathing patterns reflecting market psychology"
+tags: ["finance", "data", "visualization", "emotions", "markets", "generative"]
 ---
 
 # The Intersection of Fear and Beauty

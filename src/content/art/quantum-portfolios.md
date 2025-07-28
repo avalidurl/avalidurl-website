@@ -15,6 +15,7 @@ price: "Not for sale"
 edition: "Interactive Installation"
 inspiration: "Modern Portfolio Theory meets quantum mechanics visualization"
 process: "Real portfolio correlations drive particle systems that exhibit quantum-like behavior patterns"
+tags: ["finance", "interactive", "portfolio", "quantum", "visualization", "technology"]
 ---
 
 # Uncertainty Principles in Finance

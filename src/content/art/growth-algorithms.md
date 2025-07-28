@@ -15,6 +15,7 @@ price: "0.08 ETH"
 edition: "5 of 10"
 inspiration: "The organic beauty hidden within exponential growth equations"
 process: "Compound interest formulas drive L-system algorithms to generate tree-like growth patterns"
+tags: ["finance", "generative", "algorithms", "nature", "mathematics"]
 ---
 
 # When Mathematics Becomes Nature
