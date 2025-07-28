@@ -25,81 +25,13 @@ const recentBlogPosts = allBlogPosts
   .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
   .slice(0, 3);
 
-const products = [
-  {
-    title: "S&P 500 CapEx Tracker",
-    description: "A data-driven financial research platform aggregating S&P 100 capital expenditure insights, providing transparent, community-supported market intelligence.",
-    url: "https://sp500-capex.vercel.app/",
-    tech: ["Next.js", "Financial APIs", "Data Visualization"],
-    status: "Live"
-  },
-  {
-    title: "Market Cap Tracker",
-    description: "Real-time market capitalization comparison between NVIDIA and the cryptocurrency market, demonstrating advanced data visualization and performance monitoring.",
-    url: "https://market-cap-tracker.vercel.app/",
-    tech: ["Next.js", "Real-time APIs", "Analytics"],
-    status: "Live"
-  }
-];
+// Get products
+const allProducts = await getCollection('products', ({ data }) => {
+  return !data.draft;
+});
 
-const projects = [
-  {
-    title: "Neural Canvas: AI-Assisted Digital Art Platform",
-    url: "/projects/neural-canvas",
-    year: "2025"
-  },
-  {
-    title: "Memory Garden: Personal Knowledge Graph",
-    url: "/projects/memory-garden", 
-    year: "2024"
-  },
-  {
-    title: "Code Poetry: Algorithmic Literature Generator",
-    url: "/projects/code-poetry",
-    year: "2024"
-  },
-  {
-    title: "Data Dreams: Visualization Experiments",
-    url: "/projects/data-dreams",
-    year: "2023"
-  }
-];
-
-const writings = [
-  {
-    title: "On Digital Gardens and Knowledge Synthesis",
-    url: "/essays/digital-gardens",
-    year: "2025"
-  },
-  {
-    title: "The Poetry of Algorithms", 
-    url: "/essays/creative-algorithms",
-    year: "2024"
-  },
-  {
-    title: "Human-AI Collaboration in Creative Work",
-    url: "/essays/human-ai-collaboration", 
-    year: "2024"
-  }
-];
-
-const talks = [
-  {
-    title: "Creative Coding Podcast",
-    url: "https://example.com/podcast",
-    year: "2024"
-  },
-  {
-    title: "AI & Art Conference Keynote",
-    url: "https://example.com/conference",
-    year: "2024"
-  },
-  {
-    title: "Technology & Creativity Interview",
-    url: "https://example.com/interview",
-    year: "2023"
-  }
-];
+const products = allProducts
+  .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
 ---
 
 <Layout 
@@ -122,31 +54,197 @@ const talks = [
       </div>
     </section>
     
+    <style>
+      .content-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border-light);
+      }
+      
+      .content-section h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 0.75rem;
+      }
+      
+      .articles-list {
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      .article-item {
+        margin: 0;
+        padding: 0;
+      }
+
+      .article-line {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        margin-bottom: 0.25rem;
+        transition: background-color 0.2s ease;
+        border-bottom: 1px solid transparent;
+      }
+
+      .article-line:hover {
+        background: rgba(0, 0, 0, 0.02);
+      }
+
+      .article-date {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 400;
+        white-space: nowrap;
+        flex-shrink: 0;
+        min-width: 80px;
+      }
+
+      .article-title {
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 400;
+        line-height: 1.4;
+        transition: color 0.2s ease;
+        border-bottom: 1px dotted var(--text-muted);
+        flex: 1;
+        min-width: 0;
+      }
+
+      .article-title:hover {
+        color: var(--color-primary);
+        border-bottom-color: var(--color-primary);
+      }
+
+      .article-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .article-tag {
+        color: #FF8C00;
+        font-size: 0.75rem;
+        font-weight: 400;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .article-tag:hover {
+        color: #FF4500;
+      }
+
+      .article-tag:not(:last-child)::after {
+        content: ", ";
+        color: var(--text-muted);
+      }
+      
+      .section-footer {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-light);
+      }
+      
+      .view-all-link {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.2s ease;
+        border-bottom: 1px dotted var(--color-primary);
+      }
+      
+      .view-all-link:hover {
+        color: var(--color-primary-hover);
+        border-bottom-color: var(--color-primary-hover);
+      }
+      
+      @media (max-width: 768px) {
+        .article-line {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.25rem;
+          padding: 0.4rem 0;
+        }
+
+        .article-date {
+          font-size: 0.75rem;
+          min-width: auto;
+        }
+
+        .article-title {
+          border-bottom: none;
+          width: 100%;
+        }
+
+        .article-tags {
+          width: 100%;
+        }
+      }
+    </style>
+    
     <section class="content-section">
       <h2>Products</h2>
-      <div class="product-grid">
+      <div class="articles-list">
         {products.map(product => (
-          <div class="product-card">
-            <div class="product-header">
-              <h3 class="product-title">
-                <a href={product.url} target="_blank" rel="noopener noreferrer">
-                  {product.title}
-                </a>
-              </h3>
-              <span class="product-status">{product.status}</span>
+          <article class="article-item">
+            <div class="article-line">
+              <time class="article-date">
+                {new Date(product.data.publishDate).toLocaleDateString('en-CA')}
+              </time>
+              <a href={product.data.url} target="_blank" rel="noopener noreferrer" class="article-title">
+                {product.data.title}
+              </a>
+              {product.data.tags && product.data.tags.length > 0 && (
+                <div class="article-tags">
+                  {product.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
+                      {tag}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
-            <p class="product-description">{product.description}</p>
-            <div class="product-tech">
-              {product.tech.map(tech => (
-                <span class="tech-tag">{tech}</span>
-              ))}
-            </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
     
-    {/* Removed Projects section as per user request */}
+    <section class="content-section">
+      <h2>Recent Posts</h2>
+      <div class="articles-list">
+        {recentBlogPosts.map(post => (
+          <article class="article-item">
+            <div class="article-line">
+              <time class="article-date">
+                {new Date(post.data.publishDate).toLocaleDateString('en-CA')}
+              </time>
+              <a href={`/blog/${post.slug}`} class="article-title">
+                {post.data.title}
+              </a>
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="article-tags">
+                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
+                      {tag}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="section-footer">
+        <a href="/blog" class="view-all-link">View all posts →</a>
+      </div>
+    </section>
     
   </main>
 </Layout>
