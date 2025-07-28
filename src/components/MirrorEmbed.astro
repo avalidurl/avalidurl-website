@@ -1,0 +1,162 @@
+---
+export interface Props {
+  url: string;
+  title?: string;
+  excerpt?: string;
+  author?: string;
+  publishDate?: string;
+}
+
+const { url, title, excerpt, author, publishDate } = Astro.props;
+
+// Extract the Mirror post ID from URL for potential future API use
+const mirrorId = url.split('/').pop() || '';
+---
+
+<div class="mirror-embed">
+  <div class="mirror-header">
+    <div class="mirror-logo">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10 0L0 10L10 20L20 10L10 0Z" fill="#00D4AA"/>
+      </svg>
+      <span class="mirror-platform">Mirror</span>
+    </div>
+    {publishDate && (
+      <time class="mirror-date">{new Date(publishDate).toLocaleDateString('en-CA')}</time>
+    )}
+  </div>
+  
+  <div class="mirror-content">
+    {title && <h3 class="mirror-title">{title}</h3>}
+    {author && <p class="mirror-author">by {author}</p>}
+    {excerpt && <p class="mirror-excerpt">{excerpt}</p>}
+  </div>
+  
+  <div class="mirror-footer">
+    <a href={url} target="_blank" rel="noopener noreferrer" class="mirror-link">
+      Read on Mirror →
+    </a>
+  </div>
+</div>
+
+<style>
+  .mirror-embed {
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background: var(--bg-card);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .mirror-embed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #00D4AA;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .mirror-embed:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 212, 170, 0.1);
+    border-color: #00D4AA;
+  }
+
+  .mirror-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .mirror-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+  }
+
+  .mirror-platform {
+    font-weight: 600;
+    color: #00D4AA;
+  }
+
+  .mirror-date {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .mirror-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .mirror-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-family: 'Georgia', serif;
+  }
+
+  .mirror-author {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+
+  .mirror-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .mirror-footer {
+    border-top: 1px solid var(--border-light);
+    padding-top: 1rem;
+  }
+
+  .mirror-link {
+    color: #00D4AA;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mirror-link:hover {
+    color: #00B894;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .mirror-embed {
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    
+    .mirror-title {
+      font-size: 1.125rem;
+    }
+    
+    .mirror-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>
