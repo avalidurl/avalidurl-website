@@ -57,14 +57,14 @@ const mirrorId = url.split('/').pop() || '';
     left: 0;
     width: 4px;
     height: 100%;
-    background: #00D4AA;
+    background: var(--color-primary);
     border-radius: 4px 0 0 4px;
   }
 
   .mirror-embed:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 212, 170, 0.1);
-    border-color: #00D4AA;
+    box-shadow: 0 8px 24px var(--card-shadow);
+    border-color: var(--color-primary);
   }
 
   .mirror-header {
@@ -84,7 +84,7 @@ const mirrorId = url.split('/').pop() || '';
 
   .mirror-platform {
     font-weight: 600;
-    color: #00D4AA;
+    color: var(--color-primary);
   }
 
   .mirror-date {
@@ -128,7 +128,7 @@ const mirrorId = url.split('/').pop() || '';
   }
 
   .mirror-link {
-    color: #00D4AA;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -139,7 +139,7 @@ const mirrorId = url.split('/').pop() || '';
   }
 
   .mirror-link:hover {
-    color: #00B894;
+    color: var(--color-primary-hover);
     text-decoration: underline;
   }
 
