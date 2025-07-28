@@ -13,11 +13,11 @@ const { url, title, excerpt, author, publishDate } = Astro.props;
 const mirrorId = url.split('/').pop() || '';
 ---
 
-<div class="mirror-embed">
+<a href={url} target="_blank" rel="noopener noreferrer" class="mirror-embed">
   <div class="mirror-header">
     <div class="mirror-logo">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <path d="M10 0L0 10L10 20L20 10L10 0Z" fill="#00D4AA"/>
+        <path d="M10 0L0 10L10 20L20 10L10 0Z" fill="currentColor"/>
       </svg>
       <span class="mirror-platform">Mirror</span>
     </div>
@@ -33,14 +33,15 @@ const mirrorId = url.split('/').pop() || '';
   </div>
   
   <div class="mirror-footer">
-    <a href={url} target="_blank" rel="noopener noreferrer" class="mirror-link">
+    <span class="mirror-link">
       Read on Mirror →
-    </a>
+    </span>
   </div>
-</div>
+</a>
 
 <style>
   .mirror-embed {
+    display: block;
     border: 1px solid var(--border-light);
     border-radius: 8px;
     padding: 1.5rem;
@@ -48,6 +49,8 @@ const mirrorId = url.split('/').pop() || '';
     background: var(--bg-card);
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
+    color: inherit;
   }
 
   .mirror-embed::before {
