@@ -127,9 +127,7 @@ const groupedProducts = Object.keys(productsByYear)
                             {product.data.tags.length > 0 && (
                               <div class="archive-tags">
                                 {product.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                                  <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">
-                                    {tag}
-                                  </a>
+                                  <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">{tag}</a>
                                 ))}
                               </div>
                             )}

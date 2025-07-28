@@ -75,9 +75,7 @@ const { year, products } = Astro.props;
                     {product.data.tags && product.data.tags.length > 0 && (
                       <div class="product-tags">
                         {product.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="product-tag">
-                            {tag}
-                          </a>
+                          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="product-tag">{tag}</a>
                         ))}
                       </div>
                     )}

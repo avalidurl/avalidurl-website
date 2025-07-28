@@ -25,8 +25,7 @@
   },
   "include": [
     "src/**/*",
-    ".astro/**/*",
-    ".tina/**/*"
+    ".astro/**/*"
   ],
   "exclude": [
     "node_modules",

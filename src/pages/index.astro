@@ -204,9 +204,7 @@ const products = allProducts
               {product.data.tags && product.data.tags.length > 0 && (
                 <div class="article-tags">
                   {product.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
-                      {tag}
-                    </a>
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
                   ))}
                 </div>
               )}
@@ -231,9 +229,7 @@ const products = allProducts
               {post.data.tags && post.data.tags.length > 0 && (
                 <div class="article-tags">
                   {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
-                      {tag}
-                    </a>
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
                   ))}
                 </div>
               )}

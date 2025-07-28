@@ -86,9 +86,7 @@ const remainingPosts = allPosts.slice(20);
                 {post.data.tags && post.data.tags.length > 0 && (
                   <div class="article-tags">
                     {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
-                        {tag}
-                      </a>
+                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
                     ))}
                   </div>
                 )}
@@ -194,6 +192,20 @@ const remainingPosts = allPosts.slice(20);
     transform: translateY(-1px);
   }
 
+  @media (prefers-color-scheme: dark) {
+    .rss-button {
+      color: var(--color-background);
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .rss-button:hover {
+      background: #FF4500;
+      border-color: #FF4500;
+      color: var(--color-background);
+    }
+  }
+
   .rss-icon {
     font-size: 0.95rem;
   }
@@ -230,7 +242,7 @@ const remainingPosts = allPosts.slice(20);
 
   .article-line {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 1rem;
     padding: 0.5rem 0;
     margin-bottom: 0.25rem;
@@ -250,8 +262,6 @@ const remainingPosts = allPosts.slice(20);
     white-space: nowrap;
     flex-shrink: 0;
     min-width: 80px;
-    display: flex;
-    align-items: center;
   }
 
   .date-link {
@@ -285,8 +295,6 @@ const remainingPosts = allPosts.slice(20);
     border-bottom: 1px dotted var(--text-muted);
     flex: 1;
     min-width: 0;
-    display: flex;
-    align-items: center;
   }
 
   .article-title:hover {
@@ -298,7 +306,7 @@ const remainingPosts = allPosts.slice(20);
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    align-items: center;
+    align-items: baseline;
     flex-shrink: 0;
     min-height: 1.4em;
   }

@@ -81,9 +81,7 @@ const recentPosts = allBlogPosts
               {post.data.tags && post.data.tags.length > 0 && (
                 <div class="article-tags">
                   {post.data.tags.slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
-                      {tag}
-                    </a>
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
                   ))}
                 </div>
               )}
@@ -203,7 +201,7 @@ const recentPosts = allBlogPosts
 
   .article-line {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 1rem;
     padding: 0.5rem 0;
     margin-bottom: 0.25rem;
@@ -266,7 +264,7 @@ const recentPosts = allBlogPosts
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    align-items: center;
+    align-items: baseline;
     flex-shrink: 0;
   }
 

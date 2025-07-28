@@ -57,9 +57,7 @@ const { year, posts } = Astro.props;
               {post.data.tags && post.data.tags.length > 0 && (
                 <div class="article-tags">
                   {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">
-                      {tag}
-                    </a>
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
                   ))}
                 </div>
               )}
@@ -150,7 +148,7 @@ const { year, posts } = Astro.props;
 
   .article-line {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 1rem;
     padding: 0.5rem 0;
     margin-bottom: 0.25rem;
@@ -170,8 +168,6 @@ const { year, posts } = Astro.props;
     white-space: nowrap;
     flex-shrink: 0;
     min-width: 80px;
-    display: flex;
-    align-items: center;
   }
 
   .date-link {
@@ -205,8 +201,6 @@ const { year, posts } = Astro.props;
     border-bottom: 1px dotted var(--text-muted);
     flex: 1;
     min-width: 0;
-    display: flex;
-    align-items: center;
   }
 
   .article-title:hover {
@@ -218,7 +212,7 @@ const { year, posts } = Astro.props;
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    align-items: center;
+    align-items: baseline;
     flex-shrink: 0;
     min-height: 1.4em;
   }
