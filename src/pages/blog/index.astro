@@ -230,24 +230,7 @@ const remainingPosts = allPosts.slice(20);
     padding: 0;
   }
 
-  /* Ensure dynamically created content has the same styles */
-  #articles-list .article-item {
-    margin: 0;
-    padding: 0;
-  }
-
   .article-line {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 0;
-    margin-bottom: 0.25rem;
-    transition: background-color 0.2s ease;
-    border-bottom: 1px solid transparent;
-  }
-
-  /* Ensure dynamically created content has the same styles */
-  #articles-list .article-line {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -261,23 +244,8 @@ const remainingPosts = allPosts.slice(20);
     background: rgba(0, 0, 0, 0.02);
   }
 
-  /* Ensure dynamically created content has the same hover effects */
-  #articles-list .article-line:hover {
-    background: rgba(0, 0, 0, 0.02);
-  }
-
   .article-date {
     color: var(--text-muted);
-    font-size: 0.8rem;
-    font-weight: 400;
-    white-space: nowrap;
-    flex-shrink: 0;
-    min-width: 80px;
-  }
-
-  /* Ensure dynamically created content has the same styles */
-  #articles-list .article-date {
-    color: #666666;
     font-size: 0.8rem;
     font-weight: 400;
     white-space: nowrap;
@@ -318,40 +286,12 @@ const remainingPosts = allPosts.slice(20);
     min-width: 0;
   }
 
-  /* Ensure dynamically created content has the same styles */
-  #articles-list .article-title {
-    color: #1A1A1A;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.4;
-    transition: color 0.2s ease;
-    border-bottom: 1px dotted #666666;
-    flex: 1;
-    min-width: 0;
-  }
-
   .article-title:hover {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
   }
 
-  /* Ensure dynamically created content has the same hover effects */
-  #articles-list .article-title:hover {
-    color: #666666;
-    border-bottom-color: #666666;
-  }
-
   .article-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  /* Ensure dynamically created content has the same styles */
-  #articles-list .article-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
@@ -367,52 +307,13 @@ const remainingPosts = allPosts.slice(20);
     transition: color 0.2s ease;
   }
 
-  /* Ensure dynamically created content has the same styles */
-  #articles-list .article-tag {
-    color: #FF8C00;
-    font-size: 0.75rem;
-    font-weight: 400;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
   .article-tag:hover {
-    color: #FF4500;
-  }
-
-  /* Ensure dynamically created content has the same hover effects */
-  #articles-list .article-tag:hover {
     color: #FF4500;
   }
 
   .article-tag:not(:last-child)::after {
     content: ", ";
     color: var(--text-muted);
-  }
-
-  /* Ensure dynamically created content has the same comma separators */
-  #articles-list .article-tag:not(:last-child)::after {
-    content: ", ";
-    color: #666666;
-  }
-
-  /* Dark mode support for dynamically created content */
-  [data-theme="dark"] #articles-list .article-date {
-    color: #FFA500;
-  }
-
-  [data-theme="dark"] #articles-list .article-title {
-    color: #FFFFFF;
-    border-bottom-color: #FFA500;
-  }
-
-  [data-theme="dark"] #articles-list .article-title:hover {
-    color: #FF8C00;
-    border-bottom-color: #FF8C00;
-  }
-
-  [data-theme="dark"] #articles-list .article-tag:not(:last-child)::after {
-    color: #FFA500;
   }
 
   .load-more-container {
@@ -451,18 +352,6 @@ const remainingPosts = allPosts.slice(20);
     transform: none;
   }
 
-  /* Animation classes for dynamically loaded posts */
-  .loading-post {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .loaded-post {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
 
   @media (max-width: 768px) {
     .blog-container {
@@ -491,28 +380,6 @@ const remainingPosts = allPosts.slice(20);
     }
 
     .article-tags {
-      width: 100%;
-    }
-
-    /* Ensure dynamically created content has the same responsive styles */
-    #articles-list .article-line {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.25rem;
-      padding: 0.4rem 0;
-    }
-
-    #articles-list .article-date {
-      font-size: 0.75rem;
-      min-width: auto;
-    }
-
-    #articles-list .article-title {
-      border-bottom: none;
-      width: 100%;
-    }
-
-    #articles-list .article-tags {
       width: 100%;
     }
   }
@@ -570,14 +437,16 @@ const remainingPosts = allPosts.slice(20);
         postsToLoad.forEach((post, index) => {
           setTimeout(() => {
             const articleElement = createArticleElement(post);
-            articleElement.classList.add('loading-post');
+            articleElement.style.opacity = '0';
+            articleElement.style.transform = 'translateY(10px)';
             articlesList.appendChild(articleElement);
             
-            // Animate in after a brief delay to ensure styles are applied
-            setTimeout(() => {
-              articleElement.classList.remove('loading-post');
-              articleElement.classList.add('loaded-post');
-            }, 50);
+            // Animate in
+            requestAnimationFrame(() => {
+              articleElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+              articleElement.style.opacity = '1';
+              articleElement.style.transform = 'translateY(0)';
+            });
           }, index * 50);
         });
         
