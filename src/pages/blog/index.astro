@@ -117,7 +117,7 @@ const remainingPosts = allPosts.slice(20);
   </main>
 </Layout>
 
-<style>
+<style is:global>
   .blog-container {
     max-width: 900px;
     margin: 0 auto;
@@ -441,8 +441,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+  // Helper function to parse dates consistently in Istanbul timezone
+  function parseIstanbulDate(dateString) {
+    // Handle non-string values
+    if (typeof dateString !== 'string') {
+      return new Date(dateString);
+    }
+    // If it's just a date (YYYY-MM-DD), append Istanbul timezone
+    if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      return new Date(dateString + 'T00:00:00+03:00');
+    }
+    // For datetime strings, parse as-is but assume they're in Istanbul time
+    return new Date(dateString);
+  }
+
   function createArticleHTML(post) {
-    const publishDate = new Date(post.publishDate);
+    const publishDate = parseIstanbulDate(post.publishDate);
     const year = publishDate.getFullYear();
     const month = publishDate.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
     const monthLower = month.toLowerCase();
@@ -452,7 +466,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (post.tags && post.tags.length > 0) {
       const tagsToShow = post.tags.slice(0, 3);
       const tagLinks = tagsToShow.map(tag => 
-        `<a href="/topics/${tag.toLowerCase().replace(/\\s+/g, '-')}" class="article-tag">${tag}</a>`
+        `<a href="/topics/${tag.toLowerCase().replace(/\s+/g, '-')}" class="article-tag">${tag}</a>`
       ).join('');
       tagsHTML = `<div class="article-tags">${tagLinks}</div>`;
     }
