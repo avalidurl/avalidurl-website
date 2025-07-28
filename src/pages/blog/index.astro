@@ -37,9 +37,8 @@ const sortedPosts = allBlogPosts.sort((a, b) =>
 // Show all posts in chronological order (newest first)
 const allPosts = sortedPosts;
 
-// For initial display, show only first 20 posts
-const initialPosts = allPosts.slice(0, 20);
-const remainingPosts = allPosts.slice(20);
+// Show all posts
+const initialPosts = allPosts;
 ---
 
 <Layout title="Blog - Thoughts on Finance, Art & Code" description="Exploring the intersection of financial markets, creative coding, and artistic expression through data-driven insights and technical analysis.">
@@ -96,24 +95,6 @@ const remainingPosts = allPosts.slice(20);
             </article>
           ))}
         </div>
-        
-        {remainingPosts.length > 0 && (
-          <div class="load-more-container">
-            <button id="load-more-btn" class="load-more-btn">
-              Load More Posts ({remainingPosts.length} remaining)
-            </button>
-          </div>
-        )}
-        
-        {/* Hidden data for JavaScript */}
-        <script id="remaining-posts-data" type="application/json" set:html={JSON.stringify(remainingPosts.map(post => ({
-          slug: post.slug,
-          title: post.data.title,
-          excerpt: post.data.excerpt || post.data.description,
-          publishDate: post.data.publishDate,
-          readingTime: post.data.readingTime,
-          tags: post.data.tags || []
-        })))} />
       </section>
     </div>
   </main>
@@ -316,41 +297,6 @@ const remainingPosts = allPosts.slice(20);
     color: var(--text-muted);
   }
 
-  .load-more-container {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-light);
-  }
-
-  .load-more-btn {
-    background: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .load-more-btn:hover {
-    background: var(--color-primary-hover);
-    transform: translateY(-1px);
-  }
-
-  .load-more-btn.loading {
-    opacity: 0.7;
-    cursor: not-allowed;
-    transform: none;
-  }
-
-  .load-more-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    transform: none;
-  }
 
 
   @media (max-width: 768px) {
@@ -411,123 +357,3 @@ const remainingPosts = allPosts.slice(20);
   }
 </style>
 
-<script>
-  // Load More functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const articlesList = document.getElementById('articles-list');
-    
-    if (!loadMoreBtn || !articlesList) return;
-    
-    // Store remaining posts data from server-side
-    const remainingPostsData = JSON.parse(document.getElementById('remaining-posts-data')?.textContent || '[]');
-    
-    let currentIndex = 0;
-    const postsPerLoad = 20;
-    
-    loadMoreBtn.addEventListener('click', function() {
-      // Show loading state
-      loadMoreBtn.classList.add('loading');
-      loadMoreBtn.disabled = true;
-      
-      // Simulate loading delay for better UX
-      setTimeout(() => {
-        const postsToLoad = remainingPostsData.slice(currentIndex, currentIndex + postsPerLoad);
-        
-        postsToLoad.forEach((post, index) => {
-          setTimeout(() => {
-            const articleElement = createArticleElement(post);
-            articleElement.style.opacity = '0';
-            articleElement.style.transform = 'translateY(10px)';
-            articlesList.appendChild(articleElement);
-            
-            // Animate in
-            requestAnimationFrame(() => {
-              articleElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-              articleElement.style.opacity = '1';
-              articleElement.style.transform = 'translateY(0)';
-            });
-          }, index * 50);
-        });
-        
-        currentIndex += postsPerLoad;
-        
-        // Update button text or hide if no more posts
-        if (currentIndex >= remainingPostsData.length) {
-          loadMoreBtn.style.display = 'none';
-        } else {
-          const remaining = remainingPostsData.length - currentIndex;
-          loadMoreBtn.textContent = `Load More Posts (${remaining} remaining)`;
-        }
-        
-        // Remove loading state
-        loadMoreBtn.classList.remove('loading');
-        loadMoreBtn.disabled = false;
-      }, 300);
-    });
-    
-    function createArticleElement(post) {
-      const article = document.createElement('article');
-      article.className = 'article-item';
-      
-      const publishDate = new Date(post.publishDate);
-      const formattedDate = publishDate.toLocaleDateString('en-CA', {
-        timeZone: 'Europe/Istanbul'
-      });
-      
-      // Create the article line container
-      const articleLine = document.createElement('div');
-      articleLine.className = 'article-line';
-      
-      // Create date element with clickable link
-      const timeElement = document.createElement('time');
-      timeElement.className = 'article-date';
-      
-      const dateLink = document.createElement('a');
-      const year = publishDate.getFullYear();
-      const month = publishDate.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
-      const monthLower = month.toLowerCase();
-      dateLink.href = `/archive/${year}/${monthLower}`;
-      dateLink.className = 'date-link';
-      dateLink.textContent = formattedDate;
-      dateLink.title = `See ${month} ${year}'s archive`;
-      
-      timeElement.appendChild(dateLink);
-      
-      // Create title link
-      const linkElement = document.createElement('a');
-      linkElement.href = `/blog/${post.slug}`;
-      linkElement.textContent = post.title;
-      linkElement.className = 'article-title';
-      
-      // Create tags section if tags exist
-      if (post.tags && post.tags.length > 0) {
-        const tagsElement = document.createElement('div');
-        tagsElement.className = 'article-tags';
-        
-        const tagsToShow = post.tags.slice(0, 3);
-        tagsToShow.forEach((tag) => {
-          const tagLink = document.createElement('a');
-          tagLink.href = `/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`;
-          tagLink.className = 'article-tag';
-          tagLink.textContent = tag;
-          tagsElement.appendChild(tagLink);
-        });
-        
-        // Add tags to the article line
-        articleLine.appendChild(timeElement);
-        articleLine.appendChild(linkElement);
-        articleLine.appendChild(tagsElement);
-      } else {
-        // No tags, just add date and title
-        articleLine.appendChild(timeElement);
-        articleLine.appendChild(linkElement);
-      }
-      
-      // Add the line to the article
-      article.appendChild(articleLine);
-      
-      return article;
-    }
-  });
-</script>
