@@ -37,8 +37,9 @@ const sortedPosts = allBlogPosts.sort((a, b) =>
 // Show all posts in chronological order (newest first)
 const allPosts = sortedPosts;
 
-// Show all posts
-const initialPosts = allPosts;
+// Show first 20 posts initially, keep remaining for load more
+const initialPosts = allPosts.slice(0, 20);
+const remainingPosts = allPosts.slice(20);
 ---
 
 <Layout title="Blog - Thoughts on Finance, Art & Code" description="Exploring the intersection of financial markets, creative coding, and artistic expression through data-driven insights and technical analysis.">
@@ -95,6 +96,22 @@ const initialPosts = allPosts;
             </article>
           ))}
         </div>
+        
+        {remainingPosts.length > 0 && (
+          <div class="load-more-container">
+            <button id="load-more-btn" class="load-more-btn">
+              Load More Posts ({remainingPosts.length} remaining)
+            </button>
+          </div>
+        )}
+        
+        {/* Hidden data for JavaScript */}
+        <script id="remaining-posts-data" type="application/json" set:html={JSON.stringify(remainingPosts.map(post => ({
+          slug: post.slug,
+          title: post.data.title,
+          publishDate: post.data.publishDate,
+          tags: post.data.tags || []
+        })))} />
       </section>
     </div>
   </main>
@@ -297,6 +314,36 @@ const initialPosts = allPosts;
     color: var(--text-muted);
   }
 
+  .load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .load-more-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .load-more-btn:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .load-more-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
 
 
   @media (max-width: 768px) {
@@ -356,4 +403,76 @@ const initialPosts = allPosts;
     }
   }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const articlesList = document.getElementById('articles-list');
+  
+  if (!loadMoreBtn || !articlesList) return;
+  
+  // Parse remaining posts data from server-side
+  const remainingData = JSON.parse(document.getElementById('remaining-posts-data')?.textContent || '[]');
+  
+  let currentIndex = 0;
+  const postsPerLoad = 20;
+  
+  loadMoreBtn.addEventListener('click', function() {
+    loadMoreBtn.disabled = true;
+    
+    // Get posts to load
+    const postsToLoad = remainingData.slice(currentIndex, currentIndex + postsPerLoad);
+    
+    // Create and append each post
+    postsToLoad.forEach((post) => {
+      const articleHTML = createArticleHTML(post);
+      articlesList.insertAdjacentHTML('beforeend', articleHTML);
+    });
+    
+    currentIndex += postsPerLoad;
+    
+    // Update button or hide if no more posts
+    if (currentIndex >= remainingData.length) {
+      loadMoreBtn.style.display = 'none';
+    } else {
+      const remaining = remainingData.length - currentIndex;
+      loadMoreBtn.textContent = `Load More Posts (${remaining} remaining)`;
+      loadMoreBtn.disabled = false;
+    }
+  });
+  
+  function createArticleHTML(post) {
+    const publishDate = new Date(post.publishDate);
+    const year = publishDate.getFullYear();
+    const month = publishDate.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+    const monthLower = month.toLowerCase();
+    const formattedDate = publishDate.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
+    
+    let tagsHTML = '';
+    if (post.tags && post.tags.length > 0) {
+      const tagsToShow = post.tags.slice(0, 3);
+      const tagLinks = tagsToShow.map(tag => 
+        `<a href="/topics/${tag.toLowerCase().replace(/\\s+/g, '-')}" class="article-tag">${tag}</a>`
+      ).join('');
+      tagsHTML = `<div class="article-tags">${tagLinks}</div>`;
+    }
+    
+    return `
+      <article class="article-item">
+        <div class="article-line">
+          <time class="article-date">
+            <a href="/archive/${year}/${monthLower}" class="date-link" title="See ${month} ${year}'s archive">
+              ${formattedDate}
+            </a>
+          </time>
+          <a href="/blog/${post.slug}" class="article-title">
+            ${post.title}
+          </a>
+          ${tagsHTML}
+        </div>
+      </article>
+    `;
+  }
+});
+</script>
 
