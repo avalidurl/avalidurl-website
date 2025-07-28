@@ -771,6 +771,26 @@ const dynamicOGImage = generateOGImageUrl();
   img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Image caption styling */
+  img + em,
+  img + p em,
+  figure figcaption,
+  .image-caption {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0.5rem auto 1.5rem auto;
+    max-width: 90%;
+    line-height: 1.4;
+    text-align: justify;
+    text-align-last: center;
   }
   
   /* Accessibility improvements */
