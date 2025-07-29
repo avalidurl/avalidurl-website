@@ -83,9 +83,12 @@ const recentPosts = sortedPosts.slice(0, 8);
                 <div class="detail-row">
                   <span class="detail-label">Tags</span>
                   <div class="tag-list">
-                    {post.data.tags.sort((a, b) => a.localeCompare(b)).map(tag => (
-                      <span class="publication-tag">{tag}</span>
-                    )).join(' ')}
+                    {post.data.tags.sort((a, b) => a.localeCompare(b)).map((tag, index, array) => (
+                      <>
+                        <span class="publication-tag">{tag}</span>
+                        {index < array.length - 1 && ' '}
+                      </>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -228,9 +231,12 @@ const recentPosts = sortedPosts.slice(0, 8);
               <div class="detail-row">
                 <span class="detail-label">Tags</span>
                 <div class="tag-list">
-                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                    <span class="publication-tag">{tag}</span>
-                  )).join(' ')}
+                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map((tag, index, array) => (
+                    <>
+                      <span class="publication-tag">{tag}</span>
+                      {index < array.length - 1 && ' '}
+                    </>
+                  ))}
                 </div>
               </div>
             </div>

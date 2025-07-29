@@ -80,9 +80,12 @@ const recentPosts = allBlogPosts
               </a>
               {post.data.tags && post.data.tags.length > 0 && (
                 <div class="article-tags">
-                  {post.data.tags.slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                  )).join(' ')}
+                  {post.data.tags.slice(0, 3).map((tag, index, array) => (
+                    <>
+                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
+                      {index < array.length - 1 && ' '}
+                    </>
+                  ))}
                 </div>
               )}
             </div>

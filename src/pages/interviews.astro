@@ -46,9 +46,12 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
               
               <div class="interview-details">
                 <div class="interview-tags">
-                  {post.data.tags.filter(tag => tag.toLowerCase() !== 'interview').sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="interview-tag">{tag}</a>
-                  )).join(' ')}
+                  {post.data.tags.filter(tag => tag.toLowerCase() !== 'interview').sort((a, b) => a.localeCompare(b)).slice(0, 3).map((tag, index, array) => (
+                    <>
+                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="interview-tag">{tag}</a>
+                      {index < array.length - 1 && ' '}
+                    </>
+                  ))}
                 </div>
                 
                 {post.data.readingTime && (
