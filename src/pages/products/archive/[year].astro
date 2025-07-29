@@ -289,28 +289,29 @@ const { year, products } = Astro.props;
   .product-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
+    gap: 0.5rem;
     align-items: center;
   }
 
   .product-tag {
-    color: #FF8C00;
-    font-size: 0.75rem;
-    font-weight: 400;
+    color: white;
+    background: #FF8C00;
+    font-size: 0.7rem;
+    font-weight: 500;
     text-decoration: none;
-    transition: color 0.2s ease;
-    line-height: 1.4;
+    transition: all 0.2s ease;
+    line-height: 1.2;
     display: inline-flex;
     align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    border: 1px solid #FF8C00;
   }
 
   .product-tag:hover {
-    color: #FF4500;
-  }
-
-  .product-tag:not(:last-child)::after {
-    content: ", ";
-    color: var(--text-muted);
+    background: #FF4500;
+    border-color: #FF4500;
+    transform: translateY(-1px);
   }
   
   .no-products {

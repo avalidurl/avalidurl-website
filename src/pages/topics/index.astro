@@ -83,8 +83,7 @@ const recentPosts = allBlogPosts
                   {post.data.tags.slice(0, 3).map((tag, index, array) => (
                     <>
                       <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                      {index < array.length - 1 && ' '}
-                    </>
+                                    </>
                   ))}
                 </div>
               )}
@@ -266,27 +265,30 @@ const recentPosts = allBlogPosts
   .article-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
+    gap: 0.5rem;
     align-items: baseline;
     flex-shrink: 0;
   }
 
   .article-tag {
-    color: #FF8C00;
-    font-size: 0.75rem;
-    font-weight: 400;
+    color: white;
+    background: #FF8C00;
+    font-size: 0.7rem;
+    font-weight: 500;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    border: 1px solid #FF8C00;
   }
 
   .article-tag:hover {
-    color: #FF4500;
-  }
-
-  .article-tag:not(:last-child)::after {
-    content: ", ";
-    color: var(--text-muted);
-    display: inline;
+    background: #FF4500;
+    border-color: #FF4500;
+    transform: translateY(-1px);
   }
   
   .topics-footer {
