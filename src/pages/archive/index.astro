@@ -123,11 +123,8 @@ const groupedPosts = Object.keys(postsByYear)
                             </a>
                             {post.data.tags.length > 0 && (
                               <div class="archive-tags">
-                                {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map((tag, index, array) => (
-                                  <>
-                                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">{tag}</a>
-                                    {index < array.length - 1 && ' '}
-                                  </>
+                                {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map((tag) => (
+                                  <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">{tag}</a>
                                 ))}
                               </div>
                             )}
@@ -358,26 +355,30 @@ const groupedPosts = Object.keys(postsByYear)
   .archive-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
+    gap: 0.5rem;
     align-items: baseline;
     flex-shrink: 0;
   }
 
   .archive-tag {
-    color: #FF8C00;
-    font-size: 0.75rem;
-    font-weight: 400;
+    color: white;
+    background: #FF8C00;
+    font-size: 0.7rem;
+    font-weight: 500;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    border: 1px solid #FF8C00;
   }
 
   .archive-tag:hover {
-    color: #FF4500;
-  }
-
-  .archive-tag:not(:last-child)::after {
-    content: ", ";
-    color: var(--text-muted);
+    background: #FF4500;
+    border-color: #FF4500;
+    transform: translateY(-1px);
   }
 
   .archive-footer {
