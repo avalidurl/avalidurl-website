@@ -86,7 +86,7 @@ const remainingPosts = allPosts.slice(20);
                 {post.data.tags && post.data.tags.length > 0 && (
                   <div class="article-tags">{post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
                     <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                  ))}</div>
+                  )).join(' ')}</div>
                 )}
               </div>
             </article>
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const tagsToShow = post.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3);
       const tagLinks = tagsToShow.map(tag => 
         `<a href="/topics/${tag.toLowerCase().replace(/\s+/g, '-')}" class="article-tag">${tag}</a>`
-      ).join('');
+      ).join(' ');
       tagsHTML = `<div class="article-tags">${tagLinks}</div>`;
     }
     

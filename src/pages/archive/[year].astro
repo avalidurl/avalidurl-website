@@ -58,7 +58,7 @@ const { year, posts } = Astro.props;
                 <div class="article-tags">
                   {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
                     <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                  ))}
+                  )).join(' ')}
                 </div>
               )}
             </div>

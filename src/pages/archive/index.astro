@@ -125,7 +125,7 @@ const groupedPosts = Object.keys(postsByYear)
                               <div class="archive-tags">
                                 {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map(tag => (
                                   <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">{tag}</a>
-                                ))}
+                                )).join(' ')}
                               </div>
                             )}
                           </div>

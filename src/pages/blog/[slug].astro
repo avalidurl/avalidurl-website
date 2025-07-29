@@ -119,7 +119,7 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
           <div class="post-tags">
             {post.data.tags.sort((a, b) => a.localeCompare(b)).map(tag => (
               <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="post-tag">{tag}</a>
-            ))}
+            )).join(' ')}
           </div>
         )}
         
