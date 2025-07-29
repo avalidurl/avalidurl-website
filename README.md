@@ -7,7 +7,7 @@ Personal website and digital journal of Gökhan Turhan, exploring the intersecti
 ## ✨ Features
 
 - **Modern Blog Platform**: Built with Astro for optimal performance and SEO
-- **Content Management**: Support for blog posts, art projects, and essays
+- **Content Management**: Support for blog posts and essays
 - **Rich Media Support**: Embedded YouTube, Twitter, Spotify, and other media platforms
 - **Responsive Design**: Mobile-first, minimalist aesthetic optimized for all devices
 - **RSS Feed**: Auto-generated RSS feed for subscribers
@@ -106,7 +106,6 @@ Your content here...
 ### Content Types
 
 - **Blog Posts**: Regular journal entries in `src/content/blog/`
-- **Art Projects**: Visual projects and installations in `src/content/art/`
 - **Essays**: Long-form analytical content in `src/content/essays/`
 
 ### Media Embeds

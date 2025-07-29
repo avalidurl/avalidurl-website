@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
-import keystatic from '@keystatic/astro';
 import cloudflare from '@astrojs/cloudflare';
 
 // Use environment variable or fallback to production domain
@@ -22,7 +21,6 @@ export default defineConfig({
     }), 
     react(), 
     markdoc(),
-    keystatic()
   ],
   compressHTML: true,
   build: {
@@ -38,9 +36,6 @@ export default defineConfig({
           manualChunks: {
             'react-vendor': ['react', 'react-dom'],
             'astro-vendor': ['astro'],
-            'keystatic-core': ['@keystatic/core'],
-            'keystatic-astro': ['@keystatic/astro'],
-            'keystatic-ui': ['@keystatic/ui'],
             'content-vendor': ['@astrojs/mdx', '@astrojs/markdoc'],
             'cloudflare-vendor': ['@astrojs/cloudflare'],
             'utils-vendor': ['date-fns', 'zod', 'nanoid'],
