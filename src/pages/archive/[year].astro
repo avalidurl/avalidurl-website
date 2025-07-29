@@ -235,6 +235,7 @@ const { year, posts } = Astro.props;
   .article-tag:not(:last-child)::after {
     content: ", ";
     color: var(--text-muted);
+    display: inline;
   }
   
   .no-posts {

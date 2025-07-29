@@ -84,11 +84,9 @@ const remainingPosts = allPosts.slice(20);
                   {post.data.title}
                 </a>
                 {post.data.tags && post.data.tags.length > 0 && (
-                  <div class="article-tags">
-                    {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                    ))}
-                  </div>
+                  <div class="article-tags">{post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
+                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
+                  ))}</div>
                 )}
               </div>
             </article>
@@ -329,6 +327,7 @@ const remainingPosts = allPosts.slice(20);
   .article-tag:not(:last-child)::after {
     content: ", ";
     color: var(--text-muted);
+    display: inline;
   }
 
   .load-more-container {
