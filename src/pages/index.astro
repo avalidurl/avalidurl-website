@@ -156,17 +156,20 @@ const products = allProducts
       }
       
       .view-all-link {
-        color: var(--color-primary);
+        color: var(--text-primary);
         text-decoration: none;
         font-weight: 500;
         font-size: 0.95rem;
-        transition: color 0.2s ease;
-        border-bottom: 1px dotted var(--color-primary);
+        transition: all 0.2s ease;
+        border: 1px solid var(--text-primary);
+        padding: 0.5rem 1rem;
+        display: inline-block;
       }
       
       .view-all-link:hover {
-        color: var(--color-primary-hover);
-        border-bottom-color: var(--color-primary-hover);
+        color: var(--text-inverse);
+        background-color: var(--text-primary);
+        border-color: var(--text-primary);
       }
       
       @media (max-width: 768px) {
