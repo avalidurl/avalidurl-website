@@ -62,11 +62,11 @@ const remainingPosts = allPosts.slice(20);
     <div class="blog-layout">
       <section class="blog-main">
         <h2>All Posts</h2>
-        <div class="articles-list" id="articles-list">
+        <div class="posts-list" id="posts-list">
           {initialPosts.map(post => (
-            <article class="article-item">
-              <div class="article-line">
-                <time class="article-date">
+            <article class="post-item">
+              <div class="post-line">
+                <time class="post-date">
                   {(() => {
                     const date = parseIstanbulDate(post.data.publishDate);
                     const year = date.getFullYear();
@@ -80,12 +80,12 @@ const remainingPosts = allPosts.slice(20);
                     );
                   })()}
                 </time>
-                <a href={`/blog/${post.slug}`} class="article-title">
+                <a href={`/blog/${post.slug}`} class="post-title">
                   {post.data.title}
                 </a>
                 {post.data.category && (
-                  <div class="article-category">
-                    <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="category-link">
+                  <div class="post-category">
+                    <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="post-category-link">
                       {post.data.category}
                     </a>
                   </div>
@@ -230,33 +230,31 @@ const remainingPosts = allPosts.slice(20);
     padding-bottom: 0.75rem;
   }
   
-  .articles-list {
+  .posts-list {
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
 
-  .article-item {
+  .post-item {
     margin: 0;
     padding: 0;
   }
 
-  .article-line {
+  .post-line {
     display: flex;
     align-items: baseline;
     gap: 1rem;
     padding: 0.5rem 0;
-    margin-bottom: 0.25rem;
     transition: background-color 0.2s ease;
-    border-bottom: 1px solid transparent;
   }
 
-  .article-line:hover {
+  .post-line:hover {
     background: rgba(0, 0, 0, 0.02);
   }
 
-  .article-date {
+  .post-date {
     color: var(--text-muted);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.4;
     white-space: nowrap;
@@ -285,7 +283,7 @@ const remainingPosts = allPosts.slice(20);
     border-bottom-color: var(--color-primary);
   }
 
-  .article-title {
+  .post-title {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.85rem;
@@ -297,20 +295,21 @@ const remainingPosts = allPosts.slice(20);
     min-width: 0;
   }
 
-  .article-title:hover {
+  .post-title:hover {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
   }
 
-  .article-category {
+  .post-category {
     display: flex;
     align-items: baseline;
     flex-shrink: 0;
+    min-height: 1.4em;
   }
 
-  .category-link {
-    color: var(--text-inverse);
-    background: var(--color-primary);
+  .post-category-link {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
     font-size: 0.7rem;
     font-weight: 500;
     text-decoration: none;
@@ -320,25 +319,23 @@ const remainingPosts = allPosts.slice(20);
     align-items: center;
     padding: 0.2rem 0.5rem;
     border-radius: 12px;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--blog-sepia);
   }
 
-  .category-link:hover {
-    background: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+  .post-category-link:hover {
+    background: var(--blog-bronze);
+    border-color: var(--blog-bronze);
     transform: translateY(-1px);
   }
 
-  .category-link:visited {
-    color: var(--text-inverse);
-    background: var(--color-primary);
-    border-color: var(--color-primary);
+  .post-category-link:visited {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
   }
 
-  .category-link:visited:hover {
-    color: var(--text-inverse);
-    background: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+  .post-category-link:visited:hover {
+    color: var(--blog-warm-white);
+    background: var(--blog-bronze);
   }
 
   .load-more-container {
@@ -382,24 +379,24 @@ const remainingPosts = allPosts.slice(20);
       font-size: 1.75rem;
     }
 
-    .article-line {
+    .post-line {
       flex-direction: column;
       align-items: flex-start;
       gap: 0.25rem;
       padding: 0.4rem 0;
     }
 
-    .article-date {
+    .post-date {
       font-size: 0.7rem;
       min-width: auto;
     }
 
-    .article-title {
+    .post-title {
       border-bottom: none;
       width: 100%;
     }
 
-    .article-category {
+    .post-category {
       width: 100%;
     }
   }
@@ -413,7 +410,7 @@ const remainingPosts = allPosts.slice(20);
       font-size: 1.5rem;
     }
 
-    .article-line {
+    .post-line {
       padding: 0.75rem;
     }
 
@@ -434,7 +431,7 @@ const remainingPosts = allPosts.slice(20);
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const loadMoreBtn = document.getElementById('load-more-btn');
-  const articlesList = document.getElementById('articles-list');
+  const articlesList = document.getElementById('posts-list');
   
   if (!loadMoreBtn || !articlesList) return;
   
@@ -492,18 +489,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let categoryHTML = '';
     if (post.category) {
       const categorySlug = post.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and');
-      categoryHTML = `<div class="article-category"><a href="/categories/${categorySlug}" class="category-link">${post.category}</a></div>`;
+      categoryHTML = `<div class="post-category"><a href="/categories/${categorySlug}" class="post-category-link">${post.category}</a></div>`;
     }
     
     return `
-      <article class="article-item">
-        <div class="article-line">
-          <time class="article-date">
+      <article class="post-item">
+        <div class="post-line">
+          <time class="post-date">
             <a href="/archive/${year}/${monthLower}" class="date-link" title="See ${month} ${year}'s archive">
               ${formattedDate}
             </a>
           </time>
-          <a href="/blog/${post.slug}" class="article-title">
+          <a href="/blog/${post.slug}" class="post-title">
             ${post.title}
           </a>
           ${categoryHTML}
