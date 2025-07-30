@@ -96,7 +96,7 @@ const products = allProducts
 
       .article-date {
         color: var(--text-muted);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 400;
         white-space: nowrap;
         flex-shrink: 0;
@@ -106,7 +106,7 @@ const products = allProducts
       .article-title {
         color: var(--text-primary);
         text-decoration: none;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         font-weight: 400;
         line-height: 1.4;
         transition: color 0.2s ease;
@@ -120,7 +120,7 @@ const products = allProducts
         border-bottom-color: var(--color-primary);
       }
 
-      .article-tags {
+      .article-categories {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
@@ -128,24 +128,24 @@ const products = allProducts
         flex-shrink: 0;
       }
 
-      .article-tag {
-        color: white;
-        background: #FF8C00;
-        font-size: 0.7rem;
+      .article-category {
+        color: var(--text-inverse);
+        background: var(--color-primary);
+        font-size: 0.75rem;
         font-weight: 500;
         text-decoration: none;
         transition: all 0.2s ease;
         line-height: 1.2;
         display: inline-flex;
         align-items: center;
-        padding: 0.2rem 0.5rem;
+        padding: 0.25rem 0.6rem;
         border-radius: 12px;
-        border: 1px solid #FF8C00;
+        border: 1px solid var(--color-primary);
       }
 
-      .article-tag:hover {
-        background: #FF4500;
-        border-color: #FF4500;
+      .article-category:hover {
+        background: var(--color-primary-hover);
+        border-color: var(--color-primary-hover);
         transform: translateY(-1px);
       }
       
@@ -181,7 +181,7 @@ const products = allProducts
         }
 
         .article-date {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           min-width: auto;
         }
 
@@ -190,7 +190,7 @@ const products = allProducts
           width: 100%;
         }
 
-        .article-tags {
+        .article-categories {
           width: 100%;
         }
       }
@@ -208,11 +208,9 @@ const products = allProducts
               <a href={product.data.url} target="_blank" rel="noopener noreferrer" class="article-title">
                 {product.data.title}
               </a>
-              {product.data.tags && product.data.tags.length > 0 && (
-                <div class="article-tags">
-                  {product.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                  ))}
+              {product.data.category && (
+                <div class="article-categories">
+                  <a href={`/categories/${product.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="article-category">{product.data.category}</a>
                 </div>
               )}
             </div>
@@ -233,11 +231,9 @@ const products = allProducts
               <a href={`/blog/${post.slug}`} class="article-title">
                 {post.data.title}
               </a>
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="article-tags">
-                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map(tag => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                  ))}
+              {post.data.category && (
+                <div class="article-categories">
+                  <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="article-category">{post.data.category}</a>
                 </div>
               )}
             </div>

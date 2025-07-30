@@ -170,8 +170,8 @@ const remainingPosts = allPosts.slice(20);
   }
 
   .rss-button {
-    color: white;
-    background: #FF8C00;
+    color: var(--text-inverse);
+    background: var(--color-secondary);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -181,28 +181,28 @@ const remainingPosts = allPosts.slice(20);
     justify-content: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    border: 1px solid #FF8C00;
+    border: 1px solid var(--color-secondary);
     border-radius: 6px;
     width: 180px;
   }
 
   .rss-button:hover {
-    background: #FF4500;
-    border-color: #FF4500;
+    background: var(--color-secondary-hover);
+    border-color: var(--color-secondary-hover);
     transform: translateY(-1px);
   }
 
   @media (prefers-color-scheme: dark) {
     .rss-button {
-      color: var(--color-background);
-      background: var(--color-primary);
-      border-color: var(--color-primary);
+      color: var(--text-inverse);
+      background: var(--color-secondary);
+      border-color: var(--color-secondary);
     }
 
     .rss-button:hover {
-      background: #FF4500;
-      border-color: #FF4500;
-      color: var(--color-background);
+      background: var(--color-secondary-hover);
+      border-color: var(--color-secondary-hover);
+      color: var(--text-inverse);
     }
   }
 
@@ -309,8 +309,8 @@ const remainingPosts = allPosts.slice(20);
   }
 
   .category-link {
-    color: white;
-    background: #FF8C00;
+    color: var(--text-inverse);
+    background: var(--color-primary);
     font-size: 0.7rem;
     font-weight: 500;
     text-decoration: none;
@@ -320,23 +320,25 @@ const remainingPosts = allPosts.slice(20);
     align-items: center;
     padding: 0.2rem 0.5rem;
     border-radius: 12px;
-    border: 1px solid #FF8C00;
+    border: 1px solid var(--color-primary);
   }
 
   .category-link:hover {
-    background: #FF4500;
-    border-color: #FF4500;
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
     transform: translateY(-1px);
   }
 
   .category-link:visited {
-    color: white;
-    background: #FF8C00;
+    color: var(--text-inverse);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
   }
 
   .category-link:visited:hover {
-    color: white;
-    background: #FF4500;
+    color: var(--text-inverse);
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
   }
 
   .load-more-container {

@@ -188,11 +188,9 @@ const breadcrumbItems = [
                               <a href={`/blog/${post.slug}`} class="archive-title">
                                 {post.data.title}
                               </a>
-                              {post.data.tags.length > 0 && (
-                                <div class="archive-tags">
-                                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map((tag) => (
-                                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">{tag}</a>
-                                  ))}
+                              {post.data.category && (
+                                <div class="archive-category">
+                                  <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="archive-category-link">{post.data.category}</a>
                                 </div>
                               )}
                             </div>
@@ -425,15 +423,13 @@ const breadcrumbItems = [
     border-bottom-color: var(--color-primary);
   }
 
-  .archive-tags {
+  .archive-category {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     align-items: baseline;
     flex-shrink: 0;
   }
 
-  .archive-tag {
+  .archive-category-link {
     color: white;
     background: #FF8C00;
     font-size: 0.7rem;
@@ -448,10 +444,20 @@ const breadcrumbItems = [
     border: 1px solid #FF8C00;
   }
 
-  .archive-tag:hover {
+  .archive-category-link:hover {
     background: #FF4500;
     border-color: #FF4500;
     transform: translateY(-1px);
+  }
+
+  .archive-category-link:visited {
+    color: white;
+    background: #FF8C00;
+  }
+
+  .archive-category-link:visited:hover {
+    color: white;
+    background: #FF4500;
   }
 
   /* Navigation button styles for category pages */
@@ -499,7 +505,7 @@ const breadcrumbItems = [
       margin-bottom: 0.25rem;
     }
 
-    .archive-tags {
+    .archive-category {
       align-self: stretch;
     }
 

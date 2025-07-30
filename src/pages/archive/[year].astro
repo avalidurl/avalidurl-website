@@ -54,14 +54,11 @@ const { year, posts } = Astro.props;
               <a href={`/blog/${post.slug}`} class="article-title">
                 {post.data.title}
               </a>
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="article-tags">
-                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map((tag, index, array) => (
-                    <>
-                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                      {index < array.length - 1 && ' '}
-                    </>
-                  ))}
+              {post.data.category && (
+                <div class="article-category">
+                  <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="article-category-link">
+                    {post.data.category}
+                  </a>
                 </div>
               )}
             </div>
@@ -211,18 +208,16 @@ const { year, posts } = Astro.props;
     border-bottom-color: var(--color-primary);
   }
 
-  .article-tags {
+  .article-category {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     align-items: baseline;
     flex-shrink: 0;
     min-height: 1.4em;
   }
 
-  .article-tag {
-    color: white;
-    background: #FF8C00;
+  .article-category-link {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
     font-size: 0.7rem;
     font-weight: 500;
     text-decoration: none;
@@ -232,13 +227,23 @@ const { year, posts } = Astro.props;
     align-items: center;
     padding: 0.2rem 0.5rem;
     border-radius: 12px;
-    border: 1px solid #FF8C00;
+    border: 1px solid var(--blog-sepia);
   }
 
-  .article-tag:hover {
-    background: #FF4500;
-    border-color: #FF4500;
+  .article-category-link:hover {
+    background: var(--blog-bronze);
+    border-color: var(--blog-bronze);
     transform: translateY(-1px);
+  }
+
+  .article-category-link:visited {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
+  }
+
+  .article-category-link:visited:hover {
+    color: var(--blog-warm-white);
+    background: var(--blog-bronze);
   }
   
   .no-posts {
@@ -294,7 +299,7 @@ const { year, posts } = Astro.props;
       width: 100%;
     }
 
-    .article-tags {
+    .article-category {
       width: 100%;
     }
     

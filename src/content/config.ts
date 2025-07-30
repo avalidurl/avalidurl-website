@@ -30,6 +30,7 @@ const products = defineCollection({
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
     tags: z.array(z.string()).default([]),
+    category: z.string().default('Products'),
   }),
 });
 

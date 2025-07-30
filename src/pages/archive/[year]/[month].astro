@@ -114,11 +114,11 @@ const parseIstanbulDate = (dateString) => {
               <a href={`/blog/${post.slug}`} class="post-title">
                 {post.data.title}
               </a>
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="post-tags">
-                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map((tag, index, array) => (
-                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="post-tag">{tag}</a>
-                  ))}
+              {post.data.category && (
+                <div class="post-category">
+                  <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="post-category-link">
+                    {post.data.category}
+                  </a>
                 </div>
               )}
             </div>
@@ -248,18 +248,16 @@ const parseIstanbulDate = (dateString) => {
     border-bottom-color: var(--color-primary);
   }
 
-  .post-tags {
+  .post-category {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     align-items: baseline;
     flex-shrink: 0;
     min-height: 1.4em;
   }
 
-  .post-tag {
-    color: white;
-    background: #FF8C00;
+  .post-category-link {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
     font-size: 0.7rem;
     font-weight: 500;
     text-decoration: none;
@@ -269,13 +267,23 @@ const parseIstanbulDate = (dateString) => {
     align-items: center;
     padding: 0.2rem 0.5rem;
     border-radius: 12px;
-    border: 1px solid #FF8C00;
+    border: 1px solid var(--blog-sepia);
   }
 
-  .post-tag:hover {
-    background: #FF4500;
-    border-color: #FF4500;
+  .post-category-link:hover {
+    background: var(--blog-bronze);
+    border-color: var(--blog-bronze);
     transform: translateY(-1px);
+  }
+
+  .post-category-link:visited {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
+  }
+
+  .post-category-link:visited:hover {
+    color: var(--blog-warm-white);
+    background: var(--blog-bronze);
   }
   
   .no-posts {
@@ -333,7 +341,7 @@ const parseIstanbulDate = (dateString) => {
       width: 100%;
     }
 
-    .post-tags {
+    .post-category {
       width: 100%;
     }
     

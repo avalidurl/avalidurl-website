@@ -126,11 +126,11 @@ const groupedPosts = Object.keys(postsByYear)
                             <a href={`/blog/${post.slug}`} class="archive-title">
                               {post.data.title}
                             </a>
-                            {post.data.tags.length > 0 && (
-                              <div class="archive-tags">
-                                {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map((tag) => (
-                                  <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">{tag}</a>
-                                ))}
+                            {post.data.category && (
+                              <div class="archive-category">
+                                <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="archive-category-link">
+                                  {post.data.category}
+                                </a>
                               </div>
                             )}
                           </div>
@@ -385,17 +385,15 @@ const groupedPosts = Object.keys(postsByYear)
     border-bottom-color: var(--color-primary);
   }
 
-  .archive-tags {
+  .archive-category {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     align-items: baseline;
     flex-shrink: 0;
   }
 
-  .archive-tag {
-    color: white;
-    background: #FF8C00;
+  .archive-category-link {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
     font-size: 0.7rem;
     font-weight: 500;
     text-decoration: none;
@@ -405,13 +403,23 @@ const groupedPosts = Object.keys(postsByYear)
     align-items: center;
     padding: 0.2rem 0.5rem;
     border-radius: 12px;
-    border: 1px solid #FF8C00;
+    border: 1px solid var(--blog-sepia);
   }
 
-  .archive-tag:hover {
-    background: #FF4500;
-    border-color: #FF4500;
+  .archive-category-link:hover {
+    background: var(--blog-bronze);
+    border-color: var(--blog-bronze);
     transform: translateY(-1px);
+  }
+
+  .archive-category-link:visited {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
+  }
+
+  .archive-category-link:visited:hover {
+    color: var(--blog-warm-white);
+    background: var(--blog-bronze);
   }
 
   .archive-footer {
@@ -453,7 +461,7 @@ const groupedPosts = Object.keys(postsByYear)
       margin-bottom: 0.25rem;
     }
 
-    .archive-tags {
+    .archive-category {
       align-self: stretch;
     }
 
