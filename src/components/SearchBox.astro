@@ -75,66 +75,17 @@
       close?.addEventListener('click', () => this.closeSearch());
       overlay?.addEventListener('click', () => this.closeSearch());
       
-      // Keyboard shortcuts
+      // Simplified keyboard shortcuts
       document.addEventListener('keydown', (e) => {
-        // Vim-style search: "/" key
-        if (e.key === '/' && !this.isOpen && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-          e.preventDefault();
-          this.openSearch();
-        }
-        
-        // CMD+K / Ctrl+K (popular in VS Code, GitHub, etc.)
+        // CMD+K / Ctrl+K to open search
         if ((e.metaKey || e.ctrlKey) && e.key === 'k' && !this.isOpen) {
           e.preventDefault();
           this.openSearch();
         }
         
-        // CMD+F / Ctrl+F alternative (when not handled by browser)
-        if ((e.metaKey || e.ctrlKey) && e.key === 'f' && !this.isOpen && e.target.tagName !== 'INPUT') {
-          // Let browser handle this, but show our search as fallback
-          setTimeout(() => {
-            if (!this.isOpen) {
-              this.openSearch();
-            }
-          }, 100);
-        }
-        
         // Escape to close
         if (e.key === 'Escape' && this.isOpen) {
           this.closeSearch();
-        }
-        
-        // Navigation within search results (vim-style)
-        if (this.isOpen && document.getElementById('search-input') !== document.activeElement) {
-          if (e.key === 'j' || e.key === 'ArrowDown') {
-            e.preventDefault();
-            this.navigateResults('down');
-          }
-          if (e.key === 'k' || e.key === 'ArrowUp') {
-            e.preventDefault();
-            this.navigateResults('up');
-          }
-          if (e.key === 'Enter') {
-            e.preventDefault();
-            this.selectResult();
-          }
-        }
-        
-        // Focus search input from anywhere in modal
-        if (this.isOpen && e.key === 'i' && e.target.tagName !== 'INPUT') {
-          e.preventDefault();
-          document.getElementById('search-input')?.focus();
-        }
-        
-        // Clear search (vim-style)
-        if (this.isOpen && (e.metaKey || e.ctrlKey) && e.key === 'u') {
-          e.preventDefault();
-          const input = document.getElementById('search-input');
-          if (input) {
-            input.value = '';
-            input.focus();
-            this.performSearch('');
-          }
         }
       });
       
@@ -272,38 +223,6 @@
     
     clearResults() {
       this.showShortcuts();
-    }
-    
-    navigateResults(direction) {
-      const results = document.querySelectorAll('.search-result-item');
-      if (results.length === 0) return;
-      
-      let currentIndex = Array.from(results).findIndex(el => el.classList.contains('selected'));
-      
-      if (direction === 'down') {
-        currentIndex = currentIndex < results.length - 1 ? currentIndex + 1 : 0;
-      } else {
-        currentIndex = currentIndex > 0 ? currentIndex - 1 : results.length - 1;
-      }
-      
-      // Remove previous selection
-      results.forEach(el => el.classList.remove('selected'));
-      
-      // Add new selection
-      if (results[currentIndex]) {
-        results[currentIndex].classList.add('selected');
-        results[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }
-    
-    selectResult() {
-      const selected = document.querySelector('.search-result-item.selected');
-      if (selected) {
-        const link = selected.querySelector('a');
-        if (link) {
-          window.location.href = link.href;
-        }
-      }
     }
   }
   
