@@ -447,19 +447,29 @@
   
   .search-input {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 10rem 0.75rem 1rem;
     border: 2px solid var(--border-medium);
     border-radius: 8px;
     font-size: 1rem;
     background: var(--bg-secondary);
     color: var(--text-primary);
     transition: all 0.2s ease;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
   }
   
   .search-input:focus {
     outline: none;
     border-color: var(--color-primary);
     background: var(--bg-primary);
+  }
+
+  .search-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+    font-size: 1rem;
+    line-height: normal;
   }
   
   .search-spinner {
@@ -539,6 +549,8 @@
     display: flex;
     gap: 0.75rem;
     align-items: center;
+    pointer-events: none;
+    z-index: 2;
   }
   
   .shortcut-hint {
@@ -623,6 +635,13 @@
     background: rgba(102, 102, 102, 0.1);
   }
   
+  /* Tablet and smaller desktop adjustments */
+  @media (max-width: 1024px) {
+    .search-input {
+      padding: 0.75rem 8rem 0.75rem 1rem; /* Reduce right padding on smaller screens */
+    }
+  }
+
   /* Mobile adjustments */
   @media (max-width: 768px) {
     .search-modal {
@@ -651,6 +670,10 @@
     
     .search-shortcuts-display {
       display: none; /* Hide on mobile to save space */
+    }
+
+    .search-input {
+      padding: 0.75rem 1rem; /* Reset padding on mobile when shortcuts are hidden */
     }
     
     .shortcuts-grid {
