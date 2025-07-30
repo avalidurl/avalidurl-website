@@ -167,7 +167,7 @@ const breadcrumbItems = [
           <span class="reading-time">{readingTime} min read</span>
           <span class="word-count">{wordCount.toLocaleString()} words</span>
           {post.data.category && (
-            <span class="post-category">{post.data.category}</span>
+            <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="post-category">{post.data.category}</a>
           )}
         </div>
         

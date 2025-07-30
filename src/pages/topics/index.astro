@@ -39,6 +39,11 @@ const recentPosts = allBlogPosts
   <main class="container">
     <header class="page-header">
       <h1>Browse by Topic</h1>
+      <div class="browse-nav">
+        <a href="/categories" class="nav-button">Browse by Category →</a>
+        <a href="/archive" class="nav-button">Browse Archive →</a>
+        <a href="/blog" class="nav-button">← All Posts</a>
+      </div>
       <p class="page-description">
         Explore {allBlogPosts.length + allProducts.length} items ({allBlogPosts.length} articles, {allProducts.length} products) across {allTags.length} topics covering finance, art, technology, and culture.
       </p>
@@ -130,6 +135,34 @@ const recentPosts = allBlogPosts
     color: var(--text-primary);
     margin-bottom: 1rem;
     font-weight: 700;
+  }
+  
+  .browse-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .nav-button {
+    background: none;
+    border: 1px solid var(--border-medium);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .nav-button:hover {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
   }
   
   .page-description {

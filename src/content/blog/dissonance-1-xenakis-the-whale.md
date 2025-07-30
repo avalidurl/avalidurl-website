@@ -4,7 +4,7 @@ description: "It has always been easy to contemplate on the inefficiencies of th
 publishDate: "2021-04-03"
 author: "Gökhan Turhan"
 tags: ["finance"]
-category: "finance"
+category: "Finance & Markets"
 featured: false
 readingTime: 1
 excerpt: "It has always been easy to contemplate on the inefficiencies of the markets. Alloyed minds thought that human behavior had nothing to do with that which was the market."

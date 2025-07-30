@@ -1,4 +1,6 @@
 ---
+import SearchBox from './SearchBox.astro';
+
 const currentPath = Astro.url.pathname;
 ---
 
@@ -33,6 +35,9 @@ const currentPath = Astro.url.pathname;
         <a href="/reading-list" class={currentPath === '/reading-list' ? 'nav-link active' : 'nav-link'}>
           Reading List
         </a>
+      </li>
+      <li>
+        <SearchBox />
       </li>
       <li>
         <button id="nav-theme-toggle" class="nav-theme-toggle" aria-label="Toggle dark mode">

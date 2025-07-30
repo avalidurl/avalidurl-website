@@ -1,0 +1,244 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const categories = [
+  'Finance & Markets',
+  'Crypto & Web3', 
+  'Art & Culture',
+  'Technology & Data',
+  'General'
+];
+
+// Helper function to parse dates consistently in Istanbul timezone
+const parseIstanbulDate = (dateString) => {
+  if (typeof dateString !== 'string') {
+    return new Date(dateString);
+  }
+  if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return new Date(dateString + 'T00:00:00+03:00');
+  }
+  return new Date(dateString);
+};
+
+// Get all blog posts
+const allPosts = await getCollection('blog', ({ data }) => {
+  if (data.draft) return false;
+  
+  const publishDate = parseIstanbulDate(data.publishDate);
+  const now = new Date();
+  const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+  
+  return publishDate <= oneDayFromNow;
+});
+
+// Count posts per category
+const categoryCounts = {};
+categories.forEach(category => {
+  categoryCounts[category] = allPosts.filter(post => post.data.category === category).length;
+});
+
+// Category descriptions and colors
+const categoryInfo = {
+  'Finance & Markets': {
+    description: 'Financial analysis, market insights, DeFi protocols, and economic commentary.',
+    icon: '📈',
+    color: 'sepia'
+  },
+  'Crypto & Web3': {
+    description: 'Blockchain technology, cryptocurrency analysis, and decentralized web developments.',
+    icon: '⛓️',
+    color: 'bronze'
+  },
+  'Art & Culture': {
+    description: 'Conceptual art, cultural criticism, creative writing, and artistic expression.',
+    icon: '🎨',
+    color: 'muted-gold'  
+  },
+  'Technology & Data': {
+    description: 'Technical analysis, data visualization, and emerging technologies.',
+    icon: '🔬',
+    color: 'charcoal'
+  },
+  'General': {
+    description: 'Daily thoughts, personal reflections, and miscellaneous topics.',
+    icon: '💭',
+    color: 'secondary'
+  }
+};
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Categories', url: '/categories' }
+];
+---
+
+<Layout 
+  title="Browse by Category - Gökhan Turhan" 
+  description="Explore content organized by topic areas: Finance & Markets, Crypto & Web3, Art & Culture, Technology & Data, and General discussions."
+>
+  <main class="blog-container">
+    <!-- Breadcrumb Navigation -->
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="blog-header">
+      <h1>Browse by Category</h1>
+      <div class="blog-nav">
+        <a href="/blog" class="nav-button">← All Posts</a>
+        <a href="/topics" class="nav-button">Browse Topics →</a>
+        <a href="/archive" class="nav-button">Browse Archive →</a>
+      </div>
+      <p class="blog-subtitle">
+        Explore content organized by topic areas — from financial analysis to creative expression.
+      </p>
+    </header>
+
+    <div class="categories-grid">
+      {categories.map(category => {
+        const slug = category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and');
+        const info = categoryInfo[category];
+        const count = categoryCounts[category];
+        
+        return (
+          <a href={`/categories/${slug}`} class={`category-card ${info.color}`}>
+            <div class="category-header">
+              <span class="category-icon">{info.icon}</span>
+              <h3 class="category-name">{category}</h3>
+            </div>
+            <p class="category-description">{info.description}</p>
+            <div class="category-stats">
+              <span class="post-count">{count} post{count !== 1 ? 's' : ''}</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .category-card {
+    background: var(--blog-parchment);
+    border: 2px solid var(--border-light);
+    border-radius: 8px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--blog-bronze);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .category-card:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(112, 66, 20, 0.15);
+    border-color: var(--blog-bronze);
+  }
+  
+  .category-card.sepia::before {
+    background: var(--blog-sepia);
+  }
+  
+  .category-card.bronze::before {
+    background: var(--blog-bronze);
+  }
+  
+  .category-card.muted-gold::before {
+    background: var(--blog-muted-gold);
+  }
+  
+  .category-card.charcoal::before {
+    background: var(--blog-charcoal);
+  }
+  
+  .category-card.secondary::before {
+    background: var(--color-secondary);
+  }
+  
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .category-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  
+  .category-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--blog-charcoal);
+  }
+  
+  .category-description {
+    color: var(--blog-sepia);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .category-stats {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .post-count {
+    background: var(--blog-sepia);
+    color: var(--blog-warm-white);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  
+  @media (max-width: 768px) {
+    .categories-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .category-card {
+      padding: 1.5rem;
+    }
+    
+    .category-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .category-icon {
+      font-size: 1.5rem;
+    }
+  }
+</style>

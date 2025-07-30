@@ -1,0 +1,502 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+// Helper function to parse dates consistently in Istanbul timezone
+const parseIstanbulDate = (dateString) => {
+  if (typeof dateString !== 'string') {
+    return new Date(dateString);
+  }
+  if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return new Date(dateString + 'T00:00:00+03:00');
+  }
+  return new Date(dateString);
+};
+
+// Get search query from URL params
+const url = new URL(Astro.request.url);
+const query = url.searchParams.get('q') || '';
+
+// Get all blog posts for searching
+const allPosts = await getCollection('blog', ({ data }) => {
+  if (data.draft) return false;
+  
+  const publishDate = parseIstanbulDate(data.publishDate);
+  const now = new Date();
+  const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+  
+  return publishDate <= oneDayFromNow;
+});
+
+// Search function
+function searchPosts(posts, searchQuery) {
+  if (!searchQuery || searchQuery.length < 2) {
+    return [];
+  }
+  
+  const query = searchQuery.toLowerCase().trim();
+  
+  return posts.filter(post => {
+    const titleMatch = post.data.title.toLowerCase().includes(query);
+    const descriptionMatch = post.data.description?.toLowerCase().includes(query);
+    const categoryMatch = post.data.category?.toLowerCase().includes(query);
+    const tagsMatch = post.data.tags?.some(tag => tag.toLowerCase().includes(query));
+    const authorMatch = post.data.author?.toLowerCase().includes(query);
+    
+    return titleMatch || descriptionMatch || categoryMatch || tagsMatch || authorMatch;
+  }).sort((a, b) => {
+    // Sort by relevance (title matches first, then by date)
+    const aTitle = a.data.title.toLowerCase().includes(query);
+    const bTitle = b.data.title.toLowerCase().includes(query);
+    
+    if (aTitle && !bTitle) return -1;
+    if (!aTitle && bTitle) return 1;
+    
+    // Then by date (newest first)
+    return parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime();
+  });
+}
+
+// Perform search
+const searchResults = query ? searchPosts(allPosts, query) : [];
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Search', url: '/search' }
+];
+---
+
+<Layout 
+  title={query ? `Search results for "${query}"` : "Search"} 
+  description={query ? `Search results for "${query}" on Gökhan Turhan's blog` : "Search through blog posts, topics, and categories"}
+>
+  <main class="blog-container">
+    <!-- Breadcrumb Navigation -->
+    <Breadcrumb items={breadcrumbItems} />
+
+    <header class="blog-header">
+      <h1>{query ? `Search Results` : 'Search'}</h1>
+      <div class="blog-nav">
+        <a href="/blog" class="nav-button">← All Posts</a>
+        <a href="/topics" class="nav-button">Browse Topics →</a>
+        <a href="/categories" class="nav-button">Browse Categories →</a>
+      </div>
+      {query ? (
+        <p class="blog-subtitle">
+          Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for <strong>"{query}"</strong>
+        </p>
+      ) : (
+        <p class="blog-subtitle">
+          Search through blog posts, topics, and categories to find what you're looking for.
+        </p>
+      )}
+    </header>
+
+    <!-- Search Form -->
+    <div class="search-form-container">
+      <form class="search-form" method="GET" action="/search">
+        <div class="search-input-group">
+          <input 
+            type="text" 
+            name="q" 
+            value={query}
+            placeholder="Search posts, topics, categories..." 
+            class="search-input"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="search-button">
+            <span class="search-icon">🔍</span>
+            Search
+          </button>
+        </div>
+      </form>
+      
+      {!query && (
+        <div class="search-suggestions-container">
+          <p class="search-help">Popular searches:</p>
+          <div class="search-suggestions">
+            <a href="/search?q=crypto" class="search-suggestion">crypto</a>
+            <a href="/search?q=finance" class="search-suggestion">finance</a>
+            <a href="/search?q=art" class="search-suggestion">art</a>
+            <a href="/search?q=defi" class="search-suggestion">defi</a>
+            <a href="/search?q=blockchain" class="search-suggestion">blockchain</a>
+            <a href="/search?q=data" class="search-suggestion">data</a>
+          </div>
+        </div>
+      )}
+    </div>
+
+    <div class="blog-layout">
+      <section class="blog-main">
+        {query && searchResults.length > 0 ? (
+          <div class="articles-list">
+            {searchResults.map(post => (
+              <article class="article-item">
+                <div class="article-line">
+                  <time class="article-date">
+                    {(() => {
+                      const date = parseIstanbulDate(post.data.publishDate);
+                      const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
+                      return formattedDate;
+                    })()}
+                  </time>
+                  <a href={`/blog/${post.slug}`} class="article-title">
+                    {post.data.title}
+                  </a>
+                  {post.data.category && (
+                    <span class="article-category">{post.data.category}</span>
+                  )}
+                  {post.data.tags && post.data.tags.length > 0 && (
+                    <div class="article-tags">
+                      {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map((tag, index, array) => (
+                        <>
+                          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
+                        </>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                {post.data.description && (
+                  <p class="article-excerpt">{post.data.description}</p>
+                )}
+              </article>
+            ))}
+          </div>
+        ) : query && searchResults.length === 0 ? (
+          <div class="no-results">
+            <div class="no-results-content">
+              <h3>No results found for "{query}"</h3>
+              <p>Try adjusting your search terms or browse by category:</p>
+              <div class="browse-links">
+                <a href="/categories/finance-and-markets" class="browse-link">Finance & Markets</a>
+                <a href="/categories/crypto-and-web3" class="browse-link">Crypto & Web3</a>
+                <a href="/categories/art-and-culture" class="browse-link">Art & Culture</a>
+                <a href="/categories/technology-and-data" class="browse-link">Technology & Data</a>
+              </div>
+            </div>
+          </div>
+        ) : !query ? (
+          <div class="search-welcome">
+            <h3>What are you looking for?</h3>
+            <p>Use the search box above to find specific posts, or browse by:</p>
+            <div class="browse-options">
+              <div class="browse-section">
+                <h4>By Category</h4>
+                <ul class="browse-list">
+                  <li><a href="/categories/finance-and-markets">Finance & Markets</a></li>
+                  <li><a href="/categories/crypto-and-web3">Crypto & Web3</a></li>
+                  <li><a href="/categories/art-and-culture">Art & Culture</a></li>
+                  <li><a href="/categories/technology-and-data">Technology & Data</a></li>
+                  <li><a href="/categories/general">General</a></li>
+                </ul>
+              </div>
+              <div class="browse-section">
+                <h4>Other Options</h4>
+                <ul class="browse-list">
+                  <li><a href="/blog">All Posts</a></li>
+                  <li><a href="/topics">Browse Topics</a></li>
+                  <li><a href="/archive">Browse Archive</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        ) : null}
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .search-form-container {
+    margin: 2rem 0 3rem 0;
+    text-align: center;
+  }
+  
+  .search-form {
+    margin-bottom: 2rem;
+  }
+  
+  .search-input-group {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.5rem;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-medium);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: var(--bg-primary);
+  }
+  
+  .search-button {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+  }
+  
+  .search-button:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-1px);
+  }
+  
+  .search-icon {
+    font-size: 1rem;
+  }
+  
+  .search-suggestions-container {
+    margin-top: 1rem;
+  }
+  
+  .search-help {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .search-suggestions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .search-suggestion {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-medium);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .search-suggestion:hover {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    border-color: var(--color-primary);
+  }
+  
+  /* Search Results Styles - Match Blog Listing */
+  .articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .article-item {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 1rem;
+  }
+  
+  .article-item:last-child {
+    border-bottom: none;
+  }
+  
+  .article-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  
+  .article-date {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    min-width: 6rem;
+  }
+  
+  .article-title {
+    flex: 1;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .article-title:hover {
+    color: var(--color-primary);
+  }
+  
+  .article-category {
+    background: var(--blog-sepia);
+    color: var(--blog-warm-white);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+  
+  .article-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .article-tag {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .article-tag:hover {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+  }
+  
+  .article-excerpt {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-left: 7rem;
+  }
+  
+  /* No Results */
+  .no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .no-results-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .no-results-content p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+  
+  .browse-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .browse-link {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .browse-link:hover {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+  }
+  
+  /* Search Welcome */
+  .search-welcome {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .search-welcome h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .search-welcome p {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+  }
+  
+  .browse-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+  }
+  
+  .browse-section h4 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .browse-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .browse-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .browse-list a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .browse-list a:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .search-input-group {
+      flex-direction: column;
+    }
+    
+    .search-button {
+      justify-content: center;
+    }
+    
+    .article-line {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .article-date {
+      min-width: auto;
+    }
+    
+    .article-excerpt {
+      margin-left: 0;
+    }
+    
+    .browse-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
