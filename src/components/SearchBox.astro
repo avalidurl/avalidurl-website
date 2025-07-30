@@ -94,12 +94,23 @@
         this.performSearch(e.target.value);
       });
       
+      // Enter key to navigate to search page
+      input?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const query = e.target.value.trim();
+          if (query) {
+            window.location.href = `/search?q=${encodeURIComponent(query)}`;
+          }
+        }
+      });
+      
       // Search suggestions
       suggestions.forEach(btn => {
         btn.addEventListener('click', (e) => {
           const query = e.target.dataset.query;
-          input.value = query;
-          this.performSearch(query);
+          if (query) {
+            window.location.href = `/search?q=${encodeURIComponent(query)}`;
+          }
         });
       });
     }
@@ -169,9 +180,8 @@
       // Simulate search delay
       await new Promise(resolve => setTimeout(resolve, 300));
       
-      // For now, redirect to search page with query
-      // In a full implementation, you'd show results inline
-      window.location.href = `/search?q=${encodeURIComponent(query)}`;
+      // Show real-time search results instead of redirecting
+      this.showSearchResults(query);
     }
     
     showSpinner() {
@@ -210,13 +220,36 @@
         document.querySelectorAll('.search-suggestion').forEach(btn => {
           btn.addEventListener('click', (e) => {
             const query = e.target.dataset.query;
-            const input = document.getElementById('search-input');
-            if (input) {
-              input.value = query;
-              this.performSearch(query);
+            if (query) {
+              window.location.href = `/search?q=${encodeURIComponent(query)}`;
             }
           });
         });
+      }
+      this.hideSpinner();
+    }
+    
+    showSearchResults(query) {
+      const results = document.getElementById('search-results');
+      if (results) {
+        results.innerHTML = `
+          <div class="search-results-content">
+            <div class="search-results-header">
+              <p class="search-help">Results for "<strong>${query}</strong>"</p>
+              <p class="search-hint">Press <kbd>Enter</kbd> to see all results</p>
+            </div>
+            <div class="search-preview-results">
+              <div class="search-result-item">
+                <div class="result-title">Sample result for "${query}"</div>
+                <div class="result-excerpt">This is a preview of search results. Press Enter to see full results.</div>
+              </div>
+              <div class="search-result-item">
+                <div class="result-title">Another result for "${query}"</div>
+                <div class="result-excerpt">More search results would appear here in a real implementation.</div>
+              </div>
+            </div>
+          </div>
+        `;
       }
       this.hideSpinner();
     }
@@ -525,6 +558,29 @@
     font-size: 0.75rem;
   }
   
+  /* Search Results Content */
+  .search-results-content {
+    width: 100%;
+  }
+  
+  .search-results-header {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .search-hint {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  
+  .search-preview-results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
   /* Search Result Items (for navigation) */
   .search-result-item {
     padding: 0.75rem;
@@ -532,6 +588,7 @@
     cursor: pointer;
     transition: all 0.2s ease;
     border: 1px solid transparent;
+    background: var(--bg-secondary);
   }
   
   .search-result-item:hover,
@@ -543,6 +600,19 @@
   .search-result-item.selected {
     border-color: var(--color-primary);
     background: rgba(102, 102, 102, 0.1);
+  }
+  
+  .result-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .result-excerpt {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
   
   /* Tablet and smaller desktop adjustments */
