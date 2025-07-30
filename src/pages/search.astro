@@ -18,7 +18,7 @@ const parseIstanbulDate = (dateString) => {
 const url = new URL(Astro.request.url);
 const query = url.searchParams.get('q') || '';
 
-// Get all blog posts for searching
+// Get all content for searching
 const allPosts = await getCollection('blog', ({ data }) => {
   if (data.draft) return false;
   
@@ -29,22 +29,27 @@ const allPosts = await getCollection('blog', ({ data }) => {
   return publishDate <= oneDayFromNow;
 });
 
-// Search function
-function searchPosts(posts, searchQuery) {
+const allProducts = await getCollection('products', ({ data }) => {
+  if (data.draft) return false;
+  return true;
+}).catch(() => []);
+
+// Search function for multiple content types
+function searchContent(posts, products, searchQuery) {
   if (!searchQuery || searchQuery.length < 2) {
-    return [];
+    return { posts: [], products: [] };
   }
   
   const query = searchQuery.toLowerCase().trim();
   
-  return posts.filter(post => {
+  // Search posts
+  const matchingPosts = posts.filter(post => {
     const titleMatch = post.data.title.toLowerCase().includes(query);
     const descriptionMatch = post.data.description?.toLowerCase().includes(query);
     const categoryMatch = post.data.category?.toLowerCase().includes(query);
-    const tagsMatch = post.data.tags?.some(tag => tag.toLowerCase().includes(query));
     const authorMatch = post.data.author?.toLowerCase().includes(query);
     
-    return titleMatch || descriptionMatch || categoryMatch || tagsMatch || authorMatch;
+    return titleMatch || descriptionMatch || categoryMatch || authorMatch;
   }).sort((a, b) => {
     // Sort by relevance (title matches first, then by date)
     const aTitle = a.data.title.toLowerCase().includes(query);
@@ -56,10 +61,32 @@ function searchPosts(posts, searchQuery) {
     // Then by date (newest first)
     return parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime();
   });
+
+  // Search products
+  const matchingProducts = products.filter(product => {
+    const titleMatch = product.data.title.toLowerCase().includes(query);
+    const descriptionMatch = product.data.description?.toLowerCase().includes(query);
+    const techMatch = product.data.tech?.some(tech => tech.toLowerCase().includes(query));
+    
+    return titleMatch || descriptionMatch || techMatch;
+  }).sort((a, b) => {
+    // Sort by relevance (title matches first, then by date)
+    const aTitle = a.data.title.toLowerCase().includes(query);
+    const bTitle = b.data.title.toLowerCase().includes(query);
+    
+    if (aTitle && !bTitle) return -1;
+    if (!aTitle && bTitle) return 1;
+    
+    // Then by date (newest first) 
+    return parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime();
+  });
+
+  return { posts: matchingPosts, products: matchingProducts };
 }
 
 // Perform search
-const searchResults = query ? searchPosts(allPosts, query) : [];
+const searchResults = query ? searchContent(allPosts, allProducts, query) : { posts: [], products: [] };
+const totalResults = searchResults.posts.length + searchResults.products.length;
 
 // Breadcrumb items
 const breadcrumbItems = [
@@ -85,7 +112,13 @@ const breadcrumbItems = [
       </div>
       {query ? (
         <p class="blog-subtitle">
-          Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for <strong>"{query}"</strong>
+          Found {totalResults} result{totalResults !== 1 ? 's' : ''} for <strong>"{query}"</strong>
+          {totalResults > 0 && (
+            <span class="result-breakdown">
+              {searchResults.posts.length > 0 && ` • ${searchResults.posts.length} post${searchResults.posts.length !== 1 ? 's' : ''}`}
+              {searchResults.products.length > 0 && ` • ${searchResults.products.length} product${searchResults.products.length !== 1 ? 's' : ''}`}
+            </span>
+          )}
         </p>
       ) : (
         <p class="blog-subtitle">
@@ -131,41 +164,71 @@ const breadcrumbItems = [
 
     <div class="blog-layout">
       <section class="blog-main">
-        {query && searchResults.length > 0 ? (
-          <div class="articles-list">
-            {searchResults.map(post => (
-              <article class="article-item">
-                <div class="article-line">
-                  <time class="article-date">
-                    {(() => {
-                      const date = parseIstanbulDate(post.data.publishDate);
-                      const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
-                      return formattedDate;
-                    })()}
-                  </time>
-                  <a href={`/blog/${post.slug}`} class="article-title">
-                    {post.data.title}
-                  </a>
-                  {post.data.category && (
-                    <span class="article-category">{post.data.category}</span>
-                  )}
-                  {post.data.tags && post.data.tags.length > 0 && (
-                    <div class="article-tags">
-                      {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map((tag, index, array) => (
-                        <>
-                          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                        </>
-                      ))}
-                    </div>
-                  )}
+        {query && totalResults > 0 ? (
+          <div class="search-results-grouped">
+            {searchResults.posts.length > 0 && (
+              <div class="result-group">
+                <h3 class="result-group-title">Blog Posts ({searchResults.posts.length})</h3>
+                <div class="articles-list">
+                  {searchResults.posts.map(post => (
+                    <article class="article-item">
+                      <div class="article-line">
+                        <time class="article-date">
+                          {(() => {
+                            const date = parseIstanbulDate(post.data.publishDate);
+                            const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
+                            return formattedDate;
+                          })()}
+                        </time>
+                        <a href={`/blog/${post.slug}`} class="article-title">
+                          {post.data.title}
+                        </a>
+                        {post.data.category && (
+                          <div class="article-category">
+                            <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="category-link">
+                              {post.data.category}
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                      {post.data.description && (
+                        <p class="article-excerpt">{post.data.description}</p>
+                      )}
+                    </article>
+                  ))}
                 </div>
-                {post.data.description && (
-                  <p class="article-excerpt">{post.data.description}</p>
-                )}
-              </article>
-            ))}
+              </div>
+            )}
+
+            {searchResults.products.length > 0 && (
+              <div class="result-group">
+                <h3 class="result-group-title">Products ({searchResults.products.length})</h3>
+                <div class="articles-list">
+                  {searchResults.products.map(product => (
+                    <article class="article-item">
+                      <div class="article-line">
+                        <time class="article-date">
+                          {(() => {
+                            const date = parseIstanbulDate(product.data.publishDate);
+                            const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
+                            return formattedDate;
+                          })()}
+                        </time>
+                        <a href={`/products/${product.slug}`} class="article-title">
+                          {product.data.title}
+                        </a>
+                        <span class="product-badge">Product</span>
+                      </div>
+                      {product.data.description && (
+                        <p class="article-excerpt">{product.data.description}</p>
+                      )}
+                    </article>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
-        ) : query && searchResults.length === 0 ? (
+        ) : query && totalResults === 0 ? (
           <div class="no-results">
             <div class="no-results-content">
               <h3>No results found for "{query}"</h3>
@@ -285,22 +348,69 @@ const breadcrumbItems = [
   }
   
   .search-suggestion {
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border-medium);
-    color: var(--text-secondary);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
   
   .search-suggestion:hover {
     background: var(--color-primary);
-    color: var(--text-inverse);
+    color: white;
     border-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
   
+  .result-breakdown {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+
+  .search-results-grouped {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .result-group {
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 2rem;
+  }
+
+  .result-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .result-group-title {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .product-badge {
+    background: var(--color-secondary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+  }
+
   /* Search Results Styles - Match Blog Listing */
   .articles-list {
     display: flex;
@@ -348,25 +458,12 @@ const breadcrumbItems = [
   }
   
   .article-category {
-    background: rgba(255, 140, 0, 0.3);
-    color: #cc7a00;
-    padding: 0.2rem 0.5rem;
-    border-radius: 12px;
-    font-weight: 500;
-    font-size: 0.7rem;
-    border: 1px solid rgba(255, 140, 0, 0.5);
-    display: inline-flex;
-    align-items: center;
-    line-height: 1.2;
-  }
-  
-  .article-tags {
     display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    align-items: baseline;
+    flex-shrink: 0;
   }
-  
-  .article-tag {
+
+  .category-link {
     color: white;
     background: #FF8C00;
     font-size: 0.7rem;
@@ -380,12 +477,23 @@ const breadcrumbItems = [
     border-radius: 12px;
     border: 1px solid #FF8C00;
   }
-  
-  .article-tag:hover {
+
+  .category-link:hover {
     background: #FF4500;
     border-color: #FF4500;
     transform: translateY(-1px);
   }
+
+  .category-link:visited {
+    color: white;
+    background: #FF8C00;
+  }
+
+  .category-link:visited:hover {
+    color: white;
+    background: #FF4500;
+  }
+  
   
   .article-excerpt {
     color: var(--text-muted);
@@ -418,9 +526,10 @@ const breadcrumbItems = [
   }
   
   .browse-link {
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
+    background: var(--bg-primary);
+    color: var(--color-primary);
     padding: 0.5rem 1rem;
+    border: 1px solid var(--color-primary);
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
@@ -429,7 +538,8 @@ const breadcrumbItems = [
   
   .browse-link:hover {
     background: var(--color-primary);
-    color: var(--text-inverse);
+    color: white;
+    transform: translateY(-1px);
   }
   
   /* Search Welcome */

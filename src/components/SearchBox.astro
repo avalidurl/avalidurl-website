@@ -48,47 +48,6 @@
             <button class="search-suggestion" data-query="blockchain">blockchain</button>
           </div>
           
-          <div class="keyboard-shortcuts">
-            <h4>Keyboard Shortcuts</h4>
-            <div class="shortcuts-grid">
-              <div class="shortcut-item">
-                <div class="shortcut-keys">
-                  <kbd>/</kbd>
-                </div>
-                <span>Open search (vim-style)</span>
-              </div>
-              <div class="shortcut-item">
-                <div class="shortcut-keys">
-                  <kbd>⌘</kbd><kbd>K</kbd>
-                </div>
-                <span>Quick search</span>
-              </div>
-              <div class="shortcut-item">
-                <div class="shortcut-keys">
-                  <kbd>Esc</kbd>
-                </div>
-                <span>Close search</span>
-              </div>
-              <div class="shortcut-item">
-                <div class="shortcut-keys">
-                  <kbd>j</kbd><kbd>k</kbd>
-                </div>
-                <span>Navigate results</span>
-              </div>
-              <div class="shortcut-item">
-                <div class="shortcut-keys">
-                  <kbd>i</kbd>
-                </div>
-                <span>Focus input</span>
-              </div>
-              <div class="shortcut-item">
-                <div class="shortcut-keys">
-                  <kbd>⌘</kbd><kbd>U</kbd>
-                </div>
-                <span>Clear search</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -551,20 +510,24 @@
   }
   
   .search-suggestion {
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border-medium);
-    color: var(--text-secondary);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
   
   .search-suggestion:hover {
     background: var(--color-primary);
-    color: var(--text-inverse);
+    color: white;
     border-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
   
   /* Keyboard Shortcuts Display */

@@ -8,9 +8,16 @@ export const prerender = true;
 export async function getStaticPaths() {
   const categories = [
     'Finance & Markets',
+    'Finance',
     'Crypto & Web3', 
     'Art & Culture',
+    'Art Works',
+    'Writing',
+    'Fiction',
+    'Books',
+    'People',
     'Technology & Data',
+    'Products',
     'General'
   ];
 
@@ -97,9 +104,16 @@ const groupedPosts = Object.keys(postsByYear)
 // Category descriptions
 const categoryDescriptions = {
   'Finance & Markets': 'Financial analysis, market insights, DeFi protocols, and economic commentary.',
+  'Finance': 'Traditional finance, banking, investment strategies, and economic analysis.',
   'Crypto & Web3': 'Blockchain technology, cryptocurrency analysis, and decentralized web developments.',
   'Art & Culture': 'Conceptual art, cultural criticism, creative writing, and artistic expression.',
+  'Art Works': 'Creative pieces, visual art, and artistic productions.',
+  'Writing': 'Essays, articles, and written content across various topics.',
+  'Fiction': 'Short stories, fictional narratives, and creative storytelling.',
+  'Books': 'Book reviews, reading notes, and literary discussions.',
+  'People': 'Profiles, interviews, and stories about interesting individuals.',
   'Technology & Data': 'Technical analysis, data visualization, and emerging technologies.',
+  'Products': 'Digital tools, applications, and product development insights.',
   'General': 'Daily thoughts, personal reflections, and miscellaneous topics.'
 };
 

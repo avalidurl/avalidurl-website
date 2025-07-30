@@ -5,9 +5,16 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const categories = [
   'Finance & Markets',
+  'Finance',
   'Crypto & Web3', 
   'Art & Culture',
+  'Art Works',
+  'Writing',
+  'Fiction',
+  'Books',
+  'People',
   'Technology & Data',
+  'Products',
   'General'
 ];
 
@@ -46,6 +53,11 @@ const categoryInfo = {
     icon: '📈',
     color: 'sepia'
   },
+  'Finance': {
+    description: 'Traditional finance, banking, investment strategies, and economic analysis.',
+    icon: '💰',
+    color: 'sepia'
+  },
   'Crypto & Web3': {
     description: 'Blockchain technology, cryptocurrency analysis, and decentralized web developments.',
     icon: '⛓️',
@@ -56,10 +68,40 @@ const categoryInfo = {
     icon: '🎨',
     color: 'muted-gold'  
   },
+  'Art Works': {
+    description: 'Creative pieces, visual art, and artistic productions.',
+    icon: '🖼️',
+    color: 'muted-gold'
+  },
+  'Writing': {
+    description: 'Essays, articles, and written content across various topics.',
+    icon: '✍️',
+    color: 'charcoal'
+  },
+  'Fiction': {
+    description: 'Short stories, fictional narratives, and creative storytelling.',
+    icon: '📚',
+    color: 'secondary'
+  },
+  'Books': {
+    description: 'Book reviews, reading notes, and literary discussions.',
+    icon: '📖',
+    color: 'bronze'
+  },
+  'People': {
+    description: 'Profiles, interviews, and stories about interesting individuals.',
+    icon: '👥',
+    color: 'sepia'
+  },
   'Technology & Data': {
     description: 'Technical analysis, data visualization, and emerging technologies.',
     icon: '🔬',
     color: 'charcoal'
+  },
+  'Products': {
+    description: 'Digital tools, applications, and product development insights.',
+    icon: '🚀',
+    color: 'bronze'
   },
   'General': {
     description: 'Daily thoughts, personal reflections, and miscellaneous topics.',
