@@ -85,7 +85,7 @@ const breadcrumbItems = [
 
     <header class="blog-header">
       <h1>Browse by Category</h1>
-      <div class="blog-nav">
+      <div class="browse-nav">
         <a href="/blog" class="nav-button">← All Posts</a>
         <a href="/topics" class="nav-button">Browse Topics →</a>
         <a href="/archive" class="nav-button">Browse Archive →</a>
@@ -119,6 +119,34 @@ const breadcrumbItems = [
 </Layout>
 
 <style>
+  .browse-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .nav-button {
+    background: none;
+    border: 1px solid var(--border-medium);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .nav-button:hover {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+
   .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

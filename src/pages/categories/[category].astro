@@ -56,6 +56,44 @@ const sortedPosts = allPosts.sort((a, b) =>
   parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime()
 );
 
+// Group posts by year first, then by month (same as archive page)
+const postsByYear = {};
+sortedPosts.forEach(post => {
+  const date = parseIstanbulDate(post.data.publishDate);
+  const year = date.getFullYear();
+  const month = date.getMonth(); // 0-indexed
+  
+  if (!postsByYear[year]) {
+    postsByYear[year] = {};
+  }
+  
+  if (!postsByYear[year][month]) {
+    postsByYear[year][month] = {
+      monthName: date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' }),
+      posts: []
+    };
+  }
+  
+  postsByYear[year][month].posts.push(post);
+});
+
+// Convert to sorted structure (newest year first, newest month first within each year)
+const groupedPosts = Object.keys(postsByYear)
+  .map(year => parseInt(year))
+  .sort((a, b) => b - a)
+  .map(year => ({
+    year,
+    totalPosts: Object.keys(postsByYear[year]).reduce((total, month) => total + postsByYear[year][month].posts.length, 0),
+    months: Object.keys(postsByYear[year])
+      .map(month => parseInt(month))
+      .sort((a, b) => b - a)
+      .map(month => ({
+        month,
+        monthName: postsByYear[year][month].monthName,
+        posts: postsByYear[year][month].posts
+      }))
+  }));
+
 // Category descriptions
 const categoryDescriptions = {
   'Finance & Markets': 'Financial analysis, market insights, DeFi protocols, and economic commentary.',
@@ -96,43 +134,71 @@ const breadcrumbItems = [
       </div>
     </header>
 
-    <div class="blog-layout">
-      <section class="blog-main">
-        {sortedPosts.length > 0 ? (
-          <div class="articles-list">
-            {sortedPosts.map(post => (
-              <article class="article-item">
-                <div class="article-line">
-                  <time class="article-date">
-                    {(() => {
-                      const date = parseIstanbulDate(post.data.publishDate);
-                      const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
-                      return formattedDate;
-                    })()}
-                  </time>
-                  <a href={`/blog/${post.slug}`} class="article-title">
-                    {post.data.title}
-                  </a>
-                  {post.data.tags && post.data.tags.length > 0 && (
-                    <div class="article-tags">
-                      {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 3).map((tag, index, array) => (
-                        <>
-                          <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                        </>
-                      ))}
+    <div class="archive-content">
+      {sortedPosts.length > 0 ? (
+        groupedPosts.map(({ year, totalPosts, months }) => (
+          <section class="archive-year-section">
+            <div class="year-header-collapsible" data-year-toggle={year}>
+              <h2 class="archive-year">
+                <a href={`/archive/${year}`} class="year-link">{year}</a> <span class="post-count">({totalPosts} posts)</span>
+              </h2>
+              <button class="year-toggle-btn" data-year={year}>
+                <span class="toggle-icon">▼</span>
+              </button>
+            </div>
+            <div class="year-content collapsed" data-year-content={year}>
+              <div class="year-content-inner">
+                {months.map(({ monthName, posts }) => (
+                <section class="archive-month-section">
+                  <div class="month-header-collapsible" data-month-toggle={`${year}-${monthName.toLowerCase()}`}>
+                    <h3 class="archive-month">
+                      <a href={`/archive/${year}/${monthName.toLowerCase()}`} class="month-link">
+                        {monthName} <span class="post-count">({posts.length})</span>
+                      </a>
+                    </h3>
+                    <button class="month-toggle-btn" data-month={`${year}-${monthName.toLowerCase()}`}>
+                      <span class="toggle-icon">▼</span>
+                    </button>
+                  </div>
+                  <div class="month-content collapsed" data-month-content={`${year}-${monthName.toLowerCase()}`}>
+                    <div class="month-content-inner">
+                      <div class="archive-list">
+                        {posts.map(post => (
+                          <article class="archive-item">
+                            <div class="archive-line">
+                              <time class="archive-date">
+                                {parseIstanbulDate(post.data.publishDate).toLocaleDateString('en-CA', {
+                                  timeZone: 'Europe/Istanbul'
+                                }).split('-')[2]}
+                              </time>
+                              <a href={`/blog/${post.slug}`} class="archive-title">
+                                {post.data.title}
+                              </a>
+                              {post.data.tags.length > 0 && (
+                                <div class="archive-tags">
+                                  {post.data.tags.sort((a, b) => a.localeCompare(b)).slice(0, 4).map((tag) => (
+                                    <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="archive-tag">{tag}</a>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </article>
+                        ))}
+                      </div>
                     </div>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <div class="no-posts">
-            <p>No posts found in this category yet.</p>
-            <a href="/blog" class="nav-button">Browse All Posts →</a>
-          </div>
-        )}
-      </section>
+                  </div>
+                </section>
+              ))}
+              </div>
+            </div>
+          </section>
+        ))
+      ) : (
+        <div class="no-posts">
+          <p>No posts found in this category yet.</p>
+          <a href="/blog" class="nav-button">Browse All Posts →</a>
+        </div>
+      )}
     </div>
   </main>
 </Layout>
@@ -163,59 +229,197 @@ const breadcrumbItems = [
     margin-bottom: 2rem;
     font-size: 1.1rem;
   }
-  
-  /* Match blog listing styles */
-  .articles-list {
+
+  /* Archive-style collapsible layout */
+  .archive-content {
+    margin-bottom: 3rem;
+  }
+
+  .archive-year-section {
+    margin-bottom: 2rem;
+  }
+
+  .year-header-collapsible {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.75rem 0;
+    border-bottom: 1px dotted var(--border-light);
+    transition: background-color 0.2s ease;
   }
-  
-  .article-item {
-    border-bottom: 1px solid var(--border-light);
-    padding-bottom: 0.75rem;
+
+  .year-header-collapsible:hover {
+    background: rgba(0, 0, 0, 0.02);
   }
-  
-  .article-item:last-child {
-    border-bottom: none;
+
+  .year-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
-  
-  .article-line {
+
+  .year-link:hover {
+    color: var(--color-primary);
+  }
+
+  .archive-year {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    flex: 1;
+  }
+
+  .month-header-collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px dotted var(--border-light);
+    transition: background-color 0.2s ease;
+    margin: 0.5rem 0;
+  }
+
+  .month-header-collapsible:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .archive-month {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 0;
+    flex: 1;
+  }
+
+  .month-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .month-link:hover {
+    color: var(--color-primary);
+  }
+
+  .archive-year .post-count,
+  .archive-month .post-count {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.9em;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    letter-spacing: normal;
+  }
+
+  .year-toggle-btn,
+  .month-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    padding: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  .year-toggle-btn:hover,
+  .month-toggle-btn:hover {
+    color: var(--text-primary);
+  }
+
+  .toggle-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .year-toggle-btn.expanded .toggle-icon,
+  .month-toggle-btn.expanded .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .year-content,
+  .month-content {
+    display: grid;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  .year-content.collapsed,
+  .month-content.collapsed {
+    grid-template-rows: 0fr;
+  }
+
+  .year-content-inner,
+  .month-content-inner {
+    overflow: hidden;
+  }
+
+  .archive-month-section {
+    margin-bottom: 0;
+  }
+
+  .archive-list {
+    padding: 0.5rem 0;
+  }
+
+  .archive-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .archive-line {
     display: flex;
     align-items: baseline;
     gap: 1rem;
-    flex-wrap: wrap;
+    padding: 0.4rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
   }
-  
-  .article-date {
+
+  .archive-line:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .archive-date {
     color: var(--text-muted);
-    font-size: 0.75rem;
-    font-weight: 500;
-    min-width: 6rem;
+    font-size: 0.7rem;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 50px;
   }
-  
-  .article-title {
-    flex: 1;
+
+  .archive-title {
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 400;
     font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.4;
     transition: color 0.2s ease;
     border-bottom: 1px dotted var(--text-muted);
+    flex: 1;
+    min-width: 0;
   }
-  
-  .article-title:hover {
+
+  .archive-title:hover {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
   }
-  
-  .article-tags {
+
+  .archive-tags {
     display: flex;
-    gap: 0.5rem;
     flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: baseline;
+    flex-shrink: 0;
   }
-  
-  .article-tag {
+
+  .archive-tag {
     color: white;
     background: #FF8C00;
     font-size: 0.7rem;
@@ -229,22 +433,140 @@ const breadcrumbItems = [
     border-radius: 12px;
     border: 1px solid #FF8C00;
   }
-  
-  .article-tag:hover {
+
+  .archive-tag:hover {
     background: #FF4500;
     border-color: #FF4500;
     transform: translateY(-1px);
   }
-  
+
+  /* Navigation button styles for category pages */
+  .blog-nav {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .nav-button {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    width: 180px;
+  }
+
+  .nav-button:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
+  }
+
   @media (max-width: 768px) {
-    .article-line {
+    .archive-line {
       flex-direction: column;
       align-items: flex-start;
       gap: 0.5rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .archive-title {
+      border-bottom: none;
+      margin-bottom: 0.25rem;
+    }
+
+    .archive-tags {
+      align-self: stretch;
+    }
+
+    .archive-month {
+      margin-left: 0.5rem;
     }
     
-    .article-date {
-      min-width: auto;
+    .blog-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .nav-button {
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .archive-line {
+      padding: 0.5rem 0.75rem;
+    }
+
+    .archive-year {
+      font-size: 1.125rem;
+    }
+
+    .archive-month {
+      font-size: 0.95rem;
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Helper function to toggle content
+    function toggleContent(btn, content) {
+      const isCollapsed = content.classList.contains('collapsed');
+      
+      if (isCollapsed) {
+        btn.classList.add('expanded');
+        content.classList.remove('collapsed');
+      } else {
+        btn.classList.remove('expanded');
+        content.classList.add('collapsed');
+      }
+    }
+
+    // Handle year toggles - entire dotted area clickable
+    const yearHeaders = document.querySelectorAll('[data-year-toggle]');
+    yearHeaders.forEach(header => {
+      header.addEventListener('click', function(e) {
+        // Don't toggle if clicking on the year link
+        if (e.target.closest('.year-link')) {
+          return;
+        }
+        
+        const year = this.dataset.yearToggle;
+        const btn = this.querySelector('.year-toggle-btn');
+        const content = document.querySelector(`[data-year-content="${year}"]`);
+        
+        toggleContent(btn, content);
+      });
+    });
+
+    // Handle month toggles - entire dotted area clickable  
+    const monthHeaders = document.querySelectorAll('[data-month-toggle]');
+    monthHeaders.forEach(header => {
+      header.addEventListener('click', function(e) {
+        // Don't toggle if clicking on the month link
+        if (e.target.closest('.month-link')) {
+          return;
+        }
+        
+        const monthId = this.dataset.monthToggle;
+        const btn = this.querySelector('.month-toggle-btn');
+        const content = document.querySelector(`[data-month-content="${monthId}"]`);
+        
+        toggleContent(btn, content);
+      });
+    });
+  });
+</script>
