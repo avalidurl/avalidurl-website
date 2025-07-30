@@ -34,6 +34,47 @@ const allProducts = await getCollection('products', ({ data }) => {
   return true;
 }).catch(() => []);
 
+// Function to extract and highlight search term in content
+function extractExcerpt(text, searchQuery, maxLength = 150) {
+  if (!text || !searchQuery) return '';
+  
+  const query = searchQuery.toLowerCase().trim();
+  const lowerText = text.toLowerCase();
+  const queryIndex = lowerText.indexOf(query);
+  
+  if (queryIndex === -1) return '';
+  
+  // Find sentence boundaries around the match
+  let start = queryIndex;
+  let end = queryIndex + query.length;
+  
+  // Expand to find sentence start
+  while (start > 0 && text[start] !== '.' && text[start] !== '!' && text[start] !== '?') {
+    start--;
+  }
+  if (start > 0) start++; // Move past the punctuation
+  
+  // Expand to find sentence end
+  while (end < text.length && text[end] !== '.' && text[end] !== '!' && text[end] !== '?') {
+    end++;
+  }
+  if (end < text.length) end++; // Include the punctuation
+  
+  let excerpt = text.slice(start, end).trim();
+  
+  // If sentence is too long, truncate around the search term
+  if (excerpt.length > maxLength) {
+    const termStart = excerpt.toLowerCase().indexOf(query);
+    const before = Math.max(0, termStart - maxLength / 2);
+    const after = Math.min(excerpt.length, termStart + query.length + maxLength / 2);
+    excerpt = (before > 0 ? '...' : '') + excerpt.slice(before, after) + (after < excerpt.length ? '...' : '');
+  }
+  
+  // Highlight the search term (case-insensitive)
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  return excerpt.replace(regex, '<mark>$1</mark>');
+}
+
 // Search function for multiple content types
 function searchContent(posts, products, searchQuery) {
   if (!searchQuery || searchQuery.length < 2) {
@@ -50,6 +91,16 @@ function searchContent(posts, products, searchQuery) {
     const authorMatch = post.data.author?.toLowerCase().includes(query);
     
     return titleMatch || descriptionMatch || categoryMatch || authorMatch;
+  }).map(post => {
+    // Add excerpt to each matching post
+    let excerpt = '';
+    if (post.data.description?.toLowerCase().includes(query)) {
+      excerpt = extractExcerpt(post.data.description, query);
+    } else if (post.data.title.toLowerCase().includes(query)) {
+      excerpt = extractExcerpt(post.data.title, query);
+    }
+    
+    return { ...post, excerpt };
   }).sort((a, b) => {
     // Sort by relevance (title matches first, then by date)
     const aTitle = a.data.title.toLowerCase().includes(query);
@@ -69,6 +120,16 @@ function searchContent(posts, products, searchQuery) {
     const techMatch = product.data.tech?.some(tech => tech.toLowerCase().includes(query));
     
     return titleMatch || descriptionMatch || techMatch;
+  }).map(product => {
+    // Add excerpt to each matching product
+    let excerpt = '';
+    if (product.data.description?.toLowerCase().includes(query)) {
+      excerpt = extractExcerpt(product.data.description, query);
+    } else if (product.data.title.toLowerCase().includes(query)) {
+      excerpt = extractExcerpt(product.data.title, query);
+    }
+    
+    return { ...product, excerpt };
   }).sort((a, b) => {
     // Sort by relevance (title matches first, then by date)
     const aTitle = a.data.title.toLowerCase().includes(query);
@@ -135,7 +196,7 @@ const breadcrumbItems = [
             type="text" 
             name="q" 
             value={query}
-            placeholder="Search posts, topics, categories..." 
+            placeholder="⌘K" 
             class="search-input"
             autocomplete="off"
             required
@@ -176,8 +237,15 @@ const breadcrumbItems = [
                         <time class="article-date">
                           {(() => {
                             const date = parseIstanbulDate(post.data.publishDate);
+                            const year = date.getFullYear();
+                            const month = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+                            const monthLower = month.toLowerCase();
                             const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
-                            return formattedDate;
+                            return (
+                              <a href={`/archive/${year}/${monthLower}`} class="date-link" title={`See ${month} ${year}'s archive`}>
+                                {formattedDate}
+                              </a>
+                            );
                           })()}
                         </time>
                         <a href={`/blog/${post.slug}`} class="article-title">
@@ -191,8 +259,8 @@ const breadcrumbItems = [
                           </div>
                         )}
                       </div>
-                      {post.data.description && (
-                        <p class="article-excerpt">{post.data.description}</p>
+                      {post.excerpt && (
+                        <p class="article-excerpt" set:html={post.excerpt}></p>
                       )}
                     </article>
                   ))}
@@ -210,8 +278,15 @@ const breadcrumbItems = [
                         <time class="article-date">
                           {(() => {
                             const date = parseIstanbulDate(product.data.publishDate);
+                            const year = date.getFullYear();
+                            const month = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+                            const monthLower = month.toLowerCase();
                             const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
-                            return formattedDate;
+                            return (
+                              <a href={`/archive/${year}/${monthLower}`} class="date-link" title={`See ${month} ${year}'s archive`}>
+                                {formattedDate}
+                              </a>
+                            );
                           })()}
                         </time>
                         <a href={`/products/${product.slug}`} class="article-title">
@@ -219,8 +294,8 @@ const breadcrumbItems = [
                         </a>
                         <span class="product-badge">Product</span>
                       </div>
-                      {product.data.description && (
-                        <p class="article-excerpt">{product.data.description}</p>
+                      {product.excerpt && (
+                        <p class="article-excerpt" set:html={product.excerpt}></p>
                       )}
                     </article>
                   ))}
@@ -429,11 +504,21 @@ const breadcrumbItems = [
   
   .article-item {
     border-bottom: 1px solid var(--border-light);
-    padding-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem;
   }
   
   .article-item:last-child {
     border-bottom: none;
+  }
+
+  .article-item:hover {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: var(--border-medium);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
   .article-line {
@@ -449,6 +534,27 @@ const breadcrumbItems = [
     font-size: 0.75rem;
     font-weight: 500;
     min-width: 6rem;
+  }
+
+  .date-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .date-link:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .date-link:visited {
+    color: var(--text-muted);
+  }
+
+  .date-link:visited:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
   }
   
   .article-title {
@@ -496,11 +602,13 @@ const breadcrumbItems = [
   .category-link:visited {
     color: var(--blog-warm-white);
     background: var(--blog-sepia);
+    border-color: var(--blog-sepia);
   }
 
   .category-link:visited:hover {
     color: var(--blog-warm-white);
     background: var(--blog-bronze);
+    border-color: var(--blog-bronze);
   }
   
   
@@ -509,6 +617,16 @@ const breadcrumbItems = [
     font-size: 0.9rem;
     line-height: 1.6;
     margin-left: 7rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Search term highlighting */
+  .article-excerpt mark {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+    font-weight: 500;
   }
   
   /* No Results */

@@ -83,13 +83,11 @@ const recentPosts = allBlogPosts
               <a href={`/blog/${post.slug}`} class="article-title">
                 {post.data.title}
               </a>
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="article-tags">
-                  {post.data.tags.slice(0, 3).map((tag, index, array) => (
-                    <>
-                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="article-tag">{tag}</a>
-                                    </>
-                  ))}
+              {post.data.category && (
+                <div class="article-category">
+                  <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="category-link">
+                    {post.data.category}
+                  </a>
                 </div>
               )}
             </div>
@@ -295,15 +293,14 @@ const recentPosts = allBlogPosts
     border-bottom-color: var(--color-primary);
   }
 
-  .article-tags {
+  .article-category {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     align-items: baseline;
     flex-shrink: 0;
+    min-height: 1.4em;
   }
 
-  .article-tag {
+  .category-link {
     color: var(--blog-warm-white);
     background: var(--blog-sepia);
     font-size: 0.7rem;
@@ -318,10 +315,20 @@ const recentPosts = allBlogPosts
     border: 1px solid var(--blog-sepia);
   }
 
-  .article-tag:hover {
+  .category-link:hover {
     background: var(--blog-bronze);
     border-color: var(--blog-bronze);
     transform: translateY(-1px);
+  }
+
+  .category-link:visited {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
+  }
+
+  .category-link:visited:hover {
+    color: var(--blog-warm-white);
+    background: var(--blog-bronze);
   }
   
   .topics-footer {
@@ -369,7 +376,7 @@ const recentPosts = allBlogPosts
       width: 100%;
     }
 
-    .article-tags {
+    .article-category {
       width: 100%;
     }
   }
