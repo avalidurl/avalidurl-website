@@ -237,29 +237,119 @@
       this.hideSpinner();
     }
     
-    showSearchResults(query) {
+    async showSearchResults(query) {
       const results = document.getElementById('search-results');
-      if (results) {
+      if (!results) return;
+      
+      try {
+        // Search through blog posts and pages
+        const searchResults = await this.searchContent(query);
+        
+        if (searchResults.length === 0) {
+          results.innerHTML = `
+            <div class="search-results-content">
+              <div class="search-results-header">
+                <p class="search-help">No results found for "<strong>${query}</strong>"</p>
+                <p class="search-hint">Press <kbd>Enter</kbd> to search all content</p>
+              </div>
+            </div>
+          `;
+        } else {
+          const resultItems = searchResults.slice(0, 3).map(result => `
+            <div class="search-result-item" onclick="window.location.href='${result.url}'">
+              <div class="result-title">${result.title}</div>
+              <div class="result-excerpt">${result.excerpt}</div>
+            </div>
+          `).join('');
+          
+          results.innerHTML = `
+            <div class="search-results-content">
+              <div class="search-results-header">
+                <p class="search-help">Found ${searchResults.length} results for "<strong>${query}</strong>"</p>
+                <p class="search-hint">Press <kbd>Enter</kbd> to see all results</p>
+              </div>
+              <div class="search-preview-results">
+                ${resultItems}
+              </div>
+            </div>
+          `;
+        }
+      } catch (error) {
+        console.error('Search error:', error);
         results.innerHTML = `
           <div class="search-results-content">
             <div class="search-results-header">
-              <p class="search-help">Results for "<strong>${query}</strong>"</p>
-              <p class="search-hint">Press <kbd>Enter</kbd> to see all results</p>
-            </div>
-            <div class="search-preview-results">
-              <div class="search-result-item">
-                <div class="result-title">Sample result for "${query}"</div>
-                <div class="result-excerpt">This is a preview of search results. Press Enter to see full results.</div>
-              </div>
-              <div class="search-result-item">
-                <div class="result-title">Another result for "${query}"</div>
-                <div class="result-excerpt">More search results would appear here in a real implementation.</div>
-              </div>
+              <p class="search-help">Search temporarily unavailable</p>
+              <p class="search-hint">Press <kbd>Enter</kbd> to try full search</p>
             </div>
           </div>
         `;
       }
+      
       this.hideSpinner();
+    }
+    
+    async searchContent(query) {
+      const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 1);
+      const results = [];
+      
+      try {
+        // Fetch the search API endpoint that uses Astro content collections
+        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+        if (!response.ok) {
+          throw new Error('Search API unavailable');
+        }
+        
+        const data = await response.json();
+        
+        // Transform the results for the modal display
+        data.results.forEach(result => {
+          if (results.length < 10) { // Limit for modal
+            results.push({
+              title: result.title,
+              excerpt: result.excerpt || result.description || 'No description available',
+              url: result.url
+            });
+          }
+        });
+        
+      } catch (error) {
+        console.error('Failed to fetch search API:', error);
+        
+        // Fallback: simple URL-based search if API fails
+        try {
+          const response = await fetch('/sitemap-0.xml');
+          const text = await response.text();
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(text, 'text/xml');
+          const urls = Array.from(xmlDoc.querySelectorAll('url loc')).map(loc => loc.textContent);
+          
+          // Filter and match URLs
+          const contentUrls = urls.filter(url => 
+            url.includes('/blog/') || 
+            url.includes('/topics/') || 
+            url.includes('/interviews/')
+          ).slice(0, 5);
+          
+          for (const url of contentUrls) {
+            const slug = url.split('/').pop();
+            if (slug && searchTerms.some(term => 
+              slug.toLowerCase().includes(term) || 
+              url.toLowerCase().includes(term)
+            )) {
+              results.push({
+                title: slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+                excerpt: 'Content found in URL path',
+                url: url.replace(window.location.origin, '')
+              });
+            }
+          }
+        } catch (fallbackError) {
+          console.error('Fallback search also failed:', fallbackError);
+        }
+      }
+      
+      return results;
     }
     
     clearResults() {
