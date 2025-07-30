@@ -319,7 +319,7 @@ const breadcrumbItems = [
   
   .article-line {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 0.5rem;
@@ -336,24 +336,28 @@ const breadcrumbItems = [
     flex: 1;
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 0.95rem;
     transition: color 0.2s ease;
+    border-bottom: 1px dotted var(--text-muted);
   }
   
   .article-title:hover {
     color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
   }
   
   .article-category {
-    background: var(--blog-sepia);
-    color: var(--blog-warm-white);
-    padding: 0.2rem 0.6rem;
-    border-radius: 3px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
+    background: rgba(255, 140, 0, 0.3);
+    color: #cc7a00;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-weight: 500;
     font-size: 0.7rem;
+    border: 1px solid rgba(255, 140, 0, 0.5);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
   }
   
   .article-tags {
@@ -363,18 +367,24 @@ const breadcrumbItems = [
   }
   
   .article-tag {
-    background: var(--bg-tertiary);
-    color: var(--text-secondary);
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.75rem;
+    color: white;
+    background: #FF8C00;
+    font-size: 0.7rem;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    border: 1px solid #FF8C00;
   }
   
   .article-tag:hover {
-    background: var(--color-primary);
-    color: var(--text-inverse);
+    background: #FF4500;
+    border-color: #FF4500;
+    transform: translateY(-1px);
   }
   
   .article-excerpt {
