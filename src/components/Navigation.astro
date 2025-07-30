@@ -400,9 +400,14 @@ const currentPath = Astro.url.pathname;
         navToggle.classList.toggle('active');
       });
       
-      // Close menu when clicking on any navigation link
+      // Close menu when clicking on navigation links (but not search button)
       const allNavLinks = navLinks.querySelectorAll('a, button');
       allNavLinks.forEach(link => {
+        // Skip search toggle button to prevent interference
+        if (link.id === 'search-toggle') {
+          return;
+        }
+        
         link.addEventListener('click', function() {
           navLinks.classList.remove('active');
           navToggle.classList.remove('active');
