@@ -92,76 +92,134 @@ const dynamicOGImage = generateOGImageUrl();
     
     
     <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Gökhan Turhan",
-      "url": canonicalURL.toString(),
-      "sameAs": [
-        "https://x.com/0xgokhan",
-        "https://linkedin.com/in/goekhantuerhan",
-        "https://github.com/avalidurl",
-        "https://farcaster.xyz/gokhan.eth",
-        "https://bsky.app/profile/0xgokhan.bsky.social",
-        "https://gokhan.substack.com",
-        "https://medium.com/@0xgokhan",
-        "https://gokhan.mirror.xyz/",
-        "https://hey.xyz/u/gokhaneth",
-        "https://soundcloud.com/0xgokhan"
-      ],
-      "jobTitle": [
-        "Tech Executive & Digital Asset Strategist",
-        "Product Leader in DeFi & Blockchain Infrastructure", 
-        "Business Developer & Investment Professional",
-        "Creative Technologist & Art Market Researcher",
-        "Growth Leader in Blockchain & Digital Assets"
-      ],
-      "alternateName": ["0xgokhan", "gokhan.eth"],
-      "description": description,
-      "knowsAbout": [
-        "Blockchain Technology",
-        "DeFi Protocols", 
-        "Stablecoins",
-        "Tokenization",
-        "Digital Asset Markets",
-        "Deep Tech",
-        "Archives",
-        "Product Management",
-        "Investment Strategy",
-        "Art Markets",
-        "Technical Writing"
-      ],
-      "hasOccupation": [
-        {
-          "@type": "Occupation",
-          "name": "Technology Executive",
-          "occupationLocation": {
-            "@type": "Place",
-            "name": "Global"
+    <script type="application/ld+json" set:html={JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gökhan Turhan",
+        "url": canonicalURL.toString(),
+        "sameAs": [
+          "https://x.com/0xgokhan",
+          "https://linkedin.com/in/goekhantuerhan",
+          "https://github.com/avalidurl",
+          "https://farcaster.xyz/gokhan.eth",
+          "https://bsky.app/profile/0xgokhan.bsky.social",
+          "https://gokhan.substack.com",
+          "https://medium.com/@0xgokhan",
+          "https://gokhan.mirror.xyz/",
+          "https://hey.xyz/u/gokhaneth",
+          "https://soundcloud.com/0xgokhan"
+        ],
+        "jobTitle": [
+          "Tech Executive & Digital Asset Strategist",
+          "Product Leader in DeFi & Blockchain Infrastructure", 
+          "Business Developer & Investment Professional",
+          "Creative Technologist & Art Market Researcher",
+          "Growth Leader in Blockchain & Digital Assets"
+        ],
+        "alternateName": ["0xgokhan", "gokhan.eth"],
+        "description": description,
+        "knowsAbout": [
+          "Blockchain Technology",
+          "DeFi Protocols", 
+          "Stablecoins",
+          "Tokenization",
+          "Digital Asset Markets",
+          "Deep Tech",
+          "Archives",
+          "Product Management",
+          "Investment Strategy",
+          "Art Markets",
+          "Technical Writing"
+        ],
+        "hasOccupation": [
+          {
+            "@type": "Occupation",
+            "name": "Technology Executive",
+            "occupationLocation": {
+              "@type": "Place",
+              "name": "Global"
+            }
+          },
+          {
+            "@type": "Occupation", 
+            "name": "Digital Asset Strategist",
+            "occupationLocation": {
+              "@type": "Place",
+              "name": "Global"
+            }
+          },
+          {
+            "@type": "Occupation",
+            "name": "Conceptual Artist",
+            "occupationLocation": {
+              "@type": "Place",
+              "name": "Global"
+            }
           }
-        },
-        {
-          "@type": "Occupation", 
-          "name": "Digital Asset Strategist",
-          "occupationLocation": {
-            "@type": "Place",
-            "name": "Global"
-          }
-        },
-        {
-          "@type": "Occupation",
-          "name": "Conceptual Artist",
-          "occupationLocation": {
-            "@type": "Place",
-            "name": "Global"
-          }
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Independent Professional"
         }
-      ],
-      "worksFor": {
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Independent Professional"
+        "name": "Gökhan Turhan Professional Services",
+        "alternateName": ["0xgokhan", "gokhan.eth"],
+        "url": canonicalURL.toString(),
+        "founder": {
+          "@type": "Person",
+          "name": "Gökhan Turhan"
+        },
+        "description": "Independent professional services specializing in blockchain technology, digital assets, product development, and art market research",
+        "industry": [
+          "Blockchain Technology",
+          "Digital Asset Strategy",
+          "Product Development",
+          "Art Markets",
+          "Investment Advisory"
+        ],
+        "serviceArea": {
+          "@type": "Place",
+          "name": "Global"
+        },
+        "sameAs": [
+          "https://x.com/0xgokhan",
+          "https://linkedin.com/in/goekhantuerhan",
+          "https://github.com/avalidurl"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Gökhan Turhan",
+        "alternateName": "0xgokhan",
+        "url": canonicalURL.toString(),
+        "description": description,
+        "author": {
+          "@type": "Person",
+          "name": "Gökhan Turhan"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Gökhan Turhan"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": canonicalURL.toString() + "/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        },
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Gökhan Turhan"
+        }
       }
-    })} />
+    ])} />
     
     <!-- Safari compatibility fix -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />

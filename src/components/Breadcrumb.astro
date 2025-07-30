@@ -1,0 +1,103 @@
+---
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+const currentUrl = new URL(Astro.url.pathname, Astro.site || 'https://gokhanturhan.com');
+
+// Generate breadcrumb schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": new URL(item.url, Astro.site || 'https://gokhanturhan.com').toString()
+  }))
+};
+---
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    {items.map((item, index) => (
+      <li class="breadcrumb-item">
+        {index < items.length - 1 ? (
+          <a href={item.url} class="breadcrumb-link">{item.name}</a>
+        ) : (
+          <span class="breadcrumb-current" aria-current="page">{item.name}</span>
+        )}
+        {index < items.length - 1 && <span class="breadcrumb-separator" aria-hidden="true">›</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb {
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+  }
+  
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .breadcrumb-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .breadcrumb-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-current {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  .breadcrumb-separator {
+    color: var(--text-muted);
+    font-weight: 400;
+    user-select: none;
+  }
+  
+  @media (max-width: 640px) {
+    .breadcrumb {
+      font-size: 0.8rem;
+    }
+    
+    .breadcrumb-list {
+      gap: 0.25rem;
+    }
+    
+    .breadcrumb-item {
+      gap: 0.25rem;
+    }
+  }
+</style>

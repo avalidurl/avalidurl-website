@@ -78,9 +78,39 @@ const allProductsList = sortedProducts;
 // Show first 10 products initially, keep remaining for load more
 const initialProducts = allProductsList.slice(0, 10);
 const remainingProducts = allProductsList.slice(10);
+
+// Generate Product schema for all products
+const productSchemas = allProductsList.map(product => ({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": product.data.title,
+  "description": product.data.description,
+  "url": product.data.url,
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Gökhan Turhan",
+    "url": "https://gokhanturhan.com"
+  },
+  "datePublished": parseIstanbulDate(product.data.publishDate).toISOString(),
+  "keywords": product.data.tags?.join(", ") || "",
+  "programmingLanguage": product.data.tech || [],
+  "applicationSubCategory": product.data.tags?.[0] || "Finance",
+  "inLanguage": "en-US",
+  "isAccessibleForFree": true
+}));
 ---
 
 <Layout title="Products - Finance & Tech Tools" description="Explore a collection of financial technology tools, data visualization platforms, and blockchain applications designed to bridge finance, art, and technology.">
+  <!-- Product Schema for all products -->
+  <script type="application/ld+json" set:html={JSON.stringify(productSchemas)} />
   <main class="products-container">
     <header class="products-header">
       <h1>Products</h1>

@@ -11,6 +11,7 @@ import SoundCloudEmbed from '../../components/SoundCloudEmbed.astro';
 import BandcampEmbed from '../../components/BandcampEmbed.astro';
 import ImageEmbed from '../../components/ImageEmbed.astro';
 import SocialShare from '../../components/SocialShare.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
 export const prerender = true;
 
@@ -76,6 +77,21 @@ const formattedDate = parseIstanbulDate(post.data.publishDate).toLocaleDateStrin
 const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedDate).toLocaleDateString('en-CA', {
   timeZone: 'Europe/Istanbul'
 }) : null;
+
+// Calculate reading time (approximate)
+const content = await post.render();
+const wordCount = content.remarkPluginFrontmatter?.wordCount || 250; // fallback
+const readingTime = Math.ceil(wordCount / 250); // 250 words per minute
+
+// Create canonical URL for this post
+const canonicalURL = new URL(`/blog/${post.slug}`, Astro.site || 'https://gokhanturhan.com');
+
+// Breadcrumb items
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Journal', url: '/blog' },
+  { name: post.data.title, url: `/blog/${post.slug}` }
+];
 ---
 
 <Layout 
@@ -84,12 +100,54 @@ const updatedDate = post.data.updatedDate ? parseIstanbulDate(post.data.updatedD
   ogType="article"
   slug={post.slug}
 >
+  <!-- Article Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.data.title,
+    "description": post.data.description,
+    "url": canonicalURL.toString(),
+    "datePublished": parseIstanbulDate(post.data.publishDate).toISOString(),
+    "dateModified": updatedDate ? parseIstanbulDate(post.data.updatedDate).toISOString() : parseIstanbulDate(post.data.publishDate).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": post.data.author || "Gökhan Turhan",
+      "url": "https://gokhanturhan.com",
+      "sameAs": [
+        "https://x.com/0xgokhan",
+        "https://linkedin.com/in/goekhantuerhan"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Gökhan Turhan",
+      "url": "https://gokhanturhan.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalURL.toString()
+    },
+    "articleSection": post.data.category || "Blog",
+    "keywords": post.data.tags?.join(", ") || "",
+    "wordCount": wordCount,
+    "timeRequired": `PT${readingTime}M`,
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "genre": post.data.category || "Technology",
+    "about": post.data.tags?.map(tag => ({
+      "@type": "Thing",
+      "name": tag
+    })) || []
+  })} />
   <!-- Reading Progress Bar -->
   <div class="reading-progress">
     <div class="reading-progress-bar"></div>
   </div>
   
   <main class="blog-container">
+    <!-- Breadcrumb Navigation -->
+    <Breadcrumb items={breadcrumbItems} />
+    
     <!-- Table of Contents -->
     <aside class="table-of-contents">
       <div class="toc-content">
