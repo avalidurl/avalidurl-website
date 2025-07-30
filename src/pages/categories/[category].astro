@@ -5,15 +5,15 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
 export const prerender = true;
 
-const categories = [
-  'Finance & Markets',
-  'Crypto & Web3', 
-  'Art & Culture',
-  'Technology & Data',
-  'General'
-];
-
 export async function getStaticPaths() {
+  const categories = [
+    'Finance & Markets',
+    'Crypto & Web3', 
+    'Art & Culture',
+    'Technology & Data',
+    'General'
+  ];
+
   const paths = categories.map(category => ({
     params: { 
       category: category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')
