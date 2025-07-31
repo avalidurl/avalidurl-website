@@ -85,7 +85,7 @@ const recentPosts = allBlogPosts
               </a>
               {post.data.category && (
                 <div class="article-category">
-                  <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="category-link">
+                  <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="topics-page-recent-category-pill-unique">
                     {post.data.category}
                   </a>
                 </div>
@@ -306,7 +306,7 @@ const recentPosts = allBlogPosts
     min-height: 1.4em;
   }
 
-  .recent-section .article-category .category-link {
+  .topics-page-recent-category-pill-unique {
     color: var(--blog-warm-white) !important;
     background: var(--blog-sepia) !important;
     font-size: 0.7rem !important;
@@ -322,18 +322,18 @@ const recentPosts = allBlogPosts
     white-space: nowrap !important;
   }
 
-  .recent-section .article-category .category-link:hover {
+  .topics-page-recent-category-pill-unique:hover {
     background: var(--blog-bronze) !important;
     border-color: var(--blog-bronze) !important;
     transform: translateY(-1px) !important;
   }
 
-  .recent-section .article-category .category-link:visited {
+  .topics-page-recent-category-pill-unique:visited {
     color: var(--blog-warm-white) !important;
     background: var(--blog-sepia) !important;
   }
 
-  .recent-section .article-category .category-link:visited:hover {
+  .topics-page-recent-category-pill-unique:visited:hover {
     color: var(--blog-warm-white) !important;
     background: var(--blog-bronze) !important;
   }
