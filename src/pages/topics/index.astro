@@ -194,19 +194,25 @@ const recentPosts = allBlogPosts
   }
   
   .topic-link {
-    color: var(--text-primary);
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.4;
-    transition: color 0.2s ease;
-    border-bottom: 1px dotted var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: all 0.2s ease;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    border: 1px solid var(--blog-sepia);
   }
 
   .topic-link:hover {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
+    background: var(--blog-bronze);
+    border-color: var(--blog-bronze);
+    transform: translateY(-1px);
   }
   
   .recent-section {
