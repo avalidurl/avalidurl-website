@@ -2,13 +2,33 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+// Helper function to parse dates consistently in Istanbul timezone
+const parseIstanbulDate = (dateString) => {
+  // Handle non-string values
+  if (typeof dateString !== 'string') {
+    return new Date(dateString);
+  }
+  // If it's just a date (YYYY-MM-DD), append Istanbul timezone
+  if (dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return new Date(dateString + 'T00:00:00+03:00');
+  }
+  // For datetime strings, parse as-is but assume they're in Istanbul time
+  return new Date(dateString);
+};
+
 // Get all interview posts
 const interviewPosts = await getCollection('blog', ({ data }) => {
-  return !data.draft && 
-         new Date(data.publishDate) <= new Date() && 
+  if (data.draft) return false;
+  
+  // Allow posts with dates up to 1 day in the future (for timezone issues)
+  const publishDate = parseIstanbulDate(data.publishDate);
+  const now = new Date();
+  const oneDayFromNow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+  
+  return publishDate <= oneDayFromNow && 
          data.tags.some(tag => tag.toLowerCase() === 'interview');
 }).then(posts => 
-  posts.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+  posts.sort((a, b) => parseIstanbulDate(b.data.publishDate).getTime() - parseIstanbulDate(a.data.publishDate).getTime())
 );
 ---
 
@@ -17,276 +37,247 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
     <header class="blog-header">
       <h1>Interviews</h1>
       <div class="blog-nav">
-        <a href="/blog" class="topics-link">← Back to Journal</a>
+        <a href="/blog" class="nav-button">← Back to Journal</a>
       </div>
       <p class="blog-subtitle">
         Deep conversations exploring art, technology, finance, and culture with leading thinkers and creators.
       </p>
     </header>
-    
-    <section class="interviews-section">
-      {interviewPosts.length > 0 ? (
-        <div class="interviews-grid">
-          {interviewPosts.map((post, index) => (
-            <article class="interview-card" class:list={[index === 0 ? 'featured' : '']}>
-              <div class="interview-meta">
-                <span class="interview-category">{post.data.category}</span>
-                <time class="interview-date" datetime={post.data.publishDate.toISOString()}>
-                  {new Date(post.data.publishDate).toLocaleDateString('en-CA')}
-                </time>
-              </div>
-              
-              <h2 class="interview-title">
-                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-              </h2>
-              
-              <p class="interview-description">
-                {post.data.excerpt || post.data.description}
-              </p>
-              
-              <div class="interview-details">
-                <div class="interview-tags">
-                  {post.data.tags.filter(tag => tag.toLowerCase() !== 'interview').sort((a, b) => a.localeCompare(b)).slice(0, 3).map((tag, index, array) => (
-                    <>
-                      <a href={`/topics/${tag.toLowerCase().replace(/\s+/g, '-')}`} class="interview-tag">{tag}</a>
-                      {index < array.length - 1 && ' '}
-                    </>
-                  ))}
-                </div>
-                
-                {post.data.readingTime && (
-                  <span class="reading-time">{post.data.readingTime} min read</span>
-                )}
-              </div>
-              
-              <div class="interview-footer">
-                <span class="interview-author">By {post.data.author}</span>
-                <a href={`/blog/${post.slug}`} class="read-interview">
-                  Read Interview →
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      ) : (
-        <div class="no-interviews">
-          <div class="no-interviews-content">
-            <h2>No Interviews Yet</h2>
-            <p>Stay tuned for upcoming in-depth conversations with fascinating people from the worlds of art, technology, and finance.</p>
-            <a href="/blog" class="back-to-blog">Browse Journal →</a>
+
+    <div class="blog-layout">
+      <section class="blog-main">
+        {interviewPosts.length > 0 ? (
+          <>
+            <h2>All Interviews</h2>
+            <div class="posts-list">
+              {interviewPosts.map(post => (
+                <article class="post-item">
+                  <div class="post-line">
+                    <time class="post-date">
+                      {(() => {
+                        const date = parseIstanbulDate(post.data.publishDate);
+                        const year = date.getFullYear();
+                        const month = date.toLocaleDateString('en-US', { month: 'long', timeZone: 'Europe/Istanbul' });
+                        const monthLower = month.toLowerCase();
+                        const formattedDate = date.toLocaleDateString('en-CA', { timeZone: 'Europe/Istanbul' });
+                        return (
+                          <a href={`/archive/${year}/${monthLower}`} class="date-link" title={`See ${month} ${year}'s archive`}>
+                            {formattedDate}
+                          </a>
+                        );
+                      })()}
+                    </time>
+                    <a href={`/blog/${post.slug}`} class="post-title">
+                      {post.data.title}
+                    </a>
+                    {post.data.category && (
+                      <div class="post-category">
+                        <a href={`/categories/${post.data.category.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`} class="post-category-link">
+                          {post.data.category}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div class="no-interviews">
+            <div class="no-interviews-content">
+              <h2>No Interviews Yet</h2>
+              <p>Stay tuned for upcoming in-depth conversations with fascinating people from the worlds of art, technology, and finance.</p>
+              <a href="/blog" class="back-to-blog">Browse Journal →</a>
+            </div>
           </div>
-        </div>
-      )}
-    </section>
-    
-    <footer class="interviews-footer">
-      <div class="footer-actions">
-        <a href="/blog" class="back-to-blog">← Back to Journal</a>
-        <a href="/topics" class="all-topics">Browse All Topics →</a>
-      </div>
-    </footer>
+        )}
+      </section>
+    </div>
   </main>
 </Layout>
 
-<style>
-  .container {
-    max-width: 1000px;
+<style is:global>
+  .blog-container {
+    max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1rem;
-  }
-  
-  .page-header {
-    text-align: center;
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-light);
-    position: relative;
-  }
-  
-  .page-header::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 1px;
-    background: var(--text-secondary);
-  }
-  
-  .interview-badge {
-    background: var(--text-secondary);
-    color: var(--text-inverse);
-    padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-  }
-  
-  .page-header h1 {
-    font-size: 3rem;
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-  
-  .page-description {
-    color: var(--text-muted);
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  
-  .interviews-grid {
-    display: grid;
-    gap: 2.5rem;
-  }
-  
-  .interview-card {
-    background: var(--card-bg);
-    border: 2px solid var(--card-border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  
-  .interview-card:hover {
-    border-color: var(--border-medium);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px var(--card-shadow);
-  }
-  
-  .interview-card.featured {
-    border: 2px solid var(--card-border);
-    background: var(--card-bg);
-  }
-  
-  .interview-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-size: 0.875rem;
-  }
-  
-  .interview-category {
-    background: var(--color-secondary);
-    color: var(--text-inverse);
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-  }
-  
-  .interview-date {
-    color: var(--text-muted);
-    font-weight: 500;
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
-  }
-  
-  .interview-title {
-    margin: 0 0 1.5rem 0;
-    font-size: 1.75rem;
-    line-height: 1.3;
-    font-weight: 700;
-  }
-  
-  .interview-title a {
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .interview-title a:hover {
-    color: var(--text-secondary);
-  }
-  
-  .interview-description {
-    color: var(--text-secondary);
-    font-size: 1.125rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-  
-  .interview-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding: 1rem 0;
-    border-top: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
-  }
-  
-  .interview-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    align-items: center;
-  }
-  
-  .interview-tag {
-    color: var(--blog-sepia);
-    font-size: 0.75rem;
-    font-weight: 400;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .interview-tag:hover {
-    color: #FF4500;
+    min-height: calc(100vh - 70px);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   }
 
-  .interview-tag:not(:last-child)::after {
-    content: ", ";
-    color: var(--text-muted);
+  .blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 2rem;
   }
-  
-  .reading-time {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    font-style: italic;
-  }
-  
-  .interview-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .interview-author {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    font-style: italic;
-  }
-  
-  .read-interview {
-    background: var(--text-secondary);
-    color: var(--text-inverse);
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
+
+  .blog-header h1 {
+    font-size: 2rem;
     font-weight: 600;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
-    letter-spacing: 0.3px;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
   }
-  
-  .read-interview:hover {
-    background: var(--text-primary);
+
+  .blog-nav {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .nav-button {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
+    width: 180px;
+  }
+
+  .nav-button:hover {
+    background: var(--color-primary);
+    color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px var(--card-shadow);
+  }
+
+  .blog-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 0.5rem;
   }
   
+  .blog-layout {
+    margin-top: 2rem;
+  }
+  
+  .blog-main h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 0.75rem;
+  }
+  
+  .posts-list {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .post-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-line {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    transition: background-color 0.2s ease;
+  }
+
+  .post-line:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .post-date {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 80px;
+  }
+
+  .date-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .date-link:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .date-link:visited {
+    color: var(--text-muted);
+  }
+
+  .date-link:visited:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .post-title {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+    border-bottom: 1px dotted var(--text-muted);
+    flex: 1;
+    min-width: 0;
+  }
+
+  .post-title:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .post-category {
+    display: flex;
+    align-items: baseline;
+    flex-shrink: 0;
+    min-height: 1.4em;
+  }
+
+  .post-category-link {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--blog-sepia);
+  }
+
+  .post-category-link:hover {
+    background: var(--blog-bronze);
+    border-color: var(--blog-bronze);
+    transform: translateY(-1px);
+  }
+
+  .post-category-link:visited {
+    color: var(--blog-warm-white);
+    background: var(--blog-sepia);
+  }
+
+  .post-category-link:visited:hover {
+    color: var(--blog-warm-white);
+    background: var(--blog-bronze);
+  }
+
   .no-interviews {
     text-align: center;
     padding: 4rem 2rem;
@@ -308,69 +299,80 @@ const interviewPosts = await getCollection('blog', ({ data }) => {
     margin-right: auto;
   }
   
-  .interviews-footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-light);
-  }
-  
-  .footer-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-  
-  .back-to-blog,
-  .all-topics {
-    color: var(--text-secondary);
-    font-weight: 500;
+  .back-to-blog {
+    color: var(--color-primary);
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 6px;
   }
-  
-  .back-to-blog:hover,
-  .all-topics:hover {
-    color: var(--text-primary);
+
+  .back-to-blog:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
   }
-  
-  /* Interview info section removed */
-  
+
   @media (max-width: 768px) {
-    .page-header h1 {
-      font-size: 2.5rem;
+    .blog-container {
+      padding: 1.5rem 1rem;
     }
     
-    .interview-card {
-      padding: 2rem 1.5rem;
+    .blog-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .post-line {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      padding: 0.4rem 0;
+    }
+
+    .post-date {
+      font-size: 0.7rem;
+      min-width: auto;
+    }
+
+    .post-title {
+      border-bottom: none;
+      width: 100%;
+    }
+
+    .post-category {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .blog-container {
+      padding: 1rem 0.75rem;
     }
     
-    .interview-title {
+    .blog-header h1 {
       font-size: 1.5rem;
     }
-    
-    .interview-details {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
+
+    .post-line {
+      padding: 0.75rem;
     }
-    
-    .interview-footer {
+
+    .blog-nav {
       flex-direction: column;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    
-    .footer-actions {
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-    }
-    
-    .interview-meta {
-      flex-direction: column;
-      align-items: flex-start;
       gap: 0.5rem;
+    }
+
+    .nav-button {
+      text-align: center;
+      justify-content: center;
+      width: 100%;
     }
   }
 </style>
