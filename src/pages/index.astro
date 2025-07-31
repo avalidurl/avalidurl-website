@@ -129,8 +129,8 @@ const products = allProducts
       }
 
       .article-category {
-        color: var(--text-inverse);
-        background: var(--color-primary);
+        color: var(--blog-warm-white);
+        background: var(--blog-sepia);
         font-size: 0.75rem;
         font-weight: 500;
         text-decoration: none;
@@ -140,13 +140,23 @@ const products = allProducts
         align-items: center;
         padding: 0.25rem 0.6rem;
         border-radius: 12px;
-        border: 1px solid var(--color-primary);
+        border: 1px solid var(--blog-sepia);
       }
 
       .article-category:hover {
-        background: var(--color-primary-hover);
-        border-color: var(--color-primary-hover);
+        background: var(--blog-bronze);
+        border-color: var(--blog-bronze);
         transform: translateY(-1px);
+      }
+
+      .article-category:visited {
+        color: var(--blog-warm-white);
+        background: var(--blog-sepia);
+      }
+
+      .article-category:visited:hover {
+        color: var(--blog-warm-white);
+        background: var(--blog-bronze);
       }
       
       .section-footer {
