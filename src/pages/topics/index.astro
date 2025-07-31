@@ -194,11 +194,11 @@ const recentPosts = allBlogPosts
   }
   
   .topic-link {
-    color: var(--blog-warm-white);
-    background: var(--blog-sepia);
+    color: var(--text-primary);
+    background: transparent;
     text-decoration: none;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.2;
     transition: all 0.2s ease;
     white-space: nowrap;
@@ -206,12 +206,12 @@ const recentPosts = allBlogPosts
     align-items: center;
     padding: 0.4rem 0.8rem;
     border-radius: 50px;
-    border: 1px solid var(--blog-sepia);
+    border: 1px dotted var(--text-muted);
   }
 
   .topic-link:hover {
-    background: var(--blog-bronze);
-    border-color: var(--blog-bronze);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
     transform: translateY(-1px);
   }
   

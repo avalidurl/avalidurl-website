@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
+import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 
 // Use environment variable or fallback to production domain
@@ -21,6 +22,7 @@ export default defineConfig({
     }), 
     react(), 
     markdoc(),
+    sitemap(),
   ],
   compressHTML: true,
   build: {

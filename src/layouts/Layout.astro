@@ -243,6 +243,11 @@ const dynamicOGImage = generateOGImageUrl();
       <div class="footer-content">
         <div class="footer-main">
           <span>Gökhan Turhan | <a href="https://gokhanturhan.com" class="footer-link">gokhanturhan.com</a> © 2025</span>
+          <div class="footer-links">
+            <a href="/privacy" class="footer-link">Privacy</a>
+            <span class="footer-separator">•</span>
+            <a href="/sitemap.xml" class="footer-link">Sitemap</a>
+          </div>
           <a href="https://github.com/avalidurl/avalidurl-website" target="_blank" rel="noopener noreferrer" aria-label="MIT License" class="license-link">
             <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License" class="license-badge" />
           </a>
@@ -798,6 +803,18 @@ const dynamicOGImage = generateOGImageUrl();
 
   .footer-link:hover {
     color: var(--color-primary);
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-separator {
+    color: var(--text-muted);
+    font-weight: normal;
   }
 
   .license-link {

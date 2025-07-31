@@ -190,9 +190,9 @@ import Layout from '../layouts/Layout.astro';
   /* Dark mode support */
   @media (prefers-color-scheme: dark) {
     .link-pill {
-      background: #1a1a1a;
-      color: #e0e0e0;
-      border-color: #666;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border-color: var(--border-medium);
     }
     
     .link-pill:hover {
@@ -202,15 +202,15 @@ import Layout from '../layouts/Layout.astro';
     }
     
     .link-pill.featured {
-      background: #2a2a2a;
-      border-color: #4fa8ff;
-      color: #4fa8ff;
+      background: var(--bg-tertiary);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
     }
     
     .link-pill.featured:hover {
-      background: #4fa8ff;
+      background: var(--color-primary);
       color: white;
-      border-color: #4fa8ff;
+      border-color: var(--color-primary);
     }
   }
   
