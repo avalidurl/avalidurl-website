@@ -49,7 +49,7 @@ export const GET: APIRoute = async ({ request, url }) => {
         title: 'Home',
         url: '/',
         description: 'Personal website and digital journal of Gökhan Turhan',
-        content: 'Gökhan Turhan finance art technology crypto web3 blockchain data analysis sabermetrics digital journal personal website intersection markets creativity code',
+        content: 'Gökhan Turhan finance art technology crypto web3 blockchain data analysis sabermetrics digital journal personal website intersection markets creativity code investment stablecoins rwa tokenization cryptography agi solopreneur researcher conceptual artist fintech deep tech competitive governance t-shaped generalist',
         type: 'page'
       },
       {
