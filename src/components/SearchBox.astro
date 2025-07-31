@@ -303,66 +303,87 @@
       const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 1);
       const results = [];
       
-      try {
-        // Fetch the search API endpoint that uses Astro content collections
-        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
-        if (!response.ok) {
-          throw new Error('Search API unavailable');
+      // Simple client-side search using hardcoded content data
+      const searchableContent = [
+        {
+          title: 'NVIDIA vs Total Crypto Market Cap Dashboard',
+          excerpt: 'Comparing NVIDIA market cap with total cryptocurrency market capitalization',
+          url: '/blog/nvidia-vs-total-crypto-market-cap-dashboard',
+          type: 'blog',
+          category: 'Finance & Markets',
+          keywords: 'nvidia crypto market cap dashboard finance analysis'
+        },
+        {
+          title: 'SP100 Capex Dashboard',
+          excerpt: 'Capital expenditure analysis of S&P 100 companies',
+          url: '/blog/sp100-capex-dashboard',
+          type: 'blog', 
+          category: 'Finance & Markets',
+          keywords: 'sp100 capex dashboard finance capital expenditure analysis'
+        },
+        {
+          title: 'Onchain Marketing does suck big time',
+          excerpt: 'Critical analysis of onchain marketing strategies and their effectiveness',
+          url: '/blog/onchain-marketing-does-suck-big-time',
+          type: 'blog',
+          category: 'Crypto & Web3',
+          keywords: 'onchain marketing crypto web3 blockchain criticism analysis'
+        },
+        {
+          title: 'Home',
+          excerpt: 'Personal website and digital journal of Gökhan Turhan',
+          url: '/',
+          type: 'page',
+          keywords: 'home personal website digital journal gokhan turhan finance art technology crypto'
+        },
+        {
+          title: 'Topics',
+          excerpt: 'Browse articles by topic and find content that interests you most',
+          url: '/topics',
+          type: 'page',
+          keywords: 'topics browse articles categories tags finance art technology crypto culture'
+        },
+        {
+          title: 'Categories',
+          excerpt: 'Browse content organized by topic areas',
+          url: '/categories',
+          type: 'page',
+          keywords: 'categories browse content topic areas finance markets crypto web3 art culture technology'
+        },
+        {
+          title: 'Archive',
+          excerpt: 'Complete archive of all journal posts organized by year and month',
+          url: '/archive',
+          type: 'page',
+          keywords: 'archive journal posts chronological date year month history'
+        },
+        {
+          title: 'Links',
+          excerpt: 'Social media profiles and external links',
+          url: '/links',
+          type: 'page',
+          keywords: 'social media links profiles twitter linkedin github soundcloud'
         }
+      ];
+      
+      // Search through content
+      for (const item of searchableContent) {
+        const searchIn = `${item.title} ${item.excerpt} ${item.keywords} ${item.category || ''}`.toLowerCase();
         
-        const data = await response.json();
-        
-        // Transform the results for the modal display
-        data.results.forEach(result => {
-          if (results.length < 6) { // Limit for modal
-            // Get type display name and color
-            const typeInfo = this.getTypeInfo(result.type);
-            
-            results.push({
-              title: result.title,
-              excerpt: result.excerpt || result.description || 'No description available',
-              url: result.url,
-              type: result.type,
-              typeDisplay: typeInfo.display,
-              typeColor: typeInfo.color,
-              category: result.category
-            });
-          }
-        });
-        
-      } catch (error) {
-        console.error('Failed to fetch search API:', error);
-        
-        // Fallback: simple URL-based search if API fails
-        try {
-          const response = await fetch('/sitemap-0.xml');
-          const text = await response.text();
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(text, 'text/xml');
-          const urls = Array.from(xmlDoc.querySelectorAll('url loc')).map(loc => loc.textContent);
+        if (searchTerms.some(term => searchIn.includes(term))) {
+          const typeInfo = this.getTypeInfo(item.type);
           
-          // Filter and match URLs
-          const contentUrls = urls.filter(url => 
-            url.includes('/blog/') || 
-            url.includes('/topics/') || 
-            url.includes('/interviews/')
-          ).slice(0, 5);
+          results.push({
+            title: item.title,
+            excerpt: item.excerpt,
+            url: item.url,
+            type: item.type,
+            typeDisplay: typeInfo.display,
+            typeColor: typeInfo.color,
+            category: item.category
+          });
           
-          for (const url of contentUrls) {
-            const slug = url.split('/').pop();
-            if (slug && searchTerms.some(term => 
-              slug.toLowerCase().includes(term) || 
-              url.toLowerCase().includes(term)
-            )) {
-              results.push({
-                title: slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-                excerpt: 'Content found in URL path',
-                url: url.replace(window.location.origin, '')
-              });
-            }
-          }
-        } catch (fallbackError) {
-          console.error('Fallback search also failed:', fallbackError);
+          if (results.length >= 6) break;
         }
       }
       
