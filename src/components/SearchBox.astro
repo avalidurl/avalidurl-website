@@ -255,11 +255,14 @@
             </div>
           `;
         } else {
-          const resultItems = searchResults.slice(0, 3).map(result => `
+          const resultItems = searchResults.slice(0, 4).map(result => `
             <div class="search-result-card" onclick="window.location.href='${result.url}'" role="button" tabindex="0">
               <div class="result-header">
                 <div class="result-title">${result.title}</div>
-                <div class="result-type">${result.type || 'blog'}</div>
+                <div class="result-badges">
+                  <div class="result-type" style="background: ${result.typeColor}">${result.typeDisplay}</div>
+                  ${result.category ? `<div class="result-category">${result.category}</div>` : ''}
+                </div>
               </div>
               <div class="result-excerpt">${result.excerpt}</div>
               <div class="result-footer">
@@ -311,11 +314,18 @@
         
         // Transform the results for the modal display
         data.results.forEach(result => {
-          if (results.length < 10) { // Limit for modal
+          if (results.length < 6) { // Limit for modal
+            // Get type display name and color
+            const typeInfo = this.getTypeInfo(result.type);
+            
             results.push({
               title: result.title,
               excerpt: result.excerpt || result.description || 'No description available',
-              url: result.url
+              url: result.url,
+              type: result.type,
+              typeDisplay: typeInfo.display,
+              typeColor: typeInfo.color,
+              category: result.category
             });
           }
         });
@@ -357,6 +367,15 @@
       }
       
       return results;
+    }
+    
+    getTypeInfo(type) {
+      const typeMap = {
+        blog: { display: 'Blog Post', color: 'var(--blog-sepia)' },
+        product: { display: 'Product', color: 'var(--color-secondary)' },
+        page: { display: 'Page', color: 'var(--color-primary)' }
+      };
+      return typeMap[type] || { display: 'Content', color: 'var(--text-muted)' };
     }
     
     clearResults() {
@@ -713,7 +732,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     gap: 0.75rem;
   }
   
@@ -723,18 +742,36 @@
     font-size: 0.95rem;
     line-height: 1.3;
     flex: 1;
+    min-width: 0;
+  }
+  
+  .result-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    align-items: center;
+    flex-wrap: wrap;
   }
   
   .result-type {
-    background: var(--color-primary);
     color: white;
     font-size: 0.7rem;
     font-weight: 500;
     padding: 0.2rem 0.5rem;
-    border-radius: 20px;
+    border-radius: 12px;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    flex-shrink: 0;
+    line-height: 1.2;
+  }
+  
+  .result-category {
+    background: var(--blog-sepia);
+    color: var(--blog-warm-white);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    line-height: 1.2;
   }
   
   .result-excerpt {
@@ -746,6 +783,14 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  
+  .result-excerpt mark {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+    font-weight: 500;
   }
   
   .result-footer {
@@ -834,6 +879,33 @@
     
     .keyboard-shortcuts h4 {
       font-size: 0.85rem;
+    }
+    
+    /* Enhanced search result cards mobile styles */
+    .result-header {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+    
+    .result-badges {
+      gap: 0.25rem;
+    }
+    
+    .result-excerpt {
+      -webkit-line-clamp: 3;
+      font-size: 0.8rem;
+    }
+    
+    .result-footer {
+      flex-direction: column;
+      gap: 0.25rem;
+      align-items: flex-start;
+    }
+    
+    .result-url {
+      font-size: 0.7rem;
     }
   }
 </style>
