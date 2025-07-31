@@ -142,6 +142,13 @@ import Layout from '../layouts/Layout.astro';
     white-space: nowrap;
     display: inline-block;
   }
+
+  /* Dark mode override for link pills */
+  html[data-theme="dark"] .link-pill {
+    background: #1A1A1A !important;
+    color: #FFFFFF !important;
+    border-color: #555555 !important;
+  }
   
   .link-pill:hover {
     background: #ff8c00;
@@ -158,11 +165,25 @@ import Layout from '../layouts/Layout.astro';
     color: #007bff;
     font-weight: 600;
   }
+
+  /* Dark mode override for featured link */
+  html[data-theme="dark"] .link-pill.featured {
+    background: #2A2A2A !important;
+    border-color: #FF8C00 !important;
+    color: #FF8C00 !important;
+  }
   
   .link-pill.featured:hover {
     background: #007bff;
     color: white;
     border-color: #007bff;
+  }
+
+  /* Dark mode override for featured link hover */
+  html[data-theme="dark"] .link-pill.featured:hover {
+    background: #FF8C00 !important;
+    color: white !important;
+    border-color: #FF8C00 !important;
   }
 
   /* Navigation button */
@@ -187,30 +208,7 @@ import Layout from '../layouts/Layout.astro';
     transform: translateY(-1px);
   }
   
-  /* Dark mode support */
-  [data-theme="dark"] .link-pill {
-    background: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-    border-color: var(--border-medium) !important;
-  }
-  
-  [data-theme="dark"] .link-pill:hover {
-    background: #ff8c00 !important;
-    color: white !important;
-    border-color: #ff8c00 !important;
-  }
-  
-  [data-theme="dark"] .link-pill.featured {
-    background: var(--bg-tertiary) !important;
-    border-color: var(--color-primary) !important;
-    color: var(--color-primary) !important;
-  }
-  
-  [data-theme="dark"] .link-pill.featured:hover {
-    background: var(--color-primary) !important;
-    color: white !important;
-    border-color: var(--color-primary) !important;
-  }
+
   
   /* Mobile responsive */
   @media (max-width: 768px) {
