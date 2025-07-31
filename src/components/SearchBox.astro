@@ -185,11 +185,21 @@
       
       this.showSpinner();
       
-      // Simulate search delay
-      await new Promise(resolve => setTimeout(resolve, 300));
-      
-      // Show real-time search results instead of redirecting
-      this.showSearchResults(query);
+      try {
+        // Use the actual search API for real-time results
+        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+        
+        if (data.results) {
+          this.showApiResults(query, data.results, data.total || data.results.length);
+        } else {
+          this.showSearchResults(query);
+        }
+      } catch (error) {
+        console.error('Search API error:', error);
+        // Fallback to client-side search
+        this.showSearchResults(query);
+      }
     }
     
     showSpinner() {
@@ -237,6 +247,56 @@
       this.hideSpinner();
     }
     
+    showApiResults(query, results, total) {
+      const resultsElement = document.getElementById('search-results');
+      if (!resultsElement) return;
+      
+      if (results.length === 0) {
+        resultsElement.innerHTML = `
+          <div class="search-results-content">
+            <div class="search-results-header">
+              <p class="search-help">No results found for "<strong>${query}</strong>"</p>
+              <p class="search-hint">Press <kbd>Enter</kbd> to search all content</p>
+            </div>
+          </div>
+        `;
+      } else {
+        const resultItems = results.slice(0, 6).map(result => {
+          const typeInfo = this.getTypeInfo(result.type);
+          return `
+            <div class="search-result-card" onclick="window.location.href='${result.url}'" role="button" tabindex="0">
+              <div class="result-header">
+                <div class="result-title">${result.title}</div>
+                <div class="result-badges">
+                  <div class="result-type" style="background: ${typeInfo.color}">${typeInfo.display}</div>
+                  ${result.category ? `<div class="result-category">${result.category}</div>` : ''}
+                </div>
+              </div>
+              <div class="result-excerpt">${result.excerpt || result.description || ''}</div>
+              <div class="result-footer">
+                <span class="result-url">${result.url}</span>
+                <span class="result-arrow">→</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+        
+        resultsElement.innerHTML = `
+          <div class="search-results-content">
+            <div class="search-results-header">
+              <p class="search-help">Found ${total} results for "<strong>${query}</strong>"</p>
+              <p class="search-hint">Press <kbd>Enter</kbd> to see all results</p>
+            </div>
+            <div class="search-preview-results">
+              ${resultItems}
+            </div>
+          </div>
+        `;
+      }
+      
+      this.hideSpinner();
+    }
+
     async showSearchResults(query) {
       const results = document.getElementById('search-results');
       if (!results) return;

@@ -147,32 +147,7 @@ const dynamicOGImage = generateOGImageUrl();
           "Art Markets",
           "Technical Writing"
         ],
-        "hasOccupation": [
-          {
-            "@type": "Occupation",
-            "name": "Technology Executive",
-            "occupationLocation": {
-              "@type": "Place",
-              "name": "Global"
-            }
-          },
-          {
-            "@type": "Occupation", 
-            "name": "Digital Asset Strategist",
-            "occupationLocation": {
-              "@type": "Place",
-              "name": "Global"
-            }
-          },
-          {
-            "@type": "Occupation",
-            "name": "Conceptual Artist",
-            "occupationLocation": {
-              "@type": "Place",
-              "name": "Global"
-            }
-          }
-        ],
+
         "worksFor": {
           "@type": "Organization",
           "name": "Independent Professional"
@@ -189,10 +164,10 @@ const dynamicOGImage = generateOGImageUrl();
           "name": "Gökhan Turhan"
         },
         "description": "Independent professional services specializing in blockchain technology, digital assets, product development, and art market research",
-        "industry": [
-          "Blockchain Technology",
+        "industry": "Blockchain Technology",
+        "additionalType": [
           "Digital Asset Strategy",
-          "Product Development",
+          "Product Development", 
           "Art Markets",
           "Investment Advisory"
         ],
@@ -225,7 +200,7 @@ const dynamicOGImage = generateOGImageUrl();
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": canonicalURL.toString() + "/search?q={search_term_string}"
+            "urlTemplate": canonicalURL.toString().replace(/\/$/, '') + "/search?q={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         },
