@@ -1,9 +1,6 @@
 
-# API routes for Netlify functions
-/.netlify/functions/* /.netlify/functions/:splat 200
-
 # Redirect trailing slashes
 /*/ /:splat 301!
 
-# Default fallback
-/* /index.html 404
+# SPA fallback for client-side routing
+/* /index.html 200

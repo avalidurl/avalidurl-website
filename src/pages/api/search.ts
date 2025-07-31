@@ -1,7 +1,17 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { createSearchRateLimiter, getClientIP, createRateLimitResponse } from '../../utils/rateLimit';
 
-export const GET: APIRoute = async ({ url }) => {
+export const GET: APIRoute = async ({ request, url }) => {
+  // Rate limiting
+  const rateLimiter = createSearchRateLimiter();
+  const clientIP = getClientIP(request);
+  const rateLimitResult = await rateLimiter.checkRateLimit(clientIP);
+  
+  if (!rateLimitResult.allowed) {
+    return createRateLimitResponse(rateLimitResult);
+  }
+
   const query = url.searchParams.get('q');
   
   if (!query || query.trim().length < 2) {
@@ -180,7 +190,12 @@ export const GET: APIRoute = async ({ url }) => {
       total: results.length 
     }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }
+      headers: { 
+        'Content-Type': 'application/json',
+        'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+        'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+        'X-RateLimit-Reset': rateLimitResult.resetTime.toString()
+      }
     });
 
   } catch (error) {

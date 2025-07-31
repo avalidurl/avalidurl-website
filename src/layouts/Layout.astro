@@ -80,6 +80,12 @@ const dynamicOGImage = generateOGImageUrl();
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
     
+    <!-- Resource hints for better performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://challenges.cloudflare.com">
+    <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3J88MHYTL"></script>
     <script>

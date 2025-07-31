@@ -1,7 +1,16 @@
 import type { APIRoute } from 'astro';
 import { env } from '../../utils/env';
+import { createTurnstileRateLimiter, getClientIP, createRateLimitResponse } from '../../utils/rateLimit';
 
 export const POST: APIRoute = async ({ request }) => {
+  // Rate limiting
+  const rateLimiter = createTurnstileRateLimiter();
+  const clientIP = getClientIP(request);
+  const rateLimitResult = await rateLimiter.checkRateLimit(clientIP);
+  
+  if (!rateLimitResult.allowed) {
+    return createRateLimitResponse(rateLimitResult);
+  }
   try {
     const { token } = await request.json();
     

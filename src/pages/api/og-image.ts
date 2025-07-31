@@ -1,7 +1,16 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { createGeneralRateLimiter, getClientIP, createRateLimitResponse } from '../../utils/rateLimit';
 
-export const GET: APIRoute = async ({ url }) => {
+export const GET: APIRoute = async ({ request, url }) => {
+  // Rate limiting
+  const rateLimiter = createGeneralRateLimiter();
+  const clientIP = getClientIP(request);
+  const rateLimitResult = await rateLimiter.checkRateLimit(clientIP);
+  
+  if (!rateLimitResult.allowed) {
+    return createRateLimitResponse(rateLimitResult);
+  }
   const searchParams = url.searchParams;
   const title = searchParams.get('title') || 'Gökhan Turhan';
   const description = searchParams.get('description') || 'T-shaped generalist solopreneur, researcher, and conceptual artist operating across fintech, deep tech, competitive governance, art markets, and investment strategies';
