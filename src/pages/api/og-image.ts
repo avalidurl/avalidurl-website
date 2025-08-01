@@ -113,6 +113,135 @@ export const GET: APIRoute = async ({ request, url }) => {
 
     const titleLines = wrapText(truncatedTitle, 35);
     const descLines = wrapText(truncatedDesc, 60);
+    
+    // Special case for niche digital corners post
+    const isNicheDigitalCorners = slug === 'obscure-digital-corners';
+
+    if (isNicheDigitalCorners) {
+      // Special pelican monster truck design for this post
+      return `
+        <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sky gradient background -->
+          <defs>
+            <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#B0E0E6;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#skyGrad)"/>
+          
+          <!-- Ground -->
+          <rect y="500" width="100%" height="130" fill="#8B7355"/>
+          
+          <!-- Pelican Monster Truck (scaled and positioned for social card) -->
+          <g transform="translate(700, 200) scale(0.8)">
+            <!-- Monster truck body -->
+            <rect x="0" y="80" width="240" height="80" fill="#FF0000" rx="8"/>
+            <rect x="-15" y="95" width="270" height="48" fill="#CC0000" rx="4"/>
+            
+            <!-- Truck cab -->
+            <rect x="144" y="35" width="96" height="64" fill="#FF0000" rx="8"/>
+            <!-- Windshield -->
+            <rect x="152" y="43" width="80" height="40" fill="#4A90E2" opacity="0.7"/>
+            
+            <!-- Monster truck details -->
+            <rect x="8" y="88" width="24" height="16" fill="#FFD700"/>
+            <rect x="40" y="88" width="24" height="16" fill="#FFD700"/>
+            <rect x="72" y="88" width="24" height="16" fill="#FFD700"/>
+            
+            <!-- Suspension/lift -->
+            <rect x="16" y="144" width="24" height="64" fill="#333333"/>
+            <rect x="64" y="144" width="24" height="64" fill="#333333"/>
+            <rect x="160" y="144" width="24" height="64" fill="#333333"/>
+            <rect x="208" y="144" width="24" height="64" fill="#333333"/>
+            
+            <!-- Giant wheels -->
+            <circle cx="40" cy="220" r="56" fill="#1C1C1C"/>
+            <circle cx="40" cy="220" r="40" fill="#333333"/>
+            <circle cx="40" cy="220" r="16" fill="#666666"/>
+            
+            <circle cx="184" cy="220" r="56" fill="#1C1C1C"/>
+            <circle cx="184" cy="220" r="40" fill="#333333"/>
+            <circle cx="184" cy="220" r="16" fill="#666666"/>
+            
+            <!-- Pelican body -->
+            <ellipse cx="176" cy="0" rx="48" ry="64" fill="#FFFFFF"/>
+            <ellipse cx="176" cy="16" rx="32" ry="40" fill="#F5F5F5"/>
+            
+            <!-- Pelican head -->
+            <circle cx="176" cy="-48" r="28" fill="#FFFFFF"/>
+            
+            <!-- Pelican beak -->
+            <path d="M148 -48 Q128 -44 124 -32 Q128 -20 148 -24 Z" fill="#FFA500"/>
+            <path d="M148 -32 Q136 -28 132 -20 Q136 -12 148 -16 Z" fill="#FF8C00"/>
+            
+            <!-- Pelican eye -->
+            <circle cx="160 -52" r="6" fill="#000000"/>
+            <circle cx="162 -54" r="2" fill="#FFFFFF"/>
+            
+            <!-- Pelican wings on steering wheel -->
+            <ellipse cx="152" cy="56" rx="20" ry="48" fill="#FFFFFF" transform="rotate(-25 152 56)"/>
+            <ellipse cx="200" cy="56" rx="20" ry="48" fill="#FFFFFF" transform="rotate(25 200 56)"/>
+            
+            <!-- Steering wheel -->
+            <circle cx="176" cy="66" r="20" fill="none" stroke="#333333" stroke-width="6"/>
+            
+            <!-- Racing number -->
+            <circle cx="120" cy="104" r="24" fill="#FFFFFF"/>
+            <text x="120" y="112" text-anchor="middle" font-family="Arial Black" font-size="28" fill="#000000">1</text>
+            
+            <!-- Flame decals -->
+            <path d="M0 124 Q8 108 16 124 Q24 108 32 124 Q40 108 48 124 L48 140 L0 140 Z" fill="#FF6600" opacity="0.8"/>
+          </g>
+          
+          <!-- Title with custom styling -->
+          <rect x="50" y="50" width="600" height="400" fill="rgba(255,255,255,0.95)" rx="20"/>
+          
+          <!-- Header -->
+          <text x="80" y="90" fill="#333333" style="${baseStyles} font-size: 20px; font-weight: 600;">
+            GÖKHAN TURHAN
+          </text>
+          
+          <!-- Main Title -->
+          <text x="80" y="140" fill="#000000" style="${baseStyles} font-size: 32px; font-weight: 700;">
+            Obscure Digital Corners:
+          </text>
+          <text x="80" y="180" fill="#000000" style="${baseStyles} font-size: 32px; font-weight: 700;">
+            Underground Tech Communities
+          </text>
+          
+          <!-- Description -->
+          <text x="80" y="220" fill="#444444" style="${baseStyles} font-size: 18px;">
+            A complete guide to alternative internet protocols,
+          </text>
+          <text x="80" y="245" fill="#444444" style="${baseStyles} font-size: 18px;">
+            hidden programming communities, and technical archives
+          </text>
+          <text x="80" y="270" fill="#444444" style="${baseStyles} font-size: 18px;">
+            that prioritize substance over scale.
+          </text>
+          
+          <!-- Features -->
+          <text x="80" y="320" fill="#666666" style="${baseStyles} font-size: 16px;">
+            ✓ Gopher, Gemini & Alternative Protocols
+          </text>
+          <text x="80" y="345" fill="#666666" style="${baseStyles} font-size: 16px;">
+            ✓ Amateur Radio & SDR Resources  
+          </text>
+          <text x="80" y="370" fill="#666666" style="${baseStyles} font-size: 16px;">
+            ✓ Math Communities & Archives
+          </text>
+          <text x="80" y="395" fill="#666666" style="${baseStyles} font-size: 16px;">
+            ✓ Secret Handshake Communities
+          </text>
+          
+          <!-- CTA -->
+          <text x="80" y="430" fill="#FF8C00" style="${baseStyles} font-size: 18px; font-weight: 600;">
+            Discover the authentic internet →
+          </text>
+        </svg>
+      `;
+    }
 
     return `
       <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">

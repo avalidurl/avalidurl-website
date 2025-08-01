@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <rect width="800" height="400" fill="#87CEEB"/>
+  
+  <!-- Ground -->
+  <rect y="400" width="800" height="200" fill="#8B7355"/>
+  
+  <!-- Monster truck body -->
+  <rect x="200" y="280" width="300" height="100" fill="#FF0000" rx="10"/>
+  <rect x="180" y="300" width="340" height="60" fill="#CC0000" rx="5"/>
+  
+  <!-- Truck cab -->
+  <rect x="380" y="220" width="120" height="80" fill="#FF0000" rx="10"/>
+  <!-- Windshield -->
+  <rect x="390" y="230" width="100" height="50" fill="#4A90E2" opacity="0.7"/>
+  
+  <!-- Monster truck details -->
+  <rect x="210" y="290" width="30" height="20" fill="#FFD700"/>
+  <rect x="250" y="290" width="30" height="20" fill="#FFD700"/>
+  <rect x="290" y="290" width="30" height="20" fill="#FFD700"/>
+  
+  <!-- Suspension/lift -->
+  <rect x="220" y="360" width="30" height="80" fill="#333333"/>
+  <rect x="280" y="360" width="30" height="80" fill="#333333"/>
+  <rect x="400" y="360" width="30" height="80" fill="#333333"/>
+  <rect x="460" y="360" width="30" height="80" fill="#333333"/>
+  
+  <!-- Giant wheels -->
+  <circle cx="250" cy="450" r="70" fill="#1C1C1C"/>
+  <circle cx="250" cy="450" r="50" fill="#333333"/>
+  <circle cx="250" cy="450" r="20" fill="#666666"/>
+  
+  <circle cx="430" cy="450" r="70" fill="#1C1C1C"/>
+  <circle cx="430" cy="450" r="50" fill="#333333"/>
+  <circle cx="430" cy="450" r="20" fill="#666666"/>
+  
+  <!-- Wheel treads -->
+  <rect x="240" y="380" width="20" height="140" fill="#000000" transform="rotate(45 250 450)"/>
+  <rect x="240" y="380" width="20" height="140" fill="#000000" transform="rotate(-45 250 450)"/>
+  <rect x="420" y="380" width="20" height="140" fill="#000000" transform="rotate(45 430 450)"/>
+  <rect x="420" y="380" width="20" height="140" fill="#000000" transform="rotate(-45 430 450)"/>
+  
+  <!-- Pelican body -->
+  <ellipse cx="440" cy="180" rx="60" ry="80" fill="#FFFFFF"/>
+  <ellipse cx="440" cy="200" rx="40" ry="50" fill="#F5F5F5"/>
+  
+  <!-- Pelican head -->
+  <circle cx="440" cy="120" r="35" fill="#FFFFFF"/>
+  
+  <!-- Pelican beak -->
+  <path d="M405 120 Q380 125 375 140 Q380 155 405 150 Z" fill="#FFA500"/>
+  <path d="M405 140 Q390 145 385 155 Q390 165 405 160 Z" fill="#FF8C00"/>
+  
+  <!-- Pelican eye -->
+  <circle cx="425" cy="115" r="8" fill="#000000"/>
+  <circle cx="427" cy="113" r="3" fill="#FFFFFF"/>
+  
+  <!-- Pelican wings on steering wheel -->
+  <ellipse cx="410" cy="240" rx="25" ry="60" fill="#FFFFFF" transform="rotate(-30 410 240)"/>
+  <ellipse cx="470" cy="240" rx="25" ry="60" fill="#FFFFFF" transform="rotate(30 470 240)"/>
+  
+  <!-- Steering wheel -->
+  <circle cx="440" cy="250" r="25" fill="none" stroke="#333333" stroke-width="8"/>
+  <line x1="440" y1="225" x2="440" y2="250" stroke="#333333" stroke-width="4"/>
+  <line x1="415" y1="250" x2="465" y2="250" stroke="#333333" stroke-width="4"/>
+  
+  <!-- Exhaust pipes -->
+  <rect x="180" y="340" width="20" height="40" fill="#666666"/>
+  <rect x="175" y="335" width="30" height="10" fill="#333333"/>
+  <rect x="520" y="340" width="20" height="40" fill="#666666"/>
+  <rect x="515" y="335" width="30" height="10" fill="#333333"/>
+  
+  <!-- Smoke puffs -->
+  <circle cx="190" cy="320" r="15" fill="#CCCCCC" opacity="0.6"/>
+  <circle cx="185" cy="305" r="12" fill="#CCCCCC" opacity="0.5"/>
+  <circle cx="195" cy="295" r="10" fill="#CCCCCC" opacity="0.4"/>
+  
+  <circle cx="530" cy="320" r="15" fill="#CCCCCC" opacity="0.6"/>
+  <circle cx="535" cy="305" r="12" fill="#CCCCCC" opacity="0.5"/>
+  <circle cx="525" cy="295" r="10" fill="#CCCCCC" opacity="0.4"/>
+  
+  <!-- Racing number -->
+  <circle cx="350" cy="320" r="30" fill="#FFFFFF"/>
+  <text x="350" y="330" text-anchor="middle" font-family="Arial Black" font-size="36" fill="#000000">1</text>
+  
+  <!-- Flame decals on side -->
+  <path d="M200 340 Q210 320 220 340 Q230 320 240 340 Q250 320 260 340 L260 360 L200 360 Z" fill="#FF6600" opacity="0.8"/>
+  <path d="M210 350 Q215 335 220 350 Q225 335 230 350 Q235 335 240 350 L240 360 L210 360 Z" fill="#FFFF00" opacity="0.8"/>
+</svg>
