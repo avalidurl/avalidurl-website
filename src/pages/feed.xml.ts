@@ -10,9 +10,9 @@ export async function GET(context: APIContext) {
     .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
 
   return rss({
-    title: 'Your Name - Journal',
-    description: 'Exploring the intersection of finance, art, and code through data-driven insights and creative analysis.',
-    site: context.site ?? 'https://yoursite.com',
+    title: 'GÖKHAN TURHAN - Journal',
+    description: 'Exploring the intersection of finance, art, and technology through a curatorial lens.',
+    site: context.site ?? 'https://gokhanturhan.com',
     items: sortedPosts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.publishDate,
