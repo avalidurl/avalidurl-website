@@ -12,7 +12,7 @@ export async function GET(context) {
 
   return rss({
     title: 'GÖKHAN TURHAN - Journal',
-    description: 'Exploring the intersection of finance, art, and technology through a curatorial lens.',
+    description: 'Tech executive and digital asset strategist exploring blockchain technology, DeFi protocols, stablecoins, tokenization, and art markets. Product leadership insights on fintech innovation, cryptography, and emerging financial infrastructure.',
     site: context.site,
     items: sortedPosts.map((post) => ({
       title: post.data.title,
