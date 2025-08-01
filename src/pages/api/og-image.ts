@@ -1,6 +1,18 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { createGeneralRateLimiter, getClientIP, createRateLimitResponse } from '../../utils/rateLimit';
+import sharp from 'sharp';
+
+export const OPTIONS: APIRoute = async () => {
+  return new Response(null, {
+    status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    },
+  });
+};
 
 export const GET: APIRoute = async ({ request, url }) => {
   // Rate limiting
@@ -303,10 +315,32 @@ export const GET: APIRoute = async ({ request, url }) => {
     slug || undefined
   );
 
-  return new Response(svgContent, {
-    headers: {
-      'Content-Type': 'image/svg+xml',
-      'Cache-Control': 'public, max-age=7200', // Cache for 2 hours
-    },
-  });
+  try {
+    // Convert SVG to PNG for better social media compatibility
+    const pngBuffer = await sharp(Buffer.from(svgContent))
+      .png()
+      .resize(width, height)
+      .toBuffer();
+
+    return new Response(pngBuffer, {
+      headers: {
+        'Content-Type': 'image/png',
+        'Cache-Control': 'public, max-age=86400', // Cache for 24 hours
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      },
+    });
+  } catch (error) {
+    console.error('Error generating PNG:', error);
+    
+    // Fallback to SVG if PNG generation fails
+    return new Response(svgContent, {
+      headers: {
+        'Content-Type': 'image/svg+xml',
+        'Cache-Control': 'public, max-age=7200', // Cache for 2 hours
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      },
+    });
+  }
 };

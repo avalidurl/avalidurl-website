@@ -9,9 +9,19 @@
 
 # API routes - more restrictive CSP and caching
 /api/*
-  Content-Security-Policy: default-src 'none'; connect-src 'self'
-  Cache-Control: no-store, no-cache, must-revalidate
+  Content-Security-Policy: default-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'
+  Cache-Control: public, max-age=7200
   X-Robots-Tag: noindex, nofollow
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, OPTIONS
+  Access-Control-Allow-Headers: Content-Type
+
+# OG Image API - allow social media crawlers
+/api/og-image*
+  Content-Security-Policy: default-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'
+  Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, OPTIONS
 
 # Static assets - longer cache
 /images/*
