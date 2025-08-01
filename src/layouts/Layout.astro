@@ -486,21 +486,21 @@ const dynamicOGImage = generateOGImageUrl();
   
   @media (min-width: 768px) {
     .blog-container {
-      max-width: 728px;
+      max-width: 900px;
       padding: 2.5rem 2rem;
     }
   }
   
   @media (min-width: 1024px) {
     .blog-container {
-      max-width: 728px;
+      max-width: 1000px;
       padding: 3rem 2rem;
     }
   }
   
   @media (min-width: 1200px) {
     .blog-container {
-      max-width: 728px;
+      max-width: 1100px;
       padding: 3rem 2rem;
     }
   }
@@ -1443,8 +1443,6 @@ const dynamicOGImage = generateOGImageUrl();
     width: 100%;
     margin: 2rem 0;
     padding: 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   .terminal-table {
@@ -1456,7 +1454,7 @@ const dynamicOGImage = generateOGImageUrl();
     border: 1px solid var(--border-light);
     border-radius: 8px;
     overflow: hidden;
-    min-width: 600px;
+    table-layout: fixed;
   }
 
   .terminal-table th {
@@ -1476,6 +1474,27 @@ const dynamicOGImage = generateOGImageUrl();
     border: 1px solid var(--border-light);
     word-wrap: break-word;
     overflow-wrap: break-word;
+  }
+  
+  /* Column widths for 4-column tables */
+  .terminal-table th:nth-child(1),
+  .terminal-table td:nth-child(1) {
+    width: 20%;
+  }
+  
+  .terminal-table th:nth-child(2),
+  .terminal-table td:nth-child(2) {
+    width: 25%;
+  }
+  
+  .terminal-table th:nth-child(3),
+  .terminal-table td:nth-child(3) {
+    width: 25%;
+  }
+  
+  .terminal-table th:nth-child(4),
+  .terminal-table td:nth-child(4) {
+    width: 30%;
   }
 
   .terminal-table tr:nth-child(even) td {
@@ -1505,17 +1524,162 @@ const dynamicOGImage = generateOGImageUrl();
 
   @media (max-width: 768px) {
     .terminal-table {
-      font-size: 0.85rem;
-      min-width: 580px;
+      font-size: 0.8rem;
     }
     
     .terminal-table th,
     .terminal-table td {
-      padding: 0.75rem 0.5rem;
+      padding: 0.6rem 0.4rem;
     }
     
     .terminal-table th {
+      font-size: 0.75rem;
+    }
+    
+    /* Adjust column widths for mobile */
+    .terminal-table th:nth-child(1),
+    .terminal-table td:nth-child(1) {
+      width: 18%;
+    }
+    
+    .terminal-table th:nth-child(2),
+    .terminal-table td:nth-child(2) {
+      width: 22%;
+    }
+    
+    .terminal-table th:nth-child(3),
+    .terminal-table td:nth-child(3) {
+      width: 22%;
+    }
+    
+    .terminal-table th:nth-child(4),
+    .terminal-table td:nth-child(4) {
+      width: 38%;
+    }
+  }
+
+  /* Global table styles for inline tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1rem 0;
+    table-layout: fixed;
+  }
+
+  table th {
+    background: var(--bg-tertiary);
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+  }
+
+  table td {
+    padding: 0.875rem 0.75rem;
+    vertical-align: top;
+    line-height: 1.5;
+    border: 1px solid var(--border-light);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  table tr:nth-child(even) td {
+    background: var(--bg-secondary);
+  }
+
+  table tr:hover td {
+    background: var(--bg-accent);
+  }
+
+  table a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+  }
+
+  table a:hover {
+    color: var(--link-hover);
+    text-decoration-thickness: 2px;
+  }
+
+  table strong {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  /* Column widths for 5-column tables (like Alternative Protocol Guide) */
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    width: 15%;
+  }
+  
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    width: 20%;
+  }
+  
+  table th:nth-child(3),
+  table td:nth-child(3) {
+    width: 25%;
+  }
+  
+  table th:nth-child(4),
+  table td:nth-child(4) {
+    width: 15%;
+  }
+  
+  table th:nth-child(5),
+  table td:nth-child(5) {
+    width: 25%;
+  }
+
+  @media (max-width: 768px) {
+    table {
       font-size: 0.8rem;
+    }
+    
+    table th,
+    table td {
+      padding: 0.6rem 0.4rem;
+    }
+    
+    table th {
+      font-size: 0.75rem;
+    }
+    
+    /* Adjust column widths for mobile */
+    table th:nth-child(1),
+    table td:nth-child(1) {
+      width: 12%;
+    }
+    
+    table th:nth-child(2),
+    table td:nth-child(2) {
+      width: 18%;
+    }
+    
+    table th:nth-child(3),
+    table td:nth-child(3) {
+      width: 20%;
+    }
+    
+    table th:nth-child(4),
+    table td:nth-child(4) {
+      width: 12%;
+    }
+    
+    table th:nth-child(5),
+    table td:nth-child(5) {
+      width: 38%;
     }
   }
 
