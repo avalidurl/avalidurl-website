@@ -1,0 +1,140 @@
+---
+export interface Props {
+  url: string;
+  width?: number;
+  height?: number;
+}
+
+const { url, width = 400, height = 600 } = Astro.props;
+
+function parseNFTUrl(url: string) {
+  // Zora - handle both /collect/ and /collections/ formats
+  const zoraCollectMatch = url.match(/zora\.co\/collect\/([^\/]+)\/(\d+)/);
+  const zoraCollectionsMatch = url.match(/zora\.co\/collections\/([^\/]+)\/(\d+)?/);
+  
+  if (zoraCollectMatch) {
+    return {
+      type: 'zora',
+      embedUrl: `https://embed.zora.co/collections/${zoraCollectMatch[1]}/${zoraCollectMatch[2]}`
+    };
+  }
+  
+  if (zoraCollectionsMatch) {
+    const tokenId = zoraCollectionsMatch[2] || '1';
+    return {
+      type: 'zora',
+      embedUrl: `https://embed.zora.co/collections/${zoraCollectionsMatch[1]}/${tokenId}`
+    };
+  }
+
+  // OpenSea
+  const openSeaMatch = url.match(/opensea\.io\/assets\/([^\/]+)\/([^\/]+)\/(\d+)/);
+  if (openSeaMatch) {
+    return {
+      type: 'opensea',
+      embedUrl: `https://opensea.io/assets/${openSeaMatch[1]}/${openSeaMatch[2]}/${openSeaMatch[3]}`
+    };
+  }
+
+  // Foundation
+  const foundationMatch = url.match(/foundation\.app\/@([^\/]+)\/([^\/]+)/);
+  if (foundationMatch) {
+    return {
+      type: 'foundation',
+      contractAddress: foundationMatch[1],
+      tokenId: foundationMatch[2]
+    };
+  }
+
+  // Rarible
+  const raribleMatch = url.match(/rarible\.com\/token\/([^\/]+):(\d+)/);
+  if (raribleMatch) {
+    return {
+      type: 'rarible',
+      contractAddress: raribleMatch[1],
+      tokenId: raribleMatch[2]
+    };
+  }
+
+  return null;
+}
+
+const nftData = parseNFTUrl(url);
+---
+
+{nftData?.type === 'zora' && (
+  <div class="nft-embed zora-embed">
+    <iframe 
+      src={nftData.embedUrl}
+      width={width}
+      height={height}
+      frameborder="0"
+      allow="clipboard-write"
+      sandbox="allow-scripts allow-same-origin allow-popups"
+      loading="lazy"
+      title="Zora NFT"
+    ></iframe>
+  </div>
+)}
+
+{nftData?.type === 'opensea' && (
+  <div class="nft-embed opensea-embed">
+    <iframe 
+      src={nftData.embedUrl}
+      width={width}
+      height={height}
+      frameborder="0"
+      sandbox="allow-scripts allow-same-origin"
+      loading="lazy"
+      title="OpenSea NFT"
+    ></iframe>
+  </div>
+)}
+
+{(nftData?.type === 'foundation' || nftData?.type === 'rarible') && (
+  <div class="nft-embed api-embed">
+    <div class="nft-placeholder">
+      <p>Loading NFT...</p>
+      <a href={url} target="_blank" rel="noopener noreferrer">View on {nftData.type}</a>
+    </div>
+  </div>
+)}
+
+{!nftData && (
+  <div class="nft-fallback">
+    <a href={url} target="_blank" rel="noopener noreferrer">View NFT</a>
+  </div>
+)}
+
+<style>
+  .nft-embed {
+    margin: 1rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nft-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .nft-placeholder, .nft-fallback {
+    padding: 2rem;
+    text-align: center;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+  
+  .nft-placeholder a, .nft-fallback a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nft-placeholder a:hover, .nft-fallback a:hover {
+    text-decoration: underline;
+  }
+</style>

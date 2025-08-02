@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NFTEmbed from '../components/NFTEmbed.astro';
+import NFTCard from '../components/NFTCard.astro';
+---
+
+<Layout title="NFT Test Page">
+  <main>
+    <h1>NFT Embed Tests</h1>
+    
+    <h2>Zora Embed Test</h2>
+    <NFTEmbed url="https://zora.co/collect/0x2d7c51df9ae5e8c7d2ad35527ad5b4ab9bc5a1e9/1" />
+    
+    <h2>OpenSea Embed Test</h2>
+    <NFTEmbed url="https://opensea.io/assets/ethereum/0x2d7c51df9ae5e8c7d2ad35527ad5b4ab9bc5a1e9/1" />
+    
+    <h2>Foundation NFT Card Test</h2>
+    <NFTCard 
+      contractAddress="0x3B3ee1931Dc30C1957379FAc9aba94D1C48a5405" 
+      tokenId="18669" 
+      marketplace="foundation"
+    />
+    
+    <h2>Rarible NFT Card Test</h2>
+    <NFTCard 
+      contractAddress="0x2d7c51df9ae5e8c7d2ad35527ad5b4ab9bc5a1e9" 
+      tokenId="1" 
+      marketplace="rarible"
+    />
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  h1, h2 {
+    color: #333;
+    margin: 2rem 0 1rem 0;
+  }
+  
+  h1 {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 0.5rem;
+  }
+</style>
